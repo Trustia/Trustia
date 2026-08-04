@@ -1,0 +1,1 @@
+"""Sistem 3 — Komuta Merkezi; Sistem 4 — Veri Kayıt."""
