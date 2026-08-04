@@ -1,1 +1,0 @@
-"""Sistem 5 — Güvenlik katmanı."""

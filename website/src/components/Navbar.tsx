@@ -19,20 +19,14 @@ export default function Navbar() {
       {/* 100% Fully Transparent Header with No Background or Border anywhere */}
       <div className="relative px-2 py-2 bg-transparent border-none shadow-none flex items-center justify-between">
         
-        {/* Brand Logo: Logo Mark + "Trustia AI" */}
-        <Link href="/" className="flex items-center gap-2.5 group select-none py-1">
-          <div className="w-8 h-8 rounded-lg overflow-hidden border border-[#C8FF00]/40 shadow-[0_0_12px_rgba(200,255,0,0.4)] group-hover:scale-105 transition-transform">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/logo.png" alt="Trustia AI Logo" className="w-full h-full object-cover" />
-          </div>
-          <div className="flex items-center gap-1">
-            <span className="font-orbitron font-black text-xl md:text-2xl tracking-wider text-white group-hover:text-slate-200 transition-colors">
-              Trustia
-            </span>
-            <span className="font-orbitron font-black text-xl md:text-2xl tracking-wider text-[#C8FF00] drop-shadow-[0_0_15px_rgba(200,255,0,0.6)]">
-              AI
-            </span>
-          </div>
+        {/* Pure Typography Brand Logo: Sleek Syncopate "TRUSTIA AI" */}
+        <Link href="/" className="flex items-center gap-1.5 group select-none py-1">
+          <span className="font-syncopate font-bold text-base md:text-lg tracking-[0.2em] text-white uppercase group-hover:text-slate-200 transition-colors">
+            TRUSTIA
+          </span>
+          <span className="font-syncopate font-black text-base md:text-lg tracking-[0.2em] text-[#C8FF00] drop-shadow-[0_0_15px_rgba(200,255,0,0.8)]">
+            AI
+          </span>
         </Link>
 
         {/* Center Navigation Links (100% Frameless & Transparent) */}

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700;800&family=Orbitron:wght@700;800;900&family=Syncopate:wght@700;800&family=Rajdhani:wght@700;800&display=swap');
 @import "tailwindcss";
 
 @layer base {
@@ -9,6 +10,22 @@
     padding: 0;
     overflow-x: hidden;
   }
+}
+
+.font-syncopate {
+  font-family: 'Syncopate', sans-serif;
+}
+
+.font-chakra {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
 }
 
 /* Overland AI Style Slanted Right Polygon Button */
