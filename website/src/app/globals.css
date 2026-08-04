@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0b0d0f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* Overland AI Style Slanted Right Polygon Button */
+.btn-overland-slanted {
+  background-color: #d4ff00;
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  padding: 0.9rem 2.2rem 0.9rem 1.4rem;
+  clip-path: polygon(0 0, 84% 0, 100% 100%, 0% 100%);
+  transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.btn-overland-slanted:hover {
+  background-color: #e5ff33;
+  transform: translateY(-1px);
+}
