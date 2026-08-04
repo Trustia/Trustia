@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trustia.com.tr/sitemap.xml
