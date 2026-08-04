@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRUSTIA — Milli Askeri Otonomi Platformu</title>
+  <meta name="description" content="GPS'siz ortamlarda çalışan insansız kara araçları (İKA) için sıfır dış bağımlılıklı, %100 yerli katkı sertifikasyon uyumlu askeri otonomi yazılım platformu.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="grid-bg"></div>
+  <div class="hud-glow"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span>TRUSTIA</span>
+      <span class="brand-badge">v2.0 DEFENSE</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#technologies">Milli Teknolojiler</a></li>
+      <li><a href="#simulator">Canlı Taktik Konsol</a></li>
+      <li><a href="#standards">Standartlar</a></li>
+      <li><a href="#metrics">Metrikler</a></li>
+    </ul>
+    <a href="mailto:yatirim@trustia.com.tr" class="btn-primary">Kurumsal İletişim</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-tag">
+      <span>🛡️ TÜR BELGESİ %100 YERLİ KATKI SERTİFİKALI</span>
+    </div>
+    <h1 class="hero-title">GPS'SİZ SAVUNMA SANAYİİ İKA OTONOMİ YAZILIM PLATFORMU</h1>
+    <p class="hero-subtitle">Yol yok, GPS yok, dışa bağımlılık yok. Türkiye'nin donanımdan bağımsız, SAE AS6091 JAUS ve STANAG 4586 uyumlu milli otonomi beyni.</p>
+    <div class="hero-actions">
+      <a href="#simulator" class="btn-primary">Canlı Taktik Konsolu Dene</a>
+      <a href="#technologies" class="btn-outline">Teknoloji Mimarisini İncele</a>
+    </div>
+  </section>
+
+  <!-- Core Technologies -->
+  <section id="technologies" class="section">
+    <div class="section-header">
+      <h2>3 ANA MİLLİ TEKNOLOJİ KATMANI</h2>
+      <p>Askeri kara araçları için uçtan uca bağımsız otonom karar ve güvenlik ekosistemi</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="card-icon">🧠</div>
+        <h3>TRUSTIA CoreStack</h3>
+        <p>GPS sinyalinin bulunmadığı veya kesildiği ortamlarda çalışan 3D Pose Graph SLAM ve kinematik rota planlama beyni.</p>
+        <ul class="feature-list">
+          <li>ICP 2D/3D Tarama Eşleştirme</li>
+          <li>Kinematik Kısıtlı Hybrid A* & RRT*</li>
+          <li>DWA Dinamik Engel Kaçınma</li>
+          <li>Kameralı Görsel Odometri (Visual Odometry)</li>
+        </ul>
+      </div>
+
+      <div class="tech-card">
+        <div class="card-icon">🐝</div>
+        <h3>TRUSTIA Command & Swarm</h3>
+        <p>NATO MIL-STD-2525 standartlarında komuta kontrol konsolu ve çoklu İKA-İHA hava-kara sürü zekası.</p>
+        <ul class="feature-list">
+          <li>NATO MIL-STD-2525 Masaüstü C2 Konsolu</li>
+          <li>Kama, Saf, Kolon & Baklava Sürü Düzeni</li>
+          <li>İHA (Drone) Keşif & Karaya Hedef Sevk</li>
+          <li>Taktik Sesli ve Metinsel Komut Çözümleyici</li>
+        </ul>
+      </div>
+
+      <div class="tech-card">
+        <div class="card-icon">💣</div>
+        <h3>TRUSTIA Shield & CBRN</h3>
+        <p>Toprak altı patlayıcı tespiti ve kimyasal/radyolojik tehlikeli madde karantina izolasyonu.</p>
+        <ul class="feature-list">
+          <li>Metal + Termal + GPR Radar Füzyonlu EYP Tespiti</li>
+          <li>30 Metre Otonom Patlayıcı Karantina Bölgesi</li>
+          <li>Geiger-Müller Radyasyon Anomali Tespiti</li>
+          <li>Kimyasal Harp Gazı & Rüzgar Altı Yayılım hesabı</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Simulator -->
+  <section id="simulator" class="section">
+    <div class="section-header">
+      <h2>CANLI İNTERAKTİF TAKTİK KONSOL SİMÜLATÖRÜ</h2>
+      <p>Aşağıdaki radara tıklayarak İKA-ALPHA aracı için otonom hedef noktası belirleyin</p>
+    </div>
+    <div class="simulator-container">
+      <canvas id="tacticalCanvas"></canvas>
+    </div>
+  </section>
+
+  <!-- Standards -->
+  <section id="standards" class="section">
+    <div class="section-header">
+      <h2>KÜRESEL UYUMLULUK VE ASKERİ STANDARTLAR</h2>
+      <p>Her türlü kara aracına entegre edilebilir donanım-bağımsız açık mimari</p>
+    </div>
+    <div class="badges-container">
+      <div class="badge-item">
+        <span>SAE AS6091 / AS6009</span>
+        <span>JAUS UYUMLU</span>
+      </div>
+      <div class="badge-item">
+        <span>STANAG 4586</span>
+        <span>NATO BİRLİKTE ÇALIŞABİLİRLİK</span>
+      </div>
+      <div class="badge-item">
+        <span>ROS 2 BRIDGE</span>
+        <span>ROBOT OPERATING SYSTEM 2</span>
+      </div>
+      <div class="badge-item">
+        <span>CAN 2.0 / CAN FD</span>
+        <span>DRIVE-BY-WIRE SÜRÜCÜSÜ</span>
+      </div>
+      <div class="badge-item">
+        <span>TÜR BELGESİ</span>
+        <span>%100 YERLİ KATKI (AST AUDITED)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">
+      <span>TRUSTIA Technologies A.Ş.</span>
+    </div>
+    <div class="footer-contacts">
+      <a href="mailto:info@trustia.com.tr">info@trustia.com.tr</a>
+      <a href="mailto:yatirim@trustia.com.tr">yatirim@trustia.com.tr</a>
+      <a href="mailto:savunma@trustia.com.tr">savunma@trustia.com.tr</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
