@@ -1,0 +1,7 @@
+# Node & Next.js
+node_modules/
+.next/
+*.exe
+website/ffmpeg.exe
+website/node_modules/
+website/.next/
