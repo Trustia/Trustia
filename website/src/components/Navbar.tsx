@@ -22,13 +22,23 @@ export default function Navbar() {
       {/* 100% Fully Transparent Header with No Background or Border anywhere */}
       <div className="relative px-2 py-2 bg-transparent border-none shadow-none flex items-center justify-between">
         
-        {/* Pure Typography Brand Logo: Sleek Syncopate "TRUSTIA AI" */}
+        {/* Pure Typography Brand Logo: Sleek Syncopate "TRUSTIA AI" + Small Turkish Flag Badge on top-right tip of "I" */}
         <Link href="/" className="flex items-center gap-1.5 group select-none py-1">
           <span className="font-syncopate font-bold text-base md:text-lg tracking-[0.2em] text-white uppercase group-hover:text-slate-200 transition-colors">
             TRUSTIA
           </span>
-          <span className="font-syncopate font-black text-base md:text-lg tracking-[0.2em] text-[#C8FF00] drop-shadow-[0_0_15px_rgba(200,255,0,0.8)]">
+          <span className="relative inline-flex items-center font-syncopate font-black text-base md:text-lg tracking-[0.2em] text-[#C8FF00] drop-shadow-[0_0_15px_rgba(200,255,0,0.8)]">
             AI
+            {/* Small Turkish Flag Badge positioned right at top-right diagonal tip of "I" */}
+            <span className="absolute -top-1 -right-3.5 flex items-center justify-center w-3.5 h-2.5 rounded-[1px] overflow-hidden border border-white/20 shadow-[0_0_8px_rgba(227,10,23,0.9)]">
+              {/* Official Turkish Flag SVG */}
+              <svg viewBox="0 0 1200 800" className="w-full h-full object-cover">
+                <rect width="1200" height="800" fill="#E30A17" />
+                <circle cx="425" cy="400" r="200" fill="#ffffff" />
+                <circle cx="475" cy="400" r="160" fill="#E30A17" />
+                <polygon points="583.333,400 706.879,440.147 630.528,335.048 630.528,464.952 706.879,359.853" fill="#ffffff" transform="rotate(-15 625 400)" />
+              </svg>
+            </span>
           </span>
         </Link>
 
