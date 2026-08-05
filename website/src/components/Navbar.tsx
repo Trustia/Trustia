@@ -1,9 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Globe } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
+  const { lang, toggleLang, t } = useLanguage();
+
   const handleScrollToOtonomi = (e: React.MouseEvent) => {
     e.preventDefault();
     const elem = document.getElementById("otonomi");
@@ -36,7 +39,7 @@ export default function Navbar() {
             href="/hakkimizda"
             className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
           >
-            HAKKIMIZDA
+            {t("nav_about")}
           </Link>
 
           <span className="text-white/30 text-xs font-mono">•</span>
@@ -46,7 +49,7 @@ export default function Navbar() {
             onClick={handleScrollToOtonomi}
             className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 cursor-pointer drop-shadow-md"
           >
-            OTONOMİ
+            {t("nav_autonomy")}
           </button>
 
           <span className="text-white/30 text-xs font-mono">•</span>
@@ -56,7 +59,7 @@ export default function Navbar() {
             href="/politika/siber"
             className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
           >
-            TEHDİT TESPİTİ
+            {t("nav_threat")}
           </Link>
 
           <span className="text-white/30 text-xs font-mono">•</span>
@@ -66,7 +69,7 @@ export default function Navbar() {
             href="/politika/etik"
             className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
           >
-            SÜRÜ ZEKASI
+            {t("nav_swarm")}
           </Link>
 
           <span className="text-white/30 text-xs font-mono">•</span>
@@ -76,18 +79,31 @@ export default function Navbar() {
             href="/politika/yerlilik"
             className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
           >
-            SERTİFİKASYON
+            {t("nav_cert")}
           </Link>
         </nav>
 
-        {/* Right CTA Button */}
-        <Link
-          href="/iletisim"
-          className="px-5 py-2.5 rounded-xl bg-[#C8FF00] text-black font-mono font-black text-xs tracking-wider uppercase flex items-center gap-2 hover:bg-[#d4ff33] hover:shadow-[0_0_25px_rgba(200,255,0,0.5)] transition-all duration-300 group cursor-pointer"
-        >
-          <span>İLETİŞİM</span>
-          <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-        </Link>
+        {/* Right CTA Button & Language Switcher */}
+        <div className="flex items-center gap-3">
+          {/* TR / EN Language Toggle Pill */}
+          <button
+            onClick={toggleLang}
+            className="px-3 py-1.5 rounded-lg bg-black/40 border border-white/10 backdrop-blur-md text-white font-mono text-xs font-bold tracking-wider flex items-center gap-1.5 hover:border-[#C8FF00]/50 hover:text-[#C8FF00] transition-all cursor-pointer shadow-md"
+            title="Switch Language / Dil Değiştir"
+          >
+            <Globe className="w-3.5 h-3.5 text-[#C8FF00]" />
+            <span>{lang === "tr" ? "TR" : "EN"}</span>
+          </button>
+
+          {/* Contact Button */}
+          <Link
+            href="/iletisim"
+            className="px-4 md:px-5 py-2.5 rounded-xl bg-[#C8FF00] text-black font-mono font-black text-xs tracking-wider uppercase flex items-center gap-1.5 md:gap-2 hover:bg-[#d4ff33] hover:shadow-[0_0_25px_rgba(200,255,0,0.5)] transition-all duration-300 group cursor-pointer"
+          >
+            <span>{t("nav_contact")}</span>
+            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
       </div>
     </header>
   );

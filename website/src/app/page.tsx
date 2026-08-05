@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
 import GalleryShowcase from "@/components/GalleryShowcase";
@@ -5,8 +7,11 @@ import FeatureVideo from "@/components/FeatureVideo";
 import TechMatrixShowcase from "@/components/TechMatrixShowcase";
 import Footer from "@/components/Footer";
 import ConsoleBranding from "@/components/ConsoleBranding";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <main className="relative w-full bg-[#090b0e] text-white font-sans selection:bg-[#C8FF00] selection:text-black overflow-x-hidden">
       {/* DevTools Browser Console Corporate Branding */}
@@ -23,18 +28,18 @@ export default function Home() {
         <div className="max-w-md text-left space-y-2.5 pointer-events-auto">
           {/* Corporate Badge */}
           <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded bg-black/40 border border-white/15 text-slate-300 text-[10px] font-mono font-bold tracking-wider uppercase backdrop-blur-md">
-            <span>%100 YERLİ KATKI SERTİFİKASYON UYUMLU</span>
+            <span>{t("hero_badge")}</span>
           </div>
 
           {/* Compact Main Headline */}
           <h1 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-[1.2] drop-shadow-xl">
-            Zorlu Operasyon Sahalarında <br />
-            Tam Otonom Milli İrade
+            {t("hero_title_1")} <br />
+            {t("hero_title_2")}
           </h1>
 
           {/* Compact Subtitle */}
           <p className="text-slate-300 text-xs sm:text-xs font-normal leading-relaxed max-w-sm drop-shadow-md">
-            GPS sinyalinin bulunmadığı veya engellendiği harekat alanlarında İnsansız Kara Araçları (İKA) için geliştirilmiş sıfır dış bağımlılıklı askeri otonomi platformu.
+            {t("hero_desc")}
           </p>
 
           {/* Slanted CTA Button */}
@@ -43,7 +48,7 @@ export default function Home() {
               href="#otonomi"
               className="btn-overland-slanted cursor-pointer text-xs"
             >
-              SİSTEMİ İNCELE
+              {t("hero_btn_explore")}
             </a>
           </div>
         </div>
