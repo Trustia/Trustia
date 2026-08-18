@@ -1,0 +1,35 @@
+# Python & Tests
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Node & Next.js Web Platform (any depth)
+**/node_modules/
+**/.next/
+**/out/
+**/dist/
+**/build/
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Binaries & Large Media
+*.exe
+*.dll
+*.so
+*.dylib
+*.iso
+**/ffmpeg.exe
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
