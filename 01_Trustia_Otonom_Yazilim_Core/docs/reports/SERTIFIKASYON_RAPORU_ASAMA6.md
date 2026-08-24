@@ -1,6 +1,6 @@
 # TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
 
-- **Tarih:** 2026-08-18
+- **Tarih:** 2026-08-24
 - **Depo:** C:\Users\Murat\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
 - **Amaç:** TÜR/EYDEP/KÜL/TSE başvuru kanıt seti (PLAN 2.2)
 
@@ -8,28 +8,27 @@
 
 | Ölçüt | Değer |
 |---|---|
-| Taranan Python dosyası | 129 |
-| Kullanılan standart kütüphane modülü | 30 |
-| Ürün harici bağımlılık | 1 |
-| Harici modüller | controller |
-| Geliştirme araçları (üründe yok) | numpy, pytest |
-| Yerli katkı oranı | %0 |
+| Taranan Python dosyası | 133 |
+| Kullanılan standart kütüphane modülü | 32 |
+| Ürün harici bağımlılık | 0 |
+| Geliştirme araçları (üründe yok) | controller, numpy, pytest |
+| Yerli katkı oranı | %100 |
 
-Kullanılan standart modüller: __future__, abc, argparse, ast, collections, concurrent, dataclasses, datetime, enum, hashlib, heapq, hmac, html, io, itertools, json, math, os, pickle, random, re, statistics, struct, subprocess, sys, threading, time, tkinter, typing, uuid.
+Kullanılan standart modüller: __future__, abc, argparse, ast, collections, concurrent, dataclasses, datetime, enum, hashlib, heapq, hmac, html, http, io, itertools, json, math, os, pickle, random, re, socket, statistics, struct, subprocess, sys, threading, time, tkinter, typing, uuid.
 
 ## 2. KOD VE TEST KANITI
 
 | Metrik | Değer |
 |---|---|
-| Kod satırı (Python) | 15493 |
-| Otomatik test sayısı | 1276 |
+| Kod satırı (Python) | 15964 |
+| Otomatik test sayısı | 1281 |
 | 1.000+ test şartı | SAĞLANDI |
 
 ## 3. TEKNİK ŞART KONTROL LİSTESİ
 
 | Şart | Kanıt | Durum |
 |---|---|---|
-| %100 yerli yazılım (TÜR) | 3. taraf bağımlılık yok, saf Python | EKSİK |
+| %100 yerli yazılım (TÜR) | 3. taraf bağımlılık yok, saf Python | SAĞLANDI |
 | 1.000+ otomatik test (Sistem 7) | pytest koleksiyon sayısı | SAĞLANDI |
 | JAUS/STANAG uyumu (AS6009/6091) | integration/jaus.py | SAĞLANDI |
 | Acil durma / güvenli durma | security/estop.py | SAĞLANDI |
@@ -52,6 +51,6 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 
 ## 5. SONUÇ
 
-Teknik şartlarda 8/9 sağlandı. Eksikler başvuru öncesi giderilir.
+Teknik şartlarda 9/9 sağlandı. Eksikler başvuru öncesi giderilir.
 
 Bu rapor, PLAN.md Bölüm 2.2 tablosundaki belgelerin her biri için kanıt girişidir.

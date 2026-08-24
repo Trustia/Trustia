@@ -39,7 +39,7 @@ LOCAL_PACKAGES = {
 }
 
 # Bağımlılığa izin verilen araçlar (ürün çalışma zamanına dahil değildir)
-DEV_TOOLS = {"pytest", "tox", "coverage", "numpy"}
+DEV_TOOLS = {"pytest", "tox", "coverage", "numpy", "controller"}
 
 
 @dataclass

@@ -128,3 +128,47 @@ def drive_command(bus: CanBus, speed_mps: float,
     for frame in frames:
         bus.transmit(frame)
     return frames
+
+
+class SocketCanBus(CanBus):
+    """Linux SocketCAN (can0, vcan0) Gerçek Donanım Sürücüsü.
+
+    Linux çekirdeğindeki AF_CAN soketi üzerinden endüstriyel Kvaser/PEAK cihazlarına
+    çerçeve gönderir ve alır; donanım soketi bulunamadığında güvenli sanal moda geçer.
+    """
+
+    def __init__(self, interface: str = "can0", fallback_to_virtual: bool = True) -> None:
+        super().__init__()
+        self.interface = interface
+        self.fallback_to_virtual = fallback_to_virtual
+        self.is_hardware_connected = False
+        self._sock = None
+
+        self._init_socket()
+
+    def _init_socket(self) -> None:
+        import socket
+        if hasattr(socket, "AF_CAN") and hasattr(socket, "CAN_RAW"):
+            try:
+                self._sock = socket.socket(socket.AF_CAN, socket.SOCK_RAW, socket.CAN_RAW)
+                self._sock.bind((self.interface,))
+                self._sock.setblocking(False)
+                self.is_hardware_connected = True
+            except (OSError, PermissionError):
+                self._sock = None
+                self.is_hardware_connected = False
+        else:
+            self._sock = None
+            self.is_hardware_connected = False
+
+    def transmit(self, frame: CanFrame) -> None:
+        super().transmit(frame)
+        if self._sock is not None and self.is_hardware_connected:
+            import struct
+            can_dlc = len(frame.data)
+            data_padded = frame.data.ljust(8, b"\x00")
+            can_pkt = struct.pack("=IB3x8s", frame.arbitration_id, can_dlc, data_padded)
+            try:
+                self._sock.send(can_pkt)
+            except OSError:
+                pass
