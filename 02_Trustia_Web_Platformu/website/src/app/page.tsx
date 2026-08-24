@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
 import GalleryShowcase from "@/components/GalleryShowcase";
+import SupportedPlatformsShowcase from "@/components/SupportedPlatformsShowcase";
 import FeatureVideo from "@/components/FeatureVideo";
 import TechMatrixShowcase from "@/components/TechMatrixShowcase";
 import Footer from "@/components/Footer";
@@ -57,7 +58,10 @@ export default function Home() {
       {/* 3. 5 Real Photos Gallery Showcase */}
       <GalleryShowcase />
 
-      {/* 4. Pure Panoramic Cinematic Video Strip */}
+      {/* 4. Supported Vehicles & Integration Platforms Matrix */}
+      <SupportedPlatformsShowcase />
+
+      {/* 5. Pure Panoramic Cinematic Video Strip */}
       <FeatureVideo />
 
       {/* 5. Complete 6-Grid Executive Defense Tech Matrix (SLAM, Hybrid A*, EYP/CBRN, Swarm, HMAC-SHA256, ROS 2) */}

@@ -53,6 +53,35 @@ const translations: Record<Language, Record<string, string>> = {
     gallery_card2_title: "Telsiz & LinkLoss Güvenliği",
     gallery_card2_desc: "Sinyal kesintisinde otonom eve dönüş (RTH) ve şifreli komut doğrulama.",
 
+    // Supported Platforms & Vehicles
+    platforms_badge: "DONANIM-BAĞIMSIZ MİMARİ // HARDWARE-AGNOSTIC",
+    platforms_title: "Hangi Araç ve Platformlarda Çalışır?",
+    platforms_desc: "Trustia, belirli bir üreticiye bağımlı olmayan evrensel bir otonomi beynidir. Standart SAE J1939 CAN-Bus, CAN FD, ROS 2 ve Drive-by-Wire (DbW) haberleşme protokolleri sayesinde mekanik veya elektronik aktüatör bağlantısına sahip her türlü tekerlekli ve paletli platformda çalışır.",
+    
+    plat_cat1_badge: "SİVİL MOBİLİTE & ROBOTAKSİ",
+    plat_cat1_title: "Binek, Ticari & Elektrikli Otomobiller",
+    plat_cat1_desc: "Elektronik direksiyon (EPS), gaz ve fren (Drive-by-Wire) altyapısına sahip modern şasilerde doğrudan CAN hattı üzerinden tak-çalıştır otonomi.",
+    plat_cat1_list: "TOGG T10X/T10F, Mercedes G-Serisi / Sprinter, Toyota Corolla/RAV4, Lexus RX, BMW 3/5 Serisi, Ford Transit, Hyundai Ioniq, Tesla EV, Polaris GEM",
+
+    plat_cat2_badge: "SAVUNMA & ASKERİ İKA",
+    plat_cat2_title: "Taktik İnsansız Kara Araçları (UGV)",
+    plat_cat2_desc: "NATO STANAG 4586 ve SAE AS6091 (JAUS) standartlarında, elektronik harp ve GPS'siz muharebe sahalarında görev yapan hafif, orta ve ağır sınıf askeri robotlar.",
+    plat_cat2_list: "HAVELSAN BARKAN & BARKAN 2, ASELSAN/FNSS ALPAR, HAVELSAN KAPGAN 8x8, BMC Vuran/Kirpi (Otonom Konvoy), Otokar Enga/Cobra II, Clearpath Husky/Warthog",
+
+    plat_cat3_badge: "AĞIR HİZMET & ENDÜSTRİ",
+    plat_cat3_title: "Otonom Tarım, Maden & Şantiye",
+    plat_cat3_desc: "Zorlu şantiye ve tarım arazilerinde insan hayatını riske atmadan 7/24 kesintisiz otonom lojistik, hafriyat ve hassas tarım sürüşü.",
+    plat_cat3_list: "John Deere, New Holland, TÜMOSAN Otonom Traktörler, CAT & Komatsu Maden Kamyonları ve Ağır İş Makineleri",
+
+    plat_how_title: "Gerçek Dünyada Araca Nasıl Entegre Edilir?",
+    plat_how_subtitle: "Endüstriyel Standartlarda 2 Farklı Entegrasyon Metodolojisi",
+    plat_how_opt1_badge: "YÖNTEM 1 // ELEKTRONİK (DRIVE-BY-WIRE)",
+    plat_how_opt1_title: "Yeni Nesil Elektronik Kontrollü Araçlar",
+    plat_how_opt1_desc: "Direksiyonu ve freni kablolu (Drive-by-Wire / EPS) olan tüm yeni nesil araçlarda mekanik hiçbir parça takılmaz. Trustia bilgisayarından çıkan Kvaser/PEAK CAN kablosu aracın OBD-II veya CAN Gateway portuna takılır; yazılım dijital komutlarla aracı anında sürer.",
+    plat_how_opt2_badge: "YÖNTEM 2 // MEKANİK VE KLASİK ARAÇLAR",
+    plat_how_opt2_title: "Mekanik Direksiyon & Klasik Zırhlı Şasiler",
+    plat_how_opt2_desc: "Elektronik direksiyonu olmayan klasik zırhlı araç, kamyon veya traktörlerde direksiyon miline 1 adet kompakt elektrikli servo motor, gaz/fren pedalına ise 1'er adet lineer aktüatör vidalanır. Trustia bu motorları CAN üzerinden yönetir.",
+
     // Tech Matrix Showcase
     matrix_badge: "MİLLİ OTONOMİ MİMARİSİ VE TEKNİK KAPASİTE MATRIXI",
     matrix_title: "Tüm Askeri Alt Sistem & Algoritma Katmanları",
@@ -247,6 +276,35 @@ const translations: Record<Language, Record<string, string>> = {
     gallery_card2_badge: "HMAC-SHA256 ENCRYPTION",
     gallery_card2_title: "Data Link & LinkLoss Security",
     gallery_card2_desc: "Automated Return-To-Home (RTH) upon signal loss and encrypted command validation.",
+
+    // Supported Platforms & Vehicles
+    platforms_badge: "HARDWARE-AGNOSTIC ARCHITECTURE",
+    platforms_title: "Which Vehicles and Platforms Does It Support?",
+    platforms_desc: "Trustia is a hardware-agnostic autonomous operating stack with zero proprietary vendor lock-in. Powered by standard SAE J1939 CAN-Bus, CAN FD, ROS 2, and Drive-by-Wire (DbW) protocols, it integrates into any wheeled or tracked chassis equipped with mechanical or electronic actuators.",
+
+    plat_cat1_badge: "CIVILIAN MOBILITY & ROBOTAXI",
+    plat_cat1_title: "Passenger, Commercial & Electric Vehicles",
+    plat_cat1_desc: "Plug-and-play autonomy over standard CAN-Bus on modern chassis featuring electronic power steering (EPS), throttle, and brake-by-wire.",
+    plat_cat1_list: "TOGG T10X/T10F, Mercedes G-Class / Sprinter, Toyota Corolla/RAV4, Lexus RX, BMW 3/5 Series, Ford Transit, Hyundai Ioniq, Tesla EV, Polaris GEM",
+
+    plat_cat2_badge: "DEFENSE & TACTICAL UGV",
+    plat_cat2_title: "Tactical Unmanned Ground Vehicles (UGV)",
+    plat_cat2_desc: "NATO STANAG 4586 and SAE AS6091 (JAUS) compliant integration across light, medium, and heavy tracked/wheeled military robotics operating in GPS-denied warfare.",
+    plat_cat2_list: "HAVELSAN BARKAN & BARKAN 2, ASELSAN/FNSS ALPAR, HAVELSAN KAPGAN 8x8, BMC Vuran/Kirpi (Convoy DbW), Otokar Enga/Cobra II, Clearpath Husky/Warthog",
+
+    plat_cat3_badge: "HEAVY DUTY & INDUSTRY",
+    plat_cat3_title: "Autonomous Agriculture, Mining & Logistics",
+    plat_cat3_desc: "24/7 continuous autonomous material hauling, excavation, and precision agriculture without exposing human operators to hazardous sites.",
+    plat_cat3_list: "John Deere, New Holland, TÜMOSAN Autonomous Tractors, CAT & Komatsu Mining Trucks and Heavy Machinery",
+
+    plat_how_title: "How Is It Integrated into Physical Vehicles?",
+    plat_how_subtitle: "Two Production Integration Methodologies",
+    plat_how_opt1_badge: "METHOD 1 // DIGITAL (DRIVE-BY-WIRE)",
+    plat_how_opt1_title: "Modern Electronic-Controlled Vehicles",
+    plat_how_opt1_desc: "No mechanical hardware is required on vehicles equipped with Drive-by-Wire (EPS/electronic throttle). The CAN-Bus cable from the Trustia edge computer connects directly to the OBD-II or CAN Gateway port, controlling actuation through native digital messages.",
+    plat_how_opt2_badge: "METHOD 2 // MECHANICAL & LEGACY CHASSIS",
+    plat_how_opt2_title: "Mechanical Steering & Legacy Armored Platforms",
+    plat_how_opt2_desc: "For mechanical steering or heavy-duty legacy vehicles, a compact industrial servo motor is fitted to the steering column, and linear actuators are mounted to the pedals. Trustia commands these actuators directly via CAN-Bus.",
 
     // Tech Matrix Showcase
     matrix_badge: "NATIONAL AUTONOMY ARCHITECTURE & TECHNICAL CAPACITY MATRIX",
