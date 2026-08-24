@@ -18,20 +18,9 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-2 sm:top-3 left-1/2 -translate-x-1/2 w-[96%] sm:w-[94%] max-w-6xl z-40 transition-all duration-500 flex flex-col items-center">
-      {/* Top Floating Institutional Ecosystem Status Pill */}
-      <div className="mb-1 hidden md:flex items-center justify-center gap-2.5 text-[9px] sm:text-[10px] font-mono font-bold tracking-wider py-0.5 px-3.5 rounded-full bg-black/70 backdrop-blur-md border border-emerald-500/30 text-slate-200 shadow-lg shadow-emerald-500/5 select-none">
-        <span className="flex h-1.5 w-1.5 relative">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-        </span>
-        <span className="text-emerald-400">{t("top_ticker_btm")}</span>
-        <span className="text-white/30">•</span>
-        <span className="text-cyan-400">{t("top_ticker_teknopark")}</span>
-      </div>
-
+    <header className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 w-[96%] sm:w-[94%] max-w-6xl z-40 transition-all duration-500">
       {/* 100% Fully Transparent Header with No Background or Border anywhere */}
-      <div className="relative w-full px-1 sm:px-2 py-1.5 sm:py-2 bg-transparent border-none shadow-none flex items-center justify-between">
+      <div className="relative px-1 sm:px-2 py-1.5 sm:py-2 bg-transparent border-none shadow-none flex items-center justify-between">
         
         {/* Brand Logo with Dynamic High-Res Waving Flag on the Diagonal Tip of "I" */}
         <Link href="/" className="relative inline-flex items-center group select-none py-1 pr-5 sm:pr-6 shrink-0">

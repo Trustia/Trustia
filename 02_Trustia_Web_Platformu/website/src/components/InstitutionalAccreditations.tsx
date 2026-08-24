@@ -3,6 +3,7 @@
 import {
   Building2,
   ShieldCheck,
+  Globe2,
   CheckCircle2,
   ArrowUpRight,
   Sparkles,
@@ -21,8 +22,8 @@ export default function InstitutionalAccreditations() {
       status: t("eco_card1_status"),
       badgeText: "2026 KABULÜ",
       icon: Building2,
-      location: "Şişli Polat Tower, İstanbul",
-      glowColor: "emerald",
+      location: "Şişli Polat Tower",
+      color: "emerald",
     },
     {
       id: "teknopark",
@@ -32,64 +33,82 @@ export default function InstitutionalAccreditations() {
       status: t("eco_card2_status"),
       badgeText: "CUBE GO SÜRECİ",
       icon: ShieldCheck,
-      location: "Pendik, İstanbul // Savunma Teknoparkı",
-      glowColor: "cyan",
+      location: "Pendik, İstanbul",
+      color: "cyan",
+    },
+    {
+      id: "yc",
+      org: t("eco_card3_org"),
+      title: t("eco_card3_title"),
+      desc: t("eco_card3_desc"),
+      status: t("eco_card3_status"),
+      badgeText: "FALL 2026",
+      icon: Globe2,
+      location: "San Francisco, CA",
+      color: "amber",
     },
   ];
 
   return (
-    <section className="relative z-20 py-12 sm:py-16 px-4 sm:px-12 bg-[#06080b] border-t border-b border-white/10">
-      <div className="max-w-5xl mx-auto space-y-8">
+    <section className="relative z-20 py-6 sm:py-8 px-4 sm:px-8 bg-[#06080b] border-t border-b border-white/10">
+      <div className="max-w-6xl mx-auto space-y-4">
         
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <div className="max-w-2xl space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
+        {/* Compact Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex items-center gap-2.5">
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold tracking-wider uppercase">
+              <Sparkles className="w-3 h-3" />
               <span>{t("eco_badge")}</span>
-            </div>
-            <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
+            </span>
+            <h2 className="text-sm sm:text-base font-bold text-white tracking-tight">
               {t("eco_title")}
             </h2>
           </div>
-          <p className="text-slate-400 text-xs sm:text-sm font-normal max-w-md leading-relaxed border-l-2 border-emerald-500/40 pl-3">
+          <span className="text-[11px] font-mono text-slate-400">
             {t("eco_desc")}
-          </p>
+          </span>
         </div>
 
-        {/* 2 Focused Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+        {/* 3 Compact Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
           {accreditations.map((item) => {
             const IconComponent = item.icon;
-            const isEmerald = item.glowColor === "emerald";
+            const isEmerald = item.color === "emerald";
+            const isCyan = item.color === "cyan";
 
             return (
               <div
                 key={item.id}
-                className={`p-6 sm:p-7 rounded-2xl bg-[#0a0d13] border transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-xl ${
+                className={`p-4 sm:p-4.5 rounded-xl bg-[#090c10] border transition-all duration-300 flex flex-col justify-between group relative shadow-lg ${
                   isEmerald
-                    ? "border-emerald-500/30 hover:border-emerald-400/70 hover:shadow-[0_0_30px_rgba(16,185,129,0.1)]"
-                    : "border-cyan-500/30 hover:border-cyan-400/70 hover:shadow-[0_0_30px_rgba(6,182,212,0.1)]"
+                    ? "border-emerald-500/25 hover:border-emerald-400/60 hover:shadow-emerald-500/5"
+                    : isCyan
+                    ? "border-cyan-500/25 hover:border-cyan-400/60 hover:shadow-cyan-500/5"
+                    : "border-amber-500/25 hover:border-amber-400/60 hover:shadow-amber-500/5"
                 }`}
               >
-                <div className="space-y-4">
+                <div className="space-y-2.5">
                   {/* Top Bar: Icon & Badge */}
                   <div className="flex items-center justify-between">
                     <div
-                      className={`p-3 rounded-xl transition-colors ${
+                      className={`p-2 rounded-lg ${
                         isEmerald
-                          ? "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
-                          : "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+                          ? "bg-emerald-500/10 text-emerald-400"
+                          : isCyan
+                          ? "bg-cyan-500/10 text-cyan-400"
+                          : "bg-amber-500/10 text-amber-400"
                       }`}
                     >
-                      <IconComponent className="w-6 h-6" />
+                      <IconComponent className="w-4 h-4" />
                     </div>
 
                     <span
-                      className={`text-[10px] font-mono font-bold px-2.5 py-1 rounded border uppercase tracking-wider ${
+                      className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded border uppercase tracking-wider ${
                         isEmerald
                           ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-300"
-                          : "bg-cyan-500/10 border-cyan-500/30 text-cyan-300"
+                          : isCyan
+                          ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-300"
+                          : "bg-amber-500/10 border-amber-500/30 text-amber-300"
                       }`}
                     >
                       {item.badgeText}
@@ -98,44 +117,38 @@ export default function InstitutionalAccreditations() {
 
                   {/* Institution Organization & Title */}
                   <div>
-                    <div className="text-[11px] font-mono font-bold text-slate-400 uppercase tracking-wider mb-1.5">
+                    <div className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">
                       {item.org}
                     </div>
-                    <h3
-                      className={`text-base sm:text-lg font-bold text-white transition-colors leading-tight ${
-                        isEmerald
-                          ? "group-hover:text-emerald-400"
-                          : "group-hover:text-cyan-400"
-                      }`}
-                    >
+                    <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-slate-100 transition-colors leading-snug">
                       {item.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal">
+                  <p className="text-slate-400 text-[11px] sm:text-xs leading-relaxed font-normal">
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Bottom Status Pill & Location */}
-                <div className="pt-5 mt-5 border-t border-white/10 space-y-2.5">
-                  <div className="flex items-center justify-between">
-                    <span
-                      className={`inline-flex items-center gap-2 text-[11px] font-mono font-bold px-3 py-1 rounded-full border ${
-                        isEmerald
-                          ? "bg-emerald-500/10 border-emerald-500/40 text-emerald-300"
-                          : "bg-cyan-500/10 border-cyan-500/40 text-cyan-300"
-                      }`}
-                    >
-                      <CheckCircle2 className="w-3.5 h-3.5" />
-                      <span>{item.status}</span>
-                    </span>
-                    <ArrowUpRight className="w-4 h-4 text-slate-500 group-hover:text-white transition-colors" />
-                  </div>
-                  <div className="text-[10px] font-mono text-slate-500">
+                <div className="pt-3 mt-3 border-t border-white/10 flex items-center justify-between text-[10px] font-mono">
+                  <span
+                    className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border font-bold ${
+                      isEmerald
+                        ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-300"
+                        : isCyan
+                        ? "bg-cyan-500/10 border-cyan-500/30 text-cyan-300"
+                        : "bg-amber-500/10 border-amber-500/30 text-amber-300"
+                    }`}
+                  >
+                    <CheckCircle2 className="w-3 h-3" />
+                    <span>{item.status}</span>
+                  </span>
+
+                  <span className="text-slate-500 truncate max-w-[120px]">
                     📍 {item.location}
-                  </div>
+                  </span>
                 </div>
               </div>
             );
