@@ -13,6 +13,33 @@ interface LanguageContextType {
 
 const translations: Record<Language, Record<string, string>> = {
   tr: {
+    // Top Ticker & Announcements
+    top_ticker_btm: "🏛️ İTO BTM (Bilgiyi Ticarileştirme Merkezi) Ön Kuluçka Kabulü (2026)",
+    top_ticker_teknopark: "🏢 Teknopark İstanbul Cube GO Aday Firma Onayı",
+    top_ticker_yc: "🇺🇸 Y Combinator (Fall 2026) Çift Amaçlı Savunma Adayı",
+    top_ticker_ssb: "🎖️ SSB & BTK Savunma Sanayii 100/100 Tam Puan Tescili",
+
+    // Institutional Ecosystem & Accreditations
+    eco_badge: "RESMİ KULUÇKA & KURUMSAL AKREDİTASYONLAR",
+    eco_title: "Devlet ve Girişimcilik Ekosistemi Onaylarımız",
+    eco_desc: "Türkiye'nin ve dünyanın en prestijli kurumları, savunma sanayii teknoparkları ve kuluçka merkezleri tarafından tescillenen resmi süreçlerimiz.",
+    eco_card1_org: "İTO BTM (İSTANBUL TİCARET ODASI)",
+    eco_card1_title: "Ön Kuluçka Programı Kabulü",
+    eco_card1_desc: "İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi nihai değerlendirmesinden geçerek 2026 Ön Kuluçka programına kabul edildi.",
+    eco_card1_status: "ONAYLANDI // KABUL",
+    eco_card2_org: "TEKNOPARK İSTANBUL (CUBE GO)",
+    eco_card2_title: "Savunma Teknoparkı Aday Firma",
+    eco_card2_desc: "Türkiye'nin derin teknoloji ve savunma sanayii merkezi Teknopark İstanbul Cube Incubation aday firma onayını aldı.",
+    eco_card2_status: "ADAY FİRMA ONAYLI",
+    eco_card3_org: "Y COMBINATOR (SILICON VALLEY)",
+    eco_card3_title: "Fall 2026 Savunma Adayı",
+    eco_card3_desc: "Silikon Vadisi YC programına çift amaçlı Seviye 4 otonomi ve UGV kategorisinde başvuru yapıldı, aktif değerlendirmede.",
+    eco_card3_status: "DEĞERLENDİRMEDE",
+    eco_card4_org: "SSB & BTK AKADEMİ",
+    eco_card4_title: "Savunma Teknolojileri 100/100",
+    eco_card4_desc: "Savunma Sanayii Başkanlığı ve BTK Akademi resmi sınavında 100/100 tam puanla Türkiye 1.'liği (Doğrulama: L2zPtN4X1ZJ).",
+    eco_card4_status: "RESMİ TESCİLLİ",
+
     // Navbar
     nav_about: "HAKKIMIZDA",
     nav_autonomy: "OTONOMİ",
@@ -261,6 +288,33 @@ const translations: Record<Language, Record<string, string>> = {
     footer_entity: "Trustia Autonomous Systems Inc. (Delaware, USA) & Trustia Teknoloji (Türkiye)"
   },
   en: {
+    // Top Ticker & Announcements
+    top_ticker_btm: "🏛️ Accepted into Istanbul Chamber of Commerce (BTM) Pre-Incubation (2026)",
+    top_ticker_teknopark: "🏢 Teknopark Istanbul Cube GO Candidate Startup Approved",
+    top_ticker_yc: "🇺🇸 Y Combinator (Fall 2026) Dual-Use Defense Candidate",
+    top_ticker_ssb: "🎖️ SSB & BTK Defense Technologies 100/100 Perfect Score",
+
+    // Institutional Ecosystem & Accreditations
+    eco_badge: "OFFICIAL INCUBATION & INSTITUTIONAL ACCREDITATIONS",
+    eco_title: "Government & Startup Ecosystem Approvals",
+    eco_desc: "Officially certified and accelerated across Turkey's and the global defense industry's premier technology parks and incubator cohorts.",
+    eco_card1_org: "ISTANBUL CHAMBER OF COMMERCE (BTM)",
+    eco_card1_title: "Pre-Incubation Program Accepted",
+    eco_card1_desc: "Passed final institutional evaluation and officially admitted into the 2026 BTM Pre-Incubation program.",
+    eco_card1_status: "ACCEPTED // APPROVED",
+    eco_card2_org: "TEKNOPARK ISTANBUL (CUBE GO)",
+    eco_card2_title: "Defense Teknopark Candidate Startup",
+    eco_card2_desc: "Officially approved as candidate startup under Teknopark Istanbul Cube Incubation defense innovation track.",
+    eco_card2_status: "CANDIDATE APPROVED",
+    eco_card3_org: "Y COMBINATOR (SILICON VALLEY)",
+    eco_card3_title: "Fall 2026 Defense Candidate",
+    eco_card3_desc: "Submitted for Y Combinator Silicon Valley cohort under dual-use Level 4 autonomy & UGV category, active review.",
+    eco_card3_status: "ACTIVE REVIEW",
+    eco_card4_org: "SSB & BTK ACADEMY",
+    eco_card4_title: "Defense Technologies 100/100",
+    eco_card4_desc: "Ranked #1 nationwide with a perfect 100/100 score in official Defense Technologies examination (Verification: L2zPtN4X1ZJ).",
+    eco_card4_status: "OFFICIALLY CERTIFIED",
+
     // Navbar
     nav_about: "ABOUT US",
     nav_autonomy: "AUTONOMY",

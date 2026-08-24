@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
+import InstitutionalAccreditations from "@/components/InstitutionalAccreditations";
 import GalleryShowcase from "@/components/GalleryShowcase";
 import SupportedPlatformsShowcase from "@/components/SupportedPlatformsShowcase";
 import FeatureVideo from "@/components/FeatureVideo";
@@ -55,7 +56,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. 5 Real Photos Gallery Showcase */}
+      {/* 3. Official Institutional Accreditations & Incubator Ecosystem (BTM, Teknopark Istanbul, YC, SSB) */}
+      <InstitutionalAccreditations />
+
+      {/* 4. 5 Real Photos Gallery Showcase */}
       <GalleryShowcase />
 
       {/* 4. Supported Vehicles & Integration Platforms Matrix */}
