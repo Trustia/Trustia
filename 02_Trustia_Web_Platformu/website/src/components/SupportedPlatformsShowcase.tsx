@@ -17,6 +17,8 @@ import {
   Wrench,
   Activity,
   Terminal,
+  ArrowRight,
+  Send,
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -82,7 +84,7 @@ export default function SupportedPlatformsShowcase() {
     },
   ];
 
-  // 100% Verified Global B2B Procurement Market Prices (August 2026)
+  // Master Hardware Bill of Materials (BOM) — Enterprise Status
   const bomItems = [
     // 1. Compute & Power
     {
@@ -91,7 +93,8 @@ export default function SupportedPlatformsShowcase() {
       model: "NVIDIA Jetson AGX Orin Industrial (64GB / 275 TOPS)",
       func: "Trustia 400Hz ESKF, 3D SLAM, Hibrit A* ve yapay zeka çekirdeğinin çalıştığı ana işlemci ünitesi.",
       standard: "ISO 26262 ASIL-B / MIL-STD-810H (-40°C/+85°C)",
-      cost: "$3.600 USD",
+      status: "ONAYLI DONANIM",
+      source: "AutonomousStuff / Mouser / NVIDIA",
       icon: Server,
     },
     {
@@ -100,7 +103,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Samsung 990 Pro 2TB PCIe Gen4 M.2 SSD",
       func: "LiDAR nokta bulutları, kamera akışları ve telemetri loglarının mikrosaniyede kaydı.",
       standard: "PCIe 4.0 / 7.450 MB/s Okuma-Yazma",
-      cost: "$190 USD",
+      status: "ONAYLI DONANIM",
+      source: "Samsung Industrial / Global",
       icon: Cpu,
     },
     {
@@ -109,7 +113,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Mean Well SD-100A-12 (Geniş Girişli)",
       func: "Araç aküsündeki 12V/24V dalgalı voltajı bilgisayar ve sensörler için temiz 12V DC'ye regüle eder.",
       standard: "Endüstriyel IP30 / Kısa Devre & Aşırı Yük Korumalı",
-      cost: "$95 USD",
+      status: "ONAYLI DONANIM",
+      source: "Mean Well / Mouser",
       icon: Zap,
     },
     {
@@ -118,7 +123,8 @@ export default function SupportedPlatformsShowcase() {
       model: "12V Süperkapasitör Kesintisiz Güç Ünitesi",
       func: "Marşa basıldığında veya akü voltajı anlık düştüğünde bilgisayarın kapanmasını önler.",
       standard: "Zero-Downtime / 100.000+ Döngü Ömrü",
-      cost: "$140 USD",
+      status: "ONAYLI DONANIM",
+      source: "Endüstriyel OEM",
       icon: Activity,
     },
     {
@@ -127,7 +133,8 @@ export default function SupportedPlatformsShowcase() {
       model: "STM32H7 / Infineon AURIX TC397",
       func: "İşletim sistemi kitlenirse 200ms içinde donanımsal hidrolik acil freni kilitleyen emniyet kartı.",
       standard: "ISO 26262 ASIL-D Seviye Donanım Bekçisi",
-      cost: "$155 USD",
+      status: "ONAYLI DONANIM",
+      source: "Infineon / STMicroelectronics",
       icon: Shield,
     },
 
@@ -138,7 +145,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Hesai Pandar XT32 (32 Kanal, 120m) / Ouster OS1-32",
       func: "Aracın tavanında saniyede 640.000 lazer ışınıyla 120 metre menzilde 3D çevre haritalama.",
       standard: "IP67 / IP69K / Sınıf 1 Göz Güvenlikli (Class 1 Eye-Safe)",
-      cost: "$5.800 USD",
+      status: "ONAYLI DONANIM",
+      source: "Hesai / Ouster / AutonomousStuff",
       icon: Eye,
     },
     {
@@ -147,7 +155,8 @@ export default function SupportedPlatformsShowcase() {
       model: "e-con Systems Sony IMX390 HDR (Global Shutter)",
       func: "Şerit çizgileri, yol tabelaları, insan ve trafik ışıklarının yüksek dinamik aralıkla tespiti.",
       standard: "IP67 / 120dB HDR / GigE & USB3 Arayüz",
-      cost: "$650 USD",
+      status: "ONAYLI DONANIM",
+      source: "e-con Systems / Sony OEM",
       icon: Eye,
     },
     {
@@ -156,7 +165,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Xsens MTi-680G (400Hz 9-Eksen RTK-GNSS/INS)",
       func: "400Hz ivmeölçer ve jiroskop ile aracın yanal kayma, eğim ve yönelimini mikrosaniyede hesaplar.",
       standard: "IP68 / RTK-GNSS Entegreli / MIL-STD-810G",
-      cost: "$3.740 USD",
+      status: "ONAYLI DONANIM",
+      source: "Movella Xsens / Mouser",
       icon: Crosshair,
     },
     {
@@ -165,7 +175,8 @@ export default function SupportedPlatformsShowcase() {
       model: "u-blox ZED-F9P Modülü + 2x Tallysman Anten",
       func: "Açık arazide uydu görüşü varken 1-2 santimetre hassasiyetinde mutlak küresel koordinat sağlar.",
       standard: "Çok Bantlı L1/L2/E5b RTK / NMEA 0183",
-      cost: "$480 USD",
+      status: "ONAYLI DONANIM",
+      source: "u-blox / ArduSimple",
       icon: Radio,
     },
 
@@ -176,7 +187,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Kvaser Leaf Light v2 / PEAK PCAN-USB Pro FD",
       func: "Trustia sürüş komutlarını (Hız, Direksiyon Açısı) aracın motor ve EPS beynine iletir.",
       standard: "SAE J1939 / CAN 2.0B / CAN FD / 1ms Deterministik",
-      cost: "$380 USD",
+      status: "ONAYLI DONANIM",
+      source: "Kvaser / PEAK-System",
       icon: Terminal,
     },
     {
@@ -185,7 +197,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Shielded Twisted-Pair Otomotiv Kablosu",
       func: "Aracın CAN-High / CAN-Low hatlarına parazitsiz ve gürültüsüz dijital bağlantı.",
       standard: "Otomotiv Sınıfı Korumalı Kablolama",
-      cost: "$60 USD",
+      status: "ONAYLI DONANIM",
+      source: "Otomotiv Kablo Demeti",
       icon: Layers,
     },
     {
@@ -194,7 +207,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Schneider Electric IP67 Mantar Buton",
       func: "Aracın dışına takılır; basıldığı anda aktüatör gücünü mekanik olarak kesip freni kilitler.",
       standard: "IEC 60947-5-5 / IP67 Emniyet Sertifikalı",
-      cost: "$75 USD",
+      status: "ONAYLI DONANIM",
+      source: "Schneider Electric",
       icon: Zap,
     },
 
@@ -205,7 +219,8 @@ export default function SupportedPlatformsShowcase() {
       model: "FLIR Boson 640 Core (640x512 / 60Hz)",
       func: "Zifiri karanlık, sis ve duman arkasındaki canlıları ve toprak altı ısı anomalilerini tespit eder.",
       standard: "MIL-STD-810G Askeri Termal Standart",
-      cost: "$4.500 USD",
+      status: "ASKERİ ONAYLI",
+      source: "Teledyne FLIR / GroupGets",
       icon: Eye,
     },
     {
@@ -214,7 +229,8 @@ export default function SupportedPlatformsShowcase() {
       model: "CEIA CMD2 Askeri İndüksiyon Bobini",
       func: "Toprak altındaki metal mayınları, EYP düzeneklerini ve gizli kabloları elektromanyetik algılar.",
       standard: "NATO STANAG 4586 / MIL-STD Uyumlu",
-      cost: "$6.800 USD",
+      status: "ASKERİ ONAYLI",
+      source: "CEIA Defense (İtalya)",
       icon: Crosshair,
     },
     {
@@ -223,7 +239,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Impulse Radar PinPoint GPR (1-2m Derinlik)",
       func: "Toprak altına elektromanyetik radar dalgaları göndererek plastik mayın ve tünelleri bulur.",
       standard: "Geniş Bant Yeraltı Radarı / IP67",
-      cost: "$9.500 USD",
+      status: "ASKERİ ONAYLI",
+      source: "ImpulseRadar Sweden",
       icon: Radio,
     },
     {
@@ -232,7 +249,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Doodle Labs Smart Radio / Silvus SC4200 MIMO (AES-256)",
       func: "Araç ile komuta merkezi arasında 5-15 km mesafeden şifreli canlı video ve telemetri aktarır.",
       standard: "FIPS 140-2 Seviye 2 / MIL-STD-810H",
-      cost: "$3.500 USD",
+      status: "ASKERİ ONAYLI",
+      source: "Doodle Labs / Silvus Tech",
       icon: Radio,
     },
 
@@ -243,7 +261,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Nanotec 12V Fırçasız Torklu Servo Motor",
       func: "Elektronik direksiyonu olmayan klasik araçların direksiyon milini fiziksel olarak çevirir.",
       standard: "12V DC / 15 Nm Tork / CANopen Kontrollü",
-      cost: "$450 USD",
+      status: "ENDÜSTRİYEL ONAYLI",
+      source: "Nanotec Electronic",
       icon: Wrench,
     },
     {
@@ -252,7 +271,8 @@ export default function SupportedPlatformsShowcase() {
       model: "Linak LA36 12V 800N Lineer Ağır Hizmet Aktüatörü (2x)",
       func: "Gaz ve fren pedalının arkasına vidalanarak pedallara insan ayağı gibi fiziksel basar.",
       standard: "IP66 / 800N Basma Kuvveti / Endüstriyel Sınıf",
-      cost: "$2.400 USD",
+      status: "ENDÜSTRİYEL ONAYLI",
+      source: "LINAK A/S / Radwell",
       icon: Wrench,
     },
   ];
@@ -441,8 +461,11 @@ export default function SupportedPlatformsShowcase() {
                             {item.standard}
                           </span>
                         </td>
-                        <td className="py-3.5 px-4 sm:px-6 text-right font-mono font-bold text-[#C8FF00]">
-                          {item.cost}
+                        <td className="py-3.5 px-4 sm:px-6 text-right font-mono">
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C8FF00]/10 border border-[#C8FF00]/30 text-[#C8FF00] font-bold text-[10px]">
+                            <CheckCircle2 className="w-3 h-3" />
+                            <span>{item.status}</span>
+                          </span>
                         </td>
                       </tr>
                     );
@@ -453,7 +476,7 @@ export default function SupportedPlatformsShowcase() {
           </div>
 
           {/* ========================================================================= */}
-          {/* PART 3: REAL-WORLD TURNKEY PACKAGE BUDGETS (ACCURATE 2026 ESTIMATES)       */}
+          {/* PART 3: ENTERPRISE TURNKEY INTEGRATION PACKAGES                           */}
           {/* ========================================================================= */}
           <div className="space-y-4 pt-4">
             <div className="flex items-center justify-between">
@@ -463,69 +486,82 @@ export default function SupportedPlatformsShowcase() {
                 </h3>
                 <p className="text-slate-400 text-xs">{t("bom_turnkey_subtitle")}</p>
               </div>
+              <a
+                href="/iletisim"
+                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#C8FF00] hover:underline"
+              >
+                <span>Donanım & Entegrasyon Talebi (RFQ)</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {/* Turnkey 1: Civilian Robotaxi */}
-              <div className="p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 py-0.5 rounded border border-[#C8FF00]/30">
-                    SİVİL SEVİYE 4 KİTİ
-                  </span>
-                  <span className="font-mono text-base font-extrabold text-white">
-                    ~$14.750 USD
-                  </span>
+              <div className="p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[10px] font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 py-0.5 rounded border border-[#C8FF00]/30">
+                      SİVİL SEVİYE 4 KİTİ
+                    </span>
+                    <span className="font-mono text-xs font-bold text-slate-300">
+                      TAK-ÇALIŞTIR
+                    </span>
+                  </div>
+                  <h4 className="text-sm font-bold text-white">
+                    {t("bom_turnkey_1_title")}
+                  </h4>
+                  <p className="text-slate-400 text-xs leading-relaxed">
+                    {t("bom_turnkey_1_desc")}
+                  </p>
                 </div>
-                <h4 className="text-sm font-bold text-white">
-                  {t("bom_turnkey_1_title")}
-                </h4>
-                <p className="text-slate-400 text-xs leading-relaxed">
-                  {t("bom_turnkey_1_desc")}
-                </p>
-                <div className="pt-2 text-[10px] font-mono text-slate-500 border-t border-white/10">
-                  NVIDIA Jetson Orin ($3.6K) + Hesai XT32 LiDAR ($5.8K) + Xsens MTi-680G ($3.7K) + Kameralar & CAN ($1.6K)
+                <div className="pt-3 text-[10px] font-mono text-slate-500 border-t border-white/10">
+                  NVIDIA Jetson Orin + Hesai XT32 LiDAR + Xsens MTi-680G + Kameralar & CAN Köprüsü
                 </div>
               </div>
 
               {/* Turnkey 2: Military Defense UGV */}
-              <div className="p-5 rounded-xl bg-[#0c0f16] border border-[#C8FF00]/30 space-y-3 relative overflow-hidden shadow-lg shadow-[#C8FF00]/5">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">
-                    ASKERİ TAKTİK İKA KİTİ
-                  </span>
-                  <span className="font-mono text-base font-extrabold text-[#C8FF00]">
-                    ~$39.050 USD
-                  </span>
+              <div className="p-5 rounded-xl bg-[#0c0f16] border border-[#C8FF00]/30 space-y-3 relative overflow-hidden shadow-lg shadow-[#C8FF00]/5 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">
+                      NATO STANAG ASKERİ İKA
+                    </span>
+                    <span className="font-mono text-xs font-bold text-[#C8FF00]">
+                      TAM SAVUNMA KİTİ
+                    </span>
+                  </div>
+                  <h4 className="text-sm font-bold text-white">
+                    {t("bom_turnkey_2_title")}
+                  </h4>
+                  <p className="text-slate-400 text-xs leading-relaxed">
+                    {t("bom_turnkey_2_desc")}
+                  </p>
                 </div>
-                <h4 className="text-sm font-bold text-white">
-                  {t("bom_turnkey_2_title")}
-                </h4>
-                <p className="text-slate-400 text-xs leading-relaxed">
-                  {t("bom_turnkey_2_desc")}
-                </p>
-                <div className="pt-2 text-[10px] font-mono text-slate-400 border-t border-white/10">
-                  Sivil Kit ($14.7K) + FLIR Boson 640 ($4.5K) + CEIA CMD2 ($6.8K) + GPR Radar ($9.5K) + Mesh Telsiz ($3.5K)
+                <div className="pt-3 text-[10px] font-mono text-slate-400 border-t border-white/10">
+                  Sivil Kit + FLIR Boson 640 Termal + CEIA CMD2 Mayın + GPR Yeraltı Radarı + Taktik Mesh Telsiz
                 </div>
               </div>
 
               {/* Turnkey 3: Mechanical Tractor / Mining */}
-              <div className="p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="font-mono text-[10px] font-bold text-sky-400 bg-sky-400/10 px-2 py-0.5 rounded border border-sky-400/30">
-                    MEKANİK ARAÇ KİTİ
-                  </span>
-                  <span className="font-mono text-base font-extrabold text-white">
-                    ~$17.600 USD
-                  </span>
+              <div className="p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3 flex flex-col justify-between">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[10px] font-bold text-sky-400 bg-sky-400/10 px-2 py-0.5 rounded border border-sky-400/30">
+                      AĞIR HİZMET VE ENDÜSTRİ
+                    </span>
+                    <span className="font-mono text-xs font-bold text-slate-300">
+                      MEKANİK DÖNÜŞÜM
+                    </span>
+                  </div>
+                  <h4 className="text-sm font-bold text-white">
+                    {t("bom_turnkey_3_title")}
+                  </h4>
+                  <p className="text-slate-400 text-xs leading-relaxed">
+                    {t("bom_turnkey_3_desc")}
+                  </p>
                 </div>
-                <h4 className="text-sm font-bold text-white">
-                  {t("bom_turnkey_3_title")}
-                </h4>
-                <p className="text-slate-400 text-xs leading-relaxed">
-                  {t("bom_turnkey_3_desc")}
-                </p>
-                <div className="pt-2 text-[10px] font-mono text-slate-500 border-t border-white/10">
-                  Sivil Kit ($14.7K) + Nanotec Servo ($450) + Linak LA36 Endüstriyel Pistonlar ($2.4K)
+                <div className="pt-3 text-[10px] font-mono text-slate-500 border-t border-white/10">
+                  Sivil Kit + Nanotec Direksiyon Servo Motoru + Linak LA36 Ağır Hizmet Pedal Aktüatörleri
                 </div>
               </div>
             </div>
