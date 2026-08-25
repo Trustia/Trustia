@@ -309,34 +309,34 @@ export default function SupportedPlatformsShowcase() {
             </p>
           </div>
 
-          {/* 3 Main Vehicle Category Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* 3 Main Vehicle Category Cards / Mobile Horizontal Snap Carousel */}
+          <div className="flex overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar md:grid md:grid-cols-3 gap-4 sm:gap-6">
             {vehicleCategories.map((cat) => {
               const IconComponent = cat.icon;
               return (
                 <div
                   key={cat.id}
-                  className="p-6 sm:p-7 rounded-2xl bg-[#0c0f16] border border-white/10 hover:border-[#C8FF00]/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-xl"
+                  className="w-[88vw] max-w-[340px] shrink-0 snap-center md:w-auto md:max-w-none p-4 sm:p-7 rounded-2xl bg-[#0c0f16] border border-white/10 hover:border-[#C8FF00]/40 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden shadow-xl"
                 >
-                  <div className="space-y-4">
+                  <div className="space-y-3 sm:space-y-4">
                     {/* Card Header */}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <span className="font-mono text-xs font-bold text-[#C8FF00]">
                           {cat.number} //
                         </span>
-                        <span className="font-mono text-[10px] uppercase tracking-wider text-slate-300 font-bold bg-white/5 px-2 py-0.5 rounded border border-white/10">
+                        <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-slate-300 font-bold bg-white/5 px-2 py-0.5 rounded border border-white/10">
                           {cat.badge}
                         </span>
                       </div>
-                      <div className="p-2.5 rounded-xl bg-white/5 text-[#C8FF00] group-hover:bg-[#C8FF00]/10 transition-colors">
-                        <IconComponent className="w-5 h-5" />
+                      <div className="p-2 sm:p-2.5 rounded-xl bg-white/5 text-[#C8FF00] group-hover:bg-[#C8FF00]/10 transition-colors">
+                        <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
                       </div>
                     </div>
 
                     {/* Title & Desc */}
                     <div>
-                      <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C8FF00] transition-colors leading-snug">
+                      <h3 className="text-base sm:text-lg font-bold text-white mb-1.5 group-hover:text-[#C8FF00] transition-colors leading-snug">
                         {cat.title}
                       </h3>
                       <p className="text-slate-400 text-xs leading-relaxed font-normal">
@@ -344,19 +344,20 @@ export default function SupportedPlatformsShowcase() {
                       </p>
                     </div>
 
-                    {/* Vehicle Tag Pills */}
-                    <div className="space-y-1.5 pt-2">
-                      <div className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">
+                    {/* Vehicle Tag Pills (2-column compact on mobile) */}
+                    <div className="space-y-1.5 pt-1 sm:pt-2">
+                      <div className="text-[9.5px] sm:text-[10px] font-mono text-slate-500 uppercase tracking-wider">
                         Uyumlu Platform Örnekleri:
                       </div>
-                      <div className="flex flex-wrap gap-1.5">
+                      <div className="grid grid-cols-2 gap-1 sm:flex sm:flex-wrap sm:gap-1.5">
                         {cat.list.map((item, idx) => (
                           <span
                             key={idx}
-                            className="text-[10px] font-mono px-2 py-1 rounded bg-white/[0.04] border border-white/10 text-slate-300 flex items-center gap-1"
+                            className="text-[9.5px] sm:text-[10px] font-mono px-1.5 sm:px-2 py-1 rounded bg-white/[0.04] border border-white/10 text-slate-300 flex items-center gap-1 truncate"
+                            title={item}
                           >
                             <CheckCircle2 className="w-2.5 h-2.5 text-[#C8FF00] shrink-0" />
-                            <span>{item}</span>
+                            <span className="truncate">{item}</span>
                           </span>
                         ))}
                       </div>
@@ -364,11 +365,11 @@ export default function SupportedPlatformsShowcase() {
                   </div>
 
                   {/* Bottom Protocol Pill */}
-                  <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between">
+                  <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-white/10 flex items-center justify-between">
                     <span className="text-[9px] font-mono text-slate-400 uppercase tracking-wider">
                       Protokol:
                     </span>
-                    <span className="text-[10px] font-mono font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2.5 py-0.5 rounded border border-[#C8FF00]/30">
+                    <span className="text-[9px] sm:text-[10px] font-mono font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 sm:px-2.5 py-0.5 rounded border border-[#C8FF00]/30 truncate max-w-[200px]">
                       {cat.protocol}
                     </span>
                   </div>
@@ -376,19 +377,24 @@ export default function SupportedPlatformsShowcase() {
               );
             })}
           </div>
+
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-center gap-1.5 text-[9px] font-mono text-slate-500">
+            <span>← Diğer Platformlar İçin Kaydır →</span>
+          </div>
         </div>
 
         {/* ========================================================================= */}
         {/* PART 2: MASTER HARDWARE BILL OF MATERIALS (BOM) SPECIFICATION TABLE       */}
         {/* ========================================================================= */}
-        <div className="space-y-8 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div className="max-w-2xl space-y-3">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/5 border border-white/20 text-[#C8FF00] text-[11px] sm:text-xs font-mono font-bold tracking-widest uppercase">
+        <div className="space-y-6 sm:space-y-8 pt-6 sm:pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6">
+            <div className="max-w-2xl space-y-2 sm:space-y-3">
+              <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-1 rounded-md bg-white/5 border border-white/20 text-[#C8FF00] text-[10px] sm:text-xs font-mono font-bold tracking-widest uppercase">
                 <Wrench className="w-3.5 h-3.5" />
                 <span>{t("bom_badge")}</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
                 {t("bom_title")}
               </h2>
             </div>
@@ -397,8 +403,8 @@ export default function SupportedPlatformsShowcase() {
             </p>
           </div>
 
-          {/* Interactive BOM Category Tabs */}
-          <div className="flex flex-wrap gap-2 pt-2">
+          {/* Interactive BOM Category Tabs (Horizontal scroll on mobile) */}
+          <div className="flex overflow-x-auto pb-1 gap-2 no-scrollbar -mx-4 px-4 sm:mx-0 sm:px-0">
             {[
               { id: "all", label: t("bom_tab_all") },
               { id: "compute", label: t("bom_tab_compute") },
@@ -410,7 +416,7 @@ export default function SupportedPlatformsShowcase() {
               <button
                 key={tab.id}
                 onClick={() => setActiveBomTab(tab.id)}
-                className={`px-3 py-1.5 rounded-lg font-mono text-[11px] sm:text-xs font-bold transition-all ${
+                className={`px-3 py-1.5 rounded-lg font-mono text-[10.5px] sm:text-xs font-bold shrink-0 transition-all ${
                   activeBomTab === tab.id
                     ? "bg-[#C8FF00] text-black shadow-lg shadow-[#C8FF00]/20"
                     : "bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/10"
@@ -421,19 +427,64 @@ export default function SupportedPlatformsShowcase() {
             ))}
           </div>
 
-          {/* Executive Defense-Grade Hardware Table */}
-          <div className="rounded-2xl bg-[#0a0d13] border border-white/15 overflow-hidden shadow-2xl">
+          {/* Mobile Hardware Card List (< md) */}
+          <div className="block md:hidden space-y-2.5">
+            {filteredBom.map((item, idx) => {
+              const ItemIcon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-3.5 rounded-xl bg-[#0a0d13] border border-white/10 space-y-2 shadow-md"
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className="p-1.5 rounded-md bg-white/5 text-[#C8FF00] shrink-0">
+                        <ItemIcon className="w-3.5 h-3.5" />
+                      </div>
+                      <div>
+                        <h4 className="text-xs font-bold text-white leading-tight">
+                          {item.name}
+                        </h4>
+                        <div className="text-[10px] font-mono text-slate-300 font-semibold mt-0.5">
+                          {item.model}
+                        </div>
+                      </div>
+                    </div>
+
+                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-[#C8FF00]/10 border border-[#C8FF00]/30 text-[#C8FF00] font-bold text-[8.5px] font-mono shrink-0">
+                      <CheckCircle2 className="w-2.5 h-2.5" />
+                      <span>{item.status}</span>
+                    </span>
+                  </div>
+
+                  <p className="text-slate-400 text-[10.5px] leading-relaxed">
+                    {item.func}
+                  </p>
+
+                  <div className="pt-2 border-t border-white/5 flex items-center justify-between text-[9px] font-mono text-slate-400">
+                    <span className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 truncate max-w-[190px]">
+                      {item.standard}
+                    </span>
+                    <span className="text-slate-500 truncate max-w-[100px]">
+                      {item.source}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Desktop Hardware Table (md+) */}
+          <div className="hidden md:block rounded-2xl bg-[#0a0d13] border border-white/15 overflow-hidden shadow-2xl">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs border-collapse">
                 <thead>
-                  <tr className="bg-white/[0.04] border-b border-white/10 text-slate-400 font-mono text-[10px] sm:text-[11px] uppercase tracking-wider">
-                    <th className="py-4 px-4 sm:px-6">{t("bom_col_component")}</th>
-                    <th className="py-4 px-4 sm:px-6">{t("bom_col_model")}</th>
-                    <th className="py-4 px-4 sm:px-6 hidden md:table-cell">
-                      {t("bom_col_function")}
-                    </th>
-                    <th className="py-4 px-4 sm:px-6">{t("bom_col_standard")}</th>
-                    <th className="py-4 px-4 sm:px-6 text-right">{t("bom_col_cost")}</th>
+                  <tr className="bg-white/[0.04] border-b border-white/10 text-slate-400 font-mono text-[11px] uppercase tracking-wider">
+                    <th className="py-4 px-6">{t("bom_col_component")}</th>
+                    <th className="py-4 px-6">{t("bom_col_model")}</th>
+                    <th className="py-4 px-6">{t("bom_col_function")}</th>
+                    <th className="py-4 px-6">{t("bom_col_standard")}</th>
+                    <th className="py-4 px-6 text-right">{t("bom_col_cost")}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5 font-sans">
@@ -444,24 +495,24 @@ export default function SupportedPlatformsShowcase() {
                         key={idx}
                         className="hover:bg-white/[0.02] transition-colors group"
                       >
-                        <td className="py-3.5 px-4 sm:px-6 font-bold text-white flex items-center gap-2.5">
+                        <td className="py-3.5 px-6 font-bold text-white flex items-center gap-2.5">
                           <div className="p-1.5 rounded-md bg-white/5 text-[#C8FF00] shrink-0">
                             <ItemIcon className="w-4 h-4" />
                           </div>
                           <span>{item.name}</span>
                         </td>
-                        <td className="py-3.5 px-4 sm:px-6 font-mono text-slate-300 font-semibold">
+                        <td className="py-3.5 px-6 font-mono text-slate-300 font-semibold">
                           {item.model}
                         </td>
-                        <td className="py-3.5 px-4 sm:px-6 text-slate-400 text-[11px] leading-relaxed hidden md:table-cell max-w-xs">
+                        <td className="py-3.5 px-6 text-slate-400 text-[11px] leading-relaxed max-w-xs">
                           {item.func}
                         </td>
-                        <td className="py-3.5 px-4 sm:px-6">
+                        <td className="py-3.5 px-6">
                           <span className="font-mono text-[10px] px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300">
                             {item.standard}
                           </span>
                         </td>
-                        <td className="py-3.5 px-4 sm:px-6 text-right font-mono">
+                        <td className="py-3.5 px-6 text-right font-mono">
                           <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#C8FF00]/10 border border-[#C8FF00]/30 text-[#C8FF00] font-bold text-[10px]">
                             <CheckCircle2 className="w-3 h-3" />
                             <span>{item.status}</span>
@@ -479,88 +530,89 @@ export default function SupportedPlatformsShowcase() {
           {/* PART 3: ENTERPRISE TURNKEY INTEGRATION PACKAGES                           */}
           {/* ========================================================================= */}
           <div className="space-y-4 pt-4">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <h3 className="text-lg sm:text-xl font-bold text-white">
+                <h3 className="text-base sm:text-xl font-bold text-white">
                   {t("bom_turnkey_title")}
                 </h3>
                 <p className="text-slate-400 text-xs">{t("bom_turnkey_subtitle")}</p>
               </div>
               <a
                 href="/iletisim"
-                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#C8FF00] hover:underline"
+                className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-[#C8FF00] hover:underline"
               >
                 <span>Donanım & Entegrasyon Talebi (RFQ)</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/* Mobile Snap Carousel / Desktop Grid */}
+            <div className="flex overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar md:grid md:grid-cols-3 gap-4 sm:gap-5">
               {/* Turnkey 1: Civilian Robotaxi */}
-              <div className="p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3 flex flex-col justify-between">
+              <div className="w-[85vw] max-w-[320px] shrink-0 snap-center md:w-auto md:max-w-none p-4 sm:p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3 flex flex-col justify-between shadow-lg">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 py-0.5 rounded border border-[#C8FF00]/30">
+                    <span className="font-mono text-[9px] font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 py-0.5 rounded border border-[#C8FF00]/30">
                       SİVİL SEVİYE 4 KİTİ
                     </span>
-                    <span className="font-mono text-xs font-bold text-slate-300">
+                    <span className="font-mono text-[11px] font-bold text-slate-300">
                       TAK-ÇALIŞTIR
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-white">
+                  <h4 className="text-xs sm:text-sm font-bold text-white">
                     {t("bom_turnkey_1_title")}
                   </h4>
-                  <p className="text-slate-400 text-xs leading-relaxed">
+                  <p className="text-slate-400 text-[11px] leading-relaxed">
                     {t("bom_turnkey_1_desc")}
                   </p>
                 </div>
-                <div className="pt-3 text-[10px] font-mono text-slate-500 border-t border-white/10">
+                <div className="pt-2.5 text-[9.5px] font-mono text-slate-500 border-t border-white/10">
                   NVIDIA Jetson Orin + Hesai XT32 LiDAR + Xsens MTi-680G + Kameralar & CAN Köprüsü
                 </div>
               </div>
 
               {/* Turnkey 2: Military Defense UGV */}
-              <div className="p-5 rounded-xl bg-[#0c0f16] border border-[#C8FF00]/30 space-y-3 relative overflow-hidden shadow-lg shadow-[#C8FF00]/5 flex flex-col justify-between">
+              <div className="w-[85vw] max-w-[320px] shrink-0 snap-center md:w-auto md:max-w-none p-4 sm:p-5 rounded-xl bg-[#0c0f16] border border-[#C8FF00]/30 space-y-3 relative overflow-hidden shadow-lg shadow-[#C8FF00]/5 flex flex-col justify-between">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">
+                    <span className="font-mono text-[9px] font-bold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">
                       NATO STANAG ASKERİ İKA
                     </span>
-                    <span className="font-mono text-xs font-bold text-[#C8FF00]">
+                    <span className="font-mono text-[11px] font-bold text-[#C8FF00]">
                       TAM SAVUNMA KİTİ
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-white">
+                  <h4 className="text-xs sm:text-sm font-bold text-white">
                     {t("bom_turnkey_2_title")}
                   </h4>
-                  <p className="text-slate-400 text-xs leading-relaxed">
+                  <p className="text-slate-400 text-[11px] leading-relaxed">
                     {t("bom_turnkey_2_desc")}
                   </p>
                 </div>
-                <div className="pt-3 text-[10px] font-mono text-slate-400 border-t border-white/10">
+                <div className="pt-2.5 text-[9.5px] font-mono text-slate-400 border-t border-white/10">
                   Sivil Kit + FLIR Boson 640 Termal + CEIA CMD2 Mayın + GPR Yeraltı Radarı + Taktik Mesh Telsiz
                 </div>
               </div>
 
               {/* Turnkey 3: Mechanical Tractor / Mining */}
-              <div className="p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3 flex flex-col justify-between">
+              <div className="w-[85vw] max-w-[320px] shrink-0 snap-center md:w-auto md:max-w-none p-4 sm:p-5 rounded-xl bg-[#0c0f16] border border-white/10 space-y-3 flex flex-col justify-between shadow-lg">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="font-mono text-[10px] font-bold text-sky-400 bg-sky-400/10 px-2 py-0.5 rounded border border-sky-400/30">
+                    <span className="font-mono text-[9px] font-bold text-sky-400 bg-sky-400/10 px-2 py-0.5 rounded border border-sky-400/30">
                       AĞIR HİZMET VE ENDÜSTRİ
                     </span>
-                    <span className="font-mono text-xs font-bold text-slate-300">
+                    <span className="font-mono text-[11px] font-bold text-slate-300">
                       MEKANİK DÖNÜŞÜM
                     </span>
                   </div>
-                  <h4 className="text-sm font-bold text-white">
+                  <h4 className="text-xs sm:text-sm font-bold text-white">
                     {t("bom_turnkey_3_title")}
                   </h4>
-                  <p className="text-slate-400 text-xs leading-relaxed">
+                  <p className="text-slate-400 text-[11px] leading-relaxed">
                     {t("bom_turnkey_3_desc")}
                   </p>
                 </div>
-                <div className="pt-3 text-[10px] font-mono text-slate-500 border-t border-white/10">
+                <div className="pt-2.5 text-[9.5px] font-mono text-slate-500 border-t border-white/10">
                   Sivil Kit + Nanotec Direksiyon Servo Motoru + Linak LA36 Ağır Hizmet Pedal Aktüatörleri
                 </div>
               </div>
@@ -571,55 +623,55 @@ export default function SupportedPlatformsShowcase() {
         {/* ========================================================================= */}
         {/* PART 4: 2 INTEGRATION METHODOLOGIES PANEL                                  */}
         {/* ========================================================================= */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#0a0d13] border border-white/15 relative overflow-hidden">
-          <div className="max-w-2xl mb-6">
-            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 text-[10px] font-mono font-bold tracking-wider uppercase mb-2">
+        <div className="p-4 sm:p-8 rounded-2xl bg-[#0a0d13] border border-white/15 relative overflow-hidden">
+          <div className="max-w-2xl mb-4 sm:mb-6">
+            <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase mb-1.5 sm:mb-2">
               <Sliders className="w-3 h-3 text-[#C8FF00]" />
               <span>{t("plat_how_subtitle")}</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <h3 className="text-lg sm:text-2xl font-bold text-white tracking-tight">
               {t("plat_how_title")}
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex overflow-x-auto snap-x snap-mandatory pb-3 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar md:grid md:grid-cols-2 gap-4 sm:gap-6">
             {/* Method 1: Drive-by-Wire */}
-            <div className="p-5 rounded-xl bg-white/[0.02] border border-white/10 space-y-3">
+            <div className="w-[85vw] max-w-[340px] shrink-0 snap-center md:w-auto md:max-w-none p-4 sm:p-5 rounded-xl bg-white/[0.02] border border-white/10 space-y-2.5 shadow-lg">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 py-0.5 rounded border border-[#C8FF00]/30">
+                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-[#C8FF00] bg-[#C8FF00]/10 px-2 py-0.5 rounded border border-[#C8FF00]/30">
                   {t("plat_how_opt1_badge")}
                 </span>
-                <Zap className="w-4 h-4 text-[#C8FF00]" />
+                <Zap className="w-3.5 h-3.5 text-[#C8FF00]" />
               </div>
-              <h4 className="text-base font-bold text-white">
+              <h4 className="text-sm sm:text-base font-bold text-white">
                 {t("plat_how_opt1_title")}
               </h4>
-              <p className="text-slate-400 text-xs leading-relaxed">
+              <p className="text-slate-400 text-[11px] sm:text-xs leading-relaxed">
                 {t("plat_how_opt1_desc")}
               </p>
-              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-slate-300">
+              <div className="pt-2 flex items-center gap-2 text-[10px] sm:text-[11px] font-mono text-slate-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00]" />
-                <span>Entegrasyon Süresi: &lt; 15 Dakika (Tak-Çalıştır)</span>
+                <span>Entegrasyon: &lt; 15 Dakika (Tak-Çalıştır)</span>
               </div>
             </div>
 
             {/* Method 2: Mechanical Actuators */}
-            <div className="p-5 rounded-xl bg-white/[0.02] border border-white/10 space-y-3">
+            <div className="w-[85vw] max-w-[340px] shrink-0 snap-center md:w-auto md:max-w-none p-4 sm:p-5 rounded-xl bg-white/[0.02] border border-white/10 space-y-2.5 shadow-lg">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] font-bold text-sky-400 bg-sky-400/10 px-2 py-0.5 rounded border border-sky-400/30">
+                <span className="font-mono text-[9px] sm:text-[10px] font-bold text-sky-400 bg-sky-400/10 px-2 py-0.5 rounded border border-sky-400/30">
                   {t("plat_how_opt2_badge")}
                 </span>
-                <Layers className="w-4 h-4 text-sky-400" />
+                <Layers className="w-3.5 h-3.5 text-sky-400" />
               </div>
-              <h4 className="text-base font-bold text-white">
+              <h4 className="text-sm sm:text-base font-bold text-white">
                 {t("plat_how_opt2_title")}
               </h4>
-              <p className="text-slate-400 text-xs leading-relaxed">
+              <p className="text-slate-400 text-[11px] sm:text-xs leading-relaxed">
                 {t("plat_how_opt2_desc")}
               </p>
-              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-slate-300">
+              <div className="pt-2 flex items-center gap-2 text-[10px] sm:text-[11px] font-mono text-slate-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-sky-400" />
-                <span>Uygulama: Direksiyon Servo Motoru + Lineer Fren Pistonu</span>
+                <span>Uygulama: Direksiyon Motoru + Fren Pistonu</span>
               </div>
             </div>
           </div>

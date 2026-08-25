@@ -69,8 +69,8 @@ export default function InstitutionalAccreditations() {
           </span>
         </div>
 
-        {/* 3 Compact Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
+        {/* 3 Compact Cards Grid / Mobile Horizontal Snap Carousel */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 no-scrollbar md:grid md:grid-cols-3 gap-3 sm:gap-4">
           {accreditations.map((item) => {
             const IconComponent = item.icon;
             const isEmerald = item.color === "emerald";
@@ -79,7 +79,7 @@ export default function InstitutionalAccreditations() {
             return (
               <div
                 key={item.id}
-                className={`p-4 sm:p-4.5 rounded-xl bg-[#090c10] border transition-all duration-300 flex flex-col justify-between group relative shadow-lg ${
+                className={`w-[85vw] max-w-[320px] shrink-0 snap-center md:w-auto md:max-w-none p-3.5 sm:p-4.5 rounded-xl bg-[#090c10] border transition-all duration-300 flex flex-col justify-between group relative shadow-lg ${
                   isEmerald
                     ? "border-emerald-500/25 hover:border-emerald-400/60 hover:shadow-emerald-500/5"
                     : isCyan
@@ -87,11 +87,11 @@ export default function InstitutionalAccreditations() {
                     : "border-amber-500/25 hover:border-amber-400/60 hover:shadow-amber-500/5"
                 }`}
               >
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {/* Top Bar: Icon & Badge */}
                   <div className="flex items-center justify-between">
                     <div
-                      className={`p-2 rounded-lg ${
+                      className={`p-1.5 sm:p-2 rounded-lg ${
                         isEmerald
                           ? "bg-emerald-500/10 text-emerald-400"
                           : isCyan
@@ -99,11 +99,11 @@ export default function InstitutionalAccreditations() {
                           : "bg-amber-500/10 text-amber-400"
                       }`}
                     >
-                      <IconComponent className="w-4 h-4" />
+                      <IconComponent className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </div>
 
                     <span
-                      className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded border uppercase tracking-wider ${
+                      className={`text-[8.5px] sm:text-[9px] font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded border uppercase tracking-wider ${
                         isEmerald
                           ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-300"
                           : isCyan
@@ -117,7 +117,7 @@ export default function InstitutionalAccreditations() {
 
                   {/* Institution Organization & Title */}
                   <div>
-                    <div className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">
+                    <div className="text-[9.5px] sm:text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">
                       {item.org}
                     </div>
                     <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-slate-100 transition-colors leading-snug">
@@ -126,15 +126,15 @@ export default function InstitutionalAccreditations() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-slate-400 text-[11px] sm:text-xs leading-relaxed font-normal">
+                  <p className="text-slate-400 text-[10.5px] sm:text-xs leading-relaxed font-normal">
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Bottom Status Pill & Location */}
-                <div className="pt-3 mt-3 border-t border-white/10 flex items-center justify-between text-[10px] font-mono">
+                <div className="pt-2.5 mt-2.5 border-t border-white/10 flex items-center justify-between text-[9.5px] sm:text-[10px] font-mono">
                   <span
-                    className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border font-bold ${
+                    className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full border font-bold ${
                       isEmerald
                         ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-300"
                         : isCyan
@@ -142,17 +142,22 @@ export default function InstitutionalAccreditations() {
                         : "bg-amber-500/10 border-amber-500/30 text-amber-300"
                     }`}
                   >
-                    <CheckCircle2 className="w-3 h-3" />
+                    <CheckCircle2 className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                     <span>{item.status}</span>
                   </span>
 
-                  <span className="text-slate-500 truncate max-w-[120px]">
+                  <span className="text-slate-500 truncate max-w-[110px] sm:max-w-[120px]">
                     📍 {item.location}
                   </span>
                 </div>
               </div>
             );
           })}
+        </div>
+
+        {/* Mobile Swipe Hint */}
+        <div className="flex md:hidden items-center justify-center gap-1.5 pt-0.5 text-[9px] font-mono text-slate-500">
+          <span>← Kaydır →</span>
         </div>
 
       </div>
