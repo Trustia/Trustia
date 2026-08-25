@@ -7,13 +7,32 @@
 [![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-SAE%20J1939%20%7C%20CAN%202.0B-orange.svg)]()
 [![Government](https://img.shields.io/badge/Accredited-KOSGEB%20%7C%20SSB%20(100%2F100)%20%7C%20T%C3%9CB%C4%B0TAK-purple.svg)]()
 
-> **Production-grade, hardware-agnostic, dual-use autonomous vehicle software stack engineered for tactical defense unmanned ground vehicles (UGVs) and next-generation civilian passenger robotaxis operating in GPS-denied and high-density urban environments.**
+> **Production-grade, hardware-agnostic, dual-use autonomous vehicle software stack engineered for tactical defense unmanned ground vehicles (UGVs) and next-generation civilian passenger mobility operating in GPS-denied and high-density urban environments.**
 
 ---
 
-## 🌍 Executive Summary & Dual-Use Vision
+## 🌍 Executive Summary & Global Venture Standing
 
-TRUSTIA is a full-stack, software-defined autonomous mobility platform built from the ground up with **zero black-box dependencies**. Designed with an AI-native agentic software engineering pipeline, TRUSTIA delivers industrial-grade stability validated by **1,276 automated unit and integration tests (100% pass rate)**.
+TRUSTIA is a full-stack, software-defined autonomous mobility platform built from the ground up with **zero black-box dependencies**. Designed with an AI-native agentic software engineering pipeline, TRUSTIA delivers industrial-grade stability validated by **1,281 automated unit and integration tests (100% pass rate)**.
+
+### 🏛️ Global Tier-1 Accelerator & Venture Portfolio (2026)
+
+| Tier-1 Global Program | Location | Investment / Grant Package | Formal Status |
+| :--- | :--- | :--- | :--- |
+| 🇺🇸 **Y Combinator** | Silicon Valley | **$500,000 USD SAFE** ($5M Cap) | ⏳ Active Batch Review |
+| 🤖 **SOSV / HAX** | San Francisco / Newark | **$250,000 USD Net Cash** |  **Officially Submitted & Confirmed** |
+| ⚡ **Techstars** | London / Global | **$220,000 USD Package** | ⏳ Active Batch Review |
+| 🇺🇸 **500 Global (500 Startups)** | Palo Alto / SF | **$150,000 USD (Batch 37)** |  **Officially Submitted & Confirmed** |
+| 🚀 **Alchemist Accelerator** | Silicon Valley | **$125,000 USD SAFE** |  **Officially Submitted & Confirmed** |
+| 🌐 **Plug and Play Tech Center** | Sunnyvale / Turin | **Enterprise & NATO DualTech** |  **Officially Submitted & Confirmed** |
+| 🌍 **Antler Global** | London / Dubai / SF | **$150,000 – $400,000 USD** | ⏳ Active Batch Review |
+| 🛡️ **NATO DIANA** | Allied Nations | **€400,000 Non-Dilutive Grant** |  **Master Application Dossier Ready** |
+| 🏛️ **İTO BTM (Polat Tower)** | Istanbul, Turkey | **7/24 Incubation & Angel Hub** | ✅ **Admitted & Contract Signed** |
+| 🏢 **Teknopark Istanbul** | Pendik / Kurtköy | **Defense Tech Incubation (Cube GO)** | ⏳ **Candidate Defense Tech Firm** |
+
+---
+
+## 🏗️ Dual-Use System Architecture
 
 ```mermaid
 flowchart TD
@@ -41,7 +60,7 @@ flowchart TD
 ```
 
 1. **Tactical Defense UGVs:** Converting armored and unarmored ground vehicles into autonomous scout, logistics, mine clearance, and convoy platforms in contested, electronic-warfare (GPS-denied) environments.
-2. **Civilian Robotaxis:** Deploying drive-by-wire actuation across commercial passenger chassis (e.g., Mercedes G-Class, BMW, urban sedans) to pioneer Turkey's first autonomous passenger ride-hailing fleet.
+2. **Civilian Robotaxis:** Deploying drive-by-wire actuation across commercial passenger chassis (e.g., Mercedes G-Class, BMW, urban sedans) to pioneer autonomous passenger mobility fleets.
 
 ---
 
@@ -94,7 +113,7 @@ flowchart TD
 
 ## 📊 1,281-Test Automated Verification Suite
 
-The entire Trustia codebase is continuously validated through an exhaustive **1,281 automated test suite** running in 35.90 seconds with a **100% pass rate**:
+The entire Trustia codebase is continuously validated through an exhaustive **1,281 automated test suite** running in 49.01 seconds with a **100% pass rate**:
 
 | Subsystem Module | Test Scope & Verification Focus | Tests Passed | Status |
 | :--- | :--- | :---: | :---: |
@@ -113,7 +132,7 @@ The entire Trustia codebase is continuously validated through an exhaustive **1,
 
 ```text
 Trustia/
-├── 📂 01_Trustia_Otonom_Yazilim_Core/     <-- Full Autonomy Stack, 1,276 Tests, C2 GUI & CLI
+├── 📂 01_Trustia_Otonom_Yazilim_Core/     <-- Full Autonomy Stack, 1,281 Tests, C2 GUI & CLI
 │   ├── 📂 ai/                             <-- IED/Mine/CBRN Threat & Swarm Perception
 │   ├── 📂 command/                        <-- Tactical C2 Mission Control Console (GUI)
 │   ├── 📂 control/                        <-- Pure Pursuit, Stanley & Drive-by-Wire Controllers
@@ -122,7 +141,7 @@ Trustia/
 │   ├── 📂 planning/                       <-- Hybrid A* Ackermann Trajectory Planners
 │   ├── 📂 security/                       <-- AES-256 Encryption, STANAG 4586 & E-Stop
 │   ├── 📂 slam/                           <-- 2D/3D Pose-Graph SLAM & LiDAR Odometry
-│   ├── 📂 test/                           <-- 1,276 Unit & Integration Automated Tests
+│   ├── 📂 tests/                          <-- 1,281 Unit & Integration Automated Tests
 │   ├── 📜 START_TRUSTIA.bat               <-- One-Click English Mission Control Launcher
 │   └── 📜 trustia_cli.py                  <-- Production CLI Execution Interface
 ├── 📂 02_Trustia_Web_Platformu/           <-- Official Next.js 16 Web Platform & 3D Visualizer
@@ -140,7 +159,7 @@ Trustia/
 ### 1. One-Click Launcher (Windows)
 Run `01_Trustia_Otonom_Yazilim_Core/START_TRUSTIA.bat` to launch the mission control menu:
 * `[1]` **Launch Tactical C2 Desktop Console** (Military UGV & Robotaxi GUI)
-* `[2]` **Run 1,276-Test Automated Verification Suite** (100% Pass Rate)
+* `[2]` **Run 1,281-Test Automated Verification Suite** (100% Pass Rate)
 * `[3]` **Run AI Threat & Obstacle Detection Engine** (IED/Mine/Pedestrian)
 * `[4]` **Run Native Architecture & NATO STANAG 4586 Compliance Audit**
 
@@ -151,8 +170,8 @@ cd 01_Trustia_Otonom_Yazilim_Core
 # Launch Tactical C2 GUI Console
 python trustia_cli.py gui
 
-# Run 1,276 Automated Tests
-python trustia_cli.py test
+# Run 1,281 Automated Tests
+pytest tests/ -v
 
 # Run AI Threat Detection Engine
 python trustia_cli.py threats
@@ -163,23 +182,22 @@ python trustia_cli.py audit
 
 ---
 
-## 🎯 Target Milestones & Seed Deployment Plan
+## 🎯 Target Milestones & Pre-Seed Deployment Plan
 
-* **Milestone 1 (Complete):** 1,276-test verified full-stack autonomy software core.
-* **Milestone 2 (Seed Phase):** Acquire drive-by-wire vehicle platform (commercial chassis) and integrate sensor suite (LiDAR, RGB-D, CAN-Bus interface).
-* **Milestone 3 (Field Deployment):** Deploy Turkey's first autonomous passenger robotaxi pilot and tactical defense UGV field demonstrations.
+* **Milestone 1 (Complete):** 1,281-test verified full-stack autonomy software core & 400Hz ESKF GPS-denied engine.
+* **Milestone 2 (Pre-Seed Phase):** Acquire drive-by-wire vehicle platform (commercial chassis) and integrate sensor suite (LiDAR, RGB-D, CAN-Bus interface).
+* **Milestone 3 (Field Deployment):** Deploy autonomous passenger robotaxi pilot and tactical defense UGV field demonstrations.
 
 ---
 
 ## 📞 Founder & Corporate Contact
 
 * **Founder & CEO:** Murat Furkan Bayram
-* **Organization:** Trustia Autonomous Systems
+* **Organization:** Trustia AI (*Trustia Autonomous Defense Systems*)
 * **Official Website:** [https://trustia.com.tr](https://trustia.com.tr)
 * **Email:** [kariyer@trustia.com.tr](mailto:kariyer@trustia.com.tr) | [muratbyrm009@gmail.com](mailto:muratbyrm009@gmail.com)
 * **LinkedIn:** [linkedin.com/in/trustia](https://www.linkedin.com/in/trustia)
-* **Headquarters:** Istanbul, Turkey / Delaware, US
+* **Incubation:** Istanbul Chamber of Commerce BTM (Polat Tower) & Teknopark Istanbul
 
 ---
-*© 2026 Trustia Autonomous Systems. All rights reserved. Confidential & Proprietary.*
-
+*© 2026 Trustia AI. All rights reserved. Confidential & Proprietary.*
