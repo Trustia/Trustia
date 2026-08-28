@@ -98,7 +98,7 @@ export default function ContactPage() {
             <div className="pt-2 border-t border-white/10 flex items-center justify-between text-[10px] font-mono text-slate-400">
               <span className="flex items-center gap-1.5 text-slate-300">
                 <MapPin className="w-3.5 h-3.5 text-[#C8FF00]" />
-                <span>USA (Delaware Inc.) • TR (İstanbul)</span>
+                <span>TR (İstanbul, Türkiye)</span>
               </span>
               <span className="text-[#C8FF00]">24 Saat Yanıt</span>
             </div>

@@ -20,7 +20,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 * **Kural:** Web arayüzü ile ilgili her şey SADECE bu klasör altında `website/` içinde geliştirilir.
 
 ### 3. `03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/` 📜 (Resmi Belgeler ve Tesciller)
-* **Buraya Konulacaklar:** KOSGEB sertifikaları, BTK ve SSB Savunma Sanayii sertifikaları, Aselsan tedarikçi evrakları ve Every.io'dan gelen ABD Delaware C-Corp kuruluş belgeleri (Certificate of Incorporation, EIN vb.).
+* **Buraya Konulacaklar:** KOSGEB sertifikaları, BTK ve SSB Savunma Sanayii sertifikaları, İTO BTM Ön Kuluçka Taahhütnameleri, Aselsan ve TÜBİTAK tedarikçi/araştırmacı evrakları.
 * **Kural:** Resmi devlet/şirket tescil belgeleri başka hiçbir yere konulamaz.
 
 ### 4. `04_Yatirimci_Sunumlari_ve_Is_Planlari/` 💼 (Yatırımcı Dosyaları & Finans)

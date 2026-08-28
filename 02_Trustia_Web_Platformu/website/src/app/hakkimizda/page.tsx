@@ -127,7 +127,7 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center gap-2 text-white">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
-                <span>Delaware C-Corp Inc. (USA)</span>
+                <span>TÜBİTAK ARBİS & ASELSAN Ağı</span>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center gap-2 text-white">
                   <CheckCircle2 className="w-4 h-4 text-[#C8FF00]" />
-                  <span>Delaware C-Corp Inc. (USA)</span>
+                  <span>TÜBİTAK ARBİS & ASELSAN Ağı</span>
                 </div>
               </div>
             </div>

@@ -13,7 +13,7 @@
 | **Yetkili Adı Soyadı:** | **Murat Furkan Bayram** |
 | **Yetkili E-Posta:** | **`kariyer@trustia.com.tr`** |
 | **Yetkili Telefon:** | **`+90 537 064 04 60`** |
-| **ABD Şirket Yapısı:** | **Delaware C-Corp (Kuruluş Aşaması / Every.io)** |
+| **Kurumsal Yapı:** | **Deep-Tech Otonomi Girişimi (Ar-Ge & Global Hızlandırma Adayı)** |
 | **Kuluçka / Merkez:** | **İTO BTM (Polat Tower Rezidans, Şişli) & Teknopark İstanbul** |
 | **Savunma Derecesi:** | **100/100 Tam Puan (SSB & BTK Akademi ID: `L2zPtN4X1ZJ`)** |
 
@@ -39,7 +39,7 @@
 ### 3. PROJE BİLGİLERİ:
 * **Proje Adı ve Konusu:**
 ```text
-Trustia AI; elektronik harp ve GPS karartması yaşanan askeri harekat sahalarında 400Hz ESKF sensör füzyonu ile sub-8cm hassasiyetle çalışan, herhangi bir mekanik aracı 15 dakikada Seviye 4 tam otonom sisteme dönüştüren modüler otonomi motoru ve Taktik C2 görev konsoludur. 16.000 satır deterministik C++/Python kodu ve 1.281 birim/entegrasyon testi (%100 başarı) ile doğrulanmış olup T.C. SSB tarafından 100/100 tam puan almıştır. ABD Delaware C-Corp yapısıyla küresel savunma pazarına açılmayı hedeflemektedir.
+Trustia AI; elektronik harp ve GPS karartması yaşanan askeri harekat sahalarında 400Hz ESKF sensör füzyonu ile sub-8cm hassasiyetle çalışan, herhangi bir mekanik aracı 15 dakikada Seviye 4 tam otonom sisteme dönüştüren modüler otonomi motoru ve Taktik C2 görev konsoludur. 16.000 satır deterministik C++/Python kodu ve 1.281 birim/entegrasyon testi (%100 başarı) ile doğrulanmış olup T.C. SSB tarafından 100/100 tam puan almıştır. Küresel savunma ve sivil otonomi pazarına açılmayı hedeflemektedir.
 ```
 
 * **Patent ve Faydalı Model Durumu:**

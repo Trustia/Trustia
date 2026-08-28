@@ -1,9 +1,9 @@
-# TRUSTIA AUTONOMOUS SYSTEMS INC.
+# TRUSTIA AI
 ## MASTER INVESTOR PITCH DECK (2026)
 
-**Company:** Trustia Autonomous Systems Inc.  
-**Jurisdiction:** Delaware C-Corporation, USA  
-**Domain:** `trustia.com.tr` | `trustia.ai`  
+**Company:** Trustia AI (Dual-Use Autonomy Platform)  
+**HQ:** Istanbul, TR  
+**Domain:** `trustia.com.tr`  
 **Contact:** Murat Furkan Bayram, Founder & CEO (`kariyer@trustia.com.tr`)
 
 ---
@@ -12,7 +12,7 @@
 ### "The Operating System for Military-Grade Autonomous Robotics in GPS-Denied Environments"
 
 * **Tagline:** Hardware-Agnostic, Zero-External-Dependency Autonomy & AI Threat Detection Core for Unmanned Ground Vehicles (UGVs).
-* **Corporate Entity:** Trustia Autonomous Systems Inc. (Delaware, USA).
+* **Corporate Entity:** Trustia AI (Defense Technologies & Dual-Use Autonomy).
 * **Founding Team:** Murat Furkan Bayram (Founder & CEO).
 
 ---
@@ -93,10 +93,10 @@
 ## SLIDE 9: TRACTION & PROVEN MILESTONES
 ### "De-risked Technology with Institutional Backing"
 
-* **Software Maturity:** Complete 9-system architecture with 1,276 passing unit/integration tests and zero-failure 50-mission simulation campaign.
+* **Software Maturity:** Complete 9-system architecture with 1,281 passing unit/integration tests and zero-failure 50-mission simulation campaign.
 * **Live Web & Brand Presence:** Full digital platform live at `trustia.com.tr` with institutional documentation and export compliance.
-* **Corporate Structure:** Delaware C-Corporation incorporation (`Trustia Autonomous Systems Inc.`).
-* **Accreditations:** KOSGEB Advanced Entrepreneurship Certified, BTK & Defense Industry Academy certified founder background.
+* **Governance & R&D:** Incubation backing with BTM Istanbul, candidate Teknopark Istanbul, and accredited deep-tech setup.
+* **Accreditations:** KOSGEB Advanced Entrepreneurship Certified, BTK & Defense Industry Academy (100/100) certified founder background.
 
 ---
 
@@ -105,8 +105,8 @@
 
 * **50% — Physical Hardware & Field Test Pilots:** Sensor testbeds (LiDAR, Jetson Orin, Drive-by-Wire kits) and proving ground trials with UGV manufacturer partners.
 * **30% — Core Engineering & Edge AI Optimization:** Porting vision and SLAM models to CUDA/TensorRT for micro-watt edge computing.
-* **20% — Defense Business Development & Global Certifications:** Expanding OEM partnerships across the US, NATO, and MENA regions.
+* **20% — Defense Business Development & Global Certifications:** Expanding OEM partnerships across allied defense regions.
 
 **Join us in building the autonomous foundation of modern defense.**  
-*Trustia Autonomous Systems Inc. — Delaware, USA*  
+*Trustia AI — Istanbul, TR*  
 Contact: `kariyer@trustia.com.tr` | `https://trustia.com.tr`

@@ -240,32 +240,32 @@ const translations: Record<Language, Record<string, string>> = {
     contact_dept_legal: "Hukuk & Lisanslama:",
     contact_dept_invest: "Yatırımcı İlişkileri:",
     contact_loc_title: "OPERASYON VE AR-GE MERKEZİ",
-    contact_loc_hq: "Trustia Autonomous Systems Inc. — Delaware, ABD & İstanbul, Türkiye",
+    contact_loc_hq: "Trustia AI — İstanbul, Türkiye",
     contact_hours_title: "YANIT SÜRESİ",
     contact_hours_desc: "Hafta içi 08:30 - 18:30 (Resmi taleplere 24 saat içinde yanıt verilir).",
 
     // About Page
     about_back: "← ANA SAYFAYA DÖN",
     about_badge: "KURUMSAL PROFİL & ASKERİ VİZYON",
-    about_title: "Trustia Autonomous Systems Inc. — Milli Otonomi Çekirdeği",
-    about_desc: "Trustia Autonomous Systems Inc. (Delaware, ABD & İstanbul, Türkiye), GPS sinyalinin bulunmadığı veya elektronik harp ile karartıldığı zorlu muharebe sahalarında İnsansız Kara Araçları (İKA) için 3D SLAM, kinematik Hybrid A* rota planlama, EYP/Mayın füzyonu ve hava-kara hibrit sürü zekası geliştiren yeni nesil savunma teknolojileri kuruluşudur.",
+    about_title: "Trustia AI — Milli Otonomi Çekirdeği",
+    about_desc: "Trustia AI (İstanbul, Türkiye), GPS sinyalinin bulunmadığı veya elektronik harp ile karartıldığı zorlu muharebe sahalarında İnsansız Kara Araçları (İKA) için 3D SLAM, kinematik Hybrid A* rota planlama, EYP/Mayın füzyonu ve hava-kara hibrit sürü zekası geliştiren yeni nesil savunma teknolojileri kuruluşudur.",
     about_c1_title: "Algoritmik Tam Bağımsızlık",
     about_c1_desc: "Yabancı kapalı kutu (black-box) yazılımlara bağımlılığı sıfıra indiren %100 özgün C++20 kaynak kod mülkiyeti ile ambargo risklerini ortadan kaldıran milli yazılım beyni.",
     about_c2_title: "1.281 Otomatik Test & HIL Doğrulama",
     about_c2_desc: "1.281 birim, entegrasyon ve matematiksel simülasyon testi %100 başarıyla tamamlanmış; donanım seviyesi döngü (HIL), Linux SocketCAN ve 1.200 saatin üzerinde kesintisiz saha iklim testleriyle onaylanmıştır.",
-    about_c3_title: "NATO STANAG 4586 Seviye 4 & Çift Şirket Mimarisi",
-    about_c3_desc: "Delaware C-Corp tüzel kişiliğiyle global yatırım ve NATO müttefik veri bağını sağlarken; İstanbul Ar-Ge merkeziyle Türk savunma sanayiine yerli ve milli çözümler sunar.",
+    about_c3_title: "NATO STANAG 4586 Seviye 4 & Global Standartlar",
+    about_c3_desc: "NATO STANAG 4586 ve SAE AS6091 standartlarıyla tam uyumlu müttefik veri bağını sağlarken; İstanbul Ar-Ge merkeziyle Türk savunma sanayiine yerli ve milli çözümler sunar.",
     about_founder_badge: "KURUCU & MÜHENDİSLİK LİDERLİĞİ",
     about_founder_title: "Murat Furkan Bayram",
     about_founder_role: "Kurucu & Otonomi Sistemleri Başmühendisi",
-    about_founder_bio: "KOSGEB İleri Girişimci ve BTK / SSB Savunma Sanayii Akademi sertifikalı otonomi mühendisi. GPS'siz sahalarda 3D Pose Graph SLAM, çoklu ajan sürü zekası ve askeri yapay zeka alanında milli otonomi çekirdeğini geliştirmiş; şirketin Delaware C-Corp ve Türkiye yapılanmasını yönetmektedir.",
+    about_founder_bio: "KOSGEB İleri Girişimci ve BTK / SSB Savunma Sanayii Akademi sertifikalı otonomi mühendisi. GPS'siz sahalarda 3D Pose Graph SLAM, çoklu ajan sürü zekası ve askeri yapay zeka alanında milli otonomi çekirdeğini geliştirmiş; şirketin Ar-Ge ve mühendislik yapılanmasını yönetmektedir.",
     about_arch_title: "Modüler Tak-Çalıştır Savunma Mimarisi",
     about_arch_desc: "Trustia Core, her türlü tekerlekli veya paletli İKA platformuna CAN-Bus ve ROS 2 üzerinden 10 dakikada entegre olabilen tak-çalıştır Donanım Soyutlama Katmanına (HAL) ve SAE AS6091 JAUS protokol köprüsüne sahiptir.",
 
     // Footer
     footer_tagline: "GPS'in bulunmadığı veya engellendiği zorlu harekat alanlarında İnsansız Kara Araçları (İKA) için geliştirilmiş %100 yerli askeri otonom sürüş ve algılama yazılım platformu.",
-    footer_made_in: "Türkiye ve ABD'de geliştirildi.",
-    footer_locations: "Delaware, ABD & İstanbul, Türkiye",
+    footer_made_in: "Türkiye'de geliştirildi.",
+    footer_locations: "İstanbul, Türkiye",
     footer_col_platform: "PLATFORM",
     footer_link_arch: "Yazılım Mimarisi",
     footer_link_engine: "Otonomi Motoru",
@@ -285,7 +285,7 @@ const translations: Record<Language, Record<string, string>> = {
     footer_link_contact: "İletişim",
     footer_link_press: "Basın",
     footer_rights: "Tüm hakları saklıdır.",
-    footer_entity: "Trustia Autonomous Systems Inc. (Delaware, USA) & Trustia Teknoloji (Türkiye)"
+    footer_entity: "Trustia AI (Türkiye)"
   },
   en: {
     // Top Ticker & Announcements
@@ -515,21 +515,21 @@ const translations: Record<Language, Record<string, string>> = {
     contact_dept_legal: "Legal & Licensing:",
     contact_dept_invest: "Investor Relations:",
     contact_loc_title: "OPERATIONS & R&D CENTERS",
-    contact_loc_hq: "Trustia Autonomous Systems Inc. — Delaware, USA & Istanbul, Turkey",
+    contact_loc_hq: "Trustia AI — Istanbul, Turkey",
     contact_hours_title: "RESPONSE TIME",
     contact_hours_desc: "Mon - Fri 08:30 - 18:30 (Official inquiries answered within 24 hours).",
 
     // About Page
     about_back: "← BACK TO HOMEPAGE",
     about_badge: "CORPORATE PROFILE & DEFENSE ARCHITECTURE",
-    about_title: "Trustia Autonomous Systems Inc. — Sovereign Autonomy Core",
-    about_desc: "Trustia Autonomous Systems Inc. (Delaware, USA & Istanbul, Turkey) is a next-generation defense technology enterprise developing sovereign, military-grade autonomy software for Unmanned Ground Vehicles (UGVs) operating in GPS-denied and electronic warfare contested operational environments.",
+    about_title: "Trustia AI — Sovereign Autonomy Core",
+    about_desc: "Trustia AI (Istanbul, Turkey) is a next-generation defense technology enterprise developing sovereign, military-grade autonomy software for Unmanned Ground Vehicles (UGVs) operating in GPS-denied and electronic warfare contested operational environments.",
     about_c1_title: "Complete Algorithmic Sovereignty",
     about_c1_desc: "100% proprietary C++20 algorithmic ownership with zero black-box foreign dependencies, ensuring total operational immunity against foreign licensing restrictions and embargoes.",
     about_c2_title: "1,281 Automated Tests & HIL Verification",
     about_c2_desc: "1,281 automated unit, integration, and mathematical simulation tests verified with 100% pass rate, backed by Hardware-In-The-Loop (HIL) and over 1,200 continuous all-weather field trial hours.",
-    about_c3_title: "STANAG 4586 Level 4 & Dual-Entity Structure",
-    about_c3_desc: "Dual-entity structure combining a Delaware C-Corp for global venture capital and NATO interoperability with an Istanbul R&D engineering hub for sovereign defense manufacturing.",
+    about_c3_title: "STANAG 4586 Level 4 & Global Standards",
+    about_c3_desc: "Fully compliant with NATO STANAG 4586 Level 4 and SAE AS6091 standards for allied data interoperability, backed by an advanced Istanbul R&D engineering hub for sovereign defense manufacturing.",
     about_founder_badge: "FOUNDER & LEADERSHIP",
     about_founder_title: "Murat Furkan Bayram",
     about_founder_role: "Founder & Lead Autonomous Systems Engineer",
@@ -539,8 +539,8 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Footer
     footer_tagline: "100% proprietary military autonomous driving and perception software platform developed for Unmanned Ground Vehicles (UGVs) operating in contested, GPS-denied environments.",
-    footer_made_in: "Engineered in Turkey & USA.",
-    footer_locations: "Delaware, USA & Istanbul, Turkey",
+    footer_made_in: "Engineered in Turkey.",
+    footer_locations: "Istanbul, Turkey",
     footer_col_platform: "PLATFORM",
     footer_link_arch: "Software Architecture",
     footer_link_engine: "Autonomy Core",
@@ -560,7 +560,7 @@ const translations: Record<Language, Record<string, string>> = {
     footer_link_contact: "Contact",
     footer_link_press: "Press",
     footer_rights: "All rights reserved.",
-    footer_entity: "Trustia Autonomous Systems Inc. (Delaware, USA) & Trustia Teknoloji (Turkey)"
+    footer_entity: "Trustia AI (Turkey)"
   }
 };
 

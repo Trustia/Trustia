@@ -157,7 +157,7 @@ export default function Footer() {
         {/* Bottom Bar: Clean Silicon Valley / Defense Standard Corporate Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <div className="text-center md:text-left text-slate-400">
-            © {new Date().getFullYear()} <span className="text-white font-bold tracking-wide">Trustia Autonomous Systems Inc.</span> {t("footer_rights")}
+            © {new Date().getFullYear()} <span className="text-white font-bold tracking-wide">Trustia AI</span> {t("footer_rights")}
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px]">

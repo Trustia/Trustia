@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "TRUSTIA Autonomous Systems; GPS sinyalinin bulunmadığı operasyon sahalarında İnsansız Kara Araçları (İKA) için 3D Poz Grafı SLAM, Hybrid A* rota planlama, EYP/Mayın tespiti ve hava-kara sürü zekası sunan askeri otonomi yazılım platformudur. (Delaware, USA & İstanbul, Türkiye).",
+    "TRUSTIA Autonomous Systems; GPS sinyalinin bulunmadığı operasyon sahalarında İnsansız Kara Araçları (İKA) için 3D Poz Grafı SLAM, Hybrid A* rota planlama, EYP/Mayın tespiti ve hava-kara sürü zekası sunan milli askeri otonomi yazılım platformudur. (İstanbul, Türkiye).",
   keywords: [
     "TRUSTIA AI",
     "Trustia Autonomous Systems",
@@ -37,15 +37,14 @@ export const metadata: Metadata = {
     "hava-kara sürü zekası",
     "defense tech startup",
     "UGV autonomy software",
-    "Delaware C-Corp",
     "İstanbul",
   ],
   authors: [
-    { name: "Trustia Autonomous Systems Inc.", url: "https://trustia.com.tr" },
+    { name: "Trustia AI", url: "https://trustia.com.tr" },
     { name: "Murat Furkan Bayram", url: "https://trustia.com.tr/hakkimizda/" },
   ],
-  creator: "Trustia Autonomous Systems Inc.",
-  publisher: "Trustia Autonomous Systems Inc.",
+  creator: "Trustia AI",
+  publisher: "Trustia AI",
   alternates: {
     canonical: "https://trustia.com.tr/",
     languages: {
@@ -114,8 +113,8 @@ export default function RootLayout({
       {
         "@type": "Corporation",
         "@id": "https://trustia.com.tr/#organization",
-        "name": "Trustia Autonomous Systems Inc.",
-        "alternateName": ["TRUSTIA AI", "Trustia Teknoloji"],
+        "name": "Trustia AI",
+        "alternateName": ["TRUSTIA AI", "Trustia Teknoloji", "Trustia Autonomous Systems"],
         "url": "https://trustia.com.tr",
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
@@ -127,14 +126,6 @@ export default function RootLayout({
           "jobTitle": "Founder & Autonomous Systems Lead Engineer"
         },
         "address": [
-          {
-            "@type": "PostalAddress",
-            "streetAddress": "8 The Green, Ste A",
-            "addressLocality": "Dover",
-            "addressRegion": "DE",
-            "postalCode": "19901",
-            "addressCountry": "US"
-          },
           {
             "@type": "PostalAddress",
             "addressLocality": "İstanbul",

@@ -34,7 +34,7 @@ export default function Navbar() {
             {/* Dynamic Flag Floating Directly Over the Top-Right Diagonal of "I" */}
             <span
               className="absolute -top-2 -right-4 sm:-top-2.5 sm:-right-5 z-20 flex items-center pointer-events-none"
-              title={lang === "tr" ? "Milli Teknoloji (Türkiye)" : "Delaware C-Corp (United States)"}
+              title={lang === "tr" ? "Milli Teknoloji (Türkiye)" : "Global Platform (English)"}
             >
               <span className="relative block w-4 h-2.5 sm:w-5 sm:h-3.5 rounded-[2px] sm:rounded-[2.5px] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.9)] border border-white/40 animate-flag-wave transition-transform duration-300">
                 {lang === "tr" ? (

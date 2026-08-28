@@ -113,4 +113,4 @@ Luma AI'a (`lumalabs.ai/dream-machine`) girip her sahne için aşağıdaki İngi
 5. **Kapanış:** Son 3 saniyede `06_Medya_Gorsel_ve_Tanitim_Videolari/Logolar_ve_Ikonlar/logo.png` dosyasını ve `trustia.com.tr` yazısını ekrana bindir.
 
 ---
-*Prodüksiyon Dosyası © 2026 Trustia Autonomous Systems Inc.*
+*Prodüksiyon Dosyası © 2026 Trustia AI.*

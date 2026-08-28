@@ -22,7 +22,7 @@ export default function ConsoleBranding() {
     );
 
     console.log(
-      "%c TRUSTIA AUTONOMOUS SYSTEMS INC. %c DEFENSE UGV AUTONOMY PLATFORM v2.0 ",
+      "%c TRUSTIA AI %c DEFENSE UGV AUTONOMY PLATFORM v2.0 ",
       "background: #C8FF00; color: #000; font-weight: bold; font-family: monospace; font-size: 12px; padding: 4px 10px; border-radius: 4px 0 0 4px;",
       "background: #10b981; color: #000; font-weight: bold; font-family: monospace; font-size: 12px; padding: 4px 10px; border-radius: 0 4px 4px 0;"
     );
@@ -36,7 +36,7 @@ export default function ConsoleBranding() {
     );
 
     console.log(
-      "%c\n📩 İletişim & Tedarik: %ciletisim@trustia.com.tr %c| 🇺🇸 Dover, Delaware, USA • 🇹🇷 İstanbul, Türkiye\n",
+      "%c\n📩 İletişim & Tedarik: %ciletisim@trustia.com.tr %c| 🇹🇷 İstanbul, Türkiye\n",
       "color: #94a3b8; font-family: monospace; font-size: 11px;",
       "color: #C8FF00; font-weight: bold; font-family: monospace; font-size: 11px;",
       "color: #94a3b8; font-family: monospace; font-size: 11px;"

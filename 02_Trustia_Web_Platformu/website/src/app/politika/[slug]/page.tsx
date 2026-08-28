@@ -260,7 +260,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "1. Telif Hakları ve Marka Tescili",
           items: [
-            "TRUSTIA markası, logosu, web sitesi tasarımı ve yazılım mimarisi TRUSTIA Autonomous Systems Inc. mülkiyetindedir.",
+            "TRUSTIA markası, logosu, web sitesi tasarımı ve yazılım mimarisi Trustia AI mülkiyetindedir.",
             "İzinsiz kopyalanamaz, çoğaltılamaz veya başka bir ticari unvan altında sunulamaz."
           ]
         }
@@ -276,7 +276,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "1. Copyright Ownership & Trademark Registration",
           items: [
-            "TRUSTIA, the logo, platform codebase, and digital media are proprietary assets of TRUSTIA Autonomous Systems Inc. (Delaware, USA).",
+            "TRUSTIA, the logo, platform codebase, and digital media are proprietary assets of Trustia AI.",
             "Unauthorized replication, distribution, or decompilation is strictly prohibited."
           ]
         }

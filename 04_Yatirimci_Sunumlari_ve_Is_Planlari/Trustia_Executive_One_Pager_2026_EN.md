@@ -1,15 +1,15 @@
-# TRUSTIA AUTONOMOUS SYSTEMS INC.
+# TRUSTIA AI
 ## EXECUTIVE ONE-PAGER / COMPANY TEASER (2026)
 
-**Legal Entity:** Trustia Autonomous Systems Inc. (Delaware C-Corp, USA)  
-**Website:** [https://trustia.com.tr](https://trustia.com.tr) | **HQ:** Delaware, USA & Istanbul, TR  
+**Company:** Trustia AI (Dual-Use Autonomy Platform)  
+**Website:** [https://trustia.com.tr](https://trustia.com.tr) | **HQ:** Istanbul, TR  
 **Founder & CEO:** Murat Furkan Bayram | **Email:** `kariyer@trustia.com.tr`  
 **Industry:** Defense Technology, Military Robotics & Autonomous Navigation
 
 ---
 
 ### 🛡️ EXECUTIVE SUMMARY
-**Trustia Autonomous Systems Inc.** develops the core autonomy operating software for Unmanned Ground Vehicles (UGVs) operating in **GPS-denied, electronic-warfare-heavy, and high-threat combat environments**. 
+**Trustia AI** develops the core autonomy operating software for Unmanned Ground Vehicles (UGVs) operating in **GPS-denied, electronic-warfare-heavy, and high-threat combat environments**. 
 
 While vehicle manufacturers build robust physical hardware, they lack the proprietary software stack required for true battlefield autonomy. Trustia bridges this gap by providing a **hardware-agnostic, zero-external-dependency software brain** that integrates centimeter-level 3D SLAM, kinematic trajectory planning, multi-modal IED/mine AI detection, and swarm robotics into any vehicle via standard CAN-Bus and ROS 2 protocols.
 
@@ -34,10 +34,10 @@ While vehicle manufacturers build robust physical hardware, they lack the propri
 ---
 
 ### 🚀 PROVEN TRACTION & TECHNICAL VALIDATION
-* **1,276 Automated Tests Passing (100%):** Complete coverage across Unit, Integration, Determinism, and Scenario Matrix pipelines.
+* **1,281 Automated Tests Passing (100%):** Complete coverage across Unit, Integration, Determinism, and Scenario Matrix pipelines.
 * **50/50 Extreme Mission Simulation Campaign:** Zero collisions and 100% mission completion rate across patrol, GPS-denied, obstacle, and combat logistics scenarios.
 * **Battle-Ready C2 Console:** MIL-STD-2525 tactical desktop command GUI deployed for live fleet control.
-* **Institutional Governance:** Delaware C-Corp corporate entity with clean founder equity and KOSGEB / Defense Academy certifications.
+* **Institutional Governance:** Clean founder equity and KOSGEB / Defense Academy certifications.
 
 ---
 
@@ -55,8 +55,8 @@ While vehicle manufacturers build robust physical hardware, they lack the propri
 ---
 
 ### 💰 THE INVESTMENT OPPORTUNITY
-* **Target Round:** **$500,000 Pre-Seed** via Y Combinator SAFE note (Valuation Cap: **$6.0 Million**).
+* **Target Round:** **$500,000 Pre-Seed** via SAFE note (Valuation Cap: **$6.0 Million**).
 * **Capital Allocation:** 50% Field Vehicle Integration & Sensor Pilots | 30% Edge AI Optimization (CUDA/TensorRT) | 20% Global Defense BD & Certifications.
 
 ---
-*Confidential & Proprietary © 2026 Trustia Autonomous Systems Inc. All rights reserved.*
+*Confidential & Proprietary © 2026 Trustia AI. All rights reserved.*

@@ -10,7 +10,7 @@
 | **Startup Name:** | **TRUSTIA AI** (*Trustia Autonomous Defense Systems*) |
 | **Founding Team:** | **Murat Furkan Bayram** (Founder & Chief Architect) |
 | **Target Track:** | Enterprise Deep-Tech • Defense Robotics (UGVs) • Autonomous Systems |
-| **Headquarters:** | **Istanbul / Delaware (Delaware C-Corp Target)** & **Silicon Valley (San Francisco / Sunnyvale)** |
+| **Headquarters:** | **Istanbul, Turkey** & **Global Dual-Use Autonomy Hubs** |
 | **Website:** | [https://trustia.com.tr](https://trustia.com.tr) |
 | **Contact Email:** | `kariyer@trustia.com.tr` / `muratbyrm009@gmail.com` |
 | **Investment Ask:** | **$125,000 USD SAFE** (Part of $500,000 Pre-Seed Round @ $5,000,000 Valuation Cap) |
@@ -110,7 +110,7 @@ QUESTION 6: WHAT IS YOUR TRACTION, ACCREDITATION & VALIDATION TO DATE?
 QUESTION 7: WHY ALCHEMIST ACCELERATOR?
 ========================================================================================
 Alchemist is the gold standard for enterprise B2B and deep-tech acceleration. Trustia is applying to Alchemist to:
-1. Establish our US corporate entity (Delaware C-Corp) and expand into the US defense tech and dual-use autonomy market (working with US DoD dual-use programs, DIU, and autonomous commercial logistics).
+1. Accelerate international market expansion and scale into global dual-use autonomy and defense technology markets (collaborating with enterprise primes, DIU, and commercial robotics fleets).
 2. Leverage Alchemist’s Tier-1 enterprise network (corporate partners, defense primes, and automotive OEMs) for pilot contracts (PoCs).
 3. Connect with Silicon Valley venture capital firms (Seed / Series A) specialized in defense tech, robotics, and mission-critical enterprise software.
 ```
