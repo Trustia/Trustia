@@ -47,3 +47,15 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 2. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
 3. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
 4. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
+
+---
+
+## 🧠 KALICI PROJE HAFIZASI VE GÜNCEL DURUM (PERMANENT CONTEXT)
+* **Kurucu & Lider:** Murat Furkan Bayram (17 yaşında, Kurucu & CEO / Sistem Mimarı).
+* **Resmi Tesciller:** SSB 100/100 Tam Puan (`L2zPtN4X1ZJ`), KOSGEB İleri Girişimci (`KSB01UGE0115153370`), TÜBİTAK ARBİS (`TBTK-0229-6571`), ASELSAN Tedarikçi Portalı, İTO BTM Ön Kuluçka 2026 II. Dönem Sözleşmesi (Fulya Polat Tower Rezidans).
+* **Yazılım & Test:** 16.000 satır özgün deterministik otonomi mimarisi, 1.281/1.281 otomatik birim ve entegrasyon testi (%100 Başarı).
+* **Küresel Başvurular:** Y Combinator (YC Fall 2026 - 21 Ağustos) ve Techstars (Anywhere & Londra - 25 Ağustos) başvuruları yapıldı.
+* **Fuar:** TURKCOMPOSITE 2026 / BTM Startup Village Fuarı (21-23 Ekim 2026) başvurusu tamamlandı.
+* **Mühendislik Havuzu:** Denizcan Özcan (ASELSAN & TEKNOFEST Robotaksi Finalisti, İÜC EEE 4. Sınıf, 3.44 GPA) 1. Öncelikli Mühendis Havuzunda.
+* **Masaüstü Dosyası:** `C:\Users\Murat\Desktop\Çıktı` altında 5 adet resmi, sade Türkçe A4 PDF dosyası hazır.
+
