@@ -57,5 +57,6 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 * **Küresel & Yerel Başvurular:** Fark Labs TEKMER Mobilite & Yatırım (29 Ağustos Başvuruldu), Sabancı Üniversitesi SUCool & Inovent (29 Ağustos Başvuruldu), TİM-TEB Girişim Evi (29 Ağustos Başvuruldu), Shield Capital (Savunma & Otonomi Fonu - 29 Ağustos Başvuruldu), Starburst Aerospace & Defense (29 Ağustos Başvuruldu), Seedcamp ($350k-$1M Tohum Yatırım - 29 Ağustos Başvuruldu), a16z Speedrun ($1M Yatırım - 29 Ağustos Başvuruldu), Thiel Fellowship (250.000$ Hibe - 29 Ağustos Başvuruldu), Soma Fellows (Soma Capital $100k-$2M Fonu - 29 Ağustos Başvuruldu), Techstars (Anywhere & Londra - 25 Ağustos) ve Y Combinator (YC Kış 2027 Taslak Hazır - 25 Ekim gönderilecek).
 * **Fuar:** TURKCOMPOSITE 2026 / BTM Startup Village Fuarı (21-23 Ekim 2026) başvurusu tamamlandı.
 * **Mühendislik Havuzu:** Denizcan Özcan (ASELSAN & TEKNOFEST Robotaksi Finalisti, İÜC EEE 4. Sınıf, 3.44 GPA) 1. Öncelikli Mühendis Havuzunda.
+* **BTM Randevusu:** 4 Eylül 2026 Cuma 15:00 - 15:30 (İTO BTM Fulya Kampüsü, Yatırımcı İlişkileri Ofisi Birebir Danışmanlık - Murat & Abisi).
 * **Masaüstü Dosyası:** `C:\Users\Murat\Desktop\Çıktı` altında 5 adet resmi, sade Türkçe A4 PDF dosyası hazır.
 
