@@ -19,7 +19,7 @@ Kuluçka: İstanbul Ticaret Odası BTM (Fulya Polat Tower Rezidans)
 
 Mercedes-Benz Türk Hoşdere Otobüs Fabrikası, Türkiye sanayisinin ve küresel Daimler Truck ekosisteminin en gurur verici teknoloji ve üretim üssüdür. 
 
-Bu teklif, **Hoşdere Otobüs Fabrikası'nda 25 yıldır gururla alın teri döken bir Mercedes-Benz Türk çalışanının 17 yaşındaki oğlu** olan sistem mimarı **Murat Furkan Bayram** tarafından, Hoşdere'nin dünya standartlarındaki üretim ve Ar-Ge vizyonuna katkı sağlamak amacıyla hazırlanmıştır.
+Bu teklif, **Hoşdere Otobüs Fabrikası'nda 20 yıla yakın süredir gururla görev yapan Mercedes-Benz Türk emektarı Mehmet Bayram'ın 17 yaşındaki oğlu** olan sistem mimarı **Murat Furkan Bayram** tarafından, Hoşdere'nin dünya standartlarındaki üretim ve Ar-Ge vizyonuna katkı sağlamak amacıyla hazırlanmıştır.
 
 Trustia AI, sıfırdan geliştirilen **16.000 satır deterministik Seviye 4 otonom navigasyon motoru** ve **SAE J1939 CAN-Bus retrofit mimarisi** ile araçların 15 dakikada insansız otonom hale gelmesini sağlamaktadır.
 
@@ -72,4 +72,4 @@ Fabrika sahasında veya Ar-Ge merkezinde **1 adet araç/çekici üzerinde 1 gün
 **Saygılarımızla,**  
 **Murat Furkan Bayram**  
 Trustia AI — Kurucu & Sistem Mimarı  
-*Gururlu bir 25 Yıllık Mercedes-Benz Türk Çalışanının Oğlu*
+*20 Yıla Yakın Hoşdere Fabrikası Emektarı Mehmet Bayram'ın Oğlu*
