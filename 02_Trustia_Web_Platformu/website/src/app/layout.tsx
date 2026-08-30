@@ -13,30 +13,36 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://trustia.com.tr"),
   title: {
-    default: "TRUSTIA AI — GPS-Denied Defense UGV Autonomy Platform | Milli Askeri Otonomi",
+    default: "TRUSTIA AI — Seviye 4 Yerli Robotaksi ve Askeri İKA Otonomi Platformu",
     template: "%s | TRUSTIA AI",
   },
   description:
-    "TRUSTIA Autonomous Systems; GPS sinyalinin bulunmadığı operasyon sahalarında İnsansız Kara Araçları (İKA) için 3D Poz Grafı SLAM, Hybrid A* rota planlama, EYP/Mayın tespiti ve hava-kara sürü zekası sunan milli askeri otonomi yazılım platformudur. (İstanbul, Türkiye).",
+    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. (İstanbul, Türkiye).",
   keywords: [
     "TRUSTIA AI",
-    "Trustia Autonomous Systems",
+    "Trustia",
+    "Trustia Teknoloji",
     "otonomi yazılımı",
+    "robotaksi",
+    "yerli robotaksi",
+    "seviye 4 otonom sürüş",
     "insansız kara aracı",
     "İKA otonomi",
+    "V2X",
+    "C-V2X",
     "GPS-denied navigation",
     "3D SLAM",
-    "Hybrid A* pathfinding",
+    "yörünge tahmini",
+    "Hybrid A*",
     "STANAG 4586",
     "SAE JAUS AS6091",
     "ROS 2 Humble",
     "CAN FD bridge",
-    "askeri yapay zeka",
-    "milli savunma sanayii",
-    "EYP tespiti",
-    "hava-kara sürü zekası",
-    "defense tech startup",
-    "UGV autonomy software",
+    "savunma sanayii",
+    "İTO BTM",
+    "Teknopark İstanbul",
+    "KOSGEB İleri Girişimci",
+    "Murat Furkan Bayram",
     "İstanbul",
   ],
   authors: [
@@ -64,9 +70,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "TRUSTIA AI — GPS-Denied Defense UGV Autonomy Platform",
+    title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu",
     description:
-      "Milli Askeri Otonomi Yazılım Platformu: 3D SLAM, Hybrid A* rota, EYP/Mayın tehdit füzyonu ve hava-kara hibrit sürü zekası. STANAG 4586 Level 4 uyumlu.",
+      "Milli Çift Amaçlı Otonomi Mimarisi: V2X Akıllı Şehir, 3D SLAM, 5 Saniyelik Yörünge Yapay Zekası ve 1.301 Doğrulanmış Test. İTO BTM & Teknopark İstanbul Destekli.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -77,16 +83,16 @@ export const metadata: Metadata = {
         url: "https://trustia.com.tr/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "TRUSTIA AI — Military UGV Autonomy Platform (1200x630)",
+        alt: "TRUSTIA AI — Level 4 Autonomous Systems & Defense Robotics (1200x630)",
         type: "image/jpeg",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TRUSTIA AI — GPS-Denied Defense UGV Autonomy Platform",
+    title: "TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core",
     description:
-      "Military-grade UGV autonomy software core featuring 3D SLAM, kinematic pathfinding, IED detection & multi-agent swarm intelligence.",
+      "Dual-use Level 4 sovereign autonomy software featuring V2X smart infrastructure, 3D SLAM, predictive trajectory AI, and 1,301 verified tests.",
     images: ["https://trustia.com.tr/og-image.jpg"],
     creator: "@trustia_ai",
   },
@@ -98,7 +104,7 @@ export const metadata: Metadata = {
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
-  category: "Defense Technology",
+  category: "Autonomous Systems & Defense Technology",
 };
 
 export default function RootLayout({
@@ -106,66 +112,83 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Schema.org Structured Data (JSON-LD) for Google Search Console, Knowledge Graph & Defense Entities
+  // Schema.org Structured Data (JSON-LD) for Google Search Console, Rich Snippets & Knowledge Graph
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Corporation",
+        "@type": "Organization",
         "@id": "https://trustia.com.tr/#organization",
         "name": "Trustia AI",
         "alternateName": ["TRUSTIA AI", "Trustia Teknoloji", "Trustia Autonomous Systems"],
         "url": "https://trustia.com.tr",
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
-        "description": "GPS-Denied Military UGV Autonomy Software Core, 3D Pose Graph SLAM & Swarm Intelligence Platform.",
+        "description": "Milli Çift Amaçlı Seviye 4 Otonom Sürüş, V2X Akıllı Şehir ve Askeri İnsansız Kara Aracı (İKA) Otonomi Yazılım Platformu.",
         "foundingDate": "2026",
         "founder": {
           "@type": "Person",
           "name": "Murat Furkan Bayram",
-          "jobTitle": "Founder & Autonomous Systems Lead Engineer"
+          "jobTitle": "Kurucu & Sistem Mimarı / Founder & Autonomous Systems Architect",
+          "sameAs": "https://www.linkedin.com/in/trustia"
         },
-        "address": [
-          {
-            "@type": "PostalAddress",
-            "addressLocality": "İstanbul",
-            "addressCountry": "TR"
-          }
-        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Fulya Mah. Yeşilçimen Sok. Polat Tower Rezidans İTO BTM",
+          "addressLocality": "Şişli",
+          "addressRegion": "İstanbul",
+          "addressCountry": "TR"
+        },
         "contactPoint": {
           "@type": "ContactPoint",
           "email": "iletisim@trustia.com.tr",
-          "contactType": "corporate inquiries",
+          "contactType": "Corporate Inquiries & Partnerships",
           "availableLanguage": ["Turkish", "English"]
         },
         "sameAs": [
           "https://github.com/Trustia/Trustia",
-          "https://trustia.com.tr"
+          "https://trustia.com.tr",
+          "https://www.linkedin.com/in/trustia"
         ],
         "knowsAbout": [
+          "Level 4 Autonomous Driving",
+          "Robotaxi",
+          "V2X / C-V2X Communication",
+          "3D LiDAR SLAM",
+          "GPS-Denied Navigation",
+          "Trajectory Prediction AI",
           "STANAG 4586 Level 4",
           "SAE AS6091 JAUS",
-          "3D LiDAR SLAM",
-          "Hybrid A* Kinematic Path Planning",
           "ROS 2 Humble",
           "CAN FD",
-          "Unmanned Ground Vehicles (UGV)",
-          "Military Artificial Intelligence"
+          "Unmanned Ground Vehicles (UGV)"
         ]
       },
       {
         "@type": "SoftwareApplication",
         "@id": "https://trustia.com.tr/#software",
-        "name": "TRUSTIA AI Autonomy Core",
-        "operatingSystem": "Linux, ROS 2, Embedded RTOS",
-        "applicationCategory": "DefenseApplication",
-        "description": "Sovereign, GPS-denied autonomous navigation and threat fusion engine for defense unmanned ground vehicles.",
+        "name": "TRUSTIA AI Autonomous Core Stack",
+        "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
+        "applicationCategory": "AutonomousDrivingSoftware",
+        "description": "Seviye 4 yerli otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği.",
+        "softwareVersion": "2.1.0",
         "offers": {
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock"
         }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://trustia.com.tr/#website",
+        "url": "https://trustia.com.tr",
+        "name": "Trustia AI",
+        "description": "Seviye 4 Yerli Robotaksi ve Askeri İKA Otonomi Platformu",
+        "publisher": {
+          "@id": "https://trustia.com.tr/#organization"
+        },
+        "inLanguage": ["tr-TR", "en-US"]
       }
     ]
   };
