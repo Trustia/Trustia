@@ -177,10 +177,18 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Adet:** 1 Takım (2 Bar)
 * **Toplam Tutar:** **7.086,63 TL**
 
-### 9.5 Diğer Montaj & Donanım Kalemleri:
+### 9.5 WaveShare 10.1 inç Kapasitif Dokunmatik HDMI IPS Kokpit Ekranı (1 Adet)
+* **Parça Adı:** WaveShare 10.1 inç Kapasitif Dokunmatik Ekran HDMI LCD (E) 1024x600 IPS Panel Tam Lamine Monitör
+* **Kullanım Amacı:** Araç içi kokpitte orta konsola montaj; Trustia C2 Taktik Arayüzü, SLAM haritası, hız, batarya ve otonomi durumunu anlık takip ve dokunmatik kontrol.
+* **Tedarikçi Mağaza:** Trendyol (Satıcı: ERNPAZAR)
+* **Satın Alma Linki:** [trendyol.com/waveshare/10-1inc-ekran-kapasitif-dokunmatik-ekran-hdmi-lcd-e-1024-600-cozunurluk-ips-panel-tam-lamine-monitor-destegi-raspberry-pi-pc-je-p-837894212](https://www.trendyol.com/waveshare/10-1inc-ekran-kapasitif-dokunmatik-ekran-hdmi-lcd-e-1024-600-cozunurluk-ips-panel-tam-lamine-monitor-destegi-raspberry-pi-pc-je-p-837894212)
+* **Sepet Tutarı:** **₺ 21.118,35 TL** (KDV Dahil / Kargo Bedava)
+* **Adet:** 1
+* **Toplam Tutar:** **21.118,35 TL**
+
+### 9.6 Diğer Montaj & Donanım Kalemleri:
 1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
-2. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
-* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 34.768,85 TL**
+* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 51.237,20 TL**
 
 ---
 
@@ -198,13 +206,14 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 1x WaveShare 5-Port Gigabit Switch (Robotistan): `1.583,59 TL`
 * 1x Interkom 12'li Sigorta Bloğu (Interkom): `1.708,45 TL`
 * 1x Drs Tuning Ioniq 5 Siyah Tavan Barı (Hepsiburada): `7.086,63 TL`
-* 🛠️ Diğer Montaj, Antenler & Ekran: `16.650,00 TL`
-* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.069.700,83 TL**
+* 1x WaveShare 10.1" Dokunmatik Kokpit Ekranı (Trendyol): `21.118,35 TL`
+* 🛠️ Çift GNSS Tavan Patch Antenleri: `12.000,00 TL`
+* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.086.169,18 TL**
 
 ---
 
 * 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.009.700,83 TL (~3.0 Milyon TL!)**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.026.169,18 TL (~3.0 Milyon TL!)**
 
 ---
 
