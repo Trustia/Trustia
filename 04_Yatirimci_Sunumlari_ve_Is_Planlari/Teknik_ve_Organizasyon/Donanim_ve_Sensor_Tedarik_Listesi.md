@@ -113,7 +113,21 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 📊 ŞU ANA KADARKİ KESİNLEŞEN TOPLAM TUTAR:
+## 🚨 8. ACİL DURUM GÜVENLİK BUTONU (E-STOP) — [KESİNLEŞTİ ✅]
+
+### 8.1 Mantar Acil Stop Butonu (1 Adet)
+* **Parça Adı:** Schneider Electric XA2EA4342 Kırmızı Yaylı Stop Butonu (22.5 mm Montaj Çapı, 1 NK Kontak, 100ms Watchdog Donanım Güvenlik Kesici)
+* **Üretici / Stok Kodu:** `XA2EA4342` / `SCHXA2EA4342`
+* **Kullanım Amacı:** Araç kokpitinde vitesin yanına montaj; acil durumda basıldığı an otonom kontrolü 0.01 saniyede kesip insan sürücüye ve mekanik frene devretme.
+* **Tedarikçi Firma:** Activ Elektrik (Türkiye)
+* **Satın Alma Linki:** [activelektrik.com/urun/schneider-electric-xa2ea4342-kirmizi-yayli-stop-yazili-buton-1126](https://activelektrik.com/urun/schneider-electric-xa2ea4342-kirmizi-yayli-stop-yazili-buton-1126)
+* **Birim Fiyat:** **₺ 128,72 TL** (KDV Dahil / Aynı Gün Kargo)
+* **Adet:** 1
+* **Toplam Tutar:** **128,72 TL**
+
+---
+
+## 📊 RESMÎ KESİNLEŞEN TAM DONANIM TABLOSU:
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
 * 1x NVIDIA AGX Orin 64GB Beyin (OpenZeka): `241.080,00 TL`
@@ -121,8 +135,9 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
-* 1x Kvaser U100 CAN-Bus Dönüştürücü (Elektronomi): `24.213,51 TL`
-* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 1.065.716,33 TL** *(1.06 Milyon TL'ye aracın tüm elektroniği ve otonomi kiti tamamlandı!)*
+* 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
+* 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
+* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.065.845,05 TL**
 
 ---
 
