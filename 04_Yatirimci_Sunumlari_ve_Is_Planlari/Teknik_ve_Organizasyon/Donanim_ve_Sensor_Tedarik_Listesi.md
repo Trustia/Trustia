@@ -42,11 +42,40 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
+## 📷 3. OTOMOTİV HDR KAMERALAR (GÖRSEL ALGILAMA) — [KESİNLEŞTİ ✅]
+
+### 3.1 Otomotiv Sınıfı GMSL2 HDR Kameralar (4 Adet)
+* **Parça Adı:** Leopard Imaging LI-IMX390-GMSL2-060H Serial Camera (Sony IMX390 HDR Sensör, LED Flicker Mitigation, IP67 Su/Toz Geçirmez Metal Kasa, FAKRA Z Konnektör)
+* **Mouser Ürün Kodu:** `931-LI-GMSL2-060H`
+* **Üretici Parça Numarası:** `LI-IMX390-GMSL2-060H`
+* **Kullanım Amacı:** Trafik ışığı tanıma, şerit tespiti, 360° yaya ve araç görsel algılama.
+* **Tedarikçi Firma:** Mouser Electronics Türkiye
+* **Satın Alma Linki:** [mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-060H](https://www.mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-060H?qs=xZ%2FP%252Ba9zWQY2bOoAzRCi1g%3D%3D)
+* **Birim Fiyat:** **438,87 €** (~19.750 TL)
+* **Adet:** 4 *(Ön, Arka, Sağ Ayna, Sol Ayna)*
+* **Toplam Tutar:** **1.755,48 € (~79.000 TL)**
+
+---
+
+## 📡 4. MİLİMETRE DALGA RADAR (KÖTÜ HAVA FİLTRESİ) — [KESİNLEŞTİ ✅]
+
+### 4.1 77 GHz Uzun Menzilli Radar (2 Adet)
+* **Parça Adı:** Continental ARS 408-21 (77 GHz FMCW Radar, 250m Menzil, Sis/Yağmur Geçirmez)
+* **Kullanım Amacı:** Yoğun sis, sağanak yağmur ve çamurlu havalarda kamera ve LiDAR kör olduğunda radar verisiyle güvenli sürüş (Adverse Weather Filter).
+* **Tedarikçi / İthalatçı:** Depomer / Impexron Ltd. Şti. (İstanbul)
+* **Tedarik Şekli:** Resmi Kurumsal Proforma Fatura ile Kapıya Teslim
+* **Adet:** 2 *(Ön Izgara + Arka Tampon)*
+* **Tahmini Bütçe:** **~50.000 TL**
+
+---
+
 ## 📊 ŞU ANA KADARKİ KESİNLEŞEN TOPLAM TUTAR:
 * 1x Ouster OS2-128 LiDAR: `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR: `232.730,40 TL`
 * 1x NVIDIA Jetson AGX Orin 64GB Beyin: `241.080,00 TL`
-* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 825.069,00 TL** *(Türkiye Resmi Distribütörleri Stoktan Teslim)*
+* 4x Leopard Imaging Sony IMX390 Kamera: `~79.000,00 TL`
+* 2x Continental ARS 408-21 Radar: `~50.000,00 TL`
+* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 954.069,00 TL** *(Yaklaşık 954 Bin TL)*
 
 ---
 
