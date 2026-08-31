@@ -43,22 +43,23 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Birim Fiyat:** **$3.760,26 USD** (Güncel Kur: 1 USD = 48,26 TL)
 * **TL Karşılığı:** **₺ 181.470,15 TL**
 * **Adet:** 1
-* **Toplam Tutar:** **181.470,15 TL** *(Standart kitten ~60.000 TL daha ucuz ve doğrudan araca hazır!)*
+* **Toplam Tutar:** **181.470,15 TL**
 
 ---
 
 ## 📷 3. OTOMOTİV HDR KAMERALAR (GÖRSEL ALGILAMA) — [KESİNLEŞTİ ✅]
 
-### 3.1 Otomotiv Sınıfı GMSL2 HDR Kameralar (4 Adet)
-* **Parça Adı:** Leopard Imaging LI-IMX390-GMSL2-060H Serial Camera (Sony IMX390 HDR Sensör, LED Flicker Mitigation, IP67 Su/Toz Geçirmez Metal Kasa, FAKRA Z Konnektör)
-* **Mouser Ürün Kodu:** `931-LI-GMSL2-060H`
-* **Üretici Parça Numarası:** `LI-IMX390-GMSL2-060H`
+### 3.1 Otomotiv Sınıfı 120° Geniş Açı GMSL2 HDR Kameralar (4 Adet)
+* **Parça Adı:** Leopard Imaging LI-IMX390-GMSL2-120H Serial Camera (Sony IMX390 HDR Sensör, LED Flicker Mitigation, IP67 Su/Toz Geçirmez Metal Kasa, FAKRA Z Konnektör)
+* **Mouser Ürün Kodu:** `931-IMX390GMSL2120H`
+* **Üretici Parça Numarası:** `LI-IMX390-GMSL2-120H`
 * **Kullanım Amacı:** Trafik ışığı tanıma, şerit tespiti, 360° yaya ve araç görsel algılama. Doğrudan Seeed J501 kartının mavi FAKRA soketlerine bağlanır.
 * **Tedarikçi Firma:** Mouser Electronics Türkiye
-* **Satın Alma Linki:** [mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-060H](https://www.mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-060H?qs=xZ%2FP%252Ba9zWQY2bOoAzRCi1g%3D%3D)
-* **Birim Fiyat:** **438,87 €** (~19.750 TL)
+* **Satın Alma Linki:** [mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-120H](https://www.mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-120H?qs=GeDFDFLaBXEsDkDJ99tooA%3D%3D)
+* **Birim Fiyat:** **438,87 €** (Güncel Kur: 1 EUR = 56,04 TL)
 * **Adet:** 4 *(Ön, Arka, Sağ Ayna, Sol Ayna)*
-* **Toplam Tutar:** **1.755,48 € (~79.000 TL)**
+* **Toplam Euro Tutarı:** **1.755,48 €**
+* **TL Karşılığı:** **₺ 98.351,32 TL**
 
 ---
 
@@ -70,7 +71,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Tedarikçi / İthalatçı:** Depomer / Impexron Ltd. Şti. (İstanbul)
 * **Tedarik Şekli:** Resmi Kurumsal Proforma Fatura ile Kapıya Teslim
 * **Adet:** 2 *(Ön Izgara + Arka Tampon)*
-* **Tahmini Bütçe:** **~50.000 TL**
+* **Tahmini Bütçe:** **~50.000,00 TL**
 
 ---
 
@@ -135,14 +136,14 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 ## 📊 RESMÎ GÜNCEL KESİNLEŞEN TAM DONANIM TABLOSU:
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
-* 1x Seeed J501 + NVIDIA Orin 64GB Beyin: **`181.470,15 TL`** *(3.760,26 USD)*
-* 4x Leopard Sony IMX390 Kamera (Mouser): `~79.000,00 TL`
+* 1x Seeed J501 + Orin 64GB Beyin ($3.760,26): `181.470,15 TL`
+* 4x Leopard Sony IMX390 120H Kamera (1.755,48 € / 56,04 TL): **`98.351,32 TL`**
 * 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
 * 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.006.235,20 TL (Sadece 1 Milyon TL!)**
+* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.025.586,52 TL (Tam 1.02 Milyon TL!)**
 
 ---
 
