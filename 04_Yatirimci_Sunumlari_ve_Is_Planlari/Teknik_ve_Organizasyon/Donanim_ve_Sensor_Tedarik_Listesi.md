@@ -140,15 +140,22 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 ---
 
 ## 🛠️ 9. TAMAMLAYICI MONTAJ, ELEKTRİK, KABLOLAMA VE KOKPİT KİTİ — [KESİNLEŞTİ ✅]
-Bu grup, yukarıdaki 8 ana sistemi birbirine bağlayan ve aracı tek parça anahtar teslim otonom hale getiren tüm bağlantı elemanlarını içerir:
 
+### 9.1 Basler GMSL2 FAKRA-Z Kamera Kablo Seti (4 Adet)
+* **Parça Adı:** Basler Cable GMSL, FAKRA-Z, 1x F/F, 3m (Yüksek Elektromanyetik Uyumluluk, Parazitsiz Koaksiyel Görüntü Kablosu)
+* **Kullanım Amacı:** 4 adet Leopard Sony IMX390 kamerasını doğrudan Seeed J501 kartının mavi FAKRA girişlerine bağlamak.
+* **Tedarikçi Firma:** Basler AG (Resmi Web Mağazası)
+* **Satın Alma Linki:** [baslerweb.com/en/shop/cable-gmsl-fakra-z-1x-f-f-3m/](https://www.baslerweb.com/en/shop/cable-gmsl-fakra-z-1x-f-f-3m/)
+* **Sepet Tutarı (4 Adet + Vergiler):** **138,04 €** (Canlı Kur: 1 EUR = 56,09 TL)
+* **Toplam TL Karşılığı:** **₺ 7.740,18 TL**
+
+### 9.2 Diğer Tamamlayıcı Montaj & Donanım Kalemleri:
 1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
-2. **FAKRA Z GMSL2 Kamera Koaksiyel Kablo Seti (4 Adet x 3m):** Kameraları Seeed J501 kartına bağlayan otomotiv kabloları (`~6.500,00 TL`)
-3. **Endüstriyel 5-Port Gigabit Ethernet Switch (12V DC):** TP-Link Omada / Moxa 12V Endüstriyel Ağ Anahtarı (`~4.800,00 TL`)
-4. **Otomotiv 12V Sigorta Bloğu & Güç Dağıtım Ünitesi (PDU):** Blue Sea Systems 6'lı Bıçak Sigorta Kutusu + 40A Röle + Koruma Devresi (`~3.800,00 TL`)
-5. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
-6. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
-* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 56.750,00 TL**
+2. **Endüstriyel 5-Port Gigabit Ethernet Switch (12V DC):** TP-Link Omada / Moxa 12V Endüstriyel Ağ Anahtarı (`~4.800,00 TL`)
+3. **Otomotiv 12V Sigorta Bloğu & Güç Dağıtım Ünitesi (PDU):** Blue Sea Systems 6'lı Bıçak Sigorta Kutusu + 40A Röle + Koruma Devresi (`~3.800,00 TL`)
+4. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
+5. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
+* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 57.990,18 TL**
 
 ---
 
@@ -157,18 +164,19 @@ Bu grup, yukarıdaki 8 ana sistemi birbirine bağlayan ve aracı tek parça anah
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
 * 1x Seeed J501 + Orin 64GB Beyin ($3.760,26): `181.470,15 TL`
 * 4x Leopard Sony IMX390 120H Kamera (1.755,48 €): `98.351,32 TL`
-* 2x Continental ARS 408-21 Radar (Alibaba $1.180,27): `59.345,46 TL`
+* 2x Continental ARS 408-21 Radar ($1.180,27 / Alibaba Kargo Dahil): `59.345,46 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
 * 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 🛠️ Tamamlayıcı Montaj, Kablolama, Antenler, Switch & Ekran Kiti: `56.750,00 TL`
-* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.091.681,98 TL**
+* 4x Basler GMSL2 FAKRA Kablo Seti (Basler AG 138,04 €): `7.740,18 TL`
+* 🛠️ Diğer Montaj, Antenler, 12V Switch & Ekran: `50.250,00 TL`
+* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.092.922,16 TL**
 
 ---
 
 * 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.031.681,98 TL (Yaklaşık 3 Milyon TL!)**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.032.922,16 TL (~3 Milyon TL!)**
 
 ---
 
