@@ -158,12 +158,20 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Adet:** 1
 * **Toplam Tutar:** **1.583,59 TL**
 
-### 9.3 Diğer Montaj & Donanım Kalemleri:
+### 9.3 Interkom 12'li Kapaklı & Negatif Baralı Oto Sigorta Bloğu (1 Adet)
+* **Parça Adı:** Interkom IC-276C-12 12'li Sigorta Bloğu (Kapaklı & Negatif Baralı Marin/Oto Güç Dağıtım Panosu)
+* **Kullanım Amacı:** Tüm LiDAR'ları, radarları, bilgisayarı, switch'i ve router'ı araba aküsünden 12 ayrı izole sigortalı hat ile güvenli beslemek.
+* **Tedarikçi Firma:** Interkom Elektronik Ltd. Şti. (Türkiye)
+* **Satın Alma Linki:** [interkom.co/ic-276c-12-sigorta-blogu-12li](https://interkom.co/ic-276c-12-sigorta-blogu-12li)
+* **Sepet Tutarı (KDV Dahil):** **₺ 1.708,45 TL**
+* **Adet:** 1
+* **Toplam Tutar:** **1.708,45 TL**
+
+### 9.4 Diğer Montaj & Donanım Kalemleri:
 1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
-2. **Otomotiv 12V Sigorta Bloğu & Güç Dağıtım Ünitesi (PDU):** Blue Sea Systems 6'lı Bıçak Sigorta Kutusu + 40A Röle + Koruma Devresi (`~3.800,00 TL`)
-3. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
-4. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
-* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 54.773,77 TL**
+2. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
+3. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
+* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 52.682,22 TL**
 
 ---
 
@@ -179,13 +187,14 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
 * 4x Basler GMSL2 FAKRA Kablo Seti (Basler AG): `7.740,18 TL`
 * 1x WaveShare 5-Port Gigabit Switch (Robotistan): `1.583,59 TL`
-* 🛠️ Diğer Montaj, Antenler, PDU, Tavan Barı & Ekran: `45.450,00 TL`
-* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.089.705,75 TL**
+* 1x Interkom 12'li Sigorta Bloğu (Interkom): `1.708,45 TL`
+* 🛠️ Diğer Montaj, Antenler, Tavan Barı & Ekran: `41.650,00 TL`
+* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.087.614,20 TL**
 
 ---
 
 * 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.029.705,75 TL (~3 Milyon TL!)**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.027.614,20 TL (~3 Milyon TL!)**
 
 ---
 
