@@ -160,20 +160,11 @@ export default function RobotaxiPage() {
 
             {/* Quick Actions */}
             <div className="flex flex-wrap items-center gap-3 shrink-0">
-              <a
-                href="/06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
-                download
-                className="px-5 py-2.5 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-2"
-              >
-                <Download className="w-4 h-4" />
-                <span>{lang === "tr" ? "PDF ŞARTNAMEYİ İNDİR (5 SAYFA)" : "DOWNLOAD MASTER PDF (5 PAGES)"}</span>
-              </a>
-
               <Link
                 href="/iletisim/"
-                className="px-4 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 font-medium text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-2"
+                className="px-5 py-2.5 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-2"
               >
-                <span>{lang === "tr" ? "İŞ BİRLİĞİ TALEBİ" : "PARTNERSHIP"}</span>
+                <span>{lang === "tr" ? "RESMİ ŞARTNAME VE İŞ BİRLİĞİ TALEBİ" : "ENTERPRISE SPEC & PARTNERSHIP"}</span>
                 <ChevronRight className="w-4 h-4" />
               </Link>
             </div>

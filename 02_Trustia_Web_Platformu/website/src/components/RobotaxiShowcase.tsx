@@ -110,24 +110,15 @@ export default function RobotaxiShowcase() {
             </p>
           </div>
 
-          {/* Action Buttons: Responsive full width on mobile, inline on desktop */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-2.5 shrink-0">
+          {/* Action Button: High-status corporate details link */}
+          <div className="shrink-0">
             <Link
               href="/robotaxi/"
-              className="px-3.5 py-2 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5 shadow-sm"
+              className="w-full sm:w-auto px-4 py-2.5 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5 shadow-sm"
             >
-              <span>{lang === "tr" ? "TEKNİK DOKÜMAN" : "TECHNICAL SPEC"}</span>
+              <span>{lang === "tr" ? "TEKNİK DOKÜMAN & MİMARİ" : "TECHNICAL SPEC & ARCHITECTURE"}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
-
-            <a
-              href="/06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
-              download
-              className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 font-medium text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5"
-            >
-              <Download className="w-3.5 h-3.5 text-slate-400" />
-              <span>PDF (5 SAYFA)</span>
-            </a>
           </div>
         </div>
 
