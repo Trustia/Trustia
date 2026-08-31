@@ -66,12 +66,18 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 ## 📡 4. MİLİMETRE DALGA RADAR (KÖTÜ HAVA FİLTRESİ) — [KESİNLEŞTİ ✅]
 
 ### 4.1 77 GHz Uzun Menzilli Radar (2 Adet)
-* **Parça Adı:** Continental ARS 408-21 (77 GHz FMCW Radar, 250m Menzil, Sis/Yağmur Geçirmez)
+* **Parça Adı:** Continental ARS 408-21 (77 GHz FMCW Radar, 250m Menzil, Sis/Yağmur Geçirmez, Hızlı Eğim Algılama)
+* **Üretici Parça Numarası:** `ARS408-21` (Alibaba Ürün No: `1601081692870`)
 * **Kullanım Amacı:** Yoğun sis, sağanak yağmur ve çamurlu havalarda kamera ve LiDAR kör olduğunda radar verisiyle güvenli sürüş (Adverse Weather Filter).
-* **Tedarikçi / İthalatçı:** Depomer / Impexron Ltd. Şti. (İstanbul)
-* **Tedarik Şekli:** Resmi Kurumsal Proforma Fatura ile Kapıya Teslim
+* **Tedarikçi Firma:** Alibaba (Zilai Technology Shenzhen Co. Ltd. — Onaylı Tedarikçi)
+* **Satın Alma Linki:** [turkish.alibaba.com/product-detail/High-Quality-77GHz-Long-Range-Radar-1601081692870.html](https://turkish.alibaba.com/product-detail/High-Quality-77GHz-Long-Range-Radar-1601081692870.html)
+* **Sepet Detayı (2 Adet):**
+  * Ürün Ara Toplamı: `55.108,27 TL`
+  * Kargo / Nakliye: `2.514,07 TL`
+  * Ödeme İşlem Ücreti: `1.723,14 TL`
+* **Dolar Tutarı:** **$1.180,27 USD**
+* **Toplam TL Karşılığı (Kargo & Vergiler Dahil):** **₺ 59.345,46 TL**
 * **Adet:** 2 *(Ön Izgara + Arka Tampon)*
-* **Tahmini Bütçe:** **~50.000,00 TL**
 
 ---
 
@@ -137,13 +143,13 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
 * 1x Seeed J501 + Orin 64GB Beyin ($3.760,26): `181.470,15 TL`
-* 4x Leopard Sony IMX390 120H Kamera (1.755,48 € / 56,04 TL): **`98.351,32 TL`**
-* 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
+* 4x Leopard Sony IMX390 120H Kamera (1.755,48 €): `98.351,32 TL`
+* 2x Continental ARS 408-21 Radar ($1.180,27 / Alibaba Kargo Dahil): **`59.345,46 TL`**
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
 * 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.025.586,52 TL (Tam 1.02 Milyon TL!)**
+* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.034.931,98 TL (1.03 Milyon TL!)**
 
 ---
 
