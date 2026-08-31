@@ -18,12 +18,12 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 w-[96%] sm:w-[94%] max-w-6xl z-40 transition-all duration-500">
-      {/* 100% Fully Transparent Header with No Background or Border anywhere */}
-      <div className="relative px-1 sm:px-2 py-1.5 sm:py-2 bg-transparent border-none shadow-none flex items-center justify-between">
+    <header className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 w-[96%] sm:w-[94%] max-w-6xl z-50 transition-all duration-300">
+      {/* Sleek Corporate Glass Pill Container with Backdrop Blur to prevent text bleed */}
+      <div className="relative px-3 sm:px-5 py-2 bg-[#090b0e]/85 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl flex items-center justify-between">
         
-        {/* Brand Logo with Dynamic High-Res Waving Flag on the Diagonal Tip of "I" */}
-        <Link href="/" className="relative inline-flex items-center group select-none py-1 pr-5 sm:pr-6 shrink-0">
+        {/* Brand Logo with Dynamic High-Res Flag on the Diagonal Tip of "I" */}
+        <Link href="/" className="relative inline-flex items-center group select-none py-0.5 pr-4 shrink-0">
           <span className="font-syncopate font-bold text-xs sm:text-base md:text-lg tracking-[0.14em] sm:tracking-[0.2em] text-white uppercase group-hover:text-slate-200 transition-colors">
             TRUSTIA
           </span>

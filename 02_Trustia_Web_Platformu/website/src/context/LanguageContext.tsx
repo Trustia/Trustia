@@ -34,10 +34,10 @@ const translations: Record<Language, Record<string, string>> = {
     nav_contact: "İLETİŞİM",
 
     // Hero Section
-    hero_badge: "MİLLİ OTONOM SİSTEMLER PLATFORMU",
-    hero_title_1: "Sürücüsüz Ulaşım ve Savunma İçin",
+    hero_badge: "MİLLİ ÇİFT AMAÇLI OTONOMİ PLATFORMU",
+    hero_title_1: "Sivil ve Savunma Platformları İçin",
     hero_title_2: "Seviye 4 Yerli Otonomi",
-    hero_desc: "Trustia AI; şehir içi yerli Robotaksi filoları ve GPS sinyalinin kesildiği sahalarda görev yapan İnsansız Savunma Robotları için tam bağımsız otonomi yazılımı geliştirir.",
+    hero_desc: "Şehir içi Robotaksi filoları ve GPS olmayan harekat sahalarındaki İnsansız Savunma Robotları için tam bağımsız yerli otonomi yazılımı.",
     hero_btn_explore: "ÇÖZÜMLERİ İNCELE",
     hero_btn_demo: "DEMO TALEP ET",
     hero_sound_mute: "Sessiz",

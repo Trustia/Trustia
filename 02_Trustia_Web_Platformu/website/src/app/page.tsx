@@ -26,32 +26,32 @@ export default function Home() {
       {/* 2. Fullscreen Video Background */}
       <HeroVideo />
 
-      {/* Hero Content Section - Mobile Optimized, Desktop 100% Preserved */}
-      <section className="relative w-full h-screen min-h-[580px] sm:min-h-[600px] flex items-end justify-start px-4 sm:px-12 md:px-16 pb-14 sm:pb-16 z-10 pointer-events-none">
-        <div className="max-w-md text-left space-y-2 sm:space-y-2.5 pointer-events-auto">
+      {/* Hero Content Section - Compact Executive Corner Placement */}
+      <section className="relative w-full h-screen min-h-[560px] flex items-end justify-start px-4 sm:px-10 md:px-14 pb-10 sm:pb-14 z-10 pointer-events-none">
+        <div className="max-w-sm sm:max-w-md text-left space-y-2 pointer-events-auto">
           {/* Corporate Badge */}
-          <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-0.5 rounded bg-black/50 border border-white/20 text-slate-300 text-[9px] sm:text-[10px] font-mono font-bold tracking-wider uppercase backdrop-blur-md">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-black/60 border border-white/15 text-slate-300 text-[10px] font-mono font-medium tracking-wider uppercase backdrop-blur-md">
             <span>{t("hero_badge")}</span>
           </div>
 
-          {/* Responsive Headline (Cleanly formatted on mobile, bold on desktop) */}
-          <h1 className="text-lg sm:text-2xl md:text-3xl font-extrabold text-white tracking-tight leading-[1.25] sm:leading-[1.2] drop-shadow-2xl">
+          {/* Clean 2-Line Headline */}
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug drop-shadow-xl">
             {t("hero_title_1")} <br />
-            {t("hero_title_2")}
+            <span className="text-slate-200">{t("hero_title_2")}</span>
           </h1>
 
-          {/* Responsive Subtitle */}
-          <p className="text-slate-300 text-[11px] sm:text-xs font-normal leading-relaxed max-w-[320px] sm:max-w-sm drop-shadow-md">
+          {/* Responsive Compact Subtitle */}
+          <p className="text-slate-300 text-xs font-normal leading-relaxed drop-shadow-md">
             {t("hero_desc")}
           </p>
 
-          {/* Slanted CTA Button */}
-          <div className="pt-0.5 sm:pt-1">
+          {/* Clean Executive Action Button */}
+          <div className="pt-2">
             <a
               href="#otonomi"
-              className="btn-overland-slanted cursor-pointer text-[11px] sm:text-xs"
+              className="px-4 py-2 rounded-lg bg-white text-slate-950 font-semibold text-xs tracking-wider uppercase hover:bg-slate-200 transition-colors inline-flex items-center gap-2 shadow-lg"
             >
-              {t("hero_btn_explore")}
+              <span>{t("hero_btn_explore")}</span>
             </a>
           </div>
         </div>
