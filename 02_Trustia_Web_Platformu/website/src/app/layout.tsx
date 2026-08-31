@@ -189,6 +189,17 @@ export default function RootLayout({
           "@id": "https://trustia.com.tr/#organization"
         },
         "inLanguage": ["tr-TR", "en-US"]
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://trustia.com.tr/#hero-video",
+        "name": "TRUSTIA AI — Seviye 4 Yerli Otonomi ve Robotaksi Platformu",
+        "description": "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı sahalarda görev yapan İnsansız Savunma Robotları için geliştirilen Seviye 4 otonom sürüş yazılım çekirdeği.",
+        "thumbnailUrl": "https://trustia.com.tr/og-image.jpg",
+        "uploadDate": "2026-08-30T23:00:00+03:00",
+        "contentUrl": "https://trustia.com.tr/hero-video.mp4",
+        "embedUrl": "https://trustia.com.tr/",
+        "duration": "PT30S"
       }
     ]
   };
