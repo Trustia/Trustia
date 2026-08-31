@@ -19,7 +19,9 @@ export default function SupportedPlatformsShowcase() {
       highlights: lang === "tr"
         ? ["Elektronik Direksiyon (Drive-by-Wire)", "Trafik Işığı & Yaya Algılama", "Dinamik Rota Planlama"]
         : ["Drive-by-Wire CAN Integration", "Traffic Light & Pedestrian AI", "Dynamic Route Planning"],
-      vehicles: "TOGG, Mercedes, Toyota, Hyundai, Tesla"
+      vehicles: "TOGG, Mercedes, Toyota, Hyundai, Tesla",
+      ctaLink: "/robotaxi/",
+      ctaText: lang === "tr" ? "Hyundai Ioniq 5 Robotaksi İncele" : "Explore Hyundai Ioniq 5 Robotaxi"
     },
     {
       id: "defense",
@@ -32,7 +34,9 @@ export default function SupportedPlatformsShowcase() {
       highlights: lang === "tr"
         ? ["GPS-Sinyalsiz 3D SLAM Haritalama", "Sürü Koordinasyonu (Swarm)", "Askeri JAUS & ROS 2 Uyumu"]
         : ["GPS-Denied 3D SLAM Mapping", "Multi-Agent Swarm Consensus", "NATO STANAG & JAUS Compliance"],
-      vehicles: "Hafif, Orta ve Ağır Sınıf Taktik İKA'lar"
+      vehicles: "Hafif, Orta ve Ağır Sınıf Taktik İKA'lar",
+      ctaLink: "/politika/lisans/",
+      ctaText: lang === "tr" ? "Savunma Çözümlerini İncele" : "Explore Defense Solutions"
     },
     {
       id: "industrial",
@@ -45,23 +49,27 @@ export default function SupportedPlatformsShowcase() {
       highlights: lang === "tr"
         ? ["Ağır Arazi ve Çamur Algılama", "Otonom Konvoy & Yük Taşıma", "Gece / Sisli Görüş Desteği"]
         : ["Off-Road Terrain Navigation", "Autonomous Convoy Logistics", "Thermal Night & Fog Vision"],
-      vehicles: "Maden Kamyonları, Otonom Traktörler, AGV"
+      vehicles: "Maden Kamyonları, Otonom Traktörler, AGV",
+      ctaLink: "/iletisim/",
+      ctaText: lang === "tr" ? "Endüstriyel İş Birliği" : "Industrial Partnerships"
     }
   ];
 
   return (
-    <section id="otonomi" className="relative z-20 py-16 sm:py-20 px-4 sm:px-8 bg-[#090b0e] border-b border-white/10">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section id="otonomi" className="relative z-20 py-10 sm:py-20 px-3.5 sm:px-8 bg-[#090b0e] border-b border-white/10">
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
         
         {/* Executive Clean Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px] font-mono tracking-wider uppercase">
+        <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase">
             <span>{lang === "tr" ? "UYGULAMA ALANLARI & ÇÖZÜMLER" : "APPLICATIONS & SOLUTIONS"}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          
+          <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
             {lang === "tr" ? "Ne Yapıyoruz? Hangi Alanlarda Çalışıyoruz?" : "What We Do & Where We Operate"}
           </h2>
-          <p className="text-sm text-slate-400 font-normal leading-relaxed">
+          
+          <p className="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed max-w-2xl mx-auto">
             {lang === "tr"
               ? "Trustia AI; donanım bağımsız evrensel bir otonomi beynidir. Standart CAN-Bus ve Drive-by-Wire haberleşmesi ile her türlü aracı tam otonom hale getirir."
               : "Trustia AI is a universal, hardware-agnostic autonomy core. It transforms commercial, defense, and industrial vehicles into fully autonomous systems."}
@@ -69,25 +77,25 @@ export default function SupportedPlatformsShowcase() {
         </div>
 
         {/* 3 Calm, High-Status Corporate Solution Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {solutions.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.id}
-                className="p-6 sm:p-7 rounded-2xl bg-[#0d1017] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-6 group"
+                className="p-5 sm:p-7 rounded-xl sm:rounded-2xl bg-[#0d1017] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-5 group"
               >
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Icon & Title */}
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-200 group-hover:text-white transition-colors">
-                    <Icon className="w-6 h-6" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-200 group-hover:text-white transition-colors">
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
 
                   <div>
-                    <span className="text-[10px] font-mono text-slate-500 uppercase tracking-wider block mb-1">
+                    <span className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-0.5">
                       {item.subtitle}
                     </span>
-                    <h3 className="text-lg font-bold text-white tracking-tight">
+                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
                       {item.title}
                     </h3>
                   </div>
@@ -97,9 +105,9 @@ export default function SupportedPlatformsShowcase() {
                   </p>
 
                   {/* Key Highlights */}
-                  <div className="pt-2 space-y-2 border-t border-white/5">
-                    {item.highlights.map((h, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
+                  <div className="pt-2 space-y-1.5 sm:space-y-2 border-t border-white/5">
+                    {item.highlights.map((h, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-[11px] sm:text-xs text-slate-300">
                         <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0" />
                         <span>{h}</span>
                       </div>
@@ -107,24 +115,19 @@ export default function SupportedPlatformsShowcase() {
                   </div>
                 </div>
 
-                {/* Footer Tag */}
-                <div className="pt-4 border-t border-white/5 space-y-3 text-[11px] font-mono text-slate-500">
-                  <div>
-                    <span className="text-slate-400 font-medium">
-                      {lang === "tr" ? "Uyumlu: " : "Platforms: "}
-                    </span>
-                    {item.vehicles}
+                {/* Footer Link & Compatible Fleet */}
+                <div className="pt-4 border-t border-white/5 space-y-3">
+                  <div className="text-[10px] font-mono text-slate-400">
+                    <span className="text-slate-300 font-semibold">{lang === "tr" ? "Uyumlu:" : "Fleet:"}</span> {item.vehicles}
                   </div>
 
-                  {item.id === "civilian" && (
-                    <Link
-                      href="/robotaxi/"
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#C8FF00]/10 border border-[#C8FF00]/30 text-[#C8FF00] font-mono font-bold text-xs hover:bg-[#C8FF00] hover:text-black transition-all duration-300 group/btn"
-                    >
-                      <span>{lang === "tr" ? "Hyundai Ioniq 5 Robotaksi İncele" : "Explore Hyundai Ioniq 5 Robotaxi"}</span>
-                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
-                    </Link>
-                  )}
+                  <Link
+                    href={item.ctaLink}
+                    className="w-full py-2 px-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white hover:text-slate-950 text-slate-200 font-mono text-xs font-semibold tracking-wider uppercase flex items-center justify-between transition-all group-hover:border-white/30"
+                  >
+                    <span>{item.ctaText}</span>
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                  </Link>
                 </div>
               </div>
             );

@@ -14,7 +14,7 @@ export default function TechMatrixShowcase() {
       desc: lang === "tr"
         ? "Uydu sinyali veya internet olmasa dahi 3D LiDAR ve kameralarla santimetre hassasiyetinde haritalama ve anlık konum tayini."
         : "Centimeter-accurate real-time 3D mapping and localization using LiDAR and vision, operating independently of satellite GPS.",
-      badge: lang === "tr" ? "0 Dış Bağımlılık" : "Zero Satellite Dependency"
+      badge: lang === "tr" ? "0 Dış Bağımlılık" : "Zero GPS Dependency"
     },
     {
       id: "prediction",
@@ -55,7 +55,7 @@ export default function TechMatrixShowcase() {
     {
       id: "tested",
       icon: ShieldCheck,
-      title: lang === "tr" ? "1.301 Doğrulanmış Test & Siber Güvenlik" : "1,301 Verified Tests & Security",
+      title: lang === "tr" ? "1.301 Doğrulanmış Test & Güvenlik" : "1,301 Verified Tests & Security",
       desc: lang === "tr"
         ? "16.000+ satır özgün deterministik otonomi mimarisi, HMAC-SHA256 şifreli komut doğrulama ve %100 başarı oranına sahip 1.301 otomatik test."
         : "16,000+ lines of original deterministic code, cryptographic command validation, and 100% pass rate across 1,301 automated test suites.",
@@ -64,18 +64,20 @@ export default function TechMatrixShowcase() {
   ];
 
   return (
-    <section id="teknoloji" className="relative z-20 py-16 sm:py-20 px-4 sm:px-8 bg-[#07090c] border-b border-white/10">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section id="teknoloji" className="relative z-20 py-10 sm:py-20 px-3.5 sm:px-8 bg-[#07090c] border-b border-white/10">
+      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px] font-mono tracking-wider uppercase">
+        <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase">
             <span>{lang === "tr" ? "TEKNOLOJİK ÇEKİRDEK & MODÜLLER" : "CORE TECHNOLOGY & MODULES"}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          
+          <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
             {lang === "tr" ? "Güvenilir, Deterministik Otonomi Mimarisi" : "Deterministic, Battle-Tested Autonomy Core"}
           </h2>
-          <p className="text-sm text-slate-400 font-normal leading-relaxed">
+          
+          <p className="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed max-w-2xl mx-auto">
             {lang === "tr"
               ? "Her türlü hava, trafik ve harekat koşulunda hatasız çalışan Seviye 4 yerli yazılım katmanlarımız."
               : "Level-4 sovereign autonomy software layers designed for flawless operation across all traffic, tactical, and weather conditions."}
@@ -83,25 +85,25 @@ export default function TechMatrixShowcase() {
         </div>
 
         {/* 6 Clean Corporate Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-5">
           {capabilities.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.id}
-                className="p-6 rounded-xl bg-[#0c0f14] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-4 group"
+                className="p-4 sm:p-6 rounded-xl bg-[#0c0f14] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-3 sm:space-y-4 group"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 group-hover:text-white transition-colors">
-                      <Icon className="w-5 h-5" />
+                <div className="space-y-2.5 sm:space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 group-hover:text-white transition-colors shrink-0">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <span className="text-[10px] font-mono text-slate-400 px-2 py-0.5 rounded bg-white/5 border border-white/5">
+                    <span className="text-[9px] sm:text-[10px] font-mono text-slate-400 px-2 py-0.5 rounded bg-white/5 border border-white/5 truncate shrink-0">
                       {item.badge}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-white tracking-tight">
+                  <h3 className="text-sm sm:text-base font-bold text-white tracking-tight leading-snug">
                     {item.title}
                   </h3>
 

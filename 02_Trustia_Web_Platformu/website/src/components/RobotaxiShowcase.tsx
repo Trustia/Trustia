@@ -86,19 +86,19 @@ export default function RobotaxiShowcase() {
   ];
 
   return (
-    <section id="robotaxi" className="relative w-full py-10 sm:py-14 px-4 sm:px-8 bg-[#090b0e] border-b border-white/10 relative z-20">
-      <div className="max-w-6xl mx-auto space-y-8">
+    <section id="robotaxi" className="relative w-full py-8 sm:py-14 px-3 sm:px-8 bg-[#090b0e] border-b border-white/10 relative z-20">
+      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
         
-        {/* Header: Compact & Refined */}
+        {/* Header: Clean & 100% Mobile Optimized */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-white/10">
           <div className="space-y-1.5 max-w-2xl">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-slate-800/80 border border-slate-700 text-slate-300 text-[10px] font-mono font-medium uppercase tracking-wider">
               <span>{lang === "tr" ? "SEVİYE 4 OTONOM SÜRÜŞ PLATFORMU" : "LEVEL 4 AUTONOMOUS PLATFORM"}</span>
             </div>
             
-            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            <h2 className="text-lg sm:text-2xl font-bold text-white tracking-tight leading-snug">
               Hyundai Ioniq 5 (E-GMP){" "}
-              <span className="text-slate-400 font-normal">
+              <span className="text-slate-400 font-normal block sm:inline">
                 {lang === "tr" ? "— Seviye-4 Otonom Test Filosu" : "— Level-4 Autonomous Fleet"}
               </span>
             </h2>
@@ -110,11 +110,11 @@ export default function RobotaxiShowcase() {
             </p>
           </div>
 
-          {/* Action Buttons: Compact */}
-          <div className="flex items-center gap-2.5 shrink-0">
+          {/* Action Buttons: Responsive full width on mobile, inline on desktop */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-2.5 shrink-0">
             <Link
               href="/robotaxi/"
-              className="px-3.5 py-2 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-1.5"
+              className="px-3.5 py-2 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5 shadow-sm"
             >
               <span>{lang === "tr" ? "TEKNİK DOKÜMAN" : "TECHNICAL SPEC"}</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -123,7 +123,7 @@ export default function RobotaxiShowcase() {
             <a
               href="/06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
               download
-              className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 font-medium text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-1.5"
+              className="px-3 py-2 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 font-medium text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5"
             >
               <Download className="w-3.5 h-3.5 text-slate-400" />
               <span>PDF (5 SAYFA)</span>
@@ -131,42 +131,42 @@ export default function RobotaxiShowcase() {
           </div>
         </div>
 
-        {/* 4 Compact Metric Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          <div className="p-3.5 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
-            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+        {/* 4 Responsive Metric Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4">
+          <div className="p-3 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
+            <div className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider">
               {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY CORE"}
             </div>
-            <div className="text-xl font-bold text-white">16.000+</div>
-            <div className="text-[11px] text-slate-400">
+            <div className="text-lg sm:text-xl font-bold text-white">16.000+</div>
+            <div className="text-[10px] sm:text-[11px] text-slate-400 truncate">
               {lang === "tr" ? "Satır C++ / Python" : "Lines of Code"}
             </div>
           </div>
 
-          <div className="p-3.5 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
-            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+          <div className="p-3 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
+            <div className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider">
               {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
             </div>
-            <div className="text-xl font-bold text-white">1.301 / 1.301</div>
-            <div className="text-[11px] text-emerald-400 font-medium">
+            <div className="text-lg sm:text-xl font-bold text-white">1.301 / 1.301</div>
+            <div className="text-[10px] sm:text-[11px] text-emerald-400 font-medium truncate">
               {lang === "tr" ? "%100 Başarı (0 Hata)" : "100% Pass Rate"}
             </div>
           </div>
 
-          <div className="p-3.5 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
-            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+          <div className="p-3 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
+            <div className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider">
               {lang === "tr" ? "HESAPLAMA GÜCÜ" : "AI COMPUTE"}
             </div>
-            <div className="text-xl font-bold text-white">275 TOPS</div>
-            <div className="text-[11px] text-slate-400">Jetson AGX Orin 64GB</div>
+            <div className="text-lg sm:text-xl font-bold text-white">275 TOPS</div>
+            <div className="text-[10px] sm:text-[11px] text-slate-400 truncate">Jetson AGX Orin 64GB</div>
           </div>
 
-          <div className="p-3.5 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
-            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+          <div className="p-3 sm:p-4 rounded-xl bg-[#0f131a] border border-slate-800 space-y-0.5">
+            <div className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider">
               {lang === "tr" ? "LİDAR MENZİLİ" : "LIDAR RANGE"}
             </div>
-            <div className="text-xl font-bold text-white">240 Metre</div>
-            <div className="text-[11px] text-slate-400">128 Kanal 3D SLAM</div>
+            <div className="text-lg sm:text-xl font-bold text-white">240 Metre</div>
+            <div className="text-[10px] sm:text-[11px] text-slate-400 truncate">128 Kanal 3D SLAM</div>
           </div>
         </div>
 
@@ -183,33 +183,33 @@ export default function RobotaxiShowcase() {
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
               />
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
 
-              <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+              <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3 flex items-end justify-between">
                 <div className="space-y-0.5">
                   <span className="px-1.5 py-0.5 rounded bg-slate-900/90 border border-slate-700 text-slate-300 font-mono text-[9px] uppercase tracking-wider inline-block">
                     {photos[selectedPhoto].tag}
                   </span>
-                  <h4 className="text-sm sm:text-base font-bold text-white">
+                  <h4 className="text-xs sm:text-base font-bold text-white leading-tight">
                     {photos[selectedPhoto].title}
                   </h4>
-                  <p className="text-slate-400 text-[11px] max-w-sm">
+                  <p className="text-slate-400 text-[10px] sm:text-[11px] max-w-sm line-clamp-1 sm:line-clamp-none">
                     {photos[selectedPhoto].desc}
                   </p>
                 </div>
-                <div className="text-[11px] font-mono text-slate-400">
+                <div className="text-[10px] sm:text-[11px] font-mono text-slate-400 shrink-0 ml-2">
                   {selectedPhoto + 1} / {photos.length}
                 </div>
               </div>
             </div>
 
-            {/* Thumbnail Pills */}
-            <div className="grid grid-cols-7 gap-1.5">
+            {/* Mobile Scrollable / Desktop Grid Thumbnails */}
+            <div className="flex gap-2 overflow-x-auto pb-1 pt-0.5 no-scrollbar scrollbar-none sm:grid sm:grid-cols-7 sm:gap-1.5">
               {photos.map((p, idx) => (
                 <button
                   key={idx}
                   onClick={() => setSelectedPhoto(idx)}
-                  className={`relative rounded-md overflow-hidden aspect-[4/3] border transition-all duration-200 cursor-pointer ${
+                  className={`relative rounded-md overflow-hidden aspect-[4/3] w-14 sm:w-auto shrink-0 border transition-all duration-200 cursor-pointer ${
                     selectedPhoto === idx
                       ? "border-white ring-1 ring-white/60"
                       : "border-slate-800 opacity-60 hover:opacity-100"
@@ -224,26 +224,26 @@ export default function RobotaxiShowcase() {
 
           {/* Technical Specifications (5 Cols) */}
           <div className="lg:col-span-5 space-y-2">
-            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+            <div className="text-[10px] sm:text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
               {lang === "tr" ? "TEMEL DONANIM BİLEŞENLERİ" : "CORE HARDWARE SUITE"}
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-1.5 sm:space-y-2">
               {specs.map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={i}
-                    className="p-2.5 rounded-lg bg-[#0f131a] border border-slate-800 flex items-start gap-2.5 hover:border-slate-700 transition-colors"
+                    className="p-2 sm:p-2.5 rounded-lg bg-[#0f131a] border border-slate-800 flex items-start gap-2.5 hover:border-slate-700 transition-colors"
                   >
-                    <div className="w-7 h-7 rounded-md bg-slate-800/60 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md bg-slate-800/60 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
                       <Icon className="w-3.5 h-3.5" />
                     </div>
-                    <div className="space-y-0.5">
-                      <div className="text-xs font-semibold text-white">
+                    <div className="space-y-0.5 min-w-0">
+                      <div className="text-xs font-semibold text-white truncate">
                         {item.title}
                       </div>
-                      <div className="text-[11px] text-slate-400 leading-tight">
+                      <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">
                         {item.desc}
                       </div>
                     </div>
@@ -253,14 +253,14 @@ export default function RobotaxiShowcase() {
             </div>
 
             {/* Bottom Info Pill */}
-            <div className="p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-2 text-[11px] text-slate-300">
-              <div>
+            <div className="p-2 sm:p-2.5 rounded-lg bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-2 text-[10px] sm:text-[11px] text-slate-300">
+              <div className="truncate">
                 <span className="font-semibold text-white">CAN-FD 100 Hz:</span>{" "}
-                {lang === "tr" ? "LKAS11 & SCC_FD, 5ms acil devralma." : "100 Hz LKAS & SCC, 5ms override."}
+                {lang === "tr" ? "LKAS11 & SCC_FD (5ms Devralma)" : "100 Hz LKAS & SCC (5ms)"}
               </div>
               <Link
                 href="/robotaxi/"
-                className="shrink-0 font-medium text-white hover:underline flex items-center gap-0.5 text-[11px]"
+                className="shrink-0 font-medium text-white hover:underline flex items-center gap-0.5 text-[10px] sm:text-[11px]"
               >
                 <span>{lang === "tr" ? "Detay" : "More"}</span>
                 <ChevronRight className="w-3 h-3" />
