@@ -3,260 +3,305 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import { ArrowLeft, Shield, Cpu, Target, Award, CheckCircle2, Lock, Terminal, Radio, MapPin, Building } from "lucide-react";
+import {
+  ArrowLeft,
+  Shield,
+  Cpu,
+  Target,
+  Award,
+  CheckCircle2,
+  Lock,
+  Radio,
+  MapPin,
+  Building,
+  User,
+  Zap,
+  Activity,
+  Layers,
+  ChevronRight
+} from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function AboutPage() {
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
+
+  const pillars = [
+    {
+      icon: Cpu,
+      title: lang === "tr" ? "16.000+ Satır Özgün Mimari" : "16,000+ Lines Sovereign Code",
+      desc: lang === "tr"
+        ? "Yabancı kaynak kod veya hazır kapalı kutu kütüphanelere bağımlı olmaksızın, sıfırdan geliştirilmiş deterministik C++ / Python otonomi çekirdeği."
+        : "Built from scratch with zero dependency on foreign black-box libraries, engineered for mathematical determinism and real-time execution.",
+      stat: "16.000+ Satır"
+    },
+    {
+      icon: Shield,
+      title: lang === "tr" ? "1.301 / 1.301 Doğrulanmış Test" : "1,301 Automated Unit Tests",
+      desc: lang === "tr"
+        ? "SLAM haritalama, Pure Pursuit yol izleme, acil frenleme ve CAN-FD aktüatör hatlarında %100 başarı oranına sahip otomatik test mimarisi."
+        : "Rigorous 100% pass rate across SLAM localization, path tracking, obstacle braking, and CAN-FD real-time latency tests.",
+      stat: "%100 Başarı"
+    },
+    {
+      icon: Zap,
+      title: lang === "tr" ? "Donanım Bağımsızlığı" : "Hardware-Agnostic Core",
+      desc: lang === "tr"
+        ? "Hyundai E-GMP (Ioniq 5), TOGG, Otokar, Havelsan ve FNSS platformlarına 100 Hz standart CAN-FD / ROS 2 köprüsü ile tak-çalıştır entegrasyon."
+        : "Plug-and-play abstraction layer interfacing with Hyundai E-GMP, commercial EVs, and military tactical UGVs via CAN-FD / ROS 2.",
+      stat: "Tak-Çalıştır"
+    },
+    {
+      icon: Lock,
+      title: lang === "tr" ? "Sıfır Dış Bağımlılık (GPS-Denied)" : "GPS-Denied Navigation",
+      desc: lang === "tr"
+        ? "Elektronik harp, tüneller veya uydu sinyalinin kesildiği harekat sahalarında 3D LiDAR SLAM ile santimetre hassasiyetinde seyrüsefer."
+        : "Centimeter-accurate 3D LiDAR SLAM localization operating independently of satellite signals in contested or indoor environments.",
+      stat: "ASIL-D / STANAG"
+    }
+  ];
+
+  const credentials = [
+    {
+      org: lang === "tr" ? "T.C. Savunma Sanayii Başkanlığı (SSB)" : "Turkish Defense Industry Agency (SSB)",
+      reg: "L2zPtN4X1ZJ",
+      type: lang === "tr" ? "100/100 Tam Puan Sertifikasyonu" : "100/100 Perfect Score Certification",
+      status: "Resmi Onaylı"
+    },
+    {
+      org: lang === "tr" ? "KOSGEB Başkanlığı" : "KOSGEB Entrepreneurship Agency",
+      reg: "KSB01UGE0115153370",
+      type: lang === "tr" ? "İleri Girişimci Tescili & Ar-Ge Desteği" : "Advanced Entrepreneur Accreditation",
+      status: "Tescilli"
+    },
+    {
+      org: lang === "tr" ? "TÜBİTAK ARBİS" : "TÜBİTAK National Researcher Registry",
+      reg: "TBTK-0229-6571",
+      type: lang === "tr" ? "Milli Araştırmacı Sicil Kaydı" : "National Defense & AI Researcher",
+      status: "Aktif Sicil"
+    },
+    {
+      org: lang === "tr" ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM)" : "Istanbul Chamber of Commerce (BTM)",
+      reg: "2026-II Sözleşme",
+      type: lang === "tr" ? "Fulya Polat Tower Ön Kuluçka Girişimi" : "Fulya Polat Tower Pre-Incubation",
+      status: "Yerleşik"
+    }
+  ];
 
   return (
-    <main className="min-h-screen bg-[#090b0e] text-white font-sans selection:bg-[#C8FF00] selection:text-black">
+    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-20 sm:pt-24 pb-16">
       <Navbar />
 
-      {/* Hero Header (Responsive spacing, desktop 100% untouched) */}
-      <section className="pt-24 sm:pt-32 pb-10 sm:pb-16 px-4 sm:px-6 bg-[#0b0e14] border-b border-white/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10 sm:space-y-14">
 
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="flex flex-col items-start gap-2.5 sm:gap-3 mb-4 sm:mb-6">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-[#C8FF00] transition-colors group"
-            >
-              <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:-translate-x-1 transition-transform" />
-              <span>{t("about_back")}</span>
+        {/* 1. Header */}
+        <div className="space-y-3 pb-6 border-b border-white/10">
+          <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
+            <Link href="/" className="hover:text-white flex items-center gap-1 transition-colors">
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>{lang === "tr" ? "Ana Sayfa" : "Home"}</span>
             </Link>
-
-            <div className="inline-flex items-center gap-2 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30 text-[10px] sm:text-xs font-mono font-bold tracking-wider uppercase">
-              <span>{t("about_badge")}</span>
-            </div>
+            <span>/</span>
+            <span className="text-slate-200 font-semibold">{lang === "tr" ? "HAKKIMIZDA" : "ABOUT US"}</span>
           </div>
 
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-3 sm:mb-4">
-            {t("about_title")}
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-slate-800/80 border border-slate-700 text-slate-300 text-[10px] font-mono font-medium tracking-wider uppercase">
+            <span>{lang === "tr" ? "KURUMSAL PROFİL VE MİSYON" : "CORPORATE PROFILE & MISSION"}</span>
+          </div>
+
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+            Trustia AI <br />
+            <span className="text-slate-300 font-semibold">
+              {lang === "tr" ? "Milli Deterministik Otonomi Mimarisi" : "Sovereign Autonomous Systems"}
+            </span>
           </h1>
-          <p className="text-slate-300 text-xs sm:text-sm md:text-base max-w-3xl font-normal leading-relaxed">
-            {t("about_desc")}
+
+          <p className="text-slate-400 text-xs sm:text-sm md:text-base max-w-3xl leading-relaxed">
+            {lang === "tr"
+              ? "Trustia AI (İstanbul, Türkiye); şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı zorlu sahalarda görev yapan İnsansız Kara Araçları (İKA) için Seviye 4 yerli otonom sürüş yazılım çekirdeği geliştiren derin teknoloji şirketidir."
+              : "Trustia AI is a deep-tech autonomy company engineering sovereign Level-4 autonomous driving software for commercial Robotaxi fleets and GPS-denied tactical Unmanned Ground Vehicles."}
           </p>
         </div>
-      </section>
 
-      {/* Main Content Sections */}
-      <section className="py-10 sm:py-16 px-4 sm:px-6 max-w-6xl mx-auto">
-        
-        {/* ========================================================================= */}
-        {/* 1. MOBILE-ONLY VIEW (lg:hidden) — Sleek Compact Mobile About Layout      */}
-        {/* ========================================================================= */}
-        <div className="block lg:hidden space-y-6">
-          
-          {/* Mobile 3 Strategic Pillars (Compact Grid) */}
-          <div className="grid grid-cols-1 gap-3.5">
-            {/* Pillar 1 */}
-            <div className="p-4 rounded-xl bg-[#0c1017] border border-white/10 space-y-2 shadow-lg">
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30">
-                  <Shield className="w-4 h-4" />
-                </div>
-                <h3 className="text-sm font-bold text-white tracking-tight">
-                  {t("about_c1_title")}
-                </h3>
+        {/* 2. Executive Leadership & Founder Card */}
+        <div className="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+            <div className="flex items-center gap-3.5">
+              <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-200">
+                <User className="w-6 h-6" />
               </div>
-              <p className="text-slate-400 text-xs leading-relaxed pl-1">
-                {t("about_c1_desc")}
-              </p>
+              <div>
+                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                  {lang === "tr" ? "KURUCU & SİSTEM MİMARI / CEO" : "FOUNDER & AUTONOMOUS SYSTEMS ARCHITECT"}
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  Murat Furkan Bayram
+                </h2>
+              </div>
             </div>
 
-            {/* Pillar 2 */}
-            <div className="p-4 rounded-xl bg-[#0c1017] border border-white/10 space-y-2 shadow-lg">
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30">
-                  <Cpu className="w-4 h-4" />
-                </div>
-                <h3 className="text-sm font-bold text-white tracking-tight">
-                  {t("about_c2_title")}
-                </h3>
-              </div>
-              <p className="text-slate-400 text-xs leading-relaxed pl-1">
-                {t("about_c2_desc")}
-              </p>
-            </div>
-
-            {/* Pillar 3 */}
-            <div className="p-4 rounded-xl bg-[#0c1017] border border-white/10 space-y-2 shadow-lg">
-              <div className="flex items-center gap-2.5">
-                <div className="p-2 rounded-lg bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30">
-                  <Target className="w-4 h-4" />
-                </div>
-                <h3 className="text-sm font-bold text-white tracking-tight">
-                  {t("about_c3_title")}
-                </h3>
-              </div>
-              <p className="text-slate-400 text-xs leading-relaxed pl-1">
-                {t("about_c3_desc")}
-              </p>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://www.linkedin.com/in/trustia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 text-xs font-mono transition-colors"
+              >
+                LinkedIn Profili →
+              </a>
             </div>
           </div>
 
-          {/* Mobile Founder & Leadership Card */}
-          <div className="p-5 rounded-2xl bg-[#0c1017] border border-white/15 space-y-3 shadow-xl">
-            <div className="space-y-1.5">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30 text-[10px] font-mono font-bold tracking-widest uppercase">
-                <Award className="w-3 h-3" />
-                <span>{t("about_founder_badge")}</span>
-              </div>
-              <h3 className="text-xl font-extrabold text-white tracking-tight">
-                {t("about_founder_title")}
-              </h3>
-              <p className="text-xs font-mono text-[#C8FF00] font-bold">
-                {t("about_founder_role")}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div className="lg:col-span-8 space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <p>
+                {lang === "tr"
+                  ? "T.C. Savunma Sanayii Başkanlığı 100/100 tam puan sertifikasyonuna ve KOSGEB İleri Girişimci tesciline sahip otonomi mimarıdır. 16.000 satırlık deterministik otonomi çekirdeğini, 3D LiDAR SLAM motorunu ve 1.301 birim test altyapısını bizzat geliştirmiştir."
+                  : "Certified autonomy systems architect with 100/100 perfect score certification from the Turkish Defense Industry Agency and KOSGEB Advanced Entrepreneur accreditation. Architected the 16,000-line deterministic codebase, 3D LiDAR SLAM, and 1,301 automated verification test suites."}
               </p>
-              <p className="text-slate-300 text-xs leading-relaxed pt-1">
-                {t("about_founder_bio")}
+              <p className="text-slate-400 text-xs">
+                {lang === "tr"
+                  ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Polat Tower bünyesinde yerleşik olarak şirketin teknoloji, Ar-Ge ve kurumsal konsorsiyum süreçlerini yönetmektedir."
+                  : "Based at the Istanbul Chamber of Commerce (BTM) Fulya Polat Tower campus, leading technology architecture, commercial deployment, and strategic defense partnerships."}
               </p>
             </div>
 
-            {/* Credentials Badges on Mobile */}
-            <div className="p-3.5 rounded-xl bg-black/50 border border-white/10 space-y-2 font-mono text-[11px] text-slate-300">
-              <div className="flex items-center gap-2 text-[#C8FF00] font-bold">
-                <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
-                <span>KOSGEB İleri Girişimci #2026</span>
+            {/* Quick Badges Grid */}
+            <div className="lg:col-span-4 grid grid-cols-2 gap-2 text-[11px] font-mono">
+              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
+                <div className="text-slate-500 text-[9px] uppercase">SSB SINAVI</div>
+                <div className="font-bold text-white mt-0.5">100 / 100</div>
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
-                <span>BTK & SSB Savunma Sanayii Akademi</span>
+              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
+                <div className="text-slate-500 text-[9px] uppercase">KOSGEB</div>
+                <div className="font-bold text-white mt-0.5">İleri Girişimci</div>
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
-                <span>TÜBİTAK ARBİS & ASELSAN Ağı</span>
+              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
+                <div className="text-slate-500 text-[9px] uppercase">TÜBİTAK</div>
+                <div className="font-bold text-white mt-0.5">ARBİS Sicili</div>
+              </div>
+              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
+                <div className="text-slate-500 text-[9px] uppercase">İTO BTM</div>
+                <div className="font-bold text-white mt-0.5">Fulya Kampüs</div>
               </div>
             </div>
           </div>
-
-          {/* Mobile Architecture & Standards */}
-          <div className="p-4 rounded-xl bg-[#07090c] border border-white/10 space-y-2.5">
-            <h4 className="text-sm font-bold text-white tracking-tight">
-              {t("about_arch_title")}
-            </h4>
-            <p className="text-slate-400 text-xs leading-relaxed">
-              {t("about_arch_desc")}
-            </p>
-            <div className="pt-2 flex flex-wrap gap-1.5 font-mono text-[10px]">
-              <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300">STANAG 4586 L4</span>
-              <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300">SAE AS6091 (JAUS)</span>
-              <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300">ISO 26262 ASIL-D</span>
-              <span className="px-2.5 py-1 rounded bg-white/5 border border-white/10 text-slate-300">ROS 2 Humble</span>
-            </div>
-          </div>
-
         </div>
 
-        {/* ========================================================================= */}
-        {/* 2. DESKTOP VIEW (hidden lg:block) — 100% UNTOUCHED ORIGINAL DESKTOP GRID */}
-        {/* ========================================================================= */}
-        <div className="hidden lg:block">
-          
-          {/* Executive Summary 3-Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="p-8 rounded-2xl bg-[#0c1017] border border-white/10 space-y-4 hover:border-[#C8FF00]/30 transition-colors">
-              <div className="p-3 rounded-xl bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30 w-fit">
-                <Shield className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                {t("about_c1_title")}
-              </h3>
-              <p className="text-slate-400 text-xs leading-relaxed">
-                {t("about_c1_desc")}
-              </p>
+        {/* 3. Four Core Engineering Pillars */}
+        <div className="space-y-4">
+          <div>
+            <div className="text-xs font-mono text-slate-400 font-semibold tracking-wider uppercase">
+              {lang === "tr" ? "TEKNOLOJİK YETKİNLİKLER" : "CORE CAPABILITIES"}
             </div>
-
-            <div className="p-8 rounded-2xl bg-[#0c1017] border border-white/10 space-y-4 hover:border-[#C8FF00]/30 transition-colors">
-              <div className="p-3 rounded-xl bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30 w-fit">
-                <Cpu className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                {t("about_c2_title")}
-              </h3>
-              <p className="text-slate-400 text-xs leading-relaxed">
-                {t("about_c2_desc")}
-              </p>
-            </div>
-
-            <div className="p-8 rounded-2xl bg-[#0c1017] border border-white/10 space-y-4 hover:border-[#C8FF00]/30 transition-colors">
-              <div className="p-3 rounded-xl bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30 w-fit">
-                <Target className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-bold text-white tracking-tight">
-                {t("about_c3_title")}
-              </h3>
-              <p className="text-slate-400 text-xs leading-relaxed">
-                {t("about_c3_desc")}
-              </p>
-            </div>
+            <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight">
+              {lang === "tr" ? "4 Temel Mühendislik İlkesi" : "4 Engineering Pillars"}
+            </h2>
           </div>
 
-          {/* Founder & Lead Profile */}
-          <div className="p-8 sm:p-10 rounded-3xl bg-[#0c1017] border border-white/10 relative overflow-hidden mb-16">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-              <div className="space-y-3 max-w-2xl">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/30 text-xs font-mono font-bold tracking-widest uppercase">
-                  <Award className="w-3.5 h-3.5" />
-                  <span>{t("about_founder_badge")}</span>
+          {/* 2-Column Grid on Mobile, 4-Column on Desktop (No endless vertical stack!) */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            {pillars.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-4 sm:p-5 rounded-xl bg-[#0f131a] border border-slate-800 space-y-2.5 flex flex-col justify-between"
+                >
+                  <div className="space-y-2">
+                    <div className="w-8 h-8 rounded-lg bg-slate-800/60 border border-slate-700 flex items-center justify-center text-slate-300">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <h3 className="text-xs sm:text-sm font-bold text-white leading-tight">
+                      {item.title}
+                    </h3>
+                    <p className="text-[10px] sm:text-xs text-slate-400 leading-relaxed line-clamp-4 sm:line-clamp-none">
+                      {item.desc}
+                    </p>
+                  </div>
+                  <div className="pt-2 border-t border-slate-800 text-[10px] font-mono text-slate-300 font-semibold">
+                    {item.stat}
+                  </div>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                  {t("about_founder_title")}
-                </h3>
-                <p className="text-sm font-mono text-[#C8FF00] font-bold">
-                  {t("about_founder_role")}
-                </p>
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed font-normal pt-2">
-                  {t("about_founder_bio")}
-                </p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-black/40 border border-white/10 space-y-3 shrink-0 font-mono text-xs text-slate-300 w-full md:w-auto">
-                <div className="flex items-center gap-2 text-[#C8FF00] font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>KOSGEB İleri Girişimci #2026</span>
-                </div>
-                <div className="flex items-center gap-2 text-white">
-                  <CheckCircle2 className="w-4 h-4 text-[#C8FF00]" />
-                  <span>BTK & SSB Savunma Akademisi</span>
-                </div>
-                <div className="flex items-center gap-2 text-white">
-                  <CheckCircle2 className="w-4 h-4 text-[#C8FF00]" />
-                  <span>TÜBİTAK ARBİS & ASELSAN Ağı</span>
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
-
-          {/* Architecture & Integration Details */}
-          <div className="p-8 rounded-3xl bg-[#07090c] border border-white/10 space-y-4">
-            <h4 className="text-xl font-bold text-white tracking-tight">
-              {t("about_arch_title")}
-            </h4>
-            <p className="text-slate-400 text-xs sm:text-sm leading-relaxed font-normal">
-              {t("about_arch_desc")}
-            </p>
-            <div className="pt-4 flex flex-wrap gap-3">
-              <span className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300">
-                STANAG 4586 L4
-              </span>
-              <span className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300">
-                SAE AS6091 (JAUS)
-              </span>
-              <span className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300">
-                ISO 26262 ASIL-D
-              </span>
-              <span className="px-3 py-1 rounded bg-white/5 border border-white/10 text-xs font-mono text-slate-300">
-                ROS 2 Humble
-              </span>
-            </div>
-          </div>
-
         </div>
 
-      </section>
+        {/* 4. Official Accreditations & Registry Table */}
+        <div className="space-y-4">
+          <div>
+            <div className="text-xs font-mono text-slate-400 font-semibold tracking-wider uppercase">
+              {lang === "tr" ? "DEVLET VE EKOSİSTEM TESCİLLERİ" : "OFFICIAL REGISTRY & ACCREDITATIONS"}
+            </div>
+            <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight">
+              {lang === "tr" ? "Resmi Akreditasyon ve Tescil Sicilleri" : "Official State & Ecosystem Registrations"}
+            </h2>
+          </div>
+
+          {/* Clean Corporate Table */}
+          <div className="rounded-2xl border border-slate-800 bg-[#0f131a] overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs font-sans">
+                <thead className="bg-[#07090d] text-slate-400 font-mono text-[11px] uppercase tracking-wider border-b border-slate-800">
+                  <tr>
+                    <th className="py-3 px-4 sm:px-6">Resmi Kurum</th>
+                    <th className="py-3 px-4 sm:px-6">Sicil / Protokol No</th>
+                    <th className="py-3 px-4 sm:px-6">Akreditasyon Türü</th>
+                    <th className="py-3 px-4 sm:px-6 text-right">Durum</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-800 text-slate-300">
+                  {credentials.map((c, i) => (
+                    <tr key={i} className="hover:bg-slate-900/40 transition-colors">
+                      <td className="py-3.5 px-4 sm:px-6 font-semibold text-white">
+                        {c.org}
+                      </td>
+                      <td className="py-3.5 px-4 sm:px-6 font-mono text-slate-400">
+                        {c.reg}
+                      </td>
+                      <td className="py-3.5 px-4 sm:px-6 text-slate-300">
+                        {c.type}
+                      </td>
+                      <td className="py-3.5 px-4 sm:px-6 text-right">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950/60 border border-emerald-800 text-emerald-400 font-mono text-[10px] font-semibold">
+                          <CheckCircle2 className="w-3 h-3" />
+                          <span>{c.status}</span>
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        {/* 5. Physical Infrastructure & Proving Grounds */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="p-5 sm:p-6 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-2">
+            <div className="flex items-center gap-2 text-slate-400 font-mono text-xs uppercase font-semibold">
+              <Building className="w-4 h-4" />
+              <span>Ar-Ge ve Yönetim Merkezi</span>
+            </div>
+            <div className="text-base font-bold text-white">İTO BTM Kampüsü</div>
+            <div className="text-xs text-slate-400 leading-relaxed">
+              Fulya Mah. Yeşilçimen Sok. Polat Tower Rezidans, Şişli / İstanbul.
+            </div>
+          </div>
+
+          <div className="p-5 sm:p-6 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-2">
+            <div className="flex items-center gap-2 text-slate-400 font-mono text-xs uppercase font-semibold">
+              <MapPin className="w-4 h-4" />
+              <span>Saha Test ve Pist Alanı</span>
+            </div>
+            <div className="text-base font-bold text-white">Bilişim Vadisi Test Sahası</div>
+            <div className="text-xs text-slate-400 leading-relaxed">
+              Gebze Yerleşkesi 1.5 km kapalı pist ve sivil otonom test parkuru.
+            </div>
+          </div>
+        </div>
+
+      </div>
 
       <Footer />
     </main>

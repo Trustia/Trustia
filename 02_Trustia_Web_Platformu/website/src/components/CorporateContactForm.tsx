@@ -25,7 +25,7 @@ export default function CorporateContactForm() {
   ];
 
   const subjectOptions = [
-    { value: "Otonomi Yazılım Entegrasyonu", label: lang === "tr" ? "İKA Otonomi Yazılım Entegrasyonu Talebi" : "UGV Autonomy Software Integration Request" },
+    { value: "Otonomi Yazılım Entegrasyonu", label: lang === "tr" ? "İKA / Robotaksi Otonomi Entegrasyonu" : "UGV / Robotaxi Autonomy Integration" },
     { value: "Saha Demosu ve Teknik Sunum", label: lang === "tr" ? "Saha Demosu ve Teknik Sunum Talebi" : "Live Field Demo & Technical Briefing" },
     { value: "Savunma Tedarik & Lisanslama", label: lang === "tr" ? "Savunma Tedarik ve OEM Lisanslama" : "Defense Procurement & OEM Licensing" },
     { value: "Ar-Ge ve Konsorsiyum Ortaklığı", label: lang === "tr" ? "Milli Ar-Ge ve Konsorsiyum Ortaklığı" : "R&D Consortium & Defense Partnership" },
@@ -51,30 +51,29 @@ export default function CorporateContactForm() {
           subject: `[${formData.targetEmail}] ${formData.subject} — ${formData.name}`,
           replyto: formData.email,
           name: formData.name,
-          company: formData.company || "Not Specified",
+          company: formData.company || "Belirtilmedi",
           email: formData.email,
           target_department: formData.targetEmail,
           subject_type: formData.subject,
           message: `
 --------------------------------------------------
-TRUSTIA AUTONOMOUS SYSTEMS // OFFICIAL WEB INQUIRY
+TRUSTIA AUTONOMOUS SYSTEMS // RESMI WEB TALEBI
 --------------------------------------------------
 
-TARGET INBOX: ${formData.targetEmail}
+HEDEF DEPARTMAN: ${formData.targetEmail}
 
-SENDER INFORMATION:
-• Name: ${formData.name}
-• Institution / Company: ${formData.company || "Not Specified"}
-• Sender Email: ${formData.email}
-• Target Email: ${formData.targetEmail}
-• Subject: ${formData.subject}
+BASVURU SAHIBI:
+• Ad Soyad: ${formData.name}
+• Kurum / Sirket: ${formData.company || "Belirtilmedi"}
+• E-posta: ${formData.email}
+• Konu: ${formData.subject}
 
-TECHNICAL REQUIREMENTS & MESSAGE:
+TALEP VE TEKNIK DETAYLAR:
 --------------------------------------------------
 ${formData.message}
 --------------------------------------------------
-Timestamp: ${new Date().toISOString()}
-Portal: https://trustia.com.tr/iletisim/
+Zaman: ${new Date().toISOString()}
+Kaynak: https://trustia.com.tr/iletisim/
           `,
         }),
       });
@@ -91,17 +90,17 @@ Portal: https://trustia.com.tr/iletisim/
   return (
     <div className="w-full">
       {submitted ? (
-        <div className="p-6 sm:p-10 rounded-2xl bg-[#0c1017] border border-[#C8FF00]/40 text-center space-y-4 shadow-[0_0_30px_rgba(200,255,0,0.1)]">
-          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#C8FF00]/10 text-[#C8FF00] border border-[#C8FF00]/40 flex items-center justify-center mx-auto">
-            <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8" />
+        <div className="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-slate-800 text-center space-y-4 shadow-xl">
+          <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 text-white flex items-center justify-center mx-auto">
+            <CheckCircle2 className="w-6 h-6" />
           </div>
           <h4 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
             {t("contact_success_title")}
           </h4>
-          <p className="text-slate-300 text-xs sm:text-sm max-w-md mx-auto leading-relaxed font-normal">
-            {t("contact_success_desc")} (<span className="text-[#C8FF00] font-mono font-bold">{formData.targetEmail}</span>)
+          <p className="text-slate-400 text-xs sm:text-sm max-w-md mx-auto leading-relaxed font-normal">
+            {t("contact_success_desc")} (<span className="text-white font-mono font-semibold">{formData.targetEmail}</span>)
           </p>
-          <div className="inline-block font-mono text-[11px] sm:text-xs font-bold text-[#C8FF00] px-3.5 py-1.5 rounded bg-white/5 border border-white/10 uppercase">
+          <div className="inline-block font-mono text-[11px] font-semibold text-slate-300 px-3 py-1 rounded bg-slate-900 border border-slate-800 uppercase tracking-wider">
             {t("contact_code")}
           </div>
           <div className="pt-2">
@@ -117,21 +116,21 @@ Portal: https://trustia.com.tr/iletisim/
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="p-4 sm:p-8 md:p-10 rounded-2xl bg-[#0c1017] border border-white/10 space-y-4 sm:space-y-6 shadow-2xl">
+        <form onSubmit={handleSubmit} className="p-5 sm:p-7 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-4 sm:space-y-5 shadow-xl">
           
           {/* Target Department Selection */}
-          <div className="space-y-1.5 sm:space-y-2">
-            <label className="block text-[11px] sm:text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-              <AtSign className="w-3.5 h-3.5 text-[#C8FF00]" />
+          <div className="space-y-1.5">
+            <label className="block text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+              <AtSign className="w-3.5 h-3.5 text-slate-400" />
               <span>{t("contact_label_dept")}</span>
             </label>
             <select
               value={formData.targetEmail}
               onChange={(e) => setFormData({ ...formData, targetEmail: e.target.value })}
-              className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/60 border border-white/15 text-white font-mono text-xs focus:outline-none focus:border-[#C8FF00] transition-colors"
+              className="w-full px-3.5 py-2.5 rounded-lg bg-[#07090d] border border-slate-700 text-white font-mono text-xs focus:outline-none focus:border-white transition-colors"
             >
               {departmentOptions.map((opt) => (
-                <option key={opt.email} value={opt.email} className="bg-[#0c1017] text-white">
+                <option key={opt.email} value={opt.email} className="bg-[#0f131a] text-white">
                   {opt.label}
                 </option>
               ))}
@@ -140,9 +139,9 @@ Portal: https://trustia.com.tr/iletisim/
 
           {/* Name & Company Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="block text-[11px] sm:text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                <User className="w-3.5 h-3.5 text-[#C8FF00]" />
+            <div className="space-y-1.5">
+              <label className="block text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <User className="w-3.5 h-3.5 text-slate-400" />
                 <span>{t("contact_label_name")}</span>
               </label>
               <input
@@ -151,13 +150,13 @@ Portal: https://trustia.com.tr/iletisim/
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder={lang === "tr" ? "Örn: Ahmet Yılmaz" : "e.g. John Doe"}
-                className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/60 border border-white/15 text-white font-mono text-xs focus:outline-none focus:border-[#C8FF00] transition-colors placeholder:text-slate-600"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-[#07090d] border border-slate-700 text-white font-mono text-xs focus:outline-none focus:border-white transition-colors placeholder:text-slate-600"
               />
             </div>
 
-            <div className="space-y-1.5 sm:space-y-2">
-              <label className="block text-[11px] sm:text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-                <Building2 className="w-3.5 h-3.5 text-[#C8FF00]" />
+            <div className="space-y-1.5">
+              <label className="block text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <Building2 className="w-3.5 h-3.5 text-slate-400" />
                 <span>{t("contact_label_company")}</span>
               </label>
               <input
@@ -165,15 +164,15 @@ Portal: https://trustia.com.tr/iletisim/
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                 placeholder={lang === "tr" ? "Örn: Savunma Sanayii / ASELSAN" : "e.g. Defense Contractor / Corp"}
-                className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/60 border border-white/15 text-white font-mono text-xs focus:outline-none focus:border-[#C8FF00] transition-colors placeholder:text-slate-600"
+                className="w-full px-3.5 py-2.5 rounded-lg bg-[#07090d] border border-slate-700 text-white font-mono text-xs focus:outline-none focus:border-white transition-colors placeholder:text-slate-600"
               />
             </div>
           </div>
 
           {/* Email Address */}
-          <div className="space-y-1.5 sm:space-y-2">
-            <label className="block text-[11px] sm:text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-              <Mail className="w-3.5 h-3.5 text-[#C8FF00]" />
+          <div className="space-y-1.5">
+            <label className="block text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+              <Mail className="w-3.5 h-3.5 text-slate-400" />
               <span>{t("contact_label_email")}</span>
             </label>
             <input
@@ -182,66 +181,67 @@ Portal: https://trustia.com.tr/iletisim/
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               placeholder="iletisim@kurum.com.tr"
-              className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/60 border border-white/15 text-white font-mono text-xs focus:outline-none focus:border-[#C8FF00] transition-colors placeholder:text-slate-600"
+              className="w-full px-3.5 py-2.5 rounded-lg bg-[#07090d] border border-slate-700 text-white font-mono text-xs focus:outline-none focus:border-white transition-colors placeholder:text-slate-600"
             />
           </div>
 
           {/* Subject Option */}
-          <div className="space-y-1.5 sm:space-y-2">
-            <label className="block text-[11px] sm:text-xs font-mono font-bold text-slate-300 uppercase tracking-wider flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#C8FF00]" />
+          <div className="space-y-1.5">
+            <label className="block text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+              <ShieldCheck className="w-3.5 h-3.5 text-slate-400" />
               <span>{t("contact_label_subject")}</span>
             </label>
             <select
               value={formData.subject}
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-              className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/60 border border-white/15 text-white font-mono text-xs focus:outline-none focus:border-[#C8FF00] transition-colors"
+              className="w-full px-3.5 py-2.5 rounded-lg bg-[#07090d] border border-slate-700 text-white font-mono text-xs focus:outline-none focus:border-white transition-colors"
             >
               {subjectOptions.map((subj) => (
-                <option key={subj.value} value={subj.value} className="bg-[#0c1017] text-white">
+                <option key={subj.value} value={subj.value} className="bg-[#0f131a] text-white">
                   {subj.label}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Message Textarea */}
-          <div className="space-y-1.5 sm:space-y-2">
-            <label className="block text-[11px] sm:text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+          {/* Message Content */}
+          <div className="space-y-1.5">
+            <label className="block text-[11px] font-mono font-medium text-slate-400 uppercase tracking-wider">
               {t("contact_label_message")}
             </label>
             <textarea
               required
-              rows={3}
+              rows={4}
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder={lang === "tr" ? "İKA platformunuz, entegrasyon takviminiz, donanım gereksinimleriniz veya sormak istediğiniz tüm teknik detayları belirtiniz..." : "Specify your UGV platform, integration timeline, hardware interfaces and technical requirements..."}
-              className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-xl bg-black/60 border border-white/15 text-white font-mono text-xs focus:outline-none focus:border-[#C8FF00] transition-colors placeholder:text-slate-600 resize-none leading-relaxed"
-            />
+              placeholder={lang === "tr" ? "İKA platformunuz, entegrasyon takviminiz veya teknik gereksinimlerinizi belirtiniz..." : "Specify your platform requirements, deployment timeline, and technical scope..."}
+              className="w-full px-3.5 py-2.5 rounded-lg bg-[#07090d] border border-slate-700 text-white font-mono text-xs focus:outline-none focus:border-white transition-colors placeholder:text-slate-600 resize-y"
+            ></textarea>
           </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full py-3 sm:py-4 rounded-xl bg-[#C8FF00] hover:bg-[#d4ff33] text-black font-mono font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 hover:shadow-[0_0_25px_rgba(200,255,0,0.4)] transition-all cursor-pointer disabled:opacity-50"
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2 className="w-4 h-4 animate-spin" />
-                <span>{t("contact_submitting")}</span>
-              </>
-            ) : (
-              <>
-                <Send className="w-4 h-4" />
-                <span>{t("contact_btn_submit")}</span>
-              </>
-            )}
-          </button>
-
-          <p className="text-[10px] sm:text-xs text-slate-400 font-mono text-center leading-relaxed">
-            {t("contact_direct_note")}
-          </p>
+          {/* Solid White Executive Submit Button */}
+          <div className="pt-2">
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full py-3 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition-colors cursor-pointer disabled:opacity-50"
+            >
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin text-slate-950" />
+                  <span>{lang === "tr" ? "İLETİLİYOR..." : "TRANSMITTING..."}</span>
+                </>
+              ) : (
+                <>
+                  <Send className="w-4 h-4 text-slate-950" />
+                  <span>{t("contact_btn_submit")}</span>
+                </>
+              )}
+            </button>
+            <p className="text-[10px] text-slate-500 text-center font-mono mt-2">
+              {t("contact_direct_note")}
+            </p>
+          </div>
 
         </form>
       )}
