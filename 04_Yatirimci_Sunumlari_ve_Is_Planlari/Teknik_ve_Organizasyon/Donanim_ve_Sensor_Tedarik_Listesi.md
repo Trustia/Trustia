@@ -30,15 +30,20 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ## 🧠 2. YAPAY ZEKA BİLGİSAYARI (BEYİN) — [KESİNLEŞTİ ✅]
 
-### 2.1 Ana Otonomi & Yapay Zeka İşlemcisi (1 Adet)
-* **Parça Adı:** NVIDIA Jetson AGX Orin Developer Kit 64GB (275 TOPS AI Hesaplama Gücü, Ampere GPU, 12-Core ARM CPU)
-* **Parça / Üretici Kodu:** `945-13730-0055-000`
-* **Kullanım Amacı:** 16.000 satır Trustia AI otonomi kodunun çalıştırılması, 5 saniyelik çok modlu yörünge tahmini, SLAM optimizasyonu ve 100 Hz Pure Pursuit kontrol döngüsü.
-* **Tedarikçi Firma:** OpenZeka (NVIDIA Robotics Türkiye & MENA Resmi Distribütörü)
-* **Satın Alma Linki:** [openzeka.com/urun/nvidia-jetson-agx-orin-developer-kit-64gb-945-13730-0055-000/](https://openzeka.com/urun/nvidia-jetson-agx-orin-developer-kit-64gb-945-13730-0055-000/)
-* **Birim Fiyat:** **₺ 241.080,00 TL** (KDV Dahil)
+### 2.1 Otomotiv Sınıfı GMSL2 Destekli Yapay Zeka Paketi (1 Adet)
+* **Parça Adı:** Seeed Studio reServer J501 Paketi + NVIDIA Jetson AGX Orin Modülü 64GB (275 TOPS AI Gücü) + GMSL2 FAKRA Kamera Taşıyıcı Kartı
+* **Ürün Kodu:** `E2025112603`
+* **Paket İçeriği:**
+  1. NVIDIA Jetson AGX Orin 64GB SOM Modülü ($3,331.02)
+  2. J501 Endüstriyel Taşıyıcı Kart ($371.42)
+  3. GMSL2 4x FAKRA Kamera Uzatma Kartı ($57.82)
+* **Kullanım Amacı:** 16.000 satır Trustia AI otonomi kodunun çalıştırılması, 4 adet GMSL2 kameranın doğrudan bağlanması, 12V araç aküsünden doğrudan beslenme, yerleşik CAN-Bus ve 100 Hz Pure Pursuit kontrol döngüsü.
+* **Tedarikçi Firma:** Seeed Studio
+* **Satın Alma Linki:** [seeedstudio.com/AGX-Orin-reServer-Bundle.html](https://www.seeedstudio.com/AGX-Orin-reServer-Bundle.html)
+* **Birim Fiyat:** **$3.760,26 USD** (Güncel Kur: 1 USD = 48,26 TL)
+* **TL Karşılığı:** **₺ 181.470,15 TL**
 * **Adet:** 1
-* **Toplam Tutar:** **241.080,00 TL**
+* **Toplam Tutar:** **181.470,15 TL** *(Standart kitten ~60.000 TL daha ucuz ve doğrudan araca hazır!)*
 
 ---
 
@@ -48,7 +53,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Parça Adı:** Leopard Imaging LI-IMX390-GMSL2-060H Serial Camera (Sony IMX390 HDR Sensör, LED Flicker Mitigation, IP67 Su/Toz Geçirmez Metal Kasa, FAKRA Z Konnektör)
 * **Mouser Ürün Kodu:** `931-LI-GMSL2-060H`
 * **Üretici Parça Numarası:** `LI-IMX390-GMSL2-060H`
-* **Kullanım Amacı:** Trafik ışığı tanıma, şerit tespiti, 360° yaya ve araç görsel algılama.
+* **Kullanım Amacı:** Trafik ışığı tanıma, şerit tespiti, 360° yaya ve araç görsel algılama. Doğrudan Seeed J501 kartının mavi FAKRA soketlerine bağlanır.
 * **Tedarikçi Firma:** Mouser Electronics Türkiye
 * **Satın Alma Linki:** [mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-060H](https://www.mouser.com.tr/ProductDetail/Leopard-Imaging/LI-IMX390-GMSL2-060H?qs=xZ%2FP%252Ba9zWQY2bOoAzRCi1g%3D%3D)
 * **Birim Fiyat:** **438,87 €** (~19.750 TL)
@@ -127,17 +132,17 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 📊 RESMÎ KESİNLEŞEN TAM DONANIM TABLOSU:
+## 📊 RESMÎ GÜNCEL KESİNLEŞEN TAM DONANIM TABLOSU:
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
-* 1x NVIDIA AGX Orin 64GB Beyin (OpenZeka): `241.080,00 TL`
+* 1x Seeed J501 + NVIDIA Orin 64GB Beyin: **`181.470,15 TL`** *(3.760,26 USD)*
 * 4x Leopard Sony IMX390 Kamera (Mouser): `~79.000,00 TL`
 * 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
 * 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.065.845,05 TL**
+* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.006.235,20 TL (Sadece 1 Milyon TL!)**
 
 ---
 
