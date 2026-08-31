@@ -36,14 +36,17 @@ export default function Navbar() {
               className="absolute -top-2 -right-4 sm:-top-2.5 sm:-right-5 z-20 flex items-center pointer-events-none"
               title={lang === "tr" ? "Milli Teknoloji (Türkiye)" : "Global Platform (English)"}
             >
-              <span className="relative block w-4 h-2.5 sm:w-5 sm:h-3.5 rounded-[2px] sm:rounded-[2.5px] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.9)] border border-white/40 animate-flag-wave transition-transform duration-300">
+              <span className="relative block w-5 h-3.5 rounded-[2px] overflow-hidden shadow-sm border border-white/30">
                 {lang === "tr" ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
                     key="tr-flag"
                     src="/flags/tr.svg"
                     alt="Türkiye Bayrağı"
-                    className="w-full h-full object-cover transition-opacity duration-300"
+                    width={20}
+                    height={14}
+                    style={{ width: "20px", height: "14px", objectFit: "cover" }}
+                    className="w-5 h-3.5 object-cover"
                   />
                 ) : (
                   /* eslint-disable-next-line @next/next/no-img-element */
@@ -51,7 +54,10 @@ export default function Navbar() {
                     key="us-flag"
                     src="/flags/us.svg"
                     alt="USA Flag"
-                    className="w-full h-full object-cover transition-opacity duration-300"
+                    width={20}
+                    height={14}
+                    style={{ width: "20px", height: "14px", objectFit: "cover" }}
+                    className="w-5 h-3.5 object-cover"
                   />
                 )}
               </span>
@@ -64,28 +70,27 @@ export default function Navbar() {
           {/* 1. HAKKIMIZDA / ABOUT US */}
           <Link
             href="/hakkimizda/"
-            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
+            className="px-3 py-1 text-xs font-mono font-medium tracking-wider text-slate-300 hover:text-white uppercase transition-colors"
           >
             {t("nav_about")}
           </Link>
 
-          <span className="text-white/30 text-xs font-mono">•</span>
+          <span className="text-white/20 text-xs font-mono">•</span>
 
           {/* 2. ROBOTAKSİ / ROBOTAXI */}
           <Link
             href="/robotaxi/"
-            className="relative px-3 py-1 text-xs font-mono font-bold tracking-widest text-[#C8FF00] hover:text-white uppercase transition-all duration-300 drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] flex items-center gap-1.5"
+            className="px-3 py-1 text-xs font-mono font-semibold tracking-wider text-white hover:text-slate-200 uppercase transition-colors"
           >
-            <span>{t("nav_robotaxi")}</span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C8FF00] animate-pulse" />
+            {t("nav_robotaxi")}
           </Link>
 
-          <span className="text-white/30 text-xs font-mono">•</span>
+          <span className="text-white/20 text-xs font-mono">•</span>
 
           {/* 3. OTONOMİ / AUTONOMY */}
           <button
             onClick={handleScrollToOtonomi}
-            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 cursor-pointer drop-shadow-md"
+            className="px-3 py-1 text-xs font-mono font-medium tracking-wider text-slate-300 hover:text-white uppercase transition-colors cursor-pointer"
           >
             {t("nav_autonomy")}
           </button>
