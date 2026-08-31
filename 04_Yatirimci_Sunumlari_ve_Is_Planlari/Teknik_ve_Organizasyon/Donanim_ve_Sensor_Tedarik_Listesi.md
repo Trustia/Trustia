@@ -84,14 +84,29 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
+## 🌐 6. ENDÜSTRİYEL 5G ROUTER & FİLO HABERLEŞMESİ — [KESİNLEŞTİ ✅]
+
+### 6.1 Endüstriyel Çift SIM'li 5G Router (1 Adet)
+* **Parça Adı:** Teltonika RUTX50 5G LTE Endüstriyel Router (Çift SIM Yedekli, 5x Gigabit Ethernet, GNSS, Düşük Gecikmeli WebRTC Teleoperasyon)
+* **Ürün / Satıcı Kodu:** `HBC0000B0MZK3`
+* **Kullanım Amacı:** Uzaktan filo teleoperasyon köprüsü, gerçek zamanlı telemetri ve canlı video aktarımı (10ms düşük gecikme).
+* **Tedarikçi Mağaza:** Hepsiburada (Satıcı: ESET Türkiye)
+* **Satın Alma Linki:** [hepsiburada.com/teltonika-rutx50-5g-lte-router-867-mbps-baglanti-hizi-ile-guclu-ag-performansi-pm-HBC0000B0MZK3](https://www.hepsiburada.com/teltonika-rutx50-5g-lte-router-867-mbps-baglanti-hizi-ile-guclu-ag-performansi-pm-HBC0000B0MZK3)
+* **Birim Fiyat:** **₺ 35.349,00 TL** (KDV Dahil / Stoktan Hızlı Teslimat)
+* **Adet:** 1
+* **Toplam Tutar:** **35.349,00 TL**
+
+---
+
 ## 📊 ŞU ANA KADARKİ KESİNLEŞEN TOPLAM TUTAR:
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
 * 1x NVIDIA AGX Orin 64GB Beyin (OpenZeka): `241.080,00 TL`
 * 4x Leopard Sony IMX390 Kamera (Mouser): `~79.000,00 TL`
 * 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
-* 1x Septentrio mosaic-go RTK-GNSS (e-komponent): `52.084,82 TL`
-* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 1.006.153,82 TL** *(Tüm ana sensörler ve beyin 1 Milyon TL'ye tamamlandı!)*
+* 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
+* 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
+* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 1.041.502,82 TL** *(Tüm donanımlar ve 5G router dahil 1.04 Milyon TL!)*
 
 ---
 
