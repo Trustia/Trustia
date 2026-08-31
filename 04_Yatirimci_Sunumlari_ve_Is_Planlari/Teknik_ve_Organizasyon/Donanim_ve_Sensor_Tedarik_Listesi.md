@@ -167,11 +167,20 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Adet:** 1
 * **Toplam Tutar:** **1.708,45 TL**
 
-### 9.4 Diğer Montaj & Donanım Kalemleri:
+### 9.4 Drs Tuning Hyundai Ioniq 5 Siyah Ara Atkı Tavan Barı Seti (1 Takım)
+* **Parça Adı:** Drs Tuning Hyundai Ioniq 5 2021 ve Sonrası Uyumlu Ace-4 Kilitli Siyah Ara Atkı Tavan Barı
+* **Ürün Kodu:** `HBC000066Z3XT`
+* **Kullanım Amacı:** Ioniq 5 tavanına tam oturan, Ouster 3D LiDAR, 4 adet kamera ve çift GNSS antenlerini taşıyan aerodinamik siyah bar.
+* **Tedarikçi Mağaza:** Hepsiburada (Satıcı: DrsTuningshop)
+* **Satın Alma Linki:** [hepsiburada.com/hyundai-ioniq-5-2021-ve-sonrasi-ile-uyumlu-ace-4-ara-atki-tavan-bari-siyah-pm-HBC000066Z3XT](https://www.hepsiburada.com/hyundai-ioniq-5-2021-ve-sonrasi-ile-uyumlu-ace-4-ara-atki-tavan-bari-siyah-pm-HBC000066Z3XT)
+* **Sepet Tutarı:** **₺ 7.086,63 TL** (KDV Dahil / Ücretsiz Kargo)
+* **Adet:** 1 Takım (2 Bar)
+* **Toplam Tutar:** **7.086,63 TL**
+
+### 9.5 Diğer Montaj & Donanım Kalemleri:
 1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
-2. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
-3. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
-* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 52.682,22 TL**
+2. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
+* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 34.768,85 TL**
 
 ---
 
@@ -188,13 +197,14 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 4x Basler GMSL2 FAKRA Kablo Seti (Basler AG): `7.740,18 TL`
 * 1x WaveShare 5-Port Gigabit Switch (Robotistan): `1.583,59 TL`
 * 1x Interkom 12'li Sigorta Bloğu (Interkom): `1.708,45 TL`
-* 🛠️ Diğer Montaj, Antenler, Tavan Barı & Ekran: `41.650,00 TL`
-* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.087.614,20 TL**
+* 1x Drs Tuning Ioniq 5 Siyah Tavan Barı (Hepsiburada): `7.086,63 TL`
+* 🛠️ Diğer Montaj, Antenler & Ekran: `16.650,00 TL`
+* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.069.700,83 TL**
 
 ---
 
 * 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.027.614,20 TL (~3 Milyon TL!)**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.009.700,83 TL (~3.0 Milyon TL!)**
 
 ---
 
