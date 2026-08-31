@@ -186,34 +186,40 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Adet:** 1
 * **Toplam Tutar:** **21.118,35 TL**
 
-### 9.6 Diğer Montaj & Donanım Kalemleri:
-1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
-* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 51.237,20 TL**
+### 9.6 TOPGNSS TOP500 Tam Bant L1/L2/L5 Yüksek Hassasiyetli RTK GNSS Mantar Anteni (2 Adet)
+* **Parça Adı:** TOPGNSS TOP500 Çok Besleme Noktalı Tam Bant (L1/L2/L5) GPS/GLONASS/Galileo/BDS IP67 RTK Mantar Anten
+* **Model Numarası:** `TOP500` (Alibaba Ürün No: `1600643472472`)
+* **Kullanım Amacı:** Septentrio mosaic-go Heading modülünün 1. Ana ve 2. Yönelme anteni olarak tavan barının önüne ve arkasına monte edilir.
+* **Tedarikçi Firma:** Alibaba (Shenzhen Stoton Electronic Technology Co., Ltd.)
+* **Satın Alma Linki:** [turkish.alibaba.com/product-detail/TOPGNSS-High-Precision-RTK-GNSS-antenna-1600643472472.html](https://turkish.alibaba.com/product-detail/TOPGNSS-High-Precision-RTK-GNSS-antenna-1600643472472.html)
+* **Birim Fiyat (Alibaba Sepet):** **$105,57 USD** (₺ 5.308,19 TL / Kargo & Vergiler Dahil)
+* **Adet:** 2 *(Ön Tavan + Arka Tavan)*
+* **Toplam Tutar (2 Adet):** **$211,14 USD** = **₺ 10.616,38 TL**
 
 ---
 
-## 📊 RESMÎ VE EKSİKSİZ GENEL TOPLAM TABLOSU:
-* 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
-* 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
-* 1x Seeed J501 + Orin 64GB Beyin ($3.760,26): `181.470,15 TL`
-* 4x Leopard Sony IMX390 120H Kamera (1.755,48 €): `98.351,32 TL`
-* 2x Continental ARS 408-21 Radar ($1.180,27 / Alibaba): `59.345,46 TL`
-* 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
-* 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
-* 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
-* 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 4x Basler GMSL2 FAKRA Kablo Seti (Basler AG): `7.740,18 TL`
-* 1x WaveShare 5-Port Gigabit Switch (Robotistan): `1.583,59 TL`
-* 1x Interkom 12'li Sigorta Bloğu (Interkom): `1.708,45 TL`
-* 1x Drs Tuning Ioniq 5 Siyah Tavan Barı (Hepsiburada): `7.086,63 TL`
-* 1x WaveShare 10.1" Dokunmatik Kokpit Ekranı (Trendyol): `21.118,35 TL`
-* 🛠️ Çift GNSS Tavan Patch Antenleri: `12.000,00 TL`
-* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.086.169,18 TL**
+## 📊 RESMÎ VE EKSİKSİZ %100 GERÇEK SEPETLİ GENEL TOPLAM TABLOSU:
+* 👑 **1x Ouster OS2-128 LiDAR (Leo Drive İstanbul):** `351.258,60 TL`
+* 🛡️ **2x Livox Mid-360 LiDAR (Orbi Elektronik TR):** `232.730,40 TL`
+* 🧠 **1x Seeed J501 + NVIDIA Orin 64GB Beyin (Seeed Studio $3.760,26):** `181.470,15 TL`
+* 📷 **4x Leopard Sony IMX390 120H Kamera (Mouser 1.755,48 €):** `98.351,32 TL`
+* 📡 **2x Continental ARS 408-21 Radar (Alibaba $1.180,27):** `59.345,46 TL`
+* 🛰️ **1x Septentrio mosaic-go RTK Modülü (e-komponent Digi-Key):** `52.084,82 TL`
+* 🌐 **1x Teltonika RUTX50 Endüstriyel 5G Router (Hepsiburada ESET TR):** `35.349,00 TL`
+* 🔌 **1x Kvaser U100 CAN-Bus Arabirimi (Elektronomi TR):** `24.213,51 TL`
+* 🚨 **1x Schneider Electric Acil Stop Butonu (Activ Elektrik TR):** `128,72 TL`
+* 🔌 **4x Basler GMSL2 FAKRA Kablo Seti (Basler AG 138,04 €):** `7.740,18 TL`
+* 🌐 **1x WaveShare 5-Port Gigabit Switch (Robotistan TR):** `1.583,59 TL`
+* ⚡ **1x Interkom 12'li Sigorta Bloğu (Interkom TR):** `1.708,45 TL`
+* 🏗️ **1x Drs Tuning Ioniq 5 Siyah Tavan Barı (Hepsiburada TR):** `7.086,63 TL`
+* 🖥️ **1x WaveShare 10.1" Dokunmatik Kokpit Ekranı (Trendyol TR):** `21.118,35 TL`
+* 🛰️ **2x TOPGNSS TOP500 Tam Bant RTK Mantar Anten (Alibaba $211,14):** `10.616,38 TL`
+* 👉 **A'DAN Z'YE TÜM DONANIM KİTİ NET TOPLAMI:** **₺ 1.084.785,56 TL (Tam 1.08 Milyon TL!)**
 
 ---
 
-* 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.026.169,18 TL (~3.0 Milyon TL!)**
+* 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri Advance):** **~1.940.000,00 TL**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ PROJESİ:** **₺ 3.024.785,56 TL (~3.0 Milyon TL!)**
 
 ---
 
