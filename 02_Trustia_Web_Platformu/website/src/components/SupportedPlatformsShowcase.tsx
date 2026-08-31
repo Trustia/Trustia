@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
-import { Car, Shield, Tractor, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Car, Shield, Tractor, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function SupportedPlatformsShowcase() {
   const { lang } = useLanguage();
+  const [activeSlide, setActiveSlide] = useState(0);
 
   const solutions = [
     {
@@ -57,7 +59,7 @@ export default function SupportedPlatformsShowcase() {
 
   return (
     <section id="otonomi" className="relative z-20 py-10 sm:py-20 px-3.5 sm:px-8 bg-[#090b0e] border-b border-white/10">
-      <div className="max-w-6xl mx-auto space-y-8 sm:space-y-12">
+      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-12">
         
         {/* Executive Clean Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
@@ -74,16 +76,27 @@ export default function SupportedPlatformsShowcase() {
               ? "Trustia AI; donanım bağımsız evrensel bir otonomi beynidir. Standart CAN-Bus ve Drive-by-Wire haberleşmesi ile her türlü aracı tam otonom hale getirir."
               : "Trustia AI is a universal, hardware-agnostic autonomy core. It transforms commercial, defense, and industrial vehicles into fully autonomous systems."}
           </p>
+
+          {/* Mobile Swipe Hint */}
+          <div className="flex sm:hidden items-center justify-center gap-1.5 text-[10px] font-mono text-slate-400 pt-1">
+            <span>←</span>
+            <span>{lang === "tr" ? "Yana kaydırarak inceleyin" : "Swipe horizontally"}</span>
+            <span>→</span>
+          </div>
         </div>
 
-        {/* 3 Calm, High-Status Corporate Solution Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+        {/* 
+          Responsive Layout:
+          - Mobile: Horizontal Snap Swipe Carousel (No endless vertical scrolling!)
+          - Desktop: Clean 3-Column Grid (100% Preserved)
+        */}
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-3.5 pb-2 pt-1 px-1 scrollbar-none no-scrollbar sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible">
           {solutions.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.id}
-                className="p-5 sm:p-7 rounded-xl sm:rounded-2xl bg-[#0d1017] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-5 group"
+                className="w-[84vw] max-w-[340px] shrink-0 snap-center sm:w-auto p-5 sm:p-7 rounded-2xl bg-[#0d1017] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-5 group"
               >
                 <div className="space-y-3 sm:space-y-4">
                   {/* Icon & Title */}

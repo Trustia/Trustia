@@ -228,22 +228,23 @@ export default function RobotaxiShowcase() {
               {lang === "tr" ? "TEMEL DONANIM BİLEŞENLERİ" : "CORE HARDWARE SUITE"}
             </div>
 
-            <div className="space-y-1.5 sm:space-y-2">
+            {/* 2-Column Grid on Mobile, 1-Column on Desktop */}
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-2">
               {specs.map((item, i) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={i}
-                    className="p-2 sm:p-2.5 rounded-lg bg-[#0f131a] border border-slate-800 flex items-start gap-2.5 hover:border-slate-700 transition-colors"
+                    className="p-2 sm:p-2.5 rounded-lg bg-[#0f131a] border border-slate-800 flex flex-col lg:flex-row items-start gap-1.5 sm:gap-2.5 hover:border-slate-700 transition-colors"
                   >
-                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md bg-slate-800/60 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
+                    <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-md bg-slate-800/60 border border-slate-700 flex items-center justify-center text-slate-300 shrink-0">
                       <Icon className="w-3.5 h-3.5" />
                     </div>
                     <div className="space-y-0.5 min-w-0">
-                      <div className="text-xs font-semibold text-white truncate">
+                      <div className="text-[11px] sm:text-xs font-semibold text-white truncate">
                         {item.title}
                       </div>
-                      <div className="text-[10px] sm:text-[11px] text-slate-400 leading-tight">
+                      <div className="text-[9px] sm:text-[11px] text-slate-400 leading-tight line-clamp-2 sm:line-clamp-none">
                         {item.desc}
                       </div>
                     </div>
