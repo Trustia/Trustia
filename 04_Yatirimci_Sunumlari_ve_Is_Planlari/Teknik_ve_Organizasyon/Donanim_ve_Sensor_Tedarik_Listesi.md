@@ -69,13 +69,29 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
+## 🛰️ 5. RTK-GNSS & YÖNELME MODÜLÜ (SANTİMETRE HASSASİYET) — [KESİNLEŞTİ ✅]
+
+### 5.1 Çift Antenli RTK-GNSS & Heading Modülü (1 Adet)
+* **Parça Adı:** Septentrio mosaic-go Heading GNSS Module (Çift Antenli Santimetre Seviyesi RTK Konumlandırma, AIM+ Anti-Jamming & Anti-Spoofing, Araç Yönelme Açısı)
+* **Üretici Parça Kodu:** `410397`
+* **Digi-Key / Tedarik Kodu:** `2771-410397-ND`
+* **Kullanım Amacı:** GPS sinyali varken cm hassasiyetinde küresel koordinat alma, araç dururken bile pusula açısını (Heading) sıfır hatayla belirleme.
+* **Tedarikçi Firma:** e-komponent (Digi-Key Türkiye Resmi İthalat Kanalı)
+* **Satın Alma Linki:** [e-komponent.com/mosaic-go-heading-gnss-module-410397](https://www.e-komponent.com/mosaic-go-heading-gnss-module-410397)
+* **Birim Fiyat:** **₺ 52.084,82 TL** (KDV & Gümrük Dahil)
+* **Adet:** 1
+* **Toplam Tutar:** **52.084,82 TL**
+
+---
+
 ## 📊 ŞU ANA KADARKİ KESİNLEŞEN TOPLAM TUTAR:
-* 1x Ouster OS2-128 LiDAR: `351.258,60 TL`
-* 2x Livox Mid-360 LiDAR: `232.730,40 TL`
-* 1x NVIDIA Jetson AGX Orin 64GB Beyin: `241.080,00 TL`
-* 4x Leopard Imaging Sony IMX390 Kamera: `~79.000,00 TL`
-* 2x Continental ARS 408-21 Radar: `~50.000,00 TL`
-* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 954.069,00 TL** *(Yaklaşık 954 Bin TL)*
+* 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
+* 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
+* 1x NVIDIA AGX Orin 64GB Beyin (OpenZeka): `241.080,00 TL`
+* 4x Leopard Sony IMX390 Kamera (Mouser): `~79.000,00 TL`
+* 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
+* 1x Septentrio mosaic-go RTK-GNSS (e-komponent): `52.084,82 TL`
+* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 1.006.153,82 TL** *(Tüm ana sensörler ve beyin 1 Milyon TL'ye tamamlandı!)*
 
 ---
 
