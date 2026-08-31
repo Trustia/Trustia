@@ -28,10 +28,25 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 📊 LİDAR PAKETİ TOPLAM MALİYETİ:
-* 1x Ouster OS2-128: `351.258,60 TL`
-* 2x Livox Mid-360: `232.730,40 TL`
-* 👉 **TOPLAM LİDAR BÜTÇESİ:** **₺ 583.989,00 TL** *(Türkiye içi stoktan teslim)*
+## 🧠 2. YAPAY ZEKA BİLGİSAYARI (BEYİN) — [KESİNLEŞTİ ✅]
+
+### 2.1 Ana Otonomi & Yapay Zeka İşlemcisi (1 Adet)
+* **Parça Adı:** NVIDIA Jetson AGX Orin Developer Kit 64GB (275 TOPS AI Hesaplama Gücü, Ampere GPU, 12-Core ARM CPU)
+* **Parça / Üretici Kodu:** `945-13730-0055-000`
+* **Kullanım Amacı:** 16.000 satır Trustia AI otonomi kodunun çalıştırılması, 5 saniyelik çok modlu yörünge tahmini, SLAM optimizasyonu ve 100 Hz Pure Pursuit kontrol döngüsü.
+* **Tedarikçi Firma:** OpenZeka (NVIDIA Robotics Türkiye & MENA Resmi Distribütörü)
+* **Satın Alma Linki:** [openzeka.com/urun/nvidia-jetson-agx-orin-developer-kit-64gb-945-13730-0055-000/](https://openzeka.com/urun/nvidia-jetson-agx-orin-developer-kit-64gb-945-13730-0055-000/)
+* **Birim Fiyat:** **₺ 241.080,00 TL** (KDV Dahil)
+* **Adet:** 1
+* **Toplam Tutar:** **241.080,00 TL**
+
+---
+
+## 📊 ŞU ANA KADARKİ KESİNLEŞEN TOPLAM TUTAR:
+* 1x Ouster OS2-128 LiDAR: `351.258,60 TL`
+* 2x Livox Mid-360 LiDAR: `232.730,40 TL`
+* 1x NVIDIA Jetson AGX Orin 64GB Beyin: `241.080,00 TL`
+* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 825.069,00 TL** *(Türkiye Resmi Distribütörleri Stoktan Teslim)*
 
 ---
 
