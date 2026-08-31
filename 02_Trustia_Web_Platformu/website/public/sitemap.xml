@@ -3,11 +3,19 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://trustia.com.tr/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://trustia.com.tr/" />
+  </url>
+  <url>
+    <loc>https://trustia.com.tr/robotaxi/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/robotaxi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://trustia.com.tr/robotaxi/" />
   </url>
   <url>
     <loc>https://trustia.com.tr/hakkimizda/</loc>

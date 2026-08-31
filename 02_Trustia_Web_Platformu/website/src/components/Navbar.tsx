@@ -71,7 +71,18 @@ export default function Navbar() {
 
           <span className="text-white/30 text-xs font-mono">•</span>
 
-          {/* 2. OTONOMİ / AUTONOMY */}
+          {/* 2. ROBOTAKSİ / ROBOTAXI */}
+          <Link
+            href="/robotaxi/"
+            className="relative px-3 py-1 text-xs font-mono font-bold tracking-widest text-[#C8FF00] hover:text-white uppercase transition-all duration-300 drop-shadow-[0_0_8px_rgba(200,255,0,0.4)] flex items-center gap-1.5"
+          >
+            <span>{t("nav_robotaxi")}</span>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#C8FF00] animate-pulse" />
+          </Link>
+
+          <span className="text-white/30 text-xs font-mono">•</span>
+
+          {/* 3. OTONOMİ / AUTONOMY */}
           <button
             onClick={handleScrollToOtonomi}
             className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 cursor-pointer drop-shadow-md"

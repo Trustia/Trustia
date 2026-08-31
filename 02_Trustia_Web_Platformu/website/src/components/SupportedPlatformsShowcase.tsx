@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Car, Shield, Tractor, ArrowRight, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -107,11 +108,23 @@ export default function SupportedPlatformsShowcase() {
                 </div>
 
                 {/* Footer Tag */}
-                <div className="pt-4 border-t border-white/5 text-[11px] font-mono text-slate-500">
-                  <span className="text-slate-400 font-medium">
-                    {lang === "tr" ? "Uyumlu: " : "Platforms: "}
-                  </span>
-                  {item.vehicles}
+                <div className="pt-4 border-t border-white/5 space-y-3 text-[11px] font-mono text-slate-500">
+                  <div>
+                    <span className="text-slate-400 font-medium">
+                      {lang === "tr" ? "Uyumlu: " : "Platforms: "}
+                    </span>
+                    {item.vehicles}
+                  </div>
+
+                  {item.id === "civilian" && (
+                    <Link
+                      href="/robotaxi/"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#C8FF00]/10 border border-[#C8FF00]/30 text-[#C8FF00] font-mono font-bold text-xs hover:bg-[#C8FF00] hover:text-black transition-all duration-300 group/btn"
+                    >
+                      <span>{lang === "tr" ? "Hyundai Ioniq 5 Robotaksi İncele" : "Explore Hyundai Ioniq 5 Robotaxi"}</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
+                  )}
                 </div>
               </div>
             );

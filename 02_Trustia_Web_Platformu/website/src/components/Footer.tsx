@@ -65,8 +65,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/politika/etik/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  {t("footer_link_engine")}
+                <Link href="/robotaxi/" className="text-[#C8FF00] hover:text-white font-medium transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                  Hyundai Ioniq 5 Robotaksi
                 </Link>
               </li>
               <li>

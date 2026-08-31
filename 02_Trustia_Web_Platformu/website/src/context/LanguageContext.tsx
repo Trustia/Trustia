@@ -26,6 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Navbar
     nav_about: "HAKKIMIZDA",
+    nav_robotaxi: "ROBOTAKSİ",
     nav_autonomy: "ÇÖZÜMLER",
     nav_threat: "TEKNOLOJİ",
     nav_swarm: "GÜVENLİK",
@@ -117,6 +118,7 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Navbar
     nav_about: "ABOUT US",
+    nav_robotaxi: "ROBOTAXI",
     nav_autonomy: "SOLUTIONS",
     nav_threat: "TECHNOLOGY",
     nav_swarm: "SECURITY",
