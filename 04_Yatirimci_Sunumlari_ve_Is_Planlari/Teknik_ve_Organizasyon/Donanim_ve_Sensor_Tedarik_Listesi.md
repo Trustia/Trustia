@@ -139,17 +139,36 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 📊 RESMÎ GÜNCEL KESİNLEŞEN TAM DONANIM TABLOSU:
+## 🛠️ 9. TAMAMLAYICI MONTAJ, ELEKTRİK, KABLOLAMA VE KOKPİT KİTİ — [KESİNLEŞTİ ✅]
+Bu grup, yukarıdaki 8 ana sistemi birbirine bağlayan ve aracı tek parça anahtar teslim otonom hale getiren tüm bağlantı elemanlarını içerir:
+
+1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
+2. **FAKRA Z GMSL2 Kamera Koaksiyel Kablo Seti (4 Adet x 3m):** Kameraları Seeed J501 kartına bağlayan otomotiv kabloları (`~6.500,00 TL`)
+3. **Endüstriyel 5-Port Gigabit Ethernet Switch (12V DC):** TP-Link Omada / Moxa 12V Endüstriyel Ağ Anahtarı (`~4.800,00 TL`)
+4. **Otomotiv 12V Sigorta Bloğu & Güç Dağıtım Ünitesi (PDU):** Blue Sea Systems 6'lı Bıçak Sigorta Kutusu + 40A Röle + Koruma Devresi (`~3.800,00 TL`)
+5. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
+6. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
+* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 56.750,00 TL**
+
+---
+
+## 📊 RESMÎ VE EKSİKSİZ GENEL TOPLAM TABLOSU:
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
 * 1x Seeed J501 + Orin 64GB Beyin ($3.760,26): `181.470,15 TL`
 * 4x Leopard Sony IMX390 120H Kamera (1.755,48 €): `98.351,32 TL`
-* 2x Continental ARS 408-21 Radar ($1.180,27 / Alibaba Kargo Dahil): **`59.345,46 TL`**
+* 2x Continental ARS 408-21 Radar (Alibaba $1.180,27): `59.345,46 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
 * 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 👉 **NET RESMÎ DONANIM KİTİ TOPLAMI:** **₺ 1.034.931,98 TL (1.03 Milyon TL!)**
+* 🛠️ Tamamlayıcı Montaj, Kablolama, Antenler, Switch & Ekran Kiti: `56.750,00 TL`
+* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.091.681,98 TL**
+
+---
+
+* 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.031.681,98 TL (Yaklaşık 3 Milyon TL!)**
 
 ---
 
