@@ -98,6 +98,21 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
+## 🔌 7. CAN-BUS ARAÇ KONTROL ARAYÜZÜ (DİREKSİYON & FREN) — [KESİNLEŞTİ ✅]
+
+### 7.1 Otomotiv CAN-FD USB Kontrol Cihazı (1 Adet)
+* **Parça Adı:** Kvaser U100 CAN / CAN-FD to USB Arayüz Dönüştürücü (5000V Galvanik İzolasyon, DB-9 Konnektör, 100 Hz Pure Pursuit & PID Sürüş Kontrolü)
+* **Üretici Parça Kodu:** `01284-4`
+* **Stok Kodu:** `16930`
+* **Kullanım Amacı:** Trustia AI otonomi yazılımından çıkan direksiyon açısı, gaz ve fren komutlarını Hyundai Ioniq 5'in CAN-Bus hattına saniyede 100 kez basmak ve araç telemetrisini okumak.
+* **Tedarikçi Firma:** Elektronomi.com (Türkiye)
+* **Satın Alma Linki:** [elektronomi.com/kvaser-012844-arayuz-donusturucu-16930](https://elektronomi.com/kvaser-012844-arayuz-donusturucu-16930)
+* **Birim Fiyat:** **₺ 24.213,51 TL** (KDV Dahil / 24 Saatte Kargoda)
+* **Adet:** 1
+* **Toplam Tutar:** **24.213,51 TL**
+
+---
+
 ## 📊 ŞU ANA KADARKİ KESİNLEŞEN TOPLAM TUTAR:
 * 1x Ouster OS2-128 LiDAR (Leo Drive): `351.258,60 TL`
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
@@ -106,7 +121,8 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 2x Continental ARS 408-21 Radar (Depomer): `~50.000,00 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
-* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 1.041.502,82 TL** *(Tüm donanımlar ve 5G router dahil 1.04 Milyon TL!)*
+* 1x Kvaser U100 CAN-Bus Dönüştürücü (Elektronomi): `24.213,51 TL`
+* 👉 **KESİNLEŞEN TOPLAM BÜTÇE:** **₺ 1.065.716,33 TL** *(1.06 Milyon TL'ye aracın tüm elektroniği ve otonomi kiti tamamlandı!)*
 
 ---
 
