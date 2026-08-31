@@ -149,13 +149,21 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Sepet Tutarı (4 Adet + Vergiler):** **138,04 €** (Canlı Kur: 1 EUR = 56,09 TL)
 * **Toplam TL Karşılığı:** **₺ 7.740,18 TL**
 
-### 9.2 Diğer Tamamlayıcı Montaj & Donanım Kalemleri:
+### 9.2 WaveShare Endüstriyel 5-Port Gigabit Ethernet Switch (1 Adet)
+* **Parça Adı:** WaveShare Endüstriyel 5 Port Gigabit Ethernet Switch (DIN Ray Montajlı, 9V-24V DC Araç Akü Girişli, -40°C ~ +85°C)
+* **Kullanım Amacı:** Ouster LiDAR, Livox LiDAR'lar, 5G Router ve Septentrio RTK modülünü tek bir yerel araç içi ağında toplamak.
+* **Tedarikçi Firma:** Robotistan (Türkiye)
+* **Satın Alma Linki:** [robotistan.com/waveshare-endustriyel-5-port-gigabit-ethernet-switch-din-ray-montajli](https://www.robotistan.com/waveshare-endustriyel-5-port-gigabit-ethernet-switch-din-ray-montajli)
+* **Sepet Tutarı:** **₺ 1.583,59 TL** (KDV Dahil / Ücretsiz Kargo)
+* **Adet:** 1
+* **Toplam Tutar:** **1.583,59 TL**
+
+### 9.3 Diğer Montaj & Donanım Kalemleri:
 1. **Çift GNSS RTK Tavan Anteni & SMA Kabloları (2 Adet):** Harxon/Tallysman Çok Frekanslı Tavan Patch Anteni (`~12.000,00 TL`)
-2. **Endüstriyel 5-Port Gigabit Ethernet Switch (12V DC):** TP-Link Omada / Moxa 12V Endüstriyel Ağ Anahtarı (`~4.800,00 TL`)
-3. **Otomotiv 12V Sigorta Bloğu & Güç Dağıtım Ünitesi (PDU):** Blue Sea Systems 6'lı Bıçak Sigorta Kutusu + 40A Röle + Koruma Devresi (`~3.800,00 TL`)
-4. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
-5. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
-* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 57.990,18 TL**
+2. **Otomotiv 12V Sigorta Bloğu & Güç Dağıtım Ünitesi (PDU):** Blue Sea Systems 6'lı Bıçak Sigorta Kutusu + 40A Röle + Koruma Devresi (`~3.800,00 TL`)
+3. **Özel Alüminyum Tavan Taşıyıcı Barı (Ioniq 5 Uyumlu):** LiDAR, kamera ve antenleri tutan siyah eloksallı CNC tavan barı (`~25.000,00 TL`)
+4. **Kokpit Dokunmatik Geliştirici & İzleme Ekranı (10.1" HDMI IPS):** Waveshare 10.1 inç Kapasitif Dokunmatik Ekran — Araç içi Trustia C2 GUI ve harita takibi için (`~4.650,00 TL`)
+* 👉 **Tamamlayıcı Montaj & Kablolama Paketi Toplamı:** **₺ 54.773,77 TL**
 
 ---
 
@@ -164,19 +172,20 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * 2x Livox Mid-360 LiDAR (Orbi Elektronik): `232.730,40 TL`
 * 1x Seeed J501 + Orin 64GB Beyin ($3.760,26): `181.470,15 TL`
 * 4x Leopard Sony IMX390 120H Kamera (1.755,48 €): `98.351,32 TL`
-* 2x Continental ARS 408-21 Radar ($1.180,27 / Alibaba Kargo Dahil): `59.345,46 TL`
+* 2x Continental ARS 408-21 Radar ($1.180,27 / Alibaba): `59.345,46 TL`
 * 1x Septentrio mosaic-go RTK (e-komponent): `52.084,82 TL`
 * 1x Teltonika RUTX50 5G Router (Hepsiburada): `35.349,00 TL`
 * 1x Kvaser U100 CAN-Bus (Elektronomi): `24.213,51 TL`
 * 1x Schneider Acil Stop Butonu (Activ Elektrik): `128,72 TL`
-* 4x Basler GMSL2 FAKRA Kablo Seti (Basler AG 138,04 €): `7.740,18 TL`
-* 🛠️ Diğer Montaj, Antenler, 12V Switch & Ekran: `50.250,00 TL`
-* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.092.922,16 TL**
+* 4x Basler GMSL2 FAKRA Kablo Seti (Basler AG): `7.740,18 TL`
+* 1x WaveShare 5-Port Gigabit Switch (Robotistan): `1.583,59 TL`
+* 🛠️ Diğer Montaj, Antenler, PDU, Tavan Barı & Ekran: `45.450,00 TL`
+* 👉 **HER ŞEY DAHİL EKSİKSİZ DONANIM KİTİ TOPLAMI:** **₺ 1.089.705,75 TL**
 
 ---
 
 * 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Mat Gri):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.032.922,16 TL (~3 Milyon TL!)**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ TOPLAMI:** **₺ 3.029.705,75 TL (~3 Milyon TL!)**
 
 ---
 
