@@ -4,7 +4,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib import colors
 from reportlab.lib.units import mm
 from reportlab.platypus import (
-    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, HRFlowable
+    SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, HRFlowable, Image as RLImage
 )
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
@@ -67,19 +67,28 @@ class NumberedCanvas(canvas.Canvas):
         self.drawRightString(196*mm, 10*mm, page_str)
         self.restoreState()
 
-def create_master_pdf(output_paths):
+def create_master_pdf_with_photos(output_paths):
+    # Image Paths
+    img_base = r"c:\Users\Murat\Desktop\Trustia\06_Medya_Gorsel_ve_Tanitim_Videolari\Hyundai_Ioniq_5_Test_Araci"
+    img1 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_1.png") # Front 3/4
+    img2 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_2.png") # Front Left
+    img3 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_3.png") # Side Profile
+    img4 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_4.png") # Rear 3/4
+    img5 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_5.png") # Rear Straight
+    img6 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_6.png") # Front Cockpit
+    img7 = os.path.join(img_base, "Hyundai_Ioniq5_Foto_7.png") # Rear Passenger
+
     doc = SimpleDocTemplate(
         output_paths[0],
         pagesize=A4,
         leftMargin=14*mm,
         rightMargin=14*mm,
-        topMargin=16*mm,
-        bottomMargin=16*mm
+        topMargin=15*mm,
+        bottomMargin=15*mm
     )
 
     styles = getSampleStyleSheet()
     
-    # Custom Brand Colors
     c_primary = colors.HexColor('#0A192F')   # Deep Navy
     c_accent = colors.HexColor('#0284C7')    # Electric Blue
     c_dark = colors.HexColor('#0F172A')      # Slate 900
@@ -88,27 +97,26 @@ def create_master_pdf(output_paths):
     c_border = colors.HexColor('#CBD5E1')    # Slate 300
     c_success = colors.HexColor('#059669')   # Emerald 600
 
-    # Typography Styles
-    title_style = ParagraphStyle('DocTitle', fontName='Arial-Bold', fontSize=16, leading=20, textColor=c_primary, alignment=0)
-    subtitle_style = ParagraphStyle('DocSubTitle', fontName='Arial', fontSize=9, leading=12, textColor=c_accent, alignment=0)
-    h1_style = ParagraphStyle('H1', fontName='Arial-Bold', fontSize=11, leading=14, textColor=c_primary, spaceBefore=7, spaceAfter=4)
-    h2_style = ParagraphStyle('H2', fontName='Arial-Bold', fontSize=9.5, leading=12, textColor=c_accent, spaceBefore=5, spaceAfter=2.5)
-    body_style = ParagraphStyle('Body', fontName='Arial', fontSize=8, leading=11, textColor=c_dark)
+    title_style = ParagraphStyle('DocTitle', fontName='Arial-Bold', fontSize=15, leading=19, textColor=c_primary)
+    subtitle_style = ParagraphStyle('DocSubTitle', fontName='Arial', fontSize=8.5, leading=11.5, textColor=c_accent)
+    h1_style = ParagraphStyle('H1', fontName='Arial-Bold', fontSize=10.5, leading=13, textColor=c_primary, spaceBefore=5, spaceAfter=3)
+    h2_style = ParagraphStyle('H2', fontName='Arial-Bold', fontSize=9, leading=11, textColor=c_accent, spaceBefore=4, spaceAfter=2)
+    body_style = ParagraphStyle('Body', fontName='Arial', fontSize=7.6, leading=10.5, textColor=c_dark)
+    img_caption = ParagraphStyle('ImgCaption', fontName='Arial-Bold', fontSize=6.5, leading=8.5, textColor=c_primary, alignment=1)
     
-    # Table typography
-    table_cell = ParagraphStyle('TableCell', fontName='Arial', fontSize=6.8, leading=8.5, textColor=c_dark)
-    table_cell_bold = ParagraphStyle('TableCellBold', fontName='Arial-Bold', fontSize=6.8, leading=8.5, textColor=c_dark)
-    table_cell_right = ParagraphStyle('TableCellRight', fontName='Arial', fontSize=6.8, leading=8.5, textColor=c_dark, alignment=2)
-    table_cell_right_bold = ParagraphStyle('TableCellRightBold', fontName='Arial-Bold', fontSize=6.8, leading=8.5, textColor=c_primary, alignment=2)
-    table_cell_success = ParagraphStyle('TableCellSuccess', fontName='Arial-Bold', fontSize=6.8, leading=8.5, textColor=c_success, alignment=2)
+    table_cell = ParagraphStyle('TableCell', fontName='Arial', fontSize=6.5, leading=8.2, textColor=c_dark)
+    table_cell_bold = ParagraphStyle('TableCellBold', fontName='Arial-Bold', fontSize=6.5, leading=8.2, textColor=c_dark)
+    table_cell_right = ParagraphStyle('TableCellRight', fontName='Arial', fontSize=6.5, leading=8.2, textColor=c_dark, alignment=2)
+    table_cell_right_bold = ParagraphStyle('TableCellRightBold', fontName='Arial-Bold', fontSize=6.5, leading=8.2, textColor=c_primary, alignment=2)
+    table_cell_success = ParagraphStyle('TableCellSuccess', fontName='Arial-Bold', fontSize=6.5, leading=8.2, textColor=c_success, alignment=2)
 
     story = []
 
-    # ================= PAGE 1: COVER & EXECUTIVE SUMMARY =================
+    # ================= PAGE 1: COVER, EXECUTIVE SUMMARY & VEHICLE HERO =================
     header_data = [
         [
-            Paragraph("<b>TRUSTIA AI</b><br/><font size=7 color='#0284C7'>OTONOM SİSTEMLER & DERİN TEKNOLOJİ</font>", body_style),
-            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 31 Ağustos 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=7, leading=9.5, alignment=2, textColor=c_gray))
+            Paragraph("<b>TRUSTIA AI</b><br/><font size=6.5 color='#0284C7'>OTONOM SİSTEMLER & DERİN TEKNOLOJİ</font>", body_style),
+            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 31 Ağustos 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
         ]
     ]
     t_head = Table(header_data, colWidths=[100*mm, 82*mm])
@@ -118,47 +126,61 @@ def create_master_pdf(output_paths):
         ('TOPPADDING', (0,0), (-1,-1), 0),
     ]))
     story.append(t_head)
-    story.append(Spacer(1, 2*mm))
-    story.append(HRFlowable(width="100%", thickness=1.5, color=c_accent, spaceBefore=0, spaceAfter=4*mm))
+    story.append(Spacer(1, 1.5*mm))
+    story.append(HRFlowable(width="100%", thickness=1.2, color=c_accent, spaceBefore=0, spaceAfter=3*mm))
 
     story.append(Paragraph("HYUNDAI IONIQ 5 SEVİYE-4 ROBOTAKSİ MASTER PLANI", title_style))
-    story.append(Spacer(1, 1*mm))
+    story.append(Spacer(1, 0.5*mm))
     story.append(Paragraph("E-GMP Şasi Entegrasyonu, 27 Parçalık Doğrulanmış Donanım Kiti, CAN-FD Drive-by-Wire ve Saha Operasyon Rehberi", subtitle_style))
-    story.append(Spacer(1, 3.5*mm))
+    story.append(Spacer(1, 2.5*mm))
 
     # Executive Highlights (4 Cards)
     kpi_data = [
         [
-            Paragraph("<font size=6 color='#64748B'>OTONOMİ ÇEKİRDEĞİ</font><br/><b>16.000 Satır</b><br/><font size=6 color='#059669'>%100 Özgün C++/Python</font>", body_style),
-            Paragraph("<font size=6 color='#64748B'>BİRİM & SİSTEM TESTİ</font><br/><b>1.301 / 1.301</b><br/><font size=6 color='#059669'>%100 Sıfır Hata Başarı</font>", body_style),
-            Paragraph("<font size=6 color='#64748B'>DONANIM KİTİ (27 PARÇA)</font><br/><b>₺ 1.148.829,43</b><br/><font size=6 color='#0284C7'>Canlı Sepet Doğrulamalı</font>", body_style),
-            Paragraph("<font size=6 color='#64748B'>ANAHTAR TESLİM ROBOTAKSİ</font><br/><b>₺ 3.088.829,43</b><br/><font size=6 color='#0A192F'>Araç + Tüm Donanım</font>", body_style)
+            Paragraph("<font size=5.5 color='#64748B'>OTONOMİ ÇEKİRDEĞİ</font><br/><b>16.000 Satır</b><br/><font size=5.5 color='#059669'>%100 Özgün C++/Python</font>", body_style),
+            Paragraph("<font size=5.5 color='#64748B'>BİRİM & SİSTEM TESTİ</font><br/><b>1.301 / 1.301</b><br/><font size=5.5 color='#059669'>%100 Sıfır Hata Başarı</font>", body_style),
+            Paragraph("<font size=5.5 color='#64748B'>DONANIM KİTİ (27 PARÇA)</font><br/><b>₺ 1.148.829,43</b><br/><font size=5.5 color='#0284C7'>Canlı Sepet Doğrulamalı</font>", body_style),
+            Paragraph("<font size=5.5 color='#64748B'>ANAHTAR TESLİM ROBOTAKSİ</font><br/><b>₺ 3.088.829,43</b><br/><font size=5.5 color='#0A192F'>Araç + Tüm Donanım</font>", body_style)
         ]
     ]
     t_kpi = Table(kpi_data, colWidths=[45.5*mm, 45.5*mm, 45.5*mm, 45.5*mm])
     t_kpi.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), c_light_bg),
-        ('BOX', (0,0), (-1,-1), 0.75, c_border),
-        ('INNERGRID', (0,0), (-1,-1), 0.5, c_border),
-        ('TOPPADDING', (0,0), (-1,-1), 2*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 2*mm),
+        ('BOX', (0,0), (-1,-1), 0.6, c_border),
+        ('INNERGRID', (0,0), (-1,-1), 0.4, c_border),
+        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
         ('LEFTPADDING', (0,0), (-1,-1), 2*mm),
         ('RIGHTPADDING', (0,0), (-1,-1), 2*mm),
     ]))
     story.append(t_kpi)
-    story.append(Spacer(1, 3.5*mm))
+    story.append(Spacer(1, 2.5*mm))
 
-    story.append(Paragraph("1. YÖNETİCİ ÖZETİ VE MİSYON", h1_style))
-    story.append(Paragraph(
-        "Bu master plan; <b>Trustia AI</b> Seviye-4 deterministik otonomi yazılımının, Türkiye'nin ve dünyanın en elverişli 800V elektrikli araç mimarisi olan <b>Hyundai Ioniq 5 (E-GMP)</b> platformuna fiziksel entegrasyonu için hazırlanmış uçtan uca mühendislik şartnamesidir. Sistem; 1 adet 128 kanallı uzun menzilli tavan LiDAR'ı, 2 adet kör nokta tampon LiDAR'ı, 4 adet GMSL2 HDR otomotiv kamerası, 2 adet 77GHz milimetre dalga radarı, çift antenli RTK-GNSS santimetre konumlandırma modülü ve 275 TOPS gücündeki NVIDIA Jetson AGX Orin endüstriyel bilgisayarı ile tam yedekli bir Seviye-4 robotaksi ortaya koymaktadır.",
+    # Two column: Left text summary, Right Hero Image of Ioniq 5!
+    hero_img = RLImage(img1, width=72*mm, height=53*mm)
+    
+    summary_text = Paragraph(
+        "<b>1. YÖNETİCİ ÖZETİ VE MİSYON</b><br/>"
+        "Bu master plan; <b>Trustia AI</b> Seviye-4 deterministik otonomi yazılımının, Türkiye'nin ve dünyanın en elverişli 800V elektrikli araç mimarisi olan <b>Hyundai Ioniq 5 (E-GMP)</b> platformuna fiziksel entegrasyon şartnamesidir.<br/><br/>"
+        "<b>Küresel Uyumluluk:</b> Hyundai Ioniq 5, dünyanın en büyük iki otonomi devi olan <b>Motional (Hyundai & Aptiv)</b> ve <b>Google Waymo</b> tarafından birincil ticari robotaksi platformu seçilmiştir. Trustia mimarisi, Motional ve Waymo'nun Las Vegas'ta kullandığı algılama ve CAN-FD aktüatör standartlarıyla birebir örtüşmektedir.",
         body_style
-    ))
-    story.append(Spacer(1, 2*mm))
-    story.append(Paragraph(
-        "<b>Küresel Endüstri Standardı Uyumu:</b> Hyundai Ioniq 5 platformu, dünyanın en büyük iki otonom sürüş devi olan <b>Motional (Hyundai & Aptiv)</b> ve <b>Google Waymo</b> tarafından birincil ticari robotaksi aracı olarak seçilmiştir. Trustia AI mimarisi, Motional ve Waymo'nun Las Vegas ve San Francisco'da uyguladığı algılama, CAN-FD tork enjeksiyonu ve güç dağıtım protokolleriyle birebir örtüşmektedir.",
-        body_style
-    ))
-    story.append(Spacer(1, 3*mm))
+    )
+    
+    hero_col_right = [
+        hero_img,
+        Paragraph("Şekil 1: Hyundai Ioniq 5 2024 Advance Mat Gri Test Aracı", img_caption)
+    ]
+    
+    hero_table = Table([[summary_text, hero_col_right]], colWidths=[106*mm, 76*mm])
+    hero_table.setStyle(TableStyle([
+        ('VALIGN', (0,0), (-1,-1), 'TOP'),
+        ('LEFTPADDING', (0,0), (-1,-1), 0),
+        ('RIGHTPADDING', (0,0), (-1,-1), 0),
+        ('TOPPADDING', (0,0), (-1,-1), 0),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0),
+    ]))
+    story.append(hero_table)
+    story.append(Spacer(1, 2.5*mm))
 
     # Core Specs Table
     spec_data = [
@@ -177,17 +199,17 @@ def create_master_pdf(output_paths):
     t_spec.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), c_primary),
         ('TEXTCOLOR', (0,0), (-1,0), colors.white),
-        ('GRID', (0,0), (-1,-1), 0.5, c_border),
+        ('GRID', (0,0), (-1,-1), 0.4, c_border),
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, c_light_bg]),
-        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('TOPPADDING', (0,0), (-1,-1), 1.2*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.2*mm),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
     ]))
     story.append(t_spec)
 
     story.append(PageBreak())
 
-    # ================= PAGE 2: 27-ITEM VERIFIED HARDWARE BOM (ALL IN ONE PAGE) =================
+    # ================= PAGE 2: 27-ITEM VERIFIED HARDWARE BOM =================
     story.append(Paragraph("2. %100 DOĞRULANMIŞ VE CANLI SEPETLİ DONANIM TEDARİK LİSTESİ (BOM)", h1_style))
     story.append(Paragraph(
         "Aşağıdaki liste; Trustia AI Hyundai Ioniq 5 test aracının fiziksel entegrasyonu için doğrudan Türkiye distribütörleri ve yetkili global kanallardan sepet teyidi alınmış <b>27 parçalık anahtar teslim donanım listesidir.</b> Fiyatlar canlı döviz kurları ($1 = 48,26 TL, €1 = 56,04 - 56,09 TL) ve KDV/Gümrük dahil net tutarlardır.",
@@ -251,13 +273,13 @@ def create_master_pdf(output_paths):
 
     story.append(PageBreak())
 
-    # ================= PAGE 3: PHYSICAL INSTALLATION & SCHEMATICS =================
+    # ================= PAGE 3: PHYSICAL INSTALLATION WITH 2 VEHICLE PHOTOS =================
     story.append(Paragraph("3. HYUNDAI IONIQ 5 FİZİKSEL MEKANİK VE KABLO MONTAJ PLANI", h1_style))
     story.append(Paragraph(
         "Hyundai Ioniq 5, modern monokok gövdesi ve çıtasız tavan raylarıyla delme/kesme işlemi gerektirmeden tam modüler dönüşüme uygundur. Dönüşüm 4 ana fiziksel bölgede 48 saatte tamamlanır:",
         body_style
     ))
-    story.append(Spacer(1, 2*mm))
+    story.append(Spacer(1, 1.5*mm))
 
     phases_data = [
         [
@@ -287,23 +309,37 @@ def create_master_pdf(output_paths):
     t_phase = Table(phases_data, colWidths=[91*mm, 91*mm])
     t_phase.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), c_light_bg),
-        ('BOX', (0,0), (-1,-1), 0.75, c_border),
-        ('INNERGRID', (0,0), (-1,-1), 0.5, c_border),
-        ('TOPPADDING', (0,0), (-1,-1), 2*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 2*mm),
+        ('BOX', (0,0), (-1,-1), 0.6, c_border),
+        ('INNERGRID', (0,0), (-1,-1), 0.4, c_border),
+        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
         ('LEFTPADDING', (0,0), (-1,-1), 2*mm),
         ('RIGHTPADDING', (0,0), (-1,-1), 2*mm),
     ]))
     story.append(t_phase)
-    story.append(Spacer(1, 3*mm))
+    story.append(Spacer(1, 2*mm))
+
+    # Two Vehicle Photos embedded on Page 3: Side Profile & Rear View
+    img_p3_1 = RLImage(img3, width=88*mm, height=52*mm)
+    img_p3_2 = RLImage(img4, width=88*mm, height=52*mm)
+    
+    photo_table_p3 = Table([
+        [img_p3_1, img_p3_2],
+        [Paragraph("Şekil 2: Yan Profil Sensör Eksenleri & Tavan Barı Hizalaması", img_caption),
+         Paragraph("Şekil 3: Arka Gövde & Spoyler Altı Kablo Giriş Körüğü", img_caption)]
+    ], colWidths=[91*mm, 91*mm])
+    photo_table_p3.setStyle(TableStyle([
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('ALIGN', (0,0), (-1,-1), 'CENTER'),
+        ('LEFTPADDING', (0,0), (-1,-1), 0),
+        ('RIGHTPADDING', (0,0), (-1,-1), 0),
+        ('TOPPADDING', (0,0), (-1,-1), 1*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1*mm),
+    ]))
+    story.append(photo_table_p3)
+    story.append(Spacer(1, 2*mm))
 
     story.append(Paragraph("4. ELEKTRİK, GÜÇ DAĞITIMI VE E-STOP EMNİYET ZİNCİRİ", h1_style))
-    story.append(Paragraph(
-        "Sistem enerjisini Hyundai Ioniq 5'in 12V 60Ah AGM aküsünden ve 800V çekiş bataryasını 12V'a dönüştüren 2.2 kW'lık dahili LDC ünitesinden alır. 4 kademeli emniyet mimarisi uygulanır:",
-        body_style
-    ))
-    story.append(Spacer(1, 1.5*mm))
-
     elec_data = [
         [Paragraph("<b>Kademe</b>", table_cell_bold), Paragraph("<b>Bileşen & İşlev</b>", table_cell_bold), Paragraph("<b>Emniyet Parametresi</b>", table_cell_bold)],
         [Paragraph("1. Ana Hat", table_cell), Paragraph("Ioniq 5 12V Akü -> 4 AWG Marin Bakır Kablo -> 100A ANL Bıçak Sigorta", table_cell), Paragraph("Aşırı akım ve kısa devreye karşı 100A ana hat koruması", table_cell)],
@@ -316,23 +352,23 @@ def create_master_pdf(output_paths):
     t_elec.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), c_primary),
         ('TEXTCOLOR', (0,0), (-1,0), colors.white),
-        ('GRID', (0,0), (-1,-1), 0.5, c_border),
+        ('GRID', (0,0), (-1,-1), 0.4, c_border),
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, c_light_bg]),
-        ('TOPPADDING', (0,0), (-1,-1), 1.4*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1.4*mm),
+        ('TOPPADDING', (0,0), (-1,-1), 1.1*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.1*mm),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
     ]))
     story.append(t_elec)
 
     story.append(PageBreak())
 
-    # ================= PAGE 4: CAN-FD, SOFTWARE & SAFETY =================
+    # ================= PAGE 4: CAN-FD, SOFTWARE & COCKPIT PHOTOS =================
     story.append(Paragraph("5. CAN-FD DRIVE-BY-WIRE VE YAZILIM ENTEGRASYONU", h1_style))
     story.append(Paragraph(
         "Hyundai Ioniq 5, aktüatör seviyesinde yüksek hızlı <b>CAN-FD (500 kbps Nominal / 2 Mbps Veri Fazı)</b> protokolü kullanır. Trustia AI kontrol motoru, araca fabrikasyon dikiz aynası arkasındaki ADAS kamera soketinden Y-Harness ile bağlanır:",
         body_style
     ))
-    story.append(Spacer(1, 2*mm))
+    story.append(Spacer(1, 1.5*mm))
 
     can_data = [
         [Paragraph("<b>Kontrol Ekseni</b>", table_cell_bold), Paragraph("<b>CAN-FD Mesajı & ID</b>", table_cell_bold), Paragraph("<b>Frekans</b>", table_cell_bold), Paragraph("<b>Enjekte Edilen Sinyaller & Algoritma</b>", table_cell_bold)],
@@ -359,17 +395,36 @@ def create_master_pdf(output_paths):
     t_can.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), c_primary),
         ('TEXTCOLOR', (0,0), (-1,0), colors.white),
-        ('GRID', (0,0), (-1,-1), 0.5, c_border),
+        ('GRID', (0,0), (-1,-1), 0.4, c_border),
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, c_light_bg]),
-        ('TOPPADDING', (0,0), (-1,-1), 1.8*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1.8*mm),
+        ('TOPPADDING', (0,0), (-1,-1), 1.4*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.4*mm),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
     ]))
     story.append(t_can)
-    story.append(Spacer(1, 3*mm))
+    story.append(Spacer(1, 2*mm))
+
+    # Two Cockpit/Interior Photos embedded on Page 4: Cockpit & Rear Seating
+    img_p4_1 = RLImage(img6, width=88*mm, height=52*mm)
+    img_p4_2 = RLImage(img7, width=88*mm, height=52*mm)
+    
+    photo_table_p4 = Table([
+        [img_p4_1, img_p4_2],
+        [Paragraph("Şekil 4: Ön Kokpit, 10.1\" Dokunmatik C2 Ekranı & E-Stop Yerleşimi", img_caption),
+         Paragraph("Şekil 5: Arka Yolcu Bölümü & E-GMP Geniş Yaşam Alanı", img_caption)]
+    ], colWidths=[91*mm, 91*mm])
+    photo_table_p4.setStyle(TableStyle([
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('ALIGN', (0,0), (-1,-1), 'CENTER'),
+        ('LEFTPADDING', (0,0), (-1,-1), 0),
+        ('RIGHTPADDING', (0,0), (-1,-1), 0),
+        ('TOPPADDING', (0,0), (-1,-1), 1*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1*mm),
+    ]))
+    story.append(photo_table_p4)
+    story.append(Spacer(1, 2*mm))
 
     story.append(Paragraph("6. SÜRÜCÜ MÜDAHALESİ (OVERRIDE) VE GÜVENLİK PROTOKOLLERİ", h1_style))
-    
     safety_points = [
         [
             Paragraph("<b>İNSAN MÜDAHALESİ (OVERRIDE)</b><br/>"
@@ -395,10 +450,10 @@ def create_master_pdf(output_paths):
     t_safe = Table(safety_points, colWidths=[91*mm, 91*mm])
     t_safe.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), c_light_bg),
-        ('BOX', (0,0), (-1,-1), 0.75, c_border),
-        ('INNERGRID', (0,0), (-1,-1), 0.5, c_border),
-        ('TOPPADDING', (0,0), (-1,-1), 2*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 2*mm),
+        ('BOX', (0,0), (-1,-1), 0.6, c_border),
+        ('INNERGRID', (0,0), (-1,-1), 0.4, c_border),
+        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
         ('LEFTPADDING', (0,0), (-1,-1), 2*mm),
         ('RIGHTPADDING', (0,0), (-1,-1), 2*mm),
     ]))
@@ -406,13 +461,13 @@ def create_master_pdf(output_paths):
 
     story.append(PageBreak())
 
-    # ================= PAGE 5: CALIBRATION, TESTING & PERMITS =================
+    # ================= PAGE 5: CALIBRATION, TESTING, 2 EXTERIOR PHOTOS & SIGN-OFF =================
     story.append(Paragraph("7. KALİBRASYON, 4 KADEMELİ TEST PLANI VE DEVLET İZİNLERİ", h1_style))
     story.append(Paragraph(
         "Araç montajı tamamlandıktan sonra uzaysal sensör kalibrasyonu yapılır ve 4 kademeli güvenlik protokolüyle sahaya çıkarılır:",
         body_style
     ))
-    story.append(Spacer(1, 2*mm))
+    story.append(Spacer(1, 1.5*mm))
 
     calib_data = [
         [
@@ -431,82 +486,100 @@ def create_master_pdf(output_paths):
     t_cal = Table(calib_data, colWidths=[91*mm, 91*mm])
     t_cal.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), c_light_bg),
-        ('BOX', (0,0), (-1,-1), 0.75, c_border),
-        ('INNERGRID', (0,0), (-1,-1), 0.5, c_border),
-        ('TOPPADDING', (0,0), (-1,-1), 2*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 2*mm),
+        ('BOX', (0,0), (-1,-1), 0.6, c_border),
+        ('INNERGRID', (0,0), (-1,-1), 0.4, c_border),
+        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
         ('LEFTPADDING', (0,0), (-1,-1), 2*mm),
         ('RIGHTPADDING', (0,0), (-1,-1), 2*mm),
     ]))
     story.append(t_cal)
-    story.append(Spacer(1, 2.5*mm))
+    story.append(Spacer(1, 1.5*mm))
+
+    # Two Exterior Photos embedded on Page 5: Front-Left & Rear-Center
+    img_p5_1 = RLImage(img2, width=88*mm, height=48*mm)
+    img_p5_2 = RLImage(img5, width=88*mm, height=48*mm)
+    
+    photo_table_p5 = Table([
+        [img_p5_1, img_p5_2],
+        [Paragraph("Şekil 6: Ön Sol Tampon Livox LiDAR & Radar Tarama Alanı", img_caption),
+         Paragraph("Şekil 7: Arka Düz Görünüm & Geri Görüş Otonomi Kamerası", img_caption)]
+    ], colWidths=[91*mm, 91*mm])
+    photo_table_p5.setStyle(TableStyle([
+        ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
+        ('ALIGN', (0,0), (-1,-1), 'CENTER'),
+        ('LEFTPADDING', (0,0), (-1,-1), 0),
+        ('RIGHTPADDING', (0,0), (-1,-1), 0),
+        ('TOPPADDING', (0,0), (-1,-1), 0.8*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 0.8*mm),
+    ]))
+    story.append(photo_table_p5)
+    story.append(Spacer(1, 1.5*mm))
 
     story.append(Paragraph("4 KADEMELİ SAHA TEST YOL HARİTASI VE DEVLET İZİNLERİ", h2_style))
-    
     test_roadmap_data = [
         [Paragraph("<b>Aşama</b>", table_cell_bold), Paragraph("<b>Test Sahası & Lokasyon</b>", table_cell_bold), Paragraph("<b>Test Edilen Senaryolar & Emniyet</b>", table_cell_bold), Paragraph("<b>Yasal İzin & Durum</b>", table_cell_bold)],
         [
-            Paragraph("<b>Aşama 1</b><br/>(Simülasyon)", table_cell),
+            Paragraph("<b>Aşama 1</b> (Simülasyon)", table_cell),
             Paragraph("Webots 3D & CARLA Dijital İkiz", table_cell),
             Paragraph("1.301 Birim/Entegrasyon Testi, SLAM haritalama, Pure Pursuit rota takibi, acil kaçınma", table_cell),
             Paragraph("<font color='#059669'><b>%100 TAMAMLANDI ✅</b></font>", table_cell)
         ],
         [
-            Paragraph("<b>Aşama 2</b><br/>(Kapalı Pist)", table_cell),
-            Paragraph("Bilişim Vadisi Otonom Test Pisti (Gebze)", table_cell),
+            Paragraph("<b>Aşama 2</b> (Kapalı Pist)", table_cell),
+            Paragraph("Bilişim Vadisi Otonom Pisti (Gebze)", table_cell),
             Paragraph("Trafiğe kapalı 1.5 km asfalt parkur, cansız mankenler, yapay kavşaklar, dur-kalk akışı", table_cell),
-            Paragraph("Bilişim Vadisi Protokolü<br/>Sıfır Riskli Saha", table_cell)
+            Paragraph("Bilişim Vadisi Protokolü", table_cell)
         ],
         [
-            Paragraph("<b>Aşama 3</b><br/>(Kampüs İçi)", table_cell),
-            Paragraph("İTO BTM Fulya & Teknopark İstanbul", table_cell),
+            Paragraph("<b>Aşama 3</b> (Kampüs İçi)", table_cell),
+            Paragraph("İTO BTM Fulya & Teknopark İst.", table_cell),
             Paragraph("Kapalı kampüs yollarında 20-30 km/s hızla yolcu alma/bırakma, park etme manevraları", table_cell),
-            Paragraph("BTM Ön Kuluçka İzni<br/>Özel Alan Protokolü", table_cell)
+            Paragraph("BTM Özel Alan İzni", table_cell)
         ],
         [
-            Paragraph("<b>Aşama 4</b><br/>(Açık Yol)", table_cell),
-            Paragraph("Şişli / Fulya / Gebze Pilot Koridoru", table_cell),
+            Paragraph("<b>Aşama 4</b> (Açık Yol)", table_cell),
+            Paragraph("Şişli / Fulya / Gebze Pilot Hattı", table_cell),
             Paragraph("Koltukta emniyet sürücüsü hazır beklerken şehir içi karma trafikte Seviye 4 sürüş", table_cell),
-            Paragraph("Sanayi Bakanlığı İzni +<br/>T Plaka (TŞOF / EGM)", table_cell)
+            Paragraph("Sanayi Bak. + T Plaka", table_cell)
         ]
     ]
-    test_table = Table(test_roadmap_data, colWidths=[24*mm, 44*mm, 78*mm, 36*mm])
+    test_table = Table(test_roadmap_data, colWidths=[28*mm, 44*mm, 76*mm, 34*mm])
     test_table.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), c_primary),
         ('TEXTCOLOR', (0,0), (-1,0), colors.white),
-        ('GRID', (0,0), (-1,-1), 0.5, c_border),
+        ('GRID', (0,0), (-1,-1), 0.4, c_border),
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [colors.white, c_light_bg]),
-        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('TOPPADDING', (0,0), (-1,-1), 1.1*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.1*mm),
         ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
     ]))
     story.append(test_table)
-    story.append(Spacer(1, 3.5*mm))
+    story.append(Spacer(1, 2.5*mm))
 
     # Sign-off Box
     sign_data = [
         [
-            Paragraph("<b>HAZIRLAYAN & SİSTEM MİMARI</b><br/>Murat Furkan Bayram<br/><font size=6.5 color='#64748B'>Kurucu & CEO / Sistem Mimarı<br/>Trustia Teknoloji A.Ş.</font>", body_style),
-            Paragraph("<b>DONANIM & TEST LİDERİ</b><br/>Denizcan Özcan<br/><font size=6.5 color='#64748B'>Donanım & Entegrasyon Mühendisi<br/>ASELSAN & TEKNOFEST Robotaksi Finalisti</font>", body_style),
-            Paragraph("<b>KURUMSAL ONAY & AKREDİTASYON</b><br/>İTO BTM & SSB Akredite<br/><font size=6.5 color='#64748B'>SSB 100/100 • KOSGEB İleri Girişimci<br/>TÜBİTAK ARBİS Milli Araştırmacı</font>", body_style)
+            Paragraph("<b>HAZIRLAYAN & SİSTEM MİMARI</b><br/>Murat Furkan Bayram<br/><font size=5.5 color='#64748B'>Kurucu & CEO / Sistem Mimarı<br/>Trustia Teknoloji A.Ş.</font>", body_style),
+            Paragraph("<b>DONANIM & TEST LİDERİ</b><br/>Denizcan Özcan<br/><font size=5.5 color='#64748B'>Donanım & Entegrasyon Mühendisi<br/>ASELSAN & TEKNOFEST Robotaksi Finalisti</font>", body_style),
+            Paragraph("<b>KURUMSAL ONAY & AKREDİTASYON</b><br/>İTO BTM & SSB Akredite<br/><font size=5.5 color='#64748B'>SSB 100/100 • KOSGEB İleri Girişimci<br/>TÜBİTAK ARBİS Milli Araştırmacı</font>", body_style)
         ]
     ]
     t_sign = Table(sign_data, colWidths=[60.6*mm, 60.6*mm, 60.6*mm])
     t_sign.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,-1), c_light_bg),
-        ('BOX', (0,0), (-1,-1), 1, c_primary),
-        ('INNERGRID', (0,0), (-1,-1), 0.5, c_border),
-        ('TOPPADDING', (0,0), (-1,-1), 2*mm),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 2*mm),
+        ('BOX', (0,0), (-1,-1), 0.8, c_primary),
+        ('INNERGRID', (0,0), (-1,-1), 0.4, c_border),
+        ('TOPPADDING', (0,0), (-1,-1), 1.5*mm),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 1.5*mm),
         ('LEFTPADDING', (0,0), (-1,-1), 2*mm),
         ('RIGHTPADDING', (0,0), (-1,-1), 2*mm),
     ]))
     story.append(t_sign)
 
     doc.build(story, canvasmaker=NumberedCanvas)
-    print(f"Master PDF created successfully: {output_paths[0]}")
+    print(f"Master PDF with Photos created successfully: {output_paths[0]}")
     
-    # Copy to additional destinations
     for extra_path in output_paths[1:]:
         os.makedirs(os.path.dirname(extra_path), exist_ok=True)
         shutil.copy2(output_paths[0], extra_path)
@@ -516,4 +589,4 @@ if __name__ == '__main__':
     dest1 = r"C:\Users\Murat\Desktop\Çıktı\06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
     dest2 = r"c:\Users\Murat\Desktop\Trustia\04_Yatirimci_Sunumlari_ve_Is_Planlari\Teknik_ve_Organizasyon\06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
     
-    create_master_pdf([dest1, dest2])
+    create_master_pdf_with_photos([dest1, dest2])
