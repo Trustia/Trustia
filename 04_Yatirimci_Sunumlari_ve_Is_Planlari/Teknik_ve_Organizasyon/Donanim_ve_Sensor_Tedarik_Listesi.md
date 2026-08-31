@@ -97,7 +97,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 🛰️ 5. RTK-GNSS & YÖNELME MODÜLÜ VE ANTENLERİ — [KESİNLEŞTİ ✅]
+## 🛰️ 5. RTK-GNSS, YÖNELME MODÜLÜ & ANTEN SİSTEMİ — [KESİNLEŞTİ ✅]
 
 ### 5.1 Çift Antenli RTK-GNSS & Heading Modülü (1 Adet)
 * **Parça Adı:** Septentrio mosaic-go Heading GNSS Module (Çift Antenli Santimetre Seviyesi RTK Konumlandırma, AIM+ Anti-Jamming & Anti-Spoofing, Araç Yönelme Açısı)
@@ -117,6 +117,17 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 * **Tedarikçi Firma:** Alibaba (Shenzhen Stoton Electronic Technology Co., Ltd.)
 * **Satın Alma Linki:** [turkish.alibaba.com/product-detail/TOPGNSS-High-Precision-RTK-GNSS-antenna-1600643472472.html](https://turkish.alibaba.com/product-detail/TOPGNSS-High-Precision-RTK-GNSS-antenna-1600643472472.html)
 * **2 Adet Toplam Tutar:** **$211,14 USD** = **₺ 10.616,38 TL** (Kargo, Gümrük & İşlem Dahil)
+* **Adet:** 2
+
+---
+
+### 5.3 Elecbee LMR195 Düşük Kayıplı SMA-N Anten Kablosu Seti (2 Adet)
+* **Parça Adı:** Elecbee SMA - N Kablo LMR195 Montaj 1M Düşük Kayıplı RF Koaksiyel Anten Kablosu
+* **Ürün Kodu:** `EB-101-0112`
+* **Kullanım Amacı:** Septentrio RTK modülü ile tavandaki TOP500 mantar antenler arasındaki RF sinyalini sıfır kayıpla aktarmak.
+* **Tedarikçi Firma:** Elecbee.com Türkiye
+* **Satın Alma Linki:** [elecbee.com/tr/product-detail/sma-to-n-cable-lmr195-assembly-1m-for-3g-4g-lte-rf-radio-to-antenna-or-lightning-arrester-use_2659](https://www.elecbee.com/tr/product-detail/sma-to-n-cable-lmr195-assembly-1m-for-3g-4g-lte-rf-radio-to-antenna-or-lightning-arrester-use_2659)
+* **2 Adet Toplam Tutar:** **₺ 531,38 TL** (2x 265,69 TL)
 * **Adet:** 2
 
 ---
@@ -154,7 +165,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## ⚡ 7. ELEKTRİK, GÜÇ DAĞITIMI & GÜVENLİK SİSTEMİ — [KESİNLEŞTİ ✅]
+## ⚡ 7. ELEKTRİK, GÜÇ DAĞITIMI, REGÜLASYON & GÜVENLİK SİSTEMİ — [KESİNLEŞTİ ✅]
 
 ### 7.1 Interkom 12'li Kapaklı & Negatif Baralı Oto Sigorta Bloğu (1 Adet)
 * **Parça Adı:** Interkom IC-276C-12 12'li Sigorta Bloğu (Kapaklı & Negatif Baralı Marin/Oto Güç Dağıtım Panosu)
@@ -166,7 +177,19 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-### 7.2 SIEGEN Metal Akü Devre Kesici Şalter (Master Kill Switch) (1 Adet)
+### 7.2 Mean Well DCW08A-12 İzoleli DC-DC Güç Konverteri (1 Adet)
+* **Parça Adı:** Mean Well DCW08A-12 (9..18VDC Giriş, 12VDC / 650mA İzole Regüle Güç Kaynağı)
+* **Ürün Kodu:** `HBC00009KRA33`
+* **Kullanım Amacı:** Araç alternatör ve batarya dalgalanmalarını filtreleyip hassas sensör hatlarına saf 12V DC besleme sağlamak.
+* **Tedarikçi Mağaza:** Hepsiburada (Satıcı: EndelkonOtomasyon)
+* **Satın Alma Linki:** [hepsiburada.com/mean-well-meanwell-dcw08a-12-9-18vdc-12vdc-650ma-dc-dc-konverter-pm-HBC00009KRA33](https://www.hepsiburada.com/mean-well-meanwell-dcw08a-12-9-18vdc-12vdc-650ma-dc-dc-konverter-pm-HBC00009KRA33)
+* **Sepet Tutarı:** **₺ 1.403,86 TL** (KDV Dahil / Kargo Bedava)
+* **Adet:** 1
+* **Toplam Tutar:** **1.403,86 TL**
+
+---
+
+### 7.3 SIEGEN Metal Akü Devre Kesici Şalter (Master Kill Switch) (1 Adet)
 * **Parça Adı:** SIEGEN Metal Akü Devre Kesici Şalter (12V-24V 300A, Kırmızı Çıkarılabilir Anahtarlı)
 * **Kullanım Amacı:** Araç park halindeyken sensör elektroniğini tek hamlede aküden izole etmek ve acil durumlarda gücü tamamen kesmek.
 * **Tedarikçi Mağaza:** Trendyol (Satıcı: incirOto / Akakçe)
@@ -177,7 +200,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-### 7.3 ELO Büyük Kasa 80A DC Ağır Hizmet Güç Rölesi (1 Adet)
+### 7.4 ELO Büyük Kasa 80A DC Ağır Hizmet Güç Rölesi (1 Adet)
 * **Parça Adı:** ELO Güç Rölesi Büyük Kasa 80A DC 12V Dirençli Toz Korumalı (Stok Kodu: `201.005.001`)
 * **Kullanım Amacı:** E-Stop butonuna basıldığı an sensör ve aktüatör hatlarının elektriğini 0.01 saniyede mekanik olarak kesmek.
 * **Tedarikçi Firma:** ELO Ticaret (Resmi Üretici Satış Portalı)
@@ -188,7 +211,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-### 7.4 Schneider Electric Mantar Acil Stop Butonu (E-Stop) (1 Adet)
+### 7.5 Schneider Electric Mantar Acil Stop Butonu (E-Stop) (1 Adet)
 * **Parça Adı:** Schneider Electric XA2EA4342 Kırmızı Yaylı Stop Butonu (22.5 mm Montaj Çapı, 1 NK Kontak)
 * **Tedarikçi Firma:** Activ Elektrik (Türkiye)
 * **Satın Alma Linki:** [activelektrik.com/urun/schneider-electric-xa2ea4342-kirmizi-yayli-stop-yazili-buton-1126](https://activelektrik.com/urun/schneider-electric-xa2ea4342-kirmizi-yayli-stop-yazili-buton-1126)
@@ -198,7 +221,7 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 🔌 8. CAN-BUS ARAÇ KONTROL ARAYÜZÜ — [KESİNLEŞTİ ✅]
+## 🔌 8. CAN-BUS ARAÇ KONTROL ARAYÜZÜ & SONLANDIRMA — [KESİNLEŞTİ ✅]
 
 ### 8.1 Otomotiv CAN-FD USB Kontrol Cihazı (1 Adet)
 * **Parça Adı:** Kvaser U100 CAN / CAN-FD to USB Arayüz Dönüştürücü (5000V Galvanik İzolasyon, DB-9 Konnektör)
@@ -212,7 +235,18 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-## 🛠️ 9. MEKANİK MONTAJ, KOKPİT EKRANI & KALİBRASYON KİTİ — [KESİNLEŞTİ ✅]
+### 8.2 Kvaser 00801-4 120 Ohm CAN Sonlandırma Adaptörü (1 Adet)
+* **Parça Adı:** Kvaser DSUB 9-Pin Plug to Receptacle 120 Ohm CAN Bus Termination Adapter (Ürün No: `00801-4`)
+* **Kullanım Amacı:** CAN hattındaki sinyal yansımalarını engelleyerek 100 Hz Pure Pursuit sürüş komutlarında paket kaybını sıfıra indirmek.
+* **Tedarikçi Firma:** Farnell Türkiye
+* **Satın Alma Linki:** [tr.farnell.com/kvaser/00801-4/interface-db9-plug-rs-232-serial/dp/3013833](https://tr.farnell.com/kvaser/00801-4/interface-db9-plug-rs-232-serial/dp/3013833)
+* **Birim Fiyat:** **25,42 € + KDV** (~**₺ 1.710,96 TL**)
+* **Adet:** 1
+* **Toplam Tutar:** **1.710,96 TL**
+
+---
+
+## 🛠️ 9. MEKANİK MONTAJ, KOKPİT EKRANI, İZOLASYON & KALİBRASYON — [KESİNLEŞTİ ✅]
 
 ### 9.1 Drs Tuning Hyundai Ioniq 5 Siyah Ara Atkı Tavan Barı Seti (1 Takım)
 * **Parça Adı:** Drs Tuning Hyundai Ioniq 5 2021 ve Sonrası Uyumlu Ace-4 Kilitli Siyah Ara Atkı Tavan Barı
@@ -236,21 +270,41 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-### 9.3 Deyatech 2.8m Ağır Hizmet Kalibrasyon Standı / Tripod (1 Adet)
+### 9.3 IP68 Su Geçirmez Tavan Buat Jel Kutusu (CNP-3103) (1 Adet)
+* **Parça Adı:** CNP-3103 IP68 Su Geçirmez Buat Jel İzolasyon Kutusu (52x38x26mm)
+* **Kullanım Amacı:** Tavan barlarından araç kabinine giren kablo demetini %100 su sızdırmaz şekilde izole etmek.
+* **Tedarikçi Mağaza:** Trendyol (Satıcı: ERANOVA)
+* **Satın Alma Linki:** [trendyol.com/genel-markalar/su-gecirmez-buat-jel-kutusu-ip68-koruma-cnp-3103-p-1111246799](https://www.trendyol.com/genel-markalar/su-gecirmez-buat-jel-kutusu-ip68-koruma-cnp-3103-p-1111246799)
+* **Sepet Tutarı:** **₺ 499,00 TL** (Kargo Bedava)
+* **Adet:** 1
+* **Toplam Tutar:** **499,00 TL**
+
+---
+
+### 9.4 Coroplast 8551 Siyah Otomotiv Tüylü Bez Bant (1 Adet)
+* **Parça Adı:** Coroplast 8551 19mm x 15m Siyah Tüylü Otomotiv Kablo Demeti Bandı
+* **Kullanım Amacı:** Araç içi kablo demetlerini sabitlemek, trim sesi ve sürtünme aşınmasını sıfırlamak.
+* **Tedarikçi Mağaza:** Trendyol (Satıcı: Erdemtk / PATEX)
+* **Satın Alma Linki:** [trendyol.com/genel-markalar/coroplast-8551-19-x-15-mt-siyah-tuylu-bez-bant-p-306226362](https://www.trendyol.com/genel-markalar/coroplast-8551-19-x-15-mt-siyah-tuylu-bez-bant-p-306226362)
+* **Sepet Tutarı:** **₺ 113,85 TL**
+* **Adet:** 1
+* **Toplam Tutar:** **113,85 TL**
+
+---
+
+### 9.5 Deyatech 2.8m Ağır Hizmet Kalibrasyon Standı / Tripod (1 Adet)
 * **Parça Adı:** Deyatech Light Stand 2.8m Paraflaş & Panel Taşıyıcı Ağır Hizmet Işık Ayağı
 * **Ürün Kodu:** `HB00000GKU69`
-* **Kullanım Amacı:** 4 kamera ve 3 LiDAR'ın birbirine göre milimetrik kalibrasyonunda CharuCo/AprilTag hedef panelini aracın karşısında titreşimsiz tutmak.
 * **Tedarikçi Mağaza:** Hepsiburada (Satıcı: Deyatech)
 * **Satın Alma Linki:** [hepsiburada.com/deyatech-light-stand-2-8cm-paraflash-tripod-softbox-tripod-isik-ayagi-pm-HB00000GKU69](https://www.hepsiburada.com/deyatech-light-stand-2-8cm-paraflash-tripod-softbox-tripod-isik-ayagi-pm-HB00000GKU69)
-* **Sepet Tutarı:** **₺ 1.299,00 TL** (KDV Dahil / Kargo Bedava)
+* **Sepet Tutarı:** **₺ 1.299,00 TL**
 * **Adet:** 1
 * **Toplam Tutar:** **1.299,00 TL**
 
 ---
 
-### 9.4 100x80 cm Mat Alüminyum Kompozit CharuCo / AprilTag Kalibrasyon Paneli (1 Adet)
+### 9.6 100x80 cm Mat Alüminyum Kompozit CharuCo / AprilTag Kalibrasyon Paneli (1 Adet)
 * **Parça Adı:** Özel CNC Kesim 3mm Alüminyum Dibond Levha + Yansıma Yapmayan Mat UV Baskı CharuCo/AprilTag Hedef Plakası
-* **Kullanım Amacı:** LiDAR nokta bulutu ile kamera piksellerini sıfır hatayla üst üste oturtmak (Extrinsic Calibration).
 * **Tedarik Şekli:** Yerel Profesyonel UV Dijital Baskı / Reklam İmalat
 * **Tahmini Bütçe:** **₺ 2.400,00 TL**
 * **Adet:** 1
@@ -270,24 +324,29 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 | **7** | Continental ARS 408-21 77GHz Radar (2x) | Alibaba Sepet ($1.180,27) | 59.345,46 TL |
 | **8** | Septentrio mosaic-go RTK Heading Modülü | e-komponent (Digi-Key TR) | 52.084,82 TL |
 | **9** | TOPGNSS TOP500 RTK Mantar Anten (2x) | Alibaba Sepet ($211,14) | 10.616,38 TL |
-| **10** | Teltonika RUTX50 Endüstriyel 5G Router | Hepsiburada (ESET TR) | 35.349,00 TL |
-| **11** | WaveShare 5-Port Gigabit DIN Ray Switch | Robotistan (TR) | 1.583,59 TL |
-| **12** | Digitus CAT 6A S-FTP Zırhlı Kablo (2x 10m) | Trendyol (NetworkTeknoloji) | 1.378,00 TL |
-| **13** | Interkom 12'li Kapaklı Sigorta Bloğu | Interkom Elektronik (TR) | 1.708,45 TL |
-| **14** | SIEGEN 300A Metal Akü Kesici Şalter | Trendyol (incirOto) | 519,00 TL |
-| **15** | ELO 12V 80A Toz Korumalı Güç Rölesi | ELO Ticaret (Resmi) | 1.252,80 TL |
-| **16** | Schneider Electric Acil Stop Butonu | Activ Elektrik (TR) | 128,72 TL |
-| **17** | Kvaser U100 CAN-FD USB Dönüştürücü | Elektronomi.com (TR) | 24.213,51 TL |
-| **18** | Drs Tuning Ioniq 5 Siyah Tavan Barı | Hepsiburada (TR) | 7.086,63 TL |
-| **19** | WaveShare 10.1" Dokunmatik Kokpit Ekranı | Trendyol (ERNPAZAR) | 21.118,35 TL |
-| **20** | Deyatech 2.8m Ağır Hizmet Kalibrasyon Ayağı | Hepsiburada (Deyatech) | 1.299,00 TL |
-| **21** | 100x80cm Mat CharuCo Kalibrasyon Levhası | Yerel UV İmalat | 2.400,00 TL |
-| 👉 | **A'DAN Z'YE TÜM DONANIM KİTİ TOPLAMI** | **21 Parçalık %100 Eksiksiz Full Kit** | **₺ 1.142.854,36 TL** |
+| **10** | **Elecbee LMR195 SMA Anten Kablosu (2x)** | **Elecbee.com TR** | **531,38 TL** |
+| **11** | Teltonika RUTX50 Endüstriyel 5G Router | Hepsiburada (ESET TR) | 35.349,00 TL |
+| **12** | WaveShare 5-Port Gigabit Switch | Robotistan (TR) | 1.583,59 TL |
+| **13** | Digitus CAT 6A Zırhlı Ağ Kablosu (2x 10m) | Trendyol (NetworkTeknoloji) | 1.378,00 TL |
+| **14** | Interkom 12'li Kapaklı Sigorta Bloğu | Interkom Elektronik (TR) | 1.708,45 TL |
+| **15** | **Mean Well DCW08A-12 DC-DC Regülatör** | **Hepsiburada (Endelkon)** | **1.403,86 TL** |
+| **16** | SIEGEN 300A Metal Akü Kesici Şalter | Trendyol (incirOto) | 519,00 TL |
+| **17** | ELO 12V 80A Toz Korumalı Güç Rölesi | ELO Ticaret (Resmi) | 1.252,80 TL |
+| **18** | Schneider Electric Acil Stop Butonu | Activ Elektrik (TR) | 128,72 TL |
+| **19** | Kvaser U100 CAN-FD USB Dönüştürücü | Elektronomi.com (TR) | 24.213,51 TL |
+| **20** | **Kvaser 00801-4 120Ω CAN Sonlandırıcı** | **Farnell TR (25,42 €)** | **1.710,96 TL** |
+| **21** | Drs Tuning Ioniq 5 Siyah Tavan Barı | Hepsiburada (TR) | 7.086,63 TL |
+| **22** | **IP68 Su Geçirmez Tavan Buat Kutusu** | **Trendyol (ERANOVA)** | **499,00 TL** |
+| **23** | **Coroplast 8551 Otomotiv Bez Bant** | **Trendyol (Erdemtk)** | **113,85 TL** |
+| **24** | WaveShare 10.1" Dokunmatik Kokpit Ekranı | Trendyol (ERNPAZAR) | 21.118,35 TL |
+| **25** | Deyatech 2.8m Ağır Hizmet Kalibrasyon Ayağı | Hepsiburada (Deyatech) | 1.299,00 TL |
+| **26** | 100x80cm Mat CharuCo Kalibrasyon Levhası | Yerel UV İmalat | 2.400,00 TL |
+| 👉 | **A'DAN Z'YE TÜM DONANIM KİTİ TOPLAMI** | **26 Parçalık %100 Eksiksiz Full Kit** | **₺ 1.148.120,43 TL** |
 
 ---
 
 * 🚗 **Hyundai Ioniq 5 Test Aracı (Sahibinden 2024 Advance):** **~1.940.000,00 TL**
-* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ PROJESİ:** **₺ 3.082.854,36 TL (~3.08 Milyon TL!)**
+* 🏆 **ANAHTAR TESLİM SEVİYE 4 ÇALIŞIR ROBOTAKSİ PROJESİ:** **₺ 3.088.120,43 TL (~3.08 Milyon TL!)**
 
 ---
 
