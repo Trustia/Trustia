@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
 import InstitutionalAccreditations from "@/components/InstitutionalAccreditations";
+import RobotaxiShowcase from "@/components/RobotaxiShowcase";
 import GalleryShowcase from "@/components/GalleryShowcase";
 import SupportedPlatformsShowcase from "@/components/SupportedPlatformsShowcase";
 import FeatureVideo from "@/components/FeatureVideo";
@@ -59,7 +60,10 @@ export default function Home() {
       {/* 3. Official Institutional Accreditations & Incubator Ecosystem (BTM, Teknopark Istanbul, YC, SSB) */}
       <InstitutionalAccreditations />
 
-      {/* 4. 5 Real Photos Gallery Showcase */}
+      {/* 4. Sovereign Level 4 Robotaxi Platform Showcase (Hyundai Ioniq 5 E-GMP) */}
+      <RobotaxiShowcase />
+
+      {/* 5. 5 Real Photos Gallery Showcase */}
       <GalleryShowcase />
 
       {/* 4. Supported Vehicles & Integration Platforms Matrix */}
