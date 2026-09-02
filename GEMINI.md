@@ -79,6 +79,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇹🇷 **Boğaziçi Ventures:** Başvuruldu.
   * 🇳🇱/🇬🇧 **DOMiNO Ventures (Amsterdam/Londra):** Başvuruldu.
   * 🇹🇷 **Türk Telekom Ventures (PİLOT 14. Dönem):** Başvuruldu.
+  * 🇹🇷 **İş Girişim Sermayesi (İş Bankası GSYO - BIST: ISGSY):** 10M-20M TL ($500k) yatırımlık başvuru ve Hyundai Ioniq 5 Seviye-4 Fotoğraflı Master Planı ile eksiksiz tamamlandı (2 Eylül 2026 - Ekran Görüntüsüyle Onaylandı).
   * 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası GSYF):** Başvuruldu.
   * 🇹🇷 **ŞirketOrtağım Melek Yatırım Ağı:** Başvuruldu.
   * 🇹🇷 **TRAngels Melek Yatırım Ağı:** Başvuruldu.
