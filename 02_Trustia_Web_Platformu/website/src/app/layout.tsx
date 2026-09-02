@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu",
     description:
-      "Milli Çift Amaçlı Otonomi Mimarisi: V2X Akıllı Şehir, 3D SLAM, 5 Saniyelik Yörünge Yapay Zekası ve 1.301 Doğrulanmış Test. İTO BTM & Teknopark İstanbul Destekli.",
+      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM, 5 Saniyelik Yörünge Yapay Zekası ve 1.301 Doğrulanmış Test. İTO BTM & SSB Akreditasyonlu.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -80,10 +80,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://trustia.com.tr/og-image.jpg",
+        url: "https://trustia.com.tr/og-image.jpg?v=2026",
         width: 1200,
         height: 630,
-        alt: "TRUSTIA AI — Level 4 Autonomous Systems & Defense Robotics (1200x630)",
+        alt: "TRUSTIA AI — Level 4 Autonomous Robotaxi & Defense Robotics",
         type: "image/jpeg",
       },
     ],
@@ -92,8 +92,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core",
     description:
-      "Dual-use Level 4 sovereign autonomy software featuring V2X smart infrastructure, 3D SLAM, predictive trajectory AI, and 1,301 verified tests.",
-    images: ["https://trustia.com.tr/og-image.jpg"],
+      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests.",
+    images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
   icons: {
