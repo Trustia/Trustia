@@ -61,7 +61,7 @@ class NumberedCanvas(canvas.Canvas):
         
         self.setFont('Arial', 7.5)
         self.setFillColor(colors.HexColor('#64748B'))
-        self.drawString(14*mm, 10*mm, "TRUSTIA TEKNOLOJİ A.Ş.  •  Gizli & Kurumsal Ar-Ge Dokümanı  •  Kod: TRUSTIA-IONIQ5-L4-2026")
+        self.drawString(14*mm, 10*mm, "TRUSTIA AI  •  Otonom Mobilite Teknolojileri  •  İTO BTM Fulya Kampüsü  •  Kod: TRUSTIA-IONIQ5-L4-2026")
         
         page_str = f"Sayfa {self._pageNumber} / {page_count}"
         self.drawRightString(196*mm, 10*mm, page_str)
@@ -116,7 +116,7 @@ def create_master_pdf_with_photos(output_paths):
     header_data = [
         [
             Paragraph("<b>TRUSTIA AI</b><br/><font size=6.5 color='#0284C7'>OTONOM SİSTEMLER & DERİN TEKNOLOJİ</font>", body_style),
-            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 31 Ağustos 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
+            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 2 Eylül 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
         ]
     ]
     t_head = Table(header_data, colWidths=[100*mm, 82*mm])
@@ -560,7 +560,7 @@ def create_master_pdf_with_photos(output_paths):
     # Sign-off Box
     sign_data = [
         [
-            Paragraph("<b>HAZIRLAYAN & SİSTEM MİMARI</b><br/>Murat Furkan Bayram<br/><font size=5.5 color='#64748B'>Kurucu & CEO / Sistem Mimarı<br/>Trustia Teknoloji A.Ş.</font>", body_style),
+            Paragraph("<b>HAZIRLAYAN & SİSTEM MİMARI</b><br/>Murat Furkan Bayram<br/><font size=5.5 color='#64748B'>Kurucu & CEO / Sistem Mimarı<br/>Trustia AI</font>", body_style),
             Paragraph("<b>DONANIM & TEST LİDERİ</b><br/>Denizcan Özcan<br/><font size=5.5 color='#64748B'>Donanım & Entegrasyon Mühendisi<br/>ASELSAN & TEKNOFEST Robotaksi Finalisti</font>", body_style),
             Paragraph("<b>KURUMSAL ONAY & AKREDİTASYON</b><br/>İTO BTM & SSB Akredite<br/><font size=5.5 color='#64748B'>SSB 100/100 • KOSGEB İleri Girişimci<br/>TÜBİTAK ARBİS Milli Araştırmacı</font>", body_style)
         ]
@@ -586,7 +586,9 @@ def create_master_pdf_with_photos(output_paths):
         print(f"Copied to: {extra_path}")
 
 if __name__ == '__main__':
-    dest1 = r"C:\Users\Murat\Desktop\Çıktı\06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
-    dest2 = r"c:\Users\Murat\Desktop\Trustia\04_Yatirimci_Sunumlari_ve_Is_Planlari\Teknik_ve_Organizasyon\06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
+    dest1 = r"C:\Users\Murat\Desktop\Çıktı\Trustia_AI_Hyundai_Ioniq5_Seviye4_Fotografli_Master_Plan.pdf"
+    dest2 = r"C:\Users\Murat\Desktop\Çıktı\08_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
+    dest3 = r"c:\Users\Murat\Desktop\Trustia\04_Yatirimci_Sunumlari_ve_Is_Planlari\Teknik_ve_Organizasyon\06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
+    dest4 = r"c:\Users\Murat\Desktop\Trustia\04_Yatirimci_Sunumlari_ve_Is_Planlari\Pitch_Decks\Trustia_AI_Hyundai_Ioniq5_Fotografli_Master_Plan.pdf"
     
-    create_master_pdf_with_photos([dest1, dest2])
+    create_master_pdf_with_photos([dest1, dest2, dest3, dest4])
