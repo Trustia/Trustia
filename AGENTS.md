@@ -70,6 +70,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇺🇸 **Bronze Valley VC & Angel Fund (Gust):** $500k Pre-Seed SAFE ($5M Cap, %20 İndirim) şartlarıyla başvuruldu.
   * 🇺🇸 **Future Mindset (Gelecek Odaklı Zihniyet Fonu - Gust):** Vizyon başvurusu gönderildi.
   * 🇺🇸 **Hustle Fund (Silikon Vadisi):** Çok adımlı form üzerinden eksiksiz başvuruldu.
+  * 🇺🇸 **Boost VC ($500k Pre-Seed / Adam Draper):** $500,000 nakit yatırım ve San Mateo robotik hızlandırma başvurusu İngilizce Master Pitch Deck ve Hyundai Ioniq 5 İngilizce Fotoğraflı Master Plan ile eksiksiz tamamlandı (2 Eylül 2026 - Ekran Görüntüsüyle Onaylandı).
   * 🇺🇸 **Founders, Inc. (f.inc - San Francisco Fort Mason Blueprint II):** Hesap açıldı, giriş yapıldı.
   * 🇹🇷 **TechOne VC (Smart Capital Deep Tech):** 28 adımlı başvuru onaylandı.
   * 🇹🇷 **Revo Capital ($100M VC Fonu):** Başvuruldu.
