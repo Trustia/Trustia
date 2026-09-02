@@ -1,11 +1,11 @@
 # 🛡️ TRUSTIA — Dual-Use Autonomous Driving Stack & Tactical C2 Mission Control (v2.0)
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
-[![Tests Passing](https://img.shields.io/badge/Tests-1%2C281%20Passing%20(100%25)-brightgreen.svg?logo=pytest&logoColor=white)]()
+[![Tests Passing](https://img.shields.io/badge/Tests-1%2C301%20Passing%20(100%25)-brightgreen.svg?logo=pytest&logoColor=white)]()
 [![Architecture](https://img.shields.io/badge/Architecture-Dual--Use%20Autonomy%20(UGV%20%26%20Robotaxi)-blue.svg)]()
 [![Standards](https://img.shields.io/badge/Standards-NATO%20STANAG%204586%20%7C%20SAE%20AS6091%20JAUS-red.svg)]()
-[![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-SAE%20J1939%20%7C%20CAN%202.0B-orange.svg)]()
-[![Government](https://img.shields.io/badge/Accredited-KOSGEB%20%7C%20SSB%20(100%2F100)%20%7C%20T%C3%9CB%C4%B0TAK-purple.svg)]()
+[![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-SAE%20J1939%20%7C%20CAN%202.0B%20%7C%20CAN--FD-orange.svg)]()
+[![Government](https://img.shields.io/badge/Accredited-KOSGEB%20%7C%20SSB%20(100%2F100)%20%7C%20T%C3%9CB%C4%B0TAK%20%7C%20BTM-purple.svg)]()
 
 > **Production-grade, hardware-agnostic, dual-use autonomous vehicle software stack engineered for tactical defense unmanned ground vehicles (UGVs) and next-generation civilian passenger mobility operating in GPS-denied and high-density urban environments.**
 
@@ -13,21 +13,32 @@
 
 ## 🌍 Executive Summary & Global Venture Standing
 
-TRUSTIA is a full-stack, software-defined autonomous mobility platform built from the ground up with **zero black-box dependencies**. Designed with an AI-native agentic software engineering pipeline, TRUSTIA delivers industrial-grade stability validated by **1,281 automated unit and integration tests (100% pass rate)**.
+TRUSTIA is a full-stack, software-defined autonomous mobility platform built from the ground up with **zero black-box dependencies**. Designed with an AI-native agentic software engineering pipeline, TRUSTIA delivers industrial-grade stability validated by **1,301 automated unit and integration tests (100% pass rate)**.
 
 ### 🏛️ Global Tier-1 Accelerator & Venture Portfolio (2026)
 
-| Tier-1 Global Program | Location | Investment / Grant Package | Formal Status |
+| Tier-1 Global / National Program | Location | Investment / Grant Package | Formal Status |
 | :--- | :--- | :--- | :--- |
-| 🇺🇸 **Y Combinator** | Silicon Valley | **$500,000 USD SAFE** ($5M Cap) | ⏳ Active Batch Review |
+| 🇺🇸 **LAUNCH & The Syndicate (Jason Calacanis)** | Silicon Valley | **$100,000 – $500,000 USD** |  **Officially Submitted & Pitch Track** |
+| 🇺🇸 **Launchpad 2026 (1752 Ventures)** | Santa Monica, CA | **$100,000 USD Net Cash** |  **Officially Submitted & Confirmed** |
+| 🇺🇸 **Bronze Valley VC & Angel Network** | United States | **$500,000 USD SAFE ($5M Cap)** |  **Officially Submitted & Confirmed** |
+| 🇺🇸 **Hustle Fund** | Silicon Valley | **$50,000 – $150,000 USD Seed** |  **Officially Submitted & Confirmed** |
+| 🇺🇸 **Founders, Inc. (Blueprint II)** | San Francisco (Fort Mason)| **Pre-Seed & Residency** |  **Campus Account Activated** |
+| 🇹🇷 **Startups.watch** | Turkey & Global | **Verified Deep-Tech Ecosystem** | 🥇 **#1 Top Rank Homepage Verified** |
+| 🇹🇷 **TechOne VC (Smart Capital)** | Istanbul / Global | **$100,000 – $500,000 USD** |  **Officially Submitted & Confirmed** |
+| 🇹🇷 **Revo Capital ($100M Fund)** | Istanbul / Amsterdam | **$500,000 – $2M USD Seed** |  **Officially Submitted & Confirmed** |
+| 🇹🇷 **APY Ventures (Bilişim Vadisi)** | Gebze / Istanbul | **Otonomi & Mobilite GSYF** |  **Officially Submitted & Confirmed** |
+| 🇹🇷 **Finberg (Fiba Grubu)** | Istanbul | **Finberg Seed Capital** |  **Officially Submitted & Confirmed** |
+| 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası)** | Istanbul | **İş Bankası GSYF Seed** |  **Officially Submitted & Confirmed** |
+| 🇹🇷 **Inveo Ventures & Boğaziçi Ventures** | Istanbul | **Deep Tech Equity Investment** |  **Officially Submitted & Confirmed** |
+| 🇳🇱 **DOMiNO Ventures** | Amsterdam / London / SF | **$200,000 – $500,000 USD** |  **Officially Submitted & Confirmed** |
+| 🇺🇸 **Y Combinator** | Silicon Valley | **$500,000 USD SAFE** ($5M Cap) | ⏳ Winter 2027 Draft Ready |
 | 🤖 **SOSV / HAX** | San Francisco / Newark | **$250,000 USD Net Cash** |  **Officially Submitted & Confirmed** |
 | ⚡ **Techstars** | London / Global | **$220,000 USD Package** | ⏳ Active Batch Review |
 | 🇺🇸 **500 Global (500 Startups)** | Palo Alto / SF | **$150,000 USD (Batch 37)** |  **Officially Submitted & Confirmed** |
 | 🚀 **Alchemist Accelerator** | Silicon Valley | **$125,000 USD SAFE** |  **Officially Submitted & Confirmed** |
 | 🌐 **Plug and Play Tech Center** | Sunnyvale / Turin | **Enterprise & NATO DualTech** |  **Officially Submitted & Confirmed** |
-| 🌍 **Antler Global** | London / Dubai / SF | **$150,000 – $400,000 USD** | ⏳ Active Batch Review |
-| 🛡️ **NATO DIANA** | Allied Nations | **€400,000 Non-Dilutive Grant** |  **Master Application Dossier Ready** |
-| 🏛️ **İTO BTM (Polat Tower)** | Istanbul, Turkey | **7/24 Incubation & Angel Hub** | ✅ **Admitted & Contract Signed** |
+| 🏛️ **İTO BTM (Polat Tower)** | Fulya / Istanbul | **Pre-Incubation & Investor Hub** | ✅ **Admitted & Contract Signed** |
 | 🏢 **Teknopark Istanbul** | Pendik / Kurtköy | **Defense Tech Incubation (Cube GO)** | ⏳ **Candidate Defense Tech Firm** |
 
 ---
@@ -159,7 +170,7 @@ Trustia/
 ### 1. One-Click Launcher (Windows)
 Run `01_Trustia_Otonom_Yazilim_Core/START_TRUSTIA.bat` to launch the mission control menu:
 * `[1]` **Launch Tactical C2 Desktop Console** (Military UGV & Robotaxi GUI)
-* `[2]` **Run 1,281-Test Automated Verification Suite** (100% Pass Rate)
+* `[2]` **Run 1,301-Test Automated Verification Suite** (100% Pass Rate)
 * `[3]` **Run AI Threat & Obstacle Detection Engine** (IED/Mine/Pedestrian)
 * `[4]` **Run Native Architecture & NATO STANAG 4586 Compliance Audit**
 
@@ -170,7 +181,7 @@ cd 01_Trustia_Otonom_Yazilim_Core
 # Launch Tactical C2 GUI Console
 python trustia_cli.py gui
 
-# Run 1,281 Automated Tests
+# Run 1,301 Automated Tests
 pytest tests/ -v
 
 # Run AI Threat Detection Engine
@@ -184,20 +195,23 @@ python trustia_cli.py audit
 
 ## 🎯 Target Milestones & Pre-Seed Deployment Plan
 
-* **Milestone 1 (Complete):** 1,281-test verified full-stack autonomy software core & 400Hz ESKF GPS-denied engine.
-* **Milestone 2 (Pre-Seed Phase):** Acquire drive-by-wire vehicle platform (commercial chassis) and integrate sensor suite (LiDAR, RGB-D, CAN-Bus interface).
-* **Milestone 3 (Field Deployment):** Deploy autonomous passenger robotaxi pilot and tactical defense UGV field demonstrations.
+* **Milestone 1 (Complete):** 1,301-test verified full-stack autonomy software core & 400Hz ESKF GPS-denied engine (16,000+ LOC).
+* **Milestone 2 (Pre-Seed Phase):** Turnkey sensor retrofit integration on Hyundai Ioniq 5 E-GMP platform (Ouster OS2-128 LiDAR, Livox Mid-360, Continental Radar, NVIDIA Jetson AGX Orin 64GB, Kvaser CAN-FD DBW).
+* **Milestone 3 (Field Deployment):** Deploy autonomous passenger robotaxi pilot in Istanbul and tactical defense UGV field demonstrations.
 
 ---
 
-## 📞 Founder & Corporate Contact
+## 📞 Executive Leadership & Corporate Contact
 
-* **Founder & CEO:** Murat Furkan Bayram
-* **Organization:** Trustia AI (*Trustia Autonomous Defense Systems*)
+* **Founder & CEO / Systems Architect:** Murat Furkan Bayram (80% Equity)
+* **Co-Founder & COO / Legal Representative:** Doğukan Bayram (20% Equity, Board Chairman)
+* **Lead Hardware & Robotics Engineer:** Denizcan Özcan (ASELSAN Candidate Pool, TEKNOFEST Robotaxi Finalist, İÜC EEE 3.44 GPA)
+* **Incubation HQ:** Istanbul Chamber of Commerce BTM Fulya Campus (Polat Tower Residence No:10, Besiktas / Istanbul)
 * **Official Website:** [https://trustia.com.tr](https://trustia.com.tr)
-* **Email:** [kariyer@trustia.com.tr](mailto:kariyer@trustia.com.tr) | [muratbyrm009@gmail.com](mailto:muratbyrm009@gmail.com)
+* **Investor Pitch Deck:** [https://trustia.com.tr/Trustia_AI_Investor_Deck.pdf](https://trustia.com.tr/Trustia_AI_Investor_Deck.pdf)
+* **Email:** [kariyer@trustia.com.tr](mailto:kariyer@trustia.com.tr) | [iletisim@trustia.com.tr](mailto:iletisim@trustia.com.tr)
+* **Phone:** +90 537 064 0460
 * **LinkedIn:** [linkedin.com/in/trustia](https://www.linkedin.com/in/trustia)
-* **Incubation:** Istanbul Chamber of Commerce BTM (Polat Tower) & Teknopark Istanbul
 
 ---
 *© 2026 Trustia AI. All rights reserved. Confidential & Proprietary.*

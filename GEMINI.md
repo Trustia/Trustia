@@ -51,12 +51,38 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 ---
 
 ## 🧠 KALICI PROJE HAFIZASI VE GÜNCEL DURUM (PERMANENT CONTEXT)
-* **Kurucu & Lider:** Murat Furkan Bayram (17 yaşında, Kurucu & CEO / Sistem Mimarı, LinkedIn: `https://www.linkedin.com/in/trustia`).
-* **Resmi Tesciller:** SSB 100/100 Tam Puan (`L2zPtN4X1ZJ`), KOSGEB İleri Girişimci (`KSB01UGE0115153370`), TÜBİTAK ARBİS (`TBTK-0229-6571`), ASELSAN Tedarikçi Portalı, İTO BTM Ön Kuluçka 2026 II. Dönem Sözleşmesi (Fulya Polat Tower Rezidans).
-* **Yazılım & Test:** 16.000 satır özgün deterministik otonomi mimarisi, 1.301/1.301 otomatik birim ve entegrasyon testi (%100 Başarı).
-* **Küresel & Yerel Başvurular:** Bilkent Cyberpark GDP (30 Ağustos Başvuruldu), Z Fellows ($10k Hibe & Silikon Vadisi - 29 Ağustos Başvuruldu), Workup by Türkiye İş Bankası (29 Ağustos Başvuruldu), Emergent Ventures ($100k Hibe - 29 Ağustos Başvuruldu), NATO İnovasyon Fonu (NIF €1B - 29 Ağustos Başvuruldu), Fark Labs TEKMER Mobilite & Yatırım (29 Ağustos Başvuruldu), Sabancı Üniversitesi SUCool & Inovent (29 Ağustos Başvuruldu), TİM-TEB Girişim Evi (29 Ağustos Başvuruldu), Shield Capital (Savunma & Otonomi Fonu - 29 Ağustos Başvuruldu), Starburst Aerospace & Defense (29 Ağustos Başvuruldu), Seedcamp ($350k-$1M Tohum Yatırım - 29 Ağustos Başvuruldu), a16z Speedrun ($1M Yatırım - 29 Ağustos Başvuruldu), Thiel Fellowship (250.000$ Hibe - 29 Ağustos Başvuruldu), Soma Fellows (Soma Capital $100k-$2M Fonu - 29 Ağustos Başvuruldu), Techstars (Anywhere & Londra - 25 Ağustos) ve Y Combinator (YC Kış 2027 Taslak Hazır - 25 Ekim gönderilecek).
-* **Fuar:** TURKCOMPOSITE 2026 / BTM Startup Village Fuarı (21-23 Ekim 2026) başvurusu tamamlandı.
-* **Mühendislik Havuzu:** Denizcan Özcan (ASELSAN & TEKNOFEST Robotaksi Finalisti, İÜC EEE 4. Sınıf, 3.44 GPA) 1. Öncelikli Mühendis Havuzunda.
+* **Kurucu & Lider:** Murat Furkan Bayram (17 yaşında, Kurucu & CEO / Sistem Mimarı, %80 Hisse, TC: 59476566862, LinkedIn: `https://www.linkedin.com/in/trustia`).
+* **Kurucu Ortak & COO / Hukuki Temsilci:** Doğukan Bayram (%20 Hisse, Reşit Kurucu Ortak & Şirket Müdürü / Yönetim Kurulu Başkanı).
+* **Mühendislik Havuzu:** Denizcan Özcan (ASELSAN Aday Mühendis Havuzu & TEKNOFEST Robotaksi Finalisti, İÜC EEE 4. Sınıf, 3.44 GPA) 1. Öncelikli Donanım ve Entegrasyon Mühendisi.
+* **Resmi Tesciller:** 
+  * SSB Savunma Sanayii Başkanlığı 100/100 Tam Puan (`L2zPtN4X1ZJ`)
+  * KOSGEB İleri Girişimci Tescili (`KSB01UGE0115153370`)
+  * TÜBİTAK ARBİS Milli Araştırmacı Sicili (`TBTK-0229-6571`)
+  * ASELSAN Tedarikçi Portalı Onaylı Girişimi
+  * İTO BTM Fulya Kampüsü (Polat Tower Rezidans No:10 Beşiktaş) 2026-II. Dönem Sözleşmeli Yerleşik Girişimi
+  * Startups.watch Resmi Doğrulanmış Girişim (Ana Sayfa #1 Numara Sıralama)
+* **Yazılım & Test:** 16.000 satır özgün deterministik otonomi mimarisi (Hybrid A*, 3D NDT LiDAR SLAM, Pure Pursuit), 1.301/1.301 otomatik birim ve entegrasyon testi (%100 Başarı).
+* **Donanım Platformu:** Hyundai Ioniq 5 E-GMP Otonom Seviye-4 Dönüşüm Kiti (Ouster OS2-128 LiDAR, 2x Livox Mid-360, Continental Radarlar, Septentrio RTK GNSS, NVIDIA Jetson AGX Orin 64GB, Kvaser U100 CAN-FD).
+* **Küresel Melek & Fon Başvuruları (Eylül 2026 - Tümü Ekran Görüntüsüyle Onaylandı):**
+  * 🇺🇸 **LAUNCH & The Syndicate (Jason Calacanis):** $100k-$500k çek ve 14-15 Eylül canlı sunum havuzuna başvuruldu.
+  * 🇺🇸 **Launchpad 2026 (1752 Ventures / Santa Monica):** $100,000 nakit yatırım sanal programına başvuruldu.
+  * 🇺🇸 **Bronze Valley VC & Angel Fund (Gust):** $500k Pre-Seed SAFE ($5M Cap, %20 İndirim) şartlarıyla başvuruldu.
+  * 🇺🇸 **Future Mindset (Gelecek Odaklı Zihniyet Fonu - Gust):** Vizyon başvurusu gönderildi.
+  * 🇺🇸 **Hustle Fund (Silikon Vadisi):** Çok adımlı form üzerinden eksiksiz başvuruldu.
+  * 🇺🇸 **Founders, Inc. (f.inc - San Francisco Fort Mason Blueprint II):** Hesap açıldı, giriş yapıldı.
+  * 🇹🇷 **TechOne VC (Smart Capital Deep Tech):** 28 adımlı başvuru onaylandı.
+  * 🇹🇷 **Revo Capital ($100M VC Fonu):** Başvuruldu.
+  * 🇹🇷 **APY Ventures (Bilişim Vadisi Otonomi Fonu):** Başvuruldu.
+  * 🇹🇷 **Finberg (Fiba Grubu VC):** Başvuruldu.
+  * 🇹🇷 **Inveo Ventures:** Başvuruldu.
+  * 🇹🇷 **Boğaziçi Ventures:** Başvuruldu.
+  * 🇳🇱/🇬🇧 **DOMiNO Ventures (Amsterdam/Londra):** Başvuruldu.
+  * 🇹🇷 **Türk Telekom Ventures (PİLOT 14. Dönem):** Başvuruldu.
+  * 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası GSYF):** Başvuruldu.
+  * 🇹🇷 **ŞirketOrtağım Melek Yatırım Ağı:** Başvuruldu.
+  * 🇹🇷 **TRAngels Melek Yatırım Ağı:** Başvuruldu.
+  * 🌍 **Önceki Başvurular:** Bilkent Cyberpark GDP, Z Fellows ($10k), Workup İş Bankası, Emergent Ventures ($100k), NATO NIF (€1B), Fark Labs, Sabancı SUCool, TİM-TEB, Shield Capital, Starburst, Seedcamp, a16z Speedrun, Thiel Fellowship ($250k), Soma Fellows ($100k-$2M), Techstars, Y Combinator (Kış 2027).
 * **BTM Randevusu:** 4 Eylül 2026 Cuma 15:00 - 15:30 (İTO BTM Fulya Kampüsü, Yatırımcı İlişkileri Ofisi Birebir Danışmanlık - Murat & Abisi).
+* **Fuar:** TURKCOMPOSITE 2026 / BTM Startup Village Fuarı (21-23 Ekim 2026) başvurusu tamamlandı.
 * **Masaüstü Dosyası:** `C:\Users\Murat\Desktop\Çıktı` altında 5 adet resmi, sade Türkçe A4 PDF dosyası hazır.
 

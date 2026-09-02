@@ -68,6 +68,12 @@ export default function AboutPage() {
       status: "Resmi Onaylı"
     },
     {
+      org: lang === "tr" ? "Startups.watch Girişimcilik Platformu" : "Startups.watch Ecosystem",
+      reg: "Ana Sayfa #1",
+      type: lang === "tr" ? "Resmi Doğrulanmış Girişim Listesi" : "Verified Deep-Tech Venture",
+      status: "Doğrulandı"
+    },
+    {
       org: lang === "tr" ? "KOSGEB Başkanlığı" : "KOSGEB Entrepreneurship Agency",
       reg: "KSB01UGE0115153370",
       type: lang === "tr" ? "İleri Girişimci Tescili & Ar-Ge Desteği" : "Advanced Entrepreneur Accreditation",
@@ -176,12 +182,49 @@ export default function AboutPage() {
                 <div className="font-bold text-white mt-0.5">İleri Girişimci</div>
               </div>
               <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
-                <div className="text-slate-500 text-[9px] uppercase">TÜBİTAK</div>
-                <div className="font-bold text-white mt-0.5">ARBİS Sicili</div>
+                <div className="text-slate-500 text-[9px] uppercase">STARTUPS.WATCH</div>
+                <div className="font-bold text-white mt-0.5">#1 Doğrulandı</div>
               </div>
               <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
                 <div className="text-slate-500 text-[9px] uppercase">İTO BTM</div>
                 <div className="font-bold text-white mt-0.5">Fulya Kampüs</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Core Leadership & Engineering Team Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+            <div className="p-4 rounded-xl bg-[#07090d] border border-slate-800/80 flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
+                <User className="w-5 h-5" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                  {lang === "tr" ? "KURUCU ORTAK & COO / ŞİRKET MÜDÜRÜ" : "CO-FOUNDER & COO / OPERATIONS"}
+                </div>
+                <h3 className="text-sm font-bold text-white">Doğukan Bayram</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {lang === "tr"
+                    ? "Reşit kurucu ortak ve yetkili şirket müdürü. Resmi sözleşmeler, kurumsal yönetim, fon ilişkileri ve hukuki temsil süreçlerini idare etmektedir."
+                    : "Authorized corporate manager and COO. Oversees corporate governance, commercial contracting, investor operations, and legal representation."}
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-[#07090d] border border-slate-800/80 flex items-start gap-3.5">
+              <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
+                <Cpu className="w-5 h-5" />
+              </div>
+              <div className="space-y-1">
+                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                  {lang === "tr" ? "BAŞ DONANIM & ROBOTİK ENTEGRASYON" : "LEAD HARDWARE & ROBOTICS INTEGRATION"}
+                </div>
+                <h3 className="text-sm font-bold text-white">Denizcan Özcan</h3>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {lang === "tr"
+                    ? "TEKNOFEST Robotaksi Finalisti ve ASELSAN mühendislik havuzu üyesi. CAN-FD Drive-by-Wire, LiDAR/Radar kablolama ve araç gövde entegrasyonundan sorumludur."
+                    : "TEKNOFEST Autonomous Robotaxi Finalist, ASELSAN engineering pool. Specializes in CAN-FD DBW actuation, LiDAR/Radar sensor harness, and EV integration."}
+                </p>
               </div>
             </div>
           </div>
