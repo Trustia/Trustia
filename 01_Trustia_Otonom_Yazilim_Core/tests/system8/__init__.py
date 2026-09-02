@@ -1,1 +1,0 @@
-"""Sistem 8 — Araç/Sensör entegrasyonu."""
