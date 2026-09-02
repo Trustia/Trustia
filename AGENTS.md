@@ -82,9 +82,9 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇹🇷 **İş Girişim Sermayesi (İş Bankası GSYO - BIST: ISGSY):** 10M-20M TL ($500k) yatırımlık başvuru ve Hyundai Ioniq 5 Seviye-4 Fotoğraflı Master Planı ile eksiksiz tamamlandı (2 Eylül 2026 - Ekran Görüntüsüyle Onaylandı).
   * 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası GSYF):** Başvuruldu.
   * 🇹🇷 **ŞirketOrtağım Melek Yatırım Ağı:** Başvuruldu.
-  * 🇹🇷 **TRAngels Melek Yatırım Ağı:** Başvuruldu.
+  * 🇹🇷 **Martı Technologies (NYSE: MRT / Oğuz Alper Öktem):** Martı TAG "Türkiye Otonom Araç İttifakı" kapsamında Seviye-4 Robotaksi pilotu teklifi ve Executive One-Pager ile doğrudan LinkedIn InMail üzerinden ulaşıldı (2 Eylül 2026).
   * 🌍 **Önceki Başvurular:** Bilkent Cyberpark GDP, Z Fellows ($10k), Workup İş Bankası, Emergent Ventures ($100k), NATO NIF (€1B), Fark Labs, Sabancı SUCool, TİM-TEB, Shield Capital, Starburst, Seedcamp, a16z Speedrun, Thiel Fellowship ($250k), Soma Fellows ($100k-$2M), Techstars, Y Combinator (Kış 2027).
 * **BTM Randevusu:** 4 Eylül 2026 Cuma 15:00 - 15:30 (İTO BTM Fulya Kampüsü, Yatırımcı İlişkileri Ofisi Birebir Danışmanlık - Murat & Abisi).
 * **Fuar:** TURKCOMPOSITE 2026 / BTM Startup Village Fuarı (21-23 Ekim 2026) başvurusu tamamlandı.
-* **Masaüstü Dosyası:** `C:\Users\Murat\Desktop\Çıktı` altında 5 adet resmi, sade Türkçe A4 PDF dosyası hazır.
+* **Masaüstü Dosyası:** `C:\Users\Murat\Desktop\Çıktı` altında 10 adet 2 Eylül 2026 güncel, kurumsal A4 PDF dosyası (Hyundai Ioniq 5 Fotoğraflı Master Plan, Master Pitch Deck, One-Pager, Finansal Model, BMC, CV'ler) hazır.
 
