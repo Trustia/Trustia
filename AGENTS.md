@@ -84,6 +84,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası GSYF):** Başvuruldu.
   * 🇹🇷 **ŞirketOrtağım Melek Yatırım Ağı:** Başvuruldu.
   * 🇹🇷 **Martı Technologies (NYSE: MRT / Oğuz Alper Öktem):** Martı TAG "Türkiye Otonom Araç İttifakı" kapsamında Seviye-4 Robotaksi pilotu teklifi ve Executive One-Pager ile doğrudan LinkedIn InMail üzerinden ulaşıldı (2 Eylül 2026).
+  * 🇹🇷 **Dijitalpark Teknokent (Çekmeköy / Türk-Alman Üniv.):** Ön Kuluçka başvurusu (Otomotiv Tasarımı ve Mühendislik / Seviye-4 Otonom Dönüşüm Kiti) eksiksiz tamamlandı (2 Eylül 2026).
   * 🌍 **Önceki Başvurular:** Bilkent Cyberpark GDP, Z Fellows ($10k), Workup İş Bankası, Emergent Ventures ($100k), NATO NIF (€1B), Fark Labs, Sabancı SUCool, TİM-TEB, Shield Capital, Starburst, Seedcamp, a16z Speedrun, Thiel Fellowship ($250k), Soma Fellows ($100k-$2M), Techstars, Y Combinator (Kış 2027).
 * **BTM Randevusu:** 4 Eylül 2026 Cuma 15:00 - 15:30 (İTO BTM Fulya Kampüsü, Yatırımcı İlişkileri Ofisi Birebir Danışmanlık - Murat & Abisi).
 * **Fuar:** TURKCOMPOSITE 2026 / BTM Startup Village Fuarı (21-23 Ekim 2026) başvurusu tamamlandı.
