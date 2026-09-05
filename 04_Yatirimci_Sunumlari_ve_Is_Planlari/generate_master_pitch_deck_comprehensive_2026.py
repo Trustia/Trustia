@@ -232,10 +232,34 @@ def generate_master_dossier(out_path):
     # SAYFA 1: MASTER KAPAK & YÖNETİCİ BRİFİNGİ
     story.append(Paragraph("TRUSTIA AI — MASTER YATIRIMCI VE TEKNİK DOSYASI (2026)", styles['Title']))
     story.append(Paragraph("Elektrikli Araçlar İçin Tak-Çalıştır Seviye-4 Otonomi Kiti, Deterministik Seyrüsefer Mimarisi & Çok Sektörlü Uygulamalar", styles['Subtitle']))
-    story.append(HRFlowable(width="100%", thickness=1.5, color=C_SECONDARY, spaceBefore=0, spaceAfter=5))
+    story.append(HRFlowable(width="100%", thickness=1.5, color=C_SECONDARY, spaceBefore=0, spaceAfter=4))
+
+    # ULUSAL BASIN & MEDYA ONAYI BANNERI (EGİRİŞİM ÖZEL MANŞETİ)
+    media_banner_data = [
+        [
+            Paragraph(
+                "<b>📰 GÜNCEL BASIN VE MEDYA MANŞETİ (4 EYLÜL 2026 — EGİRİŞİM):</b><br/>"
+                "Trustia AI, Türkiye'nin lider girişimcilik ve teknoloji yayını <b>egirişim</b>'de resmi manşet haberi olarak yer almıştır:<br/>"
+                "<b>«Elektrikli araçları Seviye-4 otonom platformlara dönüştürmeyi hedefleyen girişim: Trustia AI»</b> "
+                "<font color='#0284C7'>(Yazar: Hilmi Öğütcü • egirisim.com • Resmi X / Twitter Gönderisi: 1.200+ Görüntülenme)</font>",
+                styles['TableCellBold']
+            )
+        ]
+    ]
+    t_media_banner = Table(media_banner_data, colWidths=[182*mm])
+    t_media_banner.setStyle(TableStyle([
+        ('BACKGROUND', (0,0), (-1,-1), colors.HexColor('#EFF6FF')),
+        ('BOX', (0,0), (-1,-1), 1.2, C_SECONDARY),
+        ('TOPPADDING', (0,0), (-1,-1), 3.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3.5),
+        ('LEFTPADDING', (0,0), (-1,-1), 6),
+        ('RIGHTPADDING', (0,0), (-1,-1), 6),
+    ]))
+    story.append(t_media_banner)
+    story.append(Spacer(1, 3))
 
     if os.path.exists(f1):
-        img_hero = RLImage(f1, width=182*mm, height=86*mm)
+        img_hero = RLImage(f1, width=182*mm, height=68*mm)
         story.append(img_hero)
         story.append(Spacer(1, 3))
 
@@ -249,7 +273,7 @@ def generate_master_dossier(out_path):
                       "<b>KOSGEB & TÜBİTAK:</b><br/>İleri Girişimci & ARBİS Milli Sicil", styles['TableCell']),
             Paragraph("<b>Doğrulanmış Kod Mimarisi:</b><br/>16.000 Satır C++/Python Çekirdeği<br/>"
                       "<b>Otomatik Test Başarısı:</b><br/>1.301 / 1.301 Yeşil Test (%100 Başarı)<br/>"
-                      "<b>GitHub Deposu:</b><br/>github.com/Trustia/Trustia", styles['TableCell'])
+                      "<b>Resmi Basın & Medya:</b><br/>egirisim.com Özel Manşet Haberi", styles['TableCell'])
         ]
     ]
     t_info = Table(info_table, colWidths=[60*mm, 62*mm, 60*mm])
@@ -257,13 +281,13 @@ def generate_master_dossier(out_path):
         ('BACKGROUND', (0,0), (-1,-1), C_CARD),
         ('BOX', (0,0), (-1,-1), 0.8, C_PRIMARY),
         ('INNERGRID', (0,0), (-1,-1), 0.5, C_BORDER),
-        ('TOPPADDING', (0,0), (-1,-1), 4),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+        ('TOPPADDING', (0,0), (-1,-1), 3.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 3.5),
         ('LEFTPADDING', (0,0), (-1,-1), 5),
         ('RIGHTPADDING', (0,0), (-1,-1), 5),
     ]))
     story.append(t_info)
-    story.append(Spacer(1, 4))
+    story.append(Spacer(1, 3))
 
     story.append(Paragraph("<b>YÖNETİCİ ÖZETİ (EXECUTIVE SUMMARY)</b>", styles['H1']))
     story.append(Paragraph(

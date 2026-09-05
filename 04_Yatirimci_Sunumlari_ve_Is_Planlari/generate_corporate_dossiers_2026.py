@@ -223,7 +223,7 @@ def generate_one_pager(out_path):
         [
             Paragraph("<b>Kuluçka & Merkez:</b><br/>İTO BTM Fulya Kampüsü, Şişli", styles['TableCell']),
             Paragraph("<b>KOSGEB & TÜBİTAK:</b><br/>KOSGEB İleri Girişimci & ARBİS Milli Araştırmacı", styles['TableCell']),
-            Paragraph("<b>Küresel Meydan Okuma:</b><br/>Dubai World Challenge 1.2M$ (Resmen Gönderildi)", styles['TableCell'])
+            Paragraph("<b>Basın & Medya Otoritesi:</b><br/>egirisim.com Özel Manşeti & 1.2K+ X Görüntülenme", styles['TableCell'])
         ]
     ]
     t_grid = Table(grid_data, colWidths=[60*mm, 62*mm, 60*mm])
@@ -417,7 +417,7 @@ def generate_btm_investor_guide(out_path):
         styles['Body']
     ))
 
-    story.append(Paragraph("2. YATIRIMCI VE DANIŞMANLARIN SORACAĞI 6 KRİTİK SORU & CEVAPLARI", styles['H1']))
+    story.append(Paragraph("2. YATIRIMCI VE DANIŞMANLARIN SORACAĞI 7 KRİTİK SORU & CEVAPLARI", styles['H1']))
     
     qa_list = [
         ("Soru 1: Henüz 17 yaşındasın, ortaklık ve idari süreçleri hukuken nasıl yöneteceksiniz?",
@@ -436,7 +436,10 @@ def generate_btm_investor_guide(out_path):
          "Cevap: Dubai Ulaşım Otoritesi'nin (RTA) 1.200.000$ nakit ödüllü küresel yarışmasına resmi başvurumuzu 2 Eylül'de eksiksiz teslim ettik. Kasım 2026'da finalistler açıklandığında Dubai'de canlı araç testlerine katılacağız."),
         
         ("Soru 6: Ekibinizde donanım tarafını kim yönetiyor?",
-         "Cevap: Donanım ve araç entegrasyonumuzu, ASELSAN Aday Mühendis Havuzu üyesi ve TEKNOFEST Robotaksi Finalisti olan elektrik-elektronik mühendisimiz Denizcan Özcan yönetmektedir.")
+         "Cevap: Donanım ve araç entegrasyonumuzu, ASELSAN Aday Mühendis Havuzu üyesi ve TEKNOFEST Robotaksi Finalisti olan elektrik-elektronik mühendisimiz Denizcan Özcan yönetmektedir."),
+
+        ("Soru 7: Ulusal ve küresel medyada yer aldınız mı?",
+         "Cevap: Evet, 4 Eylül 2026 tarihinde Türkiye'nin lider derin teknoloji medyası egirişim'de 'Elektrikli araçları Seviye-4 otonom platformlara dönüştürmeyi hedefleyen girişim: Trustia AI' başlığıyla özel analiz ve manşet haberimiz yayımlanmış, resmi mavi tikli X hesabında 1.200'den fazla görüntülenmeye ulaşmıştır.")
     ]
 
     for q, a in qa_list:
