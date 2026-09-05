@@ -38,7 +38,8 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 * **Buraya Konulacaklar:**
   * `Videolar/`: Demo ve sunum MP4 videoları.
   * `Logolar_ve_Ikonlar/`: PNG, JPG, ICO marka logoları ve simgeleri.
-  * `Vektorel_Cizimler/`: SVG teknik çizimleri ve ikonlar.
+  * `Hyundai_Ioniq_5_Test_Araci/`: Gerçek araç ve sensör retrofit fotoğrafları.
+  * `Egirisim_Basin_Kiti_2026/`: Resmi basın ve medya tanıtım kiti.
 
 ---
 
