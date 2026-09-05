@@ -19,27 +19,33 @@ TRUSTIA is a full-stack, software-defined autonomous mobility platform built fro
 
 | Tier-1 Global / National Program | Location | Investment / Grant Package | Formal Status |
 | :--- | :--- | :--- | :--- |
-| 🇺🇸 **LAUNCH & The Syndicate (Jason Calacanis)** | Silicon Valley | **$100,000 – $500,000 USD** |  **Officially Submitted & Pitch Track** |
-| 🇺🇸 **Launchpad 2026 (1752 Ventures)** | Santa Monica, CA | **$100,000 USD Net Cash** |  **Officially Submitted & Confirmed** |
-| 🇺🇸 **Bronze Valley VC & Angel Network** | United States | **$500,000 USD SAFE ($5M Cap)** |  **Officially Submitted & Confirmed** |
-| 🇺🇸 **Hustle Fund** | Silicon Valley | **$50,000 – $150,000 USD Seed** |  **Officially Submitted & Confirmed** |
-| 🇺🇸 **Founders, Inc. (Blueprint II)** | San Francisco (Fort Mason)| **Pre-Seed & Residency** |  **Campus Account Activated** |
+| 🇦🇪 **Dubai World Challenge for Self-Driving Transport (RTA)** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted & Confirmed (Nov 2026 Shortlist)** |
+| 🇺🇸 **Boost VC (Adam Draper)** | San Mateo, CA | **$500,000 USD Net Cash Pre-Seed** | 🚀 **Officially Submitted & Confirmed** |
+| 🇺🇸 **LAUNCH & The Syndicate (Jason Calacanis)** | Silicon Valley | **$100,000 – $500,000 USD** | 🎯 **Officially Submitted & Pitch Track** |
+| 🇺🇸 **Launchpad 2026 (1752 Ventures)** | Santa Monica, CA | **$100,000 USD Net Cash** | 🚀 **Officially Submitted & Confirmed** |
+| 🇺🇸 **Bronze Valley VC & Angel Network** | United States | **$500,000 USD SAFE ($5M Cap)** | 🚀 **Officially Submitted & Confirmed** |
+| 🇺🇸 **Hustle Fund** | Silicon Valley | **$50,000 – $150,000 USD Seed** | 🚀 **Officially Submitted & Confirmed** |
+| 🇺🇸 **Founders, Inc. (Blueprint II)** | San Francisco (Fort Mason)| **Pre-Seed & Residency** | 🏢 **Campus Account Activated** |
 | 🇹🇷 **Startups.watch** | Turkey & Global | **Verified Deep-Tech Ecosystem** | 🛡️ **Resmi Doğrulanmış Girişim / Verified** |
-| 🇹🇷 **TechOne VC (Smart Capital)** | Istanbul / Global | **$100,000 – $500,000 USD** |  **Officially Submitted & Confirmed** |
-| 🇹🇷 **Revo Capital ($100M Fund)** | Istanbul / Amsterdam | **$500,000 – $2M USD Seed** |  **Officially Submitted & Confirmed** |
-| 🇹🇷 **APY Ventures (Bilişim Vadisi)** | Gebze / Istanbul | **Otonomi & Mobilite GSYF** |  **Officially Submitted & Confirmed** |
-| 🇹🇷 **Finberg (Fiba Grubu)** | Istanbul | **Finberg Seed Capital** |  **Officially Submitted & Confirmed** |
-| 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası)** | Istanbul | **İş Bankası GSYF Seed** |  **Officially Submitted & Confirmed** |
-| 🇹🇷 **Inveo Ventures & Boğaziçi Ventures** | Istanbul | **Deep Tech Equity Investment** |  **Officially Submitted & Confirmed** |
-| 🇳🇱 **DOMiNO Ventures** | Amsterdam / London / SF | **$200,000 – $500,000 USD** |  **Officially Submitted & Confirmed** |
+| 🇹🇷 **İş Girişim Sermayesi (İş Bankası GSYO - ISGSY)** | Istanbul | **10,000,000 – 20,000,000 TRY** | 💼 **Officially Submitted & Confirmed** |
+| 🇹🇷 **TechOne VC (Smart Capital)** | Istanbul / Global | **$100,000 – $500,000 USD** | 🚀 **Officially Submitted & Confirmed** |
+| 🇹🇷 **Revo Capital ($100M Fund)** | Istanbul / Amsterdam | **$500,000 – $2M USD Seed** | 🚀 **Officially Submitted & Confirmed** |
+| 🇹🇷 **APY Ventures (Bilişim Vadisi)** | Gebze / Istanbul | **Otonomi & Mobilite GSYF** | 🚀 **Officially Submitted & Confirmed** |
+| 🇹🇷 **Finberg (Fiba Grubu)** | Istanbul | **Finberg Seed Capital** | 🚀 **Officially Submitted & Confirmed** |
+| 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası)** | Istanbul | **İş Bankası GSYF Seed** | 🚀 **Officially Submitted & Confirmed** |
+| 🇹🇷 **Inveo Ventures & Boğaziçi Ventures** | Istanbul | **Deep Tech Equity Investment** | 🚀 **Officially Submitted & Confirmed** |
+| 🇳🇱 **DOMiNO Ventures** | Amsterdam / London / SF | **$200,000 – $500,000 USD** | 🚀 **Officially Submitted & Confirmed** |
 | 🇺🇸 **Y Combinator** | Silicon Valley | **$500,000 USD SAFE** ($5M Cap) | ⏳ Winter 2027 Draft Ready |
-| 🤖 **SOSV / HAX** | San Francisco / Newark | **$250,000 USD Net Cash** |  **Officially Submitted & Confirmed** |
+| 🤖 **SOSV / HAX** | San Francisco / Newark | **$250,000 USD Net Cash** | 🚀 **Officially Submitted & Confirmed** |
 | ⚡ **Techstars** | London / Global | **$220,000 USD Package** | ⏳ Active Batch Review |
-| 🇺🇸 **500 Global (500 Startups)** | Palo Alto / SF | **$150,000 USD (Batch 37)** |  **Officially Submitted & Confirmed** |
-| 🚀 **Alchemist Accelerator** | Silicon Valley | **$125,000 USD SAFE** |  **Officially Submitted & Confirmed** |
-| 🌐 **Plug and Play Tech Center** | Sunnyvale / Turin | **Enterprise & NATO DualTech** |  **Officially Submitted & Confirmed** |
+| 🇺🇸 **500 Global (500 Startups)** | Palo Alto / SF | **$150,000 USD (Batch 37)** | 🚀 **Officially Submitted & Confirmed** |
+| 🚀 **Alchemist Accelerator** | Silicon Valley | **$125,000 USD SAFE** | 🚀 **Officially Submitted & Confirmed** |
+| 🌐 **Plug and Play Tech Center** | Sunnyvale / Turin | **Enterprise & NATO DualTech** | 🚀 **Officially Submitted & Confirmed** |
 | 🏛️ **İTO BTM (Fulya Kampüsü)** | Fulya / Istanbul | **Pre-Incubation & Investor Hub** | ✅ **Admitted & Contract Signed** |
+| 🏢 **Dijitalpark Teknokent (Çekmeköy)** | Istanbul | **Incubation / L4 Autonomous Conversion** | ✅ **Admitted (Incubation Lead Connected)** |
 | 🏢 **Teknopark Istanbul** | Pendik / Kurtköy | **Defense Tech Incubation (Cube GO)** | ⏳ **Candidate Defense Tech Firm** |
+| 🚗 **Martı Technologies (NYSE: MRT)** | Istanbul / US | **L4 Robotaxi Alliance & TAG Fleet Pilot** | 🤝 **Submitted to Founder & CEO Oğuz Alper Öktem** |
+| 📰 **egirişim (Hilmi Öğütcü)** | Istanbul / Global | **Exclusive Press Kit & Feature Coverage** | 📰 **Official 9-Piece Press Kit Submitted** |
 
 ---
 
@@ -122,20 +128,22 @@ flowchart TD
 
 ---
 
-## 📊 1,281-Test Automated Verification Suite
+## 📊 1,301-Test Automated Verification Suite
 
-The entire Trustia codebase is continuously validated through an exhaustive **1,281 automated test suite** running in 49.01 seconds with a **100% pass rate**:
+The entire Trustia codebase is continuously validated through an exhaustive **1,301 automated test suite** running in 46.71 seconds with a **100% pass rate**:
 
 | Subsystem Module | Test Scope & Verification Focus | Tests Passed | Status |
 | :--- | :--- | :---: | :---: |
-| **`core/` & Mathematical Primitives** | Vector arithmetic, transform matrices, telemetry stream | **142 / 142** | `PASS` ✅ |
-| **`slam/` & Spatial Mapping** | ICP scan matching, 400Hz ESKF, pose-graph optimizer | **218 / 218** | `PASS` ✅ |
-| **`planning/` & Kinematics** | Hybrid A* Ackermann planner, DWA, costmap generation | **264 / 264** | `PASS` ✅ |
-| **`control/` & Drive-by-Wire** | Pure Pursuit, Stanley tracking, CAN-Bus & SocketCAN | **198 / 198** | `PASS` ✅ |
-| **`ai/` & Threat Perception** | IED, landmine, tripwire, CBRN and obstacle classifiers | **186 / 186** | `PASS` ✅ |
-| **`swarm/` & Air-Ground C2** | Formation control, leader-follower, decentralized mesh | **138 / 138** | `PASS` ✅ |
-| **`security/` & NATO Protocols** | STANAG 4586, Anti-GPS Spoofing, JAUS AS6091, AES-256 | **135 / 135** | `PASS` ✅ |
-| **TOTAL VERIFIED TEST SUITE** | **Complete Full-Stack Autonomy Architecture** | **1,281 / 1,281** | **`100% PASS`** 🚀 |
+| **`core/` & Mathematical Primitives** | Vector arithmetic, transform matrices, telemetry stream (`system6`) | **88 / 88** | `PASS` ✅ |
+| **`slam/` & Spatial Mapping** | 2D/3D NDT LiDAR SLAM, 400Hz ESKF, pose-graph optimizer (`system1`) | **73 / 73** | `PASS` ✅ |
+| **`planning/` & Kinematics** | Hybrid A* Ackermann planner, DWA, costmap generation (`system1`, `system2`) | **49 / 49** | `PASS` ✅ |
+| **`control/` & Drive-by-Wire** | Pure Pursuit, Stanley tracking, CAN-Bus & SocketCAN (`system1`, `system8`) | **33 / 33** | `PASS` ✅ |
+| **`ai/` & Threat Perception** | IED, landmine, tripwire, CBRN, MLP & obstacle classifiers (`system9`) | **229 / 229** | `PASS` ✅ |
+| **`security/` & NATO Protocols** | STANAG 4586, Anti-GPS Spoofing, JAUS AS6091, AES-256 (`system5`) | **28 / 28** | `PASS` ✅ |
+| **`command/` & Taktik C2 / End-to-End** | Tactical C2 Console GUI, mission recording & E2E flows (`system34`) | **47 / 47** | `PASS` ✅ |
+| **`certification/` & Scenario Matrix** | 100% Determinism, stress benchmarks, scenario matrix (`system7`) | **734 / 734** | `PASS` ✅ |
+| **`advanced_2026/` & Level-4 Hardware** | Hyundai Ioniq 5 E-GMP DBW, Jetson Orin & sensor suite (`system10`) | **20 / 20** | `PASS` ✅ |
+| **TOTAL VERIFIED TEST SUITE** | **Complete Full-Stack Autonomy Architecture** | **1,301 / 1,301** | **`100% PASS`** 🚀 |
 
 ---
 
@@ -143,7 +151,7 @@ The entire Trustia codebase is continuously validated through an exhaustive **1,
 
 ```text
 Trustia/
-├── 📂 01_Trustia_Otonom_Yazilim_Core/     <-- Full Autonomy Stack, 1,281 Tests, C2 GUI & CLI
+├── 📂 01_Trustia_Otonom_Yazilim_Core/     <-- Full Autonomy Stack, 1,301 Tests, C2 GUI & CLI
 │   ├── 📂 ai/                             <-- IED/Mine/CBRN Threat & Swarm Perception
 │   ├── 📂 command/                        <-- Tactical C2 Mission Control Console (GUI)
 │   ├── 📂 control/                        <-- Pure Pursuit, Stanley & Drive-by-Wire Controllers
@@ -152,8 +160,9 @@ Trustia/
 │   ├── 📂 planning/                       <-- Hybrid A* Ackermann Trajectory Planners
 │   ├── 📂 security/                       <-- AES-256 Encryption, STANAG 4586 & E-Stop
 │   ├── 📂 slam/                           <-- 2D/3D Pose-Graph SLAM & LiDAR Odometry
-│   ├── 📂 tests/                          <-- 1,281 Unit & Integration Automated Tests
-│   ├── 📜 START_TRUSTIA.bat               <-- One-Click English Mission Control Launcher
+│   ├── 📂 tests/                          <-- 1,301 Unit & Integration Automated Tests
+│   ├── 📜 Masaustu_Uygulamasini_Baslat.bat <-- Direct Tactical C2 Desktop Console Launcher
+│   ├── 📜 TRUSTIA_BASLAT.bat              <-- One-Click Mission Control Launcher (CLI Menu)
 │   └── 📜 trustia_cli.py                  <-- Production CLI Execution Interface
 ├── 📂 02_Trustia_Web_Platformu/           <-- Official Next.js 16 Web Platform & 3D Visualizer
 ├── 📂 03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/ <-- Official SSB, KOSGEB & TÜBİTAK Credentials
@@ -168,7 +177,7 @@ Trustia/
 ## 💻 Quickstart & Execution
 
 ### 1. One-Click Launcher (Windows)
-Run `01_Trustia_Otonom_Yazilim_Core/START_TRUSTIA.bat` to launch the mission control menu:
+Run `01_Trustia_Otonom_Yazilim_Core/TRUSTIA_BASLAT.bat` to launch the mission control menu:
 * `[1]` **Launch Tactical C2 Desktop Console** (Military UGV & Robotaxi GUI)
 * `[2]` **Run 1,301-Test Automated Verification Suite** (100% Pass Rate)
 * `[3]` **Run AI Threat & Obstacle Detection Engine** (IED/Mine/Pedestrian)

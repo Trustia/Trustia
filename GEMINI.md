@@ -32,7 +32,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * `Murat_Furkan_Bayram_CV_Resume.pdf`: Kurucu özgeçmişi.
 
 ### 5. `05_Uluslararasi_Hibe_ve_Vize_Basvurulari/` 🌍 (Global Fon ve Başvurular)
-* **Buraya Konulacaklar:** EIC Accelerator (AB), EXIST (Almanya), Hub71 (Abu Dhabi), KSGC (Güney Kore), Startup Vizeleri (İngiltere Innovator Founder, Kanada SUV, Almanya, İspanya) ve ASELSAN/SSB Tedarikçi Başvuru Dosyaları.
+* **Buraya Konulacaklar:** EIC Accelerator (AB), EXIST (Almanya), Hub71 (Abu Dhabi), KSGC (Güney Kore), NATO DIANA, SOSV HAX, Alchemist, Plug and Play, Bilişim Vadisi Syncora, ASELSAN/SSB Tedarikçi Başvuru Dosyaları, TÜBİTAK 1512 BİGG, İTÜ Çekirdek ve Teknokent Başvuru Dosyaları.
 
 ### 6. `06_Medya_Gorsel_ve_Tanitim_Videolari/` 🎬 (Medya, Video ve Logolar)
 * **Buraya Konulacaklar:**
