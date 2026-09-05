@@ -57,6 +57,6 @@ Gelir Modeli:
 • 16.000 satır deterministik C++ / Python 3.12 kodu,
 • 1.281 otomatik birim ve entegrasyon testi (%100 PASS),
 • T.C. Savunma Sanayii Başkanlığı (SSB & BTK) 100/100 Mükemmeliyet Sertifikası,
-• İTO BTM (Polat Tower Rezidans) Kuluçka Kabulü ve Teknopark İstanbul (Cube GO) adaylığı,
+• İTO BTM Fulya Kampüsü Kuluçka Kabulü ve Teknopark İstanbul (Cube GO) adaylığı,
 • Y Combinator, 500 Global, SOSV HAX ve Alchemist Accelerator küresel inceleme süreci.
 ```

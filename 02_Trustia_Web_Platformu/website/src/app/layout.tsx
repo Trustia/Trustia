@@ -134,7 +134,7 @@ export default function RootLayout({
         },
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Fulya Mah. Yeşilçimen Sok. Polat Tower Rezidans İTO BTM",
+          "streetAddress": "Fulya Mah. Yeşilçimen Sok. İTO BTM Kampüsü, Şişli / İstanbul",
           "addressLocality": "Şişli",
           "addressRegion": "İstanbul",
           "addressCountry": "TR"

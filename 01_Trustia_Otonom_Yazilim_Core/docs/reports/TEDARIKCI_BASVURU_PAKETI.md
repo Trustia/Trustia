@@ -3,7 +3,7 @@
 **Belge Kodu:** `TRST-SUPP-2026-V2`  
 **Başvuru Tipi:** ASELSAN "Gücümüz Bir" Tedarikçi & Yerlileştirme Programı / SSB EYDEP A Sınıfı Yazılım Tedarikçi Başvurusu  
 **Başvuru Kodu (ASELSAN Portal):** `0050569CCE941FD1A49FCEFB9B7BE7D6`  
-**Tarih:** 10 Ağustos 2026  
+**Tarih:** 5 Eylül 2026  
 **Gizlilik Derecesi:** HİZMETE ÖZEL / TİCARİ GİZLİ  
 
 ---
@@ -39,7 +39,7 @@ TRUSTIA, GPS/GNSS sinyalinin kesildiği, yanıltıldığı (jamming/spoofing) ve
 |  SİSTEM 3: Komuta Merkezi (MIL-STD-2525 C2 Konsolu & Sesli Komut) |
 |  SİSTEM 5: Siber Güvenlik (HMAC-SHA256, E-Stop, RTH Eve Dönüş)    |
 +-------------------------------------------------------------------+
-|  SİSTEM 6 & 7: Test & Sertifikasyon (1.276 Otomatik Test)         |
+|  SİSTEM 6 & 7: Test & Sertifikasyon (1.301 Otomatik Test)         |
 +-------------------------------------------------------------------+
 ```
 
@@ -47,7 +47,7 @@ TRUSTIA, GPS/GNSS sinyalinin kesildiği, yanıltıldığı (jamming/spoofing) ve
 1. 📡 **GPS'siz 3D Poz Grafı SLAM (Position Graph SLAM):** Visual Odometry, Wheel Odometry ve LiDAR ICP Scan-Matching ile haritalama ve santimetre hassasiyetinde konumlanma.
 2. 💣 **EYP, Mayın & Patlayıcı Tespiti (`ai/bomb_detector.py`):** Metal dedektör sinyali, termal anomali ve GPR derinlik yansıması sentezi ile EYP, Anti-Personel/Anti-Tank mayını ve tuzak teli tespiti; otomatik 30m karantina bölgesi izolasyonu.
 3. ☢️ **KHKN / CBRN Tehdit Analizi (`ai/cbrn_detector.py`):** Radyasyon (Geiger) ve Kimyasal Harp Gazı (Sarin, VX) yayılım modellemesi ve rüzgar altı güvenli rotalama.
-4. 🐝 **Hava-Kara Sürü Otonomisi (`ai/swarm.py`, `ai/air_ground_swarm.py`):** Çoklu İKA ve İHA keşif verisi entegreli lider-takipçi formasyon yönetimi.
+5. 🐝 **Hava-Kara Sürü Otonomisi (`ai/swarm.py`, `ai/air_ground_swarm.py`):** Çoklu İKA ve İHA keşif verisi entegreli lider-takipçi formasyon yönetimi.
 5. 🗣️ **Taktik Sesli Komut Çözümleyici (`command/voice_command.py`):** Operatör sesli girdilerini doğrudan otonom sürüş görevlerine dönüştürme.
 6. 🔒 **Siber Güvenlik & Acil Durdurma (`security/estop.py`, `security/linkloss.py`):** Kriptografik mesaj doğrulaması, E-Stop acil durma ve telsiz bağlantısı koptuğunda Otonom Eve Dönüş (Return-to-Home).
 
@@ -63,15 +63,15 @@ TRUSTIA, GPS/GNSS sinyalinin kesildiği, yanıltıldığı (jamming/spoofing) ve
 | **CAN 2.0 / CAN FD** | ISO 11898 Sürücü & Aktüatör Katmanı | `integration/can.py` | SAĞLANDI |
 | **TÜR Belgesi (TOBB)** | %100 Yerli Bağımlılıksız Kod Taraması | `core/certification.py` | **SAĞLANDI (%100)** |
 | **MIL-STD-2525** | Askeri Semboloji Komuta Konsolu | `command/tactical_gui.py` | SAĞLANDI |
-| **TSE TS ISO/IEC 25051** | Yazılım Kalite ve Test Şartı (1.000+ Test) | **1.276 Geçen Test** | **SAĞLANDI (%100)** |
+| **TSE TS ISO/IEC 25051** | Yazılım Kalite ve Test Şartı (1.000+ Test) | **1.301 Geçen Test** | **SAĞLANDI (%100)** |
 
 ---
 
 ## 📊 4. KALİTE GÜVENCE VE TEST DOĞRULAMA KANITLARI
 
-- **Otomatik Birim ve Entegrasyon Test Sayısı:** 1.276 Adet (Tüm modüller kapsama altındadır)
-- **Test Süresi:** ~40 saniye
-- **Test Başarı Oranı:** **%100** (`1276 passed in 40.35s`)
+- **Otomatik Birim ve Entegrasyon Test Sayısı:** 1.301 Adet (Tüm modüller kapsama altındadır)
+- **Test Süresi:** ~43 saniye
+- **Test Başarı Oranı:** **%100** (`1301 passed in 43.86s`)
 - **Sertifikasyon Denetim Skoru:** **9 / 9 Şart SAĞLANDI**
 - **Çalışma Zamanı Harici Bağımlılığı:** **0 (Sıfır Dış Bağımlılık / Saf Python)**
 

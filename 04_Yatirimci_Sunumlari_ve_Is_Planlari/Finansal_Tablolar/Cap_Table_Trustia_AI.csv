@@ -1,5 +1,5 @@
 Shareholder / Pool,Role / Type,Authorized Shares,Issued Shares,Ownership Percentage (%),Vesting Terms
-Murat Furkan Bayram,Founder & CEO / Director,8000000,8000000,80.00%,12-Month Cliff | 48-Month Vesting
-Reserved for Stock Plan (ESOP),Stock Option Pool for Key Hires,2000000,0,20.00%,Reserved Pool
-TOTAL AUTHORIZED SHARES,Common Stock,10000000,8000000,100.00%,Par Value $0.00001
+Murat Furkan Bayram,Founder & CEO / Systems Architect,8000000,8000000,80.00%,Founding Equity
+Doğukan Bayram,Co-Founder & Operations,2000000,2000000,20.00%,Founding Equity
+TOTAL AUTHORIZED SHARES,Common Stock,10000000,10000000,100.00%,Par Value $0.00001
 

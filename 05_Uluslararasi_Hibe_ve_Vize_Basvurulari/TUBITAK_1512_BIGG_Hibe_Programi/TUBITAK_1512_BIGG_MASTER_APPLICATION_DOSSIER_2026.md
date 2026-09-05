@@ -14,7 +14,7 @@
 | **TÜBİTAK ARBİS No:** | **`TBTK-0229-6571`** *(Murat Furkan Bayram)* |
 | **Savunma Derecesi:** | **100/100 Tam Puan** *(SSB & BTK Akademi ID: `L2zPtN4X1ZJ`)* |
 | **KOSGEB Belge No:** | **`KSB01UGE0115153370`** |
-| **Ofis / Merkez:** | **Polat Tower Residence, Fulya Mah. Şişli / İstanbul** |
+| **Ofis / Merkez:** | **İTO BTM Fulya Kampüsü, Şişli / İstanbul** |
 | **Web Sitesi:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 
 ---
@@ -48,7 +48,7 @@ ALAN 2: İŞ FİKRİNİN TEKNOLOJİK NİTELİĞİ VE YENİLİKÇİ YÖNLERİ
 ========================================================================================
 1. GPS'siz 3D SLAM ve Kinematik Hibrit A* Planlayıcı: 1.2 ms çevrim süresiyle araç kinematiğine (dönüş yarıçapı, kayma açısı) uygun, dinamik engellerden kaçan deterministik rota üretimi.
 2. Çok Modlu AI Tehdit Tespiti ve Karantina Halkası: Termal LWIR, İndüksiyon ve GPR verilerini birleştirerek Anti-Tank/Anti-Personel mayınları ve EYP'leri tespit edip anında 30 metrelik otomatik güvenlik tamponu oluşturma.
-3. 1.276 Doğrulanmış Otomasyon Testi: 16.000 satır deterministik C++/Python kodu ile %100 başarı oranına sahip, NATO STANAG 4586 Seviye 4 ve SAE JAUS uyumlu yazılım mimarisi.
+3. 1.301 Doğrulanmış Otomasyon Testi: 16.000 satır deterministik C++/Python kodu ile %100 başarı oranına sahip, NATO STANAG 4586 Seviye 4 ve SAE JAUS uyumlu yazılım mimarisi.
 4. Donanım Bağımsızlığı (Hardware-Agnostic): Herhangi bir mekanik araca CAN 2.0B / J1939 üzerinden tak-çalıştır entegrasyon.
 ```
 

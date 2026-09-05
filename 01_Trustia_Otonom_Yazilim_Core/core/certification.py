@@ -35,7 +35,7 @@ STDLIB_MODULES: Set[str] = getattr(sys, "stdlib_module_names", set()) or {
 LOCAL_PACKAGES = {
     "ai", "command", "control", "core", "integration", "perception",
     "planning", "record", "security", "simulation", "slam", "trustia",
-    "tests", "demos",
+    "tests", "demos", "v2x", "v2x_engine",
 }
 
 # Bağımlılığa izin verilen araçlar (ürün çalışma zamanına dahil değildir)

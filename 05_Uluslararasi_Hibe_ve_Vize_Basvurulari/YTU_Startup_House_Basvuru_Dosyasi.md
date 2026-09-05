@@ -41,7 +41,7 @@
 2. **KOSGEB:** İleri Girişimcilik Tescil Belgesi (`KSB01UGE0115153370`).
 3. **TÜBİTAK ARBİS:** Ulusal Araştırmacı Kaydı (`TBTK-0229-6571`).
 4. **ASELSAN:** Resmi Tedarikçi Portalı Kaydı.
-5. **İTO BTM (Bilgiyi Ticarileştirme Merkezi):** Ön Kuluçka 2026 II. Dönem Kabulü (Fulya Polat Tower).
+5. **İTO BTM (Bilgiyi Ticarileştirme Merkezi):** Ön Kuluçka 2026 II. Dönem Kabulü (İTO BTM Fulya Kampüsü).
 
 ---
 

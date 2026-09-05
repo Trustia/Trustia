@@ -13,7 +13,7 @@
 | **DIANA Focus Area:** | **Autonomy, Sensing & Resilient Navigation in Contested / GPS-Denied Environments** |
 | **Grant Funding Track:** | **€100,000 (Phase 1) + €300,000 (Phase 2) = €400,000 Non-Dilutive Grant (0% Equity Taken)** |
 | **Standard Compliance:** | **NATO STANAG 4586 Level 4 / SAE AS6091 (JAUS) / SAE J1939 CAN-Bus** |
-| **Official Accreditations:** | **İTO BTM (Polat Tower), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB, TÜBİTAK ARBİS** |
+| **Official Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB, TÜBİTAK ARBİS** |
 | **Deterministic Codebase:** | **16,000+ Lines Production Code** • **1,281 Deterministic Automated Tests (100% PASS Rate)** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 
@@ -98,7 +98,7 @@ CHALLENGE STATEMENT 5: TEAM QUALIFICATIONS & TRACK RECORD
 ========================================================================================
 • Founder & Lead Architect: Murat Furkan Bayram.
 • Accreditations:
-  - Admitted to Istanbul Chamber of Commerce BTM Incubation (Polat Tower, Istanbul).
+  - Admitted to Istanbul Chamber of Commerce BTM Incubation (BTM Fulya Campus, Istanbul).
   - Candidate deep-tech defense company in Teknopark Istanbul (Cube GO).
   - 100/100 Perfect Grade in Defense Technologies by Turkish Presidency of Defense Industries (SSB & BTK, ID: L2zPtN4X1ZJ).
   - Certified Advanced Entrepreneur by Ministry of Industry and Technology (KOSGEB KSB01UGE0115153370).

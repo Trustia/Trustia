@@ -4,7 +4,7 @@ TRUSTIA Otonomi Platformu — Kurumsal Üretim Komut Satırı Arayüzü (Product
 Kullanım:
   python trustia_cli.py gui           -> Taktik Masaüstü Konsolunu Başlatır
   python trustia_cli.py audit         -> %100 Yerli Katkı AST Sertifikasyon Denetimini Çalıştırır
-  python trustia_cli.py test          -> Tüm 1.273 Birim ve Entegrasyon Testini Koşturur
+  python trustia_cli.py test          -> Tüm 1.301 Birim ve Entegrasyon Testini Koşturur
   python trustia_cli.py threats       -> Askeri EYP, Mayın ve KHKN Tehdit Analizini Çalıştırır
 """
 
@@ -29,7 +29,7 @@ def run_audit():
 
 
 def run_tests():
-    print("[1/1] Running TRUSTIA 1,276-Test Automated Verification Suite...")
+    print("[1/1] Running TRUSTIA 1,301-Test Automated Verification Suite...")
     subprocess.run([sys.executable, "-m", "pytest"])
 
 

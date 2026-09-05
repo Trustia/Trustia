@@ -116,7 +116,7 @@ def create_master_pdf_with_photos(output_paths):
     header_data = [
         [
             Paragraph("<b>TRUSTIA AI</b><br/><font size=6.5 color='#0284C7'>OTONOM SİSTEMLER & DERİN TEKNOLOJİ</font>", body_style),
-            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 2 Eylül 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
+            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 5 Eylül 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
         ]
     ]
     t_head = Table(header_data, colWidths=[100*mm, 82*mm])
@@ -442,7 +442,7 @@ def create_master_pdf_with_photos(output_paths):
                       "• <b>Uzaktan Teleoperasyon:</b> Masaüstü C2 konsolundan tek tuşla araç acil durdurulabilir.<br/>"
                       "• <b>7/24 Kabin & Çevre Kaydı:</b> 4 dış + 1 iç kamera 5G ile buluta aktarılır.", body_style),
             Paragraph("<b>GARAJ & PARK ÜSLERİ</b><br/>"
-                      "• <b>Ana Merkez: İTO BTM Fulya Kampüsü (Polat Tower Rezidans):</b> 7/24 Güvenlikli kapalı otopark, AC elektrikli araç şarj istasyonları.<br/>"
+                      "• <b>Ana Merkez: İTO BTM Fulya Kampüsü, Şişli / İstanbul:</b> 7/24 Güvenlikli kapalı otopark, AC elektrikli araç şarj istasyonları.<br/>"
                       "• <b>Test Üssü: Bilişim Vadisi Otonom Test Merkezi (Gebze):</b> Sanayi Bakanlığı resmi kapalı otonomi garajı ve test hangarları.<br/>"
                       "• <b>Özel Kasko:</b> Sensörler aksiyoner bedelleriyle kaskoya işlenir.", body_style)
         ]

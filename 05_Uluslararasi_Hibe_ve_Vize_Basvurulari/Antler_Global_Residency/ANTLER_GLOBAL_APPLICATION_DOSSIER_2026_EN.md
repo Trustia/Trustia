@@ -13,7 +13,7 @@
 | **Investment Terms:** | **$150,000 – $400,000 USD SAFE / Equity** (+ $650,000 AI/Cloud Perks) |
 | **Sector:** | Deep-Tech • Level 4 Autonomous Vehicles • Defense AI & Robotics |
 | **Codebase & Rigor:** | **16,000+ Lines Production Code** • **1,281 Deterministic Tests (100% PASS Rate)** |
-| **Accreditations:** | **İTO BTM (Polat Tower), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
+| **Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 | **Application Portal:** | [antler.co/apply](https://www.antler.co/apply) |
 
@@ -56,7 +56,7 @@ FIELD 3: BUSINESS MODEL, PRICING & MARKET SIZE
 ========================================================================================
 FIELD 4: TRACTION & ACCREDITATIONS
 ========================================================================================
-• Formally admitted to the Istanbul Chamber of Commerce (İTO BTM) Incubation Center (Polat Tower, Istanbul).
+• Formally admitted to the Istanbul Chamber of Commerce (İTO BTM) Incubation Center (BTM Fulya Campus, Istanbul).
 • Candidate deep-tech defense firm in Teknopark Istanbul (Cube GO).
 • 100/100 Perfect Grade in Defense Technologies from Turkish Presidency of Defense Industries (SSB & BTK, ID: L2zPtN4X1ZJ).
 • Certified Advanced Entrepreneur by Ministry of Industry and Technology (KOSGEB KSB01UGE0115153370).

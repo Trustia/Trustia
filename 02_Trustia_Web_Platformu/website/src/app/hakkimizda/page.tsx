@@ -69,7 +69,7 @@ export default function AboutPage() {
     },
     {
       org: lang === "tr" ? "Startups.watch Girişimcilik Platformu" : "Startups.watch Ecosystem",
-      reg: "Ana Sayfa #1",
+      reg: "Resmi Doğrulandı",
       type: lang === "tr" ? "Resmi Doğrulanmış Girişim Listesi" : "Verified Deep-Tech Venture",
       status: "Doğrulandı"
     },
@@ -88,8 +88,14 @@ export default function AboutPage() {
     {
       org: lang === "tr" ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM)" : "Istanbul Chamber of Commerce (BTM)",
       reg: "2026-II Sözleşme",
-      type: lang === "tr" ? "Fulya Polat Tower Ön Kuluçka Girişimi" : "Fulya Polat Tower Pre-Incubation",
+      type: lang === "tr" ? "Fulya Kampüsü Sözleşmeli Ön Kuluçka Girişimi" : "Fulya Campus Contracted Pre-Incubation",
       status: "Yerleşik"
+    },
+    {
+      org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
+      reg: "0050569CCE941FD1A49FCEFB9B7BE7D6",
+      type: lang === "tr" ? "Yazılım, Sistem ve Kara Platform Entegrasyonu" : "Software, Systems & Land Platform Integration",
+      status: "Ön Değerlendirmede"
     }
   ];
 
@@ -166,8 +172,8 @@ export default function AboutPage() {
               </p>
               <p className="text-slate-400 text-xs">
                 {lang === "tr"
-                  ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Polat Tower bünyesinde yerleşik olarak şirketin teknoloji, Ar-Ge ve kurumsal konsorsiyum süreçlerini yönetmektedir."
-                  : "Based at the Istanbul Chamber of Commerce (BTM) Fulya Polat Tower campus, leading technology architecture, commercial deployment, and strategic defense partnerships."}
+                  ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Kampüsü bünyesinde yerleşik olarak şirketin teknoloji, Ar-Ge ve kurumsal konsorsiyum süreçlerini yönetmektedir."
+                  : "Based at the Istanbul Chamber of Commerce (BTM) Fulya campus, leading technology architecture, commercial deployment, and strategic defense partnerships."}
               </p>
             </div>
 
@@ -183,7 +189,7 @@ export default function AboutPage() {
               </div>
               <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
                 <div className="text-slate-500 text-[9px] uppercase">STARTUPS.WATCH</div>
-                <div className="font-bold text-white mt-0.5">#1 Doğrulandı</div>
+                <div className="font-bold text-white mt-0.5">Doğrulandı</div>
               </div>
               <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
                 <div className="text-slate-500 text-[9px] uppercase">İTO BTM</div>
@@ -200,13 +206,13 @@ export default function AboutPage() {
               </div>
               <div className="space-y-1">
                 <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
-                  {lang === "tr" ? "KURUCU ORTAK & COO / ŞİRKET MÜDÜRÜ" : "CO-FOUNDER & COO / OPERATIONS"}
+                  {lang === "tr" ? "KURUCU ORTAK & OPERASYON" : "CO-FOUNDER & OPERATIONS"}
                 </div>
                 <h3 className="text-sm font-bold text-white">Doğukan Bayram</h3>
                 <p className="text-xs text-slate-400 leading-relaxed">
                   {lang === "tr"
-                    ? "Reşit kurucu ortak ve yetkili şirket müdürü. Resmi sözleşmeler, kurumsal yönetim, fon ilişkileri ve hukuki temsil süreçlerini idare etmektedir."
-                    : "Authorized corporate manager and COO. Oversees corporate governance, commercial contracting, investor operations, and legal representation."}
+                    ? "Reşit kurucu ortak. Resmi süreçler, operasyonel yönetim, fon ilişkileri ve organizasyon süreçlerini koordine etmektedir."
+                    : "Co-founder and operations lead. Coordinates operational processes, investor communications, and external relations."}
                 </p>
               </div>
             </div>
@@ -328,7 +334,7 @@ export default function AboutPage() {
             </div>
             <div className="text-base font-bold text-white">İTO BTM Kampüsü</div>
             <div className="text-xs text-slate-400 leading-relaxed">
-              Fulya Mah. Yeşilçimen Sok. Polat Tower Rezidans, Şişli / İstanbul.
+              İTO BTM Fulya Kampüsü, Şişli / İstanbul.
             </div>
           </div>
 

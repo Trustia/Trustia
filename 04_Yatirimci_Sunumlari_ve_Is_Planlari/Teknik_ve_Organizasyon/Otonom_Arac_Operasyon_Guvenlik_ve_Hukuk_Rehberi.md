@@ -61,8 +61,8 @@ Aracın çalınması, kaçırılması veya kötü niyetli müdahalelere karşı 
 
 Aracın duracağı ve muhafaza edileceği 2 resmi kurumsal üs belirlenmiştir:
 
-### 4.1 Ana Merkez: İTO BTM Fulya Kampüsü (Polat Tower Rezidans)
-* **Adres:** Fulya Mah. Yeşilçimen Sok. Polat Tower Rezidans, Şişli / İstanbul.
+### 4.1 Ana Merkez: İTO BTM Fulya Kampüsü, Şişli / İstanbul
+* **Adres:** İTO BTM Fulya Kampüsü, Şişli / İstanbul.
 * **Özellikler:**
   * 7/24 Özel Güvenlikli ve Bariyerli Kapalı Yeraltı Otoparkı.
   * 360° Güvenlik Kameraları ve Yangın Söndürme Sistemleri.
@@ -119,5 +119,5 @@ Türkiye'de otonom araç testleri için yürütülen yasal süreç:
 
 ---
 
-*Tarih:* 31 Ağustos 2026  
+*Tarih:* 5 Eylül 2026  
 *Kurum:* TRUSTIA AI — Seviye 4 Otonom Sistemler  

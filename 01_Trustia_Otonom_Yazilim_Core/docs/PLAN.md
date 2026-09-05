@@ -28,7 +28,7 @@ Araç üreticilerine (Elektroland, HAVELSAN, FNSS, Otokar, ROKETSAN vb.) donanı
 
 ## BÖLÜM 3: TAMAMLANMIŞ SİSTEM MİMARİSİ VE TEST DURUMU
 
-* **Birim & Entegrasyon Testleri**: 1.277 test %100 doğrulandı (`python -m pytest`).
+* **Birim & Entegrasyon Testleri**: 1.301 test %100 doğrulandı (`python -m pytest`).
 * **Otomatik Denetim**: AST taramasıyla harici runtime bağımlılığı taşımadığı (%100 yerli katkı) onaylandı.
 * **Taktik Arayüz**: NATO MIL-STD-2525 Standartlarında Masaüstü C2 Konsolu (`command/tactical_gui.py`).
 

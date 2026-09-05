@@ -1,6 +1,6 @@
 # TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
 
-- **Tarih:** 2026-08-24
+- **Tarih:** 2026-09-05
 - **Depo:** C:\Users\Murat\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
 - **Amaç:** TÜR/EYDEP/KÜL/TSE başvuru kanıt seti (PLAN 2.2)
 
@@ -8,7 +8,7 @@
 
 | Ölçüt | Değer |
 |---|---|
-| Taranan Python dosyası | 133 |
+| Taranan Python dosyası | 140 |
 | Kullanılan standart kütüphane modülü | 32 |
 | Ürün harici bağımlılık | 0 |
 | Geliştirme araçları (üründe yok) | controller, numpy, pytest |
@@ -20,8 +20,8 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 
 | Metrik | Değer |
 |---|---|
-| Kod satırı (Python) | 15964 |
-| Otomatik test sayısı | 1281 |
+| Kod satırı (Python) | 16746 |
+| Otomatik test sayısı | 1301 |
 | 1.000+ test şartı | SAĞLANDI |
 
 ## 3. TEKNİK ŞART KONTROL LİSTESİ

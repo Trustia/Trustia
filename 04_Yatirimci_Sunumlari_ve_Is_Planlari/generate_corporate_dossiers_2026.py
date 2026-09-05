@@ -75,10 +75,10 @@ class NumberedCanvas(canvas.Canvas):
         
         self.setFont('Arial-Bold', 7.5)
         self.setFillColor(C_PRIMARY)
-        self.drawString(14*mm, 10*mm, "TRUSTIA OTONOM MOBİLİTE TEKNOLOJİLERİ A.Ş.")
+        self.drawString(14*mm, 10*mm, "TRUSTIA AI")
         self.setFont('Arial', 7.5)
         self.setFillColor(C_MUTED)
-        self.drawString(82*mm, 10*mm, "|  İTO BTM Fulya Kampüsü (Polat Tower Rezidans)  •  trustia.com.tr")
+        self.drawString(33*mm, 10*mm, "|  İTO BTM Fulya Kampüsü, Şişli / İstanbul  •  trustia.com.tr  •  github.com/Trustia/Trustia")
         self.drawRightString(196*mm, 10*mm, f"Sayfa {self._pageNumber} / {page_count}")
         self.restoreState()
 
@@ -221,7 +221,7 @@ def generate_one_pager(out_path):
             Paragraph("<b>Yazılım & Test Olgunluğu:</b><br/>16.000 Satır C++/Python, 1.301 Yeşil Test", styles['TableCell'])
         ],
         [
-            Paragraph("<b>Kuluçka & Merkez:</b><br/>İTO BTM Fulya Kampüsü (Polat Tower)", styles['TableCell']),
+            Paragraph("<b>Kuluçka & Merkez:</b><br/>İTO BTM Fulya Kampüsü, Şişli", styles['TableCell']),
             Paragraph("<b>KOSGEB & TÜBİTAK:</b><br/>KOSGEB İleri Girişimci & ARBİS Milli Araştırmacı", styles['TableCell']),
             Paragraph("<b>Küresel Meydan Okuma:</b><br/>Dubai World Challenge 1.2M$ (Resmen Gönderildi)", styles['TableCell'])
         ]
@@ -288,7 +288,7 @@ def generate_one_pager(out_path):
     ))
     
     story.append(Spacer(1, 5))
-    story.append(Paragraph("<b>İletişim & Randevu:</b> Murat Furkan Bayram (Kurucu & CEO) | +90 537 064 0460 | kariyer@trustia.com.tr | Beşiktaş Polat Tower, İstanbul", styles['Callout']))
+    story.append(Paragraph("<b>İletişim & Randevu:</b> Murat Furkan Bayram (Kurucu & CEO) | +90 537 064 0460 | kariyer@trustia.com.tr | İTO BTM Fulya Kampüsü, Şişli / İstanbul", styles['Callout']))
 
     build_pdf(out_path, story)
 
@@ -409,7 +409,7 @@ def generate_btm_investor_guide(out_path):
 
     story.append(Paragraph("1. GÖRÜŞMENİN AMACI VE HEDEFLENEN SOMUT ÇIKTILAR", styles['H1']))
     story.append(Paragraph(
-        "4 Eylül 2026 Cuma günü saat 15:00'te Beşiktaş Polat Tower Rezidans'ta <b>BTM Yatırımcı İlişkileri Direktörlüğü</b> ile yapılacak birebir görüşmenin temel amacı:<br/>"
+        "4 Eylül 2026 Cuma günü saat 15:00'te İTO BTM Fulya Kampüsü'nde <b>BTM Yatırımcı İlişkileri Direktörlüğü</b> ile yapılacak birebir görüşmenin temel amacı:<br/>"
         "1. <b>TÜBİTAK 1812 BİGG Yatırım Programı:</b> BTM resmi uygulayıcı kuruluş kontenjanından <b>1.350.000 TL doğrudan nakit devlet sermayesi</b> başvurusunun resmileştirilmesi.<br/>"
         "2. <b>BTM Melek Yatırım Ağı (BTM Angels):</b> 500.000$ Pre-Seed turumuza liderlik edecek kurumsal meleklerin masaya davet edilmesi.<br/>"
         "3. <b>212 VC, ScaleX ve Bilişim Vadisi Tanışması:</b> BTM portföy yöneticisi kanalıyla kurumsal fonlara doğrudan sıcak yönlendirme (Warm Intro) sağlanması.<br/>"
@@ -420,8 +420,8 @@ def generate_btm_investor_guide(out_path):
     story.append(Paragraph("2. YATIRIMCI VE DANIŞMANLARIN SORACAĞI 6 KRİTİK SORU & CEVAPLARI", styles['H1']))
     
     qa_list = [
-        ("Soru 1: Henüz 17 yaşındasın, şirketi hukuken nasıl yöneteceksin?",
-         "Cevap: Şirketimizin sermaye yapısı %80 Murat Furkan Bayram (Kurucu & Sistem Mimarı) ve %20 Doğukan Bayram (Kurucu Ortak & COO / Şirket Müdürü) olarak yapılandırılmıştır. Doğukan Bayram reşit şirket müdürü olarak tüm noter, imza sirküleri, banka ve resmi devlet sözleşmelerini asaleten temsil etmekte; Murat Furkan Bayram ise 16.000 satırlık deterministik otonomi mimarisini yönetmektedir."),
+        ("Soru 1: Henüz 17 yaşındasın, ortaklık ve idari süreçleri hukuken nasıl yöneteceksiniz?",
+         "Cevap: Girişimimizin ortaklık yapısı %80 Murat Furkan Bayram (Kurucu & Sistem Mimarı) ve %20 Doğukan Bayram (Kurucu Ortak) olarak yapılandırılmıştır. Doğukan Bayram reşit kurucu ortak olarak tüm noter, banka ve resmi devlet sözleşmelerini asaleten yürütmekte; Murat Furkan Bayram ise 16.000 satırlık deterministik otonomi mimarisini yönetmektedir."),
         
         ("Soru 2: Waymo ve Cruise gibi devler varken Trustia nasıl rekabet edecek?",
          "Cevap: Waymo ve Cruise 250.000-300.000 dolara sıfırdan araç üretmektedir; bu model yüksek amortisman nedeniyle ölçeklenemez. Trustia seri üretim elektrikli araçları (Hyundai Ioniq 5) sadece 35.000 dolarlık tak-çalıştır kitle dönüştürür. Filo sahibine 14 ayda geri dönen eşsiz bir birim ekonomi sunuyoruz."),
@@ -493,8 +493,8 @@ def generate_accreditations_dossier(out_path):
         ],
         [
             Paragraph("<b>Startups.watch (Resmi Girişim Ekosistemi)</b>", styles['TableCell']),
-            Paragraph("Doğrulanmış Girişim Profili & Ekosistem Sıralaması", styles['TableCell']),
-            Paragraph("<b>Ana Sayfa #1 Numara Sıralama</b>", styles['TableCellBold']),
+            Paragraph("Doğrulanmış Girişim Profili & Ekosistem Listesi", styles['TableCell']),
+            Paragraph("<b>Resmi Doğrulanmış Girişim</b>", styles['TableCellBold']),
             Paragraph("Doğrulanmış / Verified", styles['Badge'])
         ],
         [
@@ -542,8 +542,8 @@ def generate_financials_dossier(out_path):
     story.append(Paragraph("1. SERMAYE YAPISI (CAP TABLE)", styles['H1']))
     cap_data = [
         [Paragraph("Pay Sahibi", styles['TableHead']), Paragraph("Unvan & Görev", styles['TableHead']), Paragraph("Hisse Oranı (%)", styles['TableHead']), Paragraph("Hisse Türü", styles['TableHead']), Paragraph("Temsil Yetkisi", styles['TableHead'])],
-        [Paragraph("<b>Murat Furkan Bayram</b>", styles['TableCellBold']), Paragraph("Kurucu & CEO / Sistem Mimarı", styles['TableCell']), Paragraph("<b>%80</b>", styles['TableCellBold']), Paragraph("A Grubu İmtiyazlı", styles['TableCell']), Paragraph("Münferiden Temsil", styles['TableCell'])],
-        [Paragraph("<b>Doğukan Bayram</b>", styles['TableCellBold']), Paragraph("Kurucu Ortak & COO / Şirket Müdürü", styles['TableCell']), Paragraph("<b>%20</b>", styles['TableCellBold']), Paragraph("B Grubu Adi", styles['TableCell']), Paragraph("Münferiden Temsil", styles['TableCell'])],
+        [Paragraph("<b>Murat Furkan Bayram</b>", styles['TableCellBold']), Paragraph("Kurucu / Sistem Mimarı", styles['TableCell']), Paragraph("<b>%80</b>", styles['TableCellBold']), Paragraph("Kurucu Hisse", styles['TableCell']), Paragraph("Münferiden Temsil", styles['TableCell'])],
+        [Paragraph("<b>Doğukan Bayram</b>", styles['TableCellBold']), Paragraph("Kurucu Ortak", styles['TableCell']), Paragraph("<b>%20</b>", styles['TableCellBold']), Paragraph("Kurucu Ortaklık", styles['TableCell']), Paragraph("Münferiden Temsil", styles['TableCell'])],
         [Paragraph("<b>ESOP (Çalışan Havuzu)</b>", styles['TableCell']), Paragraph("Kilit Mühendislik Opsiyonu", styles['TableCell']), Paragraph("%10 (Ayrılacak)", styles['TableCell']), Paragraph("Opsiyon Havuzu", styles['TableCell']), Paragraph("Yönetim Kurulu", styles['TableCell'])],
     ]
     t_cap = Table(cap_data, colWidths=[40*mm, 48*mm, 28*mm, 32*mm, 34*mm])
@@ -592,7 +592,7 @@ def generate_founder_cv(out_path):
     story = []
 
     story.append(Paragraph("MURAT FURKAN BAYRAM", styles['Title']))
-    story.append(Paragraph("Kurucu & CEO / Baş Sistem Mimarı  •  Trustia Otonom Mobilite Teknolojileri A.Ş.", styles['Subtitle']))
+    story.append(Paragraph("Kurucu & CEO / Baş Sistem Mimarı  •  Trustia AI (İTO BTM Fulya Kampüsü)", styles['Subtitle']))
     story.append(HRFlowable(width="100%", thickness=1.5, color=C_SECONDARY, spaceBefore=0, spaceAfter=8))
 
     cv_top = [
@@ -641,7 +641,7 @@ def generate_founder_cv(out_path):
         "• <b>İTO BTM Fulya Kampüsü Yerleşik Girişimcisi:</b> İstanbul Ticaret Odası 2026-II. Dönem sözleşmeli girişimcisi.<br/>"
         "• <b>KOSGEB İleri Girişimci:</b> Sanayi ve Teknoloji Bakanlığı resmi onaylı genç ileri girişimci belgesi.<br/>"
         "• <b>TÜBİTAK ARBİS Milli Araştırmacı:</b> Türkiye Bilimsel ve Teknolojik Araştırma Kurumu araştırmacı sicili.<br/>"
-        "• <b>Startups.watch:</b> Doğrulanmış girişim profili ve ana sayfa #1 numara sıralama.",
+        "• <b>Startups.watch:</b> Türkiye girişim ekosisteminde resmi onaylı derin teknoloji ve otonomi profili.",
         styles['Body']
     ))
 
@@ -699,101 +699,8 @@ def generate_dubai_challenge_dossier(out_path):
 # 8. MASTER INVESTOR PITCH DECK (00)
 # -------------------------------------------------------------
 def generate_master_pitch_deck(out_path):
-    styles = get_corporate_styles()
-    story = []
-
-    # Slide 1: Cover
-    story.append(Paragraph("TRUSTIA AI — RESMİ YATIRIMCI SUNUMU (MASTER PITCH DECK 2026)", styles['Title']))
-    story.append(Paragraph("Elektrikli Araçlar İçin Tak-Çalıştır Seviye-4 Otonom Sürüş Kiti ve Deterministik Seyrüsefer Mimarisi", styles['Subtitle']))
-    story.append(HRFlowable(width="100%", thickness=2, color=C_SECONDARY, spaceBefore=0, spaceAfter=8))
-
-    cover_box = [
-        [
-            Paragraph("<b>Kurucu & Sistem Mimarı:</b><br/>Murat Furkan Bayram (17 Yaşında, %80 Hisse)<br/>"
-                      "<b>Yönetici Ortak & COO:</b><br/>Doğukan Bayram (%20 Hisse, Şirket Müdürü)<br/>"
-                      "<b>Donanım Entegrasyon:</b><br/>Denizcan Özcan (ASELSAN Aday Müh., TEKNOFEST Finalisti)", styles['TableCell']),
-            Paragraph("<b>Hedef Yatırım Turu:</b><br/>500.000$ USD Pre-Seed (5M$ Cap SAFE)<br/>"
-                      "<b>Yerleşke & Kuluçka:</b><br/>İTO BTM Fulya Kampüsü (Polat Tower Rezidans)<br/>"
-                      "<b>Doğrulanmış Sıralama:</b><br/>Startups.watch Resmi Onaylı Girişim (#1)", styles['TableCell']),
-            Paragraph("<b>T.C. Savunma Tescili:</b><br/>SSB 100/100 Tam Puan (L2zPtN4X1ZJ)<br/>"
-                      "<b>KOSGEB & TÜBİTAK:</b><br/>İleri Girişimci & ARBİS Tescilli<br/>"
-                      "<b>Küresel Yarış:</b><br/>Dubai World Challenge 1.2M$ (Gönderildi)", styles['TableCell'])
-        ]
-    ]
-    t_c = Table(cover_box, colWidths=[60*mm, 62*mm, 60*mm])
-    t_c.setStyle(TableStyle([
-        ('BACKGROUND', (0,0), (-1,-1), C_CARD),
-        ('BOX', (0,0), (-1,-1), 1, C_PRIMARY),
-        ('INNERGRID', (0,0), (-1,-1), 0.5, C_BORDER),
-        ('TOPPADDING', (0,0), (-1,-1), 6),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 6),
-        ('LEFTPADDING', (0,0), (-1,-1), 6),
-        ('RIGHTPADDING', (0,0), (-1,-1), 6),
-    ]))
-    story.append(t_c)
-    story.append(Spacer(1, 10))
-
-    # Slide 2: Problem & Fırsat
-    story.append(Paragraph("1. PAZAR PROBLEMİ VE DEVASA FIRSAT", styles['H1']))
-    story.append(Paragraph(
-        "<b>Problem:</b> Küresel mobilite şirketleri (Waymo, Cruise, Zoox), özel tasarım sürücüsüz araç üretmek için araç başına <b>250.000$ - 350.000$</b> harcamaktadır. Yüksek sermaye ihtiyacı (CAPEX) ve aşırı amortisman nedeniyle bu araçlar geniş kitlelere yayılamamaktadır. Öte yandan taksi filoları şoför maliyetleri, kaza riskleri ve regülasyon baskısı altındadır.<br/>"
-        "<b>Pazar Büyüklüğü:</b> Küresel otonom ulaşım pazarı 2030'da <b>118 Milyar Dolara</b> ulaşmaktadır. Dubai Devleti 2030'a kadar tüm ulaşımın %25'ini sürücüsüz yapmayı kanunlaştırmıştır.",
-        styles['Body']
-    ))
-
-    # Slide 3: Çözüm
-    story.append(Paragraph("2. TRUSTIA ÇÖZÜMÜ: MODÜLER RETROFIT DÖNÜŞÜM KİTİ", styles['H1']))
-    story.append(Paragraph(
-        "Trustia AI; sıfırdan araç üretmek yerine seri üretim elektrikli araçları (Hyundai Ioniq 5 E-GMP) <b>48 saat içinde 35.000 dolarlık tak-çalıştır donanım ve yazılım kitiyle SAE Seviye-4 otonom Robotaksi'ye</b> dönüştürür. Aracın orijinal şasi ve kablo tesisatı delinmez; Kvaser U100 CAN-FD arayüzü ile doğrudan Drive-by-Wire sürüş komutları enjekte edilir.",
-        styles['Body']
-    ))
-
-    # Slide 4: Teknoloji ve Deterministik Yazılım
-    story.append(Paragraph("3. DERİN TEKNOLOJİ: 16.000 SATIR DETERMINİSTİK ÇEKİRDEK", styles['H1']))
-    story.append(Paragraph(
-        "• <b>Matematiksel Güvenlik:</b> Güvenilmez kara kutu yapay zekalar yerine Ackermann araç dinamiğini 50ms altında çözen <b>Hibrit A* (Hybrid A*) kinematik yol planlayıcı</b>.<br/>"
-        "• <b>GNSS Olmadan 5cm Hassasiyet:</b> 400Hz ESKF + 3D NDT LiDAR SLAM haritalama motoru ile tünellerde ve gökdelen vadilerinde kesintisiz konumlandırma.<br/>"
-        "• <b>1.301 Otomatik Test:</b> CI/CD hatlarında %100 başarıyla çalışan birim ve entegrasyon test mimarisi.<br/>"
-        "• <b>ASIL-D Emniyet:</b> ISO 26262 Minimal Risk Maneuver (MRM) ile sensör körlüğünde otomatik güvenli yol kenarına çekme protokolü.",
-        styles['Body']
-    ))
-
-    # Slide 5: Donanım Mimarisi
-    story.append(Paragraph("4. DONANIM VE SENSÖR MİMARİSİ", styles['H1']))
-    story.append(Paragraph(
-        "• <b>LiDAR:</b> 1x Ouster OS2-128 Rev7 (Çatı, 360° 128 lazer) + 2x Livox Mid-360 (Ön/Arka kör nokta).<br/>"
-        "• <b>Radar & Kamera:</b> 2x Continental ARS 408-21 77GHz radar + 4x Sony IMX390 HDR GMSL2 otomotiv kamera.<br/>"
-        "• <b>İşlemci:</b> NVIDIA Jetson AGX Orin 64GB (275 TOPS AI işlem gücü, Seeed J501 endüstriyel taşıyıcı).<br/>"
-        "• <b>Bağlantı:</b> Teltonika RUTX50 5G/V2X + Kvaser U100 CAN-FD galvanik izolasyonlu kontrol köprüsü.",
-        styles['Body']
-    ))
-
-    # Slide 6: İş Modeli & Gelir Akışları
-    story.append(Paragraph("5. İŞ MODELİ VE KÂRLILIK MATRİSİ", styles['H1']))
-    story.append(Paragraph(
-        "<b>Çift Katmanlı Gelir Modeli:</b><br/>"
-        "1. <b>Kit Satışı (CAPEX):</b> Araç başı 35.000$ dönüşüm kiti satışı (%35 brüt kâr marjı).<br/>"
-        "2. <b>Autonomy-as-a-Service (AaaS - Yıllık Düzenli Gelir):</b> Kilometre başı 0.18$ veya araç başı aylık 450$ yazılım lisansı ve filo telemetri aboneliği.<br/>"
-        "• <b>Filo ROI:</b> Dönüştürülen her araç filo sahibine yılda 55.500$ net tasarruf ve kâr sağlar; 14 ayda maliyetini amorti eder.",
-        styles['Body']
-    ))
-
-    # Slide 7: Yatırım Teklifi & Fon Kullanımı
-    story.append(Paragraph("6. YATIRIM TEKLİFİ VE 18 AYLIK YOL HARİTASI", styles['H1']))
-    story.append(Paragraph(
-        "<b>Aranan Yatırım:</b> <b>500.000$ USD (Pre-Seed / 5M$ Cap SAFE)</b>.<br/>"
-        "• <b>%45 Donanım & Sensör:</b> İlk 2 adet Hyundai Ioniq 5 test filosunun dönüşümü ve sensör stok alımı.<br/>"
-        "• <b>%35 Mühendislik Kadrosu:</b> Gömülü yazılım, SLAM ve donanım test mühendislerinin istihdamı.<br/>"
-        "• <b>%15 Pist ve Saha Testleri:</b> Bilişim Vadisi ve Dubai proving ground pist test operasyonları.<br/>"
-        "• <b>%5 Emniyet & Patent:</b> ISO 26262 ASIL-D validasyon ve küresel fikri mülkiyet tescilleri.<br/>"
-        "<b>Hedef Çıktı:</b> 18 ay içinde BAE ve Türkiye'de ilk 100 ticari robotaksinin sahaya indirilmesi.",
-        styles['Body']
-    ))
-
-    story.append(Spacer(1, 8))
-    story.append(Paragraph("<b>İletişim & Demo Talebi:</b> Murat Furkan Bayram (Kurucu & CEO) | +90 537 064 0460 | kariyer@trustia.com.tr | İTO BTM Fulya Kampüsü, Beşiktaş / İstanbul", styles['Callout']))
-
-    build_pdf(out_path, story)
+    from generate_master_pitch_deck_comprehensive_2026 import generate_master_dossier
+    generate_master_dossier(out_path)
 
 def main():
     cikti_dir = r"C:\Users\Murat\Desktop\Çıktı"

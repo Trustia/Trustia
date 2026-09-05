@@ -92,7 +92,7 @@ export default function ContactPage() {
                   <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-white">İTO BTM Kampüsü</div>
-                    <div className="text-slate-400 text-[11px]">Fulya Mah. Yeşilçimen Sok. Polat Tower Rezidans, Şişli / İstanbul</div>
+                    <div className="text-slate-400 text-[11px]">İTO BTM Fulya Kampüsü, Şişli / İstanbul</div>
                   </div>
                 </div>
 

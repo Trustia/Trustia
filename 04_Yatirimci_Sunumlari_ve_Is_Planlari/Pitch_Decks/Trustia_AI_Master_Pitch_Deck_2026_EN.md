@@ -37,10 +37,10 @@
 ---
 
 ## SLIDE 4: PROPRIETARY TECHNOLOGY & CERTIFICATION
-### "Battlefield-Ready Architecture Verified by 1,276 Automated Tests"
+### "Battlefield-Ready Architecture Verified by 1,301 Automated Tests"
 
 * **100% Zero Third-Party Dependency Core:** Custom-built Python/C++ algorithmic stack, eliminating foreign backdoors and supply-chain vulnerabilities.
-* **Rigorous Test Coverage:** 1,276 automated unit, integration, deterministic, and scenario-matrix tests passing at 100%.
+* **Rigorous Test Coverage:** 1,301 automated unit, integration, deterministic, and scenario-matrix tests passing at 100%.
 * **Microsecond Determinism:** Real-time RTOS loops with hardware-level HMAC-SHA256 encrypted telemetry and Fail-Safe LinkLoss Return-to-Home (RTH).
 * **Standard Compliance:** Built strictly to NATO STANAG 4586 Level 4, SAE AS6091 (JAUS), and ISO 26262 ASIL-D functional safety principles.
 
@@ -56,15 +56,15 @@
 
 ---
 
-## SLIDE 6: BUSINESS MODEL
-### "High-Margin Software Licensing & Defense Integration"
+## SLIDE 6: BUSINESS MODEL & DUAL-LAYER PRICING
+### "Hardware Retrofit Kits & High-Margin Autonomy-as-a-Service (AaaS)"
 
-* **Tier 1: OEM Vehicle Software License ($15,000 – $35,000 / vehicle / year)**  
-  Sold directly to UGV manufacturers and defense contractors per active platform.
-* **Tier 2: Tactical C2 & Swarm Fleet Enterprise License ($50,000 / base command center / year)**  
-  Multi-robot fleet coordination and mission command platform.
-* **Tier 3: Custom Defense Integration & Hardening Contracts ($250,000 – $1,000,000)**  
-  Custom vehicle integration, bespoke sensor fusion, and military field qualification.
+* **Tier 1: Civil Commercial Level-4 Retrofit Kit ($18,500 Kit / $250/mo AaaS)**  
+  Modular retrofit kit for urban shuttles, delivery platforms, and light utility vehicles.
+* **Tier 2: Full Level-4 Robotaxi Turnkey Kit ($35,000 Kit / $450/mo AaaS or $0.18/km)**  
+  Designed for passenger EV fleets (Hyundai Ioniq 5). Delivers **70% CAPEX savings** and a **14-month full payback period (ROI)** for fleet operators.
+* **Tier 3: NATO STANAG Defense UGV Hardened Kit ($55,000 Kit / $1,200/mo AaaS)**  
+  Military-grade GPS-denied navigation, GPR threat rings, and ruggedized compute. Bespoke defense integration contracts: **$250,000 – $1,000,000**.
 
 ---
 
@@ -86,14 +86,14 @@
 | **Mine / IED AI Quarantine** | Separate Manual Systems | None | **Native Automated Threat Rings** |
 | **Integration Agility** | Proprietary & Locked (Years) | Fragile Dependencies | **Modular CAN / ROS2 / JAUS** |
 | **Pricing & Margin** | Multi-Million Cost-Plus | No Support / Uncertified | **High-Margin Annual OEM SaaS** |
-| **Code Verification** | Black Box | Untested | **1,276 Verified Tests (100%)** |
+| **Code Verification** | Black Box | Untested | **1,301 Verified Tests (100%)** |
 
 ---
 
 ## SLIDE 9: TRACTION & PROVEN MILESTONES
 ### "De-risked Technology with Institutional Backing"
 
-* **Software Maturity:** Complete 9-system architecture with 1,281 passing unit/integration tests and zero-failure 50-mission simulation campaign.
+* **Software Maturity:** Complete 9-system architecture with 1,301 passing unit/integration tests and zero-failure 50-mission simulation campaign.
 * **Live Web & Brand Presence:** Full digital platform live at `trustia.com.tr` with institutional documentation and export compliance.
 * **Governance & R&D:** Incubation backing with BTM Istanbul, candidate Teknopark Istanbul, and accredited deep-tech setup.
 * **Accreditations:** KOSGEB Advanced Entrepreneurship Certified, BTK & Defense Industry Academy (100/100) certified founder background.
@@ -101,12 +101,13 @@
 ---
 
 ## SLIDE 10: THE ASK & USE OF FUNDS
-### "Raising $500,000 Pre-Seed Round (SAFE at $6M Cap)"
+### "Raising $500,000 Pre-Seed Round (SAFE at $5M Post-Money Cap, 20% Discount)"
 
-* **50% — Physical Hardware & Field Test Pilots:** Sensor testbeds (LiDAR, Jetson Orin, Drive-by-Wire kits) and proving ground trials with UGV manufacturer partners.
-* **30% — Core Engineering & Edge AI Optimization:** Porting vision and SLAM models to CUDA/TensorRT for micro-watt edge computing.
-* **20% — Defense Business Development & Global Certifications:** Expanding OEM partnerships across allied defense regions.
+* **45% ($225,000) — Physical Hardware & Sensor Fleet:** Full conversion of initial 2 Hyundai Ioniq 5 proving ground test vehicles and 27-part Level-4 sensor inventories.
+* **35% ($175,000) — Core Engineering Talent:** Embedded systems, 3D LiDAR SLAM, ROS 2, and test technician payroll (18-month operational runway).
+* **15% ($75,000) — Proving Grounds & Field Track Operations:** Bilişim Vadisi track leasing, closed-course trials, and Dubai RTA World Challenge field logistics.
+* **5% ($25,000) — IP & ISO 26262 ASIL-D Validation:** International PCT patent filings and automotive functional safety audits.
 
-**Join us in building the autonomous foundation of modern defense.**  
-*Trustia AI — Istanbul, TR*  
-Contact: `kariyer@trustia.com.tr` | `https://trustia.com.tr`
+**Join us in building the sovereign autonomous foundation of modern mobility.**  
+*Trustia AI — İTO BTM Fulya Campus, Şişli / Istanbul, TR*  
+Contact: `iletisim@trustia.com.tr` | `kariyer@trustia.com.tr` | `https://trustia.com.tr`

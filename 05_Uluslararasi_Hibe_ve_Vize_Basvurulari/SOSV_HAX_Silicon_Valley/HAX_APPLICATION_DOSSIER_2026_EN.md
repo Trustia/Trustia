@@ -13,7 +13,7 @@
 | **Investment Terms:** | **$250,000 USD Net Cash Investment** |
 | **Sector:** | Robotics • Autonomous Vehicles (UGVs) • Sensor Fusion • Defense Hardware/Software |
 | **Codebase & Rigor:** | **16,000+ Lines Production Code** • **1,281 Deterministic Tests (100% PASS Rate)** |
-| **Accreditations:** | **İTO BTM (Polat Tower), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
+| **Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 | **Portal Link:** | [sosv.com/apply/hax](https://sosv.com/apply/hax/) |
 
@@ -41,7 +41,7 @@ Trustia solves this with a plug-and-play universal Drive-by-Wire kit and 400Hz E
 ========================================================================================
 FIELD 3: CAP TABLE & CAPITAL STRUCTURE
 ========================================================================================
-100% owned by Founder (Murat Furkan Bayram). Bootstrapped pre-seed stage with active admission to Istanbul Chamber of Commerce BTM (Polat Tower) and Teknopark Istanbul.
+100% owned by Founder (Murat Furkan Bayram). Bootstrapped pre-seed stage with active admission to Istanbul Chamber of Commerce BTM (Fulya Kampüsü) and Teknopark Istanbul.
 ```
 
 ```

@@ -3,7 +3,7 @@
 
 **Sertifika Numarası:** `TRUSTIA-2026-VAL-009`  
 **Sürüm:** Sürüm 2.0 (Milli Askeri Sınıf Otonomi Eko-Sistemi)  
-**Tarih:** 3 Ağustos 2026  
+**Tarih:** 5 Eylül 2026  
 **Denetim Motoru:** `core.certification` (Automated Abstract Syntax Tree Audit System)  
 
 ---
@@ -39,9 +39,9 @@ Bu sertifika belgesi, **TRUSTIA Otonomi Platformu** yazılımının aşağıdaki
 
 | Denetim Parametresi | Analiz Sonucu | Doğrulama Durumu |
 |---|---|---|
-| **Taranan Python Kaynak Dosyası** | 110 Dosya | ONAYLANDI |
-| **Toplam Kod Hacmi (Lines of Code)** | 14.557 Satır | ONAYLANDI |
-| **Otomatik Birim & Entegrasyon Testi** | 1.268 Test | %100 GEÇTİ |
+| **Taranan Python Kaynak Dosyası** | 140 Dosya | ONAYLANDI |
+| **Toplam Kod Hacmi (Lines of Code)** | 16.746 Satır | ONAYLANDI |
+| **Otomatik Birim & Entegrasyon Testi** | 1.301 Test | %100 GEÇTİ |
 | **%100 Yerli Katkı Bağımsızlık Oranı** | Saf Python + NumPy Matris Matematiği | TÜR UYUMLU |
 | **İletişim Güvenlik Protokolü** | HMAC-SHA256 İmzalı Mesajlaşma | ONAYLANDI |
 | **Askeri Mesajlaşma Standardı** | SAE AS6091 / AS6009 JAUS | ONAYLANDI |

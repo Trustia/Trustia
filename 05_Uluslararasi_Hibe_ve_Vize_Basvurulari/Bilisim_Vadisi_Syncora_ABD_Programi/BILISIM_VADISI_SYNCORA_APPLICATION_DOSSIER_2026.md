@@ -14,7 +14,7 @@
 | **Yetkili E-Posta:** | **`kariyer@trustia.com.tr`** |
 | **Yetkili Telefon:** | **`+90 537 064 04 60`** |
 | **Kurumsal Yapı:** | **Deep-Tech Otonomi Girişimi (Ar-Ge & Global Hızlandırma Adayı)** |
-| **Kuluçka / Merkez:** | **İTO BTM (Polat Tower Rezidans, Şişli) & Teknopark İstanbul** |
+| **Kuluçka / Merkez:** | **İTO BTM Fulya Kampüsü, Şişli / İstanbul & Teknopark İstanbul** |
 | **Savunma Derecesi:** | **100/100 Tam Puan (SSB & BTK Akademi ID: `L2zPtN4X1ZJ`)** |
 
 ---

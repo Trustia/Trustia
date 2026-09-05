@@ -1,6 +1,6 @@
 # 🚜 TRUSTIA — SAHA VE DONANIM TEST PROTOKOLÜ
 
-**Doküman Tarihi:** Ağustos 2026  
+**Doküman Tarihi:** Eylül 2026  
 **Amaç:** İnsansız Kara Aracı (İKA) fiziksel saha sürüş ve güvenlik kalibrasyonu prosedürleri.
 
 ---

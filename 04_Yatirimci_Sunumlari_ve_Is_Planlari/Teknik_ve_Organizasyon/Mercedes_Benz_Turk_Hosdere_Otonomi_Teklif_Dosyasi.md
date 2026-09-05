@@ -1,4 +1,4 @@
-﻿# 🇹🇷 TRUSTIA AI & MERCEDES-BENZ TÜRK HOŞDERE FABRİKASI
+# 🇹🇷 TRUSTIA AI & MERCEDES-BENZ TÜRK HOŞDERE FABRİKASI
 ## STRATEJİK TEKNOLOJİK İŞ BİRLİĞİ VE PİLOT PROJE (POC) TEKLİF DOSYASI
 
 **Kime:**  
@@ -7,11 +7,11 @@ Hoşdere Otobüs Fabrikası Direktörlüğü & Otobüs Ar-Ge Merkezi
 Sanayi Mah. Hoşdere Yolu Cd. No:2, 34538 Esenyurt / İstanbul  
 
 **Kimden:**  
-Trustia Savunma ve Otonom Sistemler Teknolojileri A.Ş.  
+Trustia AI (Otonom Mobilite & Derin Teknoloji Girişimi)  
 Kurucu & Sistem Mimarı: **Murat Furkan Bayram** (17 Yaşında)  
 Ekip Ortağı: **Denizcan Özcan** (ASELSAN & TEKNOFEST Robotaksi Finalisti, İÜC EEE)  
 İletişim: `kariyer@trustia.com.tr` | `+90 537 064 04 60` | `trustia.com.tr`  
-Kuluçka: İstanbul Ticaret Odası BTM (Fulya Polat Tower Rezidans)  
+Kuluçka: İstanbul Ticaret Odası BTM (İTO BTM Fulya Kampüsü)  
 
 ---
 
@@ -47,14 +47,14 @@ Trustia AI, sıfırdan geliştirilen **16.000 satır deterministik Seviye 4 oton
 | **İletişim Ağı** | SAE J1939 CAN-Bus Protokolü | ✅ %100 Yerel CAN-Bus Sürücüsü (Doğrudan Tak-Çalıştır) |
 | **Gecikme Süresi** | < 50 ms Güvenlik Eşiği | ✅ **< 15 ms** Hybrid A* Deterministik Rota Planlama |
 | **Konumlandırma** | GPS + Kapalı Alan Odometri | ✅ **400 Hz** ESKF + LiDAR Odometri (GPS Karartmasına Dayanıklı) |
-| **Yazılım Güvenilirliği** | ISO 26262 ASIL-D Seviyesi | ✅ **1.281 / 1.281 Doğrulanmış Test** (%100 Başarı, 0 Hata) |
-| **Entegrasyon Süresi**| Hızlı Montaj İhtiyacı | ✅ **15 Dakikada** Araç Mekaniğini Bozmadan Retrofit |
+| **Yazılım Güvenilirliği** | ISO 26262 ASIL-D Seviyesi | ✅ **1.301 / 1.301 Doğrulanmış Test** (%100 Başarı, 0 Hata) |
+| **Güvenlik Mimarisi** | Donanım E-Stop + LinkLoss | ✅ Bağımsız 80A Röleli E-Stop + 3s RTH Güvenli Duruş |
 
 ---
 
 ## 📜 4. GÜVENİLİRLİK VE RESMİ TESCİLLERİMİZ
 
-1. **İTO BTM Ön Kuluçka:** İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (Fulya Polat Tower) 2026 II. Dönem Sözleşmeli Girişimi.
+1. **İTO BTM Ön Kuluçka:** İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (İTO BTM Fulya Kampüsü) 2026 II. Dönem Sözleşmeli Girişimi.
 2. **SSB Savunma Sanayii Başkanlığı:** 100/100 Tam Puan Başarı Sertifikası (`L2zPtN4X1ZJ`).
 3. **KOSGEB İleri Girişimci:** Resmi Sertifikasyon (`KSB01UGE0115153370`).
 4. **TÜBİTAK ARBİS:** Ulusal Araştırmacı Tescili (`TBTK-0229-6571`).

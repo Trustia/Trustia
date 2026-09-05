@@ -13,7 +13,7 @@
 | **Grant Package:** | **€150,000 Non-Dilutive Equity-Free Grant** |
 | **Location:** | **Luxembourg City / Belval Hub** |
 | **Codebase & Rigor:** | **16,000+ Lines Production Code** • **1,281 Deterministic Tests (100% PASS Rate)** |
-| **Accreditations:** | **İTO BTM (Polat Tower), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
+| **Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 
 ---
@@ -43,5 +43,5 @@ FIELD 3: BUSINESS MODEL & TRACTION
 • Autonomy Hardware Conversion Kits: $80,000 – $220,000 per vehicle.
 • Recurring Tactical C2 / Software Licenses: $15,000 – $35,000 / vehicle / year.
 • Current Stage: Working MVP / Alpha with 1,281 passing tests.
-• Accreditations: Admitted to Istanbul Chamber of Commerce BTM (Polat Tower), Teknopark Istanbul (Cube GO), 100/100 Defense Excellence rating by Turkish Presidency of Defense Industries (SSB), and KOSGEB Advanced Entrepreneur Certificate.
+• Accreditations: Admitted to Istanbul Chamber of Commerce BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), 100/100 Defense Excellence rating by Turkish Presidency of Defense Industries (SSB), and KOSGEB Advanced Entrepreneur Certificate.
 ```

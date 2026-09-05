@@ -12,7 +12,7 @@
 | **KOSGEB İleri Girişimci Belge No:** | **`KSB01UGE0115153370`** *(Resmi Onaylı)* |
 | **Savunma Mükemmeliyet Puanı:** | **100/100 Tam Puan** *(SSB & BTK Sertifika No: `L2zPtN4X1ZJ`)* |
 | **TÜBİTAK ARBİS No:** | **`TBTK-0229-6571`** |
-| **Kuluçka Merkezi:** | **İstanbul Ticaret Odası BTM (Polat Tower Rezidans, Şişli)** |
+| **Kuluçka Merkezi:** | **İstanbul Ticaret Odası BTM (İTO BTM Fulya Kampüsü, Şişli)** |
 | **Destek Kapsamı:** | **Yeni Makine, Teçhizat, Donanım (Laptop/İş İstasyonu), Yazılım ve Hizmet** |
 | **Toplam Destek Üst Limiti:** | **1.500.000 TL + 150.000 TL (Genç Girişimci Ek Puanı) = 1.650.000 TL** |
 
@@ -45,7 +45,7 @@ ALAN 2: TALEP EDİLEN MAKİNE, TEÇHİZAT VE YAZILIMLARIN GEREKÇESİ
 ========================================================================================
 Geliştirilen Seviye 4 Otonom İKA yazılımı; saniyede milyonlarca 3D LiDAR nokta bulutu işleme, 400Hz IMU filtreleme ve derin öğrenme tabanlı EYP/mayın tespit algoritmaları koşturmaktadır. 
 
-Bu ileri teknoloji algoritmaların test edilmesi, Polat Tower BTM ofisi ve test sahalarında araç başında gerçek zamanlı derlenmesi ve koşturulması için yüksek işlem gücüne (GPU/NPU) sahip mobil iş istasyonu dizüstü bilgisayarına ve test sensör kitlerine (LiDAR, IMU, CAN-Bus) acil ihtiyaç duyulmaktadır.
+Bu ileri teknoloji algoritmaların test edilmesi, İTO BTM Fulya Kampüsü BTM ofisi ve test sahalarında araç başında gerçek zamanlı derlenmesi ve koşturulması için yüksek işlem gücüne (GPU/NPU) sahip mobil iş istasyonu dizüstü bilgisayarına ve test sensör kitlerine (LiDAR, IMU, CAN-Bus) acil ihtiyaç duyulmaktadır.
 ```
 
 ```

@@ -1,54 +1,73 @@
 @echo off
 chcp 65001 >nul
-title TRUSTIA AI — Web Sitesi Derleme ve Canliya Deploy Araci
-
-echo ========================================================
-echo   TRUSTIA AI - WEB SITESI CANLIYA AKTARMA (DEPLOY)
-echo ========================================================
-echo.
+title TRUSTIA AI — Web Platformu Yönetim Konsolu
 
 cd /d "%~dp0website"
 
-echo [1/3] Next.js 16 Web Sitesi Derleniyor (npm run build)...
+:menu
+cls
+echo =========================================================================
+echo    TRUSTIA AI — WEB PLATFORMU VE ROBOTAKSİ PORTALI YÖNETİMİ
+echo =========================================================================
+echo.
+echo  [1] Web Sitesini Derle ve Test Et (Next.js 16 Production Build)
+echo  [2] Geliştirici Sunucusunu Başlat (http://localhost:3000)
+echo  [3] Derlenmiş Statik Çıktıyı Önizle (Local Preview out/)
+echo  [4] Değişiklikleri GitHub'a Gönder (Canlı trustia.com.tr Deploy)
+echo  [5] Çıkış
+echo.
+echo =========================================================================
+set /p secim="Lütfen yapmak istediğiniz işlemi seçin (1-5): "
+
+if "%secim%"=="1" goto build
+if "%secim%"=="2" goto dev
+if "%secim%"=="3" goto preview
+if "%secim%"=="4" goto deploy
+if "%secim%"=="5" exit /b 0
+goto menu
+
+:build
+cls
+echo [1/1] Next.js 16 Web Platformu Derleniyor...
+call npm run build
+echo.
+echo [TAMAMLANDI] Derleme başarıyla tamamlandı.
+pause
+goto menu
+
+:dev
+cls
+echo [1/1] Geliştirici Sunucusu Başlatılıyor (Ctrl+C ile durdurabilirsiniz)...
+start http://localhost:3000
+call npm run dev
+pause
+goto menu
+
+:preview
+cls
+echo [1/1] Derlenmiş 'out' Klasörü Yerel Sunucuda Başlatılıyor...
+start http://localhost:8080
+call npx serve out -p 8080
+pause
+goto menu
+
+:deploy
+cls
+echo [1/2] Web Platformu Yeniden Derleniyor...
 call npm run build
 if %errorlevel% neq 0 (
-    echo.
-    echo [HATA] Derleme basarisiz oldu!
+    echo [HATA] Derleme başarısız oldu, deploy iptal edildi!
     pause
-    exit /b %errorlevel%
+    goto menu
 )
-
 echo.
-echo [2/3] CNAME ve Dagitim Dosyalari Hazirlaniyor...
-copy /y "%~dp0CNAME" "%~dp0website\out\CNAME" >nul 2>&1
-
-set DEPLOY_DIR=%TEMP%\trustia_deploy_temp
-if exist "%DEPLOY_DIR%" rmdir /s /q "%DEPLOY_DIR%"
-mkdir "%DEPLOY_DIR%"
-
-echo.
-echo [3/3] GitHub Reposuna Yukleniyor (git push)...
-git clone --depth 1 https://github.com/Trustia/Trustia.git "%DEPLOY_DIR%"
-if %errorlevel% neq 0 (
-    echo.
-    echo [HATA] GitHub reposuna erisilemedi! Lutfen internet baglantinizi ve GitHub izinlerinizi kontrol edin.
-    pause
-    exit /b %errorlevel%
-)
-
-xcopy /s /e /y "%~dp0website\out\*" "%DEPLOY_DIR%\" >nul
-
-cd /d "%DEPLOY_DIR%"
-git config user.name "Trustia AI"
-git config user.email "kariyer@trustia.com.tr"
+echo [2/2] GitHub Ana Reposuna Yükleniyor...
+cd /d "%~dp0.."
 git add -A
-git commit -m "Deploy complete TR/EN bilingual website with language toggle"
+git commit -m "chore(website): update web platform assets and production build"
 git push origin main
-
 echo.
-echo ========================================================
-echo   [TEBRIKLER] Web sitesi basariyla GitHub'a yuklendi!
-echo   1-2 dakika icinde trustia.com.tr uzerinde canliya gececektir.
-echo ========================================================
-echo.
+echo [TEBRİKLER] Değişiklikler GitHub'a gönderildi!
+echo GitHub Actions 1-2 dakika içinde trustia.com.tr üzerinde canlıya alacaktır.
 pause
+goto menu

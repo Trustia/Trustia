@@ -1,6 +1,6 @@
 # 🛠️ TRUSTIA — DONANIM MİMARİSİ VE PARÇA LİSTESİ (BILL OF MATERIALS - BOM)
 
-**Doküman Tarihi:** Ağustos 2026  
+**Doküman Tarihi:** Eylül 2026  
 **Amaç:** Fiziksel bir insansız kara aracı (İKA) prototipi veya donanım entegrasyonu yapmak isteyen mühendislik ekibi için satın alınacak standart endüstriyel parça listesi.
 
 ---

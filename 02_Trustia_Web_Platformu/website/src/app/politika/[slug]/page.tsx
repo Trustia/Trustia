@@ -462,7 +462,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "Madde 1 — Veri Sorumlusu ve Toplanan Bilgiler",
           items: [
-            "Veri Sorumlusu: Trustia AI (İTO BTM Fulya Polat Tower Rezidans, Şişli / İstanbul).",
+            "Veri Sorumlusu: Trustia AI (İTO BTM Fulya Kampüsü, Şişli / İstanbul).",
             "Web portalımız üzerinden toplanan ad, kurum adı ve e-posta bilgileri yalnızca kurumsal iletişim, teknik değerlendirme ve NDA ortaklık süreçleri için işlenir.",
             "Toplanan iletişim verileri üçüncü şahıslara veya reklam ağlarına kesinlikle satılmaz veya devredilmez."
           ]
@@ -494,7 +494,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "Section 1 — Data Controller & Processing Boundaries",
           items: [
-            "Data Controller: Trustia AI, İTO BTM Fulya Polat Tower Residence, Istanbul, Turkey.",
+            "Data Controller: Trustia AI, İTO BTM Fulya İTO BTM Fulya Kampüsü Residence, Istanbul, Turkey.",
             "Inquiries submitted via official portals are used exclusively for partnership evaluations and technical NDA dialogues.",
             "Zero commercial sale or third-party marketing distribution of institutional data."
           ]
@@ -523,7 +523,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "Madde 1 — Veri Sorumlusu ve Toplanan Bilgiler",
           items: [
-            "Veri Sorumlusu: Trustia AI (İTO BTM Fulya Polat Tower Rezidans, Şişli / İstanbul).",
+            "Veri Sorumlusu: Trustia AI (İTO BTM Fulya Kampüsü, Şişli / İstanbul).",
             "Web portalımız üzerinden toplanan ad, kurum adı ve e-posta bilgileri yalnızca kurumsal iletişim, teknik değerlendirme ve NDA ortaklık süreçleri için işlenir.",
             "Toplanan iletişim verileri üçüncü şahıslara veya reklam ağlarına kesinlikle satılmaz veya devredilmez."
           ]
@@ -555,7 +555,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "Section 1 — Data Controller & Processing Boundaries",
           items: [
-            "Data Controller: Trustia AI, İTO BTM Fulya Polat Tower Residence, Istanbul, Turkey.",
+            "Data Controller: Trustia AI, İTO BTM Fulya İTO BTM Fulya Kampüsü Residence, Istanbul, Turkey.",
             "Inquiries submitted via official portals are used exclusively for partnership evaluations and technical NDA dialogues.",
             "Zero commercial sale or third-party marketing distribution of institutional data."
           ]

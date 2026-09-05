@@ -14,7 +14,7 @@
 | **Website:** | [https://trustia.com.tr](https://trustia.com.tr) |
 | **Contact Email:** | `kariyer@trustia.com.tr` / `muratbyrm009@gmail.com` |
 | **Investment Ask:** | **$125,000 USD SAFE** (Part of $500,000 Pre-Seed Round @ $5,000,000 Valuation Cap) |
-| **Institutional Backing:** | **İTO BTM (Istanbul Chamber of Commerce - Polat Tower)** & **Teknopark Istanbul (Cube GO)** |
+| **Institutional Backing:** | **İTO BTM (Istanbul Chamber of Commerce - Fulya Kampüsü)** & **Teknopark Istanbul (Cube GO)** |
 | **Government Certification:** | **Presidency of Defense Industries (SSB & BTK) 100/100 Perfect Score** (ID: `L2zPtN4X1ZJ`) |
 | **Ministerial Accreditation:** | **KOSGEB Advanced Entrepreneur Certificate** (Reg: `KSB01UGE0115153370`) |
 | **National R&D Registry:** | **TÜBİTAK ARBİS Researcher** (ID: `TBTK-0229-6571`) |
@@ -97,7 +97,7 @@ QUESTION 5: WHAT IS YOUR MARKET SIZE (TAM / SAM / SOM)?
 ========================================================================================
 QUESTION 6: WHAT IS YOUR TRACTION, ACCREDITATION & VALIDATION TO DATE?
 ========================================================================================
-• Official Incubator Backing: Formally admitted to the Istanbul Chamber of Commerce BTM Incubator (Polat Tower, Istanbul) and candidate deep-tech defense firm in Teknopark Istanbul (Cube GO).
+• Official Incubator Backing: Formally admitted to the Istanbul Chamber of Commerce BTM Incubator (BTM Fulya Campus, Istanbul) and candidate deep-tech defense firm in Teknopark Istanbul (Cube GO).
 • Government Excellence Rating: 100/100 Perfect Grade in Defense Technologies from Turkish Presidency of Defense Industries (SSB & BTK, Verification Ref: L2zPtN4X1ZJ).
 • Ministerial Entrepreneurship Credential: Certified Advanced Entrepreneur by Ministry of Industry and Technology (KOSGEB KSB01UGE0115153370).
 • National R&D Registry: Registered in TÜBİTAK ARBİS (TBTK-0229-6571).

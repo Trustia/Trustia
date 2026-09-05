@@ -13,7 +13,7 @@
 | **Investment Terms:** | **$150,000 USD for 6% Equity** (Post-Money Standard Terms) |
 | **Sector:** | Deep-Tech • Level 4 Autonomous Vehicles • Defense AI & Robotics |
 | **Codebase & Rigor:** | **16,000+ Lines of Production Code** • **1,281 Deterministic Automated Tests (100% PASS Rate)** |
-| **Official Accreditations:** | **İTO BTM (Polat Tower), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB, TÜBİTAK ARBİS** |
+| **Official Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB, TÜBİTAK ARBİS** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 | **Application Portal:** | [flagship.aplica.500.co](https://flagship.aplica.500.co) |
 
@@ -61,7 +61,7 @@ FIELD 4: BUSINESS MODEL, PRICING & TRACTION
 • Autonomy Hardware Conversion Kits: $80,000 – $220,000 per vehicle.
 • Recurring Tactical C2 / Software Licenses: $15,000 – $35,000 / vehicle / year.
 • Current Stage: Working MVP / Alpha with 1,281 passing tests.
-• Accreditations: Admitted to Istanbul Chamber of Commerce BTM (Polat Tower), Teknopark Istanbul (Cube GO), 100/100 Defense Excellence rating by Turkish Presidency of Defense Industries (SSB), and KOSGEB Advanced Entrepreneur Certificate.
+• Accreditations: Admitted to Istanbul Chamber of Commerce BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), 100/100 Defense Excellence rating by Turkish Presidency of Defense Industries (SSB), and KOSGEB Advanced Entrepreneur Certificate.
 ```
 
 ```

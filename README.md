@@ -24,7 +24,7 @@ TRUSTIA is a full-stack, software-defined autonomous mobility platform built fro
 | 🇺🇸 **Bronze Valley VC & Angel Network** | United States | **$500,000 USD SAFE ($5M Cap)** |  **Officially Submitted & Confirmed** |
 | 🇺🇸 **Hustle Fund** | Silicon Valley | **$50,000 – $150,000 USD Seed** |  **Officially Submitted & Confirmed** |
 | 🇺🇸 **Founders, Inc. (Blueprint II)** | San Francisco (Fort Mason)| **Pre-Seed & Residency** |  **Campus Account Activated** |
-| 🇹🇷 **Startups.watch** | Turkey & Global | **Verified Deep-Tech Ecosystem** | 🥇 **#1 Top Rank Homepage Verified** |
+| 🇹🇷 **Startups.watch** | Turkey & Global | **Verified Deep-Tech Ecosystem** | 🛡️ **Resmi Doğrulanmış Girişim / Verified** |
 | 🇹🇷 **TechOne VC (Smart Capital)** | Istanbul / Global | **$100,000 – $500,000 USD** |  **Officially Submitted & Confirmed** |
 | 🇹🇷 **Revo Capital ($100M Fund)** | Istanbul / Amsterdam | **$500,000 – $2M USD Seed** |  **Officially Submitted & Confirmed** |
 | 🇹🇷 **APY Ventures (Bilişim Vadisi)** | Gebze / Istanbul | **Otonomi & Mobilite GSYF** |  **Officially Submitted & Confirmed** |
@@ -38,7 +38,7 @@ TRUSTIA is a full-stack, software-defined autonomous mobility platform built fro
 | 🇺🇸 **500 Global (500 Startups)** | Palo Alto / SF | **$150,000 USD (Batch 37)** |  **Officially Submitted & Confirmed** |
 | 🚀 **Alchemist Accelerator** | Silicon Valley | **$125,000 USD SAFE** |  **Officially Submitted & Confirmed** |
 | 🌐 **Plug and Play Tech Center** | Sunnyvale / Turin | **Enterprise & NATO DualTech** |  **Officially Submitted & Confirmed** |
-| 🏛️ **İTO BTM (Polat Tower)** | Fulya / Istanbul | **Pre-Incubation & Investor Hub** | ✅ **Admitted & Contract Signed** |
+| 🏛️ **İTO BTM (Fulya Kampüsü)** | Fulya / Istanbul | **Pre-Incubation & Investor Hub** | ✅ **Admitted & Contract Signed** |
 | 🏢 **Teknopark Istanbul** | Pendik / Kurtköy | **Defense Tech Incubation (Cube GO)** | ⏳ **Candidate Defense Tech Firm** |
 
 ---
@@ -204,9 +204,9 @@ python trustia_cli.py audit
 ## 📞 Executive Leadership & Corporate Contact
 
 * **Founder & CEO / Systems Architect:** Murat Furkan Bayram (80% Equity)
-* **Co-Founder & COO / Legal Representative:** Doğukan Bayram (20% Equity, Board Chairman)
+* **Co-Founder & Operations:** Doğukan Bayram (20% Equity)
 * **Lead Hardware & Robotics Engineer:** Denizcan Özcan (ASELSAN Candidate Pool, TEKNOFEST Robotaxi Finalist, İÜC EEE 3.44 GPA)
-* **Incubation HQ:** Istanbul Chamber of Commerce BTM Fulya Campus (Polat Tower Residence No:10, Besiktas / Istanbul)
+* **Incubation HQ:** Istanbul Chamber of Commerce BTM Fulya Campus (İTO BTM Fulya Kampüsü, Şişli / İstanbul)
 * **Official Website:** [https://trustia.com.tr](https://trustia.com.tr)
 * **Investor Pitch Deck:** [https://trustia.com.tr/Trustia_AI_Investor_Deck.pdf](https://trustia.com.tr/Trustia_AI_Investor_Deck.pdf)
 * **Email:** [kariyer@trustia.com.tr](mailto:kariyer@trustia.com.tr) | [iletisim@trustia.com.tr](mailto:iletisim@trustia.com.tr)

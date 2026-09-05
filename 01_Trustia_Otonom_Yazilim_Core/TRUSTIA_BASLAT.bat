@@ -6,7 +6,7 @@ echo    TRUSTIA v2.0 - DUAL-USE AUTONOMOUS DRIVING & C2 MISSION CONTROL
 echo =========================================================================
 echo.
 echo [1] Launch Tactical C2 Desktop Console (Military UGV & Robotaxi GUI)
-echo [2] Run 1,276-Test Automated Verification Suite (100%% Pass Rate)
+echo [2] Run 1,301-Test Automated Verification Suite (100%% Pass Rate)
 echo [3] Run AI Threat & Obstacle Detection Engine (IED/Mine/Pedestrian)
 echo [4] Run Native Architecture & NATO STANAG 4586 Compliance Audit
 echo.
