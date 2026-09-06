@@ -19,8 +19,8 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 w-[96%] sm:w-[94%] max-w-6xl z-50 transition-all duration-300">
-      {/* Sleek Corporate Glass Pill Container with Backdrop Blur to prevent text bleed */}
-      <div className="relative px-3 sm:px-5 py-2 bg-[#090b0e]/85 backdrop-blur-md border border-white/10 rounded-2xl shadow-xl flex items-center justify-between">
+      {/* Sleek Ultra-Transparent Frosted Glass Pill Container */}
+      <div className="relative px-3 sm:px-5 py-2 bg-black/20 backdrop-blur-xl border border-white/15 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] hover:border-white/25 transition-all duration-300 flex items-center justify-between">
         
         {/* Brand Logo with Dynamic High-Res Flag on the Diagonal Tip of "I" */}
         <Link href="/" className="relative inline-flex items-center group select-none py-0.5 pr-4 shrink-0">
@@ -129,7 +129,7 @@ export default function Navbar() {
         {/* Right Action Area: Language Switcher & Contact Button */}
         <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           {/* TR / EN Language Toggle Pill (Responsive for mobile & desktop) */}
-          <div className="flex items-center p-0.5 sm:p-1 rounded-lg sm:rounded-xl bg-black/60 border border-white/15 backdrop-blur-md text-[10px] sm:text-xs font-mono font-bold shadow-lg">
+          <div className="flex items-center p-0.5 sm:p-1 rounded-lg sm:rounded-xl bg-black/30 border border-white/15 backdrop-blur-md text-[10px] sm:text-xs font-mono font-bold shadow-sm">
             <button
               onClick={() => setLang("tr")}
               className={`px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all duration-300 cursor-pointer ${
