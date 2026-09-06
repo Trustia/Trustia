@@ -48,7 +48,7 @@ export default function PolicyDocumentView({
   const sidebarEntries = Object.entries(policyData).filter(([slug]) => slug !== "gizlilik");
 
   return (
-    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-20 sm:pt-24 pb-16">
+    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-28 sm:pt-36 pb-16">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6 sm:space-y-8">

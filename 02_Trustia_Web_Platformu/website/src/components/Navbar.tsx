@@ -1,11 +1,22 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleScrollToOtonomi = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -18,9 +29,14 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-8 z-50 transition-all duration-300">
-      {/* Zero Enclosing Layer - Clean Seamless Floating Header */}
-      <div className="w-full flex items-center justify-between">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-[#07090d]/90 backdrop-blur-xl border-b border-white/10 py-3 sm:py-3.5 shadow-2xl"
+          : "bg-transparent py-4 sm:py-6"
+      }`}
+    >
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
         
         {/* Brand Logo with Dynamic High-Res Flag on the Diagonal Tip of "I" */}
         <Link href="/" className="relative inline-flex items-center group select-none py-0.5 pr-4 shrink-0 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">

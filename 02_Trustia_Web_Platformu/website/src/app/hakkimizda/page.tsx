@@ -100,13 +100,13 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-20 sm:pt-24 pb-16">
+    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-28 sm:pt-36 pb-16">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-10 sm:space-y-14">
 
-        {/* 1. Header */}
-        <div className="space-y-3 pb-6 border-b border-white/10">
+        {/* 1. Header & Institutional Badges */}
+        <div className="space-y-4 pb-6 border-b border-white/10">
           <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
             <Link href="/" className="hover:text-white flex items-center gap-1 transition-colors">
               <ArrowLeft className="w-3.5 h-3.5" />
@@ -132,106 +132,24 @@ export default function AboutPage() {
               ? "Trustia AI (İstanbul, Türkiye); şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı zorlu sahalarda görev yapan İnsansız Kara Araçları (İKA) için Seviye 4 yerli otonom sürüş yazılım çekirdeği geliştiren derin teknoloji şirketidir."
               : "Trustia AI is a deep-tech autonomy company engineering sovereign Level-4 autonomous driving software for commercial Robotaxi fleets and GPS-denied tactical Unmanned Ground Vehicles."}
           </p>
-        </div>
 
-        {/* 2. Executive Leadership & Founder Card */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
-            <div className="flex items-center gap-3.5">
-              <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-200">
-                <User className="w-6 h-6" />
-              </div>
-              <div>
-                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
-                  {lang === "tr" ? "KURUCU & SİSTEM MİMARI / CEO" : "FOUNDER & AUTONOMOUS SYSTEMS ARCHITECT"}
-                </div>
-                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  Murat Furkan Bayram
-                </h2>
-              </div>
+          {/* Institutional Fast Badges Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-[11px] font-mono">
+            <div className="p-3 rounded-lg bg-[#0f131a] border border-slate-800">
+              <div className="text-slate-500 text-[9px] uppercase">SSB SINAVI</div>
+              <div className="font-bold text-white mt-0.5">100 / 100</div>
             </div>
-
-            <div className="flex items-center gap-2">
-              <a
-                href="https://www.linkedin.com/in/trustia"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 text-xs font-mono transition-colors"
-              >
-                LinkedIn Profili →
-              </a>
+            <div className="p-3 rounded-lg bg-[#0f131a] border border-slate-800">
+              <div className="text-slate-500 text-[9px] uppercase">KOSGEB</div>
+              <div className="font-bold text-white mt-0.5">İleri Girişimci</div>
             </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-            <div className="lg:col-span-8 space-y-3 text-xs sm:text-sm text-slate-300 leading-relaxed">
-              <p>
-                {lang === "tr"
-                  ? "T.C. Savunma Sanayii Başkanlığı 100/100 tam puan sertifikasyonuna ve KOSGEB İleri Girişimci tesciline sahip otonomi mimarıdır. 16.000 satırlık deterministik otonomi çekirdeğini, 3D LiDAR SLAM motorunu ve 1.301 birim test altyapısını bizzat geliştirmiştir."
-                  : "Certified autonomy systems architect with 100/100 perfect score certification from the Turkish Defense Industry Agency and KOSGEB Advanced Entrepreneur accreditation. Architected the 16,000-line deterministic codebase, 3D LiDAR SLAM, and 1,301 automated verification test suites."}
-              </p>
-              <p className="text-slate-400 text-xs">
-                {lang === "tr"
-                  ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Kampüsü bünyesinde yerleşik olarak şirketin teknoloji, Ar-Ge ve kurumsal konsorsiyum süreçlerini yönetmektedir."
-                  : "Based at the Istanbul Chamber of Commerce (BTM) Fulya campus, leading technology architecture, commercial deployment, and strategic defense partnerships."}
-              </p>
+            <div className="p-3 rounded-lg bg-[#0f131a] border border-slate-800">
+              <div className="text-slate-500 text-[9px] uppercase">STARTUPS.WATCH</div>
+              <div className="font-bold text-white mt-0.5">Doğrulandı</div>
             </div>
-
-            {/* Quick Badges Grid */}
-            <div className="lg:col-span-4 grid grid-cols-2 gap-2 text-[11px] font-mono">
-              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
-                <div className="text-slate-500 text-[9px] uppercase">SSB SINAVI</div>
-                <div className="font-bold text-white mt-0.5">100 / 100</div>
-              </div>
-              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
-                <div className="text-slate-500 text-[9px] uppercase">KOSGEB</div>
-                <div className="font-bold text-white mt-0.5">İleri Girişimci</div>
-              </div>
-              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
-                <div className="text-slate-500 text-[9px] uppercase">STARTUPS.WATCH</div>
-                <div className="font-bold text-white mt-0.5">Doğrulandı</div>
-              </div>
-              <div className="p-3 rounded-lg bg-[#07090d] border border-slate-800">
-                <div className="text-slate-500 text-[9px] uppercase">İTO BTM</div>
-                <div className="font-bold text-white mt-0.5">Fulya Kampüs</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Core Leadership & Engineering Team Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4 border-t border-slate-800">
-            <div className="p-4 rounded-xl bg-[#07090d] border border-slate-800/80 flex items-start gap-3.5">
-              <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
-                <User className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
-                  {lang === "tr" ? "KURUCU ORTAK & OPERASYON" : "CO-FOUNDER & OPERATIONS"}
-                </div>
-                <h3 className="text-sm font-bold text-white">Doğukan Bayram</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  {lang === "tr"
-                    ? "Reşit kurucu ortak. Resmi süreçler, operasyonel yönetim, fon ilişkileri ve organizasyon süreçlerini koordine etmektedir."
-                    : "Co-founder and operations lead. Coordinates operational processes, investor communications, and external relations."}
-                </p>
-              </div>
-            </div>
-
-            <div className="p-4 rounded-xl bg-[#07090d] border border-slate-800/80 flex items-start gap-3.5">
-              <div className="w-10 h-10 rounded-lg bg-slate-800 flex items-center justify-center text-slate-300 shrink-0">
-                <Cpu className="w-5 h-5" />
-              </div>
-              <div className="space-y-1">
-                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
-                  {lang === "tr" ? "BAŞ DONANIM & ROBOTİK ENTEGRASYON" : "LEAD HARDWARE & ROBOTICS INTEGRATION"}
-                </div>
-                <h3 className="text-sm font-bold text-white">Denizcan Özcan</h3>
-                <p className="text-xs text-slate-400 leading-relaxed">
-                  {lang === "tr"
-                    ? "TEKNOFEST Robotaksi Finalisti ve ASELSAN mühendislik havuzu üyesi. CAN-FD Drive-by-Wire, LiDAR/Radar kablolama ve araç gövde entegrasyonundan sorumludur."
-                    : "TEKNOFEST Autonomous Robotaxi Finalist, ASELSAN engineering pool. Specializes in CAN-FD DBW actuation, LiDAR/Radar sensor harness, and EV integration."}
-                </p>
-              </div>
+            <div className="p-3 rounded-lg bg-[#0f131a] border border-slate-800">
+              <div className="text-slate-500 text-[9px] uppercase">İTO BTM</div>
+              <div className="font-bold text-white mt-0.5">Fulya Kampüs</div>
             </div>
           </div>
         </div>

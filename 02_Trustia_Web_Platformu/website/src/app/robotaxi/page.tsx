@@ -122,7 +122,7 @@ export default function RobotaxiPage() {
   ];
 
   return (
-    <main className="relative min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white overflow-x-hidden pt-20 sm:pt-24 pb-16">
+    <main className="relative min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white overflow-x-hidden pt-28 sm:pt-36 pb-16">
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-12 sm:space-y-14">
