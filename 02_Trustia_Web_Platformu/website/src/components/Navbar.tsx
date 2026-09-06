@@ -18,12 +18,12 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-2.5 sm:top-4 left-1/2 -translate-x-1/2 w-[96%] sm:w-[94%] max-w-6xl z-50 transition-all duration-300">
-      {/* Sleek Ultra-Transparent Frosted Glass Pill Container */}
-      <div className="relative px-3 sm:px-5 py-2 bg-black/20 backdrop-blur-xl border border-white/15 rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] hover:border-white/25 transition-all duration-300 flex items-center justify-between">
+    <header className="fixed top-3 sm:top-5 left-1/2 -translate-x-1/2 w-full max-w-7xl px-4 sm:px-8 z-50 transition-all duration-300">
+      {/* Zero Enclosing Layer - Clean Seamless Floating Header */}
+      <div className="w-full flex items-center justify-between">
         
         {/* Brand Logo with Dynamic High-Res Flag on the Diagonal Tip of "I" */}
-        <Link href="/" className="relative inline-flex items-center group select-none py-0.5 pr-4 shrink-0">
+        <Link href="/" className="relative inline-flex items-center group select-none py-0.5 pr-4 shrink-0 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
           <span className="font-syncopate font-bold text-xs sm:text-base md:text-lg tracking-[0.14em] sm:tracking-[0.2em] text-white uppercase group-hover:text-slate-200 transition-colors">
             TRUSTIA
           </span>
@@ -70,57 +70,57 @@ export default function Navbar() {
           {/* 1. HAKKIMIZDA / ABOUT US */}
           <Link
             href="/hakkimizda/"
-            className="px-3 py-1 text-xs font-mono font-medium tracking-wider text-slate-300 hover:text-white uppercase transition-colors"
+            className="px-3 py-1 text-xs font-mono font-medium tracking-wider text-slate-200 hover:text-white uppercase transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
           >
             {t("nav_about")}
           </Link>
 
-          <span className="text-white/20 text-xs font-mono">•</span>
+          <span className="text-white/30 text-xs font-mono drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">•</span>
 
           {/* 2. ROBOTAKSİ / ROBOTAXI */}
           <Link
             href="/robotaxi/"
-            className="px-3 py-1 text-xs font-mono font-semibold tracking-wider text-white hover:text-slate-200 uppercase transition-colors"
+            className="px-3 py-1 text-xs font-mono font-semibold tracking-wider text-white hover:text-slate-200 uppercase transition-colors drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
           >
             {t("nav_robotaxi")}
           </Link>
 
-          <span className="text-white/20 text-xs font-mono">•</span>
+          <span className="text-white/30 text-xs font-mono drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">•</span>
 
           {/* 3. OTONOMİ / AUTONOMY */}
           <button
             onClick={handleScrollToOtonomi}
-            className="px-3 py-1 text-xs font-mono font-medium tracking-wider text-slate-300 hover:text-white uppercase transition-colors cursor-pointer"
+            className="px-3 py-1 text-xs font-mono font-medium tracking-wider text-slate-200 hover:text-white uppercase transition-colors cursor-pointer drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
           >
             {t("nav_autonomy")}
           </button>
 
-          <span className="text-white/30 text-xs font-mono">•</span>
+          <span className="text-white/30 text-xs font-mono drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">•</span>
 
-          {/* 3. TEHDİT TESPİTİ / THREAT DETECTION */}
+          {/* 4. TEHDİT TESPİTİ / THREAT DETECTION */}
           <Link
             href="/politika/siber/"
-            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
+            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
           >
             {t("nav_threat")}
           </Link>
 
-          <span className="text-white/30 text-xs font-mono">•</span>
+          <span className="text-white/30 text-xs font-mono drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">•</span>
 
-          {/* 4. SÜRÜ ZEKASI / SWARM INTEL */}
+          {/* 5. SÜRÜ ZEKASI / SWARM INTEL */}
           <Link
             href="/politika/etik/"
-            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
+            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
           >
             {t("nav_swarm")}
           </Link>
 
-          <span className="text-white/30 text-xs font-mono">•</span>
+          <span className="text-white/30 text-xs font-mono drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">•</span>
 
-          {/* 5. SERTİFİKASYON / CERTIFICATION */}
+          {/* 6. SERTİFİKASYON / CERTIFICATION */}
           <Link
             href="/politika/yerlilik/"
-            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-md"
+            className="px-3 py-1 text-xs font-mono font-bold tracking-widest text-slate-200 hover:text-[#C8FF00] uppercase transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]"
           >
             {t("nav_cert")}
           </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
         {/* Right Action Area: Language Switcher & Contact Button */}
         <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           {/* TR / EN Language Toggle Pill (Responsive for mobile & desktop) */}
-          <div className="flex items-center p-0.5 sm:p-1 rounded-lg sm:rounded-xl bg-black/30 border border-white/15 backdrop-blur-md text-[10px] sm:text-xs font-mono font-bold shadow-sm">
+          <div className="flex items-center p-0.5 sm:p-1 rounded-lg sm:rounded-xl bg-black/40 border border-white/15 backdrop-blur-md text-[10px] sm:text-xs font-mono font-bold shadow-md">
             <button
               onClick={() => setLang("tr")}
               className={`px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-md sm:rounded-lg transition-all duration-300 cursor-pointer ${
@@ -155,7 +155,7 @@ export default function Navbar() {
           {/* Contact Button (Compact on mobile, full size on desktop) */}
           <Link
             href="/iletisim/"
-            className="px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#C8FF00] text-black font-mono font-black text-[10px] sm:text-xs tracking-wider uppercase flex items-center gap-1 sm:gap-2 hover:bg-[#d4ff33] hover:shadow-[0_0_25px_rgba(200,255,0,0.5)] transition-all duration-300 group cursor-pointer"
+            className="px-2.5 sm:px-5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#C8FF00] text-black font-mono font-black text-[10px] sm:text-xs tracking-wider uppercase flex items-center gap-1 sm:gap-2 hover:bg-[#d4ff33] hover:shadow-[0_0_25px_rgba(200,255,0,0.5)] transition-all duration-300 group cursor-pointer shadow-lg"
           >
             <span>{t("nav_contact")}</span>
             <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform" />
