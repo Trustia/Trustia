@@ -15,7 +15,7 @@
 | **Contact Email:** | `kariyer@trustia.com.tr` / `muratbyrm009@gmail.com` |
 | **Investment Ask:** | **$125,000 USD SAFE** (Part of $500,000 Pre-Seed Round @ $5,000,000 Valuation Cap) |
 | **Institutional Backing:** | **İTO BTM (Istanbul Chamber of Commerce - Fulya Kampüsü)** & **Teknopark Istanbul (Cube GO)** |
-| **Government Certification:** | **Presidency of Defense Industries (SSB & BTK) 100/100 Perfect Score** (ID: `L2zPtN4X1ZJ`) |
+| **Defense Training Certificate:** | **BTK Academy Defense Industry Products & Platforms Certificate** (ID: `L2zPtN4X1ZJ`) |
 | **Ministerial Accreditation:** | **KOSGEB Advanced Entrepreneur Certificate** (Reg: `KSB01UGE0115153370`) |
 | **National R&D Registry:** | **TÜBİTAK ARBİS Researcher** (ID: `TBTK-0229-6571`) |
 | **Codebase & Rigor:** | **16,000+ Lines Production Code** • **1,281 Deterministic Tests (100% PASS Rate)** |
@@ -98,7 +98,7 @@ QUESTION 5: WHAT IS YOUR MARKET SIZE (TAM / SAM / SOM)?
 QUESTION 6: WHAT IS YOUR TRACTION, ACCREDITATION & VALIDATION TO DATE?
 ========================================================================================
 • Official Incubator Backing: Formally admitted to the Istanbul Chamber of Commerce BTM Incubator (BTM Fulya Campus, Istanbul) and candidate deep-tech defense firm in Teknopark Istanbul (Cube GO).
-• Government Excellence Rating: 100/100 Perfect Grade in Defense Technologies from Turkish Presidency of Defense Industries (SSB & BTK, Verification Ref: L2zPtN4X1ZJ).
+• Defense Credential: BTK Academy Defense Industry Products & Platforms Certificate (Verification Ref: L2zPtN4X1ZJ).
 • Ministerial Entrepreneurship Credential: Certified Advanced Entrepreneur by Ministry of Industry and Technology (KOSGEB KSB01UGE0115153370).
 • National R&D Registry: Registered in TÜBİTAK ARBİS (TBTK-0229-6571).
 • Technical Validation: Complete 16,000-line autonomy engine with 1,281 deterministic unit and integration tests executing with 100% success rate.
@@ -120,7 +120,7 @@ Alchemist is the gold standard for enterprise B2B and deep-tech acceleration. Tr
 QUESTION 8: FOUNDER & TEAM BACKGROUND
 ========================================================================================
 Murat Furkan Bayram — Founder & Chief Executive Officer / Systems Architect.
-Sole architect who designed, engineered, and mathematically verified the complete 16,000-line Trustia autonomy stack, 400Hz ESKF algorithms, and 1,281-test battery. Backed by the Istanbul Chamber of Commerce (İTO BTM), Teknopark Istanbul, and certified with a 100/100 defense score by the Turkish Presidency of Defense Industries (SSB). Demonstrating the technical execution speed and engineering rigor of an entire robotics team as a focused deep-tech founder.
+Sole architect who designed, engineered, and mathematically verified the complete 16,000-line Trustia autonomy stack, 400Hz ESKF algorithms, and 1,301-test battery. Backed by the Istanbul Chamber of Commerce (İTO BTM), KOSGEB, and certified with BTK Academy defense training. Demonstrating the technical execution speed and engineering rigor of an entire robotics team as a focused deep-tech founder.
 ```
 
 ---

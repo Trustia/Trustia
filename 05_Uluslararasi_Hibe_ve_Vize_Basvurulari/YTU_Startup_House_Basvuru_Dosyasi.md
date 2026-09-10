@@ -37,7 +37,7 @@
 
 ## 4. RESMİ AKREDİTASYONLAR VE TESCİLLERİMİZ
 
-1. **T.C. Savunma Sanayii Başkanlığı:** 100/100 Tam Puan Sınav Tescili (`L2zPtN4X1ZJ`).
+1. **BTK Akademi:** Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`).
 2. **KOSGEB:** İleri Girişimcilik Tescil Belgesi (`KSB01UGE0115153370`).
 3. **TÜBİTAK ARBİS:** Ulusal Araştırmacı Kaydı (`TBTK-0229-6571`).
 4. **ASELSAN:** Resmi Tedarikçi Portalı Kaydı.
@@ -47,7 +47,7 @@
 
 ## 5. ÇEKİRDEK EKİP VE MÜHENDİSLİK GÜCÜ
 
-* **Murat Furkan Bayram (Kurucu & Sistem Mimarı):** 17 yaşında. KOSGEB ve SSB 100/100 tescilli. 16.000 satırlık deterministik otonomi mimarisini, SLAM ve V2X katmanlarını sıfırdan geliştirdi.
+* **Murat Furkan Bayram (Kurucu & Sistem Mimarı):** 17 yaşında. KOSGEB İleri Girişimci ve BTK Akademi sertifikalı. 16.000 satırlık deterministik otonomi mimarisini, SLAM ve V2X katmanlarını sıfırdan geliştirdi.
 * **Denizcan Özcan (1. Öncelikli Aday Mühendis):** İÜC EEE 4. Sınıf (3.44 GPA). ASELSAN Stajyer Mühendisi, TEKNOFEST Robotaksi Finalisti, FPGA ve gömülü C/C++ uzmanı.
 
 ---

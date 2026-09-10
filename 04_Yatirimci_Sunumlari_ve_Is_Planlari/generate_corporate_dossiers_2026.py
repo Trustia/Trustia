@@ -217,7 +217,7 @@ def generate_one_pager(out_path):
     grid_data = [
         [
             Paragraph("<b>Kurucu & Sistem Mimarı:</b><br/>Murat Furkan Bayram (17 Yaşında, %80 Hisse)", styles['TableCell']),
-            Paragraph("<b>T.C. Savunma Sanayii Tescili:</b><br/>SSB 100/100 Tam Puan (Belge: L2zPtN4X1ZJ)", styles['TableCell']),
+            Paragraph("<b>Savunma Sanayii Eğitimi:</b><br/>BTK Akademi Sertifikası (Belge: L2zPtN4X1ZJ)", styles['TableCell']),
             Paragraph("<b>Yazılım & Test Olgunluğu:</b><br/>16.000 Satır C++/Python, 1.301 Yeşil Test", styles['TableCell'])
         ],
         [
@@ -283,7 +283,7 @@ def generate_one_pager(out_path):
     story.append(Paragraph(
         "<b>Gelir Modeli:</b> 35.000$ Kit Satışı (%35 brüt kâr) + Kilometre başı 0.18$ veya araç başı aylık 450$ Autonomy-as-a-Service (AaaS) sürekli yazılım geliri.<br/>"
         "<b>Birim Ekonomi:</b> Dönüştürülen her araç filo sahibine yılda 55.500$ net operasyonel tasarruf ve kâr sağlar.<br/>"
-        "<b>Aranan Yatırım:</b> <b>500.000$ USD (Pre-Seed / 5M$ Post-Money Cap ile SAFE)</b>. Fonun %45'i donanım tedariği ve test araçlarına, %35'i mühendislik kadrosuna, %15'i pist testlerine ayrılacaktır.",
+        "<b>Aranan Yatırım:</b> <b>15.000.000 TL (~400.000$ / 150M TL Değerleme ile %10 Pay - Paya Dayalı Kitle Fonlaması)</b>. Fonun 4.0M TL'si Hyundai Ioniq 5 test aracına, 2.5M TL'si 27 parça otonomi donanım kitine, 3.5M TL'si çekirdek mühendislik ekibine, 1.5M TL'si pist testleri ve sertifikasyona ayrılmıştır.",
         styles['Body']
     ))
     
@@ -336,7 +336,7 @@ def generate_business_model_canvas(out_path):
         [
             Paragraph("<b>6. TEMEL KAYNAKLAR</b><br/>"
                       "• 16.000 Satır Özgün Deterministik Kod Tabanı<br/>"
-                      "• SSB 100/100 Tam Puan & KOSGEB İleri Girişimci Tescili<br/>"
+                      "• BTK Akademi Savunma Sertifikası & KOSGEB İleri Girişimci<br/>"
                       "• NVIDIA AGX Orin & LiDAR Donanım Test Laboratuvarı<br/>"
                       "• İTO BTM Fulya Kampüsü Ofis & Test Altyapısı", styles['TableCell']),
             Paragraph("<b>7. KANALLAR</b><br/>"
@@ -404,14 +404,14 @@ def generate_btm_investor_guide(out_path):
     story = []
 
     story.append(Paragraph("İTO BTM FULYA — YATIRIMCI VE DANIŞMANLIK STRATEJİK DOSYASI", styles['Title']))
-    story.append(Paragraph("4 Eylül 2026 Cuma 15:00 Randevusu  •  Yatırım Masası Brifing ve Soru-Cevap Rehberi", styles['Subtitle']))
+    story.append(Paragraph("İTO BTM Fulya Kampüsü  •  Yatırım Masası Brifing ve Kurumsal Soru-Cevap Rehberi (Eylül 2026)", styles['Subtitle']))
     story.append(HRFlowable(width="100%", thickness=1.5, color=C_SECONDARY, spaceBefore=0, spaceAfter=8))
 
     story.append(Paragraph("1. GÖRÜŞMENİN AMACI VE HEDEFLENEN SOMUT ÇIKTILAR", styles['H1']))
     story.append(Paragraph(
-        "4 Eylül 2026 Cuma günü saat 15:00'te İTO BTM Fulya Kampüsü'nde <b>BTM Yatırımcı İlişkileri Direktörlüğü</b> ile yapılacak birebir görüşmenin temel amacı:<br/>"
+        "İTO BTM Fulya Kampüsü'nde <b>BTM Yatırımcı İlişkileri Direktörlüğü</b> ve fonlama komiteleri nezdinde yürütülen stratejik süreçlerin temel amacı:<br/>"
         "1. <b>TÜBİTAK 1812 BİGG Yatırım Programı:</b> BTM resmi uygulayıcı kuruluş kontenjanından <b>1.350.000 TL doğrudan nakit devlet sermayesi</b> başvurusunun resmileştirilmesi.<br/>"
-        "2. <b>BTM Melek Yatırım Ağı (BTM Angels):</b> 500.000$ Pre-Seed turumuza liderlik edecek kurumsal meleklerin masaya davet edilmesi.<br/>"
+        "2. <b>BTM Melek Yatırım Ağı (BTM Angels):</b> 15.000.000 TL kitle fonlaması turumuza liderlik edecek kurumsal meleklerin masaya davet edilmesi.<br/>"
         "3. <b>212 VC, ScaleX ve Bilişim Vadisi Tanışması:</b> BTM portföy yöneticisi kanalıyla kurumsal fonlara doğrudan sıcak yönlendirme (Warm Intro) sağlanması.<br/>"
         "4. <b>21-23 Ekim TURKCOMPOSITE Fuarı:</b> BTM Startup Village etabında Trustia'nın prototip standı ve protokol geçişinin kesinleştirilmesi.",
         styles['Body']
@@ -427,10 +427,10 @@ def generate_btm_investor_guide(out_path):
          "Cevap: Waymo ve Cruise 250.000-300.000 dolara sıfırdan araç üretmektedir; bu model yüksek amortisman nedeniyle ölçeklenemez. Trustia seri üretim elektrikli araçları (Hyundai Ioniq 5) sadece 35.000 dolarlık tak-çalıştır kitle dönüştürür. Filo sahibine 14 ayda geri dönen eşsiz bir birim ekonomi sunuyoruz."),
         
         ("Soru 3: Otonomi yazılımınızın güvenliğini nasıl kanıtlıyorsunuz?",
-         "Cevap: Yazılımımız kara kutu nöral ağlar yerine matematiksel ispatlı Hybrid A* ve 3D NDT LiDAR SLAM tabanlı deterministik bir mimaridir. 1.301 birim ve entegrasyon testinden %100 başarıyla geçmiştir. T.C. Savunma Sanayii Başkanlığı'ndan 100/100 Tam Puan tescili almıştır ve ISO 26262 ASIL-D Minimal Risk Maneuver (MRM) acil durum frenleme protokolüne sahiptir."),
+         "Cevap: Yazılımımız kara kutu nöral ağlar yerine matematiksel ispatlı Hybrid A* ve 3D NDT LiDAR SLAM tabanlı deterministik bir mimaridir. 1.301 birim ve entegrasyon testinden %100 başarıyla geçmiştir. BTK Akademi Savunma Sanayii eğitim sertifikasyonuna sahiptir ve ISO 26262 ASIL-D Minimal Risk Maneuver (MRM) acil durum frenleme protokolüne sahiptir."),
         
         ("Soru 4: Şu an şirketin nakit ihtiyacı nedir ve fonu nasıl kullanacaksınız?",
-         "Cevap: 18 aylık pist ve ticari pilot operasyonlarımız için 500.000$ (5M$ Cap SAFE) Pre-Seed arıyoruz. Bu fonun %45'i Ouster OS2-128 LiDAR, Livox LiDAR'lar ve Jetson AGX Orin donanım tedariğine; %35'i mühendislik kadrosuna; %15'i kapalı pist testlerine ayrılacaktır."),
+         "Cevap: 18 aylık pist ve ticari pilot operasyonlarımız için 15.000.000 TL (150M TL Değerleme ile %10 Pay) kitle fonlaması turundayız. Bu fonun 4.0M TL'si Hyundai Ioniq 5 test aracına; 2.5M TL'si Ouster OS2-128 LiDAR, Livox LiDAR'lar ve Jetson AGX Orin donanım kitine; 3.5M TL'si mühendislik kadrosuna; 1.5M TL'si pist testleri ve sertifikasyona ayrılmıştır."),
         
         ("Soru 5: Dubai World Challenge başvurunuz ne durumda?",
          "Cevap: Dubai Ulaşım Otoritesi'nin (RTA) 1.200.000$ nakit ödüllü küresel yarışmasına resmi başvurumuzu 2 Eylül'de eksiksiz teslim ettik. Kasım 2026'da finalistler açıklandığında Dubai'de canlı araç testlerine katılacağız."),
@@ -465,10 +465,10 @@ def generate_accreditations_dossier(out_path):
     acc_data = [
         [Paragraph("Resmi Kurum", styles['TableHead']), Paragraph("Belge / Tescil Adı", styles['TableHead']), Paragraph("Sicil / Doğrulama No", styles['TableHead']), Paragraph("Hukuki Statü", styles['TableHead'])],
         [
-            Paragraph("<b>T.C. Cumhurbaşkanlığı Savunma Sanayii Bşk. (SSB)</b>", styles['TableCell']),
-            Paragraph("Yapay Zeka ve Otonom Sistem Yetkinlik Tescili (100/100 Tam Puan)", styles['TableCell']),
+            Paragraph("<b>BTK Akademi (Bilgi Teknolojileri ve İletişim K.)</b>", styles['TableCell']),
+            Paragraph("Türk Savunma Sanayii Ürün ve Platformları Eğitim Katılım Sertifikası", styles['TableCell']),
             Paragraph("<b>L2zPtN4X1ZJ</b>", styles['TableCellBold']),
-            Paragraph("Onaylı / Mükemmel", styles['Badge'])
+            Paragraph("Sertifikalı", styles['Badge'])
         ],
         [
             Paragraph("<b>KOSGEB (Sanayi ve Teknoloji Bakanlığı)</b>", styles['TableCell']),
@@ -606,7 +606,7 @@ def generate_founder_cv(out_path):
             Paragraph("<b>E-Posta:</b> kariyer@trustia.com.tr<br/>"
                       "<b>Telefon:</b> +90 537 064 0460<br/>"
                       "<b>LinkedIn:</b> linkedin.com/in/trustia", styles['TableCell']),
-            Paragraph("<b>T.C. Savunma Tescili:</b> SSB 100/100 Tam Puan<br/>"
+            Paragraph("<b>Savunma Eğitimi:</b> BTK Akademi (L2zPtN4X1ZJ)<br/>"
                       "<b>KOSGEB Sicil:</b> KSB01UGE0115153370<br/>"
                       "<b>TÜBİTAK Sicil:</b> TBTK-0229-6571", styles['TableCell']),
         ]
@@ -624,7 +624,7 @@ def generate_founder_cv(out_path):
 
     story.append(Paragraph("PROFESYONEL ÖZET & MİMARİ YETKİNLİK", styles['H1']))
     story.append(Paragraph(
-        "17 yaşında derin teknoloji kurucusu ve yazılım sistem mimarı. Sıfırdan 16.000 satırlık deterministik SAE Seviye-4 otonom sürüş motoru, 3D NDT LiDAR SLAM haritalama, Pure Pursuit lateral kontrolcü ve CAN-FD araç kontrol sürücüleri geliştirmiştir. T.C. Savunma Sanayii Başkanlığı Yapay Zeka Değerlendirmesi'nden 100/100 Tam Puan tescili almış ve RTA Dubai'nin 1.2M$ ödüllü otonom araç yarışmasına Türkiye'den resmi proje sunmuştur.",
+        "17 yaşında derin teknoloji kurucusu ve yazılım sistem mimarı. Sıfırdan 16.000 satırlık deterministik SAE Seviye-4 otonom sürüş motoru, 3D NDT LiDAR SLAM haritalama, Pure Pursuit lateral kontrolcü ve CAN-FD araç kontrol sürücüleri geliştirmiştir. RTA Dubai'nin 1.2M$ ödüllü otonom araç yarışmasına Türkiye'den resmi proje sunmuştur.",
         styles['Body']
     ))
 
@@ -639,7 +639,7 @@ def generate_founder_cv(out_path):
 
     story.append(Paragraph("RESMİ BAŞARILAR & TESCİLLER", styles['H1']))
     story.append(Paragraph(
-        "• <b>SSB Yapay Zeka Değerlendirmesi 100/100 Tam Puan:</b> T.C. Savunma Sanayii Başkanlığı tarafından verilen resmi yetkinlik belgesi (L2zPtN4X1ZJ).<br/>"
+        "• <b>BTK Akademi Savunma Sanayii Sertifikası:</b> Türk Savunma Sanayii Ürün ve Platformları Eğitim Katılım Sertifikası (L2zPtN4X1ZJ).<br/>"
         "• <b>Dubai World Challenge for Self-Driving Transport ($1.2M):</b> RTA Dubai resmi meydan okuma başvurusu tamamlandı (Entry: MOweBqdp).<br/>"
         "• <b>İTO BTM Fulya Kampüsü Yerleşik Girişimcisi:</b> İstanbul Ticaret Odası 2026-II. Dönem sözleşmeli girişimcisi.<br/>"
         "• <b>KOSGEB İleri Girişimci:</b> Sanayi ve Teknoloji Bakanlığı resmi onaylı genç ileri girişimci belgesi.<br/>"

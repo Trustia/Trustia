@@ -84,9 +84,9 @@ flowchart TD
 ## 🏛️ Official Government Accreditations & Credentials
 
 * 📜 **KOSGEB (Republic of Turkey Ministry of Industry & Technology)**
-  * **Certification:** Advanced Deep-Tech Entrepreneurship (`ID: KSB01UGE0115153370`) | **Status:** Officially Verified
-* 📜 **Presidency of Defense Industries (SSB) & BTK Academy**
-  * **Accreditation:** Defense Technologies & Autonomous Systems (`Cert ID: L2zPtN4X1ZJ`) | **Grade:** 100/100 Perfect Score
+  * **Certification:** Advanced Entrepreneurship Program (`ID: KSB01UGE0115153370`) | **Status:** Officially Verified
+* 📜 **BTK Academy (Information and Communication Technologies Authority)**
+  * **Certification:** Turkish Defense Industry Products & Platforms Training (`Cert ID: L2zPtN4X1ZJ`)
 * 📜 **TÜBİTAK ARBİS (National Researcher Information System)**
   * **Official R&D Researcher ID:** `TBTK-0229-6571`
 * 🏢 **ASELSAN Defense Industry Supplier Network**

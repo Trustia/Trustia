@@ -27,7 +27,7 @@ Bilkent Cyberpark yerleşkesinde yer alarak, Ankara merkezli savunma devlerine d
 
 ## 3. RESMİ AKREDİTASYONLAR
 
-* **SSB (T.C. Savunma Sanayii Başkanlığı):** 100/100 Tam Puan Sınav Tescili (`L2zPtN4X1ZJ`).
+* **BTK Akademi:** Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`).
 * **KOSGEB:** İleri Girişimci Sertifikası (`KSB01UGE0115153370`).
 * **TÜBİTAK ARBİS:** Ulusal Araştırmacı Tescili (`TBTK-0229-6571`).
 * **ASELSAN:** Tedarikçi Portalı Kaydı.

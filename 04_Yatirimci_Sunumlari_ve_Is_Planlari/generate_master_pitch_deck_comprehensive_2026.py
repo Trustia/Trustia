@@ -269,7 +269,7 @@ def generate_master_dossier(out_path):
                       "<b>Kurucu Ortak:</b><br/>Doğukan Bayram (%20 Hisse)<br/>"
                       "<b>Donanım Entegrasyon:</b><br/>Denizcan Özcan (ASELSAN Aday Müh.)", styles['TableCell']),
             Paragraph("<b>Resmi Kuluçka Merkezi:</b><br/>İTO BTM Fulya Kampüsü, Şişli / İstanbul<br/>"
-                      "<b>Resmi Devlet Tescili:</b><br/>T.C. SSB 100/100 Tam Puan (L2zPtN4X1ZJ)<br/>"
+                      "<b>Resmi Sertifikasyon:</b><br/>BTK Akademi Savunma Sanayii (L2zPtN4X1ZJ)<br/>"
                       "<b>KOSGEB & TÜBİTAK:</b><br/>İleri Girişimci & ARBİS Milli Sicil", styles['TableCell']),
             Paragraph("<b>Doğrulanmış Kod Mimarisi:</b><br/>16.000 Satır C++/Python Çekirdeği<br/>"
                       "<b>Otomatik Test Başarısı:</b><br/>1.301 / 1.301 Yeşil Test (%100 Başarı)<br/>"
@@ -482,7 +482,7 @@ def generate_master_dossier(out_path):
 
     story.append(Paragraph(
         "Trustia'nın deterministik seyrüsefer çekirdeği; GPS karartması, elektronik harp ve zorlu arazi koşullarında "
-        "<b>T.C. Savunma Sanayii Başkanlığı 100/100 Tam Puan tescilli</b> askeri taktik otonomi sunar:",
+        "<b>BTK Akademi Türk Savunma Sanayii sertifikalı</b> askeri taktik otonomi sunar:",
         styles['Body']
     ))
 
@@ -519,7 +519,7 @@ def generate_master_dossier(out_path):
 
     story.append(Paragraph("<b>SAVUNMA SANAYİİ RESMİ TESCİLLERİ VE ENTEGRASYON STATÜSÜ</b>", styles['H2']))
     story.append(Paragraph(
-        "• <b>T.C. SSB Yetenek Envanteri:</b> Savunma Sanayii Başkanlığı resmi değerlendirmesinde <b>100/100 Tam Puan</b> (Belge No: <b>L2zPtN4X1ZJ</b>).<br/>"
+        "• <b>BTK Akademi Savunma Sanayii Eğitimi:</b> Türk Savunma Sanayii Ürün ve Platformları Eğitimi Katılım Sertifikası (Belge No: <b>L2zPtN4X1ZJ</b>).<br/>"
         "• <b>ASELSAN Tedarikçi Portalı:</b> ASELSAN onaylı girişim statüsü ile askeri araç üreticilerine (FNSS, Otokar, Katmerciler, BMC) tak-çalıştır otonomi kiti sağlama yetkisi.<br/>"
         "• <b>MIL-STD-810H & IP67:</b> Çöl sıcağı, aşırı soğuk (-20°C / +55°C), yüksek titreşim ve toz fırtınasına dayanıklı askeri donanım paketi.",
         styles['Body']
@@ -1125,11 +1125,10 @@ def generate_master_dossier(out_path):
     story.append(t_dm)
     story.append(Spacer(1, 6))
 
-    story.append(Paragraph("<b>SAVUNMA SANAYİİ BAŞKANLIĞI (SSB) 100/100 TESCİLİ</b>", styles['H2']))
+    story.append(Paragraph("<b>SAVUNMA SANAYİİ VE RESMİ SERTİFİKASYON</b>", styles['H2']))
     story.append(Paragraph(
-        "Trustia AI; T.C. Savunma Sanayii Başkanlığı değerlendirme heyeti tarafından incelenmiş ve "
-        "<b>100 üzerinden 100 Tam Puan</b> ile tescil edilmiştir (Kayıt: <b>L2zPtN4X1ZJ</b>). "
-        "Milli İKA projelerinde ve sınır güvenliği lojistik hatlarında görev almaya hazırdır.",
+        "Trustia AI; BTK Akademi Türk Savunma Sanayii Ürün ve Platformları Eğitim Sertifikasyonu (Kayıt: <b>L2zPtN4X1ZJ</b>) "
+        "ve ASELSAN Tedarikçi Portalı başvurusu ile milli İKA projelerinde ve lojistik hatlarında görev almaya hazırdır.",
         styles['Body']
     ))
     story.append(PageBreak())
@@ -1554,9 +1553,9 @@ def generate_master_dossier(out_path):
     reg_data = [
         [Paragraph("Resmi Kurum / Otorite", styles['TableHead']), Paragraph("Kayıt / Belge No", styles['TableHead']), Paragraph("Kazanılan Resmi Hak ve Statü", styles['TableHead'])],
         [
-            Paragraph("<b>T.C. Savunma Sanayii Başkanlığı (SSB)</b>", styles['TableCellBold']),
+            Paragraph("<b>BTK Akademi (Bilgi Teknolojileri ve İletişim Kurumu)</b>", styles['TableCellBold']),
             Paragraph("Belge: <b>L2zPtN4X1ZJ</b>", styles['TableCellBold']),
-            Paragraph("Savunma Sanayii Yetenek Envanteri ve Proje Değerlendirmesinde <b>100/100 Tam Puan</b> tescili. Askeri otonomi projelerinde öncelikli değerlendirme hakkı.", styles['TableCell'])
+            Paragraph("Türk Savunma Sanayii Ürün ve Platformları Eğitim Katılım Sertifikası.", styles['TableCell'])
         ],
         [
             Paragraph("<b>KOSGEB (T.C. Sanayi ve Teknoloji Bak.)</b>", styles['TableCellBold']),
@@ -1710,7 +1709,7 @@ def generate_master_dossier(out_path):
                       "<font size=7 color='#0284C7'><b>Kurucu & Sistem Mimarı (%80 Hisse)</b></font><br/>"
                       "• <b>17 Yaşında</b> genç derin teknoloji kurucusu ve otonomi yazılım mimarı.<br/>"
                       "• Trustia'nın 16.000 satırlık deterministik otonomi çekirdeğinin (Hybrid A*, 3D NDT SLAM, ESKF) tek başına mimarı ve geliştiricisi.<br/>"
-                      "• T.C. Savunma Sanayii Başkanlığı'ndan 100/100 Tam Puan tescili ve TÜBİTAK ARBİS Milli Araştırmacı Sicili sahibi.<br/>"
+                      "• BTK Akademi Türk Savunma Sanayii Ürün ve Platformları sertifikası ve TÜBİTAK ARBİS Milli Araştırmacı Sicili sahibi.<br/>"
                       "• İTO BTM Fulya Kampüsü sözleşmeli girişimcisi; Dubai World Challenge 1.2M$ yarışması proje lideri.", styles['TableCell']),
             Paragraph("<b>DOĞUKAN BAYRAM</b><br/>"
                       "<font size=7 color='#0284C7'><b>Kurucu Ortak (%20 Hisse)</b></font><br/>"
@@ -1754,21 +1753,21 @@ def generate_master_dossier(out_path):
     ))
     story.append(PageBreak())
 
-    # SAYFA 33: YATIRIM TEKLİFİ ($500K SAFE) VE 18 AYLIK YOL HARİTASI
-    story.append(Paragraph("32. YATIRIM TEKLİFİ ($500K SAFE) VE 18 AYLIK YOL HARİTASI", styles['H1']))
+    # SAYFA 33: YATIRIM TEKLİFİ (15M TL KİTLE FONLAMASI) VE 18 AYLIK YOL HARİTASI
+    story.append(Paragraph("32. YATIRIM TEKLİFİ (15.000.000 TL KİTLE FONLAMASI) VE 18 AYLIK YOL HARİTASI", styles['H1']))
     story.append(HRFlowable(width="100%", thickness=1, color=C_SECONDARY, spaceBefore=0, spaceAfter=5))
 
     story.append(Paragraph(
-        "Trustia AI; ilk 2 adet Hyundai Ioniq 5 test filosunun dönüşümünü tamamlamak, BAE ve Türkiye'de ticari pilotları başlatmak üzere "
-        "<b>500.000$ USD Pre-Seed (Tohum Öncesi)</b> yatırım turunu açmıştır:",
+        "Trustia AI; Hyundai Ioniq 5 Seviye-4 otonom test filosunun dönüşümünü tamamlamak, Bilişim Vadisi pist testlerini yürütmek ve ticari pilotları başlatmak üzere "
+        "<b>15.000.000 TL (~400.000$ USD) Paya Dayalı Kitle Fonlaması</b> yatırım turunu açmıştır:",
         styles['Body']
     ))
 
     ask_data = [
-        [Paragraph("Yatırım Enstrümanı", styles['TableHead']), Paragraph("Yatırım Tutarı", styles['TableHead']), Paragraph("Değerleme Tavanı (Valuation Cap)", styles['TableHead']), Paragraph("İndirim Oranı (Discount)", styles['TableHead'])],
-        [Paragraph("<b>SAFE (Post-Money)</b>", styles['TableCellBold']), Paragraph("<b>500.000 $ USD</b>", styles['TableCellBold']), Paragraph("<b>5.000.000 $ (5M$ Cap)</b>", styles['TableCellBold']), Paragraph("<b>%20 İndirim</b>", styles['TableCellBold'])],
+        [Paragraph("Yatırım Enstrümanı", styles['TableHead']), Paragraph("Hedef Fon Tutarı", styles['TableHead']), Paragraph("Şirket Değerlemesi", styles['TableHead']), Paragraph("Arz Edilen Pay", styles['TableHead'])],
+        [Paragraph("<b>Paya Dayalı Kitle Fonlaması</b>", styles['TableCellBold']), Paragraph("<b>15.000.000 TL (Taban)</b>", styles['TableCellBold']), Paragraph("<b>150.000.000 TL (Pre-Money)</b>", styles['TableCellBold']), Paragraph("<b>%10,0 Pay</b>", styles['TableCellBold'])],
     ]
-    t_ask = Table(ask_data, colWidths=[42*mm, 45*mm, 55*mm, 40*mm])
+    t_ask = Table(ask_data, colWidths=[45*mm, 45*mm, 50*mm, 35*mm])
     t_ask.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), C_PRIMARY),
         ('BOX', (0,0), (-1,-1), 0.8, C_BORDER),
@@ -1778,29 +1777,32 @@ def generate_master_dossier(out_path):
         ('BOTTOMPADDING', (0,0), (-1,-1), 4),
     ]))
     story.append(t_ask)
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
 
-    story.append(Paragraph("<b>FON KULLANIM DAĞILIMI (USE OF FUNDS)</b>", styles['H2']))
+    story.append(Paragraph("<b>FON KULLANIM DAĞILIMI (USE OF FUNDS - 15.000.000 TL)</b>", styles['H2']))
     funds_data = [
-        [Paragraph("Harcama Kalemi", styles['TableHead']), Paragraph("Pay (%)", styles['TableHead']), Paragraph("Bütçe (USD)", styles['TableHead']), Paragraph("Hedef Çıktı ve Karşılık", styles['TableHead'])],
-        [Paragraph("<b>Donanım ve Sensör Alımı</b>", styles['TableCellBold']), Paragraph("%45", styles['TableCellBold']), Paragraph("225.000 $", styles['TableCell']), Paragraph("İlk 2 adet Hyundai Ioniq 5 test filosunun tam dönüşümü ve yedek sensör stoğu.", styles['TableCell'])],
-        [Paragraph("<b>Çekirdek Mühendislik Kadrosu</b>", styles['TableCellBold']), Paragraph("%35", styles['TableCellBold']), Paragraph("175.000 $", styles['TableCell']), Paragraph("2 gömülü yazılımcı, 1 SLAM mühendisi ve 1 donanım test teknisyeni maaşları (18 ay).", styles['TableCell'])],
-        [Paragraph("<b>Pist ve Saha Test Operasyonları</b>", styles['TableCellBold']), Paragraph("%15", styles['TableCellBold']), Paragraph("75.000 $", styles['TableCell']), Paragraph("Bilişim Vadisi pist kiralama, sigorta, Dubai RTA yarışma saha lojistiği.", styles['TableCell'])],
-        [Paragraph("<b>Fikri Mülkiyet & ASIL-D Validasyon</b>", styles['TableCellBold']), Paragraph("%5", styles['TableCellBold']), Paragraph("25.000 $", styles['TableCell']), Paragraph("Uluslararası PCT patent tescilleri ve ISO 26262 fonksiyonel güvenlik denetimleri.", styles['TableCell'])],
-        [Paragraph("<b>TOPLAM FON KULLANIMI</b>", styles['TableCellBold']), Paragraph("<b>%100</b>", styles['TableCellBold']), Paragraph("<b>500.000 $</b>", styles['TableCellBold']), Paragraph("<b>18 Aylık Kesintisiz Operasyonel Runway</b>", styles['TableCellBold'])],
+        [Paragraph("Harcama Kalemi", styles['TableHead']), Paragraph("Pay (%)", styles['TableHead']), Paragraph("Bütçe (TL)", styles['TableHead']), Paragraph("Hedef Çıktı ve Karşılık", styles['TableHead'])],
+        [Paragraph("<b>Test Aracı Alımı (Ioniq 5)</b>", styles['TableCellBold']), Paragraph("%26,7", styles['TableCellBold']), Paragraph("4.000.000 TL", styles['TableCell']), Paragraph("Hyundai Ioniq 5 800V E-GMP elektrikli test aracı alımı, tescil ve sigorta.", styles['TableCell'])],
+        [Paragraph("<b>27 Parça Otonomi Kiti</b>", styles['TableCellBold']), Paragraph("%16,7", styles['TableCellBold']), Paragraph("2.500.000 TL", styles['TableCell']), Paragraph("Ouster OS2-128 LiDAR, Livox Mid-360, Continental Radar, Jetson Orin 64GB, RTK-GNSS.", styles['TableCell'])],
+        [Paragraph("<b>Çekirdek Mühendislik Ekibi</b>", styles['TableCellBold']), Paragraph("%23,3", styles['TableCellBold']), Paragraph("3.500.000 TL", styles['TableCell']), Paragraph("Kurucu mimar, donanım mühendisi, SLAM ve gömülü yazılım ekibi maaşları (12 Ay).", styles['TableCell'])],
+        [Paragraph("<b>Pist Testleri & Sertifikasyon</b>", styles['TableCellBold']), Paragraph("%10,0", styles['TableCellBold']), Paragraph("1.500.000 TL", styles['TableCell']), Paragraph("Bilişim Vadisi otonom pisti, ISO 26262 ASIL-D ve TSE/TÜV SÜD uyumluluk denetimleri.", styles['TableCell'])],
+        [Paragraph("<b>Operasyon Merkezi & Cloud</b>", styles['TableCellBold']), Paragraph("%10,0", styles['TableCellBold']), Paragraph("1.500.000 TL", styles['TableCell']), Paragraph("Taktik C2 Kontrol Merkezi, AWS/Azure GPU bulut simülasyonu ve telemetri sunucuları.", styles['TableCell'])],
+        [Paragraph("<b>Şirketleşme, SPK & Platform</b>", styles['TableCellBold']), Paragraph("%6,7", styles['TableCellBold']), Paragraph("1.000.000 TL", styles['TableCell']), Paragraph("Anonim Şirket kuruluşu, SPK/MKK/Takasbank ve kitle fonlama platform başarı bedelleri.", styles['TableCell'])],
+        [Paragraph("<b>Şirket Rezervi (Beklenmeyen)</b>", styles['TableCellBold']), Paragraph("%6,7", styles['TableCellBold']), Paragraph("1.000.000 TL", styles['TableCell']), Paragraph("Beklenmeyen operasyonel riskler için kurumsal acil durum nakit rezervi.", styles['TableCell'])],
+        [Paragraph("<b>TOPLAM FON KULLANIMI</b>", styles['TableCellBold']), Paragraph("<b>%100</b>", styles['TableCellBold']), Paragraph("<b>15.000.000 TL</b>", styles['TableCellBold']), Paragraph("<b>18 Aylık Kesintisiz Operasyonel Runway</b>", styles['TableCellBold'])],
     ]
-    t_f = Table(funds_data, colWidths=[52*mm, 20*mm, 30*mm, 80*mm])
+    t_f = Table(funds_data, colWidths=[48*mm, 18*mm, 28*mm, 82*mm])
     t_f.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), C_PRIMARY),
         ('BOX', (0,0), (-1,-1), 0.8, C_BORDER),
         ('INNERGRID', (0,0), (-1,-1), 0.5, C_BORDER),
         ('ROWBACKGROUNDS', (0,1), (-1,-2), [C_WHITE, C_LIGHT_BG]),
         ('BACKGROUND', (0,-1), (-1,-1), C_CARD),
-        ('TOPPADDING', (0,0), (-1,-1), 3),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 3),
+        ('TOPPADDING', (0,0), (-1,-1), 2.5),
+        ('BOTTOMPADDING', (0,0), (-1,-1), 2.5),
     ]))
     story.append(t_f)
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 5))
 
     story.append(Paragraph("<b>18 AYLIK STRATEJİK YOL HARİTASI (MILESTONES)</b>", styles['H2']))
     story.append(Paragraph(
@@ -1841,7 +1843,7 @@ def generate_master_dossier(out_path):
                       "<b>Resmi Kod Deposu:</b> <font color='#0284C7'><u>https://github.com/Trustia/Trustia</u></font><br/>"
                       "<b>Teknoloji ve Dokümantasyon:</b> <font color='#0284C7'><u>https://trustia.com.tr</u></font>", styles['TableCellBold']),
             Paragraph("<b>RESMİ KURUMSAL TESCİLLER</b><br/>"
-                      "<b>T.C. SSB Tescil No:</b> L2zPtN4X1ZJ (100/100 Tam Puan)<br/>"
+                      "<b>BTK Akademi Belge No:</b> L2zPtN4X1ZJ<br/>"
                       "<b>KOSGEB Sicil No:</b> KSB01UGE0115153370<br/>"
                       "<b>TÜBİTAK ARBİS No:</b> TBTK-0229-6571", styles['TableCellBold'])
         ]

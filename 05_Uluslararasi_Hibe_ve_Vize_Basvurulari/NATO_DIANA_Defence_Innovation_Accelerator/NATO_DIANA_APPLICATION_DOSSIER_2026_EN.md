@@ -13,7 +13,7 @@
 | **DIANA Focus Area:** | **Autonomy, Sensing & Resilient Navigation in Contested / GPS-Denied Environments** |
 | **Grant Funding Track:** | **€100,000 (Phase 1) + €300,000 (Phase 2) = €400,000 Non-Dilutive Grant (0% Equity Taken)** |
 | **Standard Compliance:** | **NATO STANAG 4586 Level 4 / SAE AS6091 (JAUS) / SAE J1939 CAN-Bus** |
-| **Official Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB, TÜBİTAK ARBİS** |
+| **Official Accreditations:** | **İTO BTM (Fulya Kampüsü), BTK Academy Defense Cert, KOSGEB, TÜBİTAK ARBİS** |
 | **Deterministic Codebase:** | **16,000+ Lines Production Code** • **1,281 Deterministic Automated Tests (100% PASS Rate)** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 
@@ -33,7 +33,7 @@ By integrating a proprietary 400Hz Error-State Kalman Filter (ESKF), 3D LiDAR Po
 
 The software guarantees sub-8cm localization drift across 10 km of GNSS-jammed operations, natively complies with NATO STANAG 4586 (Level 4 Tactical Mission Control) and SAE AS6091 (JAUS), and incorporates multimodal sensor fusion (LWIR Thermal + Electromagnetic Induction + GPR Radar) to autonomously isolate landmines, IEDs, and CBRN hazards.
 
-Constructed in 16,000+ lines of production Python 3.12 and C++ with ZERO critical third-party dependencies, Trustia’s autonomy engine has been verified with 1,281 automated unit and integration tests (100% pass rate). Supported by the Istanbul Chamber of Commerce (İTO BTM), Teknopark Istanbul, and certified with a 100/100 Defense Excellence rating by the Turkish Presidency of Defense Industries (SSB), Trustia is ready to deploy across NATO Allied ground fleets.
+Constructed in 16,000+ lines of production Python 3.12 and C++ with ZERO critical third-party dependencies, Trustia’s autonomy engine has been verified with 1,281 automated unit and integration tests (100% pass rate). Supported by the Istanbul Chamber of Commerce (İTO BTM), holding the BTK Academy Defense Industry Products Certification, and accredited by KOSGEB, Trustia is ready to deploy across NATO Allied ground fleets.
 ```
 
 ```
@@ -100,7 +100,7 @@ CHALLENGE STATEMENT 5: TEAM QUALIFICATIONS & TRACK RECORD
 • Accreditations:
   - Admitted to Istanbul Chamber of Commerce BTM Incubation (BTM Fulya Campus, Istanbul).
   - Candidate deep-tech defense company in Teknopark Istanbul (Cube GO).
-  - 100/100 Perfect Grade in Defense Technologies by Turkish Presidency of Defense Industries (SSB & BTK, ID: L2zPtN4X1ZJ).
+  - BTK Academy Turkish Defense Industry Products & Platforms Certificate (ID: L2zPtN4X1ZJ).
   - Certified Advanced Entrepreneur by Ministry of Industry and Technology (KOSGEB KSB01UGE0115153370).
   - Registered National R&D Researcher in TÜBİTAK ARBİS (TBTK-0229-6571).
 • Demonstrated Rigor: Built, architected, and verified the complete 16,000-line software stack and 1,281-test battery with zero failures.

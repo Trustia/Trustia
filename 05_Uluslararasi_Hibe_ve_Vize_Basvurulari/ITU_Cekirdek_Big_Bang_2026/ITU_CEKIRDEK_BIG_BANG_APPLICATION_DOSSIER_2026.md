@@ -11,8 +11,8 @@
 | **Kurucu & Sistem Mimarı:** | **Murat Furkan Bayram** |
 | **Yetkili İletişim:** | **`kariyer@trustia.com.tr` • `+90 537 064 04 60`** |
 | **Girişim Kategorisi:** | **Otonom Mobilite, Savunma Teknolojileri, Derin Teknoloji & Robotik** |
-| **Savunma Derecesi:** | **100/100 Tam Puan (SSB & BTK Akademi ID: `L2zPtN4X1ZJ`)** |
-| **Test ve Kod Doğrulama:** | **16.000 Satır C++/Python • 1.281 Birim/Entegrasyon Testi (%100 Başarı)** |
+| **Savunma Sertifikası:** | **BTK Akademi Savunma Sanayii Eğitimi (ID: `L2zPtN4X1ZJ`)** |
+| **Test ve Kod Doğrulama:** | **16.000 Satır C++/Python • 1.301 Birim/Entegrasyon Testi (%100 Başarı)** |
 | **Big Bang Ödül Hedefi:** | **İTÜ Çekirdek Big Bang Sahnesi Nakit Hibe ve Tohum Yatırımı** |
 | **Web Sitesi:** | [https://trustia.com.tr](https://trustia.com.tr) |
 
@@ -24,7 +24,7 @@
 ========================================================================================
 1. GİRİŞİMİNİZİN / PROJENİZİN KISA ÖZETİ (ELEVENTOR PITCH)
 ========================================================================================
-Trustia AI; askeri insansız kara araçları (İKA) ve sivil binek platformlar için elektronik harp (GPS karartması) şartlarında dahi 400Hz ESKF sensör füzyonu ile sub-8cm hassasiyetle çalışan, herhangi bir mekanik aracı 15 dakikada Seviye 4 tam otonom sisteme dönüştüren yerli otonomi motorudur. 16.000 satır kod ve 1.281 testle %100 doğrulanmış olup SSB tarafından 100/100 tam puan almıştır.
+Trustia AI; askeri insansız kara araçları (İKA) ve sivil binek platformlar için elektronik harp (GPS karartması) şartlarında dahi 400Hz ESKF sensör füzyonu ile sub-8cm hassasiyetle çalışan, herhangi bir mekanik aracı 15 dakikada Seviye 4 tam otonom sisteme dönüştüren yerli otonomi motorudur. 16.000 satır kod ve 1.301 testle %100 doğrulanmış olup BTK Akademi savunma sanayii eğitim sertifikasına sahiptir.
 ```
 
 ```
@@ -56,7 +56,7 @@ Gelir Modeli:
 ========================================================================================
 • 16.000 satır deterministik C++ / Python 3.12 kodu,
 • 1.281 otomatik birim ve entegrasyon testi (%100 PASS),
-• T.C. Savunma Sanayii Başkanlığı (SSB & BTK) 100/100 Mükemmeliyet Sertifikası,
+• BTK Akademi Türk Savunma Sanayii Ürün ve Platformları Sertifikası,
 • İTO BTM Fulya Kampüsü Kuluçka Kabulü ve Teknopark İstanbul (Cube GO) adaylığı,
 • Y Combinator, 500 Global, SOSV HAX ve Alchemist Accelerator küresel inceleme süreci.
 ```

@@ -12,7 +12,7 @@
 | **Uygulayıcı Kuruluş:** | **İstanbul Ticaret Odası BTM (Bilgiyi Ticarileştirme Merkezi) & Teknopark İstanbul (Cube Incubation)** |
 | **Destek Türü:** | **1.350.000 TL %100 Doğrudan Nakit Sermaye Yatırımı (%3 TÜBİTAK BİGG Fonu Payı)** |
 | **TÜBİTAK ARBİS No:** | **`TBTK-0229-6571`** *(Murat Furkan Bayram)* |
-| **Savunma Derecesi:** | **100/100 Tam Puan** *(SSB & BTK Akademi ID: `L2zPtN4X1ZJ`)* |
+| **Eğitim Sertifikası:** | **Türk Savunma Sanayii Ürün ve Platformları** *(BTK Akademi ID: `L2zPtN4X1ZJ`)* |
 | **KOSGEB Belge No:** | **`KSB01UGE0115153370`** |
 | **Ofis / Merkez:** | **İTO BTM Fulya Kampüsü, Şişli / İstanbul** |
 | **Web Sitesi:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |

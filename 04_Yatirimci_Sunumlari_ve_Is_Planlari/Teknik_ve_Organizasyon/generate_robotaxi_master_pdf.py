@@ -116,7 +116,7 @@ def create_master_pdf_with_photos(output_paths):
     header_data = [
         [
             Paragraph("<b>TRUSTIA AI</b><br/><font size=6.5 color='#0284C7'>OTONOM SİSTEMLER & DERİN TEKNOLOJİ</font>", body_style),
-            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 5 Eylül 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
+            Paragraph("<b>DOKÜMAN NO:</b> TRUSTIA-ENG-IONIQ5-L4-V1<br/><b>TARİH:</b> 8 Eylül 2026<br/><b>GİZLİLİK:</b> YATIRIMCI & AR-GE ÖZEL", ParagraphStyle('MetaH', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=c_gray))
         ]
     ]
     t_head = Table(header_data, colWidths=[100*mm, 82*mm])
@@ -562,7 +562,7 @@ def create_master_pdf_with_photos(output_paths):
         [
             Paragraph("<b>HAZIRLAYAN & SİSTEM MİMARI</b><br/>Murat Furkan Bayram<br/><font size=5.5 color='#64748B'>Kurucu & CEO / Sistem Mimarı<br/>Trustia AI</font>", body_style),
             Paragraph("<b>DONANIM & TEST LİDERİ</b><br/>Denizcan Özcan<br/><font size=5.5 color='#64748B'>Donanım & Entegrasyon Mühendisi<br/>ASELSAN & TEKNOFEST Robotaksi Finalisti</font>", body_style),
-            Paragraph("<b>KURUMSAL ONAY & AKREDİTASYON</b><br/>İTO BTM & SSB Akredite<br/><font size=5.5 color='#64748B'>SSB 100/100 • KOSGEB İleri Girişimci<br/>TÜBİTAK ARBİS Milli Araştırmacı</font>", body_style)
+            Paragraph("<b>KURUMSAL ONAY & AKREDİTASYON</b><br/>İTO BTM & BTK Sertifikalı<br/><font size=5.5 color='#64748B'>BTK Akademi • KOSGEB İleri Girişimci<br/>TÜBİTAK ARBİS Milli Araştırmacı</font>", body_style)
         ]
     ]
     t_sign = Table(sign_data, colWidths=[60.6*mm, 60.6*mm, 60.6*mm])

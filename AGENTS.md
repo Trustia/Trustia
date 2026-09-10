@@ -65,6 +65,8 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 * **Yazılım & Test:** 16.000 satır özgün deterministik otonomi mimarisi (Hybrid A*, 3D NDT LiDAR SLAM, Pure Pursuit), 1.301/1.301 otomatik birim ve entegrasyon testi (%100 Başarı).
 * **Donanım Platformu:** Hyundai Ioniq 5 E-GMP Otonom Seviye-4 Dönüşüm Kiti (Ouster OS2-128 LiDAR, 2x Livox Mid-360, Continental Radarlar, Septentrio RTK GNSS, NVIDIA Jetson AGX Orin 64GB, Kvaser U100 CAN-FD).
 * **Küresel Melek & Fon Başvuruları (Eylül 2026 - Tümü Ekran Görüntüsüyle Onaylandı):**
+  * 🇺🇸 **Z Fellows ($10k Grant / San Francisco - Cory Levy & Grace Kasten):** Başvuru kabul edilerek 10 dakikalık canlı Zoom mülakatı aşamasına geçildi (Görüşmeci: Grace Kasten - Pace Capital Partner, Randevu: 17 Eylül 2026 Perşembe 19:40 TRT - Onaylandı).
+  * 🇹🇷 **İTO BTM (Bilgiyi Ticarileştirme Merkezi):** Ağustos 2026 Girişim KPI Takip Formu 150M TL değerleme, 16.000 satır kod, 1.301 test, BTM Yatırımcı İlişkileri Ofisi Uzmanı Burak Gültekin görüşmesi ve Z Fellows mülakat başarısıyla eksiksiz tamamlanarak gönderildi (**"Yanıtınız kaydedildi"** - 10 Eylül 2026 - Ekran Görüntüsüyle Onaylandı).
   * 🇺🇸 **LAUNCH & The Syndicate (Jason Calacanis):** $100k-$500k çek ve 14-15 Eylül canlı sunum havuzuna başvuruldu.
   * 🇦🇪 **Dubai World Challenge for Self-Driving Transport (RTA Dubai):** $1.200.000 (1.2M$) nakit ödüllü küresel Seviye-4 Robotaksi yarışmasına başvuruldu (Durum: Gönderildi / Onaylandı — Kasım 2026 Finalist İlanı, Eylül 2027 Dünya Kongresi Ödül Töreni).
   * 🇺🇸 **Launchpad 2026 (1752 Ventures / Santa Monica):** $100,000 nakit yatırım sanal programına başvuruldu.

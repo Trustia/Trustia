@@ -14,7 +14,7 @@
 |---|---|---|
 | **Ürün/Platform Adı** | TRUSTIA — Milli Otonomi Platformu (v2.0 Askeri Sınıf) | Tamamlandı (Üretime Hazır) |
 | **KOSGEB İleri Girişimcilik Sertifikası** | `KSB01UGE0115153370` (Tarih: 06.08.2026) | %100 Resmi Onaylı |
-| **SSB & BTK Akademi Savunma Sanayii** | Sertifika No: `L2zPtN4X1ZJ` | 100/100 Tam Puan |
+| **BTK Akademi Savunma Sanayii** | Sertifika No: `L2zPtN4X1ZJ` | Katılım Sertifikası |
 | **TÜBİTAK ARBİS Kaydı** | Araştırmacı Kimlik No: `TBTK-0229-6571` | Kayıtlı & Doğrulanmış |
 | **ASELSAN Portal Başvuru Kodu** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | İşlemde / Dosya Eki Hazır |
 | **UK Dept for Business & Trade (GEP)** | UK Innovator Founder Visa Portfolio | Hazır |
@@ -84,7 +84,7 @@ Başvuru dosyası paketine aşağıdaki resmi teknik ve admi belgeler dahildir:
 1. **Ek-1:** TRUSTIA Sertifikasyon Uygunluk Raporu (`docs/reports/SERTIFIKASYON_RAPORU_ASAMA6.md`)
 2. **Ek-2:** %100 Yerli Katkı AST Bağımlılık Analizi Çıktısı
 3. **Ek-3:** KOSGEB İleri Girişimcilik Sertifika Fotokopisi (`KSB01UGE0115153370`)
-4. **Ek-4:** SSB & BTK Akademi 100/100 Tam Puan Başarı Sertifikası (`L2zPtN4X1ZJ`)
+4. **Ek-4:** BTK Akademi Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`)
 5. **Ek-5:** TÜBİTAK ARBİS Kayıt Belgesi (`TBTK-0229-6571`)
 6. **Ek-6:** Yazılım Kalite, Güvenlik ve Mimari Raporları (`docs/reports/GUVENLIK_RAPORU_ASAMA4.md`, `YAPAYZEKA_RAPORU_ASAMA5.md`)
 

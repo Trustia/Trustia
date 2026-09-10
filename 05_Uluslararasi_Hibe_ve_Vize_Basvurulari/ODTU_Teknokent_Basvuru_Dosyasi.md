@@ -28,9 +28,9 @@ ODTÜ Teknokent'in güçlü mühendislik ve savunma sanayii kültüründen güç
 
 ## 3. EKİP VE AKREDİTASYONLAR
 
-* **Murat Furkan Bayram (Kurucu & Sistem Mimarı):** KOSGEB İleri Girişimci & SSB 100/100 Tam Puan tescilli.
+* **Murat Furkan Bayram (Kurucu & Sistem Mimarı):** KOSGEB İleri Girişimci & BTK Akademi sertifikalı.
 * **Denizcan Özcan (Aday Mühendis):** İÜC EEE 4. Sınıf, ASELSAN & TEKNOFEST Robotaksi Finalisti.
-* **Resmi Kayıtlar:** KOSGEB (`KSB01UGE0115153370`), SSB (`L2zPtN4X1ZJ`), TÜBİTAK ARBİS (`TBTK-0229-6571`), ASELSAN Tedarikçi Portalı, İTO BTM Ön Kuluçka.
+* **Resmi Kayıtlar:** KOSGEB (`KSB01UGE0115153370`), BTK Akademi (`L2zPtN4X1ZJ`), TÜBİTAK ARBİS (`TBTK-0229-6571`), ASELSAN Tedarikçi Portalı, İTO BTM Ön Kuluçka.
 
 ---
 

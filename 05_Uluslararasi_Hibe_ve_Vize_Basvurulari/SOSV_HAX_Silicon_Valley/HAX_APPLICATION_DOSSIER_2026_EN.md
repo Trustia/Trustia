@@ -13,7 +13,7 @@
 | **Investment Terms:** | **$250,000 USD Net Cash Investment** |
 | **Sector:** | Robotics • Autonomous Vehicles (UGVs) • Sensor Fusion • Defense Hardware/Software |
 | **Codebase & Rigor:** | **16,000+ Lines Production Code** • **1,281 Deterministic Tests (100% PASS Rate)** |
-| **Accreditations:** | **İTO BTM (Fulya Kampüsü), Teknopark Istanbul (Cube GO), SSB 100/100, KOSGEB** |
+| **Accreditations:** | **İTO BTM (Fulya Kampüsü), KOSGEB, BTK Academy, TÜBİTAK ARBİS** |
 | **Website & Contact:** | [https://trustia.com.tr](https://trustia.com.tr) • `kariyer@trustia.com.tr` |
 | **Portal Link:** | [sosv.com/apply/hax](https://sosv.com/apply/hax/) |
 

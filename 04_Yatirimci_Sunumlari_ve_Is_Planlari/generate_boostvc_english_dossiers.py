@@ -247,7 +247,7 @@ def generate_photo_master_plan_en(out_path):
     header_data = [
         [
             Paragraph("<b>TRUSTIA AI</b><br/><font size=6.5 color='#0284C7'>AUTONOMOUS SYSTEMS & DEEP TECH</font>", styles['Body']),
-            Paragraph("<b>DOC ID:</b> TRUSTIA-ENG-IONIQ5-L4-EN<br/><b>DATE:</b> September 5, 2026<br/><b>STATUS:</b> OFFICIAL INVESTOR & TECH DOSSIER", ParagraphStyle('MetaHEN', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=C_MUTED))
+            Paragraph("<b>DOC ID:</b> TRUSTIA-ENG-IONIQ5-L4-EN<br/><b>DATE:</b> September 8, 2026<br/><b>STATUS:</b> OFFICIAL INVESTOR & TECH DOSSIER", ParagraphStyle('MetaHEN', fontName='Arial', fontSize=6.5, leading=9, alignment=2, textColor=C_MUTED))
         ]
     ]
     t_head = Table(header_data, colWidths=[100*mm, 82*mm])
@@ -396,7 +396,7 @@ def generate_photo_master_plan_en(out_path):
         [
             Paragraph("<b>CHIEF ARCHITECT & CEO</b><br/>Murat Furkan Bayram<br/><font size=5.5 color='#64748B'>Founder & Systems Architect<br/>Trustia AI</font>", styles['Body']),
             Paragraph("<b>HARDWARE & TEST LEAD</b><br/>Denizcan Ozcan<br/><font size=5.5 color='#64748B'>Hardware & Integration Engineer<br/>ASELSAN & TEKNOFEST Finalist</font>", styles['Body']),
-            Paragraph("<b>INSTITUTIONAL ACCREDITATION</b><br/>SSB & ITO BTM Verified<br/><font size=5.5 color='#64748B'>SSB 100/100 Score • Dubai World Challenge<br/>TUBITAK National Researcher</font>", styles['Body'])
+            Paragraph("<b>INSTITUTIONAL ACCREDITATION</b><br/>ITO BTM & BTK Verified<br/><font size=5.5 color='#64748B'>BTK Defense Cert • Dubai World Challenge<br/>TUBITAK National Researcher</font>", styles['Body'])
         ]
     ]
     t_sign = Table(sign_box, colWidths=[60.6*mm, 60.6*mm, 60.6*mm])

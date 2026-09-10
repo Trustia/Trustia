@@ -17,7 +17,7 @@ const translations: Record<Language, Record<string, string>> = {
     top_ticker_btm: "🏛️ İTO BTM (Bilgiyi Ticarileştirme Merkezi) Ön Kuluçka Kabulü",
     top_ticker_teknopark: "🏢 Teknopark İstanbul Girişimcilik Ekosistemi",
     top_ticker_yc: "🇺🇸 Seviye 4 Yerli Robotaksi ve Çift Amaçlı Otonomi",
-    top_ticker_ssb: "🎖️ T.C. Savunma Sanayii Başkanlığı 100/100 Tam Puan Tescili",
+    top_ticker_ssb: "🏢 İTO BTM Fulya Kuluçka Girişimi & KOSGEB İleri Girişimci",
 
     // Institutional Ecosystem
     eco_badge: "RESMİ KURUMLAR & AKREDİTASYONLAR",
@@ -72,7 +72,7 @@ const translations: Record<Language, Record<string, string>> = {
     about_founder_badge: "KURUCU & SİSTEM MİMARI",
     about_founder_title: "Murat Furkan Bayram",
     about_founder_role: "Kurucu & Sistem Mimarı",
-    about_founder_bio: "KOSGEB İleri Girişimci ve T.C. Savunma Sanayii Başkanlığı 100/100 tam puan sertifikalı otonomi mühendisi. GPS'siz 3D SLAM, sürü zekası ve Seviye 4 yerli otonom sürüş mimarisini geliştirmiş olup şirketin teknoloji ve Ar-Ge yapılanmasını yönetmektedir.",
+    about_founder_bio: "KOSGEB İleri Girişimci ve BTK Akademi Savunma Sanayii sertifikalı sistem mimarı. GPS'siz 3D SLAM, sürü zekası ve Seviye 4 yerli otonom sürüş mimarisini geliştirmiş olup şirketin teknoloji ve Ar-Ge yapılanmasını yönetmektedir.",
 
     // Contact
     contact_back: "Ana Sayfaya Dön",
@@ -129,12 +129,12 @@ const translations: Record<Language, Record<string, string>> = {
     top_ticker_btm: "🏛️ Istanbul Chamber of Commerce (BTM) Pre-Incubation Cohort",
     top_ticker_teknopark: "🏢 Teknopark Istanbul Defense & Deep Tech Ecosystem",
     top_ticker_yc: "🇺🇸 Level 4 Sovereign Robotaxi & Dual-Use Autonomy",
-    top_ticker_ssb: "🎖️ Turkish Defense Industry Agency 100/100 Certification",
+    top_ticker_ssb: "🎖️ BTK Academy Defense Industry Products Certification",
 
     // Institutional Ecosystem
     eco_badge: "INSTITUTIONAL ACCREDITATIONS",
     eco_title: "State & Ecosystem Accreditations",
-    eco_desc: "Officially accredited and supported by the Turkish Defense Industry Agency (SSB), Istanbul Chamber of Commerce (İTO), BTM, KOSGEB, and Teknopark Istanbul.",
+    eco_desc: "Officially registered and supported by Istanbul Chamber of Commerce (İTO BTM), KOSGEB Advanced Entrepreneurship, and BTK Academy.",
 
     // Navbar
     nav_about: "ABOUT US",
@@ -184,7 +184,7 @@ const translations: Record<Language, Record<string, string>> = {
     about_founder_badge: "FOUNDER & SYSTEMS ARCHITECT",
     about_founder_title: "Murat Furkan Bayram",
     about_founder_role: "Founder & Systems Architect",
-    about_founder_bio: "KOSGEB Advanced Entrepreneur and Turkish Defense Industry Agency 100/100 certified autonomy engineer. Developed GPS-denied 3D SLAM, swarm intelligence, and Level 4 sovereign autonomy architectures.",
+    about_founder_bio: "KOSGEB Advanced Entrepreneur and BTK Academy Defense Industry certified systems architect. Developed GPS-denied 3D SLAM, deterministic motion planning, and Level 4 sovereign autonomy architectures.",
 
     // Contact
     contact_back: "Back to Home",

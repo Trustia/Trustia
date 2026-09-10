@@ -87,7 +87,7 @@ Trustia AI'ın geliştirdiği **tamamen yerli, %100 özgün, deterministik otono
 
 | Kurum | Belge / Tescil | Kod / Statü |
 |-------|----------------|-------------|
-| 🛡️ **T.C. Savunma Sanayii Başkanlığı** | 100/100 Tam Puan Sınav Tescili | `L2zPtN4X1ZJ` |
+| 🛡️ **BTK Akademi** | Türk Savunma Sanayii Ürün ve Platformları Eğitim Sertifikası | `L2zPtN4X1ZJ` |
 | 📜 **KOSGEB** | İleri Girişimcilik Tescil Belgesi | `KSB01UGE0115153370` |
 | 🔬 **TÜBİTAK ARBİS** | Ulusal Araştırmacı Kaydı | `TBTK-0229-6571` |
 | 🏭 **ASELSAN** | Resmi Tedarikçi Portalı Kaydı | Aktif Onaylı Girişim |
@@ -101,7 +101,7 @@ Trustia AI'ın geliştirdiği **tamamen yerli, %100 özgün, deterministik otono
 ### Murat Furkan Bayram — Kurucu & CEO / Sistem Mimarı (%80 Hisse)
 * **Yaş:** 17 (Doğum: 4 Şubat 2009)
 * **Rol:** 16.000 satır otonomi motoru, SLAM, Hybrid A*, CAN-FD ve yapay zeka algoritmalarının mimarı.
-* **Başarılar:** SSB 100/100 Tam Puan, KOSGEB İleri Girişimci, TÜBİTAK ARBİS Ulusal Araştırmacı.
+* **Başarılar:** KOSGEB İleri Girişimci, TÜBİTAK ARBİS Ulusal Araştırmacı, BTK Akademi Savunma Sertifikası.
 
 ### Doğukan Bayram — Kurucu Ortak & Operasyon (%20 Hisse)
 * **Rol:** Reşit kurucu ortak. Resmi süreçler, operasyonel yönetim, fon ilişkileri ve organizasyon süreçlerinin koordinasyonu.

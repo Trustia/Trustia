@@ -96,7 +96,7 @@
 * **Software Maturity:** Complete 9-system architecture with 1,301 passing unit/integration tests and zero-failure 50-mission simulation campaign.
 * **Live Web & Brand Presence:** Full digital platform live at `trustia.com.tr` with institutional documentation and export compliance.
 * **Governance & R&D:** Incubation backing with BTM Istanbul, candidate Teknopark Istanbul, and accredited deep-tech setup.
-* **Accreditations:** KOSGEB Advanced Entrepreneurship Certified, BTK & Defense Industry Academy (100/100) certified founder background.
+* **Accreditations:** KOSGEB Advanced Entrepreneurship Certified, BTK Academy Defense Industry certified founder background.
 
 ---
 

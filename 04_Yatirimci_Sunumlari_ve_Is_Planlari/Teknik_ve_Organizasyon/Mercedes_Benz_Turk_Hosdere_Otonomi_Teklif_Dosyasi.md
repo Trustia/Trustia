@@ -55,7 +55,7 @@ Trustia AI, sıfırdan geliştirilen **16.000 satır deterministik Seviye 4 oton
 ## 📜 4. GÜVENİLİRLİK VE RESMİ TESCİLLERİMİZ
 
 1. **İTO BTM Ön Kuluçka:** İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (İTO BTM Fulya Kampüsü) 2026 II. Dönem Sözleşmeli Girişimi.
-2. **SSB Savunma Sanayii Başkanlığı:** 100/100 Tam Puan Başarı Sertifikası (`L2zPtN4X1ZJ`).
+2. **BTK Akademi:** Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`).
 3. **KOSGEB İleri Girişimci:** Resmi Sertifikasyon (`KSB01UGE0115153370`).
 4. **TÜBİTAK ARBİS:** Ulusal Araştırmacı Tescili (`TBTK-0229-6571`).
 5. **ASELSAN:** Resmi Tedarikçi Portalı Kayıtlı Girişim.

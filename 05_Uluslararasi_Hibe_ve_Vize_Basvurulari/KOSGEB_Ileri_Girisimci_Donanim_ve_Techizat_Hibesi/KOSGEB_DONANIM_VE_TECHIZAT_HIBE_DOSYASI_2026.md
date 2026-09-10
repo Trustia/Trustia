@@ -10,7 +10,7 @@
 | **Girişim Adı:** | **TRUSTIA AI** (*Trustia Otonom Savunma Sistemleri*) |
 | **Kurucu & Girişimci:** | **Murat Furkan Bayram** |
 | **KOSGEB İleri Girişimci Belge No:** | **`KSB01UGE0115153370`** *(Resmi Onaylı)* |
-| **Savunma Mükemmeliyet Puanı:** | **100/100 Tam Puan** *(SSB & BTK Sertifika No: `L2zPtN4X1ZJ`)* |
+| **Savunma Sanayii Sertifikası:** | **BTK Akademi Katılım Sertifikası** *(Belge No: `L2zPtN4X1ZJ`)* |
 | **TÜBİTAK ARBİS No:** | **`TBTK-0229-6571`** |
 | **Kuluçka Merkezi:** | **İstanbul Ticaret Odası BTM (İTO BTM Fulya Kampüsü, Şişli)** |
 | **Destek Kapsamı:** | **Yeni Makine, Teçhizat, Donanım (Laptop/İş İstasyonu), Yazılım ve Hizmet** |
@@ -36,7 +36,7 @@
 ========================================================================================
 ALAN 1: İŞ FİKRİNİN VE PROJENİN AMACI
 ========================================================================================
-Trustia AI, askeri insansız kara araçları (İKA) ve sivil binek araçlar için elektronik harp (GPS karartması) altında dahi 400Hz ESKF sensör füzyonu ile sub-8cm hassasiyetle çalışan, herhangi bir mekanik aracı 15 dakikada Seviye 4 tam otonom sisteme dönüştüren yerli ve milli yazılım/donanım mimarisidir. Proje 16.000 satır kod ve 1.281 birim/entegrasyon testi ile doğrulanmış olup T.C. SSB tarafından 100/100 tam puan almıştır.
+Trustia AI, askeri insansız kara araçları (İKA) ve sivil binek araçlar için elektronik harp (GPS karartması) altında dahi 400Hz ESKF sensör füzyonu ile sub-8cm hassasiyetle çalışan, herhangi bir mekanik aracı 15 dakikada Seviye 4 tam otonom sisteme dönüştüren yerli ve milli yazılım/donanım mimarisidir. Proje 16.000 satır kod ve 1.301 birim/entegrasyon testi ile doğrulanmış olup BTK Akademi savunma sanayii eğitim tesciline sahiptir.
 ```
 
 ```

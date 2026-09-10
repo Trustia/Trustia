@@ -62,9 +62,9 @@ export default function AboutPage() {
 
   const credentials = [
     {
-      org: lang === "tr" ? "T.C. Savunma Sanayii Başkanlığı (SSB)" : "Turkish Defense Industry Agency (SSB)",
+      org: lang === "tr" ? "BTK Akademi" : "BTK Academy",
       reg: "L2zPtN4X1ZJ",
-      type: lang === "tr" ? "100/100 Tam Puan Sertifikasyonu" : "100/100 Perfect Score Certification",
+      type: lang === "tr" ? "Türk Savunma Sanayii Ürün ve Platformları Eğitimi" : "Defense Industry Platforms Training",
       status: "Resmi Onaylı"
     },
     {
