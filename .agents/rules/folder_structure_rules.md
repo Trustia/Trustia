@@ -6,7 +6,7 @@
 
 ---
 
-## 🚨 THE 5 SUPREME DIRECTIVES (MANDATORY AGENT GOVERNANCE)
+## 🚨 THE 8 SUPREME DIRECTIVES (MANDATORY AGENT GOVERNANCE)
 
 ### RULE #1: INSTANT GLOBAL UPDATE & LIVE DEPLOY
 > Whenever ANY change, accomplishment, credential, code improvement, grant submission, or milestone is achieved: **IT MUST IMMEDIATELY BE SYNCHRONIZED ACROSS ALL TOUCHPOINTS (WEB, SEO, SCHEMA, SITEMAP, DOCUMENTATION) AND PROMPTLY COMMITTED AND PUSHED TO GITHUB FOR PRODUCTION DEPLOYMENT (`trustia.com.tr`).**
@@ -22,6 +22,15 @@
 
 ### RULE #5: CLEAN SLATE & PROFESSIONAL NAMING
 > **Zero loose or duplicate filenames.** Never generate files named `_kopya`, `_yeni`, `_final_son`. Every file has a single authoritative Master name; revision history is managed strictly via Git.
+
+### RULE #6: AUTOMOTIVE SAFETY & FAILSAFE KERNEL (ISO 26262 ASIL-D)
+> The 5ms human override, 200ms hardware watchdog, and E-Stop fail-safe mechanisms inside `01_Trustia_Otonom_Yazilim_Core` MUST NEVER be bypassed, relaxed, or disabled under any circumstances.
+
+### RULE #7: EXECUTIVE GOVERNANCE & CAP TABLE PARITY
+> Standard executive roles must be consistently preserved across all documents: Murat Furkan Bayram (80% Founder & CEO / Systems Architect), Doğukan Bayram (20% Co-Founder & Operations), Denizcan Özcan (Lead Hardware & Integration Engineer).
+
+### RULE #8: ONE-CLICK ZERO-FRICTION DEMO LAUNCHER
+> Every autonomy module, AI detection model, or simulation tool must be executable and demonstrable in a single keystroke via `TRUSTIA_BASLAT.bat` or `trustia_cli.py`.
 
 ---
 

@@ -7,7 +7,7 @@
 
 ---
 
-## 🚨 EN TEMEL VE ZORUNLU 5 ALTIN KURAL (THE 5 SUPREME DIRECTIVES)
+## 🚨 EN TEMEL VE ZORUNLU 8 ALTIN KURAL (THE 8 SUPREME DIRECTIVES)
 
 ### 1. KURAL: ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY (INSTANT GLOBAL UPDATE & DEPLOY)
 > [!CRITICAL]
@@ -42,6 +42,23 @@
 > Klasörlerde `sunum_yeni.pdf`, `kopya_kopya.md`, `final_son_gercek.pdf`, `test2.png` gibi gayriciddi, dağınık veya çift isimli dosyalar **oluşturulamaz ve barındırılamaz.**
 > * Her belgenin ve varlığın tek bir resmi "Master" adı olur; güncellemeler doğrudan o ana dosyanın üzerine yapılır ve versiyonlama Git geçmişine bırakılır.
 > * Masaüstünde veya klasör içlerinde geçici deneme dosyası bırakılamaz.
+
+### 6. KURAL: KIRILMAZ GÜVENLİK VE ASIL-D FAILSAFE KİLİDİ (AUTOMOTIVE SAFETY & FAILSAFE KERNEL)
+> [!CRITICAL]
+> Otonomi yazılımındaki (`01_Trustia_Otonom_Yazilim_Core`) **5ms anlık sürücü müdahalesi (override), 200ms donanım watchdog mekanizması ve E-Stop acil durum fren kesicisi** ASLA koddan çıkarılamaz, bypass edilemez veya gevşetilemez.
+> * Gerçek Hyundai Ioniq 5 test aracında ve sahada can güvenliği, ISO 26262 ASIL-D ve STANAG 4586 askeri güvenlik standartları tavizsiz korunur.
+
+### 7. KURAL: KURUMSAL YÖNETİŞİM VE CAP TABLE STANDARDI (EXECUTIVE GOVERNANCE & CAP TABLE PARITY)
+> [!CRITICAL]
+> Bütün dosyalarda, web sitesinde, yatırımcı sunumlarında ve resmi yazışmalarda kurucu heyet unvan ve ortaklık oranları tek ve tutarlı olmak zorundadır:
+> * **Murat Furkan Bayram:** Kurucu & CEO / Sistem Mimarı (%80 Hisse).
+> * **Doğukan Bayram:** Kurucu Ortak & Operasyon Direktörü (%20 Hisse, Reşit Kurucu Ortak).
+> * **Denizcan Özcan:** Baş Donanım ve Entegrasyon Mühendisi (ASELSAN Aday Havuzu & TEKNOFEST Finalisti).
+> * Hiçbir belgede yetkisiz unvan değişikliği veya hisse tutarsızlığı yapılamaz.
+
+### 8. KURAL: SIFIR SÜRTÜNME VE TEK TIKLA DEMO ÇALIŞTIRMA (ONE-CLICK ZERO-FRICTION DEMO LAUNCHER)
+> [!CRITICAL]
+> Otonomi çekirdeğine eklenen her yeni algoritma, tehdit tespit modeli veya simülasyon aracı; karmaşık terminal parametrelerine ihtiyaç duymadan `01_Trustia_Otonom_Yazilim_Core` altındaki `TRUSTIA_BASLAT.bat` menüsünden (`1`, `2`, `3`, `4`) veya `trustia_cli.py` üzerinden **tek tıkla çalıştırılabilir ve anında canlı demo yapılabilir olmak zorundadır.**
 
 ---
 
@@ -93,11 +110,14 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 3. 🚨 **3. ZORUNLU KURAL (MD & PDF İKİZLEME):** Güncellenen her Markdown dokümanının PDF çıktısı anında güncellenir.
 4. 🚨 **4. ZORUNLU KURAL (KANITLI BİLGİ):** Resmi tescil veya test kanıtı olmayan hiçbir veri dosyalara yazılamaz.
 5. 🚨 **5. ZORUNLU KURAL (TEMİZ İSİMLENDİRME):** "kopya", "yeni", "final_son" gibi dosya isimleri yasaktır; sadece tekil Master isim kullanılır.
-6. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
-7. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
-8. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
-9. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
-10. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
+6. 🚨 **6. ZORUNLU KURAL (ASIL-D GÜVENLİK KİLİDİ):** 5ms sürücü override ve 200ms watchdog asla bypass edilemez.
+7. 🚨 **7. ZORUNLU KURAL (KURUMSAL YÖNETİŞİM):** Murat Furkan Bayram (%80 CEO), Doğukan Bayram (%20 Operasyon), Denizcan Özcan (Baş Donanım Mühendisi) unvan ve oranları daima korunur.
+8. 🚨 **8. ZORUNLU KURAL (TEK TIKLA ÇALIŞTIRMA):** Tüm otonomi bileşenleri `TRUSTIA_BASLAT.bat` ve `trustia_cli.py` üzerinden tek tıkla çalışmak zorundadır.
+9. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
+10. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
+11. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
+12. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
+13. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
 
 ---
 
