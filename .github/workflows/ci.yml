@@ -1,0 +1,58 @@
+name: Trustia Continuous Integration & Verification
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  autonomy-core-tests:
+    name: Autonomy Core 1,301 Unit & Integration Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install Testing Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov numpy
+
+      - name: Execute 1,301 Automated Verification Suite
+        run: |
+          cd 01_Trustia_Otonom_Yazilim_Core
+          python -m pytest tests/ -q --tb=short
+
+  web-platform-build:
+    name: Web Platform Next.js 16 Production Build Verification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: 02_Trustia_Web_Platformu/website/package-lock.json
+
+      - name: Install Node Dependencies
+        run: npm ci
+        working-directory: 02_Trustia_Web_Platformu/website
+
+      - name: Build and Export Website
+        run: npm run build
+        working-directory: 02_Trustia_Web_Platformu/website

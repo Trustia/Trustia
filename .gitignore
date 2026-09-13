@@ -1,37 +1,105 @@
-# Python & Tests
+# ==============================================================================
+# TRUSTIA ENTERPRISE REPOSITORY GITIGNORE
+# Dual-Use Autonomous Driving Stack & Tactical C2 Mission Control
+# ==============================================================================
+
+# --- Python & Testing Environments ---
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
-*.log
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
 
-# Node & Next.js Web Platform (any depth)
+# --- Virtual Environments ---
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Node.js & Next.js Web Platform ---
 **/node_modules/
+**/.pnp
+**/.pnp.js
 **/.next/
 **/out/
-**/dist/
-**/build/
-.env.local
-.env.*.local
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.turbo
 
-# Binaries & Large Media
+# --- Environment Variables & Sensitive Secrets ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+*.key
+*.cert
+*.pfx
+
+# --- Operating System & Desktop Metadata ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# --- IDEs & Code Editors ---
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+
+# --- Compilers, Binaries & Local Execution Artifacts ---
 *.exe
 *.dll
-*.so
 *.dylib
 *.iso
 **/ffmpeg.exe
+*.log
+logs/
 
-# IDE & OS
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Wrangler Cloudflare
+# --- Cloud & Deployment Caches ---
 .wrangler/
+.vercel
