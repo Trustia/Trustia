@@ -129,7 +129,7 @@ export default function RootLayout({
         "@type": "Organization",
         "@id": "https://trustia.com.tr/#organization",
         "name": "Trustia AI",
-        "alternateName": ["TRUSTIA AI", "Trustia Teknoloji", "Trustia Autonomous Systems", "Trustia Teknoloji A.Ş."],
+        "alternateName": ["TRUSTIA AI", "Trustia Teknoloji", "Trustia Autonomous Systems"],
         "url": "https://trustia.com.tr",
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
