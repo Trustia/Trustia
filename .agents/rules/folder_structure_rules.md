@@ -6,6 +6,17 @@
 
 ---
 
+## 🚨 RULE #1: INSTANT GLOBAL UPDATE & LIVE DEPLOY (MANDATORY SUPREME DIRECTIVE)
+
+> [!CRITICAL]
+> **RULE #1 (MANDATORY & NON-NEGOTIABLE):**
+> Whenever ANY change, accomplishment, credential, code improvement, grant submission, or milestone is achieved in the project:
+> **IT MUST IMMEDIATELY BE SYNCHRONIZED ACROSS ALL CORRESPONDING FILES (WEB PLATFORM, SEO, SCHEMA, SITEMAP, DOCUMENTATION) AND PROMPTLY COMMITTED AND PUSHED TO GITHUB TO TRIGGER LIVE PRODUCTION DEPLOYMENT (`trustia.com.tr`).**
+> * NEVER leave completed progress uncommitted or pending locally.
+> * Every single touchpoint (Website, README, AGENTS, GEMINI, Sitemap, Schema) must reflect the update simultaneously.
+
+---
+
 ## 📁 The 6 Strict Architectural Domains
 
 All files within `C:\Users\Murat\Desktop\Trustia\` MUST reside in one of the following 6 designated directories:

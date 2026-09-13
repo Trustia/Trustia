@@ -7,6 +7,22 @@
 
 ---
 
+## 🚨 1. EN TEMEL VE ZORUNLU ALTIN KURAL: ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY (INSTANT GLOBAL UPDATE & DEPLOY)
+
+> [!CRITICAL]
+> **1. KURAL (EN BAŞTA GELEN VE TARTIŞMASIZ ZORUNLULUK):**
+> Projede yeni bir gelişme olduğu, yeni bir başvuru/tescil/kod/özellik yapıldığı veya herhangi bir bilgi güncellendiği anda; **O ŞEY ANINDA VE İSTİSNASIZ BÜTÜN HER YERDEN GÜNCELLENECEK VE DERHAL GITHUB'A PUSH EDİLİP CANLIYA (`trustia.com.tr`) DEPLOY EDİLECEKTİR.**
+> 
+> * **Neler Anında Güncellenmek Zorundadır?**
+>   1. **Canlı Web Platformu:** Ana sayfa, Hakkımızda, Robotaxi, İletişim, Footer, Navbar ve ilgili tüm bileşenler.
+>   2. **SEO & Arama Motoru Verileri:** Sayfa meta etiketleri, OpenGraph, Twitter Cards, Schema.org JSON-LD kurumsal grafiği.
+>   3. **Harita ve Tarayıcılar:** `sitemap.xml` (güncel `lastmod` tarihi ile) ve `robots.txt` AI tarayıcı direktifleri.
+>   4. **Master Dokümantasyon:** `README.md`, `AGENTS.md`, `GEMINI.md` ve `.agents/rules/` kuralları.
+>   5. **Yatırımcı ve Hibe Dosyaları:** Kategori 04'teki ilgili pitch deck ve modeller, Kategori 05'teki Master Takip Kütüğü (`.md` & `.pdf`).
+> * **Kesin Şart:** Değişiklik yapılıp yerel bilgisayarda ASLA bekletilemez; anında `git add -A`, kurumsal commit ve `git push origin main` yapılarak GitHub Actions üzerinden `trustia.com.tr` canlı ortamına ve Google indeksine fırlatılacaktır!
+
+---
+
 ## 📁 6 ANA KURUMSAL KATEGORİ VE KATI YERLEŞİM PLANI
 
 Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıdaki 6 klasörde tutulacaktır:
@@ -50,11 +66,12 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 ---
 
 ## ⛔ KESİN YASAKLAR VE ZORUNLULUKLAR
-1. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
-2. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
-3. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
-4. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
-5. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
+1. 🚨 **1. ZORUNLU KURAL (ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY):** Projede herhangi bir şey yapıldığı/oluştuğu anda o bilgi A'dan Z'ye BÜTÜN dosyalardan, web sitesinden, SEO'dan, dokümanlardan güncellenmek ve BEKLEMEDEN GitHub'a push edilip canlıya deploy edilmek ZORUNDADIR. Hiçbir güncelleme yerelde asılı bırakılamaz.
+2. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
+3. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
+4. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
+5. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
+6. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
 
 ---
 
