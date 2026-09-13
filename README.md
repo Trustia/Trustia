@@ -1,11 +1,12 @@
-# 🛡️ TRUSTIA — Dual-Use Autonomous Driving Stack & Tactical C2 Mission Control (v2.0)
+# 🛡️ TRUSTIA — Dual-Use Autonomous Driving Stack & Tactical C2 Mission Control (v2.4)
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Tests Passing](https://img.shields.io/badge/Tests-1%2C301%20Passing%20(100%25)-brightgreen.svg?logo=pytest&logoColor=white)]()
 [![Architecture](https://img.shields.io/badge/Architecture-Dual--Use%20Autonomy%20(UGV%20%26%20Robotaxi)-blue.svg)]()
 [![Standards](https://img.shields.io/badge/Standards-NATO%20STANAG%204586%20%7C%20SAE%20AS6091%20JAUS-red.svg)]()
-[![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-SAE%20J1939%20%7C%20CAN%202.0B%20%7C%20CAN--FD-orange.svg)]()
-[![Government](https://img.shields.io/badge/Accredited-KOSGEB%20%7C%20SSB%20(100%2F100)%20%7C%20T%C3%9CB%C4%B0TAK%20%7C%20BTM-purple.svg)]()
+[![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-Hyundai%20CAN--FD%20%7C%20SAE%20J1939-orange.svg)]()
+[![EU PIC](https://img.shields.io/badge/EU%20PIC-861711529-yellow.svg)]()
+[![EIT Partner](https://img.shields.io/badge/EIT%20Partner-CUS15554-success.svg)]()
 
 > **Production-grade, hardware-agnostic, dual-use autonomous vehicle software stack engineered for tactical defense unmanned ground vehicles (UGVs) and next-generation civilian passenger mobility operating in GPS-denied and high-density urban environments.**
 
@@ -13,39 +14,34 @@
 
 ## 🌍 Executive Summary & Global Venture Standing
 
-TRUSTIA is a full-stack, software-defined autonomous mobility platform built from the ground up with **zero black-box dependencies**. Designed with an AI-native agentic software engineering pipeline, TRUSTIA delivers industrial-grade stability validated by **1,301 automated unit and integration tests (100% pass rate)**.
+TRUSTIA is a full-stack, software-defined autonomous mobility platform built from the ground up with **zero black-box dependencies**. Designed with an AI-native agentic software engineering pipeline, TRUSTIA delivers industrial-grade stability validated by **1,301 automated unit and integration tests (100% pass rate)** across 16,000+ lines of deterministic code.
 
 ### 🏛️ Global Tier-1 Accelerator & Venture Portfolio (2026)
 
 | Tier-1 Global / National Program | Location | Investment / Grant Package | Formal Status |
 | :--- | :--- | :--- | :--- |
-| 🇦🇪 **Dubai World Challenge for Self-Driving Transport (RTA)** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted & Confirmed (Nov 2026 Shortlist)** |
+| 🇪🇺 **European Commission (Participant Register)** | Brussels, EU | **EU Participant ID (PIC)** | 🏛️ **Official PIC Assigned: `861711529`** |
+| 🇪🇺 **EIT Urban Mobility (EITUM)** | Barcelona, EU | **€100,000 Grant & Equity** | 🤝 **Partner ID: `CUS15554` (App: `3.1.02-1206-3732.3`)** |
+| 🇹🇷 **BAYKAR Teknoloji (Baykar Tech)** | Istanbul, TR | **Official Supplier Pipeline** | 🛡️ **Submitted & Confirmed (13 Sept 2026)** |
+| 🇹🇷 **DEİK (Foreign Economic Relations Board)** | Istanbul, TR | **Digital Technologies Council** | 🌐 **Submitted & Confirmed (13 Sept 2026)** |
+| 🇶🇦 **QSTP (Qatar Science & Technology Park)** | Doha, Qatar | **$30M Fund + Doha Sprint** | 🚀 **Submitted & Confirmed (13 Sept 2026)** |
+| 🇺🇸 **Z Fellows (Cory Levy & Grace Kasten)** | San Francisco, CA | **$10,000 Grant + SF Residency** | 🎯 **Live Zoom Partner Interview (17 Sept 2026)** |
+| 🇦🇪 **Dubai World Challenge for Self-Driving Transport** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted (Nov 2026 Finalist)** |
+| 🇹🇷 **fonbulucu (SPK Crowdfunding)** | Ankara / TR | **15,000,000 TRY (150M TL Val.)** | 📈 **Formal Preliminary Review (Code: `W1MV5K`)** |
+| 🌐 **Crunchbase** | Global | **Verified Enterprise Profile** | ⬆️ **Heat Score: 85 (CB Rank: 534k)** |
+| 🇺🇸 **Berkeley SkyDeck (UC Berkeley)** | Berkeley, CA | **$200,000 USD Fund** | 🚀 **Officially Submitted & Confirmed** |
+| 🇺🇸 **Trucks Venture Capital (Reilly Brennan)** | San Francisco, CA | **$500,000 USD Pre-Seed** | 🚀 **Direct Pre-Seed Safe Pitch Submitted** |
 | 🇺🇸 **Boost VC (Adam Draper)** | San Mateo, CA | **$500,000 USD Net Cash Pre-Seed** | 🚀 **Officially Submitted & Confirmed** |
 | 🇺🇸 **LAUNCH & The Syndicate (Jason Calacanis)** | Silicon Valley | **$100,000 – $500,000 USD** | 🎯 **Officially Submitted & Pitch Track** |
-| 🇺🇸 **Launchpad 2026 (1752 Ventures)** | Santa Monica, CA | **$100,000 USD Net Cash** | 🚀 **Officially Submitted & Confirmed** |
-| 🇺🇸 **Bronze Valley VC & Angel Network** | United States | **$500,000 USD SAFE ($5M Cap)** | 🚀 **Officially Submitted & Confirmed** |
-| 🇺🇸 **Hustle Fund** | Silicon Valley | **$50,000 – $150,000 USD Seed** | 🚀 **Officially Submitted & Confirmed** |
-| 🇺🇸 **Founders, Inc. (Blueprint II)** | San Francisco (Fort Mason)| **Pre-Seed & Residency** | 🏢 **Campus Account Activated** |
 | 🇹🇷 **Startups.watch** | Turkey & Global | **Verified Deep-Tech Ecosystem** | 🛡️ **Resmi Doğrulanmış Girişim / Verified** |
-| 🇹🇷 **İş Girişim Sermayesi (İş Bankası GSYO - ISGSY)** | Istanbul | **10,000,000 – 20,000,000 TRY** | 💼 **Officially Submitted & Confirmed** |
+| 🇹🇷 **İş Girişim Sermayesi (İş Bankası GSYO)** | Istanbul | **10,000,000 – 20,000,000 TRY** | 💼 **Officially Submitted & Confirmed** |
 | 🇹🇷 **TechOne VC (Smart Capital)** | Istanbul / Global | **$100,000 – $500,000 USD** | 🚀 **Officially Submitted & Confirmed** |
 | 🇹🇷 **Revo Capital ($100M Fund)** | Istanbul / Amsterdam | **$500,000 – $2M USD Seed** | 🚀 **Officially Submitted & Confirmed** |
 | 🇹🇷 **APY Ventures (Bilişim Vadisi)** | Gebze / Istanbul | **Otonomi & Mobilite GSYF** | 🚀 **Officially Submitted & Confirmed** |
-| 🇹🇷 **Finberg (Fiba Grubu)** | Istanbul | **Finberg Seed Capital** | 🚀 **Officially Submitted & Confirmed** |
-| 🇹🇷 **Maxis Girişim Sermayesi (İş Bankası)** | Istanbul | **İş Bankası GSYF Seed** | 🚀 **Officially Submitted & Confirmed** |
-| 🇹🇷 **Inveo Ventures & Boğaziçi Ventures** | Istanbul | **Deep Tech Equity Investment** | 🚀 **Officially Submitted & Confirmed** |
-| 🇳🇱 **DOMiNO Ventures** | Amsterdam / London / SF | **$200,000 – $500,000 USD** | 🚀 **Officially Submitted & Confirmed** |
-| 🇺🇸 **Y Combinator** | Silicon Valley | **$500,000 USD SAFE** ($5M Cap) | ⏳ Winter 2027 Draft Ready |
-| 🤖 **SOSV / HAX** | San Francisco / Newark | **$250,000 USD Net Cash** | 🚀 **Officially Submitted & Confirmed** |
-| ⚡ **Techstars** | London / Global | **$220,000 USD Package** | ⏳ Active Batch Review |
-| 🇺🇸 **500 Global (500 Startups)** | Palo Alto / SF | **$150,000 USD (Batch 37)** | 🚀 **Officially Submitted & Confirmed** |
-| 🚀 **Alchemist Accelerator** | Silicon Valley | **$125,000 USD SAFE** | 🚀 **Officially Submitted & Confirmed** |
-| 🌐 **Plug and Play Tech Center** | Sunnyvale / Turin | **Enterprise & NATO DualTech** | 🚀 **Officially Submitted & Confirmed** |
+| 🇹🇷 **Bilişim Vadisi (B-Stars Mobility)** | Gebze / Kocaeli | **Proving Ground Track Leasing** | 🏁 **Officially Submitted & Confirmed** |
 | 🏛️ **İTO BTM (Fulya Kampüsü)** | Fulya / Istanbul | **Pre-Incubation & Investor Hub** | ✅ **Admitted & Contract Signed** |
-| 🏢 **Dijitalpark Teknokent (Çekmeköy)** | Istanbul | **Incubation / L4 Autonomous Conversion** | ✅ **Admitted (Incubation Lead Connected)** |
-| 🏢 **Teknopark Istanbul** | Pendik / Kurtköy | **Defense Tech Incubation (Cube GO)** | ⏳ **Candidate Defense Tech Firm** |
-| 🚗 **Martı Technologies (NYSE: MRT)** | Istanbul / US | **L4 Robotaxi Alliance & TAG Fleet Pilot** | 🤝 **Submitted to Founder & CEO Oğuz Alper Öktem** |
-| 📰 **egirişim (Hilmi Öğütcü)** | Istanbul / Global | **Exclusive Press Kit & Feature Coverage** | 📰 **Official 9-Piece Press Kit Submitted** |
+| 🚗 **Martı Technologies (NYSE: MRT)** | Istanbul / US | **L4 Robotaxi Alliance & TAG Fleet** | 🤝 **Submitted to Founder & CEO Oğuz Alper Öktem** |
+| 📰 **egirişim (Hilmi Öğütcü)** | Istanbul / Global | **Exclusive Press Kit & Feature** | 📰 **Official 9-Piece Press Kit Submitted** |
 
 ---
 

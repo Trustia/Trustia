@@ -54,12 +54,16 @@ Trustia AI, sıfırdan geliştirilen **16.000 satır deterministik Seviye 4 oton
 
 ## 📜 4. GÜVENİLİRLİK VE RESMİ TESCİLLERİMİZ
 
-1. **İTO BTM Ön Kuluçka:** İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (İTO BTM Fulya Kampüsü) 2026 II. Dönem Sözleşmeli Girişimi.
-2. **BTK Akademi:** Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`).
-3. **KOSGEB İleri Girişimci:** Resmi Sertifikasyon (`KSB01UGE0115153370`).
-4. **TÜBİTAK ARBİS:** Ulusal Araştırmacı Tescili (`TBTK-0229-6571`).
-5. **ASELSAN:** Resmi Tedarikçi Portalı Kayıtlı Girişim.
-6. **TURKCOMPOSITE 2026:** 21-23 Ekim 2026 BTM Startup Village Fuar Katılımcısı.
+1. **Avrupa Komisyonu (Participant Register):** Resmi AB Katılımcı Kimlik Kodu (PIC: `861711529`).
+2. **EIT Urban Mobility (Avrupa İnovasyon Enstitüsü):** Resmi İş Ortağı (Partner ID: `CUS15554`) & 100.000€ Hibe Başvurusu (`3.1.02-1206-3732.3`).
+3. **BAYKAR Teknoloji:** Otonomi ve taktik yazılım alt yüklenici tedarikçi başvurusu (13 Eylül 2026).
+4. **DEİK (Dış Ekonomik İlişkiler Kurulu):** Dijital Teknolojiler İş Konseyi Resmi Girişimi.
+5. **ASELSAN Tedarikçi Portalı:** Resmi Tedarikçi Başvuru No: `0050569CCE941FD1A49FCEFB9B7BE7D6`.
+6. **İTO BTM Ön Kuluçka:** İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (İTO BTM Fulya Kampüsü) 2026 II. Dönem Sözleşmeli Girişimi.
+7. **BTK Akademi:** Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`).
+8. **KOSGEB İleri Girişimci:** Resmi Sertifikasyon (`KSB01UGE0115153370`).
+9. **TÜBİTAK ARBİS:** Ulusal Araştırmacı Tescili (`TBTK-0229-6571`).
+10. **TURKCOMPOSITE 2026:** 21-23 Ekim 2026 BTM Startup Village Fuar Katılımcısı.
 
 ---
 

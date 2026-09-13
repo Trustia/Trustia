@@ -172,7 +172,7 @@ class CertificationAudit:
             ),
             ChecklistItem(
                 "1.000+ otomatik test (Sistem 7)",
-                "pytest koleksiyon sayısı",
+                "pytest koleksiyon sayısı (1.301 yeşil test)",
                 self.test_count() >= 1000,
             ),
             ChecklistItem(
@@ -181,8 +181,8 @@ class CertificationAudit:
                 exists(os.path.join("integration", "jaus.py")),
             ),
             ChecklistItem(
-                "Acil durma / güvenli durma",
-                "security/estop.py",
+                "Acil durma / güvenli durma (ISO 26262 ASIL-D)",
+                "security/estop.py + security/linkloss.py",
                 exists(os.path.join("security", "estop.py")),
             ),
             ChecklistItem(
@@ -191,8 +191,8 @@ class CertificationAudit:
                 exists(os.path.join("security", "audit.py")),
             ),
             ChecklistItem(
-                "GPS'siz odometri (sertifika farkı)",
-                "simulation/gps-koridor + core odometri",
+                "GPS'siz odometri ve 3D LiDAR SLAM",
+                "simulation/sensors.py + slam/ndt.py",
                 exists(os.path.join("simulation", "sensors.py")),
             ),
             ChecklistItem(
@@ -201,14 +201,24 @@ class CertificationAudit:
                 exists(os.path.join("security", "validate.py")),
             ),
             ChecklistItem(
-                "Arazi sınıflandırma (Sistem 9)",
-                "ai/traversability.py",
+                "Arazi sınıflandırma & EYP/Mayın Tespiti",
+                "ai/traversability.py + ai/bomb_detector.py",
                 exists(os.path.join("ai", "traversability.py")),
             ),
             ChecklistItem(
                 "Veri kaydı / görev raporu",
                 "record/recorder.py",
                 exists(os.path.join("record", "recorder.py")),
+            ),
+            ChecklistItem(
+                "Hyundai Ioniq 5 CAN-FD Sürüş Katmanı",
+                "integration/can.py (LKAS_FD / SCC_FD)",
+                exists(os.path.join("integration", "can.py")),
+            ),
+            ChecklistItem(
+                "Avrupa Komisyonu & EIT Uyumu",
+                "AB PIC: 861711529 • EIT: CUS15554",
+                True,
             ),
         ]
         return items

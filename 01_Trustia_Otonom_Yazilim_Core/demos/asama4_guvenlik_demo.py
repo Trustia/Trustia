@@ -153,11 +153,11 @@ def _session(center: CommandCenter):
 
 def _write_report() -> None:
     lines = [
-        "# TRUSTIA GÜVENLİK VE ENTEGRASYON RAPORU (AŞAMA 4)",
+        "# TRUSTIA v2.4 GÜVENLİK, SİBER-FİZİKSEL VE ENTEGRASYON RAPORU",
         "",
-        "- **Proje sürümü:** 0.4.0",
-        "- **Tarih:** 2026-08-03",
-        "- **Ortam:** win32, Python 3.12.10",
+        "- **Proje sürümü:** 2.4.0",
+        "- **Tarih:** 2026-09-13",
+        "- **Ortam:** win32, Python 3.12+",
         "",
         "## 1. KAPSAM",
         "",

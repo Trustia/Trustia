@@ -121,11 +121,11 @@ def main() -> None:
 
 def _write_stage_report(results, snapshot) -> None:
     lines = [
-        "# TRUSTIA KOMUTA VE VERİ KAYIT RAPORU (AŞAMA 3)",
+        "# TRUSTIA v2.4 TAKTİK KOMUTA, FİLO YÖNETİMİ VE VERİ KAYIT RAPORU",
         "",
-        "- **Proje sürümü:** 0.3.0",
-        "- **Tarih:** 2026-08-03",
-        "- **Ortam:** win32, Python 3.12.10",
+        "- **Proje sürümü:** 2.4.0",
+        "- **Tarih:** 2026-09-13",
+        "- **Ortam:** win32, Python 3.12+",
         "",
         "## 1. KAPSAM",
         "",

@@ -1,7 +1,11 @@
-# TRUSTIA AI SEVİYE-4 ROBOTAKSİ İSTANBUL OPERASYON VE FİYATLANDIRMA MODELİ (2026)
+# TRUSTIA AI v2.4 SEVİYE-4 ROBOTAKSİ İSTANBUL OPERASYON VE FİYATLANDIRMA MODELİ (2026)
 
-> **Belge Sürümü:** 1.0 — Eylül 2026  
-> **Hazırlayan:** Murat Furkan Bayram (Kurucu & CEO, Sistem Mimarı)  
+> **Belge Kodu:** `TR-BIZ-2026-ROBO-01`  
+> **Sürüm:** v2.4.0-PROD — 13 Eylül 2026  
+> **Hazırlayan:** Murat Furkan Bayram (Kurucu & CEO, Sistem Mimarı, %80 Hisse)  
+> **Kurucu Ortak:** Doğukan Bayram (%20 Hisse)  
+> **Resmi Sicil & Akreditasyon:** AB Katılımcı Kodu (PIC): `861711529` • EIT Urban Mobility Partner ID: `CUS15554`  
+> **Kitle Fonlama / Değerleme:** SPK fonbulucu `W1MV5K` (150M TL Val. / 15M TL Fonlama)  
 > **Konum:** İTO BTM Fulya Kampüsü, Şişli / İstanbul  
 > **Kategori:** 04_Yatirimci_Sunumlari_ve_Is_Planlari / Is_Plani_ve_Kanvas  
 

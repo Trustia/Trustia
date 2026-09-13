@@ -362,5 +362,5 @@ Bu belge; Trustia AI Seviye 4 Otonomi Motoru'nun Hyundai Ioniq 5 test aracına f
 
 ---
 
-*Tarih:* 31 Ağustos 2026  
+*Tarih:* Eylül 2026  
 *Proje:* TRUSTIA AI — Seviye 4 Otonom Sistemler  

@@ -47,6 +47,13 @@ ID_ESTOP_STATE = 0x014
 ID_MOTOR_TELEMETRY = 0x021
 ID_BATTERY_TELEMETRY = 0x022
 
+# ---- Hyundai Ioniq 5 E-GMP CAN-FD Kimlikleri (5 Mbps Bus) ----
+ID_IONIQ5_LKAS_FD = 0x1A0       # Direksiyon Açı ve Tork Enjeksiyonu (100 Hz)
+ID_IONIQ5_SCC_FD = 0x1A1        # Akıllı Hız, İvme ve Fren Basıncı (50 Hz)
+ID_IONIQ5_WHL_SPD_FD = 0x386    # 4 Tekerlek Darbe ve Hız Telemetrisi
+ID_IONIQ5_BATTERY_800V = 0x544  # 800V E-GMP Yüksek Voltaj Batarya Telemetrisi
+
+
 
 class CanBus:
     """CAN transitörü — çerçeve enkapsülasyonu ve saat/halat kaydı."""
@@ -172,3 +179,43 @@ class SocketCanBus(CanBus):
                 self._sock.send(can_pkt)
             except OSError:
                 pass
+
+
+class HyundaiIoniq5CanFdController:
+    """Hyundai Ioniq 5 (E-GMP Platformu) Seviye-4 CAN-FD Denetleyicisi.
+
+    100Hz LKAS_FD direksiyon açısı enjeksiyonu, 50Hz SCC_FD hız/ivme/fren kontrolü
+    ve 800V batarya telemetrisi yönetimini sağlar.
+    """
+
+    def __init__(self, bus: CanBus) -> None:
+        self.bus = bus
+
+    def send_lkas_steering(self, target_angle_deg: float, torque_request_nm: float = 0.0) -> CanFrame:
+        """LKAS_FD direksiyon açısı ve torku enjekte eder."""
+        raw_angle = int(round(target_angle_deg * 10.0))
+        raw_torque = int(round(torque_request_nm * 100.0))
+        data = struct.pack("<hh4s", raw_angle, raw_torque, b"\x00\x00\x00\x00")
+        frame = CanFrame(arbitration_id=ID_IONIQ5_LKAS_FD, data=data, is_fd=True)
+        self.bus.transmit(frame)
+        return frame
+
+    def send_scc_acceleration(self, accel_mps2: float, target_speed_kph: float) -> CanFrame:
+        """SCC_FD hız ve ivme/fren komutu iletir."""
+        raw_accel = int(round(accel_mps2 * 100.0))
+        raw_speed = int(round(target_speed_kph * 10.0))
+        data = struct.pack("<hh4s", raw_accel, raw_speed, b"\x00\x00\x00\x00")
+        frame = CanFrame(arbitration_id=ID_IONIQ5_SCC_FD, data=data, is_fd=True)
+        self.bus.transmit(frame)
+        return frame
+
+    def read_battery_status(self, frame: CanFrame) -> dict:
+        """800V E-GMP batarya telemetrisini çözümler."""
+        if frame.arbitration_id != ID_IONIQ5_BATTERY_800V or len(frame.data) < 6:
+            return {"soc_pct": 0.0, "voltage_v": 0.0, "temp_c": 0.0}
+        soc_pct, voltage_raw, temp_raw = struct.unpack("<hbb", frame.data[:4])
+        return {
+            "soc_pct": soc_pct / 10.0,
+            "voltage_v": voltage_raw * 2.0,
+            "temp_c": float(temp_raw),
+        }

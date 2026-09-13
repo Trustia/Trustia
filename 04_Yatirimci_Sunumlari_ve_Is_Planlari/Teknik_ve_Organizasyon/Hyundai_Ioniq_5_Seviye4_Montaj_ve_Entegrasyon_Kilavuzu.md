@@ -336,5 +336,5 @@ $$\mathbf{P}_{\text{camera}} = \mathbf{R} \cdot \mathbf{P}_{\text{lidar}} + \mat
 
 ---
 
-*Tarih:* 31 Ağustos 2026  
+*Tarih:* Eylül 2026  
 *Kurum:* TRUSTIA AI — Seviye 4 Otonom Sistemler  

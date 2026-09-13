@@ -1,0 +1,49 @@
+TRUSTIA PROPRIETARY & CONFIDENTIAL SOURCE CODE LICENSE
+Copyright (c) 2026 Murat Furkan Bayram - Trustia AI Technologies. All Rights Reserved.
+
+PROJECT: TRUSTIA CORE AUTONOMOUS DRIVING & TACTICAL SLAM ENGINE (v2.4)
+FOUNDER & LEAD SYSTEMS ARCHITECT: Murat Furkan Bayram (17 Years Old, 80% Equity)
+CO-FOUNDER & OPERATIONS: Doğukan Bayram (20% Equity)
+HEADQUARTERS: Istanbul Chamber of Commerce (İTO) BTM Fulya Deep-Tech Campus, Şişli / Istanbul, TR
+
+OFFICIAL STATE & INTERNATIONAL REGISTRATIONS:
+  * European Commission Participant Register PIC: 861711529
+  * EIT Urban Mobility Official Partner ID: CUS15554 (Grant App: 3.1.02-1206-3732.3)
+  * Turkish Defense Giant BAYKAR Tech Supplier Registry: Active & Confirmed (13 Sept 2026)
+  * Turkish Defense Giant ASELSAN Supplier Registry: 0050569CCE941FD1A49FCEFB9B7BE7D6
+  * DEİK (Foreign Economic Relations Board) Digital Tech Council: Active & Confirmed
+  * KOSGEB Advanced Entrepreneurship Certificate: KSB01UGE0115153370
+  * TÜBİTAK ARBİS National Researcher Registry: TBTK-0229-6571
+  * BTK Academy Defense Industry Certification: L2zPtN4X1ZJ
+  * Capital Markets Board (SPK) Crowdfunding: fonbulucu.com (Campaign: W1MV5K)
+  * Global VC Accreditation: Crunchbase Verified Profile (Heat Score: 85, Rank: 534k)
+
+1. YASAL KORUMA VE ESER SAHİPLİĞİ:
+Bu yazılım, tüm algoritmalar, kinematik rota planlayıcılar (Hybrid A*), 3D NDT LiDAR SLAM 
+haritalama motoru, CAN-FD araç kontrol sürücüleri, yapay zeka EYP/Mayın/KHKN tespit modelleri, 
+1.301 otomatik test kütüphanesi ve teknik dokümantasyon; 5846 sayılı Fikir ve Sanat Eserleri 
+Kanunu (FSEK m. 1/B, m. 11), 6769 sayılı Sınai Mülkiyet Kanunu, Türk Ceza Kanunu (TCK m. 243-245) 
+ve Bern Sözleşmesi (181 Ülke) kapsamında uluslararası düzeyde korunmaktadır.
+Yazılımın tek ve münhasır Eser Sahibi ve Sistem Mimarı Murat Furkan Bayram'dır.
+
+2. YASAKLANMIŞ KULLANIMLAR:
+Murat Furkan Bayram ve yetkili yönetim kurulunun önceden verilmiş ıslak veya e-imzalı yazılı 
+izni olmaksızın; bu yazılımın kaynak kodlarının, algoritmalarının, mimari tasarımlarının ve 
+derlenmiş ikili dosyalarının tamamının veya bir kısmının kopyalanması, tersine mühendisliğe 
+tabi tutulması (reverse engineering), kaynak koda dönüştürülmesi (decompilation), üçüncü 
+şahıslara dağıtılması, satılması veya kiralanması KESİNLİKLE YASAKTIR.
+
+3. ÇİFT KULLANIMLI (DUAL-USE) TİCARİ VE SAVUNMA LİSANSLAMA KISITLAMASI:
+Bu yazılım; sivil elektrikli yolcu araçlarında (Hyundai Ioniq 5 Seviye-4 Robotaksi) ve 
+askeri insansız kara araçlarında (İKA) çalışmak üzere çift kullanımlı olarak tasarlanmıştır. 
+Yazılı Ticari Lisans Sözleşmesi akdedilmeksizin doğrudan veya dolaylı olarak otonom araçlarda, 
+simülasyon testlerinde veya üçüncü taraf yapay zeka / büyük dil / görüntü modellerinin 
+eğitilmesinde (AI training data) kullanılamaz.
+
+4. HUKUKİ VE CEZAİ YAPTIRIMLAR:
+İzinsiz kullanım durumunda FSEK m. 68-70 uyarınca üç katı tazminat, haksız kazancın iadesi 
+ve TCK kapsamında hapis cezası istemiyle yetkili mahkemelerde derhal dava açılacaktır.
+
+İletişim & Lisanslama: kariyer@trustia.com.tr | iletisim@trustia.com.tr
+Web Sitesi: https://trustia.com.tr | Tel: +90 537 064 0460
+Tescil ve Revizyon Tarihi: 13 Eylül 2026

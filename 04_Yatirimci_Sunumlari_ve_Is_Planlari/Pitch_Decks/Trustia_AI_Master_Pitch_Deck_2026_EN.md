@@ -1,19 +1,20 @@
 # TRUSTIA AI
-## MASTER INVESTOR PITCH DECK (2026)
+## MASTER INVESTOR PITCH DECK (SEPTEMBER 2026)
 
-**Company:** Trustia AI (Dual-Use Autonomy Platform)  
-**HQ:** Istanbul, TR  
-**Domain:** `trustia.com.tr`  
-**Contact:** Murat Furkan Bayram, Founder & CEO (`kariyer@trustia.com.tr`)
+**Company:** Trustia AI Technologies (Dual-Use Autonomy Platform)  
+**HQ:** Istanbul Chamber of Commerce (İTO) BTM Fulya Deep-Tech Campus, Şişli / Istanbul, TR  
+**Global Profile:** crunchbase.com/organization/trustia-ai (Heat Score: 85, CB Rank: 534k)  
+**Website:** https://trustia.com.tr  
+**Contact:** Murat Furkan Bayram, Founder & Lead Systems Architect (kariyer@trustia.com.tr | +90 537 064 0460)
 
 ---
 
 ## SLIDE 1: TITLE & HOOK
-### "The Operating System for Military-Grade Autonomous Robotics in GPS-Denied Environments"
+### "The Deterministic Operating System for SAE Level-4 Autonomous Mobility in GNSS-Denied Environments"
 
-* **Tagline:** Hardware-Agnostic, Zero-External-Dependency Autonomy & AI Threat Detection Core for Unmanned Ground Vehicles (UGVs).
-* **Corporate Entity:** Trustia AI (Defense Technologies & Dual-Use Autonomy).
-* **Founding Team:** Murat Furkan Bayram (Founder & CEO).
+* **Tagline:** Modular, deterministic Level-4 autonomous retrofit kits for commercial electric vehicle fleets and tactical defense platforms at 70% lower capital cost than bespoke robotaxis.
+* **Corporate Entity:** Trustia AI Technologies (Dual-Use Autonomous Mobility & Defense Systems).
+* **Founding Team:** Murat Furkan Bayram (Founder & Lead Systems Architect, 80% Equity), Dogukan Bayram (Co-Founder & Operations, 20% Equity).
 
 ---
 
@@ -90,24 +91,39 @@
 
 ---
 
-## SLIDE 9: TRACTION & PROVEN MILESTONES
-### "De-risked Technology with Institutional Backing"
+## SLIDE 9: VERIFIED TRACTION & INSTITUTIONAL MILESTONES (SEPTEMBER 2026)
+### "Rapidly De-risked Across Defense, Global Capital & Commercial Pipelines"
 
-* **Software Maturity:** Complete 9-system architecture with 1,301 passing unit/integration tests and zero-failure 50-mission simulation campaign.
-* **Live Web & Brand Presence:** Full digital platform live at `trustia.com.tr` with institutional documentation and export compliance.
-* **Governance & R&D:** Incubation backing with BTM Istanbul, candidate Teknopark Istanbul, and accredited deep-tech setup.
-* **Accreditations:** KOSGEB Advanced Entrepreneurship Certified, BTK Academy Defense Industry certified founder background.
+* **Crunchbase Institutional Verification:** Officially verified organization (crunchbase.com/organization/trustia-ai) with Heat Score 85, CB Rank 534k, and active $500k Pre-Seed round.
+* **Z Fellows (Silicon Valley):** Selected for live partner interview with Grace Kasten (Partner at Pace Capital) on September 17, 2026 ($10k equity-free grant & San Francisco residency).
+* **Defense Industry Supplier Status:** Official supplier registration and evaluation active at **BOTH** Turkish defense giants:
+  * **ASELSAN:** Supplier Portal Entry (0050569CCE941FD1A49FCEFB9B7BE7D6) across Software Development, Platform Integration, and Land Systems Integration.
+  * **BAYKAR Teknoloji:** Official Supplier Application submitted for tactical autonomy and GPS-denied SLAM integration.
+* **Trade Diplomacy & State Accreditation:**
+  * **DEIK (Foreign Economic Relations Board / Turkish Ministry of Trade):** Official Digital Technologies Business Council inquiry.
+  * **European Commission (EU PIC Registration):** Trustia officially registered in the EU Participant Register with PIC Number `861711529`, enabling direct access to Horizon Europe and EIT funding programs.
+  * **EIT Urban Mobility (European Institute of Innovation & Technology):** Official Partner ID `CUS15554` assigned. €100,000 grant application submitted (Application ID: `3.1.02-1206-3732.3`) under the 'Financial Support for Entrepreneurs 26-28' call.
+  * **QSTP (Qatar Science & Technology Park — Qatar Foundation, Doha):** Two separate applications submitted — $30M Tech Venture Fund (9-page form) and official Incubation & Doha Sprint Program (8-page form, 4-week Doha residency with office, hotel, and Qatar company registration support).
+  * **ITO BTM (Istanbul Chamber of Commerce):** Contracted Resident Startup at Fulya Deep-Tech Campus.
+  * **TUBITAK ARBİS:** Registered National Researcher (TBTK-0229-6571).
+  * **KOSGEB:** Advanced Entrepreneurship Certified (KSB01UGE0115153370).
+* **Global Deployment Pipeline:**
+  * **85+ Total Applications & Registrations** submitted across 15+ countries including Turkey, USA, UK, EU, Qatar, UAE, Saudi Arabia, Germany, and South Korea.
+  * **QSTP Doha Sprint:** 4-week in-person Doha residency with Qatar company incorporation support.
+  * **Dubai World Challenge for Self-Driving Transport (RTA):** Official applicant for the $1,200,000 Level-4 Robotaxi Prize.
+  * **NEOM Autonomous Mobility (Saudi Arabia):** Official strategic investment and extreme-climate autonomous PoC application submitted.
 
 ---
 
 ## SLIDE 10: THE ASK & USE OF FUNDS
 ### "Raising $500,000 Pre-Seed Round (SAFE at $5M Post-Money Cap, 20% Discount)"
 
-* **45% ($225,000) — Physical Hardware & Sensor Fleet:** Full conversion of initial 2 Hyundai Ioniq 5 proving ground test vehicles and 27-part Level-4 sensor inventories.
-* **35% ($175,000) — Core Engineering Talent:** Embedded systems, 3D LiDAR SLAM, ROS 2, and test technician payroll (18-month operational runway).
-* **15% ($75,000) — Proving Grounds & Field Track Operations:** Bilişim Vadisi track leasing, closed-course trials, and Dubai RTA World Challenge field logistics.
-* **5% ($25,000) — IP & ISO 26262 ASIL-D Validation:** International PCT patent filings and automotive functional safety audits.
+* **40% ($200,000) — Physical Hardware & Sensor Fleet:** Full conversion of 2 Hyundai Ioniq 5 proving ground test vehicles and 27-part Level-4 sensor inventories.
+* **30% ($150,000) — Core Engineering Talent:** Embedded systems, 3D LiDAR SLAM, and ROS 2 engineers (18-month operational runway).
+* **20% ($100,000) — Proving Grounds & Field Track Operations:** Bilişim Vadisi track leasing, closed-course trials, **QSTP regional HQ setup in Doha**, and **EIT Urban Mobility co-funded proving ground expansion**.
+* **10% ($50,000) — IP & ISO 26262 ASIL-D Validation:** International PCT patent filings and automotive functional safety audits.
 
 **Join us in building the sovereign autonomous foundation of modern mobility.**  
-*Trustia AI — İTO BTM Fulya Campus, Şişli / Istanbul, TR*  
-Contact: `iletisim@trustia.com.tr` | `kariyer@trustia.com.tr` | `https://trustia.com.tr`
+*Trustia AI Technologies — ITO BTM Fulya Campus, Sisli / Istanbul, TR*  
+Website: https://trustia.com.tr | LinkedIn: https://www.linkedin.com/in/trustia  
+Contact: kariyer@trustia.com.tr | +90 537 064 0460

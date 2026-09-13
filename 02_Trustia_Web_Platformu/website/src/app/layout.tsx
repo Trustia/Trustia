@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. (İstanbul, Türkiye).",
+    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (Partner: CUS15554), İTO BTM Fulya ve ASELSAN tedarikçi tescilli. (İstanbul, Türkiye).",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
@@ -44,6 +44,15 @@ export const metadata: Metadata = {
     "KOSGEB İleri Girişimci",
     "Murat Furkan Bayram",
     "İstanbul",
+    "Avrupa Komisyonu PIC 861711529",
+    "EIT Urban Mobility CUS15554",
+    "QSTP Doha Sprint",
+    "BAYKAR Teknoloji",
+    "ASELSAN Tedarikçi",
+    "DEİK Dijital Teknolojiler",
+    "Z Fellows",
+    "fonbulucu W1MV5K",
+    "Crunchbase Trustia AI",
   ],
   authors: [
     { name: "Trustia AI", url: "https://trustia.com.tr" },
@@ -72,7 +81,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu",
     description:
-      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM, 5 Saniyelik Yörünge Yapay Zekası ve 1.301 Doğrulanmış Test. İTO BTM & SSB Akreditasyonlu.",
+      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM, 5 Saniyelik Yörünge Yapay Zekası ve 1.301 Doğrulanmış Test. AB PIC: 861711529, EIT Partner: CUS15554, İTO BTM & ASELSAN Akreditasyonlu.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -92,7 +101,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core",
     description:
-      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests.",
+      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests. EU PIC: 861711529.",
     images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
@@ -120,7 +129,7 @@ export default function RootLayout({
         "@type": "Organization",
         "@id": "https://trustia.com.tr/#organization",
         "name": "Trustia AI",
-        "alternateName": ["TRUSTIA AI", "Trustia Teknoloji", "Trustia Autonomous Systems"],
+        "alternateName": ["TRUSTIA AI", "Trustia Teknoloji", "Trustia Autonomous Systems", "Trustia Teknoloji A.Ş."],
         "url": "https://trustia.com.tr",
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
@@ -130,29 +139,61 @@ export default function RootLayout({
           "@type": "Person",
           "name": "Murat Furkan Bayram",
           "jobTitle": "Kurucu & Sistem Mimarı / Founder & Autonomous Systems Architect",
-          "sameAs": "https://www.linkedin.com/in/trustia"
+          "sameAs": [
+            "https://www.linkedin.com/in/trustia"
+          ]
         },
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Fulya Mah. Yeşilçimen Sok. İTO BTM Kampüsü, Şişli / İstanbul",
           "addressLocality": "Şişli",
           "addressRegion": "İstanbul",
+          "postalCode": "34394",
           "addressCountry": "TR"
         },
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "iletisim@trustia.com.tr",
+          "email": "kariyer@trustia.com.tr",
+          "telephone": "+90-537-064-0460",
           "contactType": "Corporate Inquiries & Partnerships",
           "availableLanguage": ["Turkish", "English"]
         },
         "sameAs": [
           "https://github.com/Trustia/Trustia",
           "https://trustia.com.tr",
-          "https://www.linkedin.com/in/trustia"
+          "https://www.linkedin.com/in/trustia",
+          "https://www.crunchbase.com/organization/trustia-ai"
+        ],
+        "identifier": [
+          {
+            "@type": "PropertyValue",
+            "name": "European Commission PIC Number",
+            "value": "861711529"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "EIT Urban Mobility Partner ID",
+            "value": "CUS15554"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "ASELSAN Supplier Application ID",
+            "value": "0050569CCE941FD1A49FCEFB9B7BE7D6"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "SPK fonbulucu Campaign Code",
+            "value": "W1MV5K"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "SSB SAYZEK Simulation ID",
+            "value": "170"
+          }
         ],
         "knowsAbout": [
           "Level 4 Autonomous Driving",
-          "Robotaxi",
+          "Robotaxi Fleet Management",
           "V2X / C-V2X Communication",
           "3D LiDAR SLAM",
           "GPS-Denied Navigation",
@@ -160,8 +201,10 @@ export default function RootLayout({
           "STANAG 4586 Level 4",
           "SAE AS6091 JAUS",
           "ROS 2 Humble",
-          "CAN FD",
-          "Unmanned Ground Vehicles (UGV)"
+          "CAN-FD Integration",
+          "Hyundai Ioniq 5 E-GMP Platform",
+          "Unmanned Ground Vehicles (UGV)",
+          "1301 Automated Unit Tests"
         ]
       },
       {
@@ -170,8 +213,8 @@ export default function RootLayout({
         "name": "TRUSTIA AI Autonomous Core Stack",
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
-        "description": "Seviye 4 yerli otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği.",
-        "softwareVersion": "2.1.0",
+        "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.000+ satır C++/Python, 1.301 doğrulanmış test.",
+        "softwareVersion": "2.4.0",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -183,8 +226,8 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://trustia.com.tr/#website",
         "url": "https://trustia.com.tr",
-        "name": "Trustia AI",
-        "description": "Seviye 4 Yerli Robotaksi ve Askeri İKA Otonomi Platformu",
+        "name": "TRUSTIA AI",
+        "description": "Milli Seviye 4 Yerli Robotaksi ve Askeri İKA Otonomi Platformu",
         "publisher": {
           "@id": "https://trustia.com.tr/#organization"
         },

@@ -242,9 +242,9 @@ class Campaign:
         success_rate = (summary.successful / summary.total_runs * 100.0
                         if summary.total_runs else 0.0)
         lines = [
-            "# TRUSTIA SİMÜLASYON RAPORU (AŞAMA 2)",
+            "# TRUSTIA v2.4 SİMÜLASYON VE PİST DOĞRULAMA RAPORU",
             "",
-            f"- **Proje sürümü:** 0.2.0",
+            f"- **Proje sürümü:** 2.4.0",
             f"- **Tarih:** {datetime.date.today().isoformat()}",
             f"- **Ortam:** {sys.platform}, Python {sys.version.split()[0]}",
             f"- **Görev koşusu sayısı:** {summary.total_runs}",

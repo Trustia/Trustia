@@ -7,7 +7,8 @@
 > **Kurucu Ortak:** Doğukan Bayram (%20 Hisse, Reşit Temsilci)  
 > **Donanım Lideri:** Denizcan Özcan (İÜC EEE 3.44 GPA, ASELSAN Aday Mühendis Havuzu, TEKNOFEST Robotaksi Finalisti)  
 > **Resmi Konum:** İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Kampüsü, Şişli / Beşiktaş, İstanbul  
-> **Resmi Tesciller:** KOSGEB İleri Girişimci (`KSB01UGE0115153370`) • TÜBİTAK ARBİS (`TBTK-0229-6571`) • BTK Akademi (`L2zPtN4X1ZJ`)  
+> **Resmi Tesciller:** KOSGEB İleri Girişimci (`KSB01UGE0115153370`) • TÜBİTAK ARBİS (`TBTK-0229-6571`) • BTK Akademi (`L2zPtN4X1ZJ`) • Avrupa Komisyonu PIC: `861711529` • EIT Urban Mobility Partner ID: `CUS15554`  
+> **Kurumsal Başvurular (85+ Toplam):** BAYKAR Tedarikçi Ağı, DEİK Dijital Teknolojiler İş Konseyi, QSTP 30M$ Fon, Doha Sprint Kuluçka.  
 
 ---
 
@@ -103,7 +104,7 @@ Trustia AI; enerjisini askeri ihaleler, tarım arazileri veya bürokratik lisans
 * **Şirket Ön Değerlemesi:** **150.000.000 TL** (~4.000.000 $)
 * **Yatırımcılara Arz Edilen Pay:** **%8.5 — %10.0**
 * **Kurucularda Kalan Pay:** **%90.0 — %91.5** (Şirket kontrolü kurucularda kalır)
-* **Platform:** fonbulucu.com (SPK Lisanslı Paya Dayalı Kitle Fonlama)
+* **Platform:** fonbulucu.com (Kampanya Kodu: W1MV5K - SPK Lisanslı Paya Dayalı Kitle Fonlama)
 
 ### 6.2. Kuruşu Kuruşuna Fon Kullanım Raporu (Use of Funds - 15.000.000 TL)
 

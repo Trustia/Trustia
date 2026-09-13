@@ -1,9 +1,9 @@
-# 🛡️ TRUSTIA — ASELSAN & SSB EYDEP Tedarikçi ve Yerlileştirme Başvuru Paketi
+# 🛡️ TRUSTIA — BAYKAR, ASELSAN & SSB EYDEP Tedarikçi ve Yerlileştirme Başvuru Paketi
 
-**Belge Kodu:** `TRST-SUPP-2026-V2`  
-**Başvuru Tipi:** ASELSAN "Gücümüz Bir" Tedarikçi & Yerlileştirme Programı / SSB EYDEP A Sınıfı Yazılım Tedarikçi Başvurusu  
-**Başvuru Kodu (ASELSAN Portal):** `0050569CCE941FD1A49FCEFB9B7BE7D6`  
-**Tarih:** 5 Eylül 2026  
+**Belge Kodu:** `TRST-SUPP-2026-V2.4`  
+**Başvuru Tipi:** BAYKAR Tedarikçi / ASELSAN "Gücümüz Bir" & Yerlileştirme / SSB EYDEP A Sınıfı Yazılım Tedarikçi Başvurusu  
+**Başvuru Kodları:** ASELSAN: `0050569CCE941FD1A49FCEFB9B7BE7D6` • AB PIC: `861711529` • EIT: `CUS15554`  
+**Tarih:** 13 Eylül 2026  
 **Gizlilik Derecesi:** HİZMETE ÖZEL / TİCARİ GİZLİ  
 
 ---
@@ -12,13 +12,18 @@
 
 | Metrik / Kayıt | Tanım / Kod | Durum |
 |---|---|---|
-| **Ürün/Platform Adı** | TRUSTIA — Milli Otonomi Platformu (v2.0 Askeri Sınıf) | Tamamlandı (Üretime Hazır) |
-| **KOSGEB İleri Girişimcilik Sertifikası** | `KSB01UGE0115153370` (Tarih: 06.08.2026) | %100 Resmi Onaylı |
+| **Ürün/Platform Adı** | TRUSTIA — Milli Otonomi Platformu (v2.4 Dual-Use Sivil/Askeri) | Tamamlandı (Üretime Hazır) |
+| **Avrupa Komisyonu PIC** | Katılımcı Kimlik No: `861711529` | Tescilli & Aktif (13 Eylül 2026) |
+| **EIT Urban Mobility** | Partner ID: `CUS15554` (100k€ Hibe: `3.1.02-1206-3732.3`) | Onaylı İş Ortağı |
+| **BAYKAR Teknoloji** | Resmi Tedarikçi / Alt Yüklenici Başvuru Masası | Onaylandı (13 Eylül 2026) |
+| **DEİK İş Konseyi** | Dijital Teknolojiler İş Konseyi Ön Bilgi Formu | Onaylandı (13 Eylül 2026) |
+| **ASELSAN Portal Başvuru Kodu** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | Ön Değerlendirmede |
+| **KOSGEB İleri Girişimcilik** | `KSB01UGE0115153370` | %100 Resmi Onaylı |
 | **BTK Akademi Savunma Sanayii** | Sertifika No: `L2zPtN4X1ZJ` | Katılım Sertifikası |
 | **TÜBİTAK ARBİS Kaydı** | Araştırmacı Kimlik No: `TBTK-0229-6571` | Kayıtlı & Doğrulanmış |
-| **ASELSAN Portal Başvuru Kodu** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | İşlemde / Dosya Eki Hazır |
-| **UK Dept for Business & Trade (GEP)** | UK Innovator Founder Visa Portfolio | Hazır |
-| **Estonia Startup Visa / EU Residency** | Başvuru Kodu: `UKOR-OKJT-5597` | Kayıtlı |
+| **İTO BTM Ön Kuluçka** | Fulya Derin Teknoloji Kampüsü Yerleşkesi | 2026-II. Dönem Sözleşmeli |
+| **fonbulucu (SPK)** | 15M TL Kitle Fonlama Kampanya Kodu: `W1MV5K` | Ön İncelemede |
+
 
 ---
 

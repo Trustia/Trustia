@@ -45,7 +45,7 @@ class ReportSection:
 class TestReportGenerator:
     """Rapor üretme iş akışı."""
 
-    def __init__(self, project_version: str = "0.1.0") -> None:
+    def __init__(self, project_version: str = "2.4.0") -> None:
         self._version = project_version
 
     def run_pytest(self, paths: List[str]) -> Tuple[int, str]:

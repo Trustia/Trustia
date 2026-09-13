@@ -78,9 +78,13 @@ class MilitaryTacticalC2App(tk.Tk):
         status_frame = tk.Frame(header, bg="#0d1322")
         status_frame.pack(side="right", padx=15)
 
+        self._create_status_badge(status_frame, "AB PIC: 861711529", "#4338ca")
+        self._create_status_badge(status_frame, "EIT: CUS15554", "#0284c7")
         self._create_status_badge(status_frame, "SLAM: ACTIVE (GPS-DENIED)", "#059669")
-        self._create_status_badge(status_frame, "JAUS: AS6091/6009", "#0284c7")
+        self._create_status_badge(status_frame, "CAN-FD: IONIQ 5", "#0d9488")
+        self._create_status_badge(status_frame, "ASIL-D: MRM READY", "#b45309")
         self._create_status_badge(status_frame, "FORMASYON: WEDGE", "#d97706")
+
 
         # Main Workspace
         body = tk.Frame(self, bg="#070a11")

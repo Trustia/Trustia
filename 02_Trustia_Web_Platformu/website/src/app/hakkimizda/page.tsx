@@ -62,16 +62,82 @@ export default function AboutPage() {
 
   const credentials = [
     {
-      org: lang === "tr" ? "BTK Akademi" : "BTK Academy",
-      reg: "L2zPtN4X1ZJ",
-      type: lang === "tr" ? "Türk Savunma Sanayii Ürün ve Platformları Eğitimi" : "Defense Industry Platforms Training",
-      status: "Resmi Onaylı"
+      org: lang === "tr" ? "Avrupa Komisyonu (European Commission)" : "European Commission",
+      reg: "PIC: 861711529",
+      type: lang === "tr" ? "Resmi Katılımcı Kayıt Defteri Tescili" : "Official Participant Register Identification",
+      status: "Onaylandı"
     },
     {
-      org: lang === "tr" ? "Startups.watch Girişimcilik Platformu" : "Startups.watch Ecosystem",
-      reg: "Resmi Doğrulandı",
-      type: lang === "tr" ? "Resmi Doğrulanmış Girişim Listesi" : "Verified Deep-Tech Venture",
+      org: lang === "tr" ? "EIT Urban Mobility (Avrupa İnovasyon ve Teknoloji Enstitüsü)" : "EIT Urban Mobility (EU)",
+      reg: "Partner ID: CUS15554",
+      type: lang === "tr" ? "Resmi İş Ortaklığı & 100k€ Hibe Çağrısı 26-28 (#3.1.02-1206-3732.3)" : "Official Partner & €100k Grant Application",
+      status: "Canlıda"
+    },
+    {
+      org: lang === "tr" ? "Katar Bilim ve Teknoloji Parkı (QSTP Doha)" : "Qatar Science & Technology Park (QSTP)",
+      reg: "30M$ Fon + Sprint",
+      type: lang === "tr" ? "30M$ Tech Venture Fon & 4 Hafta Doha Sprint Kuluçkası" : "$30M Tech Venture Fund & 4-Week Doha Sprint",
+      status: "Alındı"
+    },
+    {
+      org: lang === "tr" ? "BAYKAR Teknoloji (Baykar Tech)" : "BAYKAR Defense Technologies",
+      reg: "Tedarikçi Portalı",
+      type: lang === "tr" ? "Resmi Alt Yüklenici & Seviye-4 Taktik İKA Otonomi Başvurusu" : "Official Subcontractor & Tactical Autonomy Application",
+      status: "Kayıt Alındı"
+    },
+    {
+      org: lang === "tr" ? "DEİK (Dış Ekonomik İlişkiler Kurulu)" : "Foreign Economic Relations Board (DEİK)",
+      reg: "İş Konseyi Formu",
+      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Ticari Diplomasi ve Küresel İhracat" : "Digital Technologies Business Council",
+      status: "Onaylandı"
+    },
+    {
+      org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
+      reg: "0050569CCE941FD1A49FCEFB9B7BE7D6",
+      type: lang === "tr" ? "Yazılım, Sistem ve Kara Platform Entegrasyonu Tedarikçi Değerlendirmesi" : "Software, Systems & Land Platform Integration",
+      status: "Ön Değerlendirmede"
+    },
+    {
+      org: lang === "tr" ? "SSB SAYZEK (Savunma Sanayii Başkanlığı)" : "Defense Industry Agency (SAYZEK AI)",
+      reg: "Başvuru #170",
+      type: lang === "tr" ? "Simport Otonomi Simülasyonu ve Süper Bilgisayar Kaynak Tahsisi" : "Simport Simulation & Supercomputing Access",
+      status: "Onay Bekliyor"
+    },
+    {
+      org: lang === "tr" ? "Z Fellows (San Francisco, ABD)" : "Z Fellows (San Francisco, US)",
+      reg: "$10,000 Equity-Free",
+      type: lang === "tr" ? "Grace Kasten (Pace Capital) ile Canlı Zoom Mülakatı Aşamasında" : "Live Zoom Interview Stage (Grace Kasten, Pace Capital)",
+      status: "17 Eylül"
+    },
+    {
+      org: lang === "tr" ? "SPK Paya Dayalı Kitle Fonlama (fonbulucu)" : "Capital Markets Board Crowdfunding",
+      reg: "Kampanya: W1MV5K",
+      type: lang === "tr" ? "15.000.000 TL Hedef (150M TL Val.) • Seviye-4 Robotaksi Filosu" : "15M TL Target (150M TL Val.) L4 Fleet Campaign",
+      status: "Ön İncelemede"
+    },
+    {
+      org: lang === "tr" ? "Crunchbase Küresel Girişim Dizini" : "Crunchbase Global Directory",
+      reg: "Isı Puanı: 85 (CB: 534k)",
+      type: lang === "tr" ? "Resmi Doğrulanmış Kurumsal Profil & $500k Pre-Seed Turu" : "Verified Corporate Profile & $500k Pre-Seed Round",
       status: "Doğrulandı"
+    },
+    {
+      org: lang === "tr" ? "Dubai World Challenge (RTA Dubai)" : "Dubai World Challenge for Self-Driving",
+      reg: "Global Challenge",
+      type: lang === "tr" ? "$1.200.000 Nakit Ödüllü Global Seviye-4 Robotaksi Yarışması" : "$1.2M Global Level 4 Robotaxi Competition",
+      status: "İncelemede"
+    },
+    {
+      org: lang === "tr" ? "NEOM Autonomous Mobility (Suudi Arabistan)" : "NEOM Autonomous Mobility (Saudi Arabia)",
+      reg: "Mega City PoC",
+      type: lang === "tr" ? "500 Milyar $ Mega Şehir Otonomi PoC & Stratejik SAFE Başvurusu" : "$500B Mega City L4 Fleet PoC Application",
+      status: "Alındı"
+    },
+    {
+      org: lang === "tr" ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM)" : "Istanbul Chamber of Commerce (BTM)",
+      reg: "2026-II Sözleşme",
+      type: lang === "tr" ? "Fulya Kampüsü Sözleşmeli Ön Kuluçka Girişimi" : "Fulya Campus Contracted Pre-Incubation",
+      status: "Yerleşik"
     },
     {
       org: lang === "tr" ? "KOSGEB Başkanlığı" : "KOSGEB Entrepreneurship Agency",
@@ -86,16 +152,10 @@ export default function AboutPage() {
       status: "Aktif Sicil"
     },
     {
-      org: lang === "tr" ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM)" : "Istanbul Chamber of Commerce (BTM)",
-      reg: "2026-II Sözleşme",
-      type: lang === "tr" ? "Fulya Kampüsü Sözleşmeli Ön Kuluçka Girişimi" : "Fulya Campus Contracted Pre-Incubation",
-      status: "Yerleşik"
-    },
-    {
-      org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
-      reg: "0050569CCE941FD1A49FCEFB9B7BE7D6",
-      type: lang === "tr" ? "Yazılım, Sistem ve Kara Platform Entegrasyonu" : "Software, Systems & Land Platform Integration",
-      status: "Ön Değerlendirmede"
+      org: lang === "tr" ? "BTK Akademi" : "BTK Academy",
+      reg: "L2zPtN4X1ZJ",
+      type: lang === "tr" ? "Türk Savunma Sanayii Ürün ve Platformları Eğitimi" : "Defense Industry Platforms Training",
+      status: "Resmi Onaylı"
     }
   ];
 

@@ -117,7 +117,13 @@ Türkiye'de otonom araç testleri için yürütülen yasal süreç:
 3. **İTO BTM ve Bilişim Vadisi Destek Mektubu:**
    * BTM Ön Kuluçka sözleşmemiz ve Bilişim Vadisi altyapısı sayesinde izin onayları çok hızlı çıkar.
 
+### 7.1 Küresel ve Ulusal Resmî Tesciller (85+ Toplam Başvuru/Tescil)
+* **AB Komisyonu PIC:** 861711529
+* **EIT Urban Mobility Partner ID:** CUS15554
+* **BAYKAR Tedarikçi Başvurusu:** Onaylandı (13 Eylül 2026)
+* **ASELSAN Tedarikçi Portalı:** 0050569CCE941FD1A49FCEFB9B7BE7D6
+
 ---
 
-*Tarih:* 5 Eylül 2026  
+*Tarih:* Eylül 2026  
 *Kurum:* TRUSTIA AI — Seviye 4 Otonom Sistemler  
