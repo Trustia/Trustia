@@ -7,12 +7,11 @@
 
 ---
 
-## 🚨 1. EN TEMEL VE ZORUNLU ALTIN KURAL: ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY (INSTANT GLOBAL UPDATE & DEPLOY)
+## 🚨 EN TEMEL VE ZORUNLU 5 ALTIN KURAL (THE 5 SUPREME DIRECTIVES)
 
+### 1. KURAL: ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY (INSTANT GLOBAL UPDATE & DEPLOY)
 > [!CRITICAL]
-> **1. KURAL (EN BAŞTA GELEN VE TARTIŞMASIZ ZORUNLULUK):**
 > Projede yeni bir gelişme olduğu, yeni bir başvuru/tescil/kod/özellik yapıldığı veya herhangi bir bilgi güncellendiği anda; **O ŞEY ANINDA VE İSTİSNASIZ BÜTÜN HER YERDEN GÜNCELLENECEK VE DERHAL GITHUB'A PUSH EDİLİP CANLIYA (`trustia.com.tr`) DEPLOY EDİLECEKTİR.**
-> 
 > * **Neler Anında Güncellenmek Zorundadır?**
 >   1. **Canlı Web Platformu:** Ana sayfa, Hakkımızda, Robotaxi, İletişim, Footer, Navbar ve ilgili tüm bileşenler.
 >   2. **SEO & Arama Motoru Verileri:** Sayfa meta etiketleri, OpenGraph, Twitter Cards, Schema.org JSON-LD kurumsal grafiği.
@@ -20,6 +19,29 @@
 >   4. **Master Dokümantasyon:** `README.md`, `AGENTS.md`, `GEMINI.md` ve `.agents/rules/` kuralları.
 >   5. **Yatırımcı ve Hibe Dosyaları:** Kategori 04'teki ilgili pitch deck ve modeller, Kategori 05'teki Master Takip Kütüğü (`.md` & `.pdf`).
 > * **Kesin Şart:** Değişiklik yapılıp yerel bilgisayarda ASLA bekletilemez; anında `git add -A`, kurumsal commit ve `git push origin main` yapılarak GitHub Actions üzerinden `trustia.com.tr` canlı ortamına ve Google indeksine fırlatılacaktır!
+
+### 2. KURAL: ÇİFT DİLLİ KÜRESEL EŞİTLİK (BILINGUAL TR/EN PARITY)
+> [!CRITICAL]
+> Web sitesine veya dokümantasyona yeni bir özellik, başvuru veya metin eklendiğinde **hem Türkçe hem de İngilizce versiyonu eşzamanlı ve eksiksiz üretilmek zorundadır.**
+> * Silikon Vadisi (Z Fellows), Avrupa Birliği (EIT Urban Mobility) ve Katar (QSTP) İngilizce dokümanları; ASELSAN, BAYKAR ve KOSGEB Türkçe dokümanları inceler.
+> * İki dil arasında asla bilgi kopukluğu veya gecikme olamaz; web sitesindeki dil değiştirici (`TR`/`EN`) her sayfada tam kurumsal karşılığı sunmalıdır.
+
+### 3. KURAL: MD & PDF OTOMATİK İKİZLEME VE SENKRONİZASYON (MARKDOWN & PDF TWIN SYNCHRONIZATION)
+> [!CRITICAL]
+> Kategori 04 ve 05'teki herhangi bir `.md` (Markdown) sunumu, iş planı, teknik şartname veya takip kütüğü güncellendiğinde; **onun resmi kurumsal PDF versiyonu da derhal güncellenmek zorundadır.**
+> * Bir yatırımcıya, jüriye veya devlet kurumuna sunulacak resmi PDF dosyasının Markdown'daki en son bilgilerden geri kalması kesinlikle yasaktır.
+> * Web sitesinden indirilen PDF'ler (`public/*.pdf`) ile Kategori 04/05'teki PDF'ler daima %100 senkronize tutulacaktır.
+
+### 4. KURAL: SADECE KANITLI VE TESCİLLİ BİLGİ İLKESİ (PROOF-ONLY & VERIFIED FACTS)
+> [!CRITICAL]
+> Proje dosyalarına, web sitesine, sunumlara veya teknik belgelere **asla tahmini, uydurma veya doğrulanmamış bilgi yazılamaz.**
+> * Yazılan her kurumsal bilginin arkasında doğrulanmış resmi bir numara (Örn: ASELSAN `#0050569`, AB PIC `#861711529`, EIT Partner `#CUS15554`, EIT Hibe `#3.1.02-1206-3732.3`, fonbulucu `#W1MV5K`, SSB SAYZEK `#170`, BTK `#L2zPtN4X1ZJ`, KOSGEB `#KSB01UGE0115153370`) veya somut bir test kanıtı (1.301 test, 16.000 satır deterministik kod) olmak zorundadır.
+
+### 5. KURAL: DAĞINIK VE KOPYA İSİMLENDİRME YASAĞI (CLEAN SLATE & PROFESSIONAL NAMING)
+> [!CRITICAL]
+> Klasörlerde `sunum_yeni.pdf`, `kopya_kopya.md`, `final_son_gercek.pdf`, `test2.png` gibi gayriciddi, dağınık veya çift isimli dosyalar **oluşturulamaz ve barındırılamaz.**
+> * Her belgenin ve varlığın tek bir resmi "Master" adı olur; güncellemeler doğrudan o ana dosyanın üzerine yapılır ve versiyonlama Git geçmişine bırakılır.
+> * Masaüstünde veya klasör içlerinde geçici deneme dosyası bırakılamaz.
 
 ---
 
@@ -67,11 +89,15 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 
 ## ⛔ KESİN YASAKLAR VE ZORUNLULUKLAR
 1. 🚨 **1. ZORUNLU KURAL (ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY):** Projede herhangi bir şey yapıldığı/oluştuğu anda o bilgi A'dan Z'ye BÜTÜN dosyalardan, web sitesinden, SEO'dan, dokümanlardan güncellenmek ve BEKLEMEDEN GitHub'a push edilip canlıya deploy edilmek ZORUNDADIR. Hiçbir güncelleme yerelde asılı bırakılamaz.
-2. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
-3. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
-4. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
-5. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
-6. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
+2. 🚨 **2. ZORUNLU KURAL (ÇİFT DİLLİ EŞİTLİK):** Web ve dokümantasyon daima TR ve EN olarak eşzamanlı güncellenir.
+3. 🚨 **3. ZORUNLU KURAL (MD & PDF İKİZLEME):** Güncellenen her Markdown dokümanının PDF çıktısı anında güncellenir.
+4. 🚨 **4. ZORUNLU KURAL (KANITLI BİLGİ):** Resmi tescil veya test kanıtı olmayan hiçbir veri dosyalara yazılamaz.
+5. 🚨 **5. ZORUNLU KURAL (TEMİZ İSİMLENDİRME):** "kopya", "yeni", "final_son" gibi dosya isimleri yasaktır; sadece tekil Master isim kullanılır.
+6. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
+7. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
+8. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
+9. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
+10. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
 
 ---
 

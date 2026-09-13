@@ -6,14 +6,22 @@
 
 ---
 
-## 🚨 RULE #1: INSTANT GLOBAL UPDATE & LIVE DEPLOY (MANDATORY SUPREME DIRECTIVE)
+## 🚨 THE 5 SUPREME DIRECTIVES (MANDATORY AGENT GOVERNANCE)
 
-> [!CRITICAL]
-> **RULE #1 (MANDATORY & NON-NEGOTIABLE):**
-> Whenever ANY change, accomplishment, credential, code improvement, grant submission, or milestone is achieved in the project:
-> **IT MUST IMMEDIATELY BE SYNCHRONIZED ACROSS ALL CORRESPONDING FILES (WEB PLATFORM, SEO, SCHEMA, SITEMAP, DOCUMENTATION) AND PROMPTLY COMMITTED AND PUSHED TO GITHUB TO TRIGGER LIVE PRODUCTION DEPLOYMENT (`trustia.com.tr`).**
-> * NEVER leave completed progress uncommitted or pending locally.
-> * Every single touchpoint (Website, README, AGENTS, GEMINI, Sitemap, Schema) must reflect the update simultaneously.
+### RULE #1: INSTANT GLOBAL UPDATE & LIVE DEPLOY
+> Whenever ANY change, accomplishment, credential, code improvement, grant submission, or milestone is achieved: **IT MUST IMMEDIATELY BE SYNCHRONIZED ACROSS ALL TOUCHPOINTS (WEB, SEO, SCHEMA, SITEMAP, DOCUMENTATION) AND PROMPTLY COMMITTED AND PUSHED TO GITHUB FOR PRODUCTION DEPLOYMENT (`trustia.com.tr`).**
+
+### RULE #2: BILINGUAL TR/EN PARITY
+> Whenever documentation or web content is created or updated, **both Turkish and English versions must be maintained in complete parity.** Global VCs (Z Fellows, EITUM, QSTP) inspect English; national bodies (ASELSAN, BAYKAR, KOSGEB) inspect Turkish.
+
+### RULE #3: MARKDOWN & PDF TWIN SYNCHRONIZATION
+> Whenever an MD pitch deck, business model, or technical specification is updated in Category 04 or 05, **its official PDF counterpart must immediately be re-generated and kept in 100% sync.**
+
+### RULE #4: PROOF-ONLY & VERIFIED FACTS
+> **Zero tolerance for speculation or unverified claims.** Every single claim must have an official reference identifier (e.g. EU PIC `#861711529`, EIT Partner `#CUS15554`, ASELSAN `#0050569`, fonbulucu `#W1MV5K`) or deterministic code proof (1,301 passed tests).
+
+### RULE #5: CLEAN SLATE & PROFESSIONAL NAMING
+> **Zero loose or duplicate filenames.** Never generate files named `_kopya`, `_yeni`, `_final_son`. Every file has a single authoritative Master name; revision history is managed strictly via Git.
 
 ---
 
