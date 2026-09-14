@@ -7,8 +7,11 @@ Başvuru Takip No: 0050569CCE941FD1A49FCEFB9B7BE7D6
 Başvuru Tarihi: 05.08.2026 21:50:04
 Onay Tarihi: 14.09.2026 10:45
 
-DURUM BİLGİLERİ:
-- Faaliyet Alanı: Yazılım Geliştirme
+DURUM VE TESCİLLİ FAALİYET ALANLARI:
+- Tescilli Faaliyet Alanları (Yan Sanayi):
+  1. (Yan Sanayi) Yazılım Geliştirme
+  2. (Yan Sanayi) Sistem Entegrasyon
+  3. (Yan Sanayi) Kara Platformu Entegrasyonu
 - Ön Değerlendirme: OLUMLU SONUÇLANDI
 - Kurul Kararı: Kurul Toplantısı Bekleniyor (FİRMANIN İLGİLİ ALANDA BAŞVURUSU ONAYLANMIŞTIR)
 
