@@ -211,18 +211,18 @@ export default function InstitutionalAccreditations() {
     },
     {
       id: "14",
-      categoryTr: "Singapur Startup SG",
-      categoryEn: "Singapore Startup SG",
-      scopeTr: "EnterpriseSG & Ulusal Ağ",
-      scopeEn: "EnterpriseSG & National Network",
-      badge: "Profil ID: #57428",
-      questionTr: "Singapur Hükümeti Startup SG ve küresel inovasyon ağı kaydı nedir?",
-      questionEn: "What is the Singapore Government Startup SG and global innovation network registration?",
-      answerTr: "Singapur Ticaret ve Sanayi Bakanlığı'na bağlı Enterprise Singapore (EnterpriseSG) resmi inovasyon ağı olan Startup SG platformunda Trustia kurucu profili (Kayıt ID: #57428) %100 oranında tamamlanarak onaylanmıştır. Bu akreditasyon ile Güneydoğu Asya (APAC) derin teknoloji ekosistemine, EntrePass girişimci vizesi programına ve SLINGSHOT 2026 yarışmasına doğrudan erişim hakkı sağlanmıştır.",
-      answerEn: "Trustia's executive founder profile (Profile ID: #57428) is 100% completed and registered on Startup SG, the official deep-tech innovation network under Enterprise Singapore (EnterpriseSG), Ministry of Trade and Industry. This accreditation enables direct access to the APAC autonomous mobility venture ecosystem, the Singapore EntrePass global talent scheme, and the SLINGSHOT 2026 challenge.",
-      authority: "startupsg.gov.sg",
-      recordTypeTr: "Resmi Kurucu Profili • Ulusal Ekosistem",
-      recordTypeEn: "Official Founder Profile • National Ecosystem"
+      categoryTr: "Singapur Startup SG & GIA",
+      categoryEn: "Singapore Startup SG & GIA",
+      scopeTr: "EnterpriseSG & Küresel Ağ",
+      scopeEn: "EnterpriseSG & Global Alliance",
+      badge: "GIA ID: 6aa85fa9",
+      questionTr: "Singapur Hükümeti Startup SG ve GIA küresel hızlandırma başvurusu nedir?",
+      questionEn: "What is the Singapore Government Startup SG and GIA global acceleration application?",
+      answerTr: "Singapur Ticaret ve Sanayi Bakanlığı'na bağlı Enterprise Singapore (EnterpriseSG) resmi inovasyon ağı olan Startup SG platformunda Trustia kurucu profili (Kayıt ID: #57428) %100 oranında tamamlanmıştır. Ayrıca Küresel İnovasyon İttifakı (Global Innovation Alliance - GIA) Hızlandırma Programı'na (Yanıt Kimliği: 6aa85fa93dc42d7feef1bc57) resmi başvuru tamamlanarak Güneydoğu Asya (APAC) ve Silikon Vadisi genişleme ağına dahil olunmuştur.",
+      answerEn: "Trustia's executive founder profile (Profile ID: #57428) is 100% verified on Startup SG under Enterprise Singapore (EnterpriseSG), Ministry of Trade and Industry. Furthermore, a formal application has been accepted into the Global Innovation Alliance (GIA) Acceleration Programme (Response ID: 6aa85fa93dc42d7feef1bc57) to scale Level-4 autonomous driving across APAC and US venture corridors.",
+      authority: "enterprisesg.gov.sg",
+      recordTypeTr: "Resmi Kurucu Profili & GIA Hızlandırma Başvurusu",
+      recordTypeEn: "Official Founder Profile & GIA Acceleration Application"
     }
   ];
 

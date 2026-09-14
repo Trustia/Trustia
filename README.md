@@ -39,7 +39,7 @@
 | 🇺🇸 **Z Fellows (Cory Levy & Grace Kasten)** | San Francisco, CA | **$10,000 Grant + SF Residency** | 🎯 **Live Partner Zoom Interview (17 Sept 2026)** |
 | 🇦🇪 **Dubai World Challenge for Self-Driving Transport** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted (Finalist Phase Nov 2026)** |
 | 🇸🇦 **NEOM Investment Fund & Mobility** | Tabuk, KSA | **Zero-Driver City PoC** | 🇸🇦 **Formally Submitted & Confirmed** |
-| 🇸🇬 **Singapore Government (Startup SG / EnterpriseSG)** | Singapore, SG | **National Deep-Tech Ecosystem & EntrePass** | 🏛️ **Official Founder ID: `#57428` (100% Verified Profile)** |
+| 🇸🇬 **Singapore Government (Startup SG & GIA)** | Singapore, SG | **National Deep-Tech Ecosystem & GIA Alliance** | 🏛️ **Founder ID: `#57428` • GIA App: `6aa85fa9` (Confirmed)** |
 | 🌐 **Crunchbase** | Global | **Verified Corporate Profile** | ⬆️ **Heat Score: 93 • Growth: 91 (CB Rank: 98k)** |
 | 🇹🇷 **SSB / SAYZEK (AI Defense Platform)** | Ankara, TR | **Simport Supercomputing Access** | 🛡️ **Application ID: `170` (Simport Manager)** |
 | 🇹🇷 **Bilişim Vadisi (B-Stars Mobility)** | Gebze / Kocaeli | **Autonomous Proving Grounds** | 🏁 **Formally Submitted & Confirmed** |

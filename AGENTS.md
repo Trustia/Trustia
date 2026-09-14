@@ -91,7 +91,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 
 ### 5. `05_Uluslararasi_Hibe_ve_Vize_Basvurulari/` 🌍 (Global Fon ve Başvurular)
 * **Buraya Konulacaklar (Tek Resmi Takip Kütüğü + 5 Konsolide Alt Klasör):**
-  * `Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md` & `.pdf`: 87+ uluslararası ve ulusal başvurunun resmi takip ve durum kütüğü.
+  * `Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md` & `.pdf`: 88+ uluslararası ve ulusal başvurunun resmi takip ve durum kütüğü.
   * `01_Avrupa_Birligi_ve_EIT_Hibeleri/`: Avrupa Komisyonu Katılımcı Kimlik Kodu (PIC: `861711529`), EIT Urban Mobility Partner ID (`CUS15554`, €100.000 Hibe Çağrısı: `3.1.02-1206-3732.3`), EIC Accelerator.
   * `02_Katar_QSTP_ve_Korfez_Programlari/`: QSTP 30M$ Venture Fon + 4 Haftalık Doha Sprint Kuluçkası, Dubai RTA $1.2M yarışması, NEOM Mega Şehir, Hub71 Abu Dhabi.
   * `03_Savunma_Sanayii_ve_Tedarikci_Portallari/`: BAYKAR Tech Resmi Tedarikçi Başvurusu, ASELSAN (#0050569), SSB SAYZEK (#170), NATO DIANA.
@@ -144,7 +144,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇺🇸 **Z Fellows ($10k Grant / San Francisco):** 10 dakikalık canlı Zoom mülakatı aşamasında (Görüşmeci: Grace Kasten - Pace Capital Partner, Randevu: 17 Eylül 2026 Perşembe 19:40 TRT).
   * 🇦🇪 **Dubai World Challenge for Self-Driving Transport (RTA Dubai):** $1.200.000 nakit ödüllü küresel Seviye-4 Robotaksi yarışması resmi başvurusu tamamlandı (Kasım 2026 Finalist Aşaması).
   * 🇸🇦 **NEOM Investment Fund & Autonomous Mobility (Suudi Arabistan):** 500 Milyar $ mega şehir otonomi yatırımı ve PoC başvurusu eksiksiz tamamlandı.
-  * 🇸🇬 **Singapur Hükümeti (Startup SG / Enterprise Singapore - startupsg.gov.sg):** Murat Furkan Bayram adına resmi Kurucu Profili (**ID: `#57428`**) %100 tamamlanarak kaydedildi; Güneydoğu Asya (APAC) derin teknoloji ekosistemi, EntrePass girişimci vizesi ve SLINGSHOT 2026 yarışmasına doğrudan erişim sağlandı (14 Eylül 2026).
+  * 🇸🇬 **Singapur Hükümeti (Startup SG & GIA - Enterprise Singapore):** Murat Furkan Bayram adına resmi Kurucu Profili (**ID: `#57428`**) %100 onaylandı; Küresel İnovasyon İttifakı (GIA) Hızlandırma Başvurusu (**Yanıt ID: `6aa85fa93dc42d7feef1bc57`**) tamamlanarak B2Match ve Asya-Pasifik derin teknoloji ağına dahil olundu (14 Eylül 2026).
   * 🇹🇷 **Teknopark İstanbul (HASAT 2026):** T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) ve İTO çatı ortaklığındaki 100M TL destek ve yatırım havuzlu "HASAT 2026" teknoloji sahnesi resmi yarışma başvurusu tamamlandı (Durum: **"Başvurunuz Başarıyla Alındı! 🎉"**).
   * 🇹🇷 **Bilişim Vadisi (B-Stars Mobilite Hızlandırma Programı):** Otonom Test Pisti ve hızlandırma üssüne başvuru eksiksiz tamamlandı.
   * 🇹🇷 **İTO BTM Fulya Kampüsü:** 2026-II. Dönem Sözleşmeli Ön Kuluçka Girişimi.
