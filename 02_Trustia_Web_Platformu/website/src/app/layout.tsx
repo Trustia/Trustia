@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (Partner: CUS15554), İTO BTM Fulya ve ASELSAN tedarikçi tescilli. (İstanbul, Türkiye).",
+    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (Partner: CUS15554), Singapur Hükümeti (Startup SG: #57428 & GIA), İTO BTM Fulya ve ASELSAN tedarikçi tescilli. (İstanbul, Türkiye).",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
@@ -41,11 +41,17 @@ export const metadata: Metadata = {
     "savunma sanayii",
     "İTO BTM",
     "Teknopark İstanbul",
+    "Teknopark İstanbul HASAT 2026",
     "KOSGEB İleri Girişimci",
     "Murat Furkan Bayram",
     "İstanbul",
     "Avrupa Komisyonu PIC 861711529",
     "EIT Urban Mobility CUS15554",
+    "Singapore Startup SG #57428",
+    "Singapore Global Innovation Alliance GIA",
+    "B2Match Singapore Joint Innovation",
+    "Enterprise Singapore",
+    "EntrePass Singapore",
     "QSTP Doha Sprint",
     "BAYKAR Teknoloji",
     "ASELSAN Tedarikçi",
@@ -81,7 +87,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu",
     description:
-      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM, 5 Saniyelik Yörünge Yapay Zekası ve 1.301 Doğrulanmış Test. AB PIC: 861711529, EIT Partner: CUS15554, İTO BTM & ASELSAN Akreditasyonlu.",
+      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM ve 1.301 Doğrulanmış Test. AB PIC: 861711529, EITUM: CUS15554, Singapur Startup SG: #57428, İTO BTM & ASELSAN Akreditasyonlu.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -101,7 +107,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core",
     description:
-      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests. EU PIC: 861711529.",
+      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests. EU PIC: 861711529 • SG Startup SG: #57428.",
     images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
@@ -162,7 +168,9 @@ export default function RootLayout({
           "https://github.com/Trustia/Trustia",
           "https://trustia.com.tr",
           "https://www.linkedin.com/in/trustia",
-          "https://www.crunchbase.com/organization/trustia-ai"
+          "https://www.crunchbase.com/organization/trustia-ai",
+          "https://www.startupsg.gov.sg/profiles/57428",
+          "https://www.b2match.com/e/joint-innovation-with-singapore-2024"
         ],
         "identifier": [
           {
@@ -177,8 +185,23 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
+            "name": "Singapore Government Startup SG Profile ID",
+            "value": "57428"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Enterprise Singapore GIA Application Response ID",
+            "value": "6aa85fa93dc42d7feef1bc57"
+          },
+          {
+            "@type": "PropertyValue",
             "name": "ASELSAN Approved Potential Supplier ID",
             "value": "0050569CCE941FD1A49FCEFB9B7BE7D6"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Teknopark Istanbul HASAT 2026 Submission",
+            "value": "CONFIRMED"
           },
           {
             "@type": "PropertyValue",
@@ -204,7 +227,10 @@ export default function RootLayout({
           "CAN-FD Integration",
           "Hyundai Ioniq 5 E-GMP Platform",
           "Unmanned Ground Vehicles (UGV)",
-          "1301 Automated Unit Tests"
+          "1301 Automated Unit Tests",
+          "Global Innovation Alliance (GIA)",
+          "Enterprise Singapore Deep Tech Network",
+          "EntrePass Framework"
         ]
       },
       {

@@ -16,13 +16,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Top Ticker
     top_ticker_btm: "🏛️ İTO BTM Fulya Kampüsü & Bilişim Vadisi Otonom Test Pisti",
     top_ticker_teknopark: "🇪🇺 Avrupa Komisyonu (PIC: 861711529) & EIT Urban Mobility (CUS15554)",
-    top_ticker_yc: "🇶🇦 Katar QSTP 30M$ Fon & 4 Hafta Doha Sprint Kuluçkası",
-    top_ticker_ssb: "🇹🇷 BAYKAR & ASELSAN Tedarikçi Portalları • Z Fellows Mülakatı",
+    top_ticker_yc: "🇸🇬 Singapur Hükümeti (Startup SG: #57428 & GIA İnovasyon Ağı)",
+    top_ticker_ssb: "🇹🇷 ASELSAN Tedarikçi Portalı (#0050569) & HASAT 2026",
 
     // Institutional Ecosystem
     eco_badge: "RESMİ KURUMLAR & GLOBAL AKREDİTASYONLAR",
     eco_title: "Devlet, AB ve Ekosistem Onaylarımız",
-    eco_desc: "Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility, Katar QSTP, Savunma Sanayii, İTO BTM ve ASELSAN tarafından tescillenen resmi süreçlerimiz.",
+    eco_desc: "Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility, Singapur Hükümeti (Startup SG & GIA), ASELSAN, Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli resmi süreçlerimiz.",
 
     // Navbar
     nav_about: "HAKKIMIZDA",
@@ -128,13 +128,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Top Ticker
     top_ticker_btm: "🏛️ Istanbul Chamber of Commerce (BTM) Fulya & Bilisim Vadisi Proving Grounds",
     top_ticker_teknopark: "🇪🇺 European Commission (PIC: 861711529) & EIT Urban Mobility (CUS15554)",
-    top_ticker_yc: "🇶🇦 Qatar QSTP $30M Tech Venture Fund & 4-Week Doha Sprint",
-    top_ticker_ssb: "🇹🇷 BAYKAR & ASELSAN Defense Supplier Pipeline • Z Fellows Finalist",
+    top_ticker_yc: "🇸🇬 Singapore Government (Startup SG: #57428 & GIA Innovation Alliance)",
+    top_ticker_ssb: "🇹🇷 ASELSAN Defense Supplier (#0050569) & HASAT 2026",
 
     // Institutional Ecosystem
     eco_badge: "INSTITUTIONAL ACCREDITATIONS & GLOBAL ALLIANCES",
     eco_title: "European Union, Defense & Sovereign Ecosystem",
-    eco_desc: "Officially registered by the European Commission (PIC: 861711529), EIT Urban Mobility, Qatar QSTP, ASELSAN, and Istanbul Chamber of Commerce (BTM).",
+    eco_desc: "Officially registered by the European Commission (PIC: 861711529), EIT Urban Mobility, Singapore Government (Startup SG & GIA), ASELSAN, Teknopark Istanbul HASAT 2026, and ITO BTM.",
 
     // Navbar
     nav_about: "ABOUT US",

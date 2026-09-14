@@ -98,6 +98,18 @@ export default function AboutPage() {
       status: lang === "tr" ? "Ön Onaylı" : "Pre-Approved"
     },
     {
+      org: lang === "tr" ? "Singapur Hükümeti (Startup SG & GIA)" : "Singapore Government (Startup SG & GIA)",
+      reg: "ID: #57428 • GIA: 6aa85fa9",
+      type: lang === "tr" ? "Enterprise Singapore Ulusal Ekosistem & Küresel İnovasyon İttifakı (B2Match)" : "Enterprise Singapore National Ecosystem & Global Innovation Alliance (B2Match)",
+      status: lang === "tr" ? "%100 Kayıtlı" : "100% Verified"
+    },
+    {
+      org: lang === "tr" ? "Teknopark İstanbul (HASAT 2026)" : "Teknopark Istanbul (HASAT 2026)",
+      reg: "100M TL Destek",
+      type: lang === "tr" ? "SSB & İTO Destekli Teknoloji Hasatı Sahnesi & Cube Incubation Başvurusu" : "Presidency of Defense Industries & ITO Deep-Tech Contest",
+      status: lang === "tr" ? "Başarıyla Alındı" : "Confirmed"
+    },
+    {
       org: lang === "tr" ? "SSB SAYZEK (Savunma Sanayii Başkanlığı)" : "Defense Industry Agency (SAYZEK AI)",
       reg: "Başvuru #170",
       type: lang === "tr" ? "Simport Otonomi Simülasyonu ve Süper Bilgisayar Kaynak Tahsisi" : "Simport Simulation & Supercomputing Access",

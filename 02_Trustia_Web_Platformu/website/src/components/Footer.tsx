@@ -49,6 +49,10 @@ export default function Footer() {
                 <span>EU PIC: 861711529 • EITUM: CUS15554</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400">
+                <Globe className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                <span>SG Startup SG: #57428 • GIA Partner</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-400">
                 <Cpu className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 <span>SAE J3016 Level 4 • STANAG 4586</span>
               </div>
