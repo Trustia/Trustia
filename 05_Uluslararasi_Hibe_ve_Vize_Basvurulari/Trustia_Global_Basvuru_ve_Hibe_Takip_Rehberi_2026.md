@@ -16,7 +16,7 @@
 | 🇪🇺 **AB Katılımcı Kimlik Kodu (PIC)** | **`861711529`** | Avrupa Komisyonu Resmi Kayıt Defteri (ec.europa.eu) Onaylandı |
 | 🇪🇺 **EIT Urban Mobility Partner ID** | **`CUS15554`** | NetSuite PIF İş Ortağı Portalı Aktif |
 | 🇪🇺 **EIT UM Hibe Başvuru Numarası** | **`3.1.02-1206-3732.3`** | 100.000 € Girişimci Hibe Çağrısı • Durum: "Gönderildi" |
-| 🇹🇷 **ASELSAN Potansiyel Tedarikçi** | **`0050569CCE941FD1A49FCEFB9B7BE7D6`** | Yazılım Geliştirme • Ön Değerlendirme OLUMLU SONUÇLANDI • Potansiyel Tedarikçi Kaydedildi (SAP: `FZQHEXGFMTJU`) |
+| 🇹🇷 **ASELSAN Potansiyel Tedarikçi** | **`0050569CCE941FD1A49FCEFB9B7BE7D6`** | Yazılım Geliştirme • Ön Değerlendirme OLUMLU SONUÇLANDI • SAP: `TRUSTIA_ADMIN` Aktive Edildi • Teknik Sunum Mektubu Hazırlandı |
 | 🇹🇷 **BAYKAR Teknoloji Alt Yüklenici** | **Kayıt Formu Alındı** | 13 Eylül 2026 Ekran Görüntüsüyle Doğrulandı |
 | 🇹🇷 **SSB SAYZEK Simülasyon No** | **`170`** | Simport Yöneticisi Rolü • Durum: "Onay Bekliyor" |
 | 🇶🇦 **Katar QSTP Fon & Kuluçka** | **30M$ Fon + Doha Sprint** | 4 Hafta Yüz Yüze Sprint, Otel, Ofis & Şirket Kuruluşu Gönderildi |
@@ -59,7 +59,7 @@
 |----------------|---------------------|--------|-------|-----------------|
 | **BAYKAR Teknoloji** | Resmi Tedarikçi Portalı | Seviye-4 GNSS-denied 3D SLAM, Taktik İKA | 13.09.2026 | ✅ **"Bilgileriniz tarafımıza ulaşmıştır, en kısa sürede irtibat kurulacaktır"** |
 | **DEİK (Dış Ekonomik İlişkiler Kurulu)** | Dijital Teknolojiler İş Konseyi | Ticari Diplomasi & Global Otonomi İhracatı | 14.09.2026 | 🟢 **RESMİ ÜYELİK DAVETİ ALINDI** (Halit Burhan Sönmez - Üyelik & Bilgilendirme Paketi İletildi) |
-| **ASELSAN Tedarikçi Portalı** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | Yazılım Geliştirme (Yazılım Onaylandı) | 14.09.2026 | 🟢 **ÖN DEĞERLENDİRME OLUMLU SONUÇLANDI** • Potansiyel Tedarikçi Olarak Kaydedildi • SAP Kodu: `FZQHEXGFMTJU` • Kurul Toplantısı Bekleniyor |
+| **ASELSAN Tedarikçi Portalı** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | Yazılım Geliştirme (Yazılım Onaylandı) | 14.09.2026 | 🟢 **ÖN DEĞERLENDİRME OLUMLU SONUÇLANDI** • Potansiyel Tedarikçi Olarak Kaydedildi • SAP Kodu: `TRUSTIA_ADMIN` (Aktif) • Kurul Toplantısı Bekleniyor • Resmi Teknik Sunum & Lisanslama Talep Mektubu Hazırlandı |
 | **SSB SAYZEK (Cumhurbaşkanlığı)** | Simülasyon Başvuru #`170` | Simport Yöneticisi • Otonomi Simülatörü Tahsisi | 12.09.2026 | 🟡 **Onay Bekliyor** |
 | **Türkiye Siber Güvenlik Kümelenmesi** | SSB & CB DDO Girişim Formu | Siber-fiziksel CAN-FD & ISO 21434 Güvenliği | 12.09.2026 | ✅ **"Başvurunuz Alındı! Başarıyla alınmıştır."** |
 | **T.C. CB Yatırım ve Finans Ofisi** | Stratejik Yatırım Masası | Global Otonom Mobilite ve Doğrudan Yabancı Yatırım | 12.09.2026 | ✅ **"E-postanız başarıyla gönderilmiştir."** |
