@@ -144,6 +144,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇺🇸 **Z Fellows ($10k Grant / San Francisco):** 10 dakikalık canlı Zoom mülakatı aşamasında (Görüşmeci: Grace Kasten - Pace Capital Partner, Randevu: 17 Eylül 2026 Perşembe 19:40 TRT).
   * 🇦🇪 **Dubai World Challenge for Self-Driving Transport (RTA Dubai):** $1.200.000 nakit ödüllü küresel Seviye-4 Robotaksi yarışması resmi başvurusu tamamlandı (Kasım 2026 Finalist Aşaması).
   * 🇸🇦 **NEOM Investment Fund & Autonomous Mobility (Suudi Arabistan):** 500 Milyar $ mega şehir otonomi yatırımı ve PoC başvurusu eksiksiz tamamlandı.
+  * 🇹🇷 **Teknopark İstanbul (HASAT 2026):** T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) ve İTO çatı ortaklığındaki 100M TL destek ve yatırım havuzlu "HASAT 2026" teknoloji sahnesi resmi yarışma başvurusu tamamlandı (Durum: **"Başvurunuz Başarıyla Alındı! 🎉"**).
   * 🇹🇷 **Bilişim Vadisi (B-Stars Mobilite Hızlandırma Programı):** Otonom Test Pisti ve hızlandırma üssüne başvuru eksiksiz tamamlandı.
   * 🇹🇷 **İTO BTM Fulya Kampüsü:** 2026-II. Dönem Sözleşmeli Ön Kuluçka Girişimi.
   * 📜 **KOSGEB İleri Girişimci Sertifikası:** Belge No `KSB01UGE0115153370`.

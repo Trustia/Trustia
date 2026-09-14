@@ -42,6 +42,7 @@
 | 🌐 **Crunchbase** | Global | **Verified Corporate Profile** | ⬆️ **Heat Score: 85 (CB Rank: 534k)** |
 | 🇹🇷 **SSB / SAYZEK (AI Defense Platform)** | Ankara, TR | **Simport Supercomputing Access** | 🛡️ **Application ID: `170` (Simport Manager)** |
 | 🇹🇷 **Bilişim Vadisi (B-Stars Mobility)** | Gebze / Kocaeli | **Autonomous Proving Grounds** | 🏁 **Formally Submitted & Confirmed** |
+| 🇹🇷 **Teknopark İstanbul (HASAT 2026)** | Istanbul, TR | **100M TRY Fund & Cube Hub (SSB & İTO)** | 🌾 **Formally Submitted & Confirmed ("Başvurunuz Başarıyla Alındı! 🎉")** |
 | 🏛️ **İTO BTM (Fulya Kampüsü)** | Istanbul, TR | **Contracted Pre-Incubator Hub** | ✅ **Active Contracted Startup (2026-II)** |
 | 🚗 **Martı Technologies (NYSE: MRT)** | Istanbul / US | **L4 Autonomous Fleet Alliance** | 🤝 **Submitted to Founder & CEO Oğuz Alper Öktem** |
 

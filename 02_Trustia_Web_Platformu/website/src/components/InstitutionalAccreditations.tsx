@@ -193,6 +193,21 @@ export default function InstitutionalAccreditations() {
       authority: "fonbulucu.com",
       recordTypeTr: "SPK Paya Dayalı Fonlama",
       recordTypeEn: "Equity Crowdfunding Round"
+    },
+    {
+      id: "13",
+      categoryTr: "Teknopark İstanbul",
+      categoryEn: "Teknopark Istanbul",
+      scopeTr: "HASAT 2026 Teknoloji Sahnesi",
+      scopeEn: "HASAT 2026 Deep Tech Stage",
+      badge: "100M TL Destek & Ofis",
+      questionTr: "Teknopark İstanbul HASAT 2026 ve Cube Incubation başvuru süreci nedir?",
+      questionEn: "What is the status of the Teknopark Istanbul HASAT 2026 and Cube Incubation application?",
+      answerTr: "T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) ve İstanbul Ticaret Odası (İTO) çatı ortaklığındaki Teknopark İstanbul tarafından düzenlenen HASAT 2026 yarışmasına Seviye-4 deterministik otonomi platformumuzla resmi yarışma başvurusu başarıyla tamamlanmıştır. 100 Milyon TL'lik yatırım ve destek havuzu kapsamında Cube Incubation bünyesinde Ar-Ge ofisi, prototipleme atölyesi ve sahne sunumu hedeflenmektedir.",
+      answerEn: "Trustia has formally submitted its application to HASAT 2026, hosted by Teknopark Istanbul under the co-founding auspices of the Presidency of Defense Industries (SSB) and Istanbul Chamber of Commerce (İTO). Selected startups gain access to a 100M TRY investment and support pool, dedicated R&D office space at Cube Incubation, and live stage pitching to defense and deep-tech venture capital funds.",
+      authority: "hasat.eventiqs.com",
+      recordTypeTr: "SSB & İTO Destekli Teknoloji Sahnesi",
+      recordTypeEn: "SSB & İTO Deep Tech Stage"
     }
   ];
 
@@ -213,7 +228,7 @@ export default function InstitutionalAccreditations() {
           </div>
           <div className="text-left sm:text-right">
             <span className="text-[11px] font-mono text-zinc-400">
-              {lang === "tr" ? "12 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "12 Verified Records / Defense & Global Funds"}
+              {lang === "tr" ? "13 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "13 Verified Records / Defense & Global Funds"}
             </span>
           </div>
         </div>

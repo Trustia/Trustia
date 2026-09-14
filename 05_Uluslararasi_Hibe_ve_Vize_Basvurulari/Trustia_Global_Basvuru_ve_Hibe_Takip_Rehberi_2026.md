@@ -24,9 +24,10 @@
 | 🇦🇪 **Dubai RTA World Challenge** | **1.200.000 $ Nakit Ödül** | Seviye-4 Robotaksi Kategorisi Gönderildi (Kasım 2026 Finalist) |
 | 🇸🇦 **NEOM Autonomous Mobility** | **Stratejik PoC & SAFE** | Başvuru Alındı Onayı (12 Eylül 2026) |
 | 🇹🇷 **SPK fonbulucu Kitle Fonlama** | **Kampanya Kodu: `W1MV5K`** | 15.000.000 TL Hedef (150M TL Val.) • Durum: "Ön İncelemede" |
+| 🇹🇷 **Teknopark İstanbul HASAT 2026** | **100M TL Destek & Ofis** | SSB & İTO Destekli Teknoloji Hasatı • "Başvurunuz Başarıyla Alındı! 🎉" |
 | 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 85 / Sıra: 534k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
 | 🧪 **Doğrulanmış Kod ve Test** | **16.000+ Satır / 1.301 Test** | 10 Kritik Alt Sistemde %100 Başarı |
-| 🌍 **Toplam Başvuru ve Tescil** | **85+ Resmi Başvuru** | 15+ Ülke (ABD, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
+| 🌍 **Toplam Başvuru ve Tescil** | **86+ Resmi Başvuru** | 15+ Ülke (ABD, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
 
 ---
 
@@ -93,7 +94,7 @@
 |-------------|-----------------|-------------------|-------|---------------|
 | **fonbulucu (SPK Paya Dayalı Kitle Fonlama)** | Seviye-4 Robotaksi (`W1MV5K`) | 15M TL Fonlama (150M TL Val.) | 08.09.2026 | 🟡 **Ön İncelemede** |
 | **Bilişim Vadisi (B-Stars Mobilite)** | Otonom Test Pisti & Hızlandırma | Pist Tahsisi & Master Sunum | 12.09.2026 | ✅ **"BAŞVURUNUZ ALINMIŞTIR"** |
-| **Teknopark İstanbul Cube Incubation** | Savunma & Mobilite Ön Kuluçka | Ofis, Prototip Atölyesi, Mentörlük | 13.09.2026 | 🟡 Dosya Cube Masasında |
+| **Teknopark İstanbul (HASAT 2026)** | SSB & İTO Çatısı Altında 100M TL Destek & Cube Ofis | 100M TL Yatırım Havuzu, Ücretsiz Ofis & Sahne | 14.09.2026 | 🟢 **"Başvurunuz başarıyla alındı! 🎉"** (Değerlendirme Ekibinde) |
 | **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | Fulya Kampüsü Sözleşmeli Ön Kuluçka | 150M TL Val. KPI Takip Formu | 10.09.2026 | ✅ **"Yanıtınız kaydedildi"** |
 | **Türkiye Yapay Zeka İnisiyatifi (TRAI)** | Otonom Sürüş Girişim Haritası | Ekosistem Akreditasyonu | 12.09.2026 | ✅ **"Başvurunuz alındı!"** |
 | **APY Ventures (Bilişim Vadisi GSYF)** | Mobilite & Derin Teknoloji | $500k Tohum Öncesi SAFE | 09.09.2026 | ✅ **"Formunuz başarıyla gönderildi"** |
