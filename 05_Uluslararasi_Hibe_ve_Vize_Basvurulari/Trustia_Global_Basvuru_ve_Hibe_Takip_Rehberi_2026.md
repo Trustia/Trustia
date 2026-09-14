@@ -26,7 +26,7 @@
 | 🇹🇷 **SPK fonbulucu Kitle Fonlama** | **Kampanya Kodu: `W1MV5K`** | 15.000.000 TL Hedef (150M TL Val.) • Durum: "Ön İncelemede" |
 | 🇹🇷 **Teknopark İstanbul HASAT 2026** | **100M TL Destek & Ofis** | SSB & İTO Destekli Teknoloji Hasatı • "Başvurunuz Başarıyla Alındı! 🎉" |
 | 🇸🇬 **Singapur Startup SG (EnterpriseSG)** | **ID: `#57428`** | Resmi Kurucu Profili %100 Tamamlandı • EntrePass & SLINGSHOT 2026 Portalı Aktif |
-| 🇸🇬 **Singapur GIA (Enterprise Singapore)** | **Yanıt ID: `6aa85fa93dc42d7feef1bc57`** | Global Innovation Alliance Hızlandırma Başvurusu Alındı (14.09.2026 23:57 TRT) |
+| 🇸🇬 **Singapur GIA & B2Match (EnterpriseSG)** | **Yanıt ID: `6aa85fa93dc42d7feef1bc57`** | GIA Başvurusu & B2Match Küresel Eşleştirme Portalı %100 Kuruldu (15.09.2026 00:24 TRT) |
 | 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 93 / Büyüme: 91 / Sıra: 98k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
 | 🧪 **Doğrulanmış Kod ve Test** | **16.000+ Satır / 1.301 Test** | 10 Kritik Alt Sistemde %100 Başarı |
 | 🌍 **Toplam Başvuru ve Tescil** | **88+ Resmi Başvuru** | 16+ Ülke (ABD, Singapur, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
@@ -49,7 +49,7 @@
 | Program / Kurum | Kapsam | Talep / Taahhüt | Tarih | Güncel Durum | Ekran Görüntüsü / Kanıt |
 |-----------------|--------|-----------------|-------|--------------|-------------------------|
 | **Startup SG (Enterprise Singapore)** | Singapur Ulusal İnovasyon Ağı | Kurucu Profili (ID: `#57428`), EntrePass & Deep-Tech | 14.09.2026 | 🟢 **%100 TAMAMLANDI** | Resmi Kurucu Paneli Aktif • Ağ ve Hızlandırma Açık |
-| **GIA Global Innovation Alliance (EnterpriseSG)** | Singapur Hükümeti Küresel Hızlandırma | Yanıt Kimliği: `6aa85fa93dc42d7feef1bc57` | 14.09.2026 | 🟢 **BAŞARIYLA ALINDI** | "Gönderiniz için teşekkür ederiz." (23:57:13 TRT) • B2Match Portalı Aktif |
+| **GIA & B2Match (Enterprise Singapore)** | Singapur Hükümeti Küresel Hızlandırma & Eşleştirme | Yanıt: `6aa85fa93dc42d7feef1bc57` • B2Match: Murat Furkan Bayram | 15.09.2026 | 🟢 **%100 TAMAMLANDI** | Kurucu, Şirket, YouTube Vitrin Projesi ve B2Match Hesabı Tamamlandı |
 | **QSTP 30M$ Tech Venture Fund** | 9 Sayfalık Fonksiyonel Başvuru | $500k Pre-Seed SAFE | 13.09.2026 | 🟡 **Başarıyla Alındı** | "Girişiminiz hakkında bilgi verdiğiniz için teşekkür ederiz" |
 | **QSTP Doha Sprint & Kuluçka** | 8 Sayfalık Resmi Kuluçka | 4 Hafta Doha Sprint, Otel, Ofis, Katar Tescili | 13.09.2026 | 🟡 **Başvurunuz Alındı** | "Kuluçka programına başvurunuz için teşekkür ederiz" |
 | **Dubai World Challenge (RTA)** | Seviye-4 Global Robotaksi Yarışması | 1.200.000 $ Nakit Ödül | Ağustos 2026 | 🟡 **Resmi İncelemede** | Kasım 2026 Finalist İlanı • Eylül 2027 Zirve |
