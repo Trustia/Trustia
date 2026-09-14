@@ -12,10 +12,11 @@ DURUM BİLGİLERİ:
 - Ön Değerlendirme: OLUMLU SONUÇLANDI
 - Kurul Kararı: Kurul Toplantısı Bekleniyor (FİRMANIN İLGİLİ ALANDA BAŞVURUSU ONAYLANMIŞTIR)
 
-SAP PORTAL ERİŞİM BİLGİLERİ (30 GÜN İÇİNDE AKTİVE EDİLMELİDİR):
-- Geçici SAP Kullanıcı Adı: FZQHEXGFMTJU
-- Geçici Şifre: b[|S5QDsPY
-- İlk Kayıt / Aktivasyon URL: https://slc.aselsan.com.tr/slc_selfreg?sap-user=FZQHEXGFMTJU
-- Kalıcı Giriş Portalı URL: https://tedarikbilgi.aselsan.com.tr/login
+SAP PORTAL ERİŞİM BİLGİLERİ (AKTİVE EDİLDİ - 14.09.2026):
+- Kalıcı Yönetici Kullanıcı Adı: TRUSTIA_ADMIN
+- İlk Geçici SAP Kullanıcı Adı: FZQHEXGFMTJU
+- Kalıcı Tedarikçi Bilgi Portalı: https://tedarikbilgi.aselsan.com.tr
 - Başvuru Takip URL: https://tedarikbasvuru.aselsan.com.tr/basvuru-takip
+- Durum: Kalıcı Yönetici Hesabı Başarıyla Oluşturuldu ve Portala Giriş Yapıldı (Aktif)
 ================================================================================
+
