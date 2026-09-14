@@ -10,7 +10,7 @@
 [![EU PIC](https://img.shields.io/badge/EU%20PIC-861711529-yellow.svg)](https://ec.europa.eu)
 [![EIT Partner](https://img.shields.io/badge/EIT%20Partner-CUS15554-success.svg)](https://www.eiturbanmobility.eu)
 [![fonbulucu SPK](https://img.shields.io/badge/fonbulucu%20SPK-W1MV5K-blueviolet.svg)](https://fonbulucu.com)
-[![Crunchbase](https://img.shields.io/badge/Crunchbase-Verified%20(Heat%2085)-0288D1.svg)](https://www.crunchbase.com/organization/trustia-ai)
+[![Crunchbase](https://img.shields.io/badge/Crunchbase-Verified%20(Heat%2093%20%7C%20Rank%2098k)-0288D1.svg)](https://www.crunchbase.com/organization/trustia-ai)
 
 > **Industrial-grade, hardware-agnostic, dual-use autonomous vehicle software stack engineered for tactical defense unmanned ground vehicles (UGVs) and next-generation civilian passenger mobility operating in GPS-denied and high-density urban environments.**
 
@@ -39,7 +39,7 @@
 | 🇺🇸 **Z Fellows (Cory Levy & Grace Kasten)** | San Francisco, CA | **$10,000 Grant + SF Residency** | 🎯 **Live Partner Zoom Interview (17 Sept 2026)** |
 | 🇦🇪 **Dubai World Challenge for Self-Driving Transport** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted (Finalist Phase Nov 2026)** |
 | 🇸🇦 **NEOM Investment Fund & Mobility** | Tabuk, KSA | **Zero-Driver City PoC** | 🇸🇦 **Formally Submitted & Confirmed** |
-| 🌐 **Crunchbase** | Global | **Verified Corporate Profile** | ⬆️ **Heat Score: 85 (CB Rank: 534k)** |
+| 🌐 **Crunchbase** | Global | **Verified Corporate Profile** | ⬆️ **Heat Score: 93 • Growth: 91 (CB Rank: 98k)** |
 | 🇹🇷 **SSB / SAYZEK (AI Defense Platform)** | Ankara, TR | **Simport Supercomputing Access** | 🛡️ **Application ID: `170` (Simport Manager)** |
 | 🇹🇷 **Bilişim Vadisi (B-Stars Mobility)** | Gebze / Kocaeli | **Autonomous Proving Grounds** | 🏁 **Formally Submitted & Confirmed** |
 | 🇹🇷 **Teknopark İstanbul (HASAT 2026)** | Istanbul, TR | **100M TRY Fund & Cube Hub (SSB & İTO)** | 🌾 **Formally Submitted & Confirmed ("Başvurunuz Başarıyla Alındı! 🎉")** |

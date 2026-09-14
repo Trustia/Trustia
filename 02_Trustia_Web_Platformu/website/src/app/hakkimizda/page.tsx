@@ -117,7 +117,7 @@ export default function AboutPage() {
     },
     {
       org: lang === "tr" ? "Crunchbase Küresel Girişim Dizini" : "Crunchbase Global Directory",
-      reg: "Isı Puanı: 85 (CB: 534k)",
+      reg: "Isı Puanı: 93 • Büyüme: 91 (CB: 98k)",
       type: lang === "tr" ? "Resmi Doğrulanmış Kurumsal Profil & $500k Pre-Seed Turu" : "Verified Corporate Profile & $500k Pre-Seed Round",
       status: "Doğrulandı"
     },

@@ -25,7 +25,7 @@
 | 🇸🇦 **NEOM Autonomous Mobility** | **Stratejik PoC & SAFE** | Başvuru Alındı Onayı (12 Eylül 2026) |
 | 🇹🇷 **SPK fonbulucu Kitle Fonlama** | **Kampanya Kodu: `W1MV5K`** | 15.000.000 TL Hedef (150M TL Val.) • Durum: "Ön İncelemede" |
 | 🇹🇷 **Teknopark İstanbul HASAT 2026** | **100M TL Destek & Ofis** | SSB & İTO Destekli Teknoloji Hasatı • "Başvurunuz Başarıyla Alındı! 🎉" |
-| 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 85 / Sıra: 534k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
+| 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 93 / Büyüme: 91 / Sıra: 98k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
 | 🧪 **Doğrulanmış Kod ve Test** | **16.000+ Satır / 1.301 Test** | 10 Kritik Alt Sistemde %100 Başarı |
 | 🌍 **Toplam Başvuru ve Tescil** | **86+ Resmi Başvuru** | 15+ Ülke (ABD, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
 
