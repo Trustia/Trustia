@@ -177,7 +177,7 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
-            "name": "ASELSAN Supplier Application ID",
+            "name": "ASELSAN Approved Potential Supplier ID",
             "value": "0050569CCE941FD1A49FCEFB9B7BE7D6"
           },
           {

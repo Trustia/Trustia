@@ -1,2 +1,21 @@
-0050569CCE941FD1A49FCEFB9B7BE7D6
-# ASELSAN Tedarikçi Portalı Onaylı Girişimi
+================================================================================
+ASELSAN TEDARİKÇİ PORTALI - POTANSİYEL TEDARİKÇİ VE SAP ERİŞİM BİLGİLERİ
+================================================================================
+Firma Adı: TRUSTIA AI OTONOM SISTEMLERI
+Yetkili: Murat Furkan Bayram
+Başvuru Takip No: 0050569CCE941FD1A49FCEFB9B7BE7D6
+Başvuru Tarihi: 05.08.2026 21:50:04
+Onay Tarihi: 14.09.2026 10:45
+
+DURUM BİLGİLERİ:
+- Faaliyet Alanı: Yazılım Geliştirme
+- Ön Değerlendirme: OLUMLU SONUÇLANDI
+- Kurul Kararı: Kurul Toplantısı Bekleniyor (FİRMANIN İLGİLİ ALANDA BAŞVURUSU ONAYLANMIŞTIR)
+
+SAP PORTAL ERİŞİM BİLGİLERİ (30 GÜN İÇİNDE AKTİVE EDİLMELİDİR):
+- Geçici SAP Kullanıcı Adı: FZQHEXGFMTJU
+- Geçici Şifre: b[|S5QDsPY
+- İlk Kayıt / Aktivasyon URL: https://slc.aselsan.com.tr/slc_selfreg?sap-user=FZQHEXGFMTJU
+- Kalıcı Giriş Portalı URL: https://tedarikbilgi.aselsan.com.tr/login
+- Başvuru Takip URL: https://tedarikbasvuru.aselsan.com.tr/basvuru-takip
+================================================================================

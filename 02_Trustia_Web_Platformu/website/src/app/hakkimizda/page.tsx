@@ -87,15 +87,15 @@ export default function AboutPage() {
     },
     {
       org: lang === "tr" ? "DEİK (Dış Ekonomik İlişkiler Kurulu)" : "Foreign Economic Relations Board (DEİK)",
-      reg: "İş Konseyi Formu",
-      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Ticari Diplomasi ve Küresel İhracat" : "Digital Technologies Business Council",
-      status: "Onaylandı"
+      reg: lang === "tr" ? "Resmi Davet" : "Official Invitation",
+      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Resmi Üyelik ve Ticari Diplomasi Daveti" : "Digital Technologies Business Council • Official Invitation",
+      status: lang === "tr" ? "Davet Alındı" : "Invited"
     },
     {
       org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
       reg: "0050569CCE941FD1A49FCEFB9B7BE7D6",
-      type: lang === "tr" ? "Yazılım, Sistem ve Kara Platform Entegrasyonu Tedarikçi Değerlendirmesi" : "Software, Systems & Land Platform Integration",
-      status: "Ön Değerlendirmede"
+      type: lang === "tr" ? "Yazılım Geliştirme • Potansiyel Tedarikçi Kütüğü (SAP Portal Erişimli)" : "Software Engineering • Potential Supplier Registry (SAP Access)",
+      status: lang === "tr" ? "Ön Onaylı" : "Pre-Approved"
     },
     {
       org: lang === "tr" ? "SSB SAYZEK (Savunma Sanayii Başkanlığı)" : "Defense Industry Agency (SAYZEK AI)",

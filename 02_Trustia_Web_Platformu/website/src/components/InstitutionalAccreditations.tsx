@@ -78,16 +78,16 @@ export default function InstitutionalAccreditations() {
       id: "05",
       categoryTr: "ASELSAN",
       categoryEn: "ASELSAN",
-      scopeTr: "Kara Platformu Entegrasyonu",
-      scopeEn: "Land Platform Integration",
-      badge: "#0050569CCE941FD1",
-      questionTr: "ASELSAN Tedarikçi Portalı'ndaki resmi kayıt ve kapsam nedir?",
-      questionEn: "What is the scope of Trustia's ASELSAN defense supplier candidacy?",
-      answerTr: "ASELSAN Tedarikçi Portalı üzerinden 0050569CCE941FD1A49FCEFB9B7BE7D6 takip numarası ile; 'Yazılım Geliştirme', 'Sistem Platform Entegrasyonu' ve 'Kara Platform Entegrasyonu' yetkinlik alanlarında kurumsal ön değerlendirme süreci yürütülmektedir.",
-      answerEn: "Registered under official evaluation reference 0050569CCE941FD1A49FCEFB9B7BE7D6 on the ASELSAN Supplier Portal, spanning three capability scopes: Software Engineering, Autonomous System Integration, and Land Platform Combat Integration.",
+      scopeTr: "Yazılım Geliştirme & Potansiyel Tedarikçi",
+      scopeEn: "Software Engineering & Potential Supplier",
+      badge: "Ön Değerlendirme Onaylandı",
+      questionTr: "ASELSAN Tedarikçi Portalı'ndaki resmi kayıt ve onay durumu nedir?",
+      questionEn: "What is the official approval status on the ASELSAN Supplier Portal?",
+      answerTr: "ASELSAN Tedarikçi Portalı (Başvuru No: 0050569CCE941FD1A49FCEFB9B7BE7D6) 'Yazılım Geliştirme' faaliyet alanındaki kurumsal ön değerlendirme OLUMLU SONUÇLANMIŞTIR. Trustia AI Otonom Sistemleri resmi olarak ASELSAN Potansiyel Tedarikçi Kütüğü'ne kaydedilmiş, SAP kurumsal portal erişim yetkisi tahsis edilmiş ve Kurul Toplantısı aşamasına geçilmiştir.",
+      answerEn: "Official pre-evaluation for the 'Software Engineering' domain on the ASELSAN Supplier Portal (Ref: 0050569CCE941FD1A49FCEFB9B7BE7D6) has concluded with OFFICIAL APPROVAL. Trustia AI Autonomous Systems is formally registered in the ASELSAN Potential Supplier Registry with enterprise SAP access credentials provisioned, advancing to the Executive Board review stage.",
       authority: "partner.aselsan.com.tr",
-      recordTypeTr: "Tedarikçi Ön Değerlendirme",
-      recordTypeEn: "Supplier Pre-Evaluation"
+      recordTypeTr: "Ön Değerlendirme Onaylandı • Potansiyel Tedarikçi",
+      recordTypeEn: "Pre-Evaluation Approved • Potential Supplier"
     },
     {
       id: "06",
@@ -123,16 +123,16 @@ export default function InstitutionalAccreditations() {
       id: "08",
       categoryTr: "DEİK",
       categoryEn: "DEİK",
-      scopeTr: "Dijital Teknolojiler",
-      scopeEn: "Digital Technologies",
-      badge: "Ticari Diplomasi",
-      questionTr: "DEİK bünyesindeki kurumsal temsil ve otonomi ihracat misyonu nedir?",
-      questionEn: "What is Trustia's corporate engagement with DEİK?",
-      answerTr: "T.C. Ticaret Bakanlığı koordinasyonunda faaliyet gösteren Dış Ekonomik İlişkiler Kurulu (DEİK) 'Dijital Teknolojiler İş Konseyi' bünyesine resmi başvuru tamamlanmıştır. Trustia, Türkiye'nin yerli otonom mobilite ve robotaksi yazılım ihracatını uluslararası pazarlarda temsil etmeyi hedeflemektedir.",
-      answerEn: "Trustia has completed registration with the Foreign Economic Relations Board of Turkey (DEİK) Digital Technologies Business Council under the Ministry of Trade, driving international deployment and export of sovereign autonomous mobility software.",
+      scopeTr: "İş Konseyi Üyelik Daveti",
+      scopeEn: "Business Council Official Invitation",
+      badge: "Resmi Üyelik Daveti",
+      questionTr: "DEİK bünyesindeki kurumsal temsil ve üyelik daveti süreci nedir?",
+      questionEn: "What is the status of DEİK business diplomacy and membership invitation?",
+      answerTr: "T.C. Ticaret Bakanlığı koordinasyonundaki Dış Ekonomik İlişkiler Kurulu (DEİK) Üye İlişkileri Dairesi tarafından Trustia'ya DEİK ve Dijital Teknolojiler İş Konseyi resmi üyelik daveti iletilmiştir. Türkiye'nin yerli Seviye-4 otonom mobilite ve savunma teknolojileri ihracatı bu diplomatik hat üzerinden küresel pazarlara taşınmaktadır.",
+      answerEn: "Trustia has received an official corporate membership invitation from the Foreign Economic Relations Board of Turkey (DEİK) Membership & Business Councils department under the Ministry of Trade, anchoring Trustia's sovereign Level-4 autonomous driving technologies into global commercial diplomacy pipelines.",
       authority: "deik.org.tr",
-      recordTypeTr: "İş Konseyi Temsili",
-      recordTypeEn: "Business Council Registry"
+      recordTypeTr: "Resmi Üyelik Daveti",
+      recordTypeEn: "Official Membership Invitation"
     },
     {
       id: "09",
@@ -255,6 +255,10 @@ export default function InstitutionalAccreditations() {
                 {lang === "tr" ? "Doğrulanmış Ekosistem Kütüğü" : "Verified Ecosystem Registry"}
               </div>
               <div className="space-y-1.5 font-mono text-[11px]">
+                <div className="flex items-center justify-between py-1.5 px-2.5 rounded bg-zinc-900/50 border border-zinc-800/60">
+                  <span className="text-zinc-400">ASELSAN Tedarikçi</span>
+                  <span className="text-zinc-200 font-semibold">{lang === "tr" ? "Ön Onaylı (SAP)" : "Pre-Approved (SAP)"}</span>
+                </div>
                 <div className="flex items-center justify-between py-1.5 px-2.5 rounded bg-zinc-900/50 border border-zinc-800/60">
                   <span className="text-zinc-400">T.C. SSB SAYZEK</span>
                   <span className="text-zinc-200 font-semibold">Başvuru #170</span>
