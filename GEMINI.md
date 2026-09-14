@@ -9,16 +9,19 @@
 
 ## 🚨 EN TEMEL VE ZORUNLU 8 ALTIN KURAL (THE 8 SUPREME DIRECTIVES)
 
-### 1. KURAL: ANINDA HER YERDEN GÜNCELLEME VE CANLIYA DEPLOY (INSTANT GLOBAL UPDATE & DEPLOY)
+### 1. KURAL: BÜTÜN REPO VE 6 KATEGORİDE ANINDA EKSİKSİZ GÜNCELLEME VE CANLIYA DEPLOY (TOTAL REPOSITORY SYNCHRONIZATION & ZERO OUTDATED FILE DIRECTIVE)
 > [!CRITICAL]
-> Projede yeni bir gelişme olduğu, yeni bir başvuru/tescil/kod/özellik yapıldığı veya herhangi bir bilgi güncellendiği anda; **O ŞEY ANINDA VE İSTİSNASIZ BÜTÜN HER YERDEN GÜNCELLENECEK VE DERHAL GITHUB'A PUSH EDİLİP CANLIYA (`trustia.com.tr`) DEPLOY EDİLECEKTİR.**
-> * **Neler Anında Güncellenmek Zorundadır?**
->   1. **Canlı Web Platformu:** Ana sayfa, Hakkımızda, Robotaxi, İletişim, Footer, Navbar ve ilgili tüm bileşenler.
->   2. **SEO & Arama Motoru Verileri:** Sayfa meta etiketleri, OpenGraph, Twitter Cards, Schema.org JSON-LD kurumsal grafiği.
->   3. **Harita ve Tarayıcılar:** `sitemap.xml` (güncel `lastmod` tarihi ile) ve `robots.txt` AI tarayıcı direktifleri.
->   4. **Master Dokümantasyon:** `README.md`, `AGENTS.md`, `GEMINI.md` ve `.agents/rules/` kuralları.
->   5. **Yatırımcı ve Hibe Dosyaları:** Kategori 04'teki ilgili pitch deck ve modeller, Kategori 05'teki Master Takip Kütüğü (`.md` & `.pdf`).
-> * **Kesin Şart:** Değişiklik yapılıp yerel bilgisayarda ASLA bekletilemez; anında `git add -A`, kurumsal commit ve `git push origin main` yapılarak GitHub Actions üzerinden `trustia.com.tr` canlı ortamına ve Google indeksine fırlatılacaktır!
+> Projede yeni bir gelişme olduğu, yeni bir resmi onay/başvuru/tescil/kod/özellik yapıldığı veya herhangi bir kurumsal bilgi güncellendiği anda; **SADECE WEB SİTESİ VEYA TEK BİR DOSYA DEĞİL, TRUSTIA PROJE ÇATISI ALTINDAKİ 6 ANA KATEGORİNİN HEPSİ VE İÇLERİNDEKİ İSTİSNASIZ BÜTÜN DOSYALAR EŞZAMANLI VE EKSİKSİZ GÜNCELLENECEK VE DERHAL GITHUB'A PUSH EDİLİP CANLIYA (`trustia.com.tr`) DEPLOY EDİLECEKTİR.**
+> * **Repo Çapında İstisnasız Güncellenmesi Zorunlu 6 Kategori ve Dosya Kapsamı:**
+>   1. **`01_Trustia_Otonom_Yazilim_Core/` (Otonomi Motoru & Teknik Kütükler):** `trustia_cli.py` konsol çıktıları, `docs/` altındaki tüm pazar/plan/teknik analizler, `docs/reports/` altındaki tedarikçi başvuru paketleri (`TEDARIKCI_BASVURU_PAKETI.md`, `SERTIFIKASYON_RAPORU_ASAMA6.md`), lisans ve uygunluk kütükleri.
+>   2. **`02_Trustia_Web_Platformu/` (Canlı Web Platformu & Arama Motorları):** `website/` altındaki Ana Sayfa, Hakkımızda, Robotaxi, İletişim, `InstitutionalAccreditations.tsx`, Footer, Navbar, Schema.org JSON-LD kurumsal grafiği, OpenGraph/Twitter Cards meta etiketleri, `sitemap.xml` (güncel `lastmod` tarihi) ve `robots.txt`.
+>   3. **`03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/` (Resmi Sicil & Devlet Portalları):** Devlet/kurum onay belgeleri, portal erişim kodları, SAP kullanıcı bilgileri (`Aselsan_Tedarikci_Kodlari.txt`) ve resmi tescil kütükleri.
+>   4. **`04_Yatirimci_Sunumlari_ve_Is_Planlari/` (Yatırımcı Sunumları & İş Modelleri):** `Pitch_Decks/` (Master Pitch Deck EN/TR, Executive One-Pager, B-Stars, Workup, Revo, Finberg, Inveo, NATO NIF sunumları), `Finansal_Tablolar/`, `Is_Plani_ve_Kanvas/`, `Teknik_ve_Organizasyon/` (Mercedes-Benz, Ioniq 5 vb. şartnameleri).
+>   5. **`05_Uluslararasi_Hibe_ve_Vize_Basvurulari/` (Global Takip Kütüğü & Hibe Dosyaları):** `Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md` ve ikiz resmi `.pdf` çıktısı, 5 konsolide alt klasördeki tüm başvuru paketleri (`01_Avrupa_Birligi_ve_EIT_Hibeleri/`, `02_Katar_QSTP_ve_Korfez_Programlari/`, `03_Savunma_Sanayii_ve_Tedarikci_Portallari/`, `04_Z_Fellows_ve_Silikon_Vadisi/`, `05_Turkiye_Teknokent_ve_Bilisim_Vadisi/`).
+>   6. **`06_Medya_Gorsel_ve_Tanitim_Videolari/` (Medya, Basın Kiti & Logolar):** `Egirisim_Basin_Kiti_2026/`, basın bültenleri, kurumsal tanıtım kütükleri ve görsel materyaller.
+>   7. **Kök Dizin Yönetim Belgeleri:** `README.md`, `AGENTS.md`, `GEMINI.md`, `.agents/rules/folder_structure_rules.md`.
+> * **Sıfır Eskimiş Dosya Toleransı (Zero Outdated File Policy):** Repodaki herhangi bir dosyanın veya sunumun güncel olmayan eski bir statüde (örneğin onaylanmış bir süreç için "ön değerlendirmede" veya davet alınmış bir kurum için "başvuru yapıldı" şeklinde) bırakılması kesinlikle yasaktır!
+> * **Anında Canlıya Dağıtım Şartı:** Tüm güncellemeler yapıldıktan sonra yerel bilgisayarda ASLA bekletilemez; anında `git add -A`, kurumsal commit ve `git push origin main` yapılarak GitHub Actions üzerinden `trustia.com.tr` canlı ortamına ve Google indeksine fırlatılacaktır!
 
 ### 2. KURAL: ÇİFT DİLLİ KÜRESEL EŞİTLİK (BILINGUAL TR/EN PARITY)
 > [!CRITICAL]

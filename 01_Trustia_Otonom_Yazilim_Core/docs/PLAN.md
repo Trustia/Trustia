@@ -20,7 +20,8 @@ Taksi filolarına, belediyelere ve araç üreticilerine (BAYKAR, ASELSAN, HAVELS
 | **Avrupa Komisyonu PIC** | European Commission | AB Katılımcı Kayıt Defteri (PIC: `861711529`) | **TESCİLLİ** |
 | **EIT Urban Mobility** | EIT / Horizon Europe | Partner ID: `CUS15554` (100k€ Hibe: `3.1.02-1206-3732.3`) | **ONAYLI PARTNER** |
 | **BAYKAR Tedarikçi** | Baykar Tech | Seviye-4 Otonomi & 3D LiDAR SLAM | **BAŞVURU ALINDI** |
-| **ASELSAN Tedarikçi** | ASELSAN | Kara Platformu Otonomi (No: `0050569CCE941FD1A49FCEFB9B7BE7D6`) | **ÖN DEĞERLENDİRMEDE** |
+| **ASELSAN Tedarikçi** | ASELSAN | Yazılım Geliştirme Otonomi (No: `0050569CCE941FD1A49FCEFB9B7BE7D6`) | 🟢 **ÖN DEĞERLENDİRME ONAYLANDI (SAP: `FZQHEXGFMTJU`)** |
+| **DEİK İş Konseyi** | Ticaret Bakanlığı / DEİK | Dijital Teknolojiler İş Konseyi Üyeliği | 🟢 **RESMİ ÜYELİK DAVETİ ALINDI** |
 | **ISO 11898 CAN-FD** | Bosch / ISO | Hyundai Ioniq 5 LKAS_FD & SCC_FD 5 Mbps Sürüş Hattı | **ENTEGRE EDİLDİ (`integration/can.py`)** |
 | **ISO 26262 ASIL-D** | ISO | Minimal Risk Maneuver (MRM) Güvenli Durma | **ENTEGRE EDİLDİ (`security/linkloss.py`)** |
 | **SAE AS6091 (JAUS)** | SAE International | Komuta-Kontrol Mesaj Seti | **ENTEGRE EDİLDİ (`integration/jaus.py`)** |

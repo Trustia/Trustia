@@ -46,7 +46,8 @@ Bu sertifika belgesi, **TRUSTIA Otonomi Platformu** yazılımının aşağıdaki
 | **Avrupa Komisyonu Katılımcı Kodu** | PIC Numarası: `861711529` | TESCİLLİ (13 Eylül 2026) |
 | **EIT Urban Mobility Partner ID** | Partner ID: `CUS15554` (100k€ Hibe: `3.1.02-1206-3732.3`) | ONAYLI İŞ ORTAĞI |
 | **BAYKAR Teknoloji Tedarikçi Kaydı** | Seviye-4 Otonomi & 3D SLAM Başvurusu | ONAYLANDI (13 Eylül 2026) |
-| **ASELSAN Tedarikçi Portalı** | Başvuru Kodu: `0050569CCE941FD1A49FCEFB9B7BE7D6` | ÖN DEĞERLENDİRMEDE |
+| **ASELSAN Tedarikçi Portalı** | Başvuru Kodu: `0050569CCE941FD1A49FCEFB9B7BE7D6` | 🟢 ÖN DEĞERLENDİRME ONAYLANDI (SAP: `FZQHEXGFMTJU`) |
+| **DEİK İş Konseyi** | Dijital Teknolojiler İş Konseyi Üyeliği | 🟢 RESMİ ÜYELİK DAVETİ ALINDI |
 | **Taranan Python / C++ Dosyası** | 157 Dosya | ONAYLANDI |
 | **Toplam Kod Hacmi (Lines of Code)** | 16.746+ Satır | ONAYLANDI |
 | **Otomatik Birim & Entegrasyon Testi** | 1.301 / 1.301 Test | **%100 GEÇTİ** |

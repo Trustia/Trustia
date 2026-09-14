@@ -83,7 +83,7 @@ def run_robotaxi():
 
 def run_info():
     print("=" * 75)
-    print("  TRUSTIA AI TEKNOLOJİLERİ A.Ş. — KURUMSAL KİMLİK VE TESCİL SİCİLİ")
+    print("  TRUSTIA AI TEKNOLOJİLERİ — KURUMSAL KİMLİK VE TESCİL SİCİLİ")
     print("=" * 75)
     print("Sürüm: 2.4.0 (Eylül 2026) — Dual-Use Seviye-4 Otonom Mobilite Platformu")
     print("Kurucu & Sistem Mimarı: Murat Furkan Bayram (17 Yaşında, %80 Hisse)")
@@ -95,8 +95,8 @@ def run_info():
     print("  * Avrupa Komisyonu Katılımcı Kodu (PIC): 861711529")
     print("  * EIT Urban Mobility Partner ID: CUS15554 (100.000€ Hibe: 3.1.02-1206-3732.3)")
     print("  * BAYKAR Teknoloji: Resmi Tedarikçi Başvurusu (Onaylandı - 13 Eylül 2026)")
-    print("  * DEİK: Dijital Teknolojiler İş Konseyi (Onaylandı - 13 Eylül 2026)")
-    print("  * ASELSAN: Tedarikçi Portalı Girişimi (No: 0050569CCE941FD1A49FCEFB9B7BE7D6)")
+    print("  * DEİK: Dijital Teknolojiler İş Konseyi (Resmi Üyelik Daveti Alındı - 14 Eylül 2026)")
+    print("  * ASELSAN: Potansiyel Tedarikçi Kütüğü (No: 0050569CCE941FD1A49FCEFB9B7BE7D6 - ONAYLANDI, SAP: FZQHEXGFMTJU)")
     print("  * QSTP (Katar): 30M$ Tech Venture Fonu + 4 Hafta Doha Sprint Kuluçkası")
     print("  * Z Fellows (San Francisco): $10k Hibe Mülakatı (17 Eylül Grace Kasten)")
     print("  * fonbulucu (SPK): 15M TL Taban / 18M TL Tavan (Kampanya: W1MV5K)")

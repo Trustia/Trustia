@@ -57,8 +57,8 @@ Trustia AI, sıfırdan geliştirilen **16.000 satır deterministik Seviye 4 oton
 1. **Avrupa Komisyonu (Participant Register):** Resmi AB Katılımcı Kimlik Kodu (PIC: `861711529`).
 2. **EIT Urban Mobility (Avrupa İnovasyon Enstitüsü):** Resmi İş Ortağı (Partner ID: `CUS15554`) & 100.000€ Hibe Başvurusu (`3.1.02-1206-3732.3`).
 3. **BAYKAR Teknoloji:** Otonomi ve taktik yazılım alt yüklenici tedarikçi başvurusu (13 Eylül 2026).
-4. **DEİK (Dış Ekonomik İlişkiler Kurulu):** Dijital Teknolojiler İş Konseyi Resmi Girişimi.
-5. **ASELSAN Tedarikçi Portalı:** Resmi Tedarikçi Başvuru No: `0050569CCE941FD1A49FCEFB9B7BE7D6`.
+4. **DEİK (Dış Ekonomik İlişkiler Kurulu):** Dijital Teknolojiler İş Konseyi Resmi Üyelik Daveti (14 Eylül 2026).
+5. **ASELSAN Tedarikçi Portalı:** Yazılım Geliştirme Ön Değerlendirmesi Onaylandı • Resmi Potansiyel Tedarikçi Kütüğü (No: `0050569CCE941FD1A49FCEFB9B7BE7D6`, SAP Kodu: `FZQHEXGFMTJU`).
 6. **İTO BTM Ön Kuluçka:** İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (İTO BTM Fulya Kampüsü) 2026 II. Dönem Sözleşmeli Girişimi.
 7. **BTK Akademi:** Türk Savunma Sanayii Ürün ve Platformları Sertifikası (`L2zPtN4X1ZJ`).
 8. **KOSGEB İleri Girişimci:** Resmi Sertifikasyon (`KSB01UGE0115153370`).

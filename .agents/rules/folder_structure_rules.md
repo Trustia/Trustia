@@ -8,8 +8,18 @@
 
 ## 🚨 THE 8 SUPREME DIRECTIVES (MANDATORY AGENT GOVERNANCE)
 
-### RULE #1: INSTANT GLOBAL UPDATE & LIVE DEPLOY
-> Whenever ANY change, accomplishment, credential, code improvement, grant submission, or milestone is achieved: **IT MUST IMMEDIATELY BE SYNCHRONIZED ACROSS ALL TOUCHPOINTS (WEB, SEO, SCHEMA, SITEMAP, DOCUMENTATION) AND PROMPTLY COMMITTED AND PUSHED TO GITHUB FOR PRODUCTION DEPLOYMENT (`trustia.com.tr`).**
+### RULE #1: TOTAL REPOSITORY SYNCHRONIZATION & ZERO OUTDATED FILE DIRECTIVE (INSTANT GLOBAL UPDATE & LIVE DEPLOY)
+> Whenever ANY accomplishment, credential, official approval, supplier registration, grant milestone, or corporate data update occurs (such as ASELSAN Pre-Evaluation Approval or DEİK Invitation): **IT IS NOT ENOUGH TO ONLY UPDATE THE WEBSITE OR A SINGLE FILE. LITERALLY EVERY SINGLE RELEVANT FILE ACROSS ALL 6 REPOSITORY CATEGORIES AND ROOT DOCUMENTATION MUST BE SIMULTANEOUSLY AND COMPREHENSIVELY SYNCHRONIZED AND PROMPTLY PUSHED TO GITHUB FOR PRODUCTION DEPLOYMENT (`trustia.com.tr`).**
+> * **Mandatory Scope Across All 6 Architectural Domains:**
+>   1. **`01_Trustia_Otonom_Yazilim_Core/`**: Autonomy stack documentation (`docs/`), certification reports (`docs/reports/`), CLI tools (`trustia_cli.py`), and compliance records.
+>   2. **`02_Trustia_Web_Platformu/`**: Homepage, About, Robotaxi, Accreditations (`InstitutionalAccreditations.tsx`), Footer, Navbar, Schema.org JSON-LD, SEO meta tags, `sitemap.xml`, and `robots.txt`.
+>   3. **`03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/`**: Official government credentials, portal access logs (`Aselsan_Tedarikci_Kodlari.txt`), and state registry files.
+>   4. **`04_Yatirimci_Sunumlari_ve_Is_Planlari/`**: All pitch decks (`Pitch_Decks/`), executive one-pagers, financial models, business plans, and technical specifications.
+>   5. **`05_Uluslararasi_Hibe_ve_Vize_Basvurulari/`**: Master tracking guide (`Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md` & `.pdf`), defense supplier packages, and international grant dossiers.
+>   6. **`06_Medya_Gorsel_ve_Tanitim_Videolari/`**: Media kits (`Egirisim_Basin_Kiti_2026/`), press releases, and corporate media files.
+>   7. **Root Governance Files:** `README.md`, `AGENTS.md`, `GEMINI.md`, and `.agents/rules/folder_structure_rules.md`.
+> * **Zero Outdated File Tolerance:** Leaving any file in an outdated status (e.g. stating "pre-evaluation pending" or "applied" when an approval or invitation has been granted) is strictly forbidden. All files must reflect verified real-time ground truth.
+> * **Instant Deployment Mandate:** Changes must NEVER be held locally; execute `git add -A`, corporate commit, and `git push origin main` immediately for live deployment.
 
 ### RULE #2: BILINGUAL TR/EN PARITY
 > Whenever documentation or web content is created or updated, **both Turkish and English versions must be maintained in complete parity.** Global VCs (Z Fellows, EITUM, QSTP) inspect English; national bodies (ASELSAN, BAYKAR, KOSGEB) inspect Turkish.

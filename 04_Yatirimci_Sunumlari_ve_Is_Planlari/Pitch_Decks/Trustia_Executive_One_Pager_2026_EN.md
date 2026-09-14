@@ -43,7 +43,8 @@ While vehicle manufacturers build robust physical hardware, they lack the propri
 * **European Union Project Registration:** Official EU Participant Identification Code (PIC: `861711529`) via European Commission. Partner ID `CUS15554` at EIT Urban Mobility. €100,000 grant application submitted (ID: `3.1.02-1206-3732.3`).
 * **Qatar Foundation QSTP:** Two applications submitted — $30M Tech Venture Fund and 4-week Doha Sprint Incubation Program.
 * **Z Fellows (Silicon Valley):** Selected for live 10-minute Zoom interview with Grace Kasten (Partner at Pace Capital, $10k equity-free grant).
-* **Defense Supply Chain Pipeline:** Official supplier evaluations active at ASELSAN (0050569CCE941FD1A49FCEFB9B7BE7D6) and BAYKAR Teknoloji.
+* **Defense Supply Chain Pipeline:** Official software supplier pre-evaluation APPROVED at ASELSAN (0050569CCE941FD1A49FCEFB9B7BE7D6 • Potential Supplier with SAP Portal Access) and active supplier candidacy at BAYKAR Teknoloji.
+* **Commercial Diplomacy & Global Export:** Official corporate membership invitation received from Foreign Economic Relations Board of Turkey (DEİK) Digital Technologies Business Council under the Ministry of Trade.
 * **Crunchbase Verified:** Heat Score 85, CB Rank 534k, Active $500k Pre-Seed round (crunchbase.com/organization/trustia-ai).
 
 ---

@@ -96,11 +96,11 @@
 
 * **Crunchbase Institutional Verification:** Officially verified organization (crunchbase.com/organization/trustia-ai) with Heat Score 85, CB Rank 534k, and active $500k Pre-Seed round.
 * **Z Fellows (Silicon Valley):** Selected for live partner interview with Grace Kasten (Partner at Pace Capital) on September 17, 2026 ($10k equity-free grant & San Francisco residency).
-* **Defense Industry Supplier Status:** Official supplier registration and evaluation active at **BOTH** Turkish defense giants:
-  * **ASELSAN:** Supplier Portal Entry (0050569CCE941FD1A49FCEFB9B7BE7D6) across Software Development, Platform Integration, and Land Systems Integration.
+* **Defense Industry Supplier Status:** Official supplier approvals and candidacies active at **BOTH** Turkish defense giants:
+  * **ASELSAN:** Software Engineering pre-evaluation **OFFICIALLY APPROVED** (`0050569CCE941FD1A49FCEFB9B7BE7D6`). Formally registered in the Potential Supplier Registry with enterprise SAP portal credentials (`FZQHEXGFMTJU`).
   * **BAYKAR Teknoloji:** Official Supplier Application submitted for tactical autonomy and GPS-denied SLAM integration.
 * **Trade Diplomacy & State Accreditation:**
-  * **DEIK (Foreign Economic Relations Board / Turkish Ministry of Trade):** Official Digital Technologies Business Council inquiry.
+  * **DEİK (Foreign Economic Relations Board / Turkish Ministry of Trade):** Official corporate membership invitation received from the Digital Technologies Business Council to lead sovereign autonomous mobility export diplomacy.
   * **European Commission (EU PIC Registration):** Trustia officially registered in the EU Participant Register with PIC Number `861711529`, enabling direct access to Horizon Europe and EIT funding programs.
   * **EIT Urban Mobility (European Institute of Innovation & Technology):** Official Partner ID `CUS15554` assigned. €100,000 grant application submitted (Application ID: `3.1.02-1206-3732.3`) under the 'Financial Support for Entrepreneurs 26-28' call.
   * **QSTP (Qatar Science & Technology Park — Qatar Foundation, Doha):** Two separate applications submitted — $30M Tech Venture Fund (9-page form) and official Incubation & Doha Sprint Program (8-page form, 4-week Doha residency with office, hotel, and Qatar company registration support).

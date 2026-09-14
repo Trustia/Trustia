@@ -16,7 +16,7 @@
 
 ### B. HAVELSAN BARKAN 3 & ASELSAN ASLAN ("Dijital Birlik" Konsepti)
 * **BARKAN 3 ve ASLAN İKA:** 1 ton sınıfı ağır platformlar, SARP kule entegrasyonu ve 360 derece sensör füzyonu ile Türk Silahlı Kuvvetleri Dijital Birlik vizyonunun omurgasını oluşturmaktadır.
-* **ASELSAN Tedarikçi Süreci:** Trustia Teknoloji'nin `0050569CCE941FD1A49FCEFB9B7BE7D6` başvuru numaralı tedarikçi başvurusu ön değerlendirmede devam etmektedir.
+* **ASELSAN Tedarikçi Süreci:** Trustia'nın `0050569CCE941FD1A49FCEFB9B7BE7D6` başvuru numaralı tedarikçi başvurusu "Yazılım Geliştirme" alanında **OLUMLU SONUÇLANMIŞ**, potansiyel tedarikçi olarak resmi SAP portal erişim yetkisi (`FZQHEXGFMTJU`) tahsis edilmiştir.
 
 ### C. FNSS GÖLGE SÜVARİ & Elektroland HANÇER
 * **Ağır ve Orta Sınıf İKA Seri Üretimi:** Zırhlı personel taşıyıcı dönüşümü (Gölge Süvari) ve bomba imha/keşif İKA'ları (Hançer) envanterde aktif olarak yer almaktadır.

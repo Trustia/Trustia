@@ -2,7 +2,7 @@
 
 **Belge Kodu:** `TRST-SUPP-2026-V2.4`  
 **Başvuru Tipi:** BAYKAR Tedarikçi / ASELSAN "Gücümüz Bir" & Yerlileştirme / SSB EYDEP A Sınıfı Yazılım Tedarikçi Başvurusu  
-**Başvuru Kodları:** ASELSAN: `0050569CCE941FD1A49FCEFB9B7BE7D6` • AB PIC: `861711529` • EIT: `CUS15554`  
+**Başvuru Kodları:** ASELSAN: `0050569CCE941FD1A49FCEFB9B7BE7D6` (Ön Onaylı • Potansiyel Tedarikçi, SAP: `FZQHEXGFMTJU`) • AB PIC: `861711529` • EIT: `CUS15554`  
 **Tarih:** 13 Eylül 2026  
 **Gizlilik Derecesi:** HİZMETE ÖZEL / TİCARİ GİZLİ  
 
@@ -16,8 +16,8 @@
 | **Avrupa Komisyonu PIC** | Katılımcı Kimlik No: `861711529` | Tescilli & Aktif (13 Eylül 2026) |
 | **EIT Urban Mobility** | Partner ID: `CUS15554` (100k€ Hibe: `3.1.02-1206-3732.3`) | Onaylı İş Ortağı |
 | **BAYKAR Teknoloji** | Resmi Tedarikçi / Alt Yüklenici Başvuru Masası | Onaylandı (13 Eylül 2026) |
-| **DEİK İş Konseyi** | Dijital Teknolojiler İş Konseyi Ön Bilgi Formu | Onaylandı (13 Eylül 2026) |
-| **ASELSAN Portal Başvuru Kodu** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | Ön Değerlendirmede |
+| **DEİK İş Konseyi** | Dijital Teknolojiler İş Konseyi Resmi Üyelik | Resmi Davet Alındı (14 Eylül 2026) |
+| **ASELSAN Portal Başvuru Kodu** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | 🟢 Ön Değerlendirme OLUMLU SONUÇLANDI • Potansiyel Tedarikçi (SAP: `FZQHEXGFMTJU`) |
 | **KOSGEB İleri Girişimcilik** | `KSB01UGE0115153370` | %100 Resmi Onaylı |
 | **BTK Akademi Savunma Sanayii** | Sertifika No: `L2zPtN4X1ZJ` | Katılım Sertifikası |
 | **TÜBİTAK ARBİS Kaydı** | Araştırmacı Kimlik No: `TBTK-0229-6571` | Kayıtlı & Doğrulanmış |

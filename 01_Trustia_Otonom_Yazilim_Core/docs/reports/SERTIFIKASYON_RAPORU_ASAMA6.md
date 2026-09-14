@@ -61,9 +61,9 @@ Kullanılan Standart Modüller: `__future__`, `abc`, `argparse`, `ast`, `collect
 | 🇪🇺 **Avrupa Komisyonu (Participant Register)** | PIC Numarası: `861711529` | **RESMİ TESCİLLİ** |
 | 🇪🇺 **EIT Urban Mobility (NetSuite PIF)** | Partner ID: `CUS15554` (Grant: `3.1.02-1206-3732.3`) | **RESMİ TESCİLLİ & GÖNDERİLDİ** |
 | 🇹🇷 **T.C. Sanayi ve Teknoloji Bakanlığı** | TÜR (Teknolojik Ürün Deneyim Belgesi) | Başvuru Dosyası Hazır |
-| 🇹🇷 **ASELSAN Tedarikçi Portalı** | Başvuru No: `0050569CCE941FD1A49FCEFB9B7BE7D6` | Ön Değerlendirme Devam Ediyor |
+| 🇹🇷 **ASELSAN Tedarikçi Portalı** | Başvuru No: `0050569CCE941FD1A49FCEFB9B7BE7D6` | 🟢 **ÖN DEĞERLENDİRME ONAYLANDI (SAP: `FZQHEXGFMTJU`)** |
 | 🇹🇷 **BAYKAR Teknoloji** | Resmi Tedarikçi & Alt Yüklenici Başvurusu | Eksiksiz Gönderildi (13.09.2026) |
-| 🇹🇷 **DEİK (Dış Ekonomik İlişkiler Kurulu)** | Dijital Teknolojiler İş Konseyi Formu | Eksiksiz Gönderildi (13.09.2026) |
+| 🇹🇷 **DEİK (Dış Ekonomik İlişkiler Kurulu)** | Dijital Teknolojiler İş Konseyi Formu | 🟢 **RESMİ ÜYELİK DAVETİ ALINDI (14.09.2026)** |
 | 🇶🇦 **QSTP (Katar Bilim ve Teknoloji Parkı)** | 30M$ Fon + 4 Hafta Doha Sprint Kuluçka | Eksiksiz Gönderildi (13.09.2026) |
 | 🇹🇷 **fonbulucu (SPK Paya Dayalı Kitle Fonlama)** | Kampanya Kodu: `W1MV5K` (15M TL / 150M TL Val.) | Resmi Ön İncelemede |
 | 🇹🇷 **KOSGEB İleri Girişimci** | Katılım Belgesi No: `KSB01UGE0115153370` | **RESMİ TESCİLLİ** |
