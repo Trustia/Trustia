@@ -208,6 +208,21 @@ export default function InstitutionalAccreditations() {
       authority: "hasat.eventiqs.com",
       recordTypeTr: "SSB & İTO Destekli Teknoloji Sahnesi",
       recordTypeEn: "SSB & İTO Deep Tech Stage"
+    },
+    {
+      id: "14",
+      categoryTr: "Singapur Startup SG",
+      categoryEn: "Singapore Startup SG",
+      scopeTr: "EnterpriseSG & Ulusal Ağ",
+      scopeEn: "EnterpriseSG & National Network",
+      badge: "Profil ID: #57428",
+      questionTr: "Singapur Hükümeti Startup SG ve küresel inovasyon ağı kaydı nedir?",
+      questionEn: "What is the Singapore Government Startup SG and global innovation network registration?",
+      answerTr: "Singapur Ticaret ve Sanayi Bakanlığı'na bağlı Enterprise Singapore (EnterpriseSG) resmi inovasyon ağı olan Startup SG platformunda Trustia kurucu profili (Kayıt ID: #57428) %100 oranında tamamlanarak onaylanmıştır. Bu akreditasyon ile Güneydoğu Asya (APAC) derin teknoloji ekosistemine, EntrePass girişimci vizesi programına ve SLINGSHOT 2026 yarışmasına doğrudan erişim hakkı sağlanmıştır.",
+      answerEn: "Trustia's executive founder profile (Profile ID: #57428) is 100% completed and registered on Startup SG, the official deep-tech innovation network under Enterprise Singapore (EnterpriseSG), Ministry of Trade and Industry. This accreditation enables direct access to the APAC autonomous mobility venture ecosystem, the Singapore EntrePass global talent scheme, and the SLINGSHOT 2026 challenge.",
+      authority: "startupsg.gov.sg",
+      recordTypeTr: "Resmi Kurucu Profili • Ulusal Ekosistem",
+      recordTypeEn: "Official Founder Profile • National Ecosystem"
     }
   ];
 
@@ -228,7 +243,7 @@ export default function InstitutionalAccreditations() {
           </div>
           <div className="text-left sm:text-right">
             <span className="text-[11px] font-mono text-zinc-400">
-              {lang === "tr" ? "13 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "13 Verified Records / Defense & Global Funds"}
+              {lang === "tr" ? "14 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "14 Verified Records / Defense & Global Funds"}
             </span>
           </div>
         </div>
