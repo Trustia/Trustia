@@ -30,7 +30,7 @@
 | 🇹🇷/🎖️ **MSB & NATO NCAGE Askeri Tedarikçi** | **`TR26258467723`** | NATO NSPA & T.C. Milli Savunma Bakanlığı (TMKB) Tescili • Doğrulandı • MSB Sorumlusu: Medine AYGUN |
 | 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 93 / Büyüme: 91 / Sıra: 98k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
 | 🧪 **Doğrulanmış Kod ve Test** | **16.000+ Satır / 1.301 Test** | 10 Kritik Alt Sistemde %100 Başarı |
-| 🌍 **Toplam Başvuru ve Tescil** | **89+ Resmi Başvuru** | 16+ Ülke (NATO, ABD, Singapur, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
+| 🌍 **Toplam Başvuru ve Tescil** | **90+ Resmi Başvuru** | 17+ Ülke (NATO, ABD, Malta, Singapur, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
 
 ---
 
@@ -41,6 +41,7 @@
 | **Avrupa Komisyonu Katılımcı Kaydı** | PIC: `861711529` | AB Tescili | 13.09.2026 | ✅ **Kalıcı Onaylandı** | Horizon Europe / EIC doğrudan erişim |
 | **EIT Urban Mobility İş Ortaklığı** | Partner: `CUS15554` | AB Tedarikçi | 13.09.2026 | ✅ **Portal Canlıda** | NetSuite tedarikçi ve proje yürütücülüğü |
 | **EIT UM Girişimci Mali Destek (26-28)** | `3.1.02-1206-3732.3` | 100.000 € Hibe | 13.09.2026 | 🟡 **Gönderildi** | Q4 2026 Jüri & Hibe Sözleşmesi |
+| **Malta Enterprise Start-up Finance** | MSRP & Start-up Finance 2026 | 1.500.000 € Hibe/Avans + 3+5 Yıl Oturum | 15.09.2026 | 📝 **Dosya Hazırlandı** | 30 Ekim 2026 Cut-off • Naxxar/Lija Palazzo HQ |
 | **EIC Accelerator (Avrupa İnovasyon Konseyi)** | Step 1 Başvuru Paketi | 2.5M€ Hibe + 15M€ Equity | Eylül 2026 | 📝 Dosya Hazır | 2026 Cut-off periyodu |
 
 ---
