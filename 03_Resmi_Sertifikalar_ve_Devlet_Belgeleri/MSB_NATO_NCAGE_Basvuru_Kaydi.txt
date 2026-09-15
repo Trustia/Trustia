@@ -1,0 +1,32 @@
+﻿================================================================================
+T.C. MİLLİ SAVUNMA BAKANLIĞI (MSB) & NATO NSPA
+RESMİ NATO NCAGE ASKERİ TEDARİKÇİ KODU BAŞVURU VE TESCİL KAYDI
+================================================================================
+Firma Adı: TRUSTIA AI OTONOM SISTEMLERI
+Yetkili: Murat Furkan Bayram
+Resmi Başvuru / Talep Referans No: TR26258467723
+Başvuru Tarihi: 15.09.2026 12:52 TRT
+Durum: E-Posta Doğrulaması Tamamlandı • İŞLEME ALINMAK ÜZERE ULUSAL YETKİLİLERE İLETİLDİ
+
+ULUSLARARASI VE ULUSAL MAKAM BİLGİLERİ:
+- Uluslararası Makam: NATO Destek ve Tedarik Ajansı (NSPA - Capellen, Lüksemburg)
+- Ulusal Makam: T.C. Milli Savunma Bakanlığı (MSB) Teknik Hizmetler Genel Müdürlüğü
+  Türk Milli Kodlandırma Bürosu (TMKB - Bakanlıklar / Ankara)
+- Atanan MSB Resmi Sorumlusu: Medine AYGUN
+- MSB Resmi İletişim: tmkb@msb.gov.tr | +90 312 410 6184
+- NSPA NCAGE Masası: ncage@nspa.nato.int
+
+BAŞVURU METADATA VE SEKTÖREL KODLAR:
+- Varlık Türü: Özel Şirket (Savunma & Otonom Sistemler)
+- NACE Kodu: 6201 (Bilgisayar Programlama / Yazılım Geliştirme)
+- ISIC Kodu: 6201 (Computer programming activities)
+- UNSPSC Kodu: 81111500 (BM Yazılım ve Donanım Mühendisliği)
+- NAICS Kodu: 541511 (Özel Yazılım ve Otonomi Geliştirme Servisi)
+- CPV Kodu: 72262000-0 (Yazılım Geliştirme Hizmetleri)
+- Tescilli Adres: Fulya Mah. Yesilcimen Sok. BTM Kampusu No: 12 Sisli / Istanbul
+
+SAĞLADIĞI STRATEJİK STATÜ:
+1. NATO Müttefik Tedarikçi Kütüğü (NCS / ACodP-1) resmi dosya kaydı.
+2. TSK, ASELSAN (#0050569) ve NATO ihaleleri için resmi müttefik tedarikçi statüsü.
+3. NATO İnovasyon Fonu (NIF - 1 Milyar €) ve NATO DIANA zorunlu askeri kodlama uyumu.
+================================================================================

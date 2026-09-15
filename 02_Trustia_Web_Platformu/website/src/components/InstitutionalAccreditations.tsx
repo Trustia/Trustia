@@ -223,6 +223,21 @@ export default function InstitutionalAccreditations() {
       authority: "enterprisesg.gov.sg",
       recordTypeTr: "Resmi Kurucu Profili & GIA Hızlandırma Başvurusu",
       recordTypeEn: "Official Founder Profile & GIA Acceleration Application"
+    },
+    {
+      id: "15",
+      categoryTr: "Milli Savunma Bakanlığı & NATO",
+      categoryEn: "Ministry of National Defense & NATO",
+      scopeTr: "NCAGE Askeri Tedarikçi Tescili",
+      scopeEn: "NCAGE Military Supplier Registry",
+      badge: "Ref: TR26258467723",
+      questionTr: "Trustia'nın NATO ve Milli Savunma Bakanlığı NCAGE askeri tedarikçi başvuru durumu nedir?",
+      questionEn: "What is the status of Trustia's NATO and Ministry of National Defense NCAGE military supplier application?",
+      answerTr: "NATO Destek ve Tedarik Ajansı (NSPA) e-Portalı üzerinden Seviye-4 otonomi ve savunma yazılımı faaliyet alanıyla yapılan NCAGE tescil başvurusu (Referans No: TR26258467723) e-posta doğrulaması tamamlanarak T.C. Milli Savunma Bakanlığı (MSB) Türk Milli Kodlandırma Bürosu'na (TMKB) resmi onaya sevk edilmiştir. ASELSAN onaylı potansiyel tedarikçi (#0050569) statümüzle birlikte NATO müttefik askeri tedarikçi kütüğüne (ACodP-1) işleme süreci başlatılmıştır.",
+      answerEn: "The NATO Commercial and Government Entity (NCAGE) military supplier registration submitted via NATO Support and Procurement Agency (NSPA) e-Portal under reference TR26258467723 has been verified and officially routed to the Republic of Türkiye Ministry of National Defense (MSB) Turkish National Codification Bureau (TMKB). In conjunction with our verified ASELSAN supplier accreditation (#0050569), the official codification into the allied NATO Codification System (NCS) is actively in process.",
+      authority: "nspa.nato.int • msb.gov.tr",
+      recordTypeTr: "Resmi NATO NCAGE Askeri Tescil Başvurusu",
+      recordTypeEn: "Official NATO NCAGE Military Supplier Application"
     }
   ];
 
@@ -243,7 +258,7 @@ export default function InstitutionalAccreditations() {
           </div>
           <div className="text-left sm:text-right">
             <span className="text-[11px] font-mono text-zinc-400">
-              {lang === "tr" ? "14 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "14 Verified Records / Defense & Global Funds"}
+              {lang === "tr" ? "15 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "15 Verified Records / Defense & Global Funds"}
             </span>
           </div>
         </div>
@@ -304,6 +319,10 @@ export default function InstitutionalAccreditations() {
                 <div className="flex items-center justify-between py-1.5 px-2.5 rounded bg-zinc-900/50 border border-zinc-800/60">
                   <span className="text-zinc-400">Avrupa Komisyonu</span>
                   <span className="text-zinc-200 font-semibold">PIC: 861711529</span>
+                </div>
+                <div className="flex items-center justify-between py-1.5 px-2.5 rounded bg-zinc-900/50 border border-zinc-800/60">
+                  <span className="text-zinc-400">MSB & NATO NCAGE</span>
+                  <span className="text-zinc-200 font-semibold">Ref: TR2625846</span>
                 </div>
               </div>
             </div>

@@ -27,9 +27,10 @@
 | 🇹🇷 **Teknopark İstanbul HASAT 2026** | **100M TL Destek & Ofis** | SSB & İTO Destekli Teknoloji Hasatı • "Başvurunuz Başarıyla Alındı! 🎉" |
 | 🇸🇬 **Singapur Startup SG (EnterpriseSG)** | **ID: `#57428`** | Resmi Kurucu Profili %100 Tamamlandı • EntrePass & SLINGSHOT 2026 Portalı Aktif |
 | 🇸🇬 **Singapur GIA & B2Match (EnterpriseSG)** | **Yanıt ID: `6aa85fa93dc42d7feef1bc57`** | GIA Başvurusu & B2Match Küresel Eşleştirme Portalı %100 Kuruldu (15.09.2026 00:24 TRT) |
+| 🇹🇷/🎖️ **MSB & NATO NCAGE Askeri Tedarikçi** | **`TR26258467723`** | NATO NSPA & T.C. Milli Savunma Bakanlığı (TMKB) Tescili • Doğrulandı • MSB Sorumlusu: Medine AYGUN |
 | 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 93 / Büyüme: 91 / Sıra: 98k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
 | 🧪 **Doğrulanmış Kod ve Test** | **16.000+ Satır / 1.301 Test** | 10 Kritik Alt Sistemde %100 Başarı |
-| 🌍 **Toplam Başvuru ve Tescil** | **88+ Resmi Başvuru** | 16+ Ülke (ABD, Singapur, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
+| 🌍 **Toplam Başvuru ve Tescil** | **89+ Resmi Başvuru** | 16+ Ülke (NATO, ABD, Singapur, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
 
 ---
 
@@ -70,6 +71,7 @@
 | **T.C. CB Yatırım ve Finans Ofisi** | Stratejik Yatırım Masası | Global Otonom Mobilite ve Doğrudan Yabancı Yatırım | 12.09.2026 | ✅ **"E-postanız başarıyla gönderilmiştir."** |
 | **FNSS Savunma Sistemleri** | Birim Müdürü Dr. Raşit Karakuş | Gölge Süvari Taktik İKA Otonomi Beyni | 08.09.2026 | 🟡 Doğrudan İletildi |
 | **BMC Savunma & Otomotiv** | Zırhlı Araç & Çekici Masası | Kirpi/Vuran Taktik Seviye-4 Otonom Konvoy | 08.09.2026 | 🟡 Doğrudan İletildi |
+| **NATO NSPA & MSB TMKB** | `TR26258467723` | NCAGE Askeri Tedarikçi Kodu & Müttefik Kütüğü Tescili | 15.09.2026 | 🟢 **BAŞVURU TAMAMLANDI & MSB ONAYINA SEVK EDİLDİ** (Medine AYGUN, tmkb@msb.gov.tr, +90 312 410 6184) |
 | **NATO DIANA & NIF** | 1 Milyar € Savunma İnovasyon Fonu | STANAG 4586 Taktik İKA Otonomi Beyni | Eylül 2026 | 📝 Başvuru Paketi Hazır |
 
 ---
