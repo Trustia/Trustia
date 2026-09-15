@@ -41,7 +41,7 @@
 | **Avrupa Komisyonu Katılımcı Kaydı** | PIC: `861711529` | AB Tescili | 13.09.2026 | ✅ **Kalıcı Onaylandı** | Horizon Europe / EIC doğrudan erişim |
 | **EIT Urban Mobility İş Ortaklığı** | Partner: `CUS15554` | AB Tedarikçi | 13.09.2026 | ✅ **Portal Canlıda** | NetSuite tedarikçi ve proje yürütücülüğü |
 | **EIT UM Girişimci Mali Destek (26-28)** | `3.1.02-1206-3732.3` | 100.000 € Hibe | 13.09.2026 | 🟡 **Gönderildi** | Q4 2026 Jüri & Hibe Sözleşmesi |
-| **Malta Enterprise Start-up Finance** | No: `100062411` • CRM: `0175017` | 1.500.000 € Hibe/Avans + 3+5 Yıl Oturum | 15.09.2026 | 🟢 **Resmen Gönderildi** | "Form başarıyla gönderildi" • Naxxar/Lija Palazzo HQ |
+| **Malta Enterprise Start-up Finance & MSRP** | No: `100062411` (Hibe) & `100062412` (MSRP) | 1.500.000 € Hibe/Avans + 3+5 Yıl AB Oturumu | 15.09.2026 | 🟢 **İkisi de Resmen Gönderildi** | Çifte "Form başarıyla gönderildi" • Naxxar/Lija Palazzo HQ |
 | **EIC Accelerator (Avrupa İnovasyon Konseyi)** | Step 1 Başvuru Paketi | 2.5M€ Hibe + 15M€ Equity | Eylül 2026 | 📝 Dosya Hazır | 2026 Cut-off periyodu |
 
 ---
