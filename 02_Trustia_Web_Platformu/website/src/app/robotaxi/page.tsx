@@ -7,7 +7,6 @@ import {
   Eye,
   Layers,
   Radio,
-  Download,
   CheckCircle2,
   ChevronRight,
   Gauge,
@@ -456,30 +455,29 @@ export default function RobotaxiPage() {
           </div>
         </div>
 
-        {/* 7. Bottom Master PDF Download Card */}
+        {/* 7. Institutional NDA Technical Cooperation Card */}
         <div className="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left max-w-2xl">
             <span className="px-2.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300 font-mono text-xs uppercase tracking-wider inline-block">
-              {lang === "tr" ? "RESMİ MÜHENDİSLİK DOKÜMANI" : "OFFICIAL ENGINEERING SPECIFICATION"}
+              {lang === "tr" ? "KURUMSAL TEKNİK İŞBİRLİĞİ" : "INSTITUTIONAL TECHNICAL COOPERATION"}
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-              {lang === "tr" ? "5 Sayfalık Master Dönüşüm Şartnamesi" : "5-Page Master Engineering Specification"}
+              {lang === "tr" ? "Mühendislik Şartnamesi ve Entegrasyon Protokolü" : "Engineering Specification & Integration Protocol"}
             </h3>
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">
               {lang === "tr"
-                ? "27 parçalık doğrulanmış donanım listesi, tavan barı montaj geometrisi, dikiz aynası CAN-FD kablo şeması, CharuCo kalibrasyonu ve güvenlik protokolleri."
-                : "Complete 27-item verified BOM table, roof rack mounting geometry, CAN-FD wire harness pins, CharuCo extrinsic calibration, and safety watchdog protocols."}
+                ? "Donanım mimarisi, sensör yerleşim geometrisi, CAN-FD sinyal protokolleri ve platform güvenlik standartları kurumsal gizlilik sözleşmesi (NDA) kapsamında OEM ve savunma sanayii ortaklarıyla paylaşılmaktadır."
+                : "Detailed hardware schematics, sensor mounting geometry, CAN-FD bus protocols, and functional safety architecture are available to qualified OEM and defense partners under institutional NDA."}
             </p>
           </div>
 
-          <a
-            href="/06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
-            download
+          <Link
+            href="/iletisim"
             className="w-full sm:w-auto px-5 py-3 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-2 shrink-0"
           >
-            <Download className="w-4 h-4" />
-            <span>{lang === "tr" ? "PDF ŞARTNAMEYİ İNDİR" : "DOWNLOAD PDF"}</span>
-          </a>
+            <Lock className="w-4 h-4" />
+            <span>{lang === "tr" ? "NDA İLE TALEP ET" : "REQUEST VIA NDA"}</span>
+          </Link>
         </div>
 
       </div>

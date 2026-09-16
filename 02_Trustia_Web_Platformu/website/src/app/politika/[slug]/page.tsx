@@ -46,7 +46,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "Madde 1 — Sözleşmenin Tarafları, Tescili ve Yürürlük",
           items: [
-            "İşbu sözleşme; Open Invention Network LLC (200 West Street, New York, NY 10282, ABD - Temsilen CEO Keith Bergelt) ile TRUSTIA TEKNOLOJİ (İTO BTM Fulya Kampüsü, Şişli / İstanbul, Türkiye - Temsilen Kurucu & CEO Murat Furkan Bayram) arasında 16 Eylül 2026 tarihinde çift taraflı dijital imza ile akdedilmiş ve yürürlüğe girmiştir.",
+            "İşbu sözleşme; Open Invention Network LLC (200 West Street, New York, NY 10282, ABD - Temsilen OIN İcra Kurulu) ile TRUSTIA TEKNOLOJİ (İTO BTM Fulya Kampüsü, Şişli / İstanbul, Türkiye - Temsilen Trustia İcra Kurulu / Şirket Yönetimi) arasında 16 Eylül 2026 tarihinde çift taraflı dijital imza ile akdedilmiş ve yürürlüğe girmiştir.",
             "Resmi Sözleşme Belge Numarası: f1e445769a9934114db095c4f5430a0e749d8201 olup OIN Global Katılımcı Kütüğü'ne 'Tier 5 - Start-up / Deep Tech Licensee' statüsünde tescil edilmiştir.",
             "İmzalı resmi sözleşme nüshası 'Trustia_OIN_Lisans_Sozlesmesi_2026.pdf' adıyla kurumsal dijital depomuzda ve web platformumuzda kamuya açık ve doğrulanabilir şekilde yayınlanmaktadır."
           ]
@@ -87,7 +87,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "Section 1 — Parties, Execution & Institutional Validity",
           items: [
-            "This Agreement was executed and entered into force on September 16, 2026, by and between Open Invention Network LLC (represented by CEO Keith Bergelt) and TRUSTIA TECHNOLOGY (represented by Founder & CEO Murat Furkan Bayram).",
+            "This Agreement was executed and entered into force on September 16, 2026, by and between Open Invention Network LLC (represented by OIN Executive Board) and TRUSTIA TECHNOLOGY (represented by Trustia Executive Directorate).",
             "Official Document Verification ID: f1e445769a9934114db095c4f5430a0e749d8201, formally codified under OIN Tier 5 Deep-Tech Licensee classification.",
             "The executed bilateral agreement PDF ('Trustia_OIN_Lisans_Sozlesmesi_2026.pdf') is permanently archived and publicly verifiable on our institutional platform."
           ]

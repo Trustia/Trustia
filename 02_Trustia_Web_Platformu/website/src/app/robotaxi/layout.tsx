@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     "Jetson AGX Orin",
     "Sony IMX390 GMSL2",
     "Trustia AI",
-    "Murat Furkan Bayram",
     "İTO BTM",
     "Bilişim Vadisi"
   ],

@@ -43,7 +43,6 @@ export const metadata: Metadata = {
     "Teknopark İstanbul",
     "Teknopark İstanbul HASAT 2026",
     "KOSGEB İleri Girişimci",
-    "Murat Furkan Bayram",
     "İstanbul",
     "Avrupa Komisyonu PIC 861711529",
     "EIT Urban Mobility CUS15554",
@@ -62,7 +61,6 @@ export const metadata: Metadata = {
   ],
   authors: [
     { name: "Trustia AI", url: "https://trustia.com.tr" },
-    { name: "Murat Furkan Bayram", url: "https://trustia.com.tr/hakkimizda/" },
   ],
   creator: "Trustia AI",
   publisher: "Trustia AI",
@@ -140,14 +138,9 @@ export default function RootLayout({
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
         "description": "Milli Çift Amaçlı Seviye 4 Otonom Sürüş, V2X Akıllı Şehir ve Askeri İnsansız Kara Aracı (İKA) Otonomi Yazılım Platformu.",
-        "foundingDate": "2026",
-        "founder": {
-          "@type": "Person",
-          "name": "Murat Furkan Bayram",
-          "jobTitle": "Kurucu & Sistem Mimarı / Founder & Autonomous Systems Architect",
-          "sameAs": [
-            "https://www.linkedin.com/in/trustia"
-          ]
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "İstanbul, Türkiye"
         },
         "address": {
           "@type": "PostalAddress",

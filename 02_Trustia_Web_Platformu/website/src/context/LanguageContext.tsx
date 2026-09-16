@@ -69,10 +69,10 @@ const translations: Record<Language, Record<string, string>> = {
     about_c2_desc: "16.000+ satır özgün deterministik mimari; 1.301 otomatik birim ve simülasyon testinden %100 başarıyla geçerek sahada doğrulanmıştır.",
     about_c3_title: "Evrensel Donanım Bağımsızlığı",
     about_c3_desc: "Standart CAN-Bus ve ROS 2 protokolleri sayesinde binek otomobillerden askeri zırhlı araçlara kadar her şasiye kolayca entegre olur.",
-    about_founder_badge: "KURUCU & SİSTEM MİMARI",
-    about_founder_title: "Murat Furkan Bayram",
-    about_founder_role: "Kurucu & Sistem Mimarı",
-    about_founder_bio: "KOSGEB İleri Girişimci ve BTK Akademi Savunma Sanayii sertifikalı sistem mimarı. GPS'siz 3D SLAM, sürü zekası ve Seviye 4 yerli otonom sürüş mimarisini geliştirmiş olup şirketin teknoloji ve Ar-Ge yapılanmasını yönetmektedir.",
+    about_founder_badge: "MÜHENDİSLİK VE AR-GE YÖNETİMİ",
+    about_founder_title: "Trustia Otonomi Mühendislik Heyeti",
+    about_founder_role: "Sistem ve Otonomi Mühendisliği",
+    about_founder_bio: "Deterministik otonomi çekirdeği, GPS'siz 3D LiDAR SLAM, hibrit rota planlama ve Seviye 4 kontrol algoritmalarını geliştiren uzman mühendislik kadrosu.",
 
     // Contact
     contact_back: "Ana Sayfaya Dön",
@@ -181,10 +181,10 @@ const translations: Record<Language, Record<string, string>> = {
     about_c2_desc: "16,000+ lines of deterministic autonomy architecture verified with 100% pass rate across 1,301 rigorous unit and simulation tests.",
     about_c3_title: "Universal Hardware-Agnostic Core",
     about_c3_desc: "Standard CAN-Bus and ROS 2 compliance enables seamless integration across passenger cars, commercial vans, and defense platforms.",
-    about_founder_badge: "FOUNDER & SYSTEMS ARCHITECT",
-    about_founder_title: "Murat Furkan Bayram",
-    about_founder_role: "Founder & Systems Architect",
-    about_founder_bio: "KOSGEB Advanced Entrepreneur and BTK Academy Defense Industry certified systems architect. Developed GPS-denied 3D SLAM, deterministic motion planning, and Level 4 sovereign autonomy architectures.",
+    about_founder_badge: "ENGINEERING & R&D DIRECTORATE",
+    about_founder_title: "Trustia Autonomy Engineering Team",
+    about_founder_role: "Autonomous Systems & Safety Architecture",
+    about_founder_bio: "Core engineering team developing deterministic autonomy, GPS-denied 3D LiDAR SLAM, hybrid trajectory planning, and Level 4 control architectures.",
 
     // Contact
     contact_back: "Back to Home",
