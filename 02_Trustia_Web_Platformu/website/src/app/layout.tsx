@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (Partner: CUS15554), Singapur Hükümeti (Startup SG: #57428 & GIA), İTO BTM Fulya ve ASELSAN tedarikçi tescilli. (İstanbul, Türkiye).",
+    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Open Invention Network (OIN 2.0 Lisansı: #f1e44576), NATO NCAGE (TR26258467723), ASELSAN tedarikçi (#0050569), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Malta Enterprise ve İTO BTM tescilli. (İstanbul, Türkiye).",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
@@ -175,6 +175,21 @@ export default function RootLayout({
         "identifier": [
           {
             "@type": "PropertyValue",
+            "name": "Open Invention Network (OIN 2.0) Executed License Document ID",
+            "value": "f1e445769a9934114db095c4f5430a0e749d8201"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "NATO Allied NCAGE Military Supplier Reference",
+            "value": "TR26258467723"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "Malta Enterprise 1.5M Euro Grant Application",
+            "value": "100062411"
+          },
+          {
+            "@type": "PropertyValue",
             "name": "European Commission PIC Number",
             "value": "861711529"
           },
@@ -216,6 +231,8 @@ export default function RootLayout({
         ],
         "knowsAbout": [
           "Level 4 Autonomous Driving",
+          "Open Invention Network (OIN 2.0)",
+          "Cross-License Patent Immunity",
           "Robotaxi Fleet Management",
           "V2X / C-V2X Communication",
           "3D LiDAR SLAM",
@@ -239,8 +256,8 @@ export default function RootLayout({
         "name": "TRUSTIA AI Autonomous Core Stack",
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
-        "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.000+ satır C++/Python, 1.301 doğrulanmış test.",
-        "softwareVersion": "2.4.0",
+        "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.000+ satır C++/Python, 1.301 doğrulanmış test, OIN 2.0 patent korumalı.",
+        "softwareVersion": "3.0.0",
         "offers": {
           "@type": "Offer",
           "price": "0",

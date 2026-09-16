@@ -35,7 +35,7 @@ export default function Footer() {
               {t("footer_tagline")}
             </p>
 
-            <div className="pt-2 space-y-2.5 font-mono text-[11px] text-slate-300">
+            <div className="pt-2 space-y-2 font-mono text-[11px] text-slate-300">
               <div className="flex items-center gap-2 text-[#C8FF00] font-medium">
                 <Globe className="w-3.5 h-3.5 shrink-0" />
                 <span>{t("footer_made_in")}</span>
@@ -43,6 +43,14 @@ export default function Footer() {
               <div className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 <span>{t("footer_locations")}</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-300 font-medium">
+                <Shield className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
+                <span>OIN 2.0 Patent Lisansı: #f1e44576</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-400">
+                <Shield className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                <span>ASELSAN: #0050569 • NATO: TR2625846</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <Shield className="w-3.5 h-3.5 text-slate-500 shrink-0" />
@@ -79,13 +87,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/politika/lisans/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                <Link href="/politika/etik/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
                   {t("footer_link_ros")}
                 </Link>
               </li>
               <li>
-                <Link href="/politika/lisans/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  {t("footer_link_api")}
+                <Link href="/politika/otonom-guvenlik/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
+                  {lang === "tr" ? "ASIL-D Güvenlik Protokolü" : "ASIL-D Safety Protocol"}
                 </Link>
               </li>
             </ul>
@@ -94,35 +102,47 @@ export default function Footer() {
           {/* Column 3: Sertifikasyon / Certification */}
           <div className="space-y-5">
             <h5 className="font-mono text-xs font-bold text-white tracking-widest uppercase">{t("footer_col_cert")}</h5>
-            <ul className="space-y-3 font-normal text-slate-300">
+            <ul className="space-y-2.5 font-normal text-slate-300">
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {t("footer_cert_indigenous")}
+                <Link href="/politika/oin-lisans/" className="hover:text-[#C8FF00] transition-colors font-medium text-white">
+                  {lang === "tr" ? "OIN 2.0 Patent Paktı" : "OIN 2.0 Patent Pact"}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/siber/" className="hover:text-[#C8FF00] transition-colors">
-                  {t("footer_cert_crypto")}
+                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
+                  {lang === "tr" ? "ASELSAN Potansiyel Tedarikçi" : "ASELSAN Defense Supplier"}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
                 <Link href="/politika/ihracat/" className="hover:text-[#C8FF00] transition-colors">
-                  {t("footer_cert_as9100")}
+                  {lang === "tr" ? "NATO NCAGE Askeri Tedarikçi" : "NATO NCAGE Military Supplier"}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/siber/" className="hover:text-[#C8FF00] transition-colors">
-                  {t("footer_cert_iso")}
+                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
+                  {lang === "tr" ? "SSB SAYZEK Simülasyon (#170)" : "SSB SAYZEK AI Platform (#170)"}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/lisans/" className="hover:text-[#C8FF00] transition-colors">
-                  {t("footer_cert_ros")}
+                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
+                  {lang === "tr" ? "İTO BTM Fulya Ön Kuluçka" : "ITO BTM Fulya Incubation"}
+                </Link>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
+                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
+                  {lang === "tr" ? "Teknopark İstanbul (HASAT 2026)" : "Teknopark Istanbul (HASAT 2026)"}
+                </Link>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
+                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
+                  {lang === "tr" ? "KOSGEB İleri Girişimci" : "KOSGEB Advanced Entrepreneur"}
                 </Link>
               </li>
             </ul>
@@ -149,8 +169,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/politika/oin-lisans/" className="hover:text-[#C8FF00] transition-colors flex items-center gap-1.5 text-white font-medium">
+                  <span>{lang === "tr" ? "OIN Patent Lisansı" : "OIN Patent License"}</span>
+                  <span className="text-[9px] font-mono px-1.5 py-0.5 bg-emerald-950/60 text-emerald-400 border border-emerald-800 rounded font-bold">PDF</span>
+                </Link>
+              </li>
+              <li>
                 <Link href="/politika/mulkiyet/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "Fikri Mülkiyet & Basın" : "IP & Press Kit"}
+                  {lang === "tr" ? "Fikri Mülkiyet & Basın Kiti" : "IP & Press Kit"}
                 </Link>
               </li>
             </ul>
@@ -164,7 +190,7 @@ export default function Footer() {
             © {new Date().getFullYear()} <span className="text-white font-bold tracking-wide">Trustia AI</span> {t("footer_rights")}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px]">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-[11px]">
             <Link href="/politika/kvkk/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
               {lang === "tr" ? "Gizlilik Politikası (KVKK/GDPR)" : "Privacy Policy (GDPR)"}
             </Link>
@@ -174,7 +200,15 @@ export default function Footer() {
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
             <Link href="/politika/mulkiyet/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
-              {lang === "tr" ? "Fikri Mülkiyet & Lisans" : "IP & Licensing"}
+              {lang === "tr" ? "Fikri Mülkiyet" : "Intellectual Property"}
+            </Link>
+            <span className="text-white/20 hidden sm:inline">•</span>
+            <Link href="/politika/oin-lisans/" className="text-[#C8FF00] hover:underline font-bold transition-colors">
+              {lang === "tr" ? "OIN 2.0 Lisansı (PDF)" : "OIN 2.0 License (PDF)"}
+            </Link>
+            <span className="text-white/20 hidden sm:inline">•</span>
+            <Link href="/politika/lisans/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
+              {lang === "tr" ? "SLA & EULA" : "SLA & EULA"}
             </Link>
           </div>
         </div>

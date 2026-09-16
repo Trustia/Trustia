@@ -14,15 +14,15 @@ interface LanguageContextType {
 const translations: Record<Language, Record<string, string>> = {
   tr: {
     // Top Ticker
-    top_ticker_btm: "🏛️ İTO BTM Fulya Kampüsü & Bilişim Vadisi Otonom Test Pisti",
+    top_ticker_btm: "🛡️ Open Invention Network (OIN 2.0 Lisans ID: f1e44576) & İTO BTM",
     top_ticker_teknopark: "🇪🇺 Avrupa Komisyonu (PIC: 861711529) & EIT Urban Mobility (CUS15554)",
-    top_ticker_yc: "🇸🇬 Singapur Hükümeti (Startup SG: #57428 & GIA İnovasyon Ağı)",
-    top_ticker_ssb: "🇹🇷 ASELSAN Tedarikçi Portalı (#0050569) & HASAT 2026",
+    top_ticker_yc: "🇹🇷 ASELSAN Tedarikçi Portalı (#0050569) & NATO NCAGE (TR26258467723)",
+    top_ticker_ssb: "🇸🇬 Startup SG (#57428) & Teknopark İstanbul HASAT 2026",
 
     // Institutional Ecosystem
     eco_badge: "RESMİ KURUMLAR & GLOBAL AKREDİTASYONLAR",
     eco_title: "Devlet, AB ve Ekosistem Onaylarımız",
-    eco_desc: "Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility, Singapur Hükümeti (Startup SG & GIA), ASELSAN, Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli resmi süreçlerimiz.",
+    eco_desc: "Open Invention Network (OIN 2.0 Lisansı: #f1e44576), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility, ASELSAN (#0050569), NATO NCAGE (TR26258467723) ve İTO BTM tescilli resmi süreçlerimiz.",
 
     // Navbar
     nav_about: "HAKKIMIZDA",
@@ -126,15 +126,15 @@ const translations: Record<Language, Record<string, string>> = {
   },
   en: {
     // Top Ticker
-    top_ticker_btm: "🏛️ Istanbul Chamber of Commerce (BTM) Fulya & Bilisim Vadisi Proving Grounds",
+    top_ticker_btm: "🛡️ Open Invention Network (OIN 2.0 License ID: f1e44576) & ITO BTM",
     top_ticker_teknopark: "🇪🇺 European Commission (PIC: 861711529) & EIT Urban Mobility (CUS15554)",
-    top_ticker_yc: "🇸🇬 Singapore Government (Startup SG: #57428 & GIA Innovation Alliance)",
-    top_ticker_ssb: "🇹🇷 ASELSAN Defense Supplier (#0050569) & HASAT 2026",
+    top_ticker_yc: "🇹🇷 ASELSAN Defense Supplier (#0050569) & NATO NCAGE (TR26258467723)",
+    top_ticker_ssb: "🇸🇬 Startup SG (#57428) & Teknopark Istanbul HASAT 2026",
 
     // Institutional Ecosystem
     eco_badge: "INSTITUTIONAL ACCREDITATIONS & GLOBAL ALLIANCES",
     eco_title: "European Union, Defense & Sovereign Ecosystem",
-    eco_desc: "Officially registered by the European Commission (PIC: 861711529), EIT Urban Mobility, Singapore Government (Startup SG & GIA), ASELSAN, Teknopark Istanbul HASAT 2026, and ITO BTM.",
+    eco_desc: "Officially registered by Open Invention Network (OIN 2.0 License: #f1e44576), European Commission (PIC: 861711529), EIT Urban Mobility, ASELSAN (#0050569), NATO NCAGE (TR26258467723), and ITO BTM.",
 
     // Navbar
     nav_about: "ABOUT US",

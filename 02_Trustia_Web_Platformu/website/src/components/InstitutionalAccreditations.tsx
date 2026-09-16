@@ -413,6 +413,20 @@ export default function InstitutionalAccreditations() {
                         {lang === "tr" ? item.answerTr : item.answerEn}
                       </p>
 
+                      {item.id === "16" && (
+                        <div className="pt-1">
+                          <a
+                            href="/Trustia_OIN_Lisans_Sozlesmesi_2026.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#C8FF00] hover:bg-[#d4ff33] text-black font-bold text-xs transition-colors shadow-md"
+                          >
+                            <span>{lang === "tr" ? "İmzalı OIN Lisans Sözleşmesini İndir (PDF) →" : "Download Signed OIN License (PDF) →"}</span>
+                          </a>
+                        </div>
+                      )}
+
                       {/* Detail Footer Inside Content */}
                       <div className="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-zinc-800/40 text-[10px] font-mono text-zinc-400">
                         <div className="flex items-center gap-3">

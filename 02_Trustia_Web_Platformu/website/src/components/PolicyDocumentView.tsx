@@ -9,6 +9,7 @@ import {
   ShieldCheck,
   ArrowRight,
   Printer,
+  Download,
   FileText,
   Award,
   Lock,
@@ -191,13 +192,28 @@ export default function PolicyDocumentView({
                 </div>
               </div>
 
-              <button
-                onClick={() => typeof window !== "undefined" && window.print()}
-                className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer text-[11px]"
-              >
-                <Printer className="w-3.5 h-3.5" />
-                <span>{lang === "tr" ? "Yazdır / PDF" : "Print / PDF"}</span>
-              </button>
+              <div className="flex items-center gap-2">
+                {(currentSlug === "oin-lisans" || currentSlug === "lisans" || currentSlug === "mulkiyet") && (
+                  <a
+                    href="/Trustia_OIN_Lisans_Sozlesmesi_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#C8FF00] hover:bg-[#d4ff33] text-black font-bold text-[11px] transition-all shadow-[0_0_12px_rgba(200,255,0,0.3)]"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>{lang === "tr" ? "İmzalı OIN Lisans PDF" : "Signed OIN License PDF"}</span>
+                  </a>
+                )}
+
+                <button
+                  onClick={() => typeof window !== "undefined" && window.print()}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer text-[11px]"
+                >
+                  <Printer className="w-3.5 h-3.5" />
+                  <span>{lang === "tr" ? "Yazdır / PDF" : "Print / PDF"}</span>
+                </button>
+              </div>
             </div>
 
             {/* Document Articles Sections */}

@@ -27,8 +27,10 @@
 
 ### 🏛️ Verified Global Accreditations & Key Institutional Pipeline
 
-| Tier-1 Global / National Institution | Location | Scope & Instrument | Verified Status / Official Identifier |
-| :--- | :--- | :--- | :--- |
+| 🛡️ **Open Invention Network (OIN 2.0)** | New York, US | **Global Patent Defense Pact & Cross-License** | 📜 **Executed Bilateral Agreement (`Doc ID: f1e445769a9934114db095c4f5430a0e749d8201` • Tier 5)** |
+| 🇲🇹 **Malta Enterprise (MSRP & Start-up Finance)** | Valletta, Malta | **1.5M€ Tech Grant & 3+5 Yr Residency** | 🏛️ **Formally Submitted & Acknowledged (`#100062411` & `#100062412` • CRM: `0175017`)** |
+| 🎖️ **NATO NSPA & T.C. MSB TMKB** | Brussels / Ankara | **NATO NCAGE Allied Military Supplier Code** | 🛡️ **Verified & Routed to Defense Codification (`Ref: TR26258467723`)** |
+| 🇺🇸 **Dorm Room Fund (First Round Capital)** | San Francisco, US | **$40k - $100k SAFE Investment** | 🚀 **Formally Submitted & Confirmed (San Francisco Team)** |
 | 🇪🇺 **European Commission (Participant Register)** | Brussels, EU | **EU Participant ID (PIC)** | 🏛️ **Official PIC: `861711529`** |
 | 🇪🇺 **EIT Urban Mobility (EITUM)** | Barcelona, EU | **€100,000 Grant & Equity** | 🤝 **Partner ID: `CUS15554` (App: `3.1.02-1206-3732.3`)** |
 | 🇶🇦 **QSTP (Qatar Science & Technology Park)** | Doha, Qatar | **$30M Venture Fund + Doha Sprint** | 🚀 **Submitted & Confirmed (4-Week In-Person Residency)** |

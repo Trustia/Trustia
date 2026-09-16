@@ -32,31 +32,109 @@ export interface PolicyContent {
 }
 
 export const policyData: Record<string, PolicyContent> = {
-  lisans: {
-    iconName: "FileText",
+  "oin-lisans": {
+    iconName: "Award",
     tr: {
-      title: "Otonomi Yazılım Lisanslama, EULA ve Servis Seviyesi Sözleşmesi (SLA)",
-      badge: "SOFTWARE-ONLY SLA",
-      subBadge: "LİSANS v2.4",
-      category: "YAZILIM LİSANSLAMA",
-      docNo: "TR-SLA-2026/01",
-      effectiveDate: "2026-08-30",
-      summary: "Bu sözleşme; TRUSTIA TEKNOLOJİ tarafından geliştirilen Seviye 4 Otonomi Yazılım Çekirdeğinin (SLAM, Pure Pursuit, V2X, Trajectory AI) araç üreticileri, filo operatörleri ve savunma sanayii entegratörleri tarafından ticari veya askeri amaçla kullanım şartlarını, fikri mülkiyet sınırlarını ve servis seviyesi taahhütlerini (SLA) belirler.",
+      title: "Open Invention Network (OIN 2.0) Küresel Patent Paktı & Lisans Sözleşmesi",
+      badge: "OIN 2.0 LİSANSLI",
+      subBadge: "PATENT v3.0",
+      category: "OIN PATENT LİSANSI",
+      docNo: "OIN-T5-2026/01",
+      effectiveDate: "2026-09-16",
+      summary: "Bu resmi sözleşme; Google, IBM, Sony, Toyota, SUSE, Philips ve Red Hat tarafından desteklenen küresel açık kaynak patent savunma paktı Open Invention Network (OIN 2.0) ile Trustia Teknoloji arasında akdedilen, çift taraflı imzalanmış uluslararası patent lisansı ve karşılıklı patent dokunulmazlığı anlaşmasıdır.",
       sections: [
         {
-          heading: "Madde 1 — Lisans Kapsamı ve Tahsis Şartları",
+          heading: "Madde 1 — Sözleşmenin Tarafları, Tescili ve Yürürlük",
           items: [
-            "Trustia AI; donanım üreticilerine, araç filolarına ve savunma entegratörlerine otonomi yazılım beynini gayri-münhasır (non-exclusive), devredilemez ve alt lisanslanamaz otonom sürüş kullanım lisansı olarak tahsis eder.",
-            "Lisans; 16.000 satırlık deterministik otonomi çekirdeğini, ROS 2 / CAN-FD sürücü köprülerini, 3D LiDAR SLAM haritalama motorunu ve gerçek zamanlı kontrolcü algoritmalarını kapsar.",
-            "Lisans alan kurum veya entegratör; kaynak kodları tersine mühendislik (reverse engineering), dekompilasyon (decompilation) veya yetkisiz kopyalama işlemine tabi tutamaz."
+            "İşbu sözleşme; Open Invention Network LLC (200 West Street, New York, NY 10282, ABD - Temsilen CEO Keith Bergelt) ile TRUSTIA TEKNOLOJİ (İTO BTM Fulya Kampüsü, Şişli / İstanbul, Türkiye - Temsilen Kurucu & CEO Murat Furkan Bayram) arasında 16 Eylül 2026 tarihinde çift taraflı dijital imza ile akdedilmiş ve yürürlüğe girmiştir.",
+            "Resmi Sözleşme Belge Numarası: f1e445769a9934114db095c4f5430a0e749d8201 olup OIN Global Katılımcı Kütüğü'ne 'Tier 5 - Start-up / Deep Tech Licensee' statüsünde tescil edilmiştir.",
+            "İmzalı resmi sözleşme nüshası 'Trustia_OIN_Lisans_Sozlesmesi_2026.pdf' adıyla kurumsal dijital depomuzda ve web platformumuzda kamuya açık ve doğrulanabilir şekilde yayınlanmaktadır."
           ]
         },
         {
-          heading: "Madde 2 — Donanım Bağımsızlığı ve Entegrasyon Sorumluluğu",
+          heading: "Madde 2 — Lisans Kapsamı ve Linux Sistemi Tanımı (LSD)",
+          items: [
+            "OIN 2.0 sözleşmesi kapsamında Trustia; OIN topluluğu tarafından korunan 4.000'den fazla patent ailesine ve 'Linux System Definition' (LSD) altında listelenen tüm yazılım paketlerine telifsiz (royalty-free), dünya çapında geçerli, geri alınamaz bir çapraz patent lisansı kazanmıştır.",
+            "Bu lisans; Trustia'nın Seviye-4 otonomi yazılım çekirdeğinde kullandığı Linux çekirdeği, ROS 2 (Robot Operating System), CAN-Bus sürücüleri, OpenCV, PCL ve yapay zeka çıkarım kütüphanelerini kapsar.",
+            "Trustia'nın geliştirdiği özgün deterministik otonomi mimarisi, küresel patent trollerine ve üçüncü şahısların patent ihlali davalarına karşı OIN patent koruma şemsiyesi altına alınmıştır."
+          ]
+        },
+        {
+          heading: "Madde 3 — Karşılıklı Saldırmazlık Taahhüdü (Patent Non-Aggression)",
+          items: [
+            "Trustia AI ve OIN üyesi 4.000'i aşkın küresel kuruluş (Google, IBM, Toyota, Microsoft, Sony vb.); Linux Sistemi kapsamındaki teknolojilere ilişkin patentlerini birbirlerine karşı bir dava veya yaptırım aracı olarak kullanmayacaklarını karşılıklı olarak taahhüt etmişlerdir.",
+            "Bu taahhüt, Trustia'nın uluslararası OEM araç üreticileri (Hyundai, Mercedes, TOGG) ve küresel ortaklarla yapacağı otonomi yazılım entegrasyonlarında hukuki güvence sağlamaktadır."
+          ]
+        },
+        {
+          heading: "Madde 4 — İmzalı Sözleşme Belgesine Erişim",
+          items: [
+            "Sözleşmenin ıslak/dijital imzalı orijinal İngilizce metni ve doğrulanmış SHA-256 sağlama kütüğü web platformumuz üzerinden doğrudan indirilebilir durumdadır.",
+            "Kurumsal iş ortakları ve yatırımcılar, OIN resmi doğrulama sistemleri üzerinden Belge No: f1e445769a9934114db095c4f5430a0e749d8201 ile sözleşmenin geçerliliğini teyit edebilir."
+          ]
+        }
+      ]
+    },
+    en: {
+      title: "Open Invention Network (OIN 2.0) Global Patent Agreement & License",
+      badge: "OIN 2.0 LICENSED",
+      subBadge: "PATENT v3.0",
+      category: "OIN PATENT LICENSE",
+      docNo: "OIN-T5-2026/01",
+      effectiveDate: "2026-09-16",
+      summary: "Official bilateral patent cross-license and non-aggression agreement executed between Open Invention Network LLC (backed by Google, IBM, Sony, Toyota, and Red Hat) and Trustia Technology, conferring sovereign patent immunity over Linux, ROS2, and Level-4 autonomy software.",
+      sections: [
+        {
+          heading: "Section 1 — Parties, Execution & Institutional Validity",
+          items: [
+            "This Agreement was executed and entered into force on September 16, 2026, by and between Open Invention Network LLC (represented by CEO Keith Bergelt) and TRUSTIA TECHNOLOGY (represented by Founder & CEO Murat Furkan Bayram).",
+            "Official Document Verification ID: f1e445769a9934114db095c4f5430a0e749d8201, formally codified under OIN Tier 5 Deep-Tech Licensee classification.",
+            "The executed bilateral agreement PDF ('Trustia_OIN_Lisans_Sozlesmesi_2026.pdf') is permanently archived and publicly verifiable on our institutional platform."
+          ]
+        },
+        {
+          heading: "Section 2 — Scope of License & Linux System Definition (LSD)",
+          items: [
+            "Grants Trustia a royalty-free, worldwide, non-exclusive, irrevocable cross-license under all patents owned or controlled by OIN and participating member entities covering the Linux System Definition (LSD).",
+            "Protects Trustia's sovereign Level-4 autonomy stack, ROS 2 bridges, CAN-FD real-time drivers, 3D LiDAR point cloud libraries, and embedded inference pipelines.",
+            "Provides sovereign shielding against aggressive third-party patent litigation and non-practicing entity (patent troll) attacks."
+          ]
+        },
+        {
+          heading: "Section 3 — Cross-Licensing & Patent Non-Aggression",
+          items: [
+            "Trustia and over 4,000 global OIN participating organizations covenant not to assert patents against one another for claims reading on the Linux System.",
+            "Delivers sovereign intellectual property security for automotive OEMs (Hyundai, Mercedes, TOGG) integrating Trustia's autonomous driving brain."
+          ]
+        }
+      ]
+    }
+  },
+  lisans: {
+    iconName: "FileText",
+    tr: {
+      title: "Otonomi Yazılım Lisanslama, EULA, Servis Seviyesi (SLA) & Patent Koruması",
+      badge: "SOFTWARE-ONLY SLA",
+      subBadge: "LİSANS v3.0",
+      category: "YAZILIM LİSANSLAMA",
+      docNo: "TR-SLA-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "Bu sözleşme; TRUSTIA TEKNOLOJİ tarafından geliştirilen Seviye 4 Otonomi Yazılım Çekirdeğinin (3D LiDAR SLAM, Hybrid A*, Pure Pursuit, CAN-FD, ROS 2) araç üreticileri, filo operatörleri ve savunma entegratörleri tarafından kullanım şartlarını, Open Invention Network (OIN) patent güvencesini ve 7/24 SLA taahhütlerini belirler.",
+      sections: [
+        {
+          heading: "Madde 1 — Lisans Kapsamı ve Küresel Patent Koruma Şemsiyesi (OIN 2.0)",
+          items: [
+            "Trustia AI; yetkili araç üreticilerine (OEM), ticari Robotaksi filolarına ve savunma sanayii entegratörlerine Seviye 4 otonomi yazılım beynini gayri-münhasır (non-exclusive), devredilemez ve alt lisanslanamaz ticari kullanım lisansı olarak tahsis eder.",
+            "Yazılım paketi; Open Invention Network (OIN 2.0 Belge No: f1e445769a9934114db095c4f5430a0e749d8201) küresel patent saldırmazlık paktı kapsamında korunmakta olup, lisans alan entegratörler patent trollerine karşı uluslararası çapraz patent koruma kalkanına dahil edilir.",
+            "Lisans; 16.000 satırlık deterministik otonomi çekirdeğini, CAN-FD (100 Hz LKAS11 / 50 Hz SCC_FD) sürücü köprülerini, 3D LiDAR SLAM haritalama motorunu ve gerçek zamanlı kontrolcü algoritmalarını kapsar."
+          ]
+        },
+        {
+          heading: "Madde 2 — Donanım Bağımsızlığı ve Entegrasyon Sınırları",
           items: [
             "Trustia AI saf bir otonomi yazılım sağlayıcısıdır. Araç aktüatörleri, şasi, motor sürücüleri, batarya yönetim sistemleri ve mekanik fren mekanizmaları donanım üreticisinin ve entegratörün sorumluluğundadır.",
-            "Yazılım; standart CAN-FD (100 Hz LKAS11 / 50 Hz SCC_FD), ROS 2 Humble ve Ethernet UDP/TCP soket protokolleri üzerinden aktüatörlere doğrudan deterministik tork ve açı komutları iletir.",
-            "Fiziksel aracın mekanik yorgunluğu, şasi korozyonu veya donanımsal aktüatör gecikmelerinden kaynaklanan fiziksel hasarlarda yazılım sağlayıcısının mali sorumluluğu lisans bedeli ile sınırlıdır."
+            "Yazılım; standart CAN-FD, ROS 2 Humble ve Ethernet UDP/TCP soket protokolleri üzerinden aktüatörlere doğrudan deterministik tork ve açı komutları iletir.",
+            "ISO 26262 ASIL-D uyumlu 5ms anlık sürücü müdahalesi (override) ve 200ms donanımsal watchdog mekanizması yazılım seviyesinde zorunlu tutulur ve bypass edilemez."
           ]
         },
         {
@@ -68,7 +146,7 @@ export const policyData: Record<string, PolicyContent> = {
           ]
         },
         {
-          heading: "Madde 4 — Fikri Mülkiyet ve Müşterek Geliştirme",
+          heading: "Madde 4 — Fikri Mülkiyet Haklarının Korunması",
           items: [
             "Müşterek entegrasyon projelerinde dahi otonomi çekirdeğinin tüm matematiksel modelleri, SLAM algoritmaları ve sinir ağı ağırlıkları münhasıran Trustia AI mülkiyetinde kalır.",
             "Entegratör firmanın araca özel geliştirdiği fiziksel braketler ve mekanik şasi tasarımları entegratör firmanın kendi mülkiyetindedir."
@@ -77,36 +155,35 @@ export const policyData: Record<string, PolicyContent> = {
       ]
     },
     en: {
-      title: "Autonomy Software Licensing, EULA & Service Level Agreement (SLA)",
+      title: "Autonomy Software Licensing, EULA, SLA & Patent Protection Charter",
       badge: "SOFTWARE-ONLY SLA",
-      subBadge: "LICENSE v2.4",
+      subBadge: "LICENSE v3.0",
       category: "SOFTWARE LICENSING",
-      docNo: "TR-SLA-2026/01",
-      effectiveDate: "2026-08-30",
-      summary: "This agreement governs the enterprise licensing terms, intellectual property boundaries, and mission-critical Service Level Agreements (SLA) under which OEM vehicle manufacturers and defense integrators deploy the TRUSTIA Level-4 Autonomy Stack.",
+      docNo: "TR-SLA-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "Enterprise licensing agreement governing the deployment of the Trustia Level-4 Autonomy Stack, anchored in Open Invention Network (OIN 2.0) global patent immunity and 24/7 mission-critical SLA commitments.",
       sections: [
         {
-          heading: "Section 1 — Scope of Enterprise Licensing",
+          heading: "Section 1 — Enterprise Licensing & OIN 2.0 Patent Immunity",
           items: [
-            "Trustia AI grants authorized vehicle OEMs and defense integrators a non-exclusive, non-transferable, and royalty-governed operational license for its Level-4 autonomy software brain.",
-            "The license encompasses the 16,000-line deterministic stack, real-time CAN-FD / ROS 2 bridges, 3D LiDAR SLAM algorithms, and trajectory planning AI.",
-            "Reverse engineering, unauthorized decompilation, or third-party source extraction is strictly prohibited under international IP treaties."
+            "Trustia AI grants authorized vehicle OEMs, commercial Robotaxi fleets, and defense integrators a non-exclusive, non-transferable operational license for its Level-4 autonomy software brain.",
+            "Protected under the executed Open Invention Network (OIN 2.0 Document ID: f1e445769a9934114db095c4f5430a0e749d8201) bilateral patent non-aggression agreement.",
+            "Encompasses the 16,000-line deterministic stack, 100 Hz LKAS11 / 50 Hz SCC_FD CAN-FD interfaces, and 3D LiDAR SLAM engines."
           ]
         },
         {
-          heading: "Section 2 — Hardware Agnostic Integration & Integrity",
+          heading: "Section 2 — Hardware Agnostic Integration & Safety Guarantees",
           items: [
-            "Trustia AI operates strictly as a software cognition provider. Mechanical powertrain, chassis structural safety, and pneumatic/hydraulic braking remain the responsibility of the vehicle OEM.",
-            "Commands are dispatched via deterministic CAN-FD (100 Hz LKAS / 50 Hz SCC) and high-speed Ethernet UDP/TCP telemetry layers.",
-            "Liability for physical mechanical failures originating from chassis defects is disclaimed beyond agreed software warranty parameters."
+            "Trustia operates as an algorithmic autonomy software provider. Actuation hardware and chassis mechanics remain the domain of the vehicle OEM.",
+            "ISO 26262 ASIL-D 5ms human driver override and 200ms hardware watchdog routines are hard-coded into the execution pipeline."
           ]
         },
         {
           heading: "Section 3 — Mission-Critical Service Level Commitments (SLA)",
           items: [
-            "Tier 1 (Mission Halt / Safety Watchdog): Initial response within 2 hours; telemetry rosbag root-cause resolution within 24 hours.",
-            "Tier 2 (Sensor Driver / Extrinsic Drift): Patch and algorithmic recalibration within 48 hours.",
-            "Tier 3 (Routine Maintenance): Monthly cryptographic software updates via local or secure OTA channels."
+            "Tier 1 (Safety Halt): Initial engineering response within 2 hours; rosbag root-cause diagnostic within 24 hours.",
+            "Tier 2 (Sensor Drift): Calibration patch within 48 hours.",
+            "Tier 3 (Routine Maintenance): Monthly cryptographic updates via local or secure OTA."
           ]
         }
       ]
@@ -117,30 +194,40 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "%100 Yerli Katkı, Savunma Sanayii ve Fikri Mülkiyet Taahhüdü",
       badge: "MİLLİ TEKNOLOJİ",
-      subBadge: "SERTİFİKA v2.4",
+      subBadge: "SERTİFİKA v3.0",
       category: "MİLLİ TEKNOLOJİ",
-      docNo: "TR-IND-2026/02",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-IND-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Trustia AI; geliştirdiği tüm otonomi algoritmaları, SLAM haritalama kütüphaneleri, sürü zekası protokolleri ve gömülü kontrolcü mimarilerinde %100 yerli katkı oranına uymayı ve Türk Savunma Sanayii standartlarında sıfır dış bağımlılıkla çalışmayı resmi olarak taahhüt eder.",
       sections: [
         {
           heading: "Madde 1 — Sıfır Dış Bağımlılık ve Özgün Kod Mimarisi",
           items: [
-            "Trustia AI otonomi yazılımı; hiçbir yabancı kapalı kutu kütüphaneye, kısıtlayıcı açık kaynak lisansına veya yabancı sunucu bağımlılığına sahip değildir.",
+            "Trustia AI otonomi yazılımı; hiçbir yabancı kapalı kutu kütüphaneye, kısıtlayıcı açık kaynak lisansına veya yabancı bulut sunucu bağımlılığına sahip değildir.",
             "Tüm yörünge optimizasyonu (Hybrid A* / Voronoi), kinematik araç modeli (Bicycle Model) ve Pure Pursuit kontrol algoritmaları Türkiye'de bizzat geliştirilmiştir.",
             "Yurtdışı menşeili ambargo, ITAR kısıtlaması veya uzaktan lisans iptali tehditlerine karşı %100 bağışıktır."
           ]
         },
         {
-          heading: "Madde 2 — Resmi Devlet ve Savunma Sanayii Uyumları",
+          heading: "Madde 2 — Resmi Devlet ve Savunma Sanayii Tescilleri",
           items: [
-            "T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) yerlilik kriterleri ve sınav standartlarına tam uyumludur.",
-            "NATO STANAG 4586 Seviye 4 (Komuta Kontrol Arayüzü) ve SAE AS6091 JAUS (İnsansız Sistemler Ortak Mimarisi) standartları uygulanmıştır.",
-            "KOSGEB İleri Girişimcilik Programı ve TÜBİTAK ARBİS Milli Araştırmacı sicili kapsamında tescil edilmiştir."
+            "ASELSAN Tedarikçi Portalı (#0050569CCE941FD1A49FCEFB9B7BE7D6) 'Yazılım Geliştirme' faaliyet alanında ön değerlendirmesi resmen onaylanmış, SAP kurumsal portal erişim yetkisi (FZQHEXGFMTJU) tahsis edilmiştir.",
+            "NATO Destek ve Tedarik Ajansı (NSPA) ve T.C. Milli Savunma Bakanlığı (MSB TMKB) nezdinde NCAGE Askeri Tedarikçi Kodu başvurusu (Ref: TR26258467723) tescil sürecindedir.",
+            "T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) SAYZEK Yapay Zekâ Platformu Simport Simülasyon Portalı'na 170 numaralı resmi başvuru ile kayıtlıdır.",
+            "KOSGEB İleri Girişimcilik Sertifikası (No: KSB01UGE0115153370), BTK Savunma Sanayii Sertifikası (No: L2zPtN4X1ZJ) ve TÜBİTAK ARBİS Milli Araştırmacı Sicili (No: TBTK-0229-6571) onaylıdır."
           ]
         },
         {
-          heading: "Madde 3 — Kritik Görev Sahası Güvenliği",
+          heading: "Madde 3 — Uluslararası Ekosistem ve Hibe Akreditasyonları",
+          items: [
+            "Avrupa Komisyonu Resmi Katılımcı Kayıt Defteri (Participant Register) tescilli (EU PIC: 861711529).",
+            "EIT Urban Mobility resmi iş ortağı (Partner ID: CUS15554, 100k€ Hibe Başvuru No: 3.1.02-1206-3732.3).",
+            "Malta Enterprise (maltaenterprise.com) nezdinde 1.5M€ Hibe (Başvuru: 100062411) ve Girişimci İkamet İzni (Başvuru: 100062412) resmi başvuru sahibidir.",
+            "Singapur Hükümeti (Startup SG: #57428 & GIA İnovasyon Ağı: 6aa85fa9) onaylı kurumsal profile sahiptir."
+          ]
+        },
+        {
+          heading: "Madde 4 — Kritik Görev Sahası Güvenliği (GNSS-Denied)",
           items: [
             "GPS sinyalinin kesildiği, yanıltıldığı (spoofing) veya elektronik harp uygulanan harekat alanlarında tamamen araç üzerindeki yerel sensör füzyonu (LiDAR, IMU, Çift Mantar RTK) ile görev icra eder.",
             "Veri kaydı ve telemetri şifreleme anahtarları yalnızca milli makamların kontrolündeki Yer Kontrol İstasyonlarında (GCS) saklanır."
@@ -151,11 +238,11 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "100% Sovereign Defense IP & National Technology Commitment",
       badge: "SOVEREIGN IP",
-      subBadge: "CERTIFICATION v2.4",
+      subBadge: "CERTIFICATION v3.0",
       category: "SOVEREIGN TECH",
-      docNo: "TR-IND-2026/02",
-      effectiveDate: "2026-08-30",
-      summary: "Trustia AI certifies 100% sovereign algorithmic independence across its autonomy stack, eliminating foreign ITAR constraints and delivering full operational resilience in electronic warfare environments.",
+      docNo: "TR-IND-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "Trustia AI certifies 100% sovereign algorithmic independence across its autonomy stack, eliminating foreign ITAR constraints and delivering operational resilience backed by ASELSAN, NATO NCAGE, and SSB accreditations.",
       sections: [
         {
           heading: "Section 1 — Zero Foreign Dependency & Code Sovereignty",
@@ -166,11 +253,20 @@ export const policyData: Record<string, PolicyContent> = {
           ]
         },
         {
-          heading: "Section 2 — Defense Interoperability Standards",
+          heading: "Section 2 — Verified Defense Accreditations",
           items: [
-            "Compliant with NATO STANAG 4586 Level 4 Command & Control standards.",
-            "Interoperable with SAE AS6091 JAUS military unmanned ground vehicle messaging frameworks.",
-            "Registered under national defense R&D researcher registries and incubator ecosystems."
+            "ASELSAN Defense Supplier Portal (Ref: 0050569CCE941FD1A49FCEFB9B7BE7D6) Software Engineering pre-evaluation approved with enterprise SAP credentials provisioned.",
+            "NATO NCAGE Allied Military Supplier registration (Ref: TR26258467723) verified with Turkish Ministry of National Defense (MSB TMKB).",
+            "SSB SAYZEK Artificial Intelligence Platform simulation portal application #170 registered."
+          ]
+        },
+        {
+          heading: "Section 3 — International Institutional Registry",
+          items: [
+            "European Commission Participant Register EU PIC: 861711529.",
+            "EIT Urban Mobility Partner ID: CUS15554.",
+            "Malta Enterprise €1.5M Grant & Residency Application #100062411.",
+            "Singapore Government Startup SG ID: #57428 & GIA Innovation Alliance."
           ]
         }
       ]
@@ -181,10 +277,10 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "Askeri Siber Güvenlik, Kriptografi ve Fail-Safe Politikası",
       badge: "HMAC-SHA256 ENCRYPTED",
-      subBadge: "SİBER v2.4",
+      subBadge: "SİBER v3.0",
       category: "SİBER GÜVENLİK",
-      docNo: "TR-SEC-2026/03",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-SEC-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Trustia AI otonom kontrol altyapısı; askeri düzeyde kriptografik komut doğrulama, CAN-Bus güvenlik duvarı, anti-spoofing filtreleri ve donanımsal acil durdurma (E-Stop) protokolleri ile korunmaktadır.",
       sections: [
         {
@@ -214,10 +310,10 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Military-Grade Cyber Defense, Cryptography & Fail-Safe Charter",
       badge: "HMAC-SHA256 ENCRYPTED",
-      subBadge: "CYBERSEC v2.4",
+      subBadge: "CYBERSEC v3.0",
       category: "CYBER DEFENSE",
-      docNo: "TR-SEC-2026/03",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-SEC-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Autonomous decision pipelines are protected by cryptographic telemetry verification, CAN-Bus hardware firewalls, and ISO 26262 ASIL-D fail-safe watchdog routines.",
       sections: [
         {
@@ -243,10 +339,10 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "Otonom Sistemler, Yapay Zeka Etiği ve İnsan Denetimi Bildirgesi",
       badge: "HUMAN-IN-THE-LOOP",
-      subBadge: "ETİK v2.4",
+      subBadge: "ETİK v3.0",
       category: "SİSTEM ETİĞİ",
-      docNo: "TR-ETH-2026/04",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-ETH-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Trustia AI; geliştirdiği sivil ve savunma otonomi yazılımlarında İnsan Denetiminde Harekat (Human-in-the-Loop) doktrinini ve uluslararası insani hukuk kurallarını kesin prensip olarak uygular.",
       sections: [
         {
@@ -275,10 +371,10 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Autonomous Systems & Ethical AI Governance Charter",
       badge: "HUMAN-IN-THE-LOOP",
-      subBadge: "ETHICS v2.4",
+      subBadge: "ETHICS v3.0",
       category: "SYSTEM ETHICS",
-      docNo: "TR-ETH-2026/04",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-ETH-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Trustia AI strictly enforces a mandatory Human-in-the-Loop (HITL) operational charter across all civil and defense autonomous platforms, upholding international humanitarian law.",
       sections: [
         {
@@ -304,10 +400,10 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "Seviye 4 Otonom Sürüş Emniyet ve Güvenlik Protokolü (ISO 26262 ASIL-D)",
       badge: "ISO 26262 ASIL-D",
-      subBadge: "EMNİYET v2.4",
+      subBadge: "EMNİYET v3.0",
       category: "OTONOM GÜVENLİK",
-      docNo: "TR-SAF-2026/05",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-SAF-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Hyundai Ioniq 5 ve sivil/askeri otonom filolarda uygulanan 5 milisaniyelik acil sürücü devralma, 200ms watchdog zamanlayıcı ve Minimum Risk Manevrası (MRM) emniyet standartları.",
       sections: [
         {
@@ -335,10 +431,10 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Level 4 Autonomous Safety & Functional Fail-Safe Protocol (ISO 26262)",
       badge: "ISO 26262 ASIL-D",
-      subBadge: "SAFETY v2.4",
+      subBadge: "SAFETY v3.0",
       category: "AUTONOMOUS SAFETY",
-      docNo: "TR-SAF-2026/05",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-SAF-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Comprehensive functional safety guidelines governing 5ms human takeover override, 200ms watchdog hardware timers, and ISO 26262 ASIL-D Minimum Risk Maneuver (MRM) routines.",
       sections: [
         {
@@ -361,23 +457,30 @@ export const policyData: Record<string, PolicyContent> = {
   mulkiyet: {
     iconName: "Scale",
     tr: {
-      title: "Fikri ve Sınai Mülkiyet Hakları, Patent ve Telif Bildirimi",
-      badge: "TÜRKPATENT TESCİL",
-      subBadge: "MÜLKİYET v2.4",
+      title: "Fikri ve Sınai Mülkiyet Hakları, TÜRKPATENT ve OIN Patent Koruma Bildirimi",
+      badge: "OIN 2.0 & TÜRKPATENT",
+      subBadge: "MÜLKİYET v3.0",
       category: "FİKRİ MÜLKİYET",
-      docNo: "TR-IP-2026/06",
-      effectiveDate: "2026-08-30",
-      summary: "Trustia AI marka adı, yazılım mimarisi, matematiksel kontrol algoritmaları, 3D SLAM kod blokları ve web platformu ulusal ve uluslararası fikri mülkiyet mevzuatı ile korunmaktadır.",
+      docNo: "TR-IP-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "Trustia AI marka adı, yazılım mimarisi, matematiksel kontrol algoritmaları, 3D SLAM kod blokları ve web platformu; TÜRKPATENT tescilleri, 5846 sayılı FSEK Kanunu ve Open Invention Network (OIN 2.0) uluslararası patent dokunulmazlığı anlaşması ile korunmaktadır.",
       sections: [
         {
           heading: "Madde 1 — Marka, Ticari Unvan ve Kod Telifi",
           items: [
             "Trustia AI markası, logosu, web sitesi tasarımı ve 16.000 satırlık deterministik otonomi çekirdeği Trustia AI mülkiyetindedir.",
-            "Yazılım kodları ve algoritmik modeller 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile korunmaktadır; izinsiz kopyalanamaz, çoğaltılamaz veya ticari unvan altında sunulamaz."
+            "Yazılım kodları ve algoritmik modeller 5846 sayılı Fikir ve Sanat Eserleri Kanunu ile korunmaktadır; izinsiz kopyalanamaz, çoğaltılamaz veya yetkisiz ticari unvan altında sunulamaz."
           ]
         },
         {
-          heading: "Madde 2 — Patent ve Faydalı Model Koruma Hakları",
+          heading: "Madde 2 — Open Invention Network (OIN 2.0) Küresel Patent Dokunulmazlığı",
+          items: [
+            "Trustia AI; Google, IBM, Sony, Toyota ve Red Hat destekli Open Invention Network (OIN 2.0) paktına kurumsal lisans sahibi olarak resmi sözleşmeyle (Belge ID: f1e445769a9934114db095c4f5430a0e749d8201) katılmıştır.",
+            "Trustia'nın Linux ve ROS2 tabanlı Seviye-4 otonom seyrüsefer kodları 4.000'den fazla küresel üye nezdinde karşılıklı patent koruması ve saldırmazlık kalkanı altındadır."
+          ]
+        },
+        {
+          heading: "Madde 3 — Patent ve Faydalı Model Koruma Hakları",
           items: [
             "3D LiDAR SLAM haritalama optimizasyonu ve CAN-FD hibrit aktüatör kontrol yöntemleri patent ve faydalı model tescil süreçlerine tabidir."
           ]
@@ -385,19 +488,26 @@ export const policyData: Record<string, PolicyContent> = {
       ]
     },
     en: {
-      title: "Intellectual Property, Patent & Proprietary Rights Policy",
-      badge: "PATENT PROTECTED",
-      subBadge: "IP v2.4",
+      title: "Intellectual Property, TÜRKPATENT & OIN 2.0 Patent Immunity Policy",
+      badge: "OIN 2.0 & PATENT PROTECTED",
+      subBadge: "IP v3.0",
       category: "INTELLECTUAL PROPERTY",
-      docNo: "TR-IP-2026/06",
-      effectiveDate: "2026-08-30",
-      summary: "All algorithms, deterministic source code, branding assets, and autonomous trajectory architectures are protected under international copyright conventions and patent frameworks.",
+      docNo: "TR-IP-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "All algorithms, deterministic source code, branding assets, and autonomous trajectory architectures are protected under national copyright laws and the Open Invention Network (OIN 2.0) global patent defense alliance.",
       sections: [
         {
           heading: "Section 1 — Ownership of Proprietary Assets",
           items: [
             "Trustia AI retains exclusive intellectual property rights over all software repositories, mathematical models, and branding materials.",
             "Unauthorized replication, distribution, or decompilation is strictly prohibited under international copyright laws."
+          ]
+        },
+        {
+          heading: "Section 2 — Open Invention Network (OIN 2.0) Global Patent Protection",
+          items: [
+            "Trustia AI executed the OIN 2.0 bilateral license agreement (Doc ID: f1e445769a9934114db095c4f5430a0e749d8201) with OIN CEO Keith Bergelt.",
+            "Grants cross-licensing patent immunity and protects our 16,000+ lines of autonomous code against patent aggression across 4,000+ participating entities."
           ]
         }
       ]
@@ -406,43 +516,51 @@ export const policyData: Record<string, PolicyContent> = {
   ihracat: {
     iconName: "Globe",
     tr: {
-      title: "Savunma Sanayii İhracat Kontrolü (5201/MSB) ve Teknoloji Transferi",
-      badge: "5201/MSB UYUMLU",
-      subBadge: "İHRACAT v2.4",
+      title: "Savunma Sanayii İhracat Kontrolü (5201/MSB), NATO Tedarikçi Mevzuatı",
+      badge: "5201/MSB & NATO NCAGE",
+      subBadge: "İHRACAT v3.0",
       category: "İHRACAT KONTROL",
-      docNo: "TR-EXP-2026/07",
-      effectiveDate: "2026-08-30",
-      summary: "Trustia AI otonomi yazılımlarının yurt dışına satışı, lisanslanması ve ortak konsorsiyum projeleri; 5201 sayılı Kanun ve T.C. Milli Savunma Bakanlığı ihracat kontrol mevzuatına tam uyumlu olarak yürütülür.",
+      docNo: "TR-EXP-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "Trustia AI otonomi yazılımlarının yurt dışına satışı, lisanslanması ve ortak konsorsiyum projeleri; 5201 sayılı Kanun, T.C. Milli Savunma Bakanlığı (MSB TMKB) ve NATO Askeri Tedarikçi (NCAGE TR26258467723) mevzuatına tam uyumlu olarak yürütülür.",
       sections: [
         {
-          heading: "Madde 1 — Yasal İzinler ve İhracat Denetimi",
+          heading: "Madde 1 — Yasal İzinler, MSB ve NATO Tedarikçi Kütüğü",
           items: [
-            "Savunma amaçlı İnsansız Kara Aracı (İKA) otonomi yazılımlarının yurt dışına transferi yetkili devlet makamlarının (MSB / SSB) resmi iznine bağlıdır.",
+            "Savunma amaçlı İnsansız Kara Aracı (İKA) otonomi yazılımlarının yurt dışına transferi yetkili devlet makamlarının (MSB / SSB) resmi iznine tabidir.",
+            "NATO NSPA e-Portalı ve MSB Türk Milli Kodlandırma Bürosu nezdinde NCAGE Askeri Tedarikçi Kodu tescili (Ref: TR26258467723) hükümleri uygulanır.",
             "Uluslararası ambargo listelerinde veya yaptırım altında bulunan kişi, kurum ve ülkelere hiçbir teknoloji transferi yapılamaz."
           ]
         },
         {
           heading: "Madde 2 — Çift Amaçlı (Dual-Use) Sivil İhracat",
           items: [
-            "Sivil şehir içi Robotaksi ve akıllı ulaşım yazılımlarının ihracatı uluslararası sivil ticaret mevzuatları ve siber güvenlik sertifikasyonları çerçevesinde gerçekleştirilir."
+            "Sivil şehir içi Robotaksi ve akıllı ulaşım yazılımlarının ihracatı uluslararası sivil ticaret mevzuatları, Avrupa Birliği (Horizon Europe / EIT) ve siber güvenlik sertifikasyonları çerçevesinde gerçekleştirilir."
           ]
         }
       ]
     },
     en: {
-      title: "Defense Export Controls & Dual-Use Technology Transfer Compliance",
-      badge: "EXPORT COMPLIANCE",
-      subBadge: "EXPORT v2.4",
+      title: "Defense Export Controls (5201/MSB) & NATO NCAGE Military Supplier Compliance",
+      badge: "EXPORT & NATO COMPLIANCE",
+      subBadge: "EXPORT v3.0",
       category: "EXPORT CONTROLS",
-      docNo: "TR-EXP-2026/07",
-      effectiveDate: "2026-08-30",
-      summary: "All international licensing and technology transfers of Trustia AI autonomous systems are conducted under strict compliance with national defense export control regimes and dual-use regulations.",
+      docNo: "TR-EXP-2026/09",
+      effectiveDate: "2026-09-16",
+      summary: "All international licensing and technology transfers of Trustia AI autonomous systems comply with Turkish Law No. 5201, Ministry of National Defense (MSB TMKB), and NATO NCAGE military supplier standards (Ref: TR26258467723).",
       sections: [
         {
-          heading: "Section 1 — Export Approvals & Dual-Use Compliance",
+          heading: "Section 1 — Export Approvals & NATO NCAGE Codification",
           items: [
-            "Defense-oriented autonomous software transfers require explicit state authorization and export licensing.",
-            "Strict prohibition on technology transfers to sanctioned entities or embargoed jurisdictions."
+            "Defense autonomous software exports are governed by strict state approval via MSB / SSB.",
+            "Subject to NATO NCAGE Allied Supplier codification (Ref: TR26258467723) administered by the Turkish National Codification Bureau (TMKB).",
+            "Zero transfer to sanctioned entities or embargoed jurisdictions."
+          ]
+        },
+        {
+          heading: "Section 2 — Dual-Use Civil Export Channels",
+          items: [
+            "Commercial Robotaxi and civilian mobility stacks are distributed under international dual-use export standards and European Union (Horizon Europe / EIT) guidelines."
           ]
         }
       ]
@@ -453,10 +571,10 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "KVKK, GDPR ve Kurumsal Veri Gizliliği Politikası",
       badge: "KVKK & GDPR COMPLIANT",
-      subBadge: "GİZLİLİK v2.4",
+      subBadge: "GİZLİLİK v3.0",
       category: "VERİ GİZLİLİĞİ",
-      docNo: "TR-PRIV-2026/08",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-PRIV-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında kurumsal veri işleme, saklama ve gizlilik taahhüdümüzdür.",
       sections: [
         {
@@ -485,16 +603,16 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Data Privacy Policy (KVKK & EU GDPR Compliance)",
       badge: "KVKK & GDPR COMPLIANT",
-      subBadge: "PRIVACY v2.4",
+      subBadge: "PRIVACY v3.0",
       category: "DATA PRIVACY",
-      docNo: "TR-PRIV-2026/08",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-PRIV-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Trustia AI processes enterprise communications and fleet telemetry in rigorous alignment with Turkish KVKK Law No. 6698 and European Union GDPR standards.",
       sections: [
         {
           heading: "Section 1 — Data Controller & Processing Boundaries",
           items: [
-            "Data Controller: Trustia AI, İTO BTM Fulya İTO BTM Fulya Kampüsü Residence, Istanbul, Turkey.",
+            "Data Controller: Trustia AI, İTO BTM Fulya Kampüsü, Istanbul, Turkey.",
             "Inquiries submitted via official portals are used exclusively for partnership evaluations and technical NDA dialogues.",
             "Zero commercial sale or third-party marketing distribution of institutional data."
           ]
@@ -514,10 +632,10 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "KVKK, GDPR ve Kurumsal Veri Gizliliği Politikası",
       badge: "KVKK & GDPR COMPLIANT",
-      subBadge: "GİZLİLİK v2.4",
+      subBadge: "GİZLİLİK v3.0",
       category: "VERİ GİZLİLİĞİ",
-      docNo: "TR-PRIV-2026/08",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-PRIV-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında kurumsal veri işleme, saklama ve gizlilik taahhüdümüzdür.",
       sections: [
         {
@@ -546,16 +664,16 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Data Privacy Policy (KVKK & EU GDPR Compliance)",
       badge: "KVKK & GDPR COMPLIANT",
-      subBadge: "PRIVACY v2.4",
+      subBadge: "PRIVACY v3.0",
       category: "DATA PRIVACY",
-      docNo: "TR-PRIV-2026/08",
-      effectiveDate: "2026-08-30",
+      docNo: "TR-PRIV-2026/09",
+      effectiveDate: "2026-09-16",
       summary: "Trustia AI processes enterprise communications and fleet telemetry in rigorous alignment with Turkish KVKK Law No. 6698 and European Union GDPR standards.",
       sections: [
         {
           heading: "Section 1 — Data Controller & Processing Boundaries",
           items: [
-            "Data Controller: Trustia AI, İTO BTM Fulya İTO BTM Fulya Kampüsü Residence, Istanbul, Turkey.",
+            "Data Controller: Trustia AI, İTO BTM Fulya Kampüsü, Istanbul, Turkey.",
             "Inquiries submitted via official portals are used exclusively for partnership evaluations and technical NDA dialogues.",
             "Zero commercial sale or third-party marketing distribution of institutional data."
           ]

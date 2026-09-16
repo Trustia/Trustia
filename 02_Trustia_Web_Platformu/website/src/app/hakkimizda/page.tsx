@@ -18,7 +18,9 @@ import {
   Zap,
   Activity,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Download,
+  FileText
 } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -62,6 +64,12 @@ export default function AboutPage() {
 
   const credentials = [
     {
+      org: lang === "tr" ? "Open Invention Network (OIN 2.0)" : "Open Invention Network (OIN 2.0)",
+      reg: "Doc ID: f1e44576",
+      type: lang === "tr" ? "Küresel Patent Savunma Paktı • Karşılıklı Lisans Sözleşmesi" : "Global Patent Non-Aggression Pact • Executed License",
+      status: "İmzalandı"
+    },
+    {
       org: lang === "tr" ? "Avrupa Komisyonu (European Commission)" : "European Commission",
       reg: "PIC: 861711529",
       type: lang === "tr" ? "Resmi Katılımcı Kayıt Defteri Tescili" : "Official Participant Register Identification",
@@ -74,22 +82,16 @@ export default function AboutPage() {
       status: "Canlıda"
     },
     {
-      org: lang === "tr" ? "Katar Bilim ve Teknoloji Parkı (QSTP Doha)" : "Qatar Science & Technology Park (QSTP)",
-      reg: "30M$ Fon + Sprint",
-      type: lang === "tr" ? "30M$ Tech Venture Fon & 4 Hafta Doha Sprint Kuluçkası" : "$30M Tech Venture Fund & 4-Week Doha Sprint",
-      status: "Alındı"
+      org: lang === "tr" ? "Malta Enterprise (MSRP & Start-up Finance)" : "Malta Enterprise (MSRP & Finance)",
+      reg: "1.500.000 € Hibe",
+      type: lang === "tr" ? "1.5M€ Hibe (#100062411) & Girişimci İkamet İzni (#100062412)" : "€1.5M Grant (#100062411) & Founder Residency (#100062412)",
+      status: "Başarıyla Alındı"
     },
     {
-      org: lang === "tr" ? "BAYKAR Teknoloji (Baykar Tech)" : "BAYKAR Defense Technologies",
-      reg: "Tedarikçi Portalı",
-      type: lang === "tr" ? "Resmi Alt Yüklenici & Seviye-4 Taktik İKA Otonomi Başvurusu" : "Official Subcontractor & Tactical Autonomy Application",
-      status: "Kayıt Alındı"
-    },
-    {
-      org: lang === "tr" ? "DEİK (Dış Ekonomik İlişkiler Kurulu)" : "Foreign Economic Relations Board (DEİK)",
-      reg: lang === "tr" ? "Resmi Davet" : "Official Invitation",
-      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Resmi Üyelik ve Ticari Diplomasi Daveti" : "Digital Technologies Business Council • Official Invitation",
-      status: lang === "tr" ? "Davet Alındı" : "Invited"
+      org: lang === "tr" ? "NATO NSPA & MSB TMKB" : "NATO NSPA & Defense Codification",
+      reg: "Ref: TR26258467723",
+      type: lang === "tr" ? "NATO NCAGE Askeri Tedarikçi Kodu & Milli Savunma Tescili" : "NATO NCAGE Allied Supplier Registry & MSB Codification",
+      status: "Onayda"
     },
     {
       org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
@@ -98,10 +100,34 @@ export default function AboutPage() {
       status: lang === "tr" ? "Ön Onaylı" : "Pre-Approved"
     },
     {
+      org: lang === "tr" ? "BAYKAR Teknoloji (Baykar Tech)" : "BAYKAR Defense Technologies",
+      reg: "Tedarikçi Portalı",
+      type: lang === "tr" ? "Resmi Alt Yüklenici & Seviye-4 Taktik İKA Otonomi Başvurusu" : "Official Subcontractor & Tactical Autonomy Application",
+      status: "Kayıt Alındı"
+    },
+    {
+      org: lang === "tr" ? "Katar Bilim ve Teknoloji Parkı (QSTP Doha)" : "Qatar Science & Technology Park (QSTP)",
+      reg: "30M$ Fon + Sprint",
+      type: lang === "tr" ? "30M$ Tech Venture Fon & 4 Hafta Doha Sprint Kuluçkası" : "$30M Tech Venture Fund & 4-Week Doha Sprint",
+      status: "Alındı"
+    },
+    {
+      org: lang === "tr" ? "Dorm Room Fund (First Round Capital)" : "Dorm Room Fund (First Round Capital)",
+      reg: "$40k - $100k SAFE",
+      type: lang === "tr" ? "San Francisco Ekibi • Derin Teknoloji SAFE Yatırım Başvurusu" : "San Francisco Team • Deep Tech SAFE Investment",
+      status: "Alındı"
+    },
+    {
       org: lang === "tr" ? "Singapur Hükümeti (Startup SG & GIA)" : "Singapore Government (Startup SG & GIA)",
       reg: "ID: #57428 • GIA: 6aa85fa9",
       type: lang === "tr" ? "Enterprise Singapore Ulusal Ekosistem & Küresel İnovasyon İttifakı (B2Match)" : "Enterprise Singapore National Ecosystem & Global Innovation Alliance (B2Match)",
       status: lang === "tr" ? "%100 Kayıtlı" : "100% Verified"
+    },
+    {
+      org: lang === "tr" ? "DEİK (Dış Ekonomik İlişkiler Kurulu)" : "Foreign Economic Relations Board (DEİK)",
+      reg: lang === "tr" ? "Resmi Davet" : "Official Invitation",
+      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Resmi Üyelik ve Ticari Diplomasi Daveti" : "Digital Technologies Business Council • Official Invitation",
+      status: lang === "tr" ? "Davet Alındı" : "Invited"
     },
     {
       org: lang === "tr" ? "Teknopark İstanbul (HASAT 2026)" : "Teknopark Istanbul (HASAT 2026)",
@@ -315,7 +341,203 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* 5. Physical Infrastructure & Proving Grounds */}
+        {/* 5. Executive Leadership & Governance */}
+        <div className="space-y-4">
+          <div>
+            <div className="text-xs font-mono text-slate-400 font-semibold tracking-wider uppercase">
+              {lang === "tr" ? "KURUMSAL YÖNETİŞİM VE LİDERLİK" : "EXECUTIVE LEADERSHIP & GOVERNANCE"}
+            </div>
+            <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight">
+              {lang === "tr" ? "Liderlik Heyeti ve Mühendislik Kadrosu" : "Executive Board & Engineering Leadership"}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* 1. Murat Furkan Bayram */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-[#C8FF00] font-bold font-mono">
+                    MFB
+                  </div>
+                  <span className="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800 text-emerald-400 font-mono text-[10px] font-semibold">
+                    %80 Kurucu Payı
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white">Murat Furkan Bayram</h3>
+                  <div className="text-xs font-mono text-[#C8FF00] mt-0.5">
+                    {lang === "tr" ? "Kurucu & CEO / Sistem Mimarı" : "Founder & CEO / System Architect"}
+                  </div>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {lang === "tr"
+                    ? "KOSGEB İleri Girişimci ve BTK Savunma Sanayii sertifikalı sistem mimarı. 16.000+ satırlık deterministik otonomi mimarisi, GPS'siz 3D LiDAR SLAM, Hybrid A* ve Seviye 4 kontrol algoritmalarının bizzat geliştiricisidir."
+                    : "Certified defense system architect. Engineered the 16,000+ lines deterministic autonomy core, GPS-denied 3D LiDAR SLAM, and Level-4 fail-safe control stack."}
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+                <span>TÜBİTAK ARBİS: #TBTK-0229</span>
+                <span className="text-white font-medium">İTO BTM Fulya</span>
+              </div>
+            </div>
+
+            {/* 2. Doğukan Bayram */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-200 font-bold font-mono">
+                    DB
+                  </div>
+                  <span className="px-2 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300 font-mono text-[10px] font-semibold">
+                    %20 Kurucu Ortak
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white">Doğukan Bayram</h3>
+                  <div className="text-xs font-mono text-slate-300 mt-0.5">
+                    {lang === "tr" ? "Kurucu Ortak & Operasyon Direktörü (COO)" : "Co-Founder & Chief Operating Officer (COO)"}
+                  </div>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {lang === "tr"
+                    ? "Reşit kurucu ortak. Saha operasyonları, filo lojistiği, tedarik zinciri entegrasyonu, resmi kurum ilişkileri ve kurumsal sözleşme süreçlerinin yönetimini icra etmektedir."
+                    : "Adult Co-Founder. Oversees physical fleet deployment, supply chain logistics, institutional vendor agreements, and day-to-day operations."}
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+                <span>Operasyon & Saha</span>
+                <span className="text-white font-medium">Reşit Kurucu</span>
+              </div>
+            </div>
+
+            {/* 3. Denizcan Özcan */}
+            <div className="p-5 sm:p-6 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3 flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-200 font-bold font-mono">
+                    DÖ
+                  </div>
+                  <span className="px-2 py-0.5 rounded bg-cyan-950/60 border border-cyan-800 text-cyan-400 font-mono text-[10px] font-semibold">
+                    Donanım & Entegrasyon
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-white">Denizcan Özcan</h3>
+                  <div className="text-xs font-mono text-slate-300 mt-0.5">
+                    {lang === "tr" ? "Baş Donanım ve Entegrasyon Mühendisi" : "Lead Hardware & Integration Engineer"}
+                  </div>
+                </div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {lang === "tr"
+                    ? "ASELSAN Aday Mühendis Havuzu ve TEKNOFEST Robotaksi Finalisti. Hyundai Ioniq 5 CAN-FD köprüleri, NVIDIA Jetson Orin entegrasyonu ve sensör pod donanım mimarisini yönetir."
+                    : "ASELSAN Candidate Engineer Pool & TEKNOFEST Robotaxi Finalist. Heads vehicle drive-by-wire harness, NVIDIA Jetson AGX Orin integration, and sensor pod hardware."}
+                </p>
+              </div>
+              <div className="pt-3 border-t border-slate-800 text-[11px] font-mono text-slate-400 flex items-center justify-between">
+                <span>İÜC EEE (3.44 GPA)</span>
+                <span className="text-white font-medium">Donanım Mimarı</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 6. Official Documents & Executed Licenses Download Strip */}
+        <div className="p-6 sm:p-8 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
+            <div>
+              <span className="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold">
+                {lang === "tr" ? "RESMİ BELGELER VE TESCİLLER" : "OFFICIAL REGISTRY & DOCUMENTS"}
+              </span>
+              <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
+                {lang === "tr" ? "Doğrulanmış Kurumsal Belgeleri İndir" : "Download Verified Institutional Documents"}
+              </h3>
+            </div>
+            <span className="text-[10px] font-mono text-slate-400 px-2.5 py-1 rounded bg-slate-900 border border-slate-800">
+              PDF / TÜRKPATENT / OIN
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-1">
+            <a
+              href="/Trustia_OIN_Lisans_Sozlesmesi_2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="p-3.5 rounded-xl bg-[#07090d] border border-[#C8FF00]/40 hover:border-[#C8FF00] transition-colors block group"
+            >
+              <div className="flex items-center justify-between text-[#C8FF00] text-xs font-mono font-bold mb-1">
+                <span>OIN 2.0 LİSANSI</span>
+                <Download className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+              </div>
+              <div className="text-xs font-bold text-white group-hover:text-slate-200">
+                OIN Patent Lisansı
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                İmzalı Resmi Sözleşme PDF
+              </div>
+            </a>
+
+            <a
+              href="/Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="p-3.5 rounded-xl bg-[#07090d] border border-slate-800 hover:border-slate-600 transition-colors block group"
+            >
+              <div className="flex items-center justify-between text-slate-400 text-xs font-mono font-bold mb-1">
+                <span>88+ BAŞVURU</span>
+                <Download className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+              </div>
+              <div className="text-xs font-bold text-white group-hover:text-slate-200">
+                Global Hibe & Takip
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                Resmi Portallar ve Kodlar
+              </div>
+            </a>
+
+            <a
+              href="/Trustia_AI_Executive_One_Pager.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="p-3.5 rounded-xl bg-[#07090d] border border-slate-800 hover:border-slate-600 transition-colors block group"
+            >
+              <div className="flex items-center justify-between text-slate-400 text-xs font-mono font-bold mb-1">
+                <span>ONE-PAGER</span>
+                <Download className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+              </div>
+              <div className="text-xs font-bold text-white group-hover:text-slate-200">
+                Executive One-Pager
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                Kurumsal Yatırım Özeti (EN)
+              </div>
+            </a>
+
+            <a
+              href="/06_Trustia_AI_Hyundai_Ioniq5_Seviye4_Robotaksi_Master_Plan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+              className="p-3.5 rounded-xl bg-[#07090d] border border-slate-800 hover:border-slate-600 transition-colors block group"
+            >
+              <div className="flex items-center justify-between text-slate-400 text-xs font-mono font-bold mb-1">
+                <span>ŞARTNAME</span>
+                <Download className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
+              </div>
+              <div className="text-xs font-bold text-white group-hover:text-slate-200">
+                Ioniq 5 Dönüşüm Planı
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                27 Parçalık Sensör BOM
+              </div>
+            </a>
+          </div>
+        </div>
+
+        {/* 7. Physical Infrastructure & Proving Grounds */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="p-5 sm:p-6 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-2">
             <div className="flex items-center gap-2 text-slate-400 font-mono text-xs uppercase font-semibold">
