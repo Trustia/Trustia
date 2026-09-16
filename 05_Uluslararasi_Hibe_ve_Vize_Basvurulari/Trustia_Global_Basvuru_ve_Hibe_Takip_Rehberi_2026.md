@@ -107,6 +107,7 @@
 | **Bilişim Vadisi (B-Stars Mobilite)** | Otonom Test Pisti & Hızlandırma | Pist Tahsisi & Master Sunum | 12.09.2026 | ✅ **"BAŞVURUNUZ ALINMIŞTIR"** |
 | **Teknopark İstanbul (HASAT 2026)** | SSB & İTO Çatısı Altında 100M TL Destek & Cube Ofis | 100M TL Yatırım Havuzu, Ücretsiz Ofis & Sahne | 14.09.2026 | 🟢 **"Başvurunuz başarıyla alındı! 🎉"** (Değerlendirme Ekibinde) |
 | **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | Fulya Kampüsü Sözleşmeli Ön Kuluçka | 150M TL Val. KPI Takip Formu | 10.09.2026 | ✅ **"Yanıtınız kaydedildi"** |
+| **İTO BTM Feedback Round - 2** | Inveo, Startup Burada & Fuzul Ventures Birebir Yatırımcı Masası | Pre-Seed SAFE / Kitle Fonlama / B2B PoC | 16.09.2026 | 🟢 **"Yanıtınız kaydedildi." (23 Eylül Fulya Görüşmesi)** |
 | **Türkiye Yapay Zeka İnisiyatifi (TRAI)** | Otonom Sürüş Girişim Haritası | Ekosistem Akreditasyonu | 12.09.2026 | ✅ **"Başvurunuz alındı!"** |
 | **APY Ventures (Bilişim Vadisi GSYF)** | Mobilite & Derin Teknoloji | $500k Tohum Öncesi SAFE | 09.09.2026 | ✅ **"Formunuz başarıyla gönderildi"** |
 | **J-Start Girişim Sermayesi** | TRL-6 Hyundai Ioniq 5 Mimarisi | 15M TL Yatırım Talebi | 09.09.2026 | ✅ **"Başvurunuz alınmıştır"** |
@@ -134,8 +135,9 @@
 ## 🎯 8. KRİTİK TAKVİM VE EYLEM PLANI (EYLÜL - KASIM 2026)
 
 1. **17 Eylül 2026 Perşembe (19:40 TRT):** Z Fellows Grace Kasten (Pace Capital Partner) ile 10 dakikalık canlı Zoom mülakatı.
-2. **Q4 2026:** EIT Urban Mobility 100.000 € Girişimci Hibesi jüri değerlendirmesi ve hibe kabulü.
-3. **Ekim 2026:** QSTP Doha Sprint (Katar 4 haftalık yerinde sprint programı başlangıcı).
-4. **21 Ekim 2026:** Webrazzi Arena Wyndham Grand Levent sahne sunumu.
-5. **Kasım 2026:** Dubai World Challenge for Self-Driving Transport (RTA) 1.2M$ yarışması finalist ilanı.
-6. **Eylül - Ekim 2026:** fonbulucu SPK onayının tamamlanması ve 15M TL paya dayalı kitle fonlamanın canlıya alınması.
+2. **23 Eylül 2026 Çarşamba (14:00 - 18:00):** BTM Fulya Feedback Round - 2 (Inveo Ventures, Startup Burada, Fuzul Ventures ile 1-on-1 yatırımcı görüşmeleri).
+3. **Q4 2026:** EIT Urban Mobility 100.000 € Girişimci Hibesi jüri değerlendirmesi ve hibe kabulü.
+4. **Ekim 2026:** QSTP Doha Sprint (Katar 4 haftalık yerinde sprint programı başlangıcı).
+5. **21 Ekim 2026:** Webrazzi Arena Wyndham Grand Levent sahne sunumu.
+6. **Kasım 2026:** Dubai World Challenge for Self-Driving Transport (RTA) 1.2M$ yarışması finalist ilanı.
+7. **Eylül - Ekim 2026:** fonbulucu SPK onayının tamamlanması ve 15M TL paya dayalı kitle fonlamanın canlıya alınması.

@@ -149,7 +149,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇸🇬 **Singapur Hükümeti (Startup SG & GIA - Enterprise Singapore):** Murat Furkan Bayram adına resmi Kurucu Profili (**ID: `#57428`**) %100 onaylandı; Küresel İnovasyon İttifakı (GIA) Hızlandırma Başvurusu (**Yanıt ID: `6aa85fa93dc42d7feef1bc57`**) tamamlanarak B2Match ve Asya-Pasifik derin teknoloji ağına dahil olundu (14 Eylül 2026).
   * 🇹🇷 **Teknopark İstanbul (HASAT 2026):** T.C. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) ve İTO çatı ortaklığındaki 100M TL destek ve yatırım havuzlu "HASAT 2026" teknoloji sahnesi resmi yarışma başvurusu tamamlandı (Durum: **"Başvurunuz Başarıyla Alındı! 🎉"**).
   * 🇹🇷 **Bilişim Vadisi (B-Stars Mobilite Hızlandırma Programı):** Otonom Test Pisti ve hızlandırma üssüne başvuru eksiksiz tamamlandı.
-  * 🇹🇷 **İTO BTM Fulya Kampüsü:** 2026-II. Dönem Sözleşmeli Ön Kuluçka Girişimi.
+  * 🇹🇷 **İTO BTM Fulya Kampüsü:** 2026-II. Dönem Sözleşmeli Ön Kuluçka Girişimi. Feedback Round - 2 yatırımcı eşleşme başvurusu tamamlandı (Inveo Ventures, Startup Burada, Fuzul Ventures ile 23 Eylül 2026 Fulya Kampüsü yüz yüze görüşmesi).
   * 📜 **KOSGEB İleri Girişimci Sertifikası:** Belge No `KSB01UGE0115153370`.
   * 📜 **BTK Akademi Savunma Sanayii Ürün ve Platformları Sertifikası:** Belge No `L2zPtN4X1ZJ` (100/100 Tam Puan).
   * 📜 **TÜBİTAK ARBİS Milli Araştırmacı Sicili:** Sicil No `TBTK-0229-6571`.
