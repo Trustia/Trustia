@@ -1,40 +1,38 @@
 1:"$Sreact.fragment"
-2:I[47257,["/_next/static/chunks/2f322uix-f155.js"],"ClientPageRoot"]
-3:I[95507,["/_next/static/chunks/2f322uix-f155.js","/_next/static/chunks/0dj54eilyio98.js","/_next/static/chunks/21oyfvm4k2qa2.js"],"default"]
-6:I[97367,["/_next/static/chunks/2f322uix-f155.js"],"OutletBoundary"]
+2:I[47257,["/_next/static/chunks/2a9wqn-ry81gj.js"],"ClientPageRoot"]
+3:I[95507,["/_next/static/chunks/2a9wqn-ry81gj.js","/_next/static/chunks/1sbrv9ooh4pms.js","/_next/static/chunks/21oyfvm4k2qa2.js"],"default"]
+6:I[97367,["/_next/static/chunks/2a9wqn-ry81gj.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-b:I[97367,["/_next/static/chunks/2f322uix-f155.js"],"ViewportBoundary"]
-c:I[97367,["/_next/static/chunks/2f322uix-f155.js"],"MetadataBoundary"]
+b:I[97367,["/_next/static/chunks/2a9wqn-ry81gj.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/2a9wqn-ry81gj.js"],"MetadataBoundary"]
 a:X
-1f:X
-1f:C
-0:{"buildId":"gulfDNmWvIftodaVtRD0p","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/0dj54eilyio98.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/21oyfvm4k2qa2.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#090b0e"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"TRUSTIA AI — Seviye 4 Yerli Robotaksi ve Askeri İKA Otonomi Platformu"}],["$","meta","1",{"name":"description","content":"Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Open Invention Network (OIN 2.0 Lisansı: #f1e44576), NATO NCAGE (TR26258467723), ASELSAN tedarikçi (#0050569), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Malta Enterprise ve İTO BTM tescilli. (İstanbul, Türkiye)."}],["$","link","2",{"rel":"author","href":"https://trustia.com.tr"}],["$","meta","3",{"name":"author","content":"Trustia AI"}],["$","link","4",{"rel":"author","href":"https://trustia.com.tr/hakkimizda/"}],["$","meta","5",{"name":"author","content":"Murat Furkan Bayram"}],["$","meta","6",{"name":"keywords","content":"TRUSTIA AI,Trustia,Trustia Teknoloji,otonomi yazılımı,robotaksi,yerli robotaksi,seviye 4 otonom sürüş,insansız kara aracı,İKA otonomi,V2X,C-V2X,GPS-denied navigation,3D SLAM,yörünge tahmini,Hybrid A*,STANAG 4586,SAE JAUS AS6091,ROS 2 Humble,CAN FD bridge,savunma sanayii,İTO BTM,Teknopark İstanbul,Teknopark İstanbul HASAT 2026,KOSGEB İleri Girişimci,Murat Furkan Bayram,İstanbul,Avrupa Komisyonu PIC 861711529,EIT Urban Mobility CUS15554,Singapore Startup SG #57428,Singapore Global Innovation Alliance GIA,B2Match Singapore Joint Innovation,Enterprise Singapore,EntrePass Singapore,QSTP Doha Sprint,BAYKAR Teknoloji,ASELSAN Tedarikçi,DEİK Dijital Teknolojiler,Z Fellows,fonbulucu W1MV5K,Crunchbase Trustia AI"}],["$","meta","7",{"name":"creator","content":"Trustia AI"}],["$","meta","8",{"name":"publisher","content":"Trustia AI"}],["$","meta","9",{"name":"robots","content":"index, follow"}],["$","meta","10",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","11",{"name":"category","content":"Autonomous Systems & Defense Technology"}],["$","link","12",{"rel":"canonical","href":"https://trustia.com.tr/"}],["$","link","13",{"rel":"alternate","hrefLang":"tr-TR","href":"https://trustia.com.tr/"}],["$","link","14",{"rel":"alternate","hrefLang":"en-US","href":"https://trustia.com.tr/"}],["$","meta","15",{"property":"og:title","content":"TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu"}],["$","meta","16",{"property":"og:description","content":"Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM ve 1.301 Doğrulanmış Test. AB PIC: 861711529, EITUM: CUS15554, Singapur Startup SG: #57428, İTO BTM & ASELSAN Akreditasyonlu."}],["$","meta","17",{"property":"og:url","content":"https://trustia.com.tr/"}],["$","meta","18",{"property":"og:site_name","content":"TRUSTIA AI"}],["$","meta","19",{"property":"og:locale","content":"tr_TR"}],["$","meta","20",{"property":"og:image","content":"https://trustia.com.tr/og-image.jpg?v=2026"}],["$","meta","21",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","22",{"property":"og:image:width","content":"1200"}],"$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19","$L1a","$L1b"]}]}]}],null]}],"isPartial":"$@1c","staleTime":"$a","varyParams":null},{"rsc":"$L1d","isPartial":"$@1e","staleTime":"$a","varyParams":"$1f"}],"isUpgradeableISRFallback":false,"a":"$@20","rootVaryParams":null,"needsRuntimeRequest":"$@21"}
-22:I[27201,["/_next/static/chunks/2f322uix-f155.js"],"IconMark"]
-23:I[39756,["/_next/static/chunks/2f322uix-f155.js"],"default"]
-24:I[37457,["/_next/static/chunks/2f322uix-f155.js"],"default"]
+1d:X
+1d:C
+0:{"buildId":"yig3tbsT5Nd18t2FNFauw","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/1sbrv9ooh4pms.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/21oyfvm4k2qa2.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=5"}],["$","meta","2",{"name":"theme-color","content":"#090b0e"}],["$","meta","3",{"name":"color-scheme","content":"dark"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"TRUSTIA AI — Seviye 4 Yerli Robotaksi ve Askeri İKA Otonomi Platformu"}],["$","meta","1",{"name":"description","content":"Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Open Invention Network (OIN 2.0 Lisansı: #f1e44576), NATO NCAGE (TR26258467723), ASELSAN tedarikçi (#0050569), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Malta Enterprise ve İTO BTM tescilli. (İstanbul, Türkiye)."}],["$","link","2",{"rel":"author","href":"https://trustia.com.tr"}],["$","meta","3",{"name":"author","content":"Trustia AI"}],["$","meta","4",{"name":"keywords","content":"TRUSTIA AI,Trustia,Trustia Teknoloji,otonomi yazılımı,robotaksi,yerli robotaksi,seviye 4 otonom sürüş,insansız kara aracı,İKA otonomi,V2X,C-V2X,GPS-denied navigation,3D SLAM,yörünge tahmini,Hybrid A*,STANAG 4586,SAE JAUS AS6091,ROS 2 Humble,CAN FD bridge,savunma sanayii,İTO BTM,Teknopark İstanbul,Teknopark İstanbul HASAT 2026,KOSGEB İleri Girişimci,İstanbul,Avrupa Komisyonu PIC 861711529,EIT Urban Mobility CUS15554,Singapore Startup SG #57428,Singapore Global Innovation Alliance GIA,B2Match Singapore Joint Innovation,Enterprise Singapore,EntrePass Singapore,QSTP Doha Sprint,BAYKAR Teknoloji,ASELSAN Tedarikçi,DEİK Dijital Teknolojiler,Z Fellows,fonbulucu W1MV5K,Crunchbase Trustia AI"}],["$","meta","5",{"name":"creator","content":"Trustia AI"}],["$","meta","6",{"name":"publisher","content":"Trustia AI"}],["$","meta","7",{"name":"robots","content":"index, follow"}],["$","meta","8",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"category","content":"Autonomous Systems & Defense Technology"}],["$","link","10",{"rel":"canonical","href":"https://trustia.com.tr/"}],["$","link","11",{"rel":"alternate","hrefLang":"tr-TR","href":"https://trustia.com.tr/"}],["$","link","12",{"rel":"alternate","hrefLang":"en-US","href":"https://trustia.com.tr/"}],["$","meta","13",{"property":"og:title","content":"TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu"}],["$","meta","14",{"property":"og:description","content":"Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM ve 1.301 Doğrulanmış Test. AB PIC: 861711529, EITUM: CUS15554, Singapur Startup SG: #57428, İTO BTM & ASELSAN Akreditasyonlu."}],["$","meta","15",{"property":"og:url","content":"https://trustia.com.tr/"}],["$","meta","16",{"property":"og:site_name","content":"TRUSTIA AI"}],["$","meta","17",{"property":"og:locale","content":"tr_TR"}],["$","meta","18",{"property":"og:image","content":"https://trustia.com.tr/og-image.jpg?v=2026"}],["$","meta","19",{"property":"og:image:type","content":"image/jpeg"}],["$","meta","20",{"property":"og:image:width","content":"1200"}],["$","meta","21",{"property":"og:image:height","content":"630"}],["$","meta","22",{"property":"og:image:alt","content":"TRUSTIA AI — Level 4 Autonomous Robotaxi & Defense Robotics"}],"$Ld","$Le","$Lf","$L10","$L11","$L12","$L13","$L14","$L15","$L16","$L17","$L18","$L19"]}]}]}],null]}],"isPartial":"$@1a","staleTime":"$a","varyParams":null},{"rsc":"$L1b","isPartial":"$@1c","staleTime":"$a","varyParams":"$1d"}],"isUpgradeableISRFallback":false,"a":"$@1e","rootVaryParams":null,"needsRuntimeRequest":"$@1f"}
+20:I[27201,["/_next/static/chunks/2a9wqn-ry81gj.js"],"IconMark"]
+21:I[39756,["/_next/static/chunks/2a9wqn-ry81gj.js"],"default"]
+22:I[37457,["/_next/static/chunks/2a9wqn-ry81gj.js"],"default"]
 4:{}
 5:"$0:data:0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
-d:["$","meta","23",{"property":"og:image:height","content":"630"}]
-e:["$","meta","24",{"property":"og:image:alt","content":"TRUSTIA AI — Level 4 Autonomous Robotaxi & Defense Robotics"}]
-f:["$","meta","25",{"property":"og:locale:alternate","content":"en_US"}]
-10:["$","meta","26",{"property":"og:type","content":"website"}]
-11:["$","meta","27",{"name":"twitter:card","content":"summary_large_image"}]
-12:["$","meta","28",{"name":"twitter:creator","content":"@trustia_ai"}]
-13:["$","meta","29",{"name":"twitter:title","content":"TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core"}]
-14:["$","meta","30",{"name":"twitter:description","content":"Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests. EU PIC: 861711529 • SG Startup SG: #57428."}]
-15:["$","meta","31",{"name":"twitter:image","content":"https://trustia.com.tr/og-image.jpg?v=2026"}]
-16:["$","link","32",{"rel":"shortcut icon","href":"/logo.png"}]
-17:["$","link","33",{"rel":"icon","href":"/favicon.ico?favicon.3_a5g1mtcd9g5.ico","sizes":"1024x1024","type":"image/x-icon"}]
-18:["$","link","34",{"rel":"icon","href":"/logo.png","sizes":"32x32","type":"image/png"}]
-19:["$","link","35",{"rel":"icon","href":"/icon.png","sizes":"192x192","type":"image/png"}]
-1a:["$","link","36",{"rel":"apple-touch-icon","href":"/logo.png"}]
-1b:["$","$L22","37",{}]
-1d:["$","$1","c",{"children":[null,["$","$L23",null,{"parallelRouterKey":"children","template":["$","$L24",null,{}]}]]}]
-21:true
+d:["$","meta","23",{"property":"og:locale:alternate","content":"en_US"}]
+e:["$","meta","24",{"property":"og:type","content":"website"}]
+f:["$","meta","25",{"name":"twitter:card","content":"summary_large_image"}]
+10:["$","meta","26",{"name":"twitter:creator","content":"@trustia_ai"}]
+11:["$","meta","27",{"name":"twitter:title","content":"TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core"}]
+12:["$","meta","28",{"name":"twitter:description","content":"Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests. EU PIC: 861711529 • SG Startup SG: #57428."}]
+13:["$","meta","29",{"name":"twitter:image","content":"https://trustia.com.tr/og-image.jpg?v=2026"}]
+14:["$","link","30",{"rel":"shortcut icon","href":"/logo.png"}]
+15:["$","link","31",{"rel":"icon","href":"/favicon.ico?favicon.3_a5g1mtcd9g5.ico","sizes":"1024x1024","type":"image/x-icon"}]
+16:["$","link","32",{"rel":"icon","href":"/logo.png","sizes":"32x32","type":"image/png"}]
+17:["$","link","33",{"rel":"icon","href":"/icon.png","sizes":"192x192","type":"image/png"}]
+18:["$","link","34",{"rel":"apple-touch-icon","href":"/logo.png"}]
+19:["$","$L20","35",{}]
+1b:["$","$1","c",{"children":[null,["$","$L21",null,{"parallelRouterKey":"children","template":["$","$L22",null,{}]}]]}]
+1f:true
 a:300
 a:C
-20:0
-1e:"$undefined"
-9:"$undefined"
+1e:0
 1c:"$undefined"
+9:"$undefined"
+1a:"$undefined"
