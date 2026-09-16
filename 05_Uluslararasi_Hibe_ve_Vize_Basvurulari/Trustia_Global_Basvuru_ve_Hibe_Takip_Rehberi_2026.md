@@ -28,9 +28,10 @@
 | 🇸🇬 **Singapur Startup SG (EnterpriseSG)** | **ID: `#57428`** | Resmi Kurucu Profili %100 Tamamlandı • EntrePass & SLINGSHOT 2026 Portalı Aktif |
 | 🇸🇬 **Singapur GIA & B2Match (EnterpriseSG)** | **Yanıt ID: `6aa85fa93dc42d7feef1bc57`** | GIA Başvurusu & B2Match Küresel Eşleştirme Portalı %100 Kuruldu (15.09.2026 00:24 TRT) |
 | 🇹🇷/🎖️ **MSB & NATO NCAGE Askeri Tedarikçi** | **`TR26258467723`** | NATO NSPA & T.C. Milli Savunma Bakanlığı (TMKB) Tescili • Doğrulandı • MSB Sorumlusu: Medine AYGUN |
+| 🛡️ **OIN 2.0 (Open Invention Network)** | **`f1e445769a9934114db095c4f5430a0e749d8201`** | Küresel Açık Kaynak Patent Savunma Paktı (Google, IBM, Sony, Toyota) • **RESMEN İMZALANDI VE YÜRÜRLÜKTE** • Tier 5 (0 $ Lisans) |
 | 🌐 **Crunchbase Doğrulanmış Profil** | **Isı: 93 / Büyüme: 91 / Sıra: 98k** | 1 Eylül $500k Pre-Seed SAFE Turu Canlıda |
 | 🧪 **Doğrulanmış Kod ve Test** | **16.000+ Satır / 1.301 Test** | 10 Kritik Alt Sistemde %100 Başarı |
-| 🌍 **Toplam Başvuru ve Tescil** | **90+ Resmi Başvuru** | 17+ Ülke (NATO, ABD, Malta, Singapur, İngiltere, AB, Katar, BAE, Suudi Arabistan, TR) |
+| 🌍 **Toplam Başvuru ve Tescil** | **95+ Resmi Başvuru ve Tescil** | 18+ Ülke / Birlik (NATO, ABD, Malta, Singapur, İngiltere, AB, Katar, BAE, KSA, TR, OIN) |
 
 ---
 
@@ -92,6 +93,7 @@
 | **Starburst Aerospace** | Los Angeles / Paris | Küresel Havacılık & Savunma Hızlandırıcısı | 12.09.2026 | ✅ **"Mesaj başarıyla gönderildi."** |
 | **24Haymarket** | Londra (Mayfair) | Özel Melek Yatırımcı Sendikası | 12.09.2026 | 🟡 Tamamlandı |
 | **LAUNCH & The Syndicate (Jason Calacanis)** | San Francisco | $100k-$500k Çek & Canlı Demo | Eylül 2026 | 🟡 İncelemede |
+| **Open Invention Network (OIN 2.0)** | Durham, NC / Küresel | Açık Kaynak Patent Savunma Paktı (Google, IBM, Sony, Toyota) • Belge: `f1e445769a9934114db095c4f5430a0e749d8201` | 16.09.2026 | 🟢 **RESMEN İMZALANDI VE YÜRÜRLÜKTE** (Tier 5 - 0 $ Hissiz/Ücretsiz Lisans) |
 
 ---
 

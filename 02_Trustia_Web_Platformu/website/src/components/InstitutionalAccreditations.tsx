@@ -238,6 +238,21 @@ export default function InstitutionalAccreditations() {
       authority: "nspa.nato.int • msb.gov.tr",
       recordTypeTr: "Resmi NATO NCAGE Askeri Tescil Başvurusu",
       recordTypeEn: "Official NATO NCAGE Military Supplier Application"
+    },
+    {
+      id: "16",
+      categoryTr: "Open Invention Network",
+      categoryEn: "Open Invention Network",
+      scopeTr: "OIN 2.0 Patent Savunma Paktı",
+      scopeEn: "OIN 2.0 Patent Defense Pact",
+      badge: "Doc ID: f1e44576",
+      questionTr: "Trustia'nın Open Invention Network (OIN 2.0) üyeliği ve patent koruması nedir?",
+      questionEn: "What is Trustia's Open Invention Network (OIN 2.0) patent defense agreement?",
+      answerTr: "Trustia, Google, IBM, Sony, Toyota ve Red Hat tarafından desteklenen küresel açık kaynak patent savunma topluluğu Open Invention Network'e (OIN 2.0) kurumsal lisans sahibi olarak resmen katılmıştır (Lisans Sözleşmesi Belge ID: f1e445769a9934114db095c4f5430a0e749d8201). OIN CEO'su Keith Bergelt ve Trustia CEO'su Murat Furkan Bayram tarafından çift taraflı imzalanan sözleşmeyle, Trustia'nın Linux, ROS2 ve Seviye-4 otonom seyrüsefer yazılımları patent saldırılarına ve trollerine karşı uluslararası karşılıklı patent savunma dokunulmazlığı altına alınmıştır.",
+      answerEn: "Trustia is officially an executed licensee participant in the Open Invention Network (OIN 2.0) — the world's largest patent non-aggression community backed by Google, IBM, Sony, Toyota, and Red Hat (License Document ID: f1e445769a9934114db095c4f5430a0e749d8201). Bilaterally signed by OIN CEO Keith Bergelt and Trustia CEO Murat Furkan Bayram, this agreement confers sovereign cross-license patent immunity protecting Trustia's Linux, ROS2, and Level-4 autonomous software core against aggressive patent litigation and patent trolls.",
+      authority: "openinventionnetwork.com",
+      recordTypeTr: "Resmi OIN 2.0 Lisans Sözleşmesi • İmzalandı",
+      recordTypeEn: "Official OIN 2.0 License Agreement • Executed"
     }
   ];
 
@@ -258,7 +273,7 @@ export default function InstitutionalAccreditations() {
           </div>
           <div className="text-left sm:text-right">
             <span className="text-[11px] font-mono text-zinc-400">
-              {lang === "tr" ? "15 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "15 Verified Records / Defense & Global Funds"}
+              {lang === "tr" ? "16 Doğrulanmış Kayıt / Savunma & Küresel Fonlar" : "16 Verified Records / Defense & Global Funds"}
             </span>
           </div>
         </div>
@@ -323,6 +338,10 @@ export default function InstitutionalAccreditations() {
                 <div className="flex items-center justify-between py-1.5 px-2.5 rounded bg-zinc-900/50 border border-zinc-800/60">
                   <span className="text-zinc-400">MSB & NATO NCAGE</span>
                   <span className="text-zinc-200 font-semibold">Ref: TR2625846</span>
+                </div>
+                <div className="flex items-center justify-between py-1.5 px-2.5 rounded bg-zinc-900/50 border border-zinc-800/60">
+                  <span className="text-zinc-400">OIN Patent Paktı</span>
+                  <span className="text-zinc-200 font-semibold">{lang === "tr" ? "İmzalandı (OIN 2.0)" : "Signed (OIN 2.0)"}</span>
                 </div>
               </div>
             </div>
