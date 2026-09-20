@@ -77,6 +77,7 @@
 | **T.C. CB Yatırım ve Finans Ofisi** | Stratejik Yatırım Masası | Global Otonom Mobilite ve Doğrudan Yabancı Yatırım | 12.09.2026 | ✅ **"E-postanız başarıyla gönderilmiştir."** |
 | **FNSS Savunma Sistemleri** | Birim Müdürü Dr. Raşit Karakuş | Gölge Süvari Taktik İKA Otonomi Beyni | 08.09.2026 | 🟡 Doğrudan İletildi |
 | **BMC Savunma & Otomotiv** | Zırhlı Araç & Çekici Masası | Kirpi/Vuran Taktik Seviye-4 Otonom Konvoy | 08.09.2026 | 🟡 Doğrudan İletildi |
+| **HİDROMEK A.Ş.** | Ar-Ge ve Teknoloji Yönetimi | OPERA Teleoperasyon & HICON Otonom İş Makineleri Yazılım Lisanslama / Ar-Ge Ortaklığı | 20.09.2026 | 🟢 **BAŞVURU İLETİLDİ ✔** • "Mesajınız için teşekkür ederiz. En kısa sürede size dönüş yapacağız." |
 | **NATO NSPA & MSB TMKB** | `TR26258467723` | NCAGE Askeri Tedarikçi Kodu & Müttefik Kütüğü Tescili | 15.09.2026 | 🟢 **BAŞVURU TAMAMLANDI & MSB ONAYINA SEVK EDİLDİ** (Medine AYGUN, tmkb@msb.gov.tr, +90 312 410 6184) |
 | **NATO DIANA & NIF** | 1 Milyar € Savunma İnovasyon Fonu | STANAG 4586 Taktik İKA Otonomi Beyni | Eylül 2026 | 📝 Başvuru Paketi Hazır |
 
