@@ -18,6 +18,7 @@
 | **BAYKAR Teknoloji** | Resmi Tedarikçi / Alt Yüklenici Başvuru Masası | Onaylandı (13 Eylül 2026) |
 | **DEİK İş Konseyi** | Dijital Teknolojiler İş Konseyi Resmi Üyelik | Resmi Davet Alındı (14 Eylül 2026) |
 | **ASELSAN Portal Başvuru Kodu** | `0050569CCE941FD1A49FCEFB9B7BE7D6` | 🟢 Ön Değerlendirme OLUMLU SONUÇLANDI • Potansiyel Tedarikçi (SAP: `FZQHEXGFMTJU`) |
+| **ASELSAN Axcelerate (AGM)** | Teknoera Portalı | 🟢 Başvuru İletildi ✔ • Uygunluk Değerlendirmesi Aşamasında (20 Eylül 2026) |
 | **KOSGEB İleri Girişimcilik** | `KSB01UGE0115153370` | %100 Resmi Onaylı |
 | **BTK Akademi Savunma Sanayii** | Sertifika No: `L2zPtN4X1ZJ` | Katılım Sertifikası |
 | **TÜBİTAK ARBİS Kaydı** | Araştırmacı Kimlik No: `TBTK-0229-6571` | Kayıtlı & Doğrulanmış |

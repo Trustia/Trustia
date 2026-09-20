@@ -22,4 +22,16 @@ SAP PORTAL ERİŞİM BİLGİLERİ (AKTİVE EDİLDİ - 14.09.2026):
 - Başvuru Takip URL: https://tedarikbasvuru.aselsan.com.tr/basvuru-takip
 - Durum: Kalıcı Yönetici Hesabı Başarıyla Oluşturuldu ve Portala Giriş Yapıldı (Aktif)
 ================================================================================
+ASELSAN GİRİŞİMCİLİK MERKEZİ (AXCELERATE AGM) BAŞVURU DETAYLARI:
+================================================================================
+Portal URL: https://axcelerate.aselsan.com.tr
+Başvuru Tarihi: 20.09.2026 14:36 TRT
+Girişim / Firma: Trustia Otonom Sistemleri - Murat Furkan Bayram
+Başvuru Sahibi: Murat Furkan Bayram (TC: 59476566862, Kurucu & Sistem Mimarı, %100)
+Donanım Mühendisi: Denizcan Özcan (ASELSAN Aday Mühendis Havuzu, İÜC EEE)
+Başvuru Dosyası: Trustia_ASELSAN_Axcelerate_Basvuru_Paketi_2026.zip (8 Resmi PDF)
+Sistem Durumu: "Başvuru iletildi, başvurunuzun durumunu takip etmek için lütfen bildirimleri kontrol edin."
+Aktif Aşama: UYGUNLUK DEĞERLENDİRMESİ
+Süreç Haritası: Gönderildi (Tamamlandı) ➔ Uygunluk (Aktif) ➔ AGM Görüşme ➔ Sektör Görüşme (SST İKA) ➔ Değerlendirme ➔ AGM Kurulu ➔ Kabul
+================================================================================
 

@@ -36,7 +36,7 @@
 | 🇶🇦 **QSTP (Qatar Science & Technology Park)** | Doha, Qatar | **$30M Venture Fund + Doha Sprint** | 🚀 **Submitted & Confirmed (4-Week In-Person Residency)** |
 | 🇹🇷 **BAYKAR Teknoloji (Baykar Tech)** | Istanbul, TR | **Official Defense Supplier Portal** | 🛡️ **Formally Submitted & Confirmed** |
 | 🇹🇷 **DEİK (Foreign Economic Relations Board)** | Istanbul, TR | **Digital Technologies Council** | 🌐 **Official Corporate Membership Invitation Received** |
-| 🇹🇷 **ASELSAN Defense Network** | Ankara, TR | **Approved Potential Supplier (Software)** | 🛡️ **Pre-Evaluation APPROVED (`0050569CCE941FD1A49FCEFB9B7BE7D6` • SAP: `FZQHEXGFMTJU`)** |
+| 🇹🇷 **ASELSAN Defense Network & Axcelerate AGM** | Ankara, TR | **Approved Potential Supplier & Axcelerate Center** | 🛡️ **Supplier Pre-Evaluation APPROVED (`0050569CCE941FD1A49FCEFB9B7BE7D6` • SAP: `FZQHEXGFMTJU`) & Axcelerate AGM SUBMITTED ✔ (Eligibility Stage 🟡)** |
 | 🇹🇷 **fonbulucu (SPK Crowdfunding)** | Ankara, TR | **15,000,000 TRY (150M TL Val.)** | 📈 **Formal Preliminary Review (`W1MV5K`)** |
 | 🇺🇸 **Z Fellows (Cory Levy & Grace Kasten)** | San Francisco, CA | **$10,000 Grant + SF Residency** | 🎯 **Live Partner Zoom Interview (17 Sept 2026)** |
 | 🇦🇪 **Dubai World Challenge for Self-Driving Transport** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted (Finalist Phase Nov 2026)** |
