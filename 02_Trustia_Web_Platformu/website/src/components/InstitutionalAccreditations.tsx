@@ -253,6 +253,21 @@ export default function InstitutionalAccreditations() {
       authority: "openinventionnetwork.com",
       recordTypeTr: "Resmi OIN 2.0 Lisans Sözleşmesi • İmzalandı",
       recordTypeEn: "Official OIN 2.0 License Agreement • Executed"
+    },
+    {
+      id: "17",
+      categoryTr: "ŞirketOrtağım Melek Ağı",
+      categoryEn: "ŞirketOrtağım Angel Network",
+      scopeTr: "BKY Melek Sermaye",
+      scopeEn: "Accredited Angel Capital",
+      badge: "Başvuru Alındı ✔",
+      questionTr: "ŞirketOrtağım Melek Yatırımcı Ağı başvuru ve değerlendirme süreci nedir?",
+      questionEn: "What is the application and evaluation status with ŞirketOrtağım Angel Investor Network?",
+      answerTr: "T.C. Hazine ve Maliye Bakanlığı akreditasyonuna sahip Bireysel Katılım Yatırımcısı (BKY) ağı ŞirketOrtağım'a, Seviye-4 otonomi, GNSS-denied 3D LiDAR SLAM mimarisi ve ASELSAN onaylı potansiyel tedarikçi statümüzle resmi online girişim başvurusu tamamlanmıştır (20 Eylül 2026). Süreç 'Başvurunuz alınmıştır' onayıyla Seçim Komitesi (Selection Committee) ve melek yatırımcı heyeti ön değerlendirme havuzuna alınmıştır.",
+      answerEn: "An official angel funding application has been formally submitted (September 20, 2026) to ŞirketOrtağım, an accredited Business Angel Network under the Republic of Türkiye Ministry of Treasury and Finance, featuring Trustia's Level-4 autonomy, GNSS-denied 3D LiDAR SLAM architecture, and verified ASELSAN supplier status. The submission has been officially acknowledged and is actively under review by the Selection Committee.",
+      authority: "sirketortagim.com",
+      recordTypeTr: "Melek Yatırımcı Ağı • Seçim Komitesi İncelemesinde",
+      recordTypeEn: "Angel Investor Network • Selection Committee Review"
     }
   ];
 

@@ -18,6 +18,7 @@
 | 🇪🇺 **EIT UM Hibe Başvuru Numarası** | **`3.1.02-1206-3732.3`** | 100.000 € Girişimci Hibe Çağrısı • Durum: "Gönderildi" |
 | 🇹🇷 **ASELSAN Potansiyel Tedarikçi** | **`0050569CCE941FD1A49FCEFB9B7BE7D6`** | Yazılım Geliştirme • Ön Değerlendirme OLUMLU SONUÇLANDI • SAP: `TRUSTIA_ADMIN` Aktive Edildi • Teknik Sunum Mektubu Hazırlandı |
 | 🇹🇷 **ASELSAN Axcelerate (AGM)** | **Axcelerate AGM Portalı** | 🟢 **BAŞVURU İLETİLDİ ✔** • Aktif Aşama: **Uygunluk Değerlendirmesi** • 8 Resmi PDF'lik Paket Sunuldu (20.09.2026) |
+| 🇹🇷 **ŞirketOrtağım Melek Ağı** | **BKY Melek Yatırımcı Ağı** | 🟢 **BAŞVURU ALINDI ✔** • 1M - 5M TL Öz Sermaye Havuzu • Seçim Komitesi Değerlendirmesinde (20.09.2026) |
 | 🇹🇷 **BAYKAR Teknoloji Alt Yüklenici** | **Kayıt Formu Alındı** | 13 Eylül 2026 Ekran Görüntüsüyle Doğrulandı |
 | 🇹🇷 **SSB SAYZEK Simülasyon No** | **`170`** | Simport Yöneticisi Rolü • Durum: "Onay Bekliyor" |
 | 🇶🇦 **Katar QSTP Fon & Kuluçka** | **30M$ Fon + Doha Sprint** | 4 Hafta Yüz Yüze Sprint, Otel, Ofis & Şirket Kuruluşu Gönderildi |
@@ -110,6 +111,7 @@
 | **Teknopark İstanbul (HASAT 2026)** | SSB & İTO Çatısı Altında 100M TL Destek & Cube Ofis | 100M TL Yatırım Havuzu, Ücretsiz Ofis & Sahne | 14.09.2026 | 🟢 **"Başvurunuz başarıyla alındı! 🎉"** (Değerlendirme Ekibinde) |
 | **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | Fulya Kampüsü Sözleşmeli Ön Kuluçka | 150M TL Val. KPI Takip Formu | 10.09.2026 | ✅ **"Yanıtınız kaydedildi"** |
 | **İTO BTM Feedback Round - 2** | Inveo, Startup Burada & Fuzul Ventures Birebir Yatırımcı Masası | Pre-Seed SAFE / Kitle Fonlama / B2B PoC | 16.09.2026 | 🟢 **"Yanıtınız kaydedildi." (23 Eylül Fulya Görüşmesi)** |
+| **ŞirketOrtağım Melek Yatırımcı Ağı** | Hazine Akredite BKY Melek Ağı (1M-5M TL) | 2M TL+ Öz Sermaye / Master Pitch Deck | 20.09.2026 | 🟢 **"Teşekkürler. Başvurunuz alınmıştır." ✔** (Seçim Komitesi Ön Değerlendirmesinde) |
 | **Türkiye Yapay Zeka İnisiyatifi (TRAI)** | Otonom Sürüş Girişim Haritası | Ekosistem Akreditasyonu | 12.09.2026 | ✅ **"Başvurunuz alındı!"** |
 | **APY Ventures (Bilişim Vadisi GSYF)** | Mobilite & Derin Teknoloji | $500k Tohum Öncesi SAFE | 09.09.2026 | ✅ **"Formunuz başarıyla gönderildi"** |
 | **J-Start Girişim Sermayesi** | TRL-6 Hyundai Ioniq 5 Mimarisi | 15M TL Yatırım Talebi | 09.09.2026 | ✅ **"Başvurunuz alınmıştır"** |

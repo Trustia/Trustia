@@ -98,6 +98,7 @@ def run_info():
     print("  * DEİK: Dijital Teknolojiler İş Konseyi (Resmi Üyelik Daveti Alındı - 14 Eylül 2026)")
     print("  * ASELSAN: Potansiyel Tedarikçi Kütüğü (No: 0050569CCE941FD1A49FCEFB9B7BE7D6 - ONAYLANDI, SAP: FZQHEXGFMTJU)")
     print("  * ASELSAN Axcelerate (AGM): Basvuru Iletildi [ONAYLANDI] (Uygunluk Degerlendirmesi Asamasi - 20 Eylul 2026)")
+    print("  * SirketOrtagim Melek Agi: Basvuru Alindi [ONAYLANDI] (Secim Komitesi Degerlendirmesi - 20 Eylul 2026)")
     print("  * QSTP (Katar): 30M$ Tech Venture Fonu + 4 Hafta Doha Sprint Kuluçkası")
     print("  * Z Fellows (San Francisco): $10k Hibe Mülakatı (17 Eylül Grace Kasten)")
     print("  * fonbulucu (SPK): 15M TL Taban / 18M TL Tavan (Kampanya: W1MV5K)")
