@@ -136,7 +136,6 @@ Trustia/
 │   ├── 📂 security/                      <-- AES-256 Encryption, STANAG 4586 & E-Stop
 │   ├── 📂 slam/                          <-- 2D/3D Pose-Graph SLAM & LiDAR Odometry
 │   ├── 📂 tests/                         <-- 1,301 Unit & Integration Automated Tests
-│   ├── 📜 Masaustu_Uygulamasini_Baslat.bat <-- Direct C2 Mission Control Desktop Launcher
 │   ├── 📜 TRUSTIA_BASLAT.bat             <-- Interactive Production CLI & GUI Launcher
 │   └── 📜 trustia_cli.py                 <-- Production CLI Execution Interface
 ├── 📂 02_Trustia_Web_Platformu/          <-- Next.js 16 Web Platform & 3D Interactive Console
