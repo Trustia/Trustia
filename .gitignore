@@ -103,3 +103,13 @@ logs/
 # --- Cloud & Deployment Caches ---
 .wrangler/
 .vercel
+
+# --- Sensitive Financial & Private Identity Documents ---
+*Banka_Hesap_Ozeti*
+*banka_hesap*
+*.pfx
+*.p12
+
+# --- Temporary Test Artifacts & Edits ---
+test_*_*.png
+test_*_*.jpg

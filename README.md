@@ -118,7 +118,7 @@ The entire Trustia codebase is continuously validated through an exhaustive **1,
 
 ---
 
-## 📁 5. Repository Structure (Strict 6 Categories)
+## 📁 5. Repository Structure (Streamlined 3 Architectural Domains)
 
 ```text
 Trustia/
@@ -140,21 +140,13 @@ Trustia/
 │   ├── 📜 TRUSTIA_BASLAT.bat             <-- Interactive Production CLI & GUI Launcher
 │   └── 📜 trustia_cli.py                 <-- Production CLI Execution Interface
 ├── 📂 02_Trustia_Web_Platformu/          <-- Next.js 16 Web Platform & 3D Interactive Console
-├── 📂 03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/ <-- Official SSB, KOSGEB & TÜBİTAK Credentials
-├── 📂 04_Yatirimci_Sunumlari_ve_Is_Planlari/     <-- Master Pitch Decks, Financials & Models
-│   ├── 📂 Pitch_Decks/                   <-- Master Investor Deck (EN), Executive One-Pager
-│   ├── 📂 Finansal_Tablolar/             <-- Balance Sheet, P&L, Cash Flow, Cap Table
-│   ├── 📂 Is_Plani_ve_Kanvas/            <-- Business Model Canvas, Pricing & Operations
-│   └── 📂 Teknik_ve_Organizasyon/        <-- Sensor BOM, Wiring Harness, Org Charts
-├── 📂 05_Uluslararasi_Hibe_ve_Vize_Basvurulari/  <-- Consolidated 85+ Global Grant Packages
-│   ├── 📂 01_Avrupa_Birligi_ve_EIT_Hibeleri/     <-- EU PIC 861711529 & EITUM CUS15554
-│   ├── 📂 02_Katar_QSTP_ve_Korfez_Programlari/   <-- QSTP $30M & Doha Sprint Residency
-│   ├── 📂 03_Savunma_Sanayii_ve_Tedarikci_Portallari/ <-- BAYKAR, ASELSAN, NATO DIANA
-│   ├── 📂 04_Z_Fellows_ve_Silikon_Vadisi/        <-- Z Fellows & Pace Capital ($10k Grant)
-│   ├── 📂 05_Turkiye_Teknokent_ve_Bilisim_Vadisi/ <-- Bilişim Vadisi B-Stars & Teknopark Cube
-│   └── 📜 Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md & .pdf <-- Master Registry
-├── 📂 06_Medya_Gorsel_ve_Tanitim_Videolari/    <-- 4K Demonstration Media & Assets
-└── 📜 README.md                                <-- Flagship Corporate Documentation
+│   └── 📂 website/                       <-- Production Web Source, Components, Pages & Three.js
+├── 📂 Kurumsal/                          <-- Unified Corporate Domain (Zero Bloat & Duplication)
+│   ├── 📂 Belgeler/                      <-- Official Government Registrations (KOSGEB, BTK, BTM, OIN)
+│   ├── 📂 Sunumlar/                      <-- Master Pitch Decks (TR/EN), One-Pager, Cap Table & Plans
+│   ├── 📂 Basvurular/                    <-- Master Tracking Guide (MD/PDF) & Active Grant Packages
+│   └── 📂 Medya/                         <-- High-Res Logos, Real Ioniq 5 Photo Suite & Master Videos
+└── 📜 README.md                          <-- Flagship Corporate Documentation
 ```
 
 ---

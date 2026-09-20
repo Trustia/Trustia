@@ -3,23 +3,24 @@
 > [!IMPORTANT]
 > Bu kural seti, bu projede çalışacak **TÜM YAPAY ZEKA ASİSTANLARI VE AJANLAR İÇİN ZORUNLUDUR**.
 > Masaüstüne veya proje kök dizinine rastgele, baştan savma dosya oluşturulamaz veya atılamaz.
-> Üretilen her dosya, kod, görsel, video, PDF veya sertifika AMACINA GÖRE AŞAĞIDAKİ 6 KATEGORİDEN İLGİLİSİNE YERLEŞTİRİLMEK ZORUNDADIR.
+> Üretilen her dosya, kod, görsel, video, PDF veya sertifika AMACINA GÖRE AŞAĞIDAKİ 3 ANA KLASÖRDEN İLGİLİSİNE YERLEŞTİRİLMEK ZORUNDADIR.
 
 ---
 
 ## 🚨 EN TEMEL VE ZORUNLU 8 ALTIN KURAL (THE 8 SUPREME DIRECTIVES)
 
-### 1. KURAL: BÜTÜN REPO VE 6 KATEGORİDE ANINDA EKSİKSİZ GÜNCELLEME VE CANLIYA DEPLOY (TOTAL REPOSITORY SYNCHRONIZATION & ZERO OUTDATED FILE DIRECTIVE)
+### 1. KURAL: BÜTÜN REPO VE 3 ANA ALANDA ANINDA EKSİKSİZ GÜNCELLEME VE CANLIYA DEPLOY (TOTAL REPOSITORY SYNCHRONIZATION & ZERO OUTDATED FILE DIRECTIVE)
 > [!CRITICAL]
-> Projede yeni bir gelişme olduğu, yeni bir resmi onay/başvuru/tescil/kod/özellik yapıldığı veya herhangi bir kurumsal bilgi güncellendiği anda; **SADECE WEB SİTESİ VEYA TEK BİR DOSYA DEĞİL, TRUSTIA PROJE ÇATISI ALTINDAKİ 6 ANA KATEGORİNİN HEPSİ VE İÇLERİNDEKİ İSTİSNASIZ BÜTÜN DOSYALAR EŞZAMANLI VE EKSİKSİZ GÜNCELLENECEK VE DERHAL GITHUB'A PUSH EDİLİP CANLIYA (`trustia.com.tr`) DEPLOY EDİLECEKTİR.**
-> * **Repo Çapında İstisnasız Güncellenmesi Zorunlu 6 Kategori ve Dosya Kapsamı:**
->   1. **`01_Trustia_Otonom_Yazilim_Core/` (Otonomi Motoru & Teknik Kütükler):** `trustia_cli.py` konsol çıktıları, `docs/` altındaki tüm pazar/plan/teknik analizler, `docs/reports/` altındaki tedarikçi başvuru paketleri (`TEDARIKCI_BASVURU_PAKETI.md`, `SERTIFIKASYON_RAPORU_ASAMA6.md`), lisans ve uygunluk kütükleri.
+> Projede yeni bir gelişme olduğu, yeni bir resmi onay/başvuru/tescil/kod/özellik yapıldığı veya herhangi bir kurumsal bilgi güncellendiği anda; **SADECE WEB SİTESİ VEYA TEK BİR DOSYA DEĞİL, TRUSTIA PROJE ÇATISI ALTINDAKİ 3 ANA KLASÖRÜN HEPSİ VE İÇLERİNDEKİ İSTİSNASIZ BÜTÜN DOSYALAR EŞZAMANLI VE EKSİKSİZ GÜNCELLENECEK VE DERHAL GITHUB'A PUSH EDİLİP CANLIYA (`trustia.com.tr`) DEPLOY EDİLECEKTİR.**
+> * **Repo Çapında İstisnasız Güncellenmesi Zorunlu 3 Ana Alan ve Dosya Kapsamı:**
+>   1. **`01_Trustia_Otonom_Yazilim_Core/` (Otonomi Motoru & Teknik Kütükler):** `trustia_cli.py` konsol çıktıları, `docs/` altındaki tüm teknik analizler, `docs/reports/` altındaki tedarikçi başvuru paketleri (`TEDARIKCI_BASVURU_PAKETI.md`, `SERTIFIKASYON_RAPORU_ASAMA6.md`), lisans ve uygunluk kütükleri.
 >   2. **`02_Trustia_Web_Platformu/` (Canlı Web Platformu & Arama Motorları):** `website/` altındaki Ana Sayfa, Hakkımızda, Robotaxi, İletişim, `InstitutionalAccreditations.tsx`, Footer, Navbar, Schema.org JSON-LD kurumsal grafiği, OpenGraph/Twitter Cards meta etiketleri, `sitemap.xml` (güncel `lastmod` tarihi) ve `robots.txt`.
->   3. **`03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/` (Resmi Sicil & Devlet Portalları):** Devlet/kurum onay belgeleri, portal erişim kodları, SAP kullanıcı bilgileri (`Aselsan_Tedarikci_Kodlari.txt`) ve resmi tescil kütükleri.
->   4. **`04_Yatirimci_Sunumlari_ve_Is_Planlari/` (Yatırımcı Sunumları & İş Modelleri):** `Pitch_Decks/` (Master Pitch Deck EN/TR, Executive One-Pager, B-Stars, Workup, Revo, Finberg, Inveo, NATO NIF sunumları), `Finansal_Tablolar/`, `Is_Plani_ve_Kanvas/`, `Teknik_ve_Organizasyon/` (Mercedes-Benz, Ioniq 5 vb. şartnameleri).
->   5. **`05_Uluslararasi_Hibe_ve_Vize_Basvurulari/` (Global Takip Kütüğü & Hibe Dosyaları):** `Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md` ve ikiz resmi `.pdf` çıktısı, 5 konsolide alt klasördeki tüm başvuru paketleri (`01_Avrupa_Birligi_ve_EIT_Hibeleri/`, `02_Katar_QSTP_ve_Korfez_Programlari/`, `03_Savunma_Sanayii_ve_Tedarikci_Portallari/`, `04_Z_Fellows_ve_Silikon_Vadisi/`, `05_Turkiye_Teknokent_ve_Bilisim_Vadisi/`).
->   6. **`06_Medya_Gorsel_ve_Tanitim_Videolari/` (Medya, Basın Kiti & Logolar):** `Egirisim_Basin_Kiti_2026/`, basın bültenleri, kurumsal tanıtım kütükleri ve görsel materyaller.
->   7. **Kök Dizin Yönetim Belgeleri:** `README.md`, `AGENTS.md`, `GEMINI.md`, `.agents/rules/folder_structure_rules.md`.
+>   3. **`Kurumsal/` (Birleşik Kurumsal Varlıklar - 4 Temiz Alt Klasör):**
+>      * `Belgeler/`: Devlet/kurum onay belgeleri, portal erişim kodları, SAP kullanıcı bilgileri (`Aselsan_Tedarikci_Kodlari.txt`) ve resmi tescil kütükleri.
+>      * `Sunumlar/`: Master Pitch Decks (TR/EN), Executive One-Pager (MD/PDF), B-Stars, Workup, Revo, Finberg, Inveo, NATO NIF sunumları, Cap Table (`.csv`), Finansal Model ve Ioniq 5 Seviye-4 Fotoğraflı Master Plan.
+>      * `Basvurular/`: `Takip_Rehberi_2026.md` ve ikiz resmi `.pdf` çıktısı, ASELSAN Axcelerate ZIP başvuru paketi, Malta Enterprise, NATO DIANA ve Z Fellows mülakat rehberleri.
+>      * `Medya/`: Kurumsal logolar, HD banner'lar, Ioniq 5 test aracı fotoğrafları, demo/zafer bayramı/master videolar ve basın bülteni.
+>   4. **Kök Dizin Yönetim Belgeleri:** `README.md`, `AGENTS.md`, `GEMINI.md`, `.agents/rules/folder_structure_rules.md`.
 > * **Sıfır Eskimiş Dosya Toleransı (Zero Outdated File Policy):** Repodaki herhangi bir dosyanın veya sunumun güncel olmayan eski bir statüde (örneğin onaylanmış bir süreç için "ön değerlendirmede" veya davet alınmış bir kurum için "başvuru yapıldı" şeklinde) bırakılması kesinlikle yasaktır!
 > * **Anında Canlıya Dağıtım Şartı:** Tüm güncellemeler yapıldıktan sonra yerel bilgisayarda ASLA bekletilemez; anında `git add -A`, kurumsal commit ve `git push origin main` yapılarak GitHub Actions üzerinden `trustia.com.tr` canlı ortamına ve Google indeksine fırlatılacaktır!
 
@@ -31,9 +32,9 @@
 
 ### 3. KURAL: MD & PDF OTOMATİK İKİZLEME VE SENKRONİZASYON (MARKDOWN & PDF TWIN SYNCHRONIZATION)
 > [!CRITICAL]
-> Kategori 04 ve 05'teki herhangi bir `.md` (Markdown) sunumu, iş planı, teknik şartname veya takip kütüğü güncellendiğinde; **onun resmi kurumsal PDF versiyonu da derhal güncellenmek zorundadır.**
+> `Kurumsal/Sunumlar/` ve `Kurumsal/Basvurular/` altındaki herhangi bir `.md` (Markdown) sunumu, iş planı, teknik şartname veya takip kütüğü güncellendiğinde; **onun resmi kurumsal PDF versiyonu da derhal güncellenmek zorundadır.**
 > * Bir yatırımcıya, jüriye veya devlet kurumuna sunulacak resmi PDF dosyasının Markdown'daki en son bilgilerden geri kalması kesinlikle yasaktır.
-> * Web sitesinden indirilen PDF'ler (`public/*.pdf`) ile Kategori 04/05'teki PDF'ler daima %100 senkronize tutulacaktır.
+> * Web sitesinden indirilen PDF'ler (`public/*.pdf`) ile `Kurumsal/` altındaki PDF'ler daima %100 senkronize tutulacaktır.
 
 ### 4. KURAL: SADECE KANITLI VE TESCİLLİ BİLGİ İLKESİ (PROOF-ONLY & VERIFIED FACTS)
 > [!CRITICAL]
@@ -65,9 +66,9 @@
 
 ---
 
-## 📁 6 ANA KURUMSAL KATEGORİ VE KATI YERLEŞİM PLANI
+## 📁 3 ANA MİMARİ ALAN VE SADELEŞTİRİLMİŞ KURUMSAL DÜZEN
 
-Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıdaki 6 klasörde tutulacaktır:
+Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıdaki 3 klasörde tutulur:
 
 ### 1. `01_Trustia_Otonom_Yazilim_Core/` 🚀 (Asıl Otonomi Yazılımı & Testler)
 * **Buraya Konulacaklar:** Otonomi motoru, SLAM haritalama (3D NDT / ICP), Hybrid A* rota planlama, Pure Pursuit ve Stanley kontrolcüler, yapay zeka EYP/Mayın/KHKN tespit modelleri, CAN-Bus/ROS2/JAUS/Webots sürücüleri, 1.301 birim/entegrasyon testi, CLI scriptleri ve Taktik C2 Masaüstü Konsolu (GUI).
@@ -77,33 +78,36 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 * **Buraya Konulacaklar:** Canlı web sitesi kaynak kodları (Next.js 16, React 19, Tailwind CSS 4, Three.js 3D modeller, web sayfaları, kurumsal akreditasyon bileşenleri, Schema.org JSON-LD, sitemap.xml ve robots.txt).
 * **Kural:** Web arayüzü ile ilgili her şey SADECE bu klasör altında `website/` içinde geliştirilir. Canlı yayın [trustia.com.tr](https://trustia.com.tr) adresine GitHub Actions CI/CD üzerinden otomatik derlenir ve dağıtılır.
 
-### 3. `03_Resmi_Sertifikalar_ve_Devlet_Belgeleri/` 📜 (Resmi Belgeler ve Tesciller)
-* **Buraya Konulacaklar:** KOSGEB İleri Girişimci katılım belgesi (`KSB01UGE0115153370`), BTK ve SSB Savunma Sanayii sertifikaları (`L2zPtN4X1ZJ`), İTO BTM Ön Kuluçka Sözleşmesi, Aselsan Tedarikçi Başvuru Evrakları (`0050569CCE941FD1A49FCEFB9B7BE7D6`) ve TÜBİTAK ARBİS Milli Araştırmacı Sicili (`TBTK-0229-6571`).
-* **Kural:** Resmi devlet/şirket tescil belgeleri başka hiçbir yere konulamaz.
-
-### 4. `04_Yatirimci_Sunumlari_ve_Is_Planlari/` 💼 (Yatırımcı Dosyaları & Finans)
-* **Buraya Konulacaklar (4 Ana Alt Klasör + Kurucu CV):**
-  * `Pitch_Decks/`: Master Investor Pitch Deck (EN), Executive One-Pager, B-Stars, Workup, Revo, Finberg, Inveo, NATO NIF sunumları.
-  * `Finansal_Tablolar/`: Bilanço (Balance Sheet), Gelir Tablosu (P&L), Nakit Akışı (Cash Flow), Cap Table (`.csv` ve `.pdf`).
-  * `Is_Plani_ve_Kanvas/`: İş Modeli Kanvası, İstanbul Robotaksi Operasyon & Fiyatlandırma Modeli, Kitle Fonlama Kampanya Planı.
-  * `Teknik_ve_Organizasyon/`: Hyundai Ioniq 5 Seviye-4 Dönüşüm Şartnamesi, 27 parçalık Sensör BOM Listesi, Organizasyon Şeması.
-  * `Murat_Furkan_Bayram_CV_Resume.pdf`: Kurucu & Sistem Mimarı resmi özgeçmişi.
-
-### 5. `05_Uluslararasi_Hibe_ve_Vize_Basvurulari/` 🌍 (Global Fon ve Başvurular)
-* **Buraya Konulacaklar (Tek Resmi Takip Kütüğü + 5 Konsolide Alt Klasör):**
-  * `Trustia_Global_Basvuru_ve_Hibe_Takip_Rehberi_2026.md` & `.pdf`: 88+ uluslararası ve ulusal başvurunun resmi takip ve durum kütüğü.
-  * `01_Avrupa_Birligi_ve_EIT_Hibeleri/`: Avrupa Komisyonu Katılımcı Kimlik Kodu (PIC: `861711529`), EIT Urban Mobility Partner ID (`CUS15554`, €100.000 Hibe Çağrısı: `3.1.02-1206-3732.3`), EIC Accelerator.
-  * `02_Katar_QSTP_ve_Korfez_Programlari/`: QSTP 30M$ Venture Fon + 4 Haftalık Doha Sprint Kuluçkası, Dubai RTA $1.2M yarışması, NEOM Mega Şehir, Hub71 Abu Dhabi.
-  * `03_Savunma_Sanayii_ve_Tedarikci_Portallari/`: BAYKAR Tech Resmi Tedarikçi Başvurusu, ASELSAN (#0050569), SSB SAYZEK (#170), NATO DIANA.
-  * `04_Z_Fellows_ve_Silikon_Vadisi/`: Z Fellows canlı mülakat rehberleri (Grace Kasten / Pace Capital, 17 Eylül 2026), Emergent Ventures, Silikon Vadisi fonları.
-  * `05_Turkiye_Teknokent_ve_Bilisim_Vadisi/`: Bilişim Vadisi B-Stars Otonom Test Pisti, Teknopark İstanbul Cube Incubation, DEİK Dijital Teknolojiler İş Konseyi.
-
-### 6. `06_Medya_Gorsel_ve_Tanitim_Videolari/` 🎬 (Medya, Video ve Logolar)
-* **Buraya Konulacaklar:**
-  * `Videolar/`: 4K/HD demo videoları, 30 Ağustos zafer bayramı videosu, Master edit tanıtım filmleri.
-  * `Logolar_ve_Ikonlar/`: PNG, JPG, ICO marka logoları, yüksek çözünürlüklü banner'lar ve simgeler.
-  * `Hyundai_Ioniq_5_Test_Araci/`: Gerçek retrofit test aracı fotoğrafları (ön, tavan LiDAR podu, kokpit C2, VIP yolcu alanı, arka).
-  * `Egirisim_Basin_Kiti_2026/`: Resmi egirişim basın kiti ve medya yayın paketi.
+### 3. `Kurumsal/` 🏢 (Birleşik Kurumsal Varlıklar, Sunumlar ve Medya)
+Gereksiz kopyalardan ve şişkinlikten arındırılmış, 4 net amaca ayrılmış tek çatı klasör:
+* **`Belgeler/` 📜 (Resmi Devlet Belgeleri & Tesciller):**
+  * KOSGEB İleri Girişimci katılım belgesi (`KSB01UGE0115153370`)
+  * BTK ve SSB Savunma Sanayii sertifikası (`L2zPtN4X1ZJ`)
+  * İTO BTM İmzalı Ön Kuluçka Sözleşmesi ve Resmi Kuruluş Tescil Belgesi
+  * OIN (Open Invention Network) Patent Savunma Paktı Lisans Sözleşmesi
+  * ASELSAN SAP erişim kodları (`Aselsan_Tedarikci_Kodlari.txt`) ve NATO NCAGE tescil kaydı
+  * Kurucu resmi kimlik, ikametgah ve adli sicil belgeleri
+* **`Sunumlar/` 💼 (Yatırımcı Dosyaları, Finans & Master Planlar):**
+  * `Master_Pitch_Deck_TR.pdf` & `Master_Pitch_Deck_EN.pdf` (.md kaynaklı)
+  * `Executive_One_Pager_EN.pdf` (.md kaynaklı)
+  * `Ioniq5_Fotografli_Master_Plan_TR.pdf` & `Ioniq5_Photo_Master_Plan_EN.pdf` (Tek Master Kopya)
+  * Hedef Fon Sunumları: NATO NIF, Revo Capital, Workup, Inveo, Finberg, Bilişim Vadisi, Dubai Challenge
+  * `Cap_Table.csv` & `Finansal_Model_ve_Cap_Table.pdf`
+  * `Robotaksi_Operasyon_Modeli.md` & ikiz `.pdf`
+  * `Organizasyon_Yapisi.pdf` & `Murat_Furkan_Bayram_CV.pdf`
+* **`Basvurular/` 🌍 (Takip Kütüğü ve Kritik Başvuru Paketleri):**
+  * `Takip_Rehberi_2026.md` & `Takip_Rehberi_2026.pdf` (88+ başvuru takip kütüğü)
+  * `ASELSAN_Axcelerate_Basvuru_Paketi.zip` (Resmi teslim edilmiş paket)
+  * `Malta_Enterprise_Application_Dossier.md` & `.pdf` (€1.5M hibe)
+  * `NATO_DIANA_Application_Dossier.md` & `.pdf`
+  * `Z_Fellows_Interview_Master_Guide.md` & `Emergent_Ventures_Proposal.docx`
+  * `Singapur_GIA_Basvuru_Onayi.png`
+* **`Medya/` 🎬 (Logolar, Araç Fotoğrafları, Tanıtım Videoları):**
+  * Resmi HD logolar ve kurumsal banner'lar
+  * Crunchbase doğrulanmış profil ve trend grafikleri
+  * Hyundai Ioniq 5 Seviye-4 gerçek retrofit fotoğrafları (`Ioniq5_Foto_1..7.png`, `Ioniq5_On_Capraz.png`, `Ioniq5_Tavan_LiDAR.png`)
+  * `Robotaksi_Demo.mp4`, `Zafer_Bayrami.mp4`, `Master_Edit.mp4` (Tekil master videolar)
+  * `Basin_Bulteni_ASELSAN.pdf`
 
 ---
 
@@ -112,14 +116,14 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 2. 🚨 **2. ZORUNLU KURAL (ÇİFT DİLLİ EŞİTLİK):** Web ve dokümantasyon daima TR ve EN olarak eşzamanlı güncellenir.
 3. 🚨 **3. ZORUNLU KURAL (MD & PDF İKİZLEME):** Güncellenen her Markdown dokümanının PDF çıktısı anında güncellenir.
 4. 🚨 **4. ZORUNLU KURAL (KANITLI BİLGİ):** Resmi tescil veya test kanıtı olmayan hiçbir veri dosyalara yazılamaz.
-5. 🚨 **5. ZORUNLU KURAL (TEMİZ İSİMLENDİRME):** "kopya", "yeni", "final_son" gibi dosya isimleri yasaktır; sadece tekil Master isim kullanılır.
+5. 🚨 **5. ZORUNLU KURAL (TEMİZ İSİMLENDİRME VE SIFIR KOPYA):** "kopya", "yeni", "final_son", "test_*" gibi dosya isimleri yasaktır; sadece tekil Master isim kullanılır. Aynı dosyanın farklı klasörlerde mükerrer kopyalanması kesinlikle yasaktır!
 6. 🚨 **6. ZORUNLU KURAL (ASIL-D GÜVENLİK KİLİDİ):** 5ms sürücü override ve 200ms watchdog asla bypass edilemez.
 7. 🚨 **7. ZORUNLU KURAL (KURUMSAL YÖNETİŞİM):** Murat Furkan Bayram (%80 CEO), Doğukan Bayram (%20 Operasyon), Denizcan Özcan (Baş Donanım Mühendisi) unvan ve oranları daima korunur.
 8. 🚨 **8. ZORUNLU KURAL (TEK TIKLA ÇALIŞTIRMA):** Tüm otonomi bileşenleri `TRUSTIA_BASLAT.bat` ve `trustia_cli.py` üzerinden tek tıkla çalışmak zorundadır.
 9. ❌ Masaüstüne (`C:\Users\Murat\Desktop`) veya proje köküne geçici bile olsa rastgele dosya BIRAKILAMAZ.
 10. ❌ `Trustia/Trustia/` gibi iç içe çift klasör OLUŞTURULAMAZ.
 11. ❌ Web kodları Core otonomi yazılımının içine, otonomi kodları web klasörünün içine KARIŞTIRILAMAZ.
-12. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 6 KATEGORİYİ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
+12. ❌ Herhangi bir AI asistanı yeni bir dosya oluşturmadan önce YUKARIDAKİ 3 ANA KLASÖRÜ KONTROL ETMEK VE TAM AİT OLDUĞU KLASÖRE YAZMAK ZORUNDADIR.
 13. ❌ Tasarım ve içerikte çocukça, gayriciddi veya şablon görüntüler kullanılamaz; daima uluslararası kurumsal savunma ve otonomi standardı korunacaktır.
 
 ---
@@ -128,7 +132,7 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
 * **Kurucu & Lider:** Murat Furkan Bayram (17 yaşında, Kurucu & CEO / Sistem Mimarı, %80 Hisse, TC: `59476566862`, Tel: `0537 064 04 60`, E-posta: `kariyer@trustia.com.tr`, LinkedIn: `https://www.linkedin.com/in/trustia`).
 * **Kurucu Ortak & Operasyon:** Doğukan Bayram (%20 Hisse, Reşit Kurucu Ortak).
 * **Mühendislik Havuzu:** Denizcan Özcan (ASELSAN Aday Mühendis Havuzu & TEKNOFEST Robotaksi Finalisti, İÜC EEE 4. Sınıf, 3.44 GPA) 1. Öncelikli Donanım ve Entegrasyon Mühendisi.
-* **Canlı Web Platformu & Canlı Yayın:** `https://trustia.com.tr` (14 Eylül 2026 itibarıyla GitHub Actions CI/CD üzerinden tam derlenmiş ve canlıya alınmıştır).
+* **Canlı Web Platformu & Canlı Yayın:** `https://trustia.com.tr` (GitHub Actions CI/CD üzerinden tam derlenmiş ve canlıya alınmıştır).
 * **Resmi Tescil ve Belgeler:** 
   * 🇪🇺 **Avrupa Komisyonu (European Commission - ec.europa.eu):** Resmi Katılımcı Kayıt Defteri (Participant Register) tescili tamamlandı. Trustia Teknoloji adına 9 haneli resmi Avrupa Birliği Katılımcı Kimlik Kodu (**PIC Numarası: `861711529`**) tahsis edildi ve Horizon Europe / EIT sistemine kalıcı olarak işlendi.
   * 🇪🇺 **EIT Urban Mobility (Avrupa İnovasyon ve Teknoloji Enstitüsü):** Resmi Partner Bilgi Formu (NetSuite PIF Portal) üzerinden ortaklık tescili tamamlandı. Resmi AB İş Ortağı Kodu (**Partner ID: `CUS15554`**) tahsis edildi. €100.000 hibe başvurusu (Başvuru No: `3.1.02-1206-3732.3`) resmi olarak gönderildi.
@@ -160,4 +164,4 @@ Tüm dosyalar `C:\Users\Murat\Desktop\Trustia\` ana çatısı altında aşağıd
   * 🇺🇸 **Dorm Room Fund (First Round Capital - dormroomfund.com):** First Round Capital destekli dünyanın 1 numaralı genç/öğrenci kurucu fonuna $40,000 - $100,000 SAFE yatırımı için San Francisco takımı üzerinden resmi başvuru tamamlandı (16 Eylül 2026, Durum: **"Başvurunuz Başarıyla Alındı!"**).
 * **Yazılım & Test:** 16.000+ satır özgün deterministik otonomi mimarisi (Hybrid A*, 3D NDT LiDAR SLAM, Pure Pursuit), 1.301/1.301 otomatik birim ve entegrasyon testi (%100 Başarı).
 * **Donanım Platformu:** Hyundai Ioniq 5 E-GMP Otonom Seviye-4 Dönüşüm Kiti (Ouster OS2-128 LiDAR, 2x Livox Mid-360, Continental ARS 408-21 Radar, Septentrio RTK GNSS, NVIDIA Jetson AGX Orin 64GB, Kvaser U100 CAN-FD).
-* **Dosya Düzeni & Masaüstü Temizliği:** Masaüstündeki geçici çıktılar tamamen 04, 05 ve 06 ana klasörlerine dağıtılmış, masaüstü %100 temizlenmiş ve tüm değişiklikler GitHub `main` dalına işlenerek canlıya alınmıştır.
+* **Dosya Düzeni & Sadeleştirilmiş Yapı:** 6 dağınık kategori yerine 3 ana klasör (`01_Core`, `02_Web`, `Kurumsal/`) modeline geçilmiş; 50+ mükerrer kopya ve gereksiz dosya temizlenerek tekil ve deterministik yapı sağlanmıştır.
