@@ -125,7 +125,6 @@ Trustia/
 ├── 📂 .github/workflows/                 <-- Production CI/CD & GitHub Pages Workflows
 │   ├── 📜 deploy.yml                     <-- Automated Production Build & Deploy to trustia.com.tr
 │   └── 📜 ci.yml                         <-- Continuous 1,301 Test & Build Verification
-├── 📂 .agents/rules/                     <-- Mandatory Agent & Subagent Architecture Rules
 ├── 📂 01_Trustia_Otonom_Yazilim_Core/    <-- 16,000+ LOC Autonomy Stack, 1,301 Tests & C2 GUI
 │   ├── 📂 ai/                            <-- IED/Mine/CBRN Threat & Swarm Perception
 │   ├── 📂 command/                       <-- Tactical C2 Mission Control Console (GUI)
@@ -145,6 +144,7 @@ Trustia/
 │   ├── 📂 Sunumlar/                      <-- Master Pitch Decks (TR/EN), One-Pager, Cap Table & Plans
 │   ├── 📂 Basvurular/                    <-- Master Tracking Guide (MD/PDF) & Active Grant Packages
 │   └── 📂 Medya/                         <-- High-Res Logos, Real Ioniq 5 Photo Suite & Master Videos
+├── 📜 AGENTS.md                          <-- Developer & AI Working Principles
 └── 📜 README.md                          <-- Flagship Corporate Documentation
 ```
 

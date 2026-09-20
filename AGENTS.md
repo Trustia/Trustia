@@ -48,8 +48,7 @@ Trustia/
 │   ├── Sunumlar/                      ← Master Pitch Deck'ler, finans modelleri ve planlar
 │   ├── Basvurular/                    ← Takip rehberi kütüğü ve resmi başvuru dosyaları
 │   └── Medya/                         ← HD logolar, araç fotoğrafları ve master videolar
-├── AGENTS.md                          ← Bu çalışma rehberi
-├── GEMINI.md                          ← Ajan çalışma rehberi
+├── AGENTS.md                          ← Çalışma rehberi
 └── README.md                          ← Ana proje dokümantasyonu
 ```
 
