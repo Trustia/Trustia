@@ -25,7 +25,7 @@
 | 🇺🇸 **Z Fellows Silikon Vadisi** | **$10,000 Equity-Free Hibe** | 17 Eylül 2026 Perşembe 19:40 Canlı Zoom Mülakatı (Grace Kasten) |
 | 🇦🇪 **Dubai RTA World Challenge** | **1.200.000 $ Nakit Ödül** | Seviye-4 Robotaksi Kategorisi Gönderildi (Kasım 2026 Finalist) |
 | 🇸🇦 **NEOM Autonomous Mobility** | **Stratejik PoC & SAFE** | Başvuru Alındı Onayı (12 Eylül 2026) |
-| 🇹🇷 **SPK fonbulucu Kitle Fonlama** | **Kampanya Kodu: `W1MV5K`** | 15.000.000 TL Hedef (150M TL Val.) • Durum: "Ön İncelemede" |
+| 🇹🇷 **SPK fonbulucu Kitle Fonlama** | **Kampanya Kodu: `W1MV5K`** | 15.000.000 TL Hedef (150M TL Val.) • 🟢 **Ön İnceleme Olumlu ✔** • **Girişimci Mülakatı: 28 Eylül 2026 Pazartesi 15:30 (Nursena Pancar)** |
 | 🇹🇷 **Teknopark İstanbul HASAT 2026** | **100M TL Destek & Ofis** | SSB & İTO Destekli Teknoloji Hasatı • "Başvurunuz Başarıyla Alındı! 🎉" |
 | 🇸🇬 **Singapur Startup SG (EnterpriseSG)** | **ID: `#57428`** | Resmi Kurucu Profili %100 Tamamlandı • EntrePass & SLINGSHOT 2026 Portalı Aktif |
 | 🇸🇬 **Singapur GIA & B2Match (EnterpriseSG)** | **Yanıt ID: `6aa85fa93dc42d7feef1bc57`** | GIA Başvurusu & B2Match Küresel Eşleştirme Portalı %100 Kuruldu (15.09.2026 00:24 TRT) |
@@ -108,22 +108,17 @@
 
 | Kurum / Fon | Başvuru Kapsamı | Mali Boyut / Talep | Tarih | Durum & Teyit |
 |-------------|-----------------|-------------------|-------|---------------|
-| **fonbulucu (SPK Paya Dayalı Kitle Fonlama)** | Seviye-4 Robotaksi (`W1MV5K`) | 15M TL Fonlama (150M TL Val.) | 08.09.2026 | 🟡 **Ön İncelemede** |
+| **fonbulucu (SPK Paya Dayalı Kitle Fonlama)** | Seviye-4 Robotaksi (`W1MV5K`) | 15M TL Fonlama (150M TL Val.) | 21.09.2026 | 🟢 **Ön İnceleme Başarıyla Geçildi ✔ • Mülakat: 28 Eylül 2026 Pazartesi 15:30 (Nursena Pancar)** |
 | **Bilişim Vadisi (B-Stars Mobilite)** | Otonom Test Pisti & Hızlandırma | Pist Tahsisi & Master Sunum | 12.09.2026 | ✅ **"BAŞVURUNUZ ALINMIŞTIR"** |
 | **Teknopark İstanbul (HASAT 2026)** | SSB & İTO Çatısı Altında 100M TL Destek & Cube Ofis | 100M TL Yatırım Havuzu, Ücretsiz Ofis & Sahne | 14.09.2026 | 🟢 **"Başvurunuz başarıyla alındı! 🎉"** (Değerlendirme Ekibinde) |
 | **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | Fulya Kampüsü Sözleşmeli Ön Kuluçka | 150M TL Val. KPI Takip Formu | 10.09.2026 | ✅ **"Yanıtınız kaydedildi"** |
-| **İTO BTM Feedback Round - 2** | Inveo, Startup Burada & Fuzul Ventures Birebir Yatırımcı Masası | Pre-Seed SAFE / Kitle Fonlama / B2B PoC | 16.09.2026 | 🟢 **"Yanıtınız kaydedildi." (23 Eylül Fulya Görüşmesi)** |
+| **İTO BTM Feedback Round - 2** | Inveo, Startup Burada & Fuzul Ventures Birebir Yatırımcı Masası | Pre-Seed SAFE / Kitle Fonlama / B2B PoC | 21.09.2026 | 🟢 **Katılım ve Sunumlar Teyit Edildi ✔ • Melisa Sülün'e Pitch Deck İletildi • 23 Eylül Çarşamba 14:00-18:00 (BTM Fulya)** |
 | **ŞirketOrtağım Melek Yatırımcı Ağı** | Hazine Akredite BKY Melek Ağı (1M-5M TL) | 2M TL+ Öz Sermaye / Master Pitch Deck | 20.09.2026 | 🟢 **"Teşekkürler. Başvurunuz alınmıştır." ✔** (Seçim Komitesi Ön Değerlendirmesinde) |
-| **Türkiye Yapay Zeka İnisiyatifi (TRAI)** | Otonom Sürüş Girişim Haritası | Ekosistem Akreditasyonu | 12.09.2026 | ✅ **"Başvurunuz alındı!"** |
-| **APY Ventures (Bilişim Vadisi GSYF)** | Mobilite & Derin Teknoloji | $500k Tohum Öncesi SAFE | 09.09.2026 | ✅ **"Formunuz başarıyla gönderildi"** |
-| **J-Start Girişim Sermayesi** | TRL-6 Hyundai Ioniq 5 Mimarisi | 15M TL Yatırım Talebi | 09.09.2026 | ✅ **"Başvurunuz alınmıştır"** |
-| **Teknoloji ve İnovasyon Fonu (TKYB)** | Kalkınma Bankası Resmi Fonu | Master Pitch Deck İncelemesi | 09.09.2026 | ✅ **"Değerlendirmeye gönderildi"** |
-| **OİBventure (Otomotiv İhracatçıları)** | Otonom Dönüşüm Kiti | Sektörel PoC ve Ticarileşme | 09.09.2026 | ✅ Tamamlandı |
-| **Ford Otosan / Driventure** | Fabrika İçi Otonom Hat Çekicisi | Kurumsal PoC İş Birliği | 08.09.2026 | ✅ **Gönderildi** |
-| **Karsan Otomotiv (Ar-Ge Direktörü)** | Seviye-4 e-ATAK / e-JEST Yazılımı | Yerli Otonomi Entegrasyonu | 08.09.2026 | ✅ Doğrudan İletildi |
+| **Tekatron Savunma (Ankara Teknopark)** | 4x4 Robotik Platformlar / "Control to Autonomy" | Seviye-4 Otonomi Çekirdeği Lisanslama Teklifi | 21.09.2026 | 🟢 **Teklif Portaldan İletildi ✔** (İletişim Formu) |
+| **Esetron Mekatronik (İvedik OSB Teknopark)** | ESEBOT-15/42/50 ve İnsansızlaştırma Kitleri | GNSS-Denied 3D LiDAR SLAM & Otonomi Entegrasyonu | 21.09.2026 | 🟢 **Teklif Portaldan İletildi ✔** (İletişim Formu) |
+| **TİTRA Teknoloji (Pasifik Teknoloji - ODTÜ)** | İnsansız Lojistik, Filo Yönetimi ve Kara Mobilite | Deterministik Seviye-4 Filo & Seyrüsefer Çekirdeği | 21.09.2026 | 🟢 **Başvuru Portaldan İletildi ✔** (CV Ekiyle İletildi) |
+| **Best Grup Savunma (Kahramankazan HAB OSB)** | Zırhlı İKA'lar & Uzaktan Kumandalı İş Makineleri | Elektronik Harp Korumalı Otonom Seyrüsefer Teklifi | 21.09.2026 | 🟢 **Teklif Portaldan İletildi ✔** (İletişim Formu) |
 | **İGA İstanbul Havalimanı (TEDARİGA)** | Resmi Tedarikçi & Satınalma Portalı | Apron Otonom Kargo / Ring Seyrüsefer & Bilişim Danışmanlığı | 21.09.2026 | 🟢 **BAŞVURU TAMAMLANDI ✔** • "İş veren tarafında firmanızın onaylanması bekleniyor" |
-| **İş Girişim Sermayesi (İş Bankası ISGSY)** | Kurumsal Girişim Sermayesi | 10M - 20M TL Yatırım Talebi | 02.09.2026 | ✅ Tamamlandı |
-| **Dijitalpark Teknokent (Çekmeköy)** | Ön Kuluçka / Otomotiv Tasarım | Ofis & Laboratuvar | 02.09.2026 | ✅ Uzman Yiğit Şener Temasta |
 
 ---
 
@@ -141,10 +136,12 @@
 
 ## 🎯 8. KRİTİK TAKVİM VE EYLEM PLANI (EYLÜL - KASIM 2026)
 
-1. **17 Eylül 2026 Perşembe (19:40 TRT):** Z Fellows Grace Kasten (Pace Capital Partner) ile 10 dakikalık canlı Zoom mülakatı.
+1. **21 Eylül 2026 Pazartesi (Bugün):** BTM Melisa Sülün'e sunum teslim edildi. Tekatron, Esetron, Titra ve Best Grup'a B2B Seviye-4 lisanslama teklifleri iletildi.
 2. **23 Eylül 2026 Çarşamba (14:00 - 18:00):** BTM Fulya Feedback Round - 2 (Inveo Ventures, Startup Burada, Fuzul Ventures ile 1-on-1 yatırımcı görüşmeleri).
-3. **Q4 2026:** EIT Urban Mobility 100.000 € Girişimci Hibesi jüri değerlendirmesi ve hibe kabulü.
-4. **Ekim 2026:** QSTP Doha Sprint (Katar 4 haftalık yerinde sprint programı başlangıcı).
-5. **21 Ekim 2026:** Webrazzi Arena Wyndham Grand Levent sahne sunumu.
-6. **Kasım 2026:** Dubai World Challenge for Self-Driving Transport (RTA) 1.2M$ yarışması finalist ilanı.
-7. **Eylül - Ekim 2026:** fonbulucu SPK onayının tamamlanması ve 15M TL paya dayalı kitle fonlamanın canlıya alınması.
+3. **28 Eylül 2026 Pazartesi (15:30 - 16:00):** fonbulucu Resmi Girişimci Ön Görüşmesi (Nursena Pancar - `W1MV5K`).
+4. **Q4 2026:** EIT Urban Mobility 100.000 € Girişimci Hibesi jüri değerlendirmesi ve hibe kabulü.
+5. **Ekim 2026:** QSTP Doha Sprint (Katar 4 haftalık yerinde sprint programı başlangıcı).
+6. **21 Ekim 2026:** Webrazzi Arena Wyndham Grand Levent sahne sunumu.
+7. **Kasım 2026:** Dubai World Challenge for Self-Driving Transport (RTA) 1.2M$ yarışması finalist ilanı.
+8. **Ekim - Kasım 2026:** fonbulucu SPK Yatırım Komitesi onayı ve 15M TL paya dayalı kitle fonlama turunun canlıya alınması.
+
