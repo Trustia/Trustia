@@ -79,6 +79,7 @@
 | **BMC Savunma & Otomotiv** | Zırhlı Araç & Çekici Masası | Kirpi/Vuran Taktik Seviye-4 Otonom Konvoy | 08.09.2026 | 🟡 Doğrudan İletildi |
 | **HİDROMEK A.Ş.** | Ar-Ge ve Teknoloji Yönetimi | OPERA Teleoperasyon & HICON Otonom İş Makineleri Yazılım Lisanslama / Ar-Ge Ortaklığı | 20.09.2026 | 🟢 **BAŞVURU İLETİLDİ ✔** • "Mesajınız için teşekkür ederiz. En kısa sürede size dönüş yapacağız." |
 | **NATO NSPA & MSB TMKB** | `TR26258467723` | NCAGE Askeri Tedarikçi Kodu & Müttefik Kütüğü Tescili | 15.09.2026 | 🟢 **BAŞVURU TAMAMLANDI & MSB ONAYINA SEVK EDİLDİ** (Medine AYGUN, tmkb@msb.gov.tr, +90 312 410 6184) |
+| **STM (Savunma Teknolojileri Mühendislik)** | STEP Aday No: `104042` | STEP Tedarikçi Ekosistemi: Yazılım & Bilişim Hizmetleri (Otonomi, SLAM, İKA, 11 Parçalık Ekipman Parkı, Kalite Anketi) | 21.09.2026 | 🟢 **BAŞVURU RESMEN TAMAMLANDI ✔** • 🟡 **"Onay Bekliyor"** (Cevaplar başarı ile kaydedildi) |
 | **NATO DIANA & NIF** | 1 Milyar € Savunma İnovasyon Fonu | STANAG 4586 Taktik İKA Otonomi Beyni | Eylül 2026 | 📝 Başvuru Paketi Hazır |
 
 ---
