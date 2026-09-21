@@ -120,6 +120,7 @@
 | **OİBventure (Otomotiv İhracatçıları)** | Otonom Dönüşüm Kiti | Sektörel PoC ve Ticarileşme | 09.09.2026 | ✅ Tamamlandı |
 | **Ford Otosan / Driventure** | Fabrika İçi Otonom Hat Çekicisi | Kurumsal PoC İş Birliği | 08.09.2026 | ✅ **Gönderildi** |
 | **Karsan Otomotiv (Ar-Ge Direktörü)** | Seviye-4 e-ATAK / e-JEST Yazılımı | Yerli Otonomi Entegrasyonu | 08.09.2026 | ✅ Doğrudan İletildi |
+| **İGA İstanbul Havalimanı (TEDARİGA)** | Resmi Tedarikçi & Satınalma Portalı | Apron Otonom Kargo / Ring Seyrüsefer & Bilişim Danışmanlığı | 21.09.2026 | 🟢 **BAŞVURU TAMAMLANDI ✔** • "İş veren tarafında firmanızın onaylanması bekleniyor" |
 | **İş Girişim Sermayesi (İş Bankası ISGSY)** | Kurumsal Girişim Sermayesi | 10M - 20M TL Yatırım Talebi | 02.09.2026 | ✅ Tamamlandı |
 | **Dijitalpark Teknokent (Çekmeköy)** | Ön Kuluçka / Otomotiv Tasarım | Ofis & Laboratuvar | 02.09.2026 | ✅ Uzman Yiğit Şener Temasta |
 
