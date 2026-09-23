@@ -441,7 +441,7 @@ def build_deck():
         ("Murat Furkan Bayram", "Kurucu & CEO / Sistem Mimarı", 
          "• İleri yapay zeka araçlarıyla 16.000 satırlık otonomi çekirdeğini inşa eden Sistem Mimarı.\n• 1.301 otomatik güvenlik testinin tasarımcısı ve yöneticisi (%100 başarı).\n• TÜBİTAK ARBİS, BTK Savunma ve KOSGEB İleri Girişimci tescilleri sahibi.\n• Yapay Zeka Destekli Yazılım ve Algoritma Lideri."),
         ("Denizcan Özcan", "Baş Donanım ve Entegrasyon Mühendisi", 
-         "• ASELSAN Aday Mühendislik Havuzu Üyesi.\n• TEKNOFEST Robotaksi Finalisti.\n• Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar ve araç içi haberleşme uzmanı.\n• Donanım Kurulumu ve Saha Testleri Lideri.")
+         "• ASELSAN Aday Mühendislik Havuzu Üyesi.\n• İstanbul Üniversitesi-Cerrahpaşa (İÜC) EEE (3.44 GPA).\n• TEKNOFEST Robotaksi Otonom Araç Yarışması Finalisti.\n• Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar uzmanı.\n• Donanım Kurulumu ve Saha Testleri Lideri.")
     ]
     for idx, (name, role, bio) in enumerate(team):
         l = Inches(1.2 + idx * 5.6)
