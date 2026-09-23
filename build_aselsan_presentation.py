@@ -57,7 +57,7 @@ def build_deck():
         line.fill.fore_color.rgb = C_BORDER
         line.line.color.rgb = C_BORDER
 
-    # SLIDE 1
+    # SLIDE 1: KAPAK
     s1 = prs.slides[0]
     clear_slide(s1)
     bg_card = s1.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.8), Inches(0.8), Inches(11.7), Inches(5.9))
@@ -73,19 +73,19 @@ def build_deck():
     tf = tb.text_frame
     tf.word_wrap = True
     p0 = tf.paragraphs[0]
-    p0.text = "TRUSTIA TEKNOLOJİ A.Ş."
+    p0.text = "TRUSTIA TEKNOLOJİ"
     p0.font.size = Pt(14)
     p0.font.bold = True
     p0.font.color.rgb = C_BLUE
 
     p1 = tf.add_paragraph()
-    p1.text = "Milli Otonom Sürüş Platformu & İnsansız Kara Aracı Beyni"
+    p1.text = "Milli Otonom Sürüş Yazılımı & İnsansız Araç Beyni"
     p1.font.size = Pt(28)
     p1.font.bold = True
     p1.font.color.rgb = C_NAVY
 
     p2 = tf.add_paragraph()
-    p2.text = "GPS Olmadan Lazerle Haritalama Yapan ve Elektronik Karıştırmadan Etkilenmeyen Yerli Yazılım"
+    p2.text = "Uydudan Bağımsız Lazerle Harita Çıkaran ve Sinyal Kesilmesinden Etkilenmeyen Yerli Sistem"
     p2.font.size = Pt(15)
     p2.font.color.rgb = C_GRAY
 
@@ -113,12 +113,12 @@ def build_deck():
     clear_slide(s2)
     add_header(s2, "PROBLEM: Askeri Sahada Yaşanan 3 Büyük Zorluk")
     problems = [
-        ("1. GPS Sinyalinin Kesilmesi veya Yanıltılması",
-         "Savaş ve operasyon bölgelerinde sinyal bozucular GPS'i tamamen kesmektedir. Mevcut otonom araçlar uydu bağlantısı koptuğunda haritayı ve rotayı kaybedip hareketsiz kalmakta ve vurulmaya açık hedef olmaktadır."),
+        ("1. Uydu (GPS) Sinyalinin Kesilmesi",
+         "Savaş ve operasyon alanlarında sinyal bozucular uydu bağlantısını tamamen keser. Pazardaki standart insansız araçlar uydu bağlantısı koptuğunda yönünü kaybedip durur ve açık hedef haline gelir."),
         ("2. Uzaktan Kumanda (Telsiz) Bağlantısının Kopması",
-         "Uzaktan kumandayla yönlendirilen insansız araçların telsiz bağı koptuğunda araç olduğu yerde kilitlenmektedir. Ayrıca sinyalin gecikmeli gitmesi ani tehlikelerde kazalara yol açmaktadır."),
-        ("3. Yabancı Otonomi Yazılımlarına Bağımlı Olunması",
-         "Piyasadaki hazır otonom yazılımlar yabancı menşeilidir. Bu yazılımlar askeri savunma standartlarına uyum sağlamaz, siber güvenlik açıkları taşır ve Türk savunma sistemlerine doğrudan bağlanamaz.")
+         "Uzaktan kumandayla yönlendirilen araçlarda telsiz bağı koptuğunda araç olduğu yerde donup kalır. Ayrıca sinyalin gecikmeli gitmesi ani engellerde kazalara yol açar."),
+        ("3. Yabancı Otonom Yazılımlara Bağımlılık",
+         "Piyasadaki hazır otonom sistemler yabancı kaynaklıdır. Güvenlik açıkları taşır ve Türk savunma sanayii sistemleriyle doğrudan haberleşemez.")
     ]
     for i, (p_title, p_desc) in enumerate(problems):
         top_pos = Inches(1.7 + i * 1.6)
@@ -144,12 +144,12 @@ def build_deck():
     clear_slide(s3)
     add_header(s3, "ÇÖZÜM: Trustia Yerli Otonom Sürüş Çekirdeği")
     solutions = [
-        ("1. GPS Olmadan Lazer (LiDAR) ile 3 Boyutlu Haritalama",
-         "GPS uydusu tamamen kapansa bile; araç üzerindeki 3 boyutlu lazer tarayıcı (LiDAR) ve hareket sensörleri sayesinde araç kendi haritasını santim santim kendisi çıkarır ve rotasında kaybolmadan ilerler."),
-        ("2. Telsiz Bağlantısı Koptuğunda Otonom Eve Dönüş",
-         "Kumanda veya telsiz bağlantısı koptuğu anda araç panik yapmaz. Hafızasındaki lazer haritayı takip ederek güvenli başlangıç noktasına (üs bölgesine) kendi kendine geri döner."),
+        ("1. Uydu Olmadan Lazer Gözlerle (LiDAR) Haritalama",
+         "Uydu sinyali tamamen kesilse bile; araç üzerindeki 3 boyutlu lazer tarayıcılar sayesinde araç kendi haritasını arazide kendisi çıkarır ve yolundan şaşmadan ilerler."),
+        ("2. Bağlantı Koptuğunda Kendi Başına Üsse Dönüş",
+         "Kumanda veya telsiz bağlantısı koptuğu anda araç panik yapmaz. Hafızasındaki lazer haritayı takip ederek güvenli başlangıç noktasına kendi kendine geri döner."),
         ("3. %100 Yerli Kod ve ASELSAN Sistemlerine Tam Uyum",
-         "Yazılımın tüm kodları sıfırdan yerli olarak geliştirilmiştir. Askeri haberleşme kurallarına ve ASELSAN kara sistemlerine doğrudan tak-çalıştır şeklinde bağlanabilir.")
+         "Yazılımın tüm satırları sıfırdan yerli olarak yazılmıştır. Askeri haberleşme kurallarına ve ASELSAN kara sistemlerine doğrudan bağlanabilir.")
     ]
     for i, (s_title, s_desc) in enumerate(solutions):
         top_pos = Inches(1.7 + i * 1.6)
@@ -174,15 +174,15 @@ def build_deck():
     # SLIDE 4: ÜRÜN
     s4 = prs.slides[3]
     clear_slide(s4)
-    add_header(s4, "ÜRÜN: Trustia Otonomi Beyni ve Taktik Kontrol Konsolu")
+    add_header(s4, "ÜRÜN: Trustia Otonomi Beyni ve Kontrol Ekranı")
     tb_left = s4.shapes.add_textbox(Inches(0.8), Inches(1.7), Inches(6.8), Inches(4.9))
     tfl = tb_left.text_frame
     tfl.word_wrap = True
     features = [
-        ("Akıllı Sürüş ve Rota Planlayıcı:", "Lazer sensörlerle çevreyi tarar, yoldaki çukurları, kayaları ve hareketli hedefleri anında algılayıp etrafından güvenle dolaşır."),
-        ("Askeri Tehlike Algılama Modülleri:", "Yoldaki mayın veya el yapımı patlayıcı şüpheli cisimleri tespit eder ve 30 metre geriden aracı durdurup güvenli bölgeye alır."),
-        ("Taktik Komuta Konsolu (Ekran):", "Askeri harita destekli komuta ekranı. Operatör tablet üzerinden tek tıkla araca hedef verir veya acil durumda anında durdurur."),
-        ("1.301 Test ile Kanıtlanmış Güvenlik:", "16.000 satırlık yazılım çekirdeği 1.301 farklı zorlu kaza ve arazi senaryosunda test edilmiş ve %100 başarıyla tamamlanmıştır.")
+        ("Akıllı Sürüş ve Rota Çizici:", "Lazer sensörlerle çevreyi tarar; yoldaki çukurları, kayaları ve hareketli engelleri anında görüp etrafından dolaşır."),
+        ("Askeri Tehlike Algılama Modülü:", "Yoldaki mayın ve patlayıcı şüpheli cisimleri tespit eder, aracı güvenli mesafede durdurur."),
+        ("Taktik Komuta Ekranı:", "Askeri harita destekli kontrol ekranı. Operatör ekran üzerinden tek dokunuşla araca hedef verir veya anında durdurur."),
+        ("1.301 Test ile Kanıtlanmış Güvenlik:", "16 bin satırlık yazılım çekirdeği 1.301 farklı zorlu arazi senaryosunda test edilmiş ve tamamını hatasız geçmiştir.")
     ]
     for idx, (head, body) in enumerate(features):
         p = tfl.paragraphs[0] if idx == 0 else tfl.add_paragraph()
@@ -205,16 +205,16 @@ def build_deck():
     tfs = tb_spec.text_frame
     tfs.word_wrap = True
     sp1 = tfs.paragraphs[0]
-    sp1.text = "TEKNİK ÖZELLİKLER"
+    sp1.text = "TEKNİK GÜCÜMÜZ"
     sp1.font.size = Pt(12)
     sp1.font.bold = True
     sp1.font.color.rgb = C_BLUE
     specs = [
-        "Haberleşme: Askeri ve Robot Standartları Uyumlu",
-        "Bilgisayar: Nvidia Jetson ve Endüstriyel PC'ler",
-        "Sensörler: 3D Lazer (LiDAR), Kamera, Hareket Sensörü",
-        "Tepki Hızı: 5 Milisaniyede Müdahale Edebilme",
-        "Durum: Çalışır Prototip, Teste Hazır"
+        "Haberleşme: Askeri ve Robotik Standartlara Tam Uyumlu",
+        "Bilgisayar: Araç İçi Güçlü İşlemciler (Nvidia Jetson vb.)",
+        "Sensörler: 3 Boyutlu Lazer (LiDAR), Kamera, Açı Ölçerler",
+        "Tepki Hızı: 5 Milisaniyede (Göz Kırpmasından Hızlı) Müdahale",
+        "Durum: Çalışır Durumda, Göreve Hazır"
     ]
     for s in specs:
         p = tfs.add_paragraph()
@@ -225,12 +225,12 @@ def build_deck():
     # SLIDE 5: ALTYAPILAR
     s5 = prs.slides[4]
     clear_slide(s5)
-    add_header(s5, "ALTYAPILAR: Test Parkımız ve Resmi Tescillerimiz")
+    add_header(s5, "ALTYAPILAR: Çalışma Merkezimiz ve Belgelerimiz")
     infra_boxes = [
-        ("İTO BTM Fulya Kampüsü", "İstanbul Ticaret Odası bünyesindeki Fulya Derin Teknoloji Kampüsü'nde sözleşmeli kuluçka merkezimiz. Ar-Ge, yazılım ve laboratuvar altyapımız buradadır."),
-        ("Yazılım ve Donanım Test Cihazları", "Yapay zeka araç bilgisayarları (Jetson Orin), 3 boyutlu lazer tarayıcılar (LiDAR), açı ölçer sensörler ve araç içi elektronik bağlantı kablolama ekipmanlarımız mevcuttur."),
-        ("1.301 Testli Sanal Test Odası", "Gerçek dünyaya çıkmadan önce yazılımımızı 1.301 farklı simülasyon senaryosunda (sis, çamur, gece, radar karıştırması) 43 saniyede otomatik test eden sistemimiz aktiftir."),
-        ("Resmi Akreditasyonlar", "ASELSAN Potansiyel Tedarikçi Onayı (SAP: FZQHEXGFMTJU), NATO Askeri Tedarikçi Başvurusu (NCAGE), TÜBİTAK ARBİS Kaydı ve Savunma Sanayii Sertifikalarımız.")
+        ("İTO BTM Fulya Kampüsü", "İstanbul Ticaret Odası bünyesindeki Fulya Derin Teknoloji Kampüsü'nde yerleşik merkezimiz. Ar-Ge, yazılım ve çalışma alanımız buradadır."),
+        ("Yazılım ve Donanım Test Cihazları", "Araç bilgisayarları, 3 boyutlu lazer tarayıcılar (LiDAR), yön algılayıcı sensörler ve araç içi bağlantı ekipmanlarımız mevcuttur."),
+        ("1.301 Testli Sanal Test Odası", "Gerçek araziye çıkmadan önce yazılımımızı 1.301 farklı sanal senaryoda (sis, çamur, gece, karıştırma) 43 saniyede otomatik test eden sistemimiz aktiftir."),
+        ("Resmi Belgelerimiz ve Onaylarımız", "ASELSAN Tedarikçi Portalı Yazılım Ön Onayı (SAP: FZQHEXGFMTJU), NATO Tedarikçi Kodu Başvurusu, TÜBİTAK ARBİS Kaydı ve Savunma Sanayii Sertifikalarımız.")
     ]
     for idx, (ititle, idesc) in enumerate(infra_boxes):
         row = idx // 2
@@ -259,9 +259,9 @@ def build_deck():
     clear_slide(s6)
     add_header(s6, "PAZAR BÜYÜKLÜĞÜ: Askeri İnsansız Araçlar Pazarı")
     market_cards = [
-        ("DÜNYA PAZARI (TAM)", "15.8 Milyar $", "Dünyadaki askeri insansız kara araçları ve taktik otonomi sistemlerinin toplam yıllık pazar büyüklüğü."),
-        ("BÖLGESEL PAZAR (SAM)", "1.2 Milyar $", "Türkiye, NATO ve dost ülkelerdeki sınır güvenliği, otonom konvoy ve taktik araç yazılımları pazarı."),
-        ("BİZİM HEDEFİMİZ (SOM)", "45 Milyon $", "ASELSAN ve TSK kara araçlarının otonomlaştırılması projelerinde ilk 3 yılda hedeflediğimiz yerli yazılım payı.")
+        ("DÜNYA PAZARI", "15.8 Milyar $", "Dünyadaki askeri insansız kara araçları ve taktik otonomi sistemlerinin toplam yıllık pazar büyüklüğü."),
+        ("BÖLGEMİZDEKİ PAZAR", "1.2 Milyar $", "Türkiye, NATO ve bölge ülkelerindeki sınır güvenliği, otonom konvoy ve taktik araç yazılımları pazarı."),
+        ("BİZİM HEDEFİMİZ", "45 Milyon $", "ASELSAN ve yerli kara araçlarının otonomlaştırılması projelerinde ilk 3 yılda hedeflediğimiz yerli yazılım payı.")
     ]
     for idx, (m_type, m_val, m_desc) in enumerate(market_cards):
         l = Inches(0.8 + idx * 4.0)
@@ -291,7 +291,7 @@ def build_deck():
     # SLIDE 7: RAKİP ANALİZİ
     s7 = prs.slides[6]
     clear_slide(s7)
-    add_header(s7, "RAKİP ANALİZİ: Taktik Saha İhtiyaçları Karşılaştırması")
+    add_header(s7, "FARKIMIZ: Sahadaki Çözümlerle Karşılaştırma")
     rows, cols = 6, 4
     table_shape = s7.shapes.add_table(rows, cols, Inches(0.8), Inches(1.7), Inches(11.7), Inches(4.8))
     table = table_shape.table
@@ -299,7 +299,7 @@ def build_deck():
     table.columns[1].width = Inches(2.7)
     table.columns[2].width = Inches(2.7)
     table.columns[3].width = Inches(2.7)
-    headers = ["Özellik / Yetenek", "TRUSTIA AI (Yerli)", "Klasik Uzaktan Kumanda", "Yabancı Açık Kaynaklar"]
+    headers = ["Özellik ve Yetenek", "TRUSTIA (Yerli Yazılım)", "Klasik Kumandalı Araçlar", "Yabancı Açık Kaynaklar"]
     for col_idx, h in enumerate(headers):
         cell = table.cell(0, col_idx)
         cell.text = h
@@ -312,11 +312,11 @@ def build_deck():
         p.alignment = PP_ALIGN.CENTER if col_idx > 0 else PP_ALIGN.LEFT
 
     matrix_data = [
-        ("GPS Olmadan Haritalama (Lazerle)", "✓ Tam Uyumlu", "✗ Yok (GPS Şart)", "△ Şehir Haritası Şart"),
-        ("Askeri ve NATO Standartlarına Uyum", "✓ Tam Uyumlu", "△ Standartsız Telsiz", "✗ Askeri Uyum Yok"),
-        ("%100 Yerli Kod Bağımsızlığı", "✓ Tamamen Yerli", "△ Donanıma Bağımlı", "✗ Yabancı Bağımlı"),
-        ("Bağlantı Kopunca Kendi Kendine Dönüş", "✓ Otonom Eve Dönüş", "✗ Araç Olduğu Yerde Kalır", "△ Belirsiz"),
-        ("1.301 Testli Doğrulanmış Prototip", "✓ Test Edilmiş & Hazır", "△ Deneme Aşamasında", "△ Sivil Testler")
+        ("Uydusuz Lazerle Harita Çıkarma", "✓ Tam Uyumlu (Lazerle Gider)", "✗ Yok (Uydu Şart)", "△ Şehir Haritası İster"),
+        ("Askeri Standartlara Uyum", "✓ Tam Uyumlu", "△ Sadece Telsiz", "✗ Askeri Standart Yok"),
+        ("%100 Yerli Kod Güvencesi", "✓ Tamamen Yerli", "△ Parçalara Bağımlı", "✗ Yabancıya Bağımlı"),
+        ("Bağlantı Kopunca Eve Dönüş", "✓ Kendi Kendine Döner", "✗ Araç Olduğu Yerde Kalır", "△ Belirsiz"),
+        ("1.301 Testten Geçmiş Sistem", "✓ Test Edilmiş & Hazır", "△ Deneme Aşamasında", "△ Sivil Testler")
     ]
     for row_idx, row_data in enumerate(matrix_data, 1):
         for col_idx, text in enumerate(row_data):
@@ -341,11 +341,11 @@ def build_deck():
     add_header(s8, "İŞ MODELİ: Savunma Odaklı Yazılım Lisanslama")
     models = [
         ("1. Araç Başına Yazılım Lisansı Satışı",
-         "ASELSAN'ın ürettiği veya modernize ettiği her bir insansız kara aracı başına otonomi yazılımı lisans bedeli faturalandırılması."),
-        ("2. Özel Görev Modülleri Satışı",
-         "Temel sürüşe ek olarak; Mayın Tespit Paketi, Zehirli Gaz Kaçınma Paketi veya Sürü Halinde İlerleme Paketi gibi ilave yazılım modülleri satışı."),
-        ("3. Entegrasyon, Saha Testi ve Yıllık Bakım Anlaşmaları",
-         "Yeni zırhlı araçlara sensör ve yazılım bağlama mühendisliği, arazide test desteği ve yıllık yazılım güncelleme/bakım sözleşmeleri.")
+         "ASELSAN'ın ürettiği veya modernize ettiği her insansız araç başına yazılım lisans bedeli faturalandırılması."),
+        ("2. İlave Güvenlik Paketleri",
+         "Temel sürüşe ek olarak; Mayın Arama Paketi, Gaz Kaçınma Paketi veya Sürü Halinde İlerleme Paketi gibi ilave yazılım modülleri satışı."),
+        ("3. Araç Montajı, Saha Testi ve Yıllık Bakım",
+         "Yeni araçlara sensör ve yazılım bağlama desteği, arazide test desteği ve yıllık yazılım güncelleme/bakım sözleşmeleri.")
     ]
     for i, (m_title, m_desc) in enumerate(models):
         top_pos = Inches(1.7 + i * 1.6)
@@ -370,14 +370,14 @@ def build_deck():
     # SLIDE 9: PAZARA GİRİŞ
     s9 = prs.slides[8]
     clear_slide(s9)
-    add_header(s9, "PAZARA GİRİŞ STRATEJİSİ: Adım Adım Büyüme Planımız")
+    add_header(s9, "PAZARA GİRİŞ: Adım Adım Büyüme Planımız")
     phases = [
-        ("1. Aşama: ASELSAN Araçlarında Saha Testi (2026)",
-         "ASELSAN Girişimcilik Merkezi (Axcelerate) desteğiyle ASELSAN'ın taktik kara araçlarında yazılımımızı arazide test edip ilk ortak başarıyı yakalamak."),
-        ("2. Aşama: Türk Savunma Sanayii Araçlarına Yayılım (2027)",
-         "ASELSAN onaylı tedarikçi gücüyle; zırhlı araç üreticilerinin (FNSS, BMC, vb.) tekerlekli ve paletli araçlarına otonom devriye ve konvoy beyni sağlamak."),
-        ("3. Aşama: Dost ve Müttefik Ülkelere İhracat (2027-2028)",
-         "NATO tedarikçi kodumuz ve uluslararası patent korumamızla, dost ülke ordularının insansız araç projelerine milli yazılımımızı ihraç etmek.")
+        ("1. Aşama: ASELSAN Araçlarında Saha Denemesi (2026)",
+         "ASELSAN Girişimcilik Merkezi (Axcelerate) desteğiyle ASELSAN taktik kara araçlarında yazılımımızı arazide denemek ve ilk ortak başarıyı yakalamak."),
+        ("2. Aşama: Türk Savunma Sanayii Araçlarına Yayılma (2027)",
+         "ASELSAN onaylı tedarikçi gücüyle; yerli zırhlı araç üreticilerinin araçlarına otonom devriye ve konvoy yazılımı sağlamak."),
+        ("3. Aşama: Dost Ülkelere İhracat (2027-2028)",
+         "NATO tedarikçi kodumuz ve tescillerimizle, dost ülke ordularının projelerine yerli yazılımımızı ihraç etmek.")
     ]
     for i, (p_title, p_desc) in enumerate(phases):
         top_pos = Inches(1.7 + i * 1.6)
@@ -401,12 +401,12 @@ def build_deck():
     # SLIDE 10: YOL HARİTASI
     s10 = prs.slides[9]
     clear_slide(s10)
-    add_header(s10, "PLANLANAN YOL HARİTASI: 2026 - 2028 Hedeflerimiz")
+    add_header(s10, "YOL HARİTASI: 2026 - 2028 Hedeflerimiz")
     roadmap_steps = [
-        ("ŞU ANKİ DURUM", "Çalışır Prototip", "16.000 satır yerli kod, 1.301 birim test ile doğrulandı. ASELSAN Tedarikçi Portalı Yazılım Ön Onayı alındı."),
-        ("YIL SONU HEDEFİ", "ASELSAN Saha Testi", "Axcelerate kabulü ile ASELSAN taktik aracında kapalı alanda ve arazide ilk gerçek saha sürüş testinin yapılması."),
-        ("2027 İLK YARI", "Seri Lisanslama", "İlk 10 taktik kara aracı için seri yazılım lisans teslimatı ve komuta ekranı tam entegrasyonu."),
-        ("2027 - 2028", "Sürü ve İhracat", "Çoklu araçların sürü halinde birlikte hareket etmesi ve dost/müttefik ülkelere yazılım ihracatı.")
+        ("ŞU AN", "Çalışır Sistem", "16 bin satır yerli kod, 1.301 test ile doğrulandı. ASELSAN Tedarikçi Portalı Yazılım Ön Onayı alındı."),
+        ("YIL SONU", "Saha Denemesi", "Axcelerate programı ile ASELSAN taktik aracında kapalı alanda ve arazide ilk sürüş denemesinin yapılması."),
+        ("2027 İLK YARI", "Seri Lisanslama", "İlk 10 taktik kara aracı için seri yazılım lisans teslimatı ve kontrol ekranı tam uyumu."),
+        ("2027 - 2028", "Sürü ve İhracat", "Araçların sürü halinde birlikte hareket etmesi ve dost ülkelere yazılım satışı.")
     ]
     for idx, (q_title, q_sub, q_desc) in enumerate(roadmap_steps):
         l = Inches(0.8 + idx * 3.0)
@@ -441,7 +441,7 @@ def build_deck():
         ("Murat Furkan Bayram", "Kurucu & CEO / Sistem Mimarı", 
          "• 16.000 satırlık Trustia Otonomi Çekirdeğinin mimarı ve yazarı.\n• 1.301 otomatik test senaryosunun geliştiricisi (%100 başarı).\n• TÜBİTAK ARBİS, BTK Savunma ve KOSGEB İleri Girişimci tescilleri sahibi.\n• Çekirdek Yazılım, Rota Planlama ve Algoritma Lideri."),
         ("Denizcan Özcan", "Baş Donanım ve Entegrasyon Mühendisi", 
-         "• ASELSAN Aday Mühendislik Havuzu Üyesi.\n• TEKNOFEST Robotaksi Finalisti.\n• Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar ve araç içi CAN haberleşme uzmanı.\n• Donanım Entegrasyonu ve Saha Testleri Lideri.")
+         "• ASELSAN Aday Mühendislik Havuzu Üyesi.\n• TEKNOFEST Robotaksi Finalisti.\n• Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar ve araç içi haberleşme uzmanı.\n• Donanım Kurulumu ve Saha Testleri Lideri.")
     ]
     for idx, (name, role, bio) in enumerate(team):
         l = Inches(1.2 + idx * 5.6)
@@ -472,14 +472,14 @@ def build_deck():
     clear_slide(s12)
     add_header(s12, "ASELSAN'DAN BEKLENTİLERİMİZ: Birlikte Neler Yapabiliriz?")
     expectations = [
-        ("1. ASELSAN Araçlarında Ortak Saha Testi",
-         "ASELSAN'ın mevcut insansız kara araçlarında (örneğin Aslan veya Ertuğrul) yazılımımızı araca yükleyip arazide birlikte test etmek."),
-        ("2. Askeri Test Sahası Desteği",
-         "GPS uydularının kasıtlı olarak karartıldığı kontrollü askeri test sahalarında algoritmalarımızın başarısını resmi olarak kanıtlamak."),
-        ("3. Yerli Yazılım Tedarikçi Sözleşmesi",
-         "Ön onayı tamamlanan Yazılım Geliştirme başvurumuzla birlikte ASELSAN'ın onaylı yazılım tedarikçisi olmak ve araç başı lisanslama modeliyle çalışmak."),
-        ("4. Askeri Standartlaşma ve Mentorluk",
-         "Askeri çevre koşullarına ve güvenlik standartlarına uyum sürecinde ASELSAN uzmanlarının teknik tecrübesinden faydalanmak.")
+        ("1. ASELSAN Araçlarında Ortak Saha Denemesi",
+         "ASELSAN'ın mevcut insansız kara araçlarında yazılımımızı araca yükleyip arazide birlikte denemek."),
+        ("2. Gerçekçi Askeri Test Alanı Desteği",
+         "GPS uydularının kapalı olduğu kontrollü askeri test alanlarında yazılımımızın gücünü resmi olarak kanıtlamak."),
+        ("3. Yerli Yazılım Tedarikçi Anlaşması",
+         "Ön onayı tamamlanan Yazılım Geliştirme başvurumuzla birlikte ASELSAN'ın onaylı yazılım tedarikçisi olmak ve araç başı lisans modeliyle çalışmak."),
+        ("4. Askeri Standartlar ve Uzman Desteği",
+         "Askeri çevre koşullarına ve güvenlik kurallarına uyum sürecinde ASELSAN uzmanlarının tecrübesinden faydalanmak.")
     ]
     for idx, (etitle, edesc) in enumerate(expectations):
         row = idx // 2
@@ -532,7 +532,7 @@ def build_deck():
     p1.font.color.rgb = C_NAVY
 
     p2 = tf.add_paragraph()
-    p2.text = "ASELSAN ile birlikte muharebe sahasında Mehmetçiğin can güvenliğini milli otonomiyle korumak için hazırız."
+    p2.text = "ASELSAN ile birlikte sahada Mehmetçiğin can güvenliğini yerli otonomiyle korumak için hazırız."
     p2.font.size = Pt(14)
     p2.font.color.rgb = C_GRAY
 

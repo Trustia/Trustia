@@ -1,78 +1,86 @@
 import os
 
-html_path_1 = r"C:\Users\Murat\Downloads\Trustia_ASELSAN_Sunumu.html"
-html_path_2 = r"C:\Users\Murat\Desktop\Trustia\Kurumsal\Sunumlar\Trustia_ASELSAN_Sunumu.html"
-logo_path = r"c:/Users/Murat/Desktop/Trustia/Kurumsal/Medya/Logo.png"
-car_path = r"c:/Users/Murat/Desktop/Trustia/Kurumsal/Medya/Arac_Lidar.png"
+logo_path = "file:///" + os.path.abspath("Kurumsal/Medya/Logo.png").replace("\\", "/")
+car_path = "file:///" + os.path.abspath("Kurumsal/Medya/Arac_Lidar.png").replace("\\", "/")
+
+html_path_1 = "Kurumsal/Sunumlar/Trustia_ASELSAN_Sunumu.html"
+html_path_2 = r"C:\Users\Murat\Downloads\Trustia_ASELSAN_Sunumu.html"
 
 html_content = f"""<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRUSTIA AI — ASELSAN Girişimcilik Merkezi Sunumu</title>
+    <title>Trustia AI - ASELSAN Tanışma Sunumu</title>
     <style>
         * {{
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }}
         body {{
-            background: #0B192C;
-            color: #1E293B;
+            background-color: #0F172A;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             min-height: 100vh;
             overflow: hidden;
+            color: #1E293B;
         }}
         .deck-container {{
-            width: 1200px;
-            height: 675px;
+            width: 100vw;
+            height: 100vh;
+            max-width: 1280px;
+            max-height: 720px;
             background: #FFFFFF;
-            border-radius: 12px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             position: relative;
-            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-direction: column;
+            border-radius: 12px;
+            overflow: hidden;
         }}
         .slide {{
             display: none;
             width: 100%;
             height: 100%;
-            padding: 40px 55px;
+            padding: 40px 60px;
             flex-direction: column;
-            position: relative;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #FFFFFF;
         }}
         .slide.active {{
             display: flex;
         }}
         .slide-header {{
-            margin-bottom: 24px;
             border-bottom: 2px solid #E2E8F0;
             padding-bottom: 12px;
+            margin-bottom: 20px;
         }}
         .slide-tag {{
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 800;
             color: #0056B3;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             margin-bottom: 4px;
         }}
         .slide-title {{
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 800;
             color: #0B2545;
+            line-height: 1.2;
         }}
         .content-body {{
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 16px;
+            justify-content: center;
         }}
         .card {{
             background: #F8FAFC;
@@ -80,23 +88,33 @@ html_content = f"""<!DOCTYPE html>
             border-radius: 8px;
             padding: 16px 20px;
         }}
-        .card.card-blue {{ border-left: 5px solid #0056B3; }}
-        .card.card-red {{ border-left: 5px solid #DC2626; }}
+        .card-blue {{
+            border-left: 4px solid #0056B3;
+        }}
+        .card-red {{
+            border-left: 4px solid #DC2626;
+        }}
         .card-title {{
             font-size: 16px;
             font-weight: 700;
+            color: #0B2545;
             margin-bottom: 6px;
         }}
-        .card.card-blue .card-title {{ color: #0B2545; }}
-        .card.card-red .card-title {{ color: #991B1B; }}
         .card-desc {{
-            font-size: 14px;
-            line-height: 1.55;
-            color: #334155;
+            font-size: 13.5px;
+            color: #475569;
+            line-height: 1.5;
+        }}
+        .grid-2 {{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            flex: 1;
         }}
         .grid-2x2 {{
             display: grid;
             grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             gap: 16px;
             flex: 1;
         }}
@@ -179,18 +197,21 @@ html_content = f"""<!DOCTYPE html>
             color: #FFF;
             border: none;
             padding: 8px 16px;
-            font-size: 14px;
-            font-weight: 600;
             border-radius: 20px;
-            cursor: pointer;
-            transition: 0.2s;
-        }}
-        .btn:hover {{ background: #0070E0; }}
-        .slide-counter {{
-            color: #FFF;
             font-size: 13px;
             font-weight: 600;
-            min-width: 80px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }}
+        .btn:hover {{
+            background: #003D80;
+            transform: scale(1.03);
+        }}
+        .slide-counter {{
+            color: #94A3B8;
+            font-size: 13px;
+            font-weight: 600;
+            min-width: 60px;
             text-align: center;
         }}
     </style>
@@ -205,13 +226,13 @@ html_content = f"""<!DOCTYPE html>
             <img src="{logo_path}" alt="Trustia Logo" style="height: 60px; object-fit: contain;">
         </div>
         <div style="font-size: 13px; font-weight: 700; color: #0056B3; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">
-            TRUSTIA TEKNOLOJİ A.Ş.
+            TRUSTIA TEKNOLOJİ
         </div>
         <h1 style="font-size: 34px; font-weight: 900; color: #0B2545; line-height: 1.2; margin-bottom: 12px;">
-            Milli Otonom Sürüş Platformu & İnsansız Kara Aracı Beyni
+            Milli Otonom Sürüş Yazılımı & İnsansız Araç Beyni
         </h1>
         <p style="font-size: 18px; color: #475569; margin-bottom: 40px; font-weight: 500;">
-            GPS Olmadan Lazerle Haritalama Yapan ve Elektronik Karıştırmadan Etkilenmeyen Yerli Yazılım
+            Uydudan Bağımsız Lazerle Harita Çıkaran ve Sinyal Kesilmesinden Etkilenmeyen Yerli Sistem
         </p>
         
         <div style="border-top: 2px solid #E2E8F0; padding-top: 20px; width: 100%; display: flex; justify-content: space-between; font-size: 13px; color: #64748B;">
@@ -234,16 +255,16 @@ html_content = f"""<!DOCTYPE html>
         </div>
         <div class="content-body">
             <div class="card card-red">
-                <div class="card-title">1. GPS Sinyalinin Kesilmesi veya Yanıltılması</div>
-                <div class="card-desc">Savaş ve operasyon bölgelerinde düşman sinyal bozucuları (jamming) GPS'i tamamen kesmektedir. Pazardaki standart otonom araçlar uydu bağlantısı koptuğunda haritayı ve rotayı kaybedip hareketsiz kalmakta ve vurulmaya açık hedef olmaktadır.</div>
+                <div class="card-title">1. Uydu (GPS) Sinyalinin Kesilmesi</div>
+                <div class="card-desc">Savaş ve operasyon alanlarında sinyal bozucular uydu bağlantısını tamamen keser. Pazardaki standart insansız araçlar uydu bağlantısı koptuğunda yönünü kaybedip durur ve açık hedef haline gelir.</div>
             </div>
             <div class="card card-red">
                 <div class="card-title">2. Uzaktan Kumanda (Telsiz) Bağlantısının Kopması</div>
-                <div class="card-desc">Uzaktan kumandayla yönlendirilen insansız araçların telsiz bağı koptuğunda araç olduğu yerde kilitlenmektedir. Ayrıca sinyalin gecikmeli gitmesi ani tehlikelerde kazalara yol açmaktadır.</div>
+                <div class="card-desc">Uzaktan kumandayla yönlendirilen araçlarda telsiz bağı koptuğunda araç olduğu yerde donup kalır. Ayrıca sinyalin gecikmeli gitmesi ani engellerde kazalara yol açar.</div>
             </div>
             <div class="card card-red">
-                <div class="card-title">3. Yabancı Otonomi Yazılımlarına Bağımlı Olunması</div>
-                <div class="card-desc">Piyasadaki hazır otonom yazılımlar yabancı menşeilidir. Bu yazılımlar askeri savunma standartlarına uyum sağlamaz, siber güvenlik açıkları taşır ve Türk savunma sistemlerine doğrudan bağlanamaz.</div>
+                <div class="card-title">3. Yabancı Otonom Yazılımlara Bağımlılık</div>
+                <div class="card-desc">Piyasadaki hazır otonom sistemler yabancı kaynaklıdır. Güvenlik açıkları taşır ve Türk savunma sanayii sistemleriyle doğrudan haberleşemez.</div>
             </div>
         </div>
     </div>
@@ -256,16 +277,16 @@ html_content = f"""<!DOCTYPE html>
         </div>
         <div class="content-body">
             <div class="card card-blue">
-                <div class="card-title">1. GPS Olmadan Lazer (LiDAR) ile 3 Boyutlu Haritalama</div>
-                <div class="card-desc">GPS uydusu tamamen kapansa bile; araç üzerindeki 3 boyutlu lazer tarayıcı (LiDAR) ve hareket sensörleri sayesinde araç kendi haritasını santim santim kendisi çıkarır ve rotasında kaybolmadan ilerler.</div>
+                <div class="card-title">1. Uydu Olmadan Lazer Gözlerle (LiDAR) Haritalama</div>
+                <div class="card-desc">Uydu sinyali tamamen kesilse bile; araç üzerindeki 3 boyutlu lazer tarayıcılar sayesinde araç kendi haritasını arazide kendisi çıkarır ve yolundan şaşmadan ilerler.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">2. Telsiz Bağlantısı Koptuğunda Otonom Eve Dönüş</div>
-                <div class="card-desc">Kumanda veya telsiz bağlantısı koptuğu anda araç panik yapmaz. Hafızasındaki lazer haritayı takip ederek güvenli başlangıç noktasına (üs bölgesine) kendi kendine geri döner.</div>
+                <div class="card-title">2. Bağlantı Koptuğunda Kendi Başına Üsse Dönüş</div>
+                <div class="card-desc">Kumanda veya telsiz bağlantısı koptuğu anda araç panik yapmaz. Hafızasındaki lazer haritayı takip ederek güvenli başlangıç noktasına kendi kendine geri döner.</div>
             </div>
             <div class="card card-blue">
                 <div class="card-title">3. %100 Yerli Kod ve ASELSAN Sistemlerine Tam Uyum</div>
-                <div class="card-desc">Yazılımın tüm kodları sıfırdan yerli olarak geliştirilmiştir. Askeri haberleşme kurallarına ve ASELSAN kara sistemlerine doğrudan tak-çalıştır şeklinde bağlanabilir.</div>
+                <div class="card-desc">Yazılımın tüm satırları sıfırdan yerli olarak yazılmıştır. Askeri haberleşme kurallarına ve ASELSAN kara sistemlerine doğrudan bağlanabilir.</div>
             </div>
         </div>
     </div>
@@ -274,36 +295,36 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide">
         <div class="slide-header">
             <div class="slide-tag">ASELSAN GİRİŞİMCİLİK MERKEZİ BAŞVURU SUNUMU</div>
-            <div class="slide-title">ÜRÜN: Trustia Otonomi Beyni ve Taktik Kontrol Konsolu</div>
+            <div class="slide-title">ÜRÜN: Trustia Otonomi Beyni ve Kontrol Ekranı</div>
         </div>
         <div class="two-cols">
             <div class="col-left">
                 <div class="card card-blue" style="padding: 12px 16px;">
-                    <div class="card-title" style="font-size: 14px;">• Akıllı Sürüş ve Rota Planlayıcı</div>
-                    <div class="card-desc" style="font-size: 13px;">Lazer sensörlerle çevreyi tarar, yoldaki çukurları, kayaları ve hareketli hedefleri anında algılayıp etrafından güvenle dolaşır.</div>
+                    <div class="card-title" style="font-size: 14px;">• Akıllı Sürüş ve Rota Çizici</div>
+                    <div class="card-desc" style="font-size: 13px;">Lazer sensörlerle çevreyi tarar; yoldaki çukurları, kayaları ve hareketli engelleri anında görüp etrafından dolaşır.</div>
                 </div>
                 <div class="card card-blue" style="padding: 12px 16px;">
-                    <div class="card-title" style="font-size: 14px;">• Askeri Tehlike Algılama Modülleri</div>
-                    <div class="card-desc" style="font-size: 13px;">Yoldaki mayın veya el yapımı patlayıcı şüpheli cisimleri tespit eder ve 30 metre geriden aracı durdurup güvenli bölgeye alır.</div>
+                    <div class="card-title" style="font-size: 14px;">• Askeri Tehlike Algılama Modülü</div>
+                    <div class="card-desc" style="font-size: 13px;">Yoldaki mayın ve patlayıcı şüpheli cisimleri tespit eder, aracı güvenli mesafede durdurur.</div>
                 </div>
                 <div class="card card-blue" style="padding: 12px 16px;">
-                    <div class="card-title" style="font-size: 14px;">• Taktik Komuta Konsolu (Ekran)</div>
-                    <div class="card-desc" style="font-size: 13px;">Askeri harita destekli komuta ekranı. Operatör tablet üzerinden tek tıkla araca hedef verir veya acil durumda anında durdurur.</div>
+                    <div class="card-title" style="font-size: 14px;">• Taktik Komuta Ekranı</div>
+                    <div class="card-desc" style="font-size: 13px;">Askeri harita destekli kontrol ekranı. Operatör ekran üzerinden tek dokunuşla araca hedef verir veya anında durdurur.</div>
                 </div>
                 <div class="card card-blue" style="padding: 12px 16px;">
                     <div class="card-title" style="font-size: 14px;">• 1.301 Test ile Kanıtlanmış Güvenlik</div>
-                    <div class="card-desc" style="font-size: 13px;">16.000 satırlık yazılım çekirdeği 1.301 farklı zorlu kaza ve arazi senaryosunda test edilmiş ve %100 başarıyla tamamlanmıştır.</div>
+                    <div class="card-desc" style="font-size: 13px;">16 bin satırlık yazılım çekirdeği 1.301 farklı zorlu arazi senaryosunda test edilmiş ve tamamını hatasız geçmiştir.</div>
                 </div>
             </div>
             <div class="col-right">
                 <img src="{car_path}" alt="Trustia Otonomi Platformu" style="width: 100%; max-height: 180px; object-fit: contain; margin-bottom: 12px;">
-                <div style="font-size: 13px; font-weight: 700; color: #0056B3; margin-bottom: 8px;">TEKNİK ÖZELLİKLER</div>
+                <div style="font-size: 13px; font-weight: 700; color: #0056B3; margin-bottom: 8px;">TEKNİK GÜCÜMÜZ</div>
                 <div style="font-size: 12.5px; line-height: 1.6; color: #1E293B; width: 100%;">
-                    ✓ Haberleşme: Askeri ve Robot Standartları Uyumlu<br>
-                    ✓ Bilgisayar: Nvidia Jetson ve Endüstriyel PC'ler<br>
-                    ✓ Sensörler: 3D Lazer (LiDAR), Kamera, Hareket Sensörü<br>
-                    ✓ Tepki Hızı: 5 Milisaniyede Müdahale Edebilme<br>
-                    ✓ Durum: Çalışır Prototip, Teste Hazır
+                    ✓ Haberleşme: Askeri ve Robotik Standartlara Tam Uyumlu<br>
+                    ✓ Bilgisayar: Araç İçi Güçlü İşlemciler (Nvidia Jetson vb.)<br>
+                    ✓ Sensörler: 3 Boyutlu Lazer (LiDAR), Kamera, Açı Ölçerler<br>
+                    ✓ Tepki Hızı: 5 Milisaniyede (Göz Kırpmasından Hızlı) Müdahale<br>
+                    ✓ Durum: Çalışır Durumda, Göreve Hazır
                 </div>
             </div>
         </div>
@@ -313,24 +334,24 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide">
         <div class="slide-header">
             <div class="slide-tag">ASELSAN GİRİŞİMCİLİK MERKEZİ BAŞVURU SUNUMU</div>
-            <div class="slide-title">ALTYAPILAR: Test Parkımız ve Resmi Tescillerimiz</div>
+            <div class="slide-title">ALTYAPILAR: Çalışma Merkezimiz ve Belgelerimiz</div>
         </div>
         <div class="grid-2x2">
             <div class="card card-blue">
                 <div class="card-title">İTO BTM Fulya Kampüsü</div>
-                <div class="card-desc">İstanbul Ticaret Odası bünyesindeki Fulya Derin Teknoloji Kampüsü'nde sözleşmeli kuluçka merkezimiz. Ar-Ge, yazılım ve laboratuvar altyapımız buradadır.</div>
+                <div class="card-desc">İstanbul Ticaret Odası bünyesindeki Fulya Derin Teknoloji Kampüsü'nde yerleşik merkezimiz. Ar-Ge, yazılım ve çalışma alanımız buradadır.</div>
             </div>
             <div class="card card-blue">
                 <div class="card-title">Yazılım ve Donanım Test Cihazları</div>
-                <div class="card-desc">Yapay zeka araç bilgisayarları (Jetson Orin), 3 boyutlu lazer tarayıcılar (LiDAR), açı ölçer sensörler ve araç içi elektronik bağlantı kablolama ekipmanlarımız mevcuttur.</div>
+                <div class="card-desc">Araç bilgisayarları, 3 boyutlu lazer tarayıcılar (LiDAR), yön algılayıcı sensörler ve araç içi bağlantı ekipmanlarımız mevcuttur.</div>
             </div>
             <div class="card card-blue">
                 <div class="card-title">1.301 Testli Sanal Test Odası</div>
-                <div class="card-desc">Gerçek dünyaya çıkmadan önce yazılımımızı 1.301 farklı simülasyon senaryosunda (sis, çamur, gece, radar karıştırması) 43 saniyede otomatik test eden sistemimiz aktiftir.</div>
+                <div class="card-desc">Gerçek araziye çıkmadan önce yazılımımızı 1.301 farklı sanal senaryoda (sis, çamur, gece, karıştırma) 43 saniyede otomatik test eden sistemimiz aktiftir.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">Resmi Akreditasyonlar</div>
-                <div class="card-desc">ASELSAN Potansiyel Tedarikçi Onayı (SAP: FZQHEXGFMTJU), NATO Askeri Tedarikçi Başvurusu (NCAGE), TÜBİTAK ARBİS Kaydı ve Savunma Sanayii Sertifikalarımız.</div>
+                <div class="card-title">Resmi Belgelerimiz ve Onaylarımız</div>
+                <div class="card-desc">ASELSAN Tedarikçi Portalı Yazılım Ön Onayı (SAP: FZQHEXGFMTJU), NATO Tedarikçi Kodu Başvurusu, TÜBİTAK ARBİS Kaydı ve Savunma Sanayii Sertifikalarımız.</div>
             </div>
         </div>
     </div>
@@ -344,24 +365,24 @@ html_content = f"""<!DOCTYPE html>
         <div class="grid-3">
             <div class="card card-blue" style="display: flex; flex-direction: column; justify-content: space-between; padding: 25px 20px;">
                 <div>
-                    <div style="font-size: 13px; font-weight: 700; color: #64748B;">DÜNYA PAZARI (TAM)</div>
+                    <div style="font-size: 13px; font-weight: 700; color: #64748B;">DÜNYA PAZARI</div>
                     <div style="font-size: 32px; font-weight: 900; color: #0056B3; margin: 15px 0;">15.8 Milyar $</div>
                 </div>
                 <div class="card-desc">Dünyadaki askeri insansız kara araçları ve taktik otonomi sistemlerinin toplam yıllık pazar büyüklüğü.</div>
             </div>
             <div class="card card-blue" style="display: flex; flex-direction: column; justify-content: space-between; padding: 25px 20px;">
                 <div>
-                    <div style="font-size: 13px; font-weight: 700; color: #64748B;">BÖLGESEL PAZAR (SAM)</div>
+                    <div style="font-size: 13px; font-weight: 700; color: #64748B;">BÖLGEMİZDEKİ PAZAR</div>
                     <div style="font-size: 32px; font-weight: 900; color: #0056B3; margin: 15px 0;">1.2 Milyar $</div>
                 </div>
-                <div class="card-desc">Türkiye, NATO ve dost ülkelerdeki sınır güvenliği, otonom konvoy ve taktik araç yazılımları pazarı.</div>
+                <div class="card-desc">Türkiye, NATO ve bölge ülkelerindeki sınır güvenliği, otonom konvoy ve taktik araç yazılımları pazarı.</div>
             </div>
             <div class="card card-blue" style="display: flex; flex-direction: column; justify-content: space-between; padding: 25px 20px;">
                 <div>
-                    <div style="font-size: 13px; font-weight: 700; color: #64748B;">BİZİM HEDEFİMİZ (SOM)</div>
+                    <div style="font-size: 13px; font-weight: 700; color: #64748B;">BİZİM HEDEFİMİZ</div>
                     <div style="font-size: 32px; font-weight: 900; color: #0056B3; margin: 15px 0;">45 Milyon $</div>
                 </div>
-                <div class="card-desc">ASELSAN ve TSK kara araçlarının otonomlaştırılması projelerinde ilk 3 yılda hedeflediğimiz yerli yazılım payı.</div>
+                <div class="card-desc">ASELSAN ve yerli kara araçlarının otonomlaştırılması projelerinde ilk 3 yılda hedeflediğimiz yerli yazılım payı.</div>
             </div>
         </div>
     </div>
@@ -370,45 +391,45 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide">
         <div class="slide-header">
             <div class="slide-tag">ASELSAN GİRİŞİMCİLİK MERKEZİ BAŞVURU SUNUMU</div>
-            <div class="slide-title">RAKİP ANALİZİ: Taktik Saha İhtiyaçları Karşılaştırması</div>
+            <div class="slide-title">FARKIMIZ: Sahadaki Çözümlerle Karşılaştırma</div>
         </div>
         <div class="content-body">
             <table class="matrix-table">
                 <thead>
                     <tr>
-                        <th>Özellik / Yetenek</th>
-                        <th style="background: #0056B3; text-align: center;">TRUSTIA AI (Yerli)</th>
-                        <th style="text-align: center;">Klasik Uzaktan Kumanda</th>
+                        <th>Özellik ve Yetenek</th>
+                        <th style="background: #0056B3; text-align: center;">TRUSTIA (Yerli Yazılım)</th>
+                        <th style="text-align: center;">Klasik Kumandalı Araçlar</th>
                         <th style="text-align: center;">Yabancı Açık Kaynaklar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>GPS Olmadan Haritalama (Lazerle)</strong></td>
-                        <td style="text-align: center;" class="val-good">✓ Tam Uyumlu</td>
-                        <td style="text-align: center;" class="val-bad">✗ Yok (GPS Şart)</td>
-                        <td style="text-align: center;" class="val-mid">△ Şehir Haritası Şart</td>
+                        <td><strong>Uydusuz Lazerle Harita Çıkarma</strong></td>
+                        <td style="text-align: center;" class="val-good">✓ Tam Uyumlu (Lazerle Gider)</td>
+                        <td style="text-align: center;" class="val-bad">✗ Yok (Uydu Şart)</td>
+                        <td style="text-align: center;" class="val-mid">△ Şehir Haritası İster</td>
                     </tr>
                     <tr>
-                        <td><strong>Askeri ve NATO Standartlarına Uyum</strong></td>
+                        <td><strong>Askeri Standartlara Uyum</strong></td>
                         <td style="text-align: center;" class="val-good">✓ Tam Uyumlu</td>
-                        <td style="text-align: center;" class="val-mid">△ Standartsız Telsiz</td>
-                        <td style="text-align: center;" class="val-bad">✗ Askeri Uyum Yok</td>
+                        <td style="text-align: center;" class="val-mid">△ Sadece Telsiz</td>
+                        <td style="text-align: center;" class="val-bad">✗ Askeri Standart Yok</td>
                     </tr>
                     <tr>
-                        <td><strong>%100 Yerli Kod Bağımsızlığı</strong></td>
+                        <td><strong>%100 Yerli Kod Güvencesi</strong></td>
                         <td style="text-align: center;" class="val-good">✓ Tamamen Yerli</td>
-                        <td style="text-align: center;" class="val-mid">△ Donanıma Bağımlı</td>
-                        <td style="text-align: center;" class="val-bad">✗ Yabancı Bağımlı</td>
+                        <td style="text-align: center;" class="val-mid">△ Parçalara Bağımlı</td>
+                        <td style="text-align: center;" class="val-bad">✗ Yabancıya Bağımlı</td>
                     </tr>
                     <tr>
-                        <td><strong>Bağlantı Kopunca Kendi Kendine Dönüş</strong></td>
-                        <td style="text-align: center;" class="val-good">✓ Otonom Eve Dönüş</td>
+                        <td><strong>Bağlantı Kopunca Eve Dönüş</strong></td>
+                        <td style="text-align: center;" class="val-good">✓ Kendi Kendine Döner</td>
                         <td style="text-align: center;" class="val-bad">✗ Araç Olduğu Yerde Kalır</td>
                         <td style="text-align: center;" class="val-mid">△ Belirsiz</td>
                     </tr>
                     <tr>
-                        <td><strong>1.301 Testli Doğrulanmış Prototip</strong></td>
+                        <td><strong>1.301 Testten Geçmiş Sistem</strong></td>
                         <td style="text-align: center;" class="val-good">✓ Test Edilmiş & Hazır</td>
                         <td style="text-align: center;" class="val-mid">△ Deneme Aşamasında</td>
                         <td style="text-align: center;" class="val-mid">△ Sivil Testler</td>
@@ -427,15 +448,15 @@ html_content = f"""<!DOCTYPE html>
         <div class="content-body">
             <div class="card card-blue">
                 <div class="card-title">1. Araç Başına Yazılım Lisansı Satışı</div>
-                <div class="card-desc">ASELSAN'ın ürettiği veya modernize ettiği her bir insansız kara aracı başına otonomi yazılımı lisans bedeli faturalandırılması.</div>
+                <div class="card-desc">ASELSAN'ın ürettiği veya modernize ettiği her insansız araç başına yazılım lisans bedeli faturalandırılması.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">2. Özel Görev Modülleri Satışı</div>
-                <div class="card-desc">Temel sürüşe ek olarak; Mayın Tespit Paketi, Zehirli Gaz Kaçınma Paketi veya Sürü Halinde İlerleme Paketi gibi ilave yazılım modülleri satışı.</div>
+                <div class="card-title">2. İlave Güvenlik Paketleri</div>
+                <div class="card-desc">Temel sürüşe ek olarak; Mayın Arama Paketi, Gaz Kaçınma Paketi veya Sürü Halinde İlerleme Paketi gibi ilave yazılım modülleri satışı.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">3. Entegrasyon, Saha Testi ve Yıllık Bakım Anlaşmaları</div>
-                <div class="card-desc">Yeni zırhlı araçlara sensör ve yazılım bağlama mühendisliği, arazide test desteği ve yıllık yazılım güncelleme/bakım sözleşmeleri.</div>
+                <div class="card-title">3. Araç Montajı, Saha Testi ve Yıllık Bakım</div>
+                <div class="card-desc">Yeni araçlara sensör ve yazılım bağlama desteği, arazide test desteği ve yıllık yazılım güncelleme/bakım sözleşmeleri.</div>
             </div>
         </div>
     </div>
@@ -444,20 +465,20 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide">
         <div class="slide-header">
             <div class="slide-tag">ASELSAN GİRİŞİMCİLİK MERKEZİ BAŞVURU SUNUMU</div>
-            <div class="slide-title">PAZARA GİRİŞ STRATEJİSİ: Adım Adım Büyüme Planımız</div>
+            <div class="slide-title">PAZARA GİRİŞ: Adım Adım Büyüme Planımız</div>
         </div>
         <div class="content-body">
             <div class="card card-blue">
-                <div class="card-title">1. Aşama: ASELSAN Araçlarında Saha Testi (2026)</div>
-                <div class="card-desc">ASELSAN Girişimcilik Merkezi (Axcelerate) desteğiyle ASELSAN'ın taktik kara araçlarında yazılımımızı arazide test edip ilk ortak başarıyı yakalamak.</div>
+                <div class="card-title">1. Aşama: ASELSAN Araçlarında Saha Denemesi (2026)</div>
+                <div class="card-desc">ASELSAN Girişimcilik Merkezi (Axcelerate) desteğiyle ASELSAN taktik kara araçlarında yazılımımızı arazide denemek ve ilk ortak başarıyı yakalamak.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">2. Aşama: Türk Savunma Sanayii Araçlarına Yayılım (2027)</div>
-                <div class="card-desc">ASELSAN onaylı tedarikçi gücüyle; zırhlı araç üreticilerinin (FNSS, BMC, vb.) tekerlekli ve paletli araçlarına otonom devriye ve konvoy beyni sağlamak.</div>
+                <div class="card-title">2. Aşama: Türk Savunma Sanayii Araçlarına Yayılma (2027)</div>
+                <div class="card-desc">ASELSAN onaylı tedarikçi gücüyle; yerli zırhlı araç üreticilerinin araçlarına otonom devriye ve konvoy yazılımı sağlamak.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">3. Aşama: Dost ve Müttefik Ülkelere İhracat (2027-2028)</div>
-                <div class="card-desc">NATO tedarikçi kodumuz ve uluslararası patent korumamızla, dost ülke ordularının insansız araç projelerine milli yazılımımızı ihraç etmek.</div>
+                <div class="card-title">3. Aşama: Dost Ülkelere İhracat (2027-2028)</div>
+                <div class="card-desc">NATO tedarikçi kodumuz ve tescillerimizle, dost ülke ordularının projelerine yerli yazılımımızı ihraç etmek.</div>
             </div>
         </div>
     </div>
@@ -466,28 +487,28 @@ html_content = f"""<!DOCTYPE html>
     <div class="slide">
         <div class="slide-header">
             <div class="slide-tag">ASELSAN GİRİŞİMCİLİK MERKEZİ BAŞVURU SUNUMU</div>
-            <div class="slide-title">PLANLANAN YOL HARİTASI: 2026 - 2028 Hedeflerimiz</div>
+            <div class="slide-title">YOL HARİTASI: 2026 - 2028 Hedeflerimiz</div>
         </div>
         <div class="grid-4">
             <div class="card card-blue" style="padding: 16px;">
-                <div style="font-size: 13px; font-weight: 700; color: #0056B3; margin-bottom: 6px;">ŞU ANKİ DURUM</div>
-                <div style="font-size: 15px; font-weight: 700; color: #0B2545; margin-bottom: 8px;">Çalışır Prototip</div>
-                <div class="card-desc" style="font-size: 12.5px;">16.000 satır yerli kod, 1.301 birim test ile doğrulandı. ASELSAN Tedarikçi Portalı Yazılım Ön Onayı alındı.</div>
+                <div style="font-size: 13px; font-weight: 700; color: #0056B3; margin-bottom: 6px;">ŞU AN</div>
+                <div style="font-size: 15px; font-weight: 700; color: #0B2545; margin-bottom: 8px;">Çalışır Sistem</div>
+                <div class="card-desc" style="font-size: 12.5px;">16 bin satır yerli kod, 1.301 test ile doğrulandı. ASELSAN Tedarikçi Portalı Yazılım Ön Onayı alındı.</div>
             </div>
             <div class="card card-blue" style="padding: 16px;">
-                <div style="font-size: 13px; font-weight: 700; color: #0056B3; margin-bottom: 6px;">YIL SONU HEDEFİ</div>
-                <div style="font-size: 15px; font-weight: 700; color: #0B2545; margin-bottom: 8px;">ASELSAN Saha Testi</div>
-                <div class="card-desc" style="font-size: 12.5px;">Axcelerate kabulü ile ASELSAN taktik aracında kapalı alanda ve arazide ilk gerçek saha sürüş testinin yapılması.</div>
+                <div style="font-size: 13px; font-weight: 700; color: #0056B3; margin-bottom: 6px;">YIL SONU</div>
+                <div style="font-size: 15px; font-weight: 700; color: #0B2545; margin-bottom: 8px;">Saha Denemesi</div>
+                <div class="card-desc" style="font-size: 12.5px;">Axcelerate programı ile ASELSAN taktik aracında kapalı alanda ve arazide ilk sürüş denemesinin yapılması.</div>
             </div>
             <div class="card" style="padding: 16px;">
                 <div style="font-size: 13px; font-weight: 700; color: #64748B; margin-bottom: 6px;">2027 İLK YARI</div>
                 <div style="font-size: 15px; font-weight: 700; color: #0B2545; margin-bottom: 8px;">Seri Lisanslama</div>
-                <div class="card-desc" style="font-size: 12.5px;">İlk 10 taktik kara aracı için seri yazılım lisans teslimatı ve komuta ekranı tam entegrasyonu.</div>
+                <div class="card-desc" style="font-size: 12.5px;">İlk 10 taktik kara aracı için seri yazılım lisans teslimatı ve kontrol ekranı tam uyumu.</div>
             </div>
             <div class="card" style="padding: 16px;">
                 <div style="font-size: 13px; font-weight: 700; color: #64748B; margin-bottom: 6px;">2027 - 2028</div>
                 <div style="font-size: 15px; font-weight: 700; color: #0B2545; margin-bottom: 8px;">Sürü ve İhracat</div>
-                <div class="card-desc" style="font-size: 12.5px;">Çoklu araçların sürü halinde birlikte hareket etmesi ve dost/müttefik ülkelere yazılım ihracatı.</div>
+                <div class="card-desc" style="font-size: 12.5px;">Araçların sürü halinde birlikte hareket etmesi ve dost ülkelere yazılım satışı.</div>
             </div>
         </div>
     </div>
@@ -515,8 +536,8 @@ html_content = f"""<!DOCTYPE html>
                 <div class="card-desc" style="font-size: 13.5px; line-height: 1.7;">
                     • <strong>ASELSAN Aday Mühendislik Havuzu Üyesi.</strong><br>
                     • TEKNOFEST Robotaksi Finalisti.<br>
-                    • Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar ve araç içi CAN haberleşme uzmanı.<br>
-                    • Donanım Entegrasyonu ve Saha Testleri Lideri.
+                    • Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar ve araç içi haberleşme uzmanı.<br>
+                    • Donanım Kurulumu ve Saha Testleri Lideri.
                 </div>
             </div>
         </div>
@@ -530,20 +551,20 @@ html_content = f"""<!DOCTYPE html>
         </div>
         <div class="grid-2x2">
             <div class="card card-blue">
-                <div class="card-title">1. ASELSAN Araçlarında Ortak Saha Testi</div>
-                <div class="card-desc">ASELSAN'ın mevcut insansız kara araçlarında (örneğin Aslan veya Ertuğrul) yazılımımızı araca yükleyip arazide birlikte test etmek.</div>
+                <div class="card-title">1. ASELSAN Araçlarında Ortak Saha Denemesi</div>
+                <div class="card-desc">ASELSAN'ın mevcut insansız kara araçlarında yazılımımızı araca yükleyip arazide birlikte denemek.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">2. Askeri Test Sahası Desteği</div>
-                <div class="card-desc">GPS uydularının kasıtlı olarak karartıldığı kontrollü askeri test sahalarında algoritmalarımızın başarısını resmi olarak kanıtlamak.</div>
+                <div class="card-title">2. Gerçekçi Askeri Test Alanı Desteği</div>
+                <div class="card-desc">GPS uydularının kapalı olduğu kontrollü askeri test alanlarında yazılımımızın gücünü resmi olarak kanıtlamak.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">3. Yerli Yazılım Tedarikçi Sözleşmesi</div>
-                <div class="card-desc">Ön onayı tamamlanan Yazılım Geliştirme başvurumuzla birlikte ASELSAN'ın onaylı yazılım tedarikçisi olmak ve araç başı lisanslama modeliyle çalışmak.</div>
+                <div class="card-title">3. Yerli Yazılım Tedarikçi Anlaşması</div>
+                <div class="card-desc">Ön onayı tamamlanan Yazılım Geliştirme başvurumuzla birlikte ASELSAN'ın onaylı yazılım tedarikçisi olmak ve araç başı lisans modeliyle çalışmak.</div>
             </div>
             <div class="card card-blue">
-                <div class="card-title">4. Askeri Standartlaşma ve Mentorluk</div>
-                <div class="card-desc">Askeri çevre koşullarına ve güvenlik standartlarına uyum sürecinde ASELSAN uzmanlarının teknik tecrübesinden faydalanmak.</div>
+                <div class="card-title">4. Askeri Standartlar ve Uzman Desteği</div>
+                <div class="card-desc">Askeri çevre koşullarına ve güvenlik kurallarına uyum sürecinde ASELSAN uzmanlarının tecrübesinden faydalanmak.</div>
             </div>
         </div>
     </div>
@@ -557,7 +578,7 @@ html_content = f"""<!DOCTYPE html>
             Milli Otonomi, Güçlü Savunma.
         </h1>
         <p style="font-size: 18px; color: #475569; margin-bottom: 40px; font-weight: 500;">
-            ASELSAN ile birlikte muharebe sahasında Mehmetçiğin can güvenliğini milli otonomiyle korumak için hazırız.
+            ASELSAN ile birlikte sahada Mehmetçiğin can güvenliğini yerli otonomiyle korumak için hazırız.
         </p>
         
         <div style="border-top: 2px solid #E2E8F0; padding-top: 20px; width: 100%; font-size: 14px; color: #334155; line-height: 1.8;">
@@ -632,4 +653,4 @@ with open(html_path_1, "w", encoding="utf-8") as f:
 with open(html_path_2, "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("Updated with ultra-clean Turkish text!")
+print("Updated with ultra-clean Turkish text without tongue-twisters!")
