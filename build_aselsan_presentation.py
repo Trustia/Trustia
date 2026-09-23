@@ -439,9 +439,9 @@ def build_deck():
     add_header(s11, "EKİP: Vizyonumuz ve Mühendislik Gücümüz")
     team = [
         ("Murat Furkan Bayram", "Kurucu & CEO / Sistem Mimarı", 
-         "• İleri yapay zeka araçlarıyla 16.000 satırlık otonomi çekirdeğini inşa eden Sistem Mimarı.\n• 1.301 otomatik güvenlik testinin tasarımcısı ve yöneticisi (%100 başarı).\n• TÜBİTAK ARBİS, BTK Savunma ve KOSGEB İleri Girişimci tescilleri sahibi.\n• Yapay Zeka Destekli Yazılım ve Algoritma Lideri."),
+         "• İleri yapay zeka kodlama araçlarıyla 16.000 satırlık otonomi çekirdeğini inşa eden Sistem Mimarı.\n• 1.301 otomatik güvenlik testinin tasarımcısı ve yöneticisi (%100 başarı).\n• TÜBİTAK ARBİS, BTK Savunma Sanayii ve KOSGEB İleri Girişimci tescilleri sahibi.\n• İTO BTM Fulya Girişimcilik Merkezi yerleşik derin teknoloji proje lideri.\n• Çekirdek yazılım, lazerle haritalama ve algoritma lideri."),
         ("Denizcan Özcan", "Baş Donanım ve Entegrasyon Mühendisi", 
-         "• ASELSAN Aday Mühendislik Havuzu Üyesi.\n• İstanbul Üniversitesi-Cerrahpaşa (İÜC) EEE (3.44 GPA).\n• TEKNOFEST Robotaksi Otonom Araç Yarışması Finalisti.\n• Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar uzmanı.\n• Donanım Kurulumu ve Saha Testleri Lideri.")
+         "• ASELSAN Haberleşme ve Bilgi Teknolojileri bünyesinde Donanım Mühendisi.\n• İstanbul Üniversitesi-Cerrahpaşa Elektrik-Elektronik Mühendisliği (4. Sınıf).\n• ASELSAN Hava Savunma Sistemleri: 520 takım arasında 5.lik ve Kaptanlık.\n• TEKNOFEST Robotaksi: Otonom binek araç ve lazerli (LiDAR) sürüş finalisti.\n• ROKETSAN: Su altı roket ve navigasyon sistemlerinde yazılım kaptanı.\n• Lazer tarayıcılar (LiDAR), araç haberleşmesi ve donanım kurulumu lideri.")
     ]
     for idx, (name, role, bio) in enumerate(team):
         l = Inches(1.2 + idx * 5.6)
