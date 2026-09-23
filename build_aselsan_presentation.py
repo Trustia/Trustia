@@ -439,7 +439,7 @@ def build_deck():
     add_header(s11, "EKİP: Vizyonumuz ve Mühendislik Gücümüz")
     team = [
         ("Murat Furkan Bayram", "Kurucu & CEO / Sistem Mimarı", 
-         "• 16.000 satırlık Trustia Otonomi Çekirdeğinin mimarı ve yazarı.\n• 1.301 otomatik test senaryosunun geliştiricisi (%100 başarı).\n• TÜBİTAK ARBİS, BTK Savunma ve KOSGEB İleri Girişimci tescilleri sahibi.\n• Çekirdek Yazılım, Rota Planlama ve Algoritma Lideri."),
+         "• İleri yapay zeka araçlarıyla 16.000 satırlık otonomi çekirdeğini inşa eden Sistem Mimarı.\n• 1.301 otomatik güvenlik testinin tasarımcısı ve yöneticisi (%100 başarı).\n• TÜBİTAK ARBİS, BTK Savunma ve KOSGEB İleri Girişimci tescilleri sahibi.\n• Yapay Zeka Destekli Yazılım ve Algoritma Lideri."),
         ("Denizcan Özcan", "Baş Donanım ve Entegrasyon Mühendisi", 
          "• ASELSAN Aday Mühendislik Havuzu Üyesi.\n• TEKNOFEST Robotaksi Finalisti.\n• Lazer tarayıcılar (LiDAR), sensörler, gömülü bilgisayarlar ve araç içi haberleşme uzmanı.\n• Donanım Kurulumu ve Saha Testleri Lideri.")
     ]

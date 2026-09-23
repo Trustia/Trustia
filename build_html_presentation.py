@@ -524,10 +524,10 @@ html_content = f"""<!DOCTYPE html>
                 <div style="font-size: 20px; font-weight: 800; color: #0B2545;">Murat Furkan Bayram</div>
                 <div style="font-size: 14px; font-weight: 700; color: #0056B3; margin: 4px 0 14px 0;">Kurucu & CEO / Sistem Mimarı</div>
                 <div class="card-desc" style="font-size: 13.5px; line-height: 1.7;">
-                    • 16.000 satırlık Trustia Otonomi Çekirdeğinin mimarı ve yazarı.<br>
-                    • 1.301 otomatik test senaryosunun geliştiricisi (%100 başarı).<br>
+                    • İleri yapay zeka araçlarıyla 16.000 satırlık otonomi çekirdeğini inşa eden Sistem Mimarı.<br>
+                    • 1.301 otomatik güvenlik testinin tasarımcısı ve yöneticisi (%100 başarı).<br>
                     • TÜBİTAK ARBİS, BTK Savunma ve KOSGEB İleri Girişimci tescilleri sahibi.<br>
-                    • Çekirdek Yazılım, Rota Planlama ve Algoritma Lideri.
+                    • Yapay Zeka Destekli Yazılım ve Algoritma Lideri.
                 </div>
             </div>
             <div class="card card-blue" style="padding: 24px;">
