@@ -28,8 +28,7 @@
 ### 4. DOĞRU BİLGİ VE KURUMSAL YÖNETİŞİM
 * Uydurma, tahmini veya doğrulanmamış bilgi yazılamaz.
 * Kurucu ortaklık ve yönetim yapısı sabittir:
-  * **Murat Furkan Bayram:** Kurucu & CEO / Sistem Mimarı (%80 Hisse).
-  * **Doğukan Bayram:** Kurucu Ortak & Operasyon Direktörü (%20 Hisse, Reşit Temsilci).
+  * **Murat Furkan Bayram:** Kurucu & CEO / Sistem Mimarı (%100 Hisse).
   * **Denizcan Özcan:** Baş Donanım ve Entegrasyon Mühendisi.
 
 ### 5. OTOMOTİV EMNİYET VE FAILSAFE KİLİDİ (ASIL-D)
@@ -55,8 +54,7 @@ Trustia/
 ---
 
 ## 🧠 GÜNCEL KURUMSAL DURUM & KALICI HAFIZA
-* **Kurucu:** Murat Furkan Bayram (%80 CEO, 0537 064 04 60, kariyer@trustia.com.tr).
-* **Ortak:** Doğukan Bayram (%20 Operasyon).
+* **Kurucu:** Murat Furkan Bayram (%100 CEO & Sistem Mimarı, 0537 064 04 60, kariyer@trustia.com.tr).
 * **Mühendislik:** Denizcan Özcan (ASELSAN Aday Havuzu & TEKNOFEST Robotaksi Finalisti).
 * **Resmi Akreditasyonlar:**
   * 🇪🇺 Avrupa Komisyonu PIC: `861711529`

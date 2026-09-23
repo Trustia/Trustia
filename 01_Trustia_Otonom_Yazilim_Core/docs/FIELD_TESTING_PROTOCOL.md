@@ -69,6 +69,5 @@ Test icra raporları, her test sürüşü sonrasında `record/recorder.py` taraf
 
 **Mühür ve İmza:**  
 **Trustia Teknoloji A.Ş. — Otonom Sistemler Mühendislik Heyeti**  
-Murat Furkan Bayram — Kurucu & Sistem Mimarı (%80)  
-Doğukan Bayram — Kurucu Ortak & Operasyon Lideri (%20)  
+Murat Furkan Bayram — Kurucu & Sistem Mimarı (%100)  
 Denizcan Özcan — Donanım ve Entegrasyon Mühendisi  

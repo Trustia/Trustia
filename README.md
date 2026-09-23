@@ -181,8 +181,7 @@ python trustia_cli.py audit
 
 ## 📞 7. Executive Leadership & Corporate Governance
 
-* **Founder & CEO / Systems Architect:** Murat Furkan Bayram (80% Equity | TC: `59476566862`)
-* **Co-Founder & Operations:** Doğukan Bayram (20% Equity)
+* **Founder & CEO / Systems Architect:** Murat Furkan Bayram (100% Equity | TC: `59476566862`)
 * **Lead Hardware & Robotics Engineer:** Denizcan Özcan (ASELSAN Candidate Pool, TEKNOFEST Robotaxi Finalist, İÜC EEE 3.44 GPA)
 * **Incubation Headquarters:** Istanbul Chamber of Commerce BTM Fulya Campus (İTO BTM Fulya Kampüsü, Şişli / İstanbul)
 * **Official Website:** [https://trustia.com.tr](https://trustia.com.tr)

@@ -1,8 +1,7 @@
 # TRUSTIA AI — KÜRESEL BAŞVURU, HİBE VE FON TAKİP MASTER REHBERİ (2026)
 
 **Şirket:** Trustia Teknoloji Anonim Şirketi  
-**Kurucu & Sistem Mimarı:** Murat Furkan Bayram (17 Yaşında, %80 Hisse)  
-**Kurucu Ortak & Operasyon:** Doğukan Bayram (%20 Hisse)  
+**Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Hisse)  
 **Genel Merkez:** İTO BTM Fulya Kampüsü, Şişli / İstanbul  
 **Tarih / Sürüm:** 13 Eylül 2026 • v3.0.0 Resmi Master Kaydı  
 **İletişim:** kariyer@trustia.com.tr | murat@trustia.com.tr | 0537 064 04 60  

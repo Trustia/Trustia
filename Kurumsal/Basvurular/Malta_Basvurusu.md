@@ -11,8 +11,7 @@
 > **Corporate Headquarters:** İTO BTM Fulya Deep-Tech Campus, Şişli / Istanbul, TR  
 > **Planned EU Operations Base:** Historic Character Palazzo HQ, Naxxar / Lija, Malta  
 > **Founding Executive Board:**  
-> * **Murat Furkan Bayram:** Founder & CEO / Lead Systems Architect (80% Equity)  
-> * **Doğukan Bayram:** Co-Founder & Chief Operating Officer (20% Equity, Legal Representative)  
+> * **Murat Furkan Bayram:** Founder & CEO / Lead Systems Architect (100% Equity)  
 
 ---
 
@@ -23,7 +22,7 @@ Trustia AI is a deep-tech autonomous systems software developer engineering a ze
 ### Strategic Objective for Malta:
 To establish **Trustia AI European Headquarters & Mediterranean Autonomous Mobility R&D Hub** in Malta, leveraging:
 1. **Malta Enterprise Start-up Finance Scheme:** Securing **€1,500,000** in co-funding for advanced robotics and software engineering.
-2. **Malta Startup Residence Programme (MSRP):** Securing 3-year initial (extendable to +5 years) European Schengen residency for founder Murat Furkan Bayram, co-founder Doğukan Bayram, and key engineering staff.
+2. **Malta Startup Residence Programme (MSRP):** Securing 3-year initial (extendable to +5 years) European Schengen residency for founder Murat Furkan Bayram and key engineering staff.
 3. **5% Effective Corporate Tax Rate:** Utilizing Malta’s full imputation corporate tax architecture for global technology IP licensing.
 4. **Historic Character Headquarters (Palazzo HQ):** Establishing our flagship European operational and executive center within a restored historic limestone Palazzo in the prestigious Naxxar/Lija innovation corridor, benefiting from Malta’s Urban Conservation Area (UCA) property incentives.
 

@@ -3,7 +3,7 @@
 - **Rapor Kodu:** `TR-REP-2026-SIM-002-EU`
 - **Proje Sürümü:** v2.4.0-PROD
 - **Tarih:** 13 Eylül 2026
-- **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%80 Hisse) • Doğukan Bayram (%20 Hisse)
+- **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Hisse)
 - **Resmi Sicil:** AB PIC: `861711529` • EIT Urban Mobility Partner ID: `CUS15554`
 - **Ortam:** win32, Python 3.12+ (Webots + Saf Deterministik Simülatör)
 - **Doğrulanan Parkurlar:** Bilişim Vadisi Otonom Test Pisti & QSTP Doha Test Parkuru (500 Koşu)

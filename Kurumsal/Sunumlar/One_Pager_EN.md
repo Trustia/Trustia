@@ -3,7 +3,7 @@
 
 **Company:** Trustia AI (Dual-Use Autonomy Platform)  
 **Website:** [https://trustia.com.tr](https://trustia.com.tr) | **HQ:** İTO BTM Fulya Campus, Şişli / Istanbul, TR  
-**Founding Team:** Murat Furkan Bayram (Founder & CEO), Doğukan Bayram (Co-Founder & Operations)  
+**Founding Team:** Murat Furkan Bayram (Founder & CEO / Systems Architect)  
 **Email:** `iletisim@trustia.com.tr` | `kariyer@trustia.com.tr`  
 **Industry:** Defense Technology, Level-4 Robotaxi Mobility & Autonomous Navigation
 
@@ -38,7 +38,7 @@ While vehicle manufacturers build robust physical hardware, they lack the propri
 * **1,301 Automated Tests Passing (100%):** Complete coverage across Unit, Integration, Determinism, and Scenario Matrix pipelines.
 * **50/50 Extreme Mission Simulation Campaign:** Zero collisions and 100% mission completion rate across patrol, GPS-denied, obstacle, and combat logistics scenarios.
 * **Battle-Ready C2 Console:** MIL-STD-2525 tactical desktop command GUI deployed for live fleet control.
-* **Institutional Governance:** Clean founder equity (Murat 80%, Doğukan 20%) and KOSGEB / Defense Academy certifications.
+* **Institutional Governance:** Clean founder equity (Murat Furkan Bayram 100%) and KOSGEB / Defense Academy certifications.
 * **85+ Global Applications:** Over 85 institutional applications and registrations submitted across 15+ countries (USA, UK, EU, Qatar, UAE, Saudi Arabia, Germany, South Korea, Turkey).
 * **European Union Project Registration:** Official EU Participant Identification Code (PIC: `861711529`) via European Commission. Partner ID `CUS15554` at EIT Urban Mobility. €100,000 grant application submitted (ID: `3.1.02-1206-3732.3`).
 * **Qatar Foundation QSTP:** Two applications submitted — $30M Tech Venture Fund and 4-week Doha Sprint Incubation Program.

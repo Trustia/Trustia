@@ -2,8 +2,7 @@
 
 > **Belge Kodu:** `TR-BIZ-2026-ROBO-01`  
 > **Sürüm:** v2.4.0-PROD — 13 Eylül 2026  
-> **Hazırlayan:** Murat Furkan Bayram (Kurucu & CEO, Sistem Mimarı, %80 Hisse)  
-> **Kurucu Ortak:** Doğukan Bayram (%20 Hisse)  
+> **Hazırlayan:** Murat Furkan Bayram (Kurucu & CEO, Sistem Mimarı, %100 Hisse)  
 > **Resmi Sicil & Akreditasyon:** AB Katılımcı Kodu (PIC): `861711529` • EIT Urban Mobility Partner ID: `CUS15554`  
 > **Kitle Fonlama / Değerleme:** SPK fonbulucu `W1MV5K` (150M TL Val. / 15M TL Fonlama)  
 > **Konum:** İTO BTM Fulya Kampüsü, Şişli / İstanbul  

@@ -13,8 +13,7 @@
 ### "The Deterministic Operating System for SAE Level-4 Autonomous Mobility in GNSS-Denied Environments"
 
 * **Tagline:** Modular, deterministic Level-4 autonomous retrofit kits for commercial electric vehicle fleets and tactical defense platforms at 70% lower capital cost than bespoke robotaxis.
-* **Corporate Entity:** Trustia AI Technologies (Dual-Use Autonomous Mobility & Defense Systems).
-* **Founding Team:** Murat Furkan Bayram (Founder & Lead Systems Architect, 80% Equity), Dogukan Bayram (Co-Founder & Operations, 20% Equity).
+* **Founding Team:** Murat Furkan Bayram (Founder & Lead Systems Architect, 100% Equity).
 
 ---
 

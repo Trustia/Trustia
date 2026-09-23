@@ -2,8 +2,7 @@
 TRUSTIA Otonomi Platformu — Altyapı (Sistem 6) Paketi.
 Milli Seviye-4 Robotaksi & Taktik Savunma Seyrüsefer Motoru.
 
-Kurucu & Baş Sistem Mimarı: Murat Furkan Bayram (17 Yaşında, %80 Hisse)
-Kurucu Ortak: Doğukan Bayram (%20 Hisse)
+Kurucu & Baş Sistem Mimarı: Murat Furkan Bayram (%100 Hisse)
 Merkez: İTO BTM Fulya Derin Teknoloji Kampüsü, Şişli / İstanbul
 Tesciller: AB PIC #861711529 • EIT Partner #CUS15554 • BAYKAR • ASELSAN • TÜBİTAK ARBİS
 

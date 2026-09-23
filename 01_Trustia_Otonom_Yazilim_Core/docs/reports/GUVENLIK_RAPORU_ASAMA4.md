@@ -3,7 +3,7 @@
 - **Rapor Kodu:** `TR-REP-2026-SEC-004-EU`
 - **Proje Sürümü:** v2.4.0-PROD
 - **Tarih:** 13 Eylül 2026
-- **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%80 Hisse) • Doğukan Bayram (%20 Hisse)
+- **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Hisse)
 - **Resmi Sicil:** AB Katılımcı Kodu (PIC): `861711529` • EIT Urban Mobility Partner ID: `CUS15554`
 - **Ortam:** win32, Python 3.12+ (Saf Deterministik Yerli Çekirdek)
 

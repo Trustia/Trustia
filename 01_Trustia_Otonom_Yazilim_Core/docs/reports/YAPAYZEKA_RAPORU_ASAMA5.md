@@ -3,7 +3,7 @@
 - **Rapor Kodu:** `TR-REP-2026-AI-005-EU`
 - **Proje Sürümü:** v2.4.0-PROD
 - **Tarih:** 13 Eylül 2026
-- **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%80 Hisse) • Doğukan Bayram (%20 Hisse)
+- **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Hisse)
 - **Resmi Sicil:** AB Katılımcı Kodu (PIC): `861711529` • EIT Urban Mobility Partner ID: `CUS15554`
 - **Kapsam:** Sistem 9 (Yapay Zeka & Tehdit Algı Motoru) + Sistem 7 (1.301 Otomatik Test Teminatı)
 - **Durum:** TAM DOĞRULANDI — SIFIR DIŞ BAĞIMLILIK (%100 Saf Deterministik Yerli Mimari)
