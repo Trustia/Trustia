@@ -205,16 +205,16 @@ def build_deck():
     tfs = tb_spec.text_frame
     tfs.word_wrap = True
     sp1 = tfs.paragraphs[0]
-    sp1.text = "TEKNİK GÜCÜMÜZ"
+    sp1.text = "TEKNİK UYUMLULUK"
     sp1.font.size = Pt(12)
     sp1.font.bold = True
     sp1.font.color.rgb = C_BLUE
     specs = [
         "Haberleşme: Askeri ve Robotik Standartlara Tam Uyumlu",
-        "Bilgisayar: Araç İçi Güçlü İşlemciler (Nvidia Jetson vb.)",
-        "Sensörler: 3 Boyutlu Lazer (LiDAR), Kamera, Açı Ölçerler",
+        "Bilgisayar: Nvidia Jetson ve Araç İçi Bilgisayarlarla Uyumlu",
+        "Sensörler: Her Marka Lazer (LiDAR) ve Kamerayla Çalışabilir",
         "Tepki Hızı: 5 Milisaniyede (Göz Kırpmasından Hızlı) Müdahale",
-        "Durum: Çalışır Durumda, Göreve Hazır"
+        "Durum: Yazılım Hazır, 1.301 Testten Geçti"
     ]
     for s in specs:
         p = tfs.add_paragraph()
@@ -228,7 +228,7 @@ def build_deck():
     add_header(s5, "ALTYAPILAR: Çalışma Merkezimiz ve Belgelerimiz")
     infra_boxes = [
         ("İTO BTM Fulya Kampüsü", "İstanbul Ticaret Odası bünyesindeki Fulya Derin Teknoloji Kampüsü'nde yerleşik merkezimiz. Ar-Ge, yazılım ve çalışma alanımız buradadır."),
-        ("Yazılım ve Donanım Test Cihazları", "Araç bilgisayarları, 3 boyutlu lazer tarayıcılar (LiDAR), yön algılayıcı sensörler ve araç içi bağlantı ekipmanlarımız mevcuttur."),
+        ("Donanım Bağımsız Yazılım Altyapısı", "Biz yazılım şirketiyiz. Kodlarımız donanım bağımsızdır; ASELSAN'ın araçlarındaki her marka lazer (LiDAR), kamera ve araç bilgisayarına doğrudan tak-çalıştır bağlanır."),
         ("1.301 Testli Sanal Test Odası", "Gerçek araziye çıkmadan önce yazılımımızı 1.301 farklı sanal senaryoda (sis, çamur, gece, karıştırma) 43 saniyede otomatik test eden sistemimiz aktiftir."),
         ("Resmi Belgelerimiz ve Onaylarımız", "ASELSAN Tedarikçi Portalı Yazılım Ön Onayı (SAP: FZQHEXGFMTJU), NATO Tedarikçi Kodu Başvurusu, TÜBİTAK ARBİS Kaydı ve Savunma Sanayii Sertifikalarımız.")
     ]
