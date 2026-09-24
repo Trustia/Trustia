@@ -118,6 +118,7 @@
 | **TİTRA Teknoloji (Pasifik Teknoloji - ODTÜ)** | İnsansız Lojistik, Filo Yönetimi ve Kara Mobilite | Deterministik Seviye-4 Filo & Seyrüsefer Çekirdeği | 21.09.2026 | 🟢 **Başvuru Portaldan İletildi ✔** (CV Ekiyle İletildi) |
 | **Best Grup Savunma (Kahramankazan HAB OSB)** | Zırhlı İKA'lar & Uzaktan Kumandalı İş Makineleri | Elektronik Harp Korumalı Otonom Seyrüsefer Teklifi | 21.09.2026 | 🟢 **Teklif Portaldan İletildi ✔** (İletişim Formu) |
 | **İGA İstanbul Havalimanı (TEDARİGA)** | Resmi Tedarikçi & Satınalma Portalı | Apron Otonom Kargo / Ring Seyrüsefer & Bilişim Danışmanlığı | 21.09.2026 | 🟢 **BAŞVURU TAMAMLANDI ✔** • "İş veren tarafında firmanızın onaylanması bekleniyor" |
+| **TİM-TEB Girişim Evi (Denizli Start Up)** | 2026/2 Start Up Programı Hızlandırıcı | S2C OEM Eşleştirme, İhracat, Mentörlük, Küresel Heyetler | 24.09.2026 | 🟢 **14 Sayfalık Master PDF İletildi ✔ • Jüri Sunumu: 25 Eylül 2026 Cuma 15:45 - 15:55 (Zoom / Kübra Yılmaz)** |
 
 ---
 
@@ -135,12 +136,14 @@
 
 ## 🎯 8. KRİTİK TAKVİM VE EYLEM PLANI (EYLÜL - KASIM 2026)
 
-1. **21 Eylül 2026 Pazartesi (Bugün):** BTM Melisa Sülün'e sunum teslim edildi. Tekatron, Esetron, Titra ve Best Grup'a B2B Seviye-4 lisanslama teklifleri iletildi.
+1. **21 Eylül 2026 Pazartesi:** BTM Melisa Sülün'e sunum teslim edildi. Tekatron, Esetron, Titra ve Best Grup'a B2B Seviye-4 lisanslama teklifleri iletildi.
 2. **23 Eylül 2026 Çarşamba (14:00 - 18:00):** BTM Fulya Feedback Round - 2 (Inveo Ventures, Startup Burada, Fuzul Ventures ile 1-on-1 yatırımcı görüşmeleri).
-3. **28 Eylül 2026 Pazartesi (15:30 - 16:00):** fonbulucu Resmi Girişimci Ön Görüşmesi (Nursena Pancar - `W1MV5K`).
-4. **Q4 2026:** EIT Urban Mobility 100.000 € Girişimci Hibesi jüri değerlendirmesi ve hibe kabulü.
-5. **Ekim 2026:** QSTP Doha Sprint (Katar 4 haftalık yerinde sprint programı başlangıcı).
-6. **21 Ekim 2026:** Webrazzi Arena Wyndham Grand Levent sahne sunumu.
-7. **Kasım 2026:** Dubai World Challenge for Self-Driving Transport (RTA) 1.2M$ yarışması finalist ilanı.
-8. **Ekim - Kasım 2026:** fonbulucu SPK Yatırım Komitesi onayı ve 15M TL paya dayalı kitle fonlama turunun canlıya alınması.
+3. **24 Eylül 2026 Perşembe (Bugün):** TİM-TEB Girişim Evi 14 sayfalık resmi şablonlu master PDF sunumu Kübra Yılmaz'a eksiksiz teslim edildi.
+4. **25 Eylül 2026 Cuma (15:45 - 15:55):** TİM-TEB Girişim Evi Denizli Start Up Jüri Sunumu (Zoom - 5 dk sunum + 5 dk soru/cevap, ekran paylaşımı).
+5. **28 Eylül 2026 Pazartesi (15:30 - 16:00):** fonbulucu Resmi Girişimci Ön Görüşmesi (Nursena Pancar - `W1MV5K`).
+6. **Q4 2026:** EIT Urban Mobility 100.000 € Girişimci Hibesi jüri değerlendirmesi ve hibe kabulü.
+7. **Ekim 2026:** QSTP Doha Sprint (Katar 4 haftalık yerinde sprint programı başlangıcı).
+8. **21 Ekim 2026:** Webrazzi Arena Wyndham Grand Levent sahne sunumu.
+9. **Kasım 2026:** Dubai World Challenge for Self-Driving Transport (RTA) 1.2M$ yarışması finalist ilanı.
+10. **Ekim - Kasım 2026:** fonbulucu SPK Yatırım Komitesi onayı ve 15M TL paya dayalı kitle fonlama turunun canlıya alınması.
 
