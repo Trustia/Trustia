@@ -67,6 +67,6 @@ Trustia/
   * 🛡️ Open Invention Network (OIN 2.0) İmzalı Patent Savunma Paktı Lisansı
   * 🇲🇹 Malta Enterprise €1.5M Hibe & MSRP İkamet Başvuruları
   * 🇶🇦 QSTP Katar 30M$ Fon + Doha Sprint Başvurusu
-  * 🇺🇸 Z Fellows ($10k Grant) & Dorm Room Fund (First Round Capital)
+  * 🇺🇸 Dorm Room Fund (First Round Capital)
   * 🇹🇷 İTO BTM Fulya Kampüsü Ön Kuluçka & Teknopark İstanbul HASAT 2026
   * 📜 KOSGEB (`KSB01UGE0115153370`) ve BTK Savunma Sanayii (`L2zPtN4X1ZJ`) Sertifikaları

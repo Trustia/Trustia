@@ -1,6 +1,6 @@
 # TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
 
-- **Tarih:** 2026-09-20
+- **Tarih:** 2026-09-26
 - **Depo:** C:\Users\Murat\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
 - **Amaç:** TÜR/EYDEP/KÜL/TSE başvuru kanıt seti (PLAN 2.2)
 
@@ -20,7 +20,7 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 
 | Metrik | Değer |
 |---|---|
-| Kod satırı (Python) | 16858 |
+| Kod satırı (Python) | 16853 |
 | Otomatik test sayısı | -1 |
 | 1.000+ test şartı | SAĞLANMADI |
 

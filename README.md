@@ -9,7 +9,6 @@
 [![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-Hyundai%20CAN--FD%20%7C%20SAE%20J1939-orange.svg)](https://trustia.com.tr/robotaxi)
 [![EU PIC](https://img.shields.io/badge/EU%20PIC-861711529-yellow.svg)](https://ec.europa.eu)
 [![EIT Partner](https://img.shields.io/badge/EIT%20Partner-CUS15554-success.svg)](https://www.eiturbanmobility.eu)
-[![fonbulucu SPK](https://img.shields.io/badge/fonbulucu%20SPK-W1MV5K-blueviolet.svg)](https://fonbulucu.com)
 [![Crunchbase](https://img.shields.io/badge/Crunchbase-Verified%20(Heat%2093%20%7C%20Rank%2098k)-0288D1.svg)](https://www.crunchbase.com/organization/trustia-ai)
 
 > **Industrial-grade, hardware-agnostic, dual-use autonomous vehicle software stack engineered for tactical defense unmanned ground vehicles (UGVs) and next-generation civilian passenger mobility operating in GPS-denied and high-density urban environments.**
@@ -37,8 +36,6 @@
 | 🇹🇷 **BAYKAR Teknoloji (Baykar Tech)** | Istanbul, TR | **Official Defense Supplier Portal** | 🛡️ **Formally Submitted & Confirmed** |
 | 🇹🇷 **DEİK (Foreign Economic Relations Board)** | Istanbul, TR | **Digital Technologies Council** | 🌐 **Official Corporate Membership Invitation Received** |
 | 🇹🇷 **ASELSAN Defense Network & Axcelerate AGM** | Ankara, TR | **Approved Potential Supplier & Axcelerate Center** | 🛡️ **Supplier Pre-Evaluation APPROVED (`0050569CCE941FD1A49FCEFB9B7BE7D6` • SAP: `FZQHEXGFMTJU`) & Axcelerate AGM SUBMITTED ✔ (Eligibility Stage 🟡)** |
-| 🇹🇷 **fonbulucu (SPK Crowdfunding)** | Ankara, TR | **15,000,000 TRY (150M TL Val.)** | 📈 **Formal Preliminary Review (`W1MV5K`)** |
-| 🇺🇸 **Z Fellows (Cory Levy & Grace Kasten)** | San Francisco, CA | **$10,000 Grant + SF Residency** | 🎯 **Live Partner Zoom Interview (17 Sept 2026)** |
 | 🇦🇪 **Dubai World Challenge for Self-Driving Transport** | Dubai, UAE | **$1,200,000 USD Net Cash** | 🏆 **Officially Submitted (Finalist Phase Nov 2026)** |
 | 🇸🇦 **NEOM Investment Fund & Mobility** | Tabuk, KSA | **Zero-Driver City PoC** | 🇸🇦 **Formally Submitted & Confirmed** |
 | 🇸🇬 **Singapore Government (Startup SG & GIA)** | Singapore, SG | **National Deep-Tech Ecosystem & GIA Alliance** | 🏛️ **Founder ID: `#57428` • GIA App: `6aa85fa9` (Confirmed)** |

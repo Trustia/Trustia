@@ -55,8 +55,6 @@ export const metadata: Metadata = {
     "BAYKAR Teknoloji",
     "ASELSAN Tedarikçi",
     "DEİK Dijital Teknolojiler",
-    "Z Fellows",
-    "fonbulucu W1MV5K",
     "Crunchbase Trustia AI",
   ],
   authors: [
@@ -210,11 +208,6 @@ export default function RootLayout({
             "@type": "PropertyValue",
             "name": "Teknopark Istanbul HASAT 2026 Submission",
             "value": "CONFIRMED"
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "SPK fonbulucu Campaign Code",
-            "value": "W1MV5K"
           },
           {
             "@type": "PropertyValue",

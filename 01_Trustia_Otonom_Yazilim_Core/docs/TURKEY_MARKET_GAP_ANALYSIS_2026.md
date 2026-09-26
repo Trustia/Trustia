@@ -42,7 +42,7 @@ Savunma ve otomotiv sektöründe güçlü **metal, şasi ve montaj üreticileri*
 | **Entegrasyon Esnekliği** | Araca Özel Kapalı Yazılım | **Donanım-Bağımsız (SAE JAUS, ROS 2, Hyundai CAN-FD Uyumlu)** |
 | **Paket Kapsamı** | Yalnızca Navigasyon | **3D SLAM + Rota + Pure Pursuit + EYP + KHKN + Sürü + C-V2X** |
 | **Test Teminatı** | Prototip Seviyesi | **1.301 / 1.301 %100 Başarılı Otomatik Birim & Entegrasyon Testi** |
-| **Fonlama & Değerleme** | Belirsiz Ar-Ge | **SPK fonbulucu `W1MV5K` (150M TL Val.), QSTP 30M$ Fon, EIT 100k€** |
+| **Fonlama & Değerleme** | Belirsiz Ar-Ge | **Melek Yatırım Ağı (150M TL Val.), QSTP 30M$ Fon, EIT 100k€** |
 
 ---
 

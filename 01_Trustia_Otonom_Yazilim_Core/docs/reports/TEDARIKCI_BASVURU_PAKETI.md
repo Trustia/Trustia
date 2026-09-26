@@ -23,7 +23,6 @@
 | **BTK Akademi Savunma Sanayii** | Sertifika No: `L2zPtN4X1ZJ` | Katılım Sertifikası |
 | **TÜBİTAK ARBİS Kaydı** | Araştırmacı Kimlik No: `TBTK-0229-6571` | Kayıtlı & Doğrulanmış |
 | **İTO BTM Ön Kuluçka** | Fulya Derin Teknoloji Kampüsü Yerleşkesi | 2026-II. Dönem Sözleşmeli |
-| **fonbulucu (SPK)** | 15M TL Kitle Fonlama Kampanya Kodu: `W1MV5K` | Ön İncelemede |
 
 
 ---

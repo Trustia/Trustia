@@ -106,21 +106,6 @@ export default function InstitutionalAccreditations() {
     },
     {
       id: "07",
-      categoryTr: "Z Fellows",
-      categoryEn: "Z Fellows",
-      scopeTr: "Silikon Vadisi & Pace Capital",
-      scopeEn: "Silicon Valley & Pace Capital",
-      badge: "Mülakat: 17 Eylül",
-      questionTr: "Silikon Vadisi Z Fellows programı ve Pace Capital mülakatı nedir?",
-      questionEn: "What is the Silicon Valley Z Fellows fellowship and Pace Capital interview?",
-      answerTr: "Uluslararası teknoloji kurucularını Silikon Vadisi'ne taşıyan Z Fellows programında Trustia, Pace Capital Partneri Grace Kasten ile 17 Eylül 2026 tarihinde canlı Zoom partner mülakatı aşamasına seçilmiştir. Program 10.000 $ hissesiz hibe ve San Francisco hızlandırma rezidansı sunmaktadır.",
-      answerEn: "Trustia was selected for the live Zoom partner interview on September 17, 2026, with Grace Kasten (Partner at Pace Capital) for Z Fellows in San Francisco, providing an equity-free $10,000 grant and an intensive founder residency.",
-      authority: "zfellows.com",
-      recordTypeTr: "Silikon Vadisi Hızlandırma",
-      recordTypeEn: "Silicon Valley Acceleration"
-    },
-    {
-      id: "08",
       categoryTr: "DEİK",
       categoryEn: "DEİK",
       scopeTr: "İş Konseyi Üyelik Daveti",
@@ -181,21 +166,6 @@ export default function InstitutionalAccreditations() {
     },
     {
       id: "12",
-      categoryTr: "SPK fonbulucu",
-      categoryEn: "CMB fonbulucu",
-      scopeTr: "Paya Dayalı Fonlama",
-      scopeEn: "Equity Crowdfunding",
-      badge: "Kampanya: W1MV5K",
-      questionTr: "fonbulucu üzerindeki kitle fonlama kampanyasının kapsamı nedir?",
-      questionEn: "What are the terms of the equity crowdfunding campaign on fonbulucu?",
-      answerTr: "Sermaye Piyasası Kurulu (SPK) lisanslı fonbulucu platformunda Kampanya Kodu: W1MV5K ile; 150.000.000 TL şirket değerlemesi üzerinden %10 hisse ihracıyla 15.000.000 TL hedefli (18.000.000 TL fonlama tavanı) Seviye-4 Robotaksi Seri Üretim & Test Kampanyası resmi ön inceleme aşamasındadır.",
-      answerEn: "Registered under campaign reference W1MV5K on the CMB-licensed (SPK) fonbulucu investment platform, seeking 15,000,000 TRY (18,000,000 TRY ceiling) at a pre-money valuation of 150,000,000 TRY for 10% equity to scale Level-4 Robotaxi vehicle conversions.",
-      authority: "fonbulucu.com",
-      recordTypeTr: "SPK Paya Dayalı Fonlama",
-      recordTypeEn: "Equity Crowdfunding Round"
-    },
-    {
-      id: "13",
       categoryTr: "Teknopark İstanbul",
       categoryEn: "Teknopark Istanbul",
       scopeTr: "HASAT 2026 Teknoloji Sahnesi",

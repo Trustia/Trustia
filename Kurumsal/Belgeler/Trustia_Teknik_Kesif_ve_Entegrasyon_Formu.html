@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trustia — Seviye-4 Teknik Keşif ve Entegrasyon Değerlendirme Formu</title>
+    <style>
+        :root {
+            --bg-page: #0d0f14;
+            --bg-doc: #161920;
+            --bg-section: #1b1f27;
+            --bg-input: #101217;
+            --border: #2b303c;
+            --border-light: #3d4454;
+            --border-active: #3b82f6;
+            --text-heading: #ffffff;
+            --text-body: #d1d5db;
+            --text-muted: #8b949e;
+            --accent: #2563eb;
+            --accent-text: #60a5fa;
+            --row-alt: #13161c;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-body);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.5;
+            padding: 30px 15px;
+        }
+
+        .doc-container {
+            max-width: 1040px;
+            margin: 0 auto;
+            background: var(--bg-doc);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            padding: 40px 50px;
+        }
+
+        /* FORM RESMİ BAŞLIK BLOĞU */
+        .doc-header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header-top-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+        }
+
+        .company-title {
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+
+        .doc-title {
+            font-size: 21px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+            margin: 8px 0 6px 0;
+        }
+
+        .doc-subtitle {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            max-width: 880px;
+        }
+
+        /* HIZLI İŞLEM BUTONLARI */
+        .doc-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 30px;
+        }
+
+        .save-indicator {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-family: inherit;
+        }
+
+        .save-indicator span {
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .toolbar-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 7px 16px;
+            font-size: 12.5px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.15s ease;
+        }
+
+        .btn-primary {
+            background: #1d4ed8;
+            color: #ffffff;
+            border-color: #2563eb;
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-body);
+            border-color: var(--border-light);
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
+        }
+
+        /* BÖLÜM KARTLARI */
+        .section-block {
+            background: var(--bg-section);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 22px 24px;
+            margin-bottom: 22px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+
+        .section-number {
+            background: #1e293b;
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 800;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            border: 1px solid #334155;
+        }
+
+        .section-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* TABLOLAR VE FORM ELEMANLARI */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .form-row.full {
+            grid-column: span 2;
+        }
+
+        label.field-label {
+            font-size: 12.5px;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .field-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 8px 10px;
+            color: #ffffff;
+            font-size: 12.5px;
+            font-family: inherit;
+            transition: border-color 0.15s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--border-active);
+            background: #0f1218;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+
+        /* RESMİ SEÇENEK LİSTELERİ */
+        .options-list {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            margin-top: 4px;
+        }
+
+        .option-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            padding: 8px 11px;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 12.5px;
+            color: var(--text-body);
+            cursor: pointer;
+            transition: border-color 0.15s ease;
+        }
+
+        .option-item:hover {
+            border-color: var(--border-light);
+        }
+
+        .option-item input {
+            margin-top: 2px;
+            cursor: pointer;
+            width: 15px;
+            height: 15px;
+            accent-color: #2563eb;
+            flex-shrink: 0;
+        }
+
+        /* BÖLÜM 16: TEKNİK BELGE VE DOSYA TABLOSU */
+        .formal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            margin-top: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .formal-table th {
+            background: #11141a;
+            color: #ffffff;
+            padding: 9px 10px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid var(--border);
+        }
+
+        .formal-table td {
+            padding: 8px 10px;
+            border: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .formal-table tr:nth-child(even) {
+            background: var(--row-alt);
+        }
+
+        .col-center {
+            text-align: center;
+        }
+
+        .num-col {
+            font-weight: bold;
+            color: var(--accent-text);
+            width: 4%;
+        }
+
+        .doc-title {
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 12px;
+            margin-bottom: 2px;
+        }
+
+        .doc-desc {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .doc-ext {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 2px 6px;
+            font-size: 10.5px;
+            color: #93c5fd;
+            font-family: monospace;
+        }
+
+        
+        /* PC'DEN DOSYA YÜKLEME KARTI */
+        .upload-zone {
+            background: #11141a;
+            border: 2px dashed #2b303c;
+            border-radius: 8px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: all 0.2s ease;
+            margin-bottom: 12px;
+        }
+        .upload-zone:hover {
+            border-color: #3b82f6;
+            background: #141822;
+        }
+        .btn-upload {
+            background: #1d4ed8;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 6px;
+            border: 1px solid #2563eb;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+            transition: all 0.15s ease;
+        }
+        .btn-upload:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+        .upload-hint {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+        .file-pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 14px;
+        }
+        .file-pill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 5px;
+            padding: 5px 12px;
+            font-size: 12px;
+            color: #93c5fd;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .file-pill .file-size {
+            color: #94a3b8;
+            font-size: 11px;
+        }
+
+        .table-text-input {
+            padding: 5px 8px !important;
+            font-size: 11.5px !important;
+            background: #0d0f14 !important;
+            border-color: #2b303c !important;
+        }
+
+        /* ALT BİLGİ */
+        .doc-footer {
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            margin-top: 35px;
+            font-size: 11.5px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .doc-footer strong {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .doc-container { padding: 25px 16px; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .form-row.full { grid-column: span 1; }
+        }
+
+        @media print {
+            body { background: #fff !important; color: #000 !important; padding: 0; }
+            .doc-container { border: none; box-shadow: none; padding: 0; max-width: 100%; background: #fff; }
+            .doc-toolbar { display: none !important; }
+            .section-block { background: #fff !important; border: 1px solid #ccc !important; }
+            .section-name, .doc-title, .company-title { color: #000 !important; }
+            input, select, textarea { background: #fff !important; color: #000 !important; border: 1px solid #999 !important; }
+            .formal-table th { background: #eee !important; color: #000 !important; }
+            .formal-table td { border-color: #ccc !important; }
+            .doc-ext { background: #eee !important; color: #000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="doc-container">
+
+    <!-- BAŞLIK -->
+    <div class="doc-header">
+        <div class="header-top-meta">
+            <div><strong>T.C. HAKEDİŞ / DOĞRUDAN TEMİN UYGUNLUK</strong> &nbsp;|&nbsp; BAP 4734 m. 22/d</div>
+            <div>BELGE REF: <strong>TR-DISC-2026/09</strong> &nbsp;|&nbsp; 26 EYLÜL 2026</div>
+        </div>
+        <div class="company-title">TRUSTIA AI</div>
+        <h1 class="doc-title">SEVİYE-4 TEKNİK KEŞİF VE SİSTEM ENTEGRASYON FORMU</h1>
+        <div class="doc-subtitle">
+            Bu master değerlendirme tutanağı; Hacettepe Üniversitesi HÜSMART otonom kampüs servisi entegrasyonuna ait 
+            Drive-by-Wire, şasi kinematiği, sensör paketi, ROS 2 haberleşme köprüsü, kamu doğrudan temin bütçesi ve 
+            temel teknik veri/şema teslimatını eksiksiz belirlemek amacıyla tanzim edilmiştir.
+        </div>
+    </div>
+
+    <!-- HIZLI İŞLEM ÇUBUĞU -->
+    <div class="doc-toolbar">
+        <div class="save-indicator" id="saveIndicator">
+            Durum: <span>Taslak Kaydedildi</span>
+        </div>
+        <div class="toolbar-buttons">
+            <button type="button" class="btn btn-primary" onclick="window.print()">🖨️ Yazdır / PDF Kaydet</button>
+        </div>
+    </div>
+
+    <form id="discoveryForm">
+
+        <!-- BÖLÜM 1 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">1</div>
+                <h2 class="section-name">Kurum ve Proje Kimliği</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">1.1 Üniversite / Kurum / Laboratuvar Adı:</label>
+                    <input type="text" id="institution" placeholder="Örn: Hacettepe Üniversitesi (NeuRo Lab)" oninput="autoSave()">
+                    <span class="field-desc">Projenin yürütüldüğü resmi fakülte veya araştırma laboratuvarı.</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">1.2 Proje Resmi Adı ve BAP / TÜBİTAK Kodu:</label>
+                    <input type="text" id="projectName" placeholder="Örn: HÜSMART Otonom Kampüs Servisi (BAP-XXXX)" oninput="autoSave()">
+                    <span class="field-desc">Resmi bütçenin ve yazışmaların bağlı olduğu proje kodu.</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">1.3 Proje Yürütücüsü (Öğretim Üyesi / Direktör):</label>
+                    <input type="text" id="projectDirector" placeholder="Örn: Doç. Dr. İsmail Uyanık" oninput="autoSave()">
+                    <span class="field-desc">Projenin akademik ve idari karar verici hocası.</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">1.4 Teknik Temas Sorumlusu (Ad Soyad / Görevi):</label>
+                    <input type="text" id="contactPerson" placeholder="Örn: Alp Demirel (Otonomi Yazılım Lideri)" oninput="autoSave()">
+                    <span class="field-desc">Mühendislik koordinasyonunu birlikte yürüteceğimiz kişi.</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">1.5 Resmi E-Posta Adresi:</label>
+                    <input type="email" id="contactEmail" placeholder="Örn: alp@hacettepe.edu.tr" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">1.6 Telefon / GSM Numarası:</label>
+                    <input type="tel" id="contactPhone" placeholder="Örn: 05xx xxx xx xx" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">1.7 Hedeflenen Canlı Saha Testi ve Devreye Alma Takvimi (Dead-Line):</label>
+                    <input type="text" id="targetDate" placeholder="Örn: Kasım 2026 ilk kapalı pist testi, Bahar 2027 tam ring operasyonu" oninput="autoSave()">
+                    <span class="field-desc">Yazılımın araçta ilk kez test edilmesi gereken hedef teslimat tarihi.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 2 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">2</div>
+                <h2 class="section-name">Mevcut Durum ve Araç Platformu</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <label class="field-label">2.1 Projenin Şu Anki Fiili Geliştirme Aşaması:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="radio" name="projectStage" value="Simulasyon" onchange="autoSave()">
+                            <span><b>Sadece Simülasyon Aşaması:</b> Dijital ikiz (CARLA / AWSIM) hazır; fiziksel araç henüz entegre edilmedi.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="projectStage" value="Donanim_Tezgahi" onchange="autoSave()">
+                            <span><b>Donanım Test Tezgahı (Bench-Test):</b> Sensörler ve bilgisayar masaüstünde bağlı; araç bekleniyor.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="projectStage" value="Arac_Atolyede" onchange="autoSave()">
+                            <span><b>Fiziksel Araç Atölyede:</b> Araç teslim alındı, garajda kablolama ve mekanik montaj yapılıyor.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="projectStage" value="Arac_Alim_Surecinde" onchange="autoSave()">
+                            <span><b>Araç Henüz Temin Edilmedi:</b> Satın alma / ihale / tasarruf tedbirleri / bağış görüşmeleri sürüyor.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">2.2 Hedef Araç Platformu (Marka / Model / B Planı):</label>
+                    <input type="text" id="vehicleModel" placeholder="Örn: Volkswagen ID. Buzz (MEB) VEYA Pilotcar PC-4 VEYA Clean Car Golf Aracı" oninput="autoSave()">
+                    <span class="field-desc">Entegre edilecek araç türü. ID. Buzz olmazsa alternatif B planı hafif EV var mı?</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">2.3 Tahrik Sistemi:</label>
+                    <select id="powertrain" onchange="autoSave()">
+                        <option value="EV">%100 Elektrikli (EV - Bataryalı)</option>
+                        <option value="Hybrid">Hibrit (PHEV / HEV)</option>
+                        <option value="ICE">İçten Yanmalı Motor</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">2.4 Ana Çekiş Bataryası Çalışma Voltajı:</label>
+                    <input type="text" id="voltage" placeholder="Örn: 48V / 72V (Hafif EV) veya 400V (Binek EV)" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">2.5 Aracın Mevcut Mekanik ve Yürür Durumu:</label>
+                    <textarea id="vehicleStatus" placeholder="Araç şu an manuel sürülebiliyor mu? Gaz pedalı, fren hidroliği ve direksiyon mekanizması çalışır vaziyette mi?" oninput="autoSave()"></textarea>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">2.6 Araç Mülkiyeti ve İdari Statü:</label>
+                    <input type="text" id="vehicleOwnership" placeholder="Örn: Üniversite resmi demirbaşı, sponsor tahsisi, kiralık prototip vb." oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 3 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">3</div>
+                <h2 class="section-name">Şasi Geometrisi ve Araç Dinamiği</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">3.1 Aks Mesafesi (Wheelbase - Metre):</label>
+                    <input type="text" id="wheelbase" placeholder="Örn: 2.988 m (ID. Buzz) veya 1.85 m (Golf Aracı)" oninput="autoSave()">
+                    <span class="field-desc">Ön ve arka tekerlek göbekleri arası mesafe (Kinematik model için şart).</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">3.2 Ön/Arka İz Genişliği (Track Width - Metre):</label>
+                    <input type="text" id="trackWidth" placeholder="Örn: 1.67 m" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">3.3 Araç Boş ve Azami Yüklü Ağırlığı (kg):</label>
+                    <input type="text" id="vehicleWeight" placeholder="Örn: Boş 2470 kg / Yüklü 3000 kg" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">3.4 Minimum Dönüş Yarıçapı (Turning Radius - Metre):</label>
+                    <input type="text" id="turningRadius" placeholder="Örn: 5.5 m" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">3.5 Maksimum Ön Tekerlek Dönüş Açısı (Derece):</label>
+                    <input type="text" id="maxSteerAngle" placeholder="Örn: ±35° veya ±42°" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">3.6 Direksiyon Kilitten Kilide Tur Sayısı ve Oranı:</label>
+                    <input type="text" id="lockToLock" placeholder="Örn: 2.8 Tur (Direksiyon oranı: 15.8:1)" oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 4 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">4</div>
+                <h2 class="section-name">Araç Ağı ve Drive-by-Wire Altyapısı</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <label class="field-label">4.1 Araç İçi Haberleşme Ağ Protokolü:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="checkbox" name="busType" value="CAN_20B" onchange="autoSave()">
+                            <span><b>Standart CAN 2.0B</b> (250 / 500 kbps - Açık endüstriyel CAN hattı)</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="busType" value="CAN_FD" onchange="autoSave()">
+                            <span><b>CAN-FD</b> (2 / 5 Mbps - Esnek veri oranlı yüksek hızlı otomotiv ağı)</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="busType" value="Automotive_Ethernet" onchange="autoSave()">
+                            <span><b>Automotive Ethernet</b> (100BASE-T1 / BroadR-Reach)</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">4.2 Ağ Güvenlik Duvarı ve Kriptografi Durumu (SGW / SecOC):</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="radio" name="sgwStatus" value="Yok_Acik" onchange="autoSave()">
+                            <span><b>Güvenlik Duvarı Yok (Açık Ağ):</b> Golf aracı / hafif EV / açık motor sürücüsü (Tüm CAN ID'ler enjeksiyona açık).</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="sgwStatus" value="Var_OEM_Cozumlu" onchange="autoSave()">
+                            <span><b>SGW/SecOC Var ve Çözümlendi:</b> OEM'den geliştirici anahtarı / bypass portu temin edildi.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="sgwStatus" value="Var_Bypass_Lazim" onchange="autoSave()">
+                            <span><b>SGW/SecOC Var, Donanımsal Bypass Gerekli:</b> Trustia köprüsü talep ediliyor.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">4.3 Direksiyon Kontrol Yöntemi (Steer-by-Wire):</label>
+                    <select id="steeringType" onchange="autoSave()">
+                        <option value="External_Actuator">Harici Açı Kontrollü Motor (Mekanik Mile Bağlı)</option>
+                        <option value="Factory_EPS_Torque">Fabrikasyon EPS Üzerinden Tork Bindirmesi (LKAS Modu)</option>
+                        <option value="Factory_EPS_Angle">Fabrikasyon EPS Üzerinden Doğrudan Açı Komutu (Park Modu)</option>
+                        <option value="Kararsiz">Henüz Kararlaştırılmadı / Teknik Danışmanlık İsteniyor</option>
+                    </select>
+                    <span class="field-desc">Tekerlekleri döndürmek için ne kullanılacak?</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">4.4 Fren Kontrol Yöntemi (Brake-by-Wire):</label>
+                    <select id="brakeType" onchange="autoSave()">
+                        <option value="Bosch_iBooster">Elektronik Fren Güçlendirici (Bosch iBooster CAN)</option>
+                        <option value="Linear_Actuator">Fren Pedalına Basan Yüksek Hızlı Mekanik Lineer Aktüatör</option>
+                        <option value="OneBox_ESC">Entegre One-Box ESC Elektronik Fren Hattı</option>
+                        <option value="Kararsiz">Henüz Kararlaştırılmadı / Teknik Danışmanlık İsteniyor</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">4.5 Vites / Yön Değişimi Kontrolü (Shift-by-Wire):</label>
+                    <select id="shiftType" onchange="autoSave()">
+                        <option value="Electronic_CAN">CAN-Bus Üzerinden Elektronik Vites (PRND Komutu)</option>
+                        <option value="Mechanical_Lever">Manuel Fiziksel Vites Kolu (İnsan Müdahalesi Gerektiren)</option>
+                        <option value="Solenoid_Actuator">Harici Mekanik Solenoid ile Çekilen Vites</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">4.6 Park Freni Kontrolü (EPB):</label>
+                    <select id="epbType" onchange="autoSave()">
+                        <option value="CAN_EPB">Elektronik Park Freni (CAN Komutuyla Bırakılan)</option>
+                        <option value="Manual_Handbrake">Mekanik El Freni (Manuel Çekilen)</option>
+                    </select>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">4.7 Aracın CAN Sinyal Haritası (DBC Dosyası) Durumu:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="radio" name="dbcStatus" value="DBC_Tam" onchange="autoSave()">
+                            <span><b>Evet, Eksiksiz DBC Mevcut:</b> Gaz, fren, direksiyon açısı ve geri bildirim CAN ID'leri tanımlı.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="dbcStatus" value="DBC_Kismen" onchange="autoSave()">
+                            <span><b>Kısmen Mevcut:</b> Bazı telemetriler biliniyor, aktüasyon mesajları tersine mühendislik aşamasında.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="dbcStatus" value="DBC_Yok" onchange="autoSave()">
+                            <span><b>Hayır, Mevcut Değil:</b> CAN haritasının Trustia tarafından eşleştirilmesi talep ediliyor.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">4.8 Tercih Edilen CAN Arayüz Donanımı:</label>
+                    <input type="text" id="canInterfaceDevice" placeholder="Örn: PEAK PCAN-USB Pro FD, Kvaser Leaf Light v2, veya SocketCAN Gömülü Donanım" oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 5 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">5</div>
+                <h2 class="section-name">Tekerlek Odometrisi ve Hız Geri Bildirimi</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">5.1 Tekerlek Hız Bilgisi (Wheel Speed Feedback):</label>
+                    <select id="wheelSpeedFeedback" onchange="autoSave()">
+                        <option value="CAN_ABS">Aracın CAN ABS Hattından 4 Teker Hız Bilgisi Okunabiliyor</option>
+                        <option value="External_Encoder">Tekerleklere Harici Optik/Manyetik Enkoder Takılı</option>
+                        <option value="Motor_Hall">Elektrik Motoru Sürücüsünden Hall Sensör Geri Bildirimi</option>
+                        <option value="Yok">Tekerlek Hız Geri Bildirimi Henüz Yok</option>
+                    </select>
+                    <span class="field-desc">Yazılım aracın ne kadar hızla gittiğini nereden ölçecek?</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">5.2 Tekerlek Dönüş Yönü Bilgisi (Direction Feedback):</label>
+                    <select id="wheelDirection" onchange="autoSave()">
+                        <option value="TwoWay">İleri / Geri Yön Algılama Mevcut (Signed Odometry)</option>
+                        <option value="MagnitudeOnly">Yalnızca Hız Büyüklüğü (Yön vites konumundan tahmin ediliyor)</option>
+                        <option value="Bilinmiyor">Bilinmiyor / Test Edilmedi</option>
+                    </select>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">5.3 Tekerlek Pals Çözünürlüğü veya Hız Çözünürlüğü:</label>
+                    <input type="text" id="wheelResolution" placeholder="Örn: Tur başına 48 pals veya 0.05 km/s CAN sinyal çözünürlüğü" oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 6 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">6</div>
+                <h2 class="section-name">Güç Dağıtımı, Akü ve Termal Yönetim</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">6.1 Otonomi Bilgisayarı ve Sensör Güç Kaynağı:</label>
+                    <select id="powerAux" onchange="autoSave()">
+                        <option value="Isolated_DC_DC">İzole DC-DC Dönüştürücü (Ana Aküden Beslenen)</option>
+                        <option value="Independent_Aux_Battery">Bağımsız İkinci Akü / Lityum Güç Paketi (12V / 24V)</option>
+                        <option value="Factory_12V">Aracın Fabrikasyon 12V Aküsü (Doğrudan Bağlantı)</option>
+                        <option value="Bilinmiyor">Henüz Tasarlanmadı / Belirsiz</option>
+                    </select>
+                    <span class="field-desc">Sensörler ve bilgisayar elektrik gücünü nereden alacak?</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">6.2 Toplam Öngörülen Otonomi Güç Tüketimi (Watt):</label>
+                    <input type="text" id="powerWatts" placeholder="Örn: 350W (IPC + 4x LiDAR + Kameralar + Switch)" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">6.3 Şasi Topraklaması (GND) İzolasyon Durumu:</label>
+                    <select id="gndIsolation" onchange="autoSave()">
+                        <option value="Fully_Isolated">Tamamen İzole Topraklama (Ground Loop Gürültüsü Yok)</option>
+                        <option value="Chassis_Shared">Araç Metal Şasisine Ortak Bağlı Topraklama</option>
+                        <option value="Bilinmiyor">Bilinmiyor / Test Edilmedi</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">6.4 Bilgisayar / IPC Soğutma Mimarisi:</label>
+                    <select id="thermalCooling" onchange="autoSave()">
+                        <option value="Active_Fan">Aktif Fan Soğutmalı Endüstriyel Kasa</option>
+                        <option value="Passive_Heatsink">Pasif Alüminyum Gövde (Fanless)</option>
+                        <option value="Liquid_Cooling">Sıvı Soğutma Döngüsü</option>
+                    </select>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">6.5 Voltaj Çökmesi (Voltage Sag) Durumu:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="radio" name="voltageSag" value="Stabil" onchange="autoSave()">
+                            <span><b>Hayır, Voltaj Tam Regüleli:</b> İzole tampon güç kaynağı var, 12V/24V hattı sabit kalıyor.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="voltageSag" value="Dalgalanma_Var" onchange="autoSave()">
+                            <span><b>Evet / Şüpheli:</b> Motor gaza yüklendiğinde veya fren yapıldığında 12V hattında düşüş olabiliyor.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 7 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">7</div>
+                <h2 class="section-name">Acil Durdurma (E-Stop) ve Emniyet Kilitleri</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <label class="field-label">7.1 Acil Durdurma (E-Stop) Donanımları:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="checkbox" name="estopType" value="Mantar_Kabin" onchange="autoSave()">
+                            <span><b>Kabin İçi Acil Durdurma:</b> Şoför/operatör yanında fiziksel kırmızı mantar buton mevcut.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="estopType" value="Mantar_Tampon" onchange="autoSave()">
+                            <span><b>Dış Tampon Butonu:</b> Araç dış arka/yan tamponunda acil durum butonu mevcut.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="estopType" value="Wireless_EStop" onchange="autoSave()">
+                            <span><b>Kablosuz Telsiz Kumanda:</b> Güvenlik pilotunun elinde 868 MHz uzaktan acil durdurma telsizi var.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="estopType" value="Hardware_NC_Loop" onchange="autoSave()">
+                            <span><b>Donanımsal Normalde Kapalı (NC) Röle Hattı:</b> Hat koptuğu an motor kontaktörü ve fren mekanik kapanır.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">7.2 Manuel Devralma (Takeover) ve Müdahale Algılama Yöntemi:</label>
+                    <select id="takeoverMethod" onchange="autoSave()">
+                        <option value="Torque_Sensor">Direksiyona Uygulanan Tork Eşiğiyle Otomatik Devreden Çıkma (5ms Override)</option>
+                        <option value="Brake_Switch">Fren Pedalına Dokunulduğu An (Mikro-Switch) Devreden Çıkma</option>
+                        <option value="Cockpit_Toggle">Kokpitteki Manuel/Otonom İki Kademeli Fiziksel Şalter</option>
+                        <option value="Yazilimsal">Yalnızca Dokunmatik Ekran Üzerinden Yazılımsal Buton</option>
+                    </select>
+                    <span class="field-desc">Şoför direksiyonu çevirirse sistem otonomiden nasıl çıkacak?</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">7.3 Hedef Uçtan Uca Döngü Gecikmesi (Latency Target):</label>
+                    <input type="text" id="latencyTarget" placeholder="Örn: Sensörden aktüatöre &lt; 30 ms" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">7.4 Donanımsal Saat Senkronizasyonu (Time-Sync):</label>
+                    <select id="timeSync" onchange="autoSave()">
+                        <option value="PTP_IEEE1588">PTP (IEEE 1588 / 802.1AS) Ethernet Tabanlı Senkronizasyon</option>
+                        <option value="PPS_NMEA">PPS (Pulse Per Second) Donanım Sinyali + NMEA GPS</option>
+                        <option value="Software_NTP">Yalnızca Yazılımsal Chrony / NTP</option>
+                        <option value="Yok">Donanımsal Senkronizasyon Yok</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 8 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">8</div>
+                <h2 class="section-name">Yazılım, Bilgisayar ve Hesaplama Altyapısı</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">8.1 Mevcut Üst Seviye Otonomi Yazılım Yığını:</label>
+                    <input type="text" id="softwareStack" placeholder="Örn: Autoware Universe (Humble) / ROS 2 Iron" oninput="autoSave()">
+                    <span class="field-desc">Hacettepe NeuRo Lab'ın geliştirdiği veya kullandığı ROS 2 yazılımı.</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">8.2 Araç Üzeri Görev Bilgisayarı (IPC):</label>
+                    <input type="text" id="computingUnit" placeholder="Örn: Nvidia Jetson AGX Orin 64GB / Endüstriyel x86 i9+RTX" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">8.3 İşletim Sistemi ve Çekirdek:</label>
+                    <select id="osKernel" onchange="autoSave()">
+                        <option value="Ubuntu_2204_RT">Ubuntu 22.04 LTS + PREEMPT_RT Gerçek Zamanlı Çekirdek</option>
+                        <option value="Ubuntu_2204_Generic">Ubuntu 22.04 LTS Standart Generic Çekirdek</option>
+                        <option value="Ubuntu_2004">Ubuntu 20.04 LTS</option>
+                        <option value="Diger">Diğer Linux Dağıtımı</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">8.4 ROS 2 DDS İletişim Katmanı:</label>
+                    <select id="ddsMiddleware" onchange="autoSave()">
+                        <option value="CycloneDDS">Eclipse CycloneDDS</option>
+                        <option value="FastDDS">eProsima FastDDS</option>
+                        <option value="Zenoh">Zenoh Router / Bridge</option>
+                        <option value="Varsayilan">Varsayılan DDS</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 9 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">9</div>
+                <h2 class="section-name">Sensör Paketi, Montaj ve Kalibrasyon</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <label class="field-label">9.1 Araçtaki Sensör Paketi (Marka, Model ve Adet Detayları):</label>
+                    <textarea id="sensorConfig" placeholder="Örn: 4x Hesai Pandar 64 LiDAR, 2x Basler GigE Kamera, NovAtel PwrPak7 RTK-GNSS/IMU..." oninput="autoSave()"></textarea>
+                    <span class="field-desc">Araç üzerine monte edilen veya planlanan tüm algılayıcılar.</span>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">9.2 Sensör Montaj Braketleri ve Titreşim İzolasyonu:</label>
+                    <input type="text" id="sensorMounting" placeholder="Örn: Alüminyum tavan barı (roof rack), kauçuk sönümleyici damperler" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">9.3 Sensör Dışsal (Extrinsic) Kalibrasyon Matrisleri:</label>
+                    <select id="calibrationStatus" onchange="autoSave()">
+                        <option value="Hazir">Evet, LiDAR-Kamera-IMU 3D Koordinatları Hazır (URDF / YAML)</option>
+                        <option value="Kismen">Kısmen Çıkarıldı, Hassas Kalibrasyon Gerekli</option>
+                        <option value="Yok">Hayır, Henüz Kalibrasyon Yapılmadı</option>
+                    </select>
+                    <span class="field-desc">Sensörlerin birbirine göre 3D X-Y-Z mesafeleri ölçüldü mü?</span>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">9.4 Sensör Temizleme / Koruma İhtiyacı:</label>
+                    <select id="sensorCleaning" onchange="autoSave()">
+                        <option value="Yok">Gerek Yok / Yalnızca kuru havada test edilecek</option>
+                        <option value="AirJet">Basınçlı Hava Üfleme Nozulu (Air Jet) Entegrasyonu İsteniyor</option>
+                        <option value="Heated">Isıtmalı Cam / Buğu Çözücü Muhafaza İsteniyor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 10 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">10</div>
+                <h2 class="section-name">Haritalama ve Lokalizasyon Altyapısı</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">10.1 3D Nokta Bulutu (PCD) Haritası Durumu:</label>
+                    <select id="pcdMapStatus" onchange="autoSave()">
+                        <option value="Hazir">Evet, 3D LiDAR Nokta Bulutu (PCD) Haritası Çıkarıldı</option>
+                        <option value="Kismen">Kısmen Çıkarıldı, Birleştirme ve Filtreleme Gerekli</option>
+                        <option value="Yok">Hayır, Saha Haritalaması Henüz Yapılmadı</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">10.2 Vektörel Şerit Haritası (Lanelet2 / OpenDRIVE):</label>
+                    <select id="laneletMap" onchange="autoSave()">
+                        <option value="Hazir">Evet, Lanelet2 / OpenDRIVE Vektörel Harita Hazır</option>
+                        <option value="Hazirlaniyor">Hazırlık Aşamasında (Vector Map Builder)</option>
+                        <option value="Yok">Hayır, Henüz Vektörel Harita Yok</option>
+                    </select>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">10.3 GNSS / RTK Düzeltme Sinyali Kaynağı:</label>
+                    <select id="rtkCorrection" onchange="autoSave()">
+                        <option value="NTRIP_TUSAGA">TUSAGA-Aktif / Sabit CORS Ağı Üzerinden Hücresel NTRIP Düzeltmesi</option>
+                        <option value="Local_Base">Kampüs İçi Yerel Baz İstasyonu (UHF Radyo Modem Bağlantılı)</option>
+                        <option value="Standalone_GPS">Yalnızca Standart GPS / SBAS (Düzeltmesiz ~1-2m sapma)</option>
+                        <option value="Yok">RTK Sistemi Yok (Salt LiDAR Odometrisi / NDT Kullanılacak)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 11 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">11</div>
+                <h2 class="section-name">Saha Koşulları ve Operasyonel Tasarım Alanı (ODD)</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">11.1 Hedeflenen Ring Güzergah Uzunluğu:</label>
+                    <input type="text" id="routeLength" placeholder="Örn: 5.4 km (Beytepe Metro - Kampüs İçi Ring Hattı)" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">11.2 Güzergah Üzerindeki Maksimum Yol Eğimi (Yokuş %):</label>
+                    <input type="text" id="maxSlope" placeholder="Örn: %8 maksimum eğim" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">11.3 Planlanan Azami Operasyonel Hız:</label>
+                    <input type="text" id="maxSpeed" placeholder="Örn: 20 km/s (Kampüs içi hız tahdidi)" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">11.4 Zorlu GNSS / GPS Sinyal Kaybı Yaşanan Bölgeler:</label>
+                    <select id="gnssDenied" onchange="autoSave()">
+                        <option value="Var">Evet, Ağaçlık Alanlar ve Binalar Arası GPS Kaybı Var (GNSS-Denied)</option>
+                        <option value="Yok">Hayır, Güzergah Boyunca Gökyüzü Tamamen Açık</option>
+                        <option value="Bilinmiyor">Henüz Test Edilmedi</option>
+                    </select>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">11.5 Yol Zemin Karakteristiği ve Engeller:</label>
+                    <input type="text" id="roadSurface" placeholder="Örn: Sıcak asfalt, kilit parke taşı, hız kasisleri, yaya geçitleri mevcut mu?" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">11.6 Hava ve İklim Koşulları Kısıtları:</label>
+                    <select id="weatherLimits" onchange="autoSave()">
+                        <option value="Dry_Only">Yalnızca Açık ve Kuru Hava Şartlarında Operasyon</option>
+                        <option value="Light_Rain">Hafif Yağmur ve Gece Koşullarında da Çalışabilmeli</option>
+                        <option value="All_Weather">Zorlu Hava Koşulları (Yoğun Yağmur, Sis vb.) Hedefleniyor</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 12 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">12</div>
+                <h2 class="section-name">Haberleşme Kaybı ve Asgari Risk Manevrası (MRM)</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <label class="field-label">12.1 Yazılım veya Haberleşme Koptuğunda Aracın Güvenli Duruş Davranışı:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="radio" name="mrmBehavior" value="InLane_Stop" onchange="autoSave()">
+                            <span><b>Kendi Şeridinde Duruş (In-Lane Stop):</b> Araç yönünü koruyarak kontrollü şekilde yavaşlayıp durur ve flaşörleri yakar.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="mrmBehavior" value="PullOver" onchange="autoSave()">
+                            <span><b>Yol Kenarına Yanaşma (Pull-Over):</b> Uygun banket varsa sağ şeride yanaşarak durur.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="mrmBehavior" value="Immediate_Brake" onchange="autoSave()">
+                            <span><b>Anında Kilitli Fren (Hard E-Stop):</b> Kontaktör açılır, mekanik acil durum freni anında kilitlenir.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">12.2 Akustik Yaya Uyarı Sistemi (AVAS / Korna Entegrasyonu):</label>
+                    <select id="avasSystem" onchange="autoSave()">
+                        <option value="Var_CAN">Evet, CAN üzerinden tetiklenen sesli yaya uyarı sistemi var</option>
+                        <option value="Mekanik">Yalnızca araç fabrikasyon kornası mevcut</option>
+                        <option value="Yok">Harici sesli ikaz sistemi yok</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">12.3 Fren Lambası ve Sinyal Otomasyonu:</label>
+                    <select id="lightAutomation" onchange="autoSave()">
+                        <option value="CAN_Controlled">CAN üzerinden otomatik yakılan fren lambaları ve sinyaller</option>
+                        <option value="Hydraulic_Switch">Fren hidrolik basınç anahtarına bağlı otomatik lamba</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 13 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">13</div>
+                <h2 class="section-name">Veri Kaydı, Telemetri ve Filo Takip</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">13.1 Araç Üzeri Hücresel Veri Bağlantısı:</label>
+                    <select id="cellularLink" onchange="autoSave()">
+                        <option value="4G_5G_Var">4G/5G Endüstriyel LTE Router Mevcut (Sürekli Bağlantı)</option>
+                        <option value="Sadece_WiFi">Yalnızca Garajda Wi-Fi Bağlantısı</option>
+                        <option value="Yok">Hücresel Bağlantı Henüz Yok</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">13.2 Araç Üzeri SSD Veri Depolama Kapasitesi:</label>
+                    <input type="text" id="storageCapacity" placeholder="Örn: 2TB NVMe SSD (Rosbag ve Telemetri Kaydı)" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">13.3 Uzaktan Operasyon Merkezi (C2 / Tactical Console) İhtiyacı:</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="radio" name="c2Need" value="C2_Istiyoruz" onchange="autoSave()">
+                            <span><b>Evet, Uzaktan İzleme Konsolu İstiyoruz:</b> Aracın hızını, konumunu ve emniyet durumunu harita üzerinde canlı izlemek istiyoruz.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="radio" name="c2Need" value="C2_Gerek_Yok" onchange="autoSave()">
+                            <span><b>Hayır, Şimdilik Gerek Yok:</b> Sadece araç içi otonom kontrol ve yerel ekran yeterlidir.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">13.4 İncelememiz İçin Örnek Test Verisi (Rosbag / CAN Log) Paylaşabilir misiniz?</label>
+                    <input type="text" id="sampleLogData" placeholder="Örn: Evet, 15 dakikalık CARLA rosbag'i ve CAN trace dosyasını bulut linkiyle paylaşabiliriz" oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 14 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">14</div>
+                <h2 class="section-name">Trustia'dan Talep Edilen Kapsam ve İhtiyaçlar</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <label class="field-label">14.1 Hangi Trustia Çekirdek Modüllerini ve Paketlerini Talep Ediyorsunuz?</label>
+                    <div class="options-list">
+                        <label class="option-item">
+                            <input type="checkbox" name="reqModule" value="ROS2_CAN_Bridge" onchange="autoSave()">
+                            <span><b>Paket 1: ROS 2 &lt;-&gt; CAN Köprüsü ve Sürücü Katmanı (ros2_bridge & can.py):</b> Autoware hız/direksiyon komutlarını aracın anlayacağı CAN çerçevelerine çeviren deterministik sürücü.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="reqModule" value="ASILD_Safety" onchange="autoSave()">
+                            <span><b>Paket 2: ISO 26262 ASIL-D Emniyet Kalkanı:</b> 5ms sürücü müdahalesi (override) ve 200ms bağımsız donanımsal Watchdog fail-safe kilit sistemi.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="reqModule" value="CAN_Mapping" onchange="autoSave()">
+                            <span><b>Paket 3: CAN Sinyal Eşleştirmesi ve Entegrasyon Mühendisliği:</b> Araç aktüatörleri ile Trustia köprüsü arasındaki sinyal kalibrasyonunun Baş Mühendis Denizcan Özcan koordinesinde tamamlanması.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="reqModule" value="Core_Autonomy" onchange="autoSave()">
+                            <span><b>Paket 4: Uçtan Uca Seviye-4 Otonomi Çekirdeği:</b> Autoware'e bağımlı olmaksızın Trustia'nın kendi haritalama, planlama ve kontrol algoritma motoru.</span>
+                        </label>
+                        <label class="option-item">
+                            <input type="checkbox" name="reqModule" value="Monthly_SLA" onchange="autoSave()">
+                            <span><b>Paket 5: Aylık Canlı Mühendislik ve Telemetri Desteği (SLA):</b> Test döneminde uzaktan log takibi, periyodik yama ve parametre optimizasyonu.</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">14.2 Trustia'dan Çözülmesini İstediğiniz En Kritik Darboğaz ve Beklentiniz Nedir?</label>
+                    <textarea id="coreExpectation" style="min-height: 85px;" placeholder="Örn: Simülasyonda haritayı çıkardık ancak Autoware komutlarını fiziksel araca bağlayamıyoruz; tekerleği döndürecek, freni sıktıracak ve olası bir çökmede 200ms içinde aracı acil durduracak anahtar teslim bir köprü istiyoruz..." oninput="autoSave()"></textarea>
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">14.3 Ortak Çalışma ve İletişim Tercihleri:</label>
+                    <input type="text" id="collaborationPreference" placeholder="Örn: Ortak GitLab/GitHub deposu, haftalık 1 saat senkron durum toplantısı ve teknik WhatsApp/Teams kanalı" oninput="autoSave()">
+                </div>
+            </div>
+        </div>
+
+        <!-- BÖLÜM 15 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">15</div>
+                <h2 class="section-name">İdari Süreç, Bütçe, İhale ve Onay Takvimi</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row">
+                    <label class="field-label">15.1 Satınalma / Finansman Kaynağı:</label>
+                    <select id="procurementSource" onchange="autoSave()">
+                        <option value="Hacettepe_BAP">Hacettepe Üniversitesi BAP Doğrudan Temin (4734 m. 22/d)</option>
+                        <option value="TUBITAK_Grant">TÜBİTAK Ar-Ge Hibe Projesi</option>
+                        <option value="Rectorate_Digital">Rektörlük Dijital Dönüşüm Özel Bütçesi</option>
+                        <option value="Private_Sponsor">Özel Sponsorluk / Şirket Desteği</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">15.2 Öngörülen Sözleşme ve Satınalma Usulü:</label>
+                    <select id="budgetModel" onchange="autoSave()">
+                        <option value="Direct_Procurement">Tek Seferlik Doğrudan Temin (BAP 22/d - Muayene ve Kabul Tutanağı ile Tek Fatura)</option>
+                        <option value="Milestone_Phased">Aşamalı Hakediş Modeli (%40 Simülasyon Doğrulama + %60 Fiziksel Araç Kabulü)</option>
+                        <option value="Annual_SLA">Yıllık Lisanslama ve Mühendislik SLA Modeli (Bakım, Yama ve Canlı Destek Dahil)</option>
+                        <option value="Custom_Proposal">Teknik Kapsam ve İhtiyaçlar Doğrultusunda Resmi Proforma Teklif İstiyoruz</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label class="field-label">15.3 Resmi Fatura ve Proforma Kurum Bilgileri:</label>
+                    <input type="text" id="billingEntity" placeholder="Örn: Hacettepe Üniversitesi BAP Koordinasyon Birimi (Vergi Dairesi ve No)" oninput="autoSave()">
+                </div>
+                <div class="form-row">
+                    <label class="field-label">15.4 Proforma Teklifin İletilmesini İstediğiniz Termin:</label>
+                    <input type="text" id="quoteDeadline" placeholder="Örn: En geç 3 iş günü içinde" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">15.5 Saha Sürüş İzinleri ve Prototip Sigortası Durumu:</label>
+                    <input type="text" id="insurancePermits" placeholder="Örn: Kampüs rektörlük sürüş izni alındı mı? Üçüncü şahıs mali mesuliyet sigortası mevcut mu?" oninput="autoSave()">
+                </div>
+                <div class="form-row full">
+                    <label class="field-label">15.6 Ek İdari Notlar veya Şartname Talepleri:</label>
+                    <textarea id="billingNotes" placeholder="Varsa proforma faturaya eklenmesi gereken özel BAP proje kodu, teslimat şartları veya idari notlarınızı belirtiniz..." oninput="autoSave()"></textarea>
+                </div>
+            </div>
+        </div>
+
+                <!-- BÖLÜM 16 -->
+        <div class="section-block">
+            <div class="section-header">
+                <div class="section-number">16</div>
+                <h2 class="section-name">Teknik Dosya, Log ve Doküman Teslimi</h2>
+            </div>
+            <div class="grid-2">
+                <div class="form-row full">
+                    <!-- PC'DEN DOSYA SEÇİM ALANI -->
+                    <div class="upload-zone">
+                        <input type="file" id="localFiles" multiple onchange="handleFiles(this)" style="display: none;">
+                        <button type="button" class="btn-upload" onclick="document.getElementById('localFiles').click()">
+                            📁 Bilgisayardan Dosya(ları) Seç
+                        </button>
+                        <div class="upload-hint">
+                            Aracınıza ait DBC haritası, Rosbag verileri, BAP talep yazısı, elektrik şeması veya CAD modellerini bilgisayarınızdan doğrudan toplu olarak seçebilirsiniz.
+                        </div>
+                        <div id="fileStatusDisplay" class="file-pill-container"></div>
+                    </div>
+                </div>
+
+                <div class="form-row full">
+                    <label class="field-label">Öncelikli Teknik Dosya ve İndirme Bağlantıları (7 Temel Kalem):</label>
+                    <div style="overflow-x: auto;">
+                        <table class="formal-table">
+                            <thead>
+                                <tr>
+                                    <th class="col-center" style="width: 5%;">No</th>
+                                    <th style="width: 40%;">Belge / Veri Başlığı ve Açıklaması</th>
+                                    <th class="col-center" style="width: 15%;">Uzantı</th>
+                                    <th style="width: 40%;">İndirme Linki (Drive / WeTransfer) veya Not</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-center num-col">1</td>
+                                    <td>
+                                        <div class="doc-title">Araç CAN DBC & Sinyal Haritası</div>
+                                        <div class="doc-desc">Tüm aktüatör, direksiyon, fren ve telemetri CAN ID tanımları</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.dbc / .kcd / .trc</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_1" class="table-text-input" placeholder="İndirme Linki (Drive / WeTransfer) veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-center num-col">2</td>
+                                    <td>
+                                        <div class="doc-title">Örnek Sürüş & Sensör Rosbag Verisi</div>
+                                        <div class="doc-desc">CARLA simülasyon veya fiziksel tezgah sensör logları (5-10 dk)</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.db3 / .mcap</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_2" class="table-text-input" placeholder="İndirme Linki (Drive / WeTransfer) veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-center num-col">3</td>
+                                    <td>
+                                        <div class="doc-title">Üniversite BAP / Doğrudan Temin Talep Yazısı</div>
+                                        <div class="doc-desc">Rektörlük/BAP resmi satın alma talep yazısı ve şartname taslağı</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.pdf / .docx</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_3" class="table-text-input" placeholder="İndirme Linki veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-center num-col">4</td>
+                                    <td>
+                                        <div class="doc-title">Araç Elektrik ve Sigorta Şeması (Wiring Diagram)</div>
+                                        <div class="doc-desc">12V/24V/HV kablolama, sigorta kutusu ve By-Wire tesisat şeması</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.pdf / .dwg</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_4" class="table-text-input" placeholder="İndirme Linki veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-center num-col">5</td>
+                                    <td>
+                                        <div class="doc-title">3D Araç CAD / URDF Robot Modeli</div>
+                                        <div class="doc-desc">Sensör yerleşim braketleri ve araç şasi boyutları</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.urdf / .step / .dae</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_5" class="table-text-input" placeholder="İndirme Linki veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-center num-col">6</td>
+                                    <td>
+                                        <div class="doc-title">HD Vektörel Harita / Nokta Bulutu (PCD)</div>
+                                        <div class="doc-desc">Hedef kampüs ring güzergahı harita veya koordinat verisi</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.pcd / .osm / .geojson</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_6" class="table-text-input" placeholder="İndirme Linki veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-center num-col">7</td>
+                                    <td>
+                                        <div class="doc-title">Ek Belgeler / Sıkıştırılmış Arşiv Paketi</div>
+                                        <div class="doc-desc">Diğer tüm teknik veriler, fotoğraflar veya toplu arşiv linki</div>
+                                    </td>
+                                    <td class="col-center"><span class="doc-ext">.zip / .tar.gz / link</span></td>
+                                    <td>
+                                        <input type="text" id="fileLink_7" class="table-text-input" placeholder="İndirme Linki (Drive / WeTransfer) veya 'E-Posta Eki'" oninput="autoSave()">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- ALT BİLGİ -->
+    <div class="doc-footer">
+        <strong>TRUSTIA AI</strong> &nbsp;|&nbsp; Kurucu & CEO: Murat Furkan Bayram &nbsp;|&nbsp; Baş Donanım Mühendisi: Denizcan Özcan<br>
+        Form Yanıtlarını ve Ek Dosya Bağlantılarını <strong>kariyer@trustia.com.tr</strong> resmi adresine iletebilirsiniz.
+    </div>
+
+</div>
+
+<script>
+let localAttachedFiles = [];
+
+function handleFiles(input) {
+    localAttachedFiles = [];
+    const display = document.getElementById('fileStatusDisplay');
+    display.innerHTML = "";
+    
+    if (input.files.length > 0) {
+        for (let i = 0; i < input.files.length; i++) {
+            const f = input.files[i];
+            const sizeMb = (f.size / (1024 * 1024)).toFixed(2);
+            localAttachedFiles.push(f.name + " (" + sizeMb + " MB)");
+            
+            const pill = document.createElement('div');
+            pill.className = 'file-pill';
+            pill.innerHTML = "<span>✓</span> <strong>" + f.name + "</strong> <span class='file-size'>(" + sizeMb + " MB)</span>";
+            display.appendChild(pill);
+        }
+    }
+    autoSave();
+}
+
+const formFields = [
+    ['1.1 Kurum/Laboratuvar', 'institution'],
+    ['1.2 Proje Adı ve Kodu', 'projectName'],
+    ['1.3 Proje Yürütücüsü', 'projectDirector'],
+    ['1.4 Teknik Temas Sorumlusu', 'contactPerson'],
+    ['1.5 E-Posta', 'contactEmail'],
+    ['1.6 Telefon', 'contactPhone'],
+    ['1.7 Hedef Devreye Alma Tarihi', 'targetDate'],
+    ['2.2 Hedef Araç Modeli', 'vehicleModel'],
+    ['2.3 Tahrik Sistemi', 'powertrain'],
+    ['2.4 Batarya Voltajı', 'voltage'],
+    ['2.5 Araç Mekanik Durumu', 'vehicleStatus'],
+    ['2.6 Araç Mülkiyeti/Statüsü', 'vehicleOwnership'],
+    ['3.1 Aks Mesafesi (Wheelbase)', 'wheelbase'],
+    ['3.2 İz Genişliği (Track Width)', 'trackWidth'],
+    ['3.3 Araç Ağırlığı (Kerb/GVW)', 'vehicleWeight'],
+    ['3.4 Dönüş Yarıçapı', 'turningRadius'],
+    ['3.5 Maks. Ön Tekerlek Açısı', 'maxSteerAngle'],
+    ['3.6 Kilitten Kilide Tur / Oran', 'lockToLock'],
+    ['4.3 Direksiyon Kontrolü', 'steeringType'],
+    ['4.4 Fren Kontrolü', 'brakeType'],
+    ['4.5 Vites Kontrolü', 'shiftType'],
+    ['4.6 Park Freni (EPB)', 'epbType'],
+    ['4.8 CAN Adaptör Donanımı', 'canInterfaceDevice'],
+    ['5.1 Tekerlek Hız Geri Bildirimi', 'wheelSpeedFeedback'],
+    ['5.2 Tekerlek Dönüş Yönü', 'wheelDirection'],
+    ['5.3 Tekerlek Pals Çözünürlüğü', 'wheelResolution'],
+    ['6.1 Otonomi Güç Kaynağı', 'powerAux'],
+    ['6.2 Güç Tüketimi (Watt)', 'powerWatts'],
+    ['6.3 Şasi Topraklaması İzolasyonu', 'gndIsolation'],
+    ['6.4 Soğutma Mimarisi', 'thermalCooling'],
+    ['7.2 Manuel Devralma Yöntemi', 'takeoverMethod'],
+    ['7.3 Gecikme Hedefi (Latency)', 'latencyTarget'],
+    ['7.4 Zaman Senkronizasyonu', 'timeSync'],
+    ['8.1 Otonomi Yazılım Yığını', 'softwareStack'],
+    ['8.2 Görev Bilgisayarı (IPC)', 'computingUnit'],
+    ['8.3 İşletim Sistemi & Çekirdek', 'osKernel'],
+    ['8.4 ROS 2 DDS', 'ddsMiddleware'],
+    ['9.1 Sensör Paketi Detayları', 'sensorConfig'],
+    ['9.2 Sensör Montaj Braketleri', 'sensorMounting'],
+    ['9.3 Sensör Kalibrasyon Matrisleri', 'calibrationStatus'],
+    ['9.4 Sensör Temizleme İhtiyacı', 'sensorCleaning'],
+    ['10.1 3D Nokta Bulutu Haritası', 'pcdMapStatus'],
+    ['10.2 Lanelet2 Vektörel Harita', 'laneletMap'],
+    ['10.3 GNSS / RTK Düzeltme Kaynağı', 'rtkCorrection'],
+    ['11.1 Ring Güzergah Uzunluğu', 'routeLength'],
+    ['11.2 Maksimum Yol Eğimi', 'maxSlope'],
+    ['11.3 Planlanan Azami Hız', 'maxSpeed'],
+    ['11.4 GNSS-Denied Bölgeler', 'gnssDenied'],
+    ['11.5 Yol Zemin Karakteristiği', 'roadSurface'],
+    ['11.6 Hava Koşulları Kısıtları', 'weatherLimits'],
+    ['12.2 AVAS Yaya Uyarı Sistemi', 'avasSystem'],
+    ['12.3 Fren/Sinyal Lamba Otomasyonu', 'lightAutomation'],
+    ['13.1 Hücresel Veri Bağlantısı', 'cellularLink'],
+    ['13.2 SSD Depolama Kapasitesi', 'storageCapacity'],
+    ['13.4 Örnek Test Verisi Paylaşımı', 'sampleLogData'],
+    ['14.2 En Kritik İhtiyaç ve Beklenti', 'coreExpectation'],
+    ['14.3 İşbirliği ve İletişim Tercihi', 'collaborationPreference'],
+    ['15.1 Satınalma Kaynağı', 'procurementSource'],
+    ['15.2 Bütçe Modeli Tercihi', 'budgetModel'],
+    ['15.3 Resmi Fatura Kurum Bilgisi', 'billingEntity'],
+    ['15.4 Teklif Termini', 'quoteDeadline'],
+    ['15.5 Test İzinleri ve Sigorta', 'insurancePermits'],
+    ['15.6 Ek İdari Notlar / Şartname', 'billingNotes'],
+    ['16.1 CAN DBC Linki', 'fileLink_1'],
+    ['16.2 Rosbag Linki', 'fileLink_2'],
+    ['16.3 BAP Yazısı Linki', 'fileLink_3'],
+    ['16.4 Elektrik Şeması Linki', 'fileLink_4'],
+    ['16.5 CAD / URDF Linki', 'fileLink_5'],
+    ['16.6 HD Harita Linki', 'fileLink_6'],
+    ['16.7 Ek Arşiv Linki', 'fileLink_7']
+];
+
+function autoSave() {
+    const data = {};
+    formFields.forEach(([_, id]) => {
+        const el = document.getElementById(id);
+        if (el) data[id] = el.value;
+    });
+
+    const checkedInputs = document.querySelectorAll('input[type="checkbox"]:checked, input[type="radio"]:checked');
+    const checkedValues = [];
+    checkedInputs.forEach(i => checkedValues.push({ name: i.name, value: i.value }));
+    data['_checked'] = checkedValues;
+
+    const files30 = [];
+    for (let i = 1; i <= 7; i++) {
+        const l = document.getElementById("fileLink_" + i);
+        
+        files30.push({ link: l ? l.value : "" });
+    }
+    data['_files30'] = files30;
+
+    localStorage.setItem('trustia_formal_discovery_draft', JSON.stringify(data));
+    const indicator = document.getElementById('saveIndicator');
+    if (indicator) {
+        indicator.innerHTML = "Durum: <span>Taslak Kaydedildi (" + new Date().toLocaleTimeString() + ")</span>";
+    }
+}
+
+function restoreData() {
+    const saved = localStorage.getItem('trustia_formal_discovery_draft');
+    if (!saved) return;
+    try {
+        const data = JSON.parse(saved);
+        formFields.forEach(([_, id]) => {
+            const el = document.getElementById(id);
+            if (el && data[id] !== undefined) el.value = data[id];
+        });
+
+        if (data['_checked']) {
+            data['_checked'].forEach(item => {
+                const input = document.querySelector(`input[name="${item.name}"][value="${item.value}"]`);
+                if (input) input.checked = true;
+            });
+        }
+
+        if (data['_files30']) {
+            data['_files30'].forEach((item, idx) => {
+                const num = idx + 1;
+                const l = document.getElementById("fileLink_" + num);
+                
+                if (l && item.link) l.value = item.link;
+                
+            });
+        }
+    } catch (e) {
+        console.error("Restore error", e);
+    }
+}
+
+function resetForm() {
+    if (confirm("Formdaki tüm yanıtları temizlemek istediğinize emin misiniz?")) {
+        localStorage.removeItem('trustia_formal_discovery_draft');
+        document.getElementById('discoveryForm').reset();
+        const indicator = document.getElementById('saveIndicator');
+        if (indicator) indicator.innerHTML = "Durum: <span>Form Temizlendi</span>";
+    }
+}
+
+function copyFormResponses() {
+    let summary = "=== TRUSTIA AI TEKNİK KEŞİF YANITLARI ===\n";
+    summary += "Belge Ref: TR-DISC-2026/09\n";
+    summary += "Tarih: " + new Date().toLocaleString() + "\n\n";
+
+    formFields.forEach(([label, id]) => {
+        const el = document.getElementById(id);
+        if (el && el.value.trim()) {
+            summary += label + ": " + el.value.trim() + "\n";
+        }
+    });
+
+    const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked, input[type="radio"]:checked');
+    summary += "\nSeçilen Seçenekler:\n";
+    checkedBoxes.forEach(cb => {
+        summary += "- [" + cb.name + "]: " + cb.value + "\n";
+    });
+
+    if (localAttachedFiles.length > 0) {
+        summary += "\nE-Posta Ekinde İletilecek Dosyalar:\n";
+        localAttachedFiles.forEach((f, idx) => {
+            summary += "  " + (idx + 1) + ". " + f + "\n";
+        });
+    }
+
+    summary += "\nTemel Dosya ve Veri Bağlantıları (7 Kalem):\n";
+    let fileCount = 0;
+    for (let i = 1; i <= 7; i++) {
+        const linkEl = document.getElementById("fileLink_" + i);
+        const noteEl = document.getElementById("fileNote_" + i);
+        if (linkEl && linkEl.value.trim() !== "") {
+            fileCount++;
+            summary += "  [" + i + "] Link: " + linkEl.value.trim() + (noteEl && noteEl.value.trim() ? " (" + noteEl.value.trim() + ")" : "") + "\n";
+        }
+    }
+    if (fileCount === 0) {
+        summary += "  (Bulut bağlantısı girilmedi - doğrudan e-posta ekinde iletilecek)\n";
+    }
+
+    navigator.clipboard.writeText(summary).then(() => {
+        alert("Formdaki tüm yanıtlar panoya kopyalandı! E-postanıza doğrudan yapıştırabilirsiniz (Ctrl+V).");
+    }).catch(err => {
+        alert("Panoya kopyalanamadı, lütfen tarayıcı izinlerini kontrol edin.");
+    });
+}
+
+window.addEventListener('DOMContentLoaded', restoreData);
+</script>
+
+</body>
+</html>

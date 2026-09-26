@@ -139,18 +139,6 @@ export default function AboutPage() {
       status: "Onay Bekliyor"
     },
     {
-      org: lang === "tr" ? "Z Fellows (San Francisco, ABD)" : "Z Fellows (San Francisco, US)",
-      reg: "$10,000 Equity-Free",
-      type: lang === "tr" ? "Grace Kasten (Pace Capital) ile Canlı Zoom Mülakatı Aşamasında" : "Live Zoom Interview Stage (Grace Kasten, Pace Capital)",
-      status: "17 Eylül"
-    },
-    {
-      org: lang === "tr" ? "SPK Paya Dayalı Kitle Fonlama (fonbulucu)" : "Capital Markets Board Crowdfunding",
-      reg: "Kampanya: W1MV5K",
-      type: lang === "tr" ? "15.000.000 TL Hedef (150M TL Val.) • Seviye-4 Robotaksi Filosu" : "15M TL Target (150M TL Val.) L4 Fleet Campaign",
-      status: "Ön İncelemede"
-    },
-    {
       org: lang === "tr" ? "Crunchbase Küresel Girişim Dizini" : "Crunchbase Global Directory",
       reg: "Isı Puanı: 93 • Büyüme: 91 (CB: 98k)",
       type: lang === "tr" ? "Resmi Doğrulanmış Kurumsal Profil & $500k Pre-Seed Turu" : "Verified Corporate Profile & $500k Pre-Seed Round",
