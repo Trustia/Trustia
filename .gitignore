@@ -1,9 +1,9 @@
 # ==============================================================================
-# TRUSTIA ENTERPRISE REPOSITORY GITIGNORE
-# Dual-Use Autonomous Driving Stack & Tactical C2 Mission Control
+# TRUSTIA AI — SEVİYE-4 OTONOM SÜRÜŞ YAZILIM ÇEKİRDEĞİ
+# Kurumsal Git Dışlama Kuralları (.gitignore)
 # ==============================================================================
 
-# --- Python & Testing Environments ---
+# --- Python & Test Önbellekleri ---
 __pycache__/
 *.py[cod]
 *$py.class
@@ -34,9 +34,8 @@ coverage.xml
 .hypothesis/
 .mypy_cache/
 .ruff_cache/
-*.lic
 
-# --- Virtual Environments ---
+# --- Sanal Ortamlar (Virtual Environments) ---
 .venv/
 env/
 venv/
@@ -44,7 +43,7 @@ ENV/
 env.bak/
 venv.bak/
 
-# --- Node.js & Next.js Web Platform ---
+# --- Node.js & Next.js Web Platformu ---
 **/node_modules/
 **/.pnp
 **/.pnp.js
@@ -57,7 +56,7 @@ pnpm-debug.log*
 lerna-debug.log*
 .turbo
 
-# --- Environment Variables & Sensitive Secrets ---
+# --- Çevresel Değişkenler & Hassas Anahtarlar ---
 .env
 .env.local
 .env.development.local
@@ -67,8 +66,9 @@ lerna-debug.log*
 *.key
 *.cert
 *.pfx
+*.p12
 
-# --- Operating System & Desktop Metadata ---
+# --- İşletim Sistemi & Masaüstü Artıkları ---
 .DS_Store
 .DS_Store?
 ._*
@@ -79,7 +79,7 @@ Thumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
 
-# --- IDEs & Code Editors ---
+# --- IDE & Kod Editörü Yapılandırmaları ---
 .idea/
 .vscode/*
 !.vscode/settings.json
@@ -92,32 +92,31 @@ $RECYCLE.BIN/
 *.swo
 *~
 
-# --- Compilers, Binaries & Local Execution Artifacts ---
+# --- Derlenmiş İkili Dosyalar & Dağıtım Paketleri ---
 *.exe
 *.dll
 *.dylib
 *.iso
 **/ffmpeg.exe
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# --- Yerel Lisans ve Çalıştırma Kayıtları ---
+*.lic
 *.log
 logs/
-
-# --- Cloud & Deployment Caches ---
-.wrangler/
-.vercel
-
-# --- Sensitive Financial & Private Identity Documents ---
-*Banka_Hesap_Ozeti*
-*banka_hesap*
-*.pfx
-*.p12
-
-# --- Temporary Test Artifacts & Edits ---
-test_*_*.png
-test_*_*.jpg
-
-# Temporary Scratch
 scratch/
-
-# Local Run Records and Dumps
 01_Trustia_Otonom_Yazilim_Core/record/runs/
 01_Trustia_Otonom_Yazilim_Core/record/audit/
+
+# --- Gizli Kişisel / Finansal Belgeler ---
+*Banka_Hesap_Ozeti*
+*banka_hesap*
+*Kimlik*
+*Pasaport*
+
+# --- Geçici Test Çıktıları ---
+test_*_*.png
+test_*_*.jpg

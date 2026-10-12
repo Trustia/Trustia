@@ -1,72 +1,87 @@
-# TRUSTIA PROJESİ ÇALIŞMA VE DOSYA DÜZENİ REHBERİ
+# TRUSTIA PROJESİ ÇALIŞMA VE MİMARİ REHBERİ (AGENTS.md)
 
 > [!NOTE]
-> Bu rehber, Trustia projesinde çalışan yapay zeka asistanları ve geliştiriciler için temel çalışma prensiplerini belirler.
-> Amaç: Gereksiz bürokrasi ve dosya şişkinliğini önlemek, temiz ve odaklı bir kod/doküman tabanı korumaktır.
+> Bu rehber, Trustia Seviye-4 Otonom Sürüş projesinde çalışan yapay zeka asistanları (AI Agents) ve sistem mimarları için bağlayıcı çalışma prensiplerini ve kurumsal hafızayı belirler.
+> **Son Güncelleme:** 12 Ekim 2026 | **Sürüm:** v2.4 (Enterprise L4 Core)
 
 ---
 
-## 🎯 5 TEMEL ÇALIŞMA İLKESİ
+## 🎯 6 TEMEL MÜHENDİSLİK VE ÇALIŞMA İLKESİ
 
-### 1. 3 ANA KLASÖR DÜZENİ (TEMİZ ÇALIŞMA ALANI)
-* Tüm proje dosyaları sadece aşağıdaki 3 ana klasör altında tutulur:
-  1. **`01_Trustia_Otonom_Yazilim_Core/`**: Otonomi yazılımı, algoritmalar, testler ve teknik dokümanlar.
-  2. **`02_Trustia_Web_Platformu/`**: Web sitesi kaynak kodları (`website/`).
-  3. **`Kurumsal/`**: Şirketin resmi belgeleri, sunumları, başvuruları ve medya varlıkları (`Belgeler/`, `Sunumlar/`, `Basvurular/`, `Medya/`).
-* Masaüstüne (`C:\Users\Murat\Desktop`) veya proje kök dizinine geçici/baştan savma dosya bırakılamaz.
+### 1. 3 ANA KLASÖR DÜZENİ (TEMİZ REPO MİMARİSİ)
+Tüm proje varlıkları istisnasız aşağıdaki 3 ana dizin altında organize edilir:
+1. **`01_Trustia_Otonom_Yazilim_Core/`**: Seviye-4 otonomi yazılımı (C++20/ROS2/Python), 1.305 testlik doğrulama kütüphanesi, CAN-FD sürücüleri, 3D LiDAR SLAM ve Enterprise SDK derleyicisi.
+2. **`02_Trustia_Web_Platformu/`**: Kurumsal web sitesi (`website/`, Next.js 16, React 19 ve 3D Three.js telemetri arayüzü).
+3. **`Kurumsal/`**: Resmi devlet, savunma ve akreditasyon belgeleri (`Belgeler/`, `Sunumlar/`, `Basvurular/`, `Medya/`).
+* *Kök dizine veya masaüstüne geçici, döküntü veya mükerrer dosya bırakılamaz.*
 
-### 2. WEB SİTESİNİ ŞİŞİRMEME & GITHUB MERKEZLİ ÇALIŞMA
-* **Her yeni başvuruda veya küçük gelişmede web sitesini (`trustia.com.tr`) kurcalamaya veya bileşen eklemeye GEREK YOKTUR.**
-* Yapılan geliştirmeler, belgeler ve güncellemeler GitHub'a (`git push origin main`) pushlandığı anda yeterlidir.
-* Canlı web sitesi sadece kurucu özel olarak talep ettiğinde veya büyük bir kurumsal lansman olduğunda güncellenir.
+### 2. B2B ENTERPRISE SDK & FİKRİ MÜLKİYET (IP) KORUMA KURALI
+* Alıcılara (OEM'ler, filo işletmecileri, belediyeler, savunma firmaları) **asla açık kaynak `.py` kodu teslim edilmez**.
+* Dağıtım sadece `tools/build_enterprise_sdk.py` ile üretilen derlenmiş kapalı kutu (`.pyc` bytecode), HMAC-SHA256 donanım kilidi (Hardware-Locked) ve şifrelenmiş lisans dosyası formatında yapılır.
+* Kaynak kodlar şirketin en değerli sermayesidir; repodaki açık kaynak dosyaları korunur, müşteriye yalnızca kapalı paket sunulur.
 
-### 3. SIFIR MÜKERRER KOPYA VE TEMİZ İSİMLENDİRME
-* Bir dosyanın birden fazla klasöre kopyalanması yasaktır. Her belgenin tek bir master kopyası olur.
-* `test_*`, `kopya`, `yeni`, `final_son` gibi dağınık dosya isimleri repoda bırakılmaz.
-* Sürüm takibi için dosya adı değiştirmek yerine Git geçmişi kullanılır.
+### 3. EVRENSEL OTONOMİ MİMARİSİ (KOD DEĞİŞMEZLİĞİ)
+* Otonomi çekirdeğindeki matematiksel ve algoritmik modeller (Pure Pursuit, Hybrid A*, 3D NDT SLAM) araca veya sahaya göre **değiştirilmez**.
+* Araç boyutları (dingil mesafesi, maksimum dönüş açısı), hız limitleri ve CAN parametreleri sadece ve sadece **`config/vehicle_config.yaml`** üzerinden yönetilir.
+* Yazılım; hem şehir içi Robotaksiyi (50 km/s), hem fabrika içi ağır yük AGV'sini (15 km/s), hem de havalimanı ring servisini aynı çekirdekle çalıştırır.
 
-### 4. DOĞRU BİLGİ VE KURUMSAL YÖNETİŞİM
-* Uydurma, tahmini veya doğrulanmamış bilgi yazılamaz.
-* Kurucu ortaklık ve yönetim yapısı sabittir:
-  * **Murat Furkan Bayram:** Kurucu & CEO / Sistem Mimarı (%100 Hisse).
-  * **Denizcan Özcan:** Baş Donanım ve Entegrasyon Mühendisi.
+### 4. 1.305 TESTİN KESİNTİSİZ %100 YEŞİL KALMASI
+* Yapılan her kod değişikliğinden sonra `pytest tests/ -q` komutu koşturulmalı ve **1.305 testin tamamının (%100) yeşil geçtiği** teyit edilmelidir.
+* 0 başarısızlık (0 failure) ve 0 hata (0 error) kuralı esnetilemez.
 
-### 5. OTOMOTİV EMNİYET VE FAILSAFE KİLİDİ (ASIL-D)
-* `01_Trustia_Otonom_Yazilim_Core` içindeki 5ms sürücü müdahalesi (override), 200ms watchdog ve E-Stop mekanizmaları güvenlik gereği asla bypass edilemez.
+### 5. OTOMOTİV EMNİYET VE ASIL-D FAILSAFE GÜVENCESİ
+* 50 ms kontrol zaman aşımı (Watchdog), 1.4 ms CAN-FD mesaj gecikmesi, 1.5 m/s² kontrollü sağa çekme yavaşlaması (Minimal Risk Maneuver - MRM) ve acil frenleme (E-Stop) emniyet katmanları asla devre dışı bırakılamaz veya bypass edilemez.
+
+### 6. DOĞRU BİLGİ VE KURUMSAL YÖNETİŞİM
+* Uydurma, varsayıma dayalı veya doğrulanmamış bilgi yazılamaz.
+* **Kurucu ve Tek Pay Sahibi:** Murat Furkan Bayram (%100 Hisse, Kurucu & CEO / Sistem Mimarı).
 
 ---
 
-## 📁 DİZİN DÜZENİ ÖZETİ
+## 📁 DİZİN DÜZENİ VE SORUMLULUK HARİTASI
 
 ```text
 Trustia/
-├── 01_Trustia_Otonom_Yazilim_Core/    ← Otonomi Çekirdeği (Python/C++, 1.301 Test, CLI, C2 GUI)
-├── 02_Trustia_Web_Platformu/          ← Web Platformu (Next.js 16, React 19)
-├── Kurumsal/                          ← Birleşik Kurumsal Varlıklar
-│   ├── Belgeler/                      ← Resmi devlet/kurum onay belgeleri ve tesciller
-│   ├── Sunumlar/                      ← Master Pitch Deck'ler, finans modelleri ve planlar
-│   ├── Basvurular/                    ← Takip rehberi kütüğü ve resmi başvuru dosyaları
-│   └── Medya/                         ← HD logolar, araç fotoğrafları ve master videolar
-├── AGENTS.md                          ← Çalışma rehberi
-└── README.md                          ← Ana proje dokümantasyonu
+├── 01_Trustia_Otonom_Yazilim_Core/    ← 16.400+ Satır L4 Çekirdek, 1.305 Test, CAN-FD Hyundai Ioniq 5
+│   ├── ai/                            ← 3D Zemin Ayrıştırma, Engel Kümeleme & OBB
+│   ├── command/                       ← Robotaksi Filo Çağrı & Dağıtım Motoru
+│   ├── control/                       ← Pure Pursuit / Stanley Yanal Kontrol & DBC Kodlama
+│   ├── core/                          ← AutonomyCore Üst Düzey API & HMAC Donanım Lisanslama
+│   ├── integration/                   ← SocketCAN CAN-FD Arabirimi & ROS 2 Köprüsü
+│   ├── planning/                      ← Kinematik Hibrit A* & Quintic Polynomial Planlayıcı
+│   ├── security/                      ← ISO 26262 ASIL-D MRM, Watchdog & Güvenlik Kalkanı
+│   ├── slam/                          ← GNSS-Denied 3D NDT Pose-Graph SLAM & 400Hz ESKF
+│   ├── tests/                         ← 1.305 Adet Otomatik Birim & Entegrasyon Testi
+│   └── tools/                         ← build_enterprise_sdk.py (Kapalı Kutu Dağıtım Aracı)
+├── 02_Trustia_Web_Platformu/          ← Web Platformu (Next.js 16, Three.js WebGL Telemetri)
+├── Kurumsal/                          ← Birleşik Kurumsal ve Yasal Varlıklar
+│   ├── Belgeler/                      ← Resmi Tescil, Tedarikçi ve Akreditasyon Belgeleri
+│   ├── Sunumlar/                      ← Pitch Deck'ler, BOM Listeleri ve Mühendislik Planları
+│   ├── Basvurular/                    ← Destek, Hibe ve Hızlandırma Takip Kütükleri
+│   └── Medya/                         ← Yüksek Çözünürlüklü Kurumsal Logolar ve Videolar
+├── .gitignore                         ← Temiz Git Dışlama Kuralları
+├── AGENTS.md                          ← Yapay Zeka Asistanları ve Geliştirici Çalışma Rehberi
+└── README.md                          ← Ana Kurumsal Tanıtım ve Mühendislik Dokümantasyonu
 ```
 
 ---
 
-## 🧠 GÜNCEL KURUMSAL DURUM & KALICI HAFIZA
-* **Kurucu:** Murat Furkan Bayram (%100 CEO & Sistem Mimarı, 0537 064 04 60, kariyer@trustia.com.tr).
-* **Mühendislik:** Denizcan Özcan (ASELSAN Aday Havuzu & TEKNOFEST Robotaksi Finalisti).
-* **Resmi Akreditasyonlar:**
-  * 🇪🇺 Avrupa Komisyonu PIC: `861711529`
-  * 🇪🇺 EIT Urban Mobility Partner ID: `CUS15554` (€100k hibe başvurusu)
-  * 🇹🇷 ASELSAN Potansiyel Tedarikçi (`0050569CCE941FD1A49FCEFB9B7BE7D6`, SAP: `FZQHEXGFMTJU`) & Axcelerate AGM Başvurusu (Uygunluk Aşamasında)
-  * 🇹🇷 ŞirketOrtağım Melek Yatırımcı Ağı Başvurusu (Komite İncelemesinde)
-  * 🇹🇷 BAYKAR Tedarikçi Başvurusu
-  * 🇹🇷 DEİK Dijital Teknolojiler İş Konseyi Üyelik Daveti
-  * 🎖️ NATO NCAGE Tedarikçi Kodu (`TR26258467723` - MSB Onayında)
-  * 🛡️ Open Invention Network (OIN 2.0) İmzalı Patent Savunma Paktı Lisansı
-  * 🇲🇹 Malta Enterprise €1.5M Hibe & MSRP İkamet Başvuruları
-  * 🇶🇦 QSTP Katar 30M$ Fon + Doha Sprint Başvurusu
-  * 🇺🇸 Dorm Room Fund (First Round Capital)
-  * 🇹🇷 İTO BTM Fulya Kampüsü Ön Kuluçka & Teknopark İstanbul HASAT 2026
-  * 📜 KOSGEB (`KSB01UGE0115153370`) ve BTK Savunma Sanayii (`L2zPtN4X1ZJ`) Sertifikaları
+## 🧠 GÜNCEL KURUMSAL TESCİLLER & KALICI HAFIZA (12 EKİM 2026)
+
+* **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Mülkiyet, Tel: +90 537 064 0460, E-posta: `kariyer@trustia.com.tr` / `iletisim@trustia.com.tr`).
+* **Resmi Akreditasyon ve Tescil Kütüğü:**
+  * 🛡️ **ASELSAN A.Ş.:** Onaylı Tedarikçi Kütüğü (Firma Kodu: `#0050569`, SAP: `FZQHEXGFMTJU`).
+  * 🎖️ **NATO / MSB:** Resmi NATO Ticari ve Devlet Kuruluşu Kodu (`NCAGE: TR26258467723`).
+  * 🇹🇷 **STM Savunma Teknolojileri:** Aday Tedarikçi Kütüğü.
+  * 🇪🇺 **Avrupa Komisyonu:** Katılımcı Kimlik Kodu (`EU PIC: 861711529`).
+  * 🇪🇺 **EIT Urban Mobility:** Partner ID (`CUS15554`).
+  * 🚀 **Teknopark İstanbul (Cube Incubation):** Ön Kuluçka Girişimi & HASAT 2026 Hızlandırma Programı.
+  * 🏛️ **İTO BTM (Fulya Derin Teknoloji Kampüsü):** Yerleşik Girişimci.
+  * 🎓 **YTÜ Yıldız Teknopark:** Ekosistem ve Ön Kuluçka Başvurusu.
+  * 🛡️ **Open Invention Network (OIN):** İmzalı İkili Patent Savunma Paktı Lisansı.
+  * 📜 **KOSGEB:** İleri Girişimci Sertifikası (`KSB01UGE0115153370`).
+  * 📜 **BTK:** Savunma Sanayii ve Yapay Zeka Sertifikasyonu (`L2zPtN4X1ZJ`).
+  * 🚗 **Martı Technologies (TAVA İttifakı):** Robotaksi filo entegrasyonu ve teknik inceleme süreci.
+
+---
+*© 2026 Trustia AI Technologies. Tüm hakları saklıdır.*
