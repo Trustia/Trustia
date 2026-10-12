@@ -2,7 +2,7 @@
 
 ![Trustia Banner](Kurumsal/Medya/Banner.jpg)
 
-[![Test Durumu](https://img.shields.io/badge/Testler-1%2C305%20Ba%C5%9Far%C4%B1l%C4%B1%20(%25100)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
+[![Test Durumu](https://img.shields.io/badge/Testler-1%2C307%20Ba%C5%9Far%C4%B1l%C4%B1%20(%25100)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
 [![C++20 & ROS 2](https://img.shields.io/badge/C%2B%2B-20%20%7C%20ROS%202-00599C?logo=c%2B%2B&logoColor=white)](https://github.com/Trustia/Trustia)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)](https://nextjs.org)
@@ -14,7 +14,7 @@
 [![AB PIC](https://img.shields.io/badge/EU%20PIC-861711529-blue.svg)](https://trustia.com.tr)
 
 > **Ticari yolcu robotaksileri, fabrika/depo içi otonom lojistik araçları (AMR/AGV), otonom kampüs servisleri ve savunma sanayii insansız kara araçları (İKA) için sıfırdan C++20, ROS 2 ve Python ile geliştirilmiş; donanımdan bağımsız, GNSS-Denied 3D LiDAR SLAM tabanlı Seviye-4 Otonom Sürüş Motoru.**  
-> **1.305 adet otomatik birim ve entegrasyon testi ile %100 doğrulanmış, yerel CAN-FD araç kontrol ağ geçitlerine sahip, harici kapalı kutu bağımlılığı bulunmayan kurumsal B2B otonomi yığını.**
+> **1.307 adet otomatik birim ve entegrasyon testi ile %100 doğrulanmış, yerel CAN-FD araç kontrol ağ geçitlerine sahip, harici kapalı kutu bağımlılığı bulunmayan kurumsal B2B otonomi yığını.**
 
 ---
 
@@ -135,9 +135,9 @@ Yazılım başlatıldığı anda bu parametreleri yükler; Ackermann dönüş ge
 
 ---
 
-## 📊 5. 1.305 Testlik Otomatik Doğrulama Kütüphanesi
+## 📊 5. 1.307 Testlik Otomatik Doğrulama Kütüphanesi
 
-Trustia kod tabanındaki tüm matematiksel modeller, algılama filtreleri, yörünge planlayıcılar ve CAN-FD iletişim döngüleri, **1.305 adet otomatik test** ile sürekli doğrulanmaktadır:
+Trustia kod tabanındaki tüm matematiksel modeller, algılama filtreleri, yörünge planlayıcılar ve CAN-FD iletişim döngüleri, **1.307 adet otomatik test** ile sürekli doğrulanmaktadır:
 
 | Modül / Alt Sistem | Test Kapsamı ve Odak Noktası | Geçen Test Sayısı | Durum |
 | :--- | :--- | :---: | :---: |
@@ -149,9 +149,8 @@ Trustia kod tabanındaki tüm matematiksel modeller, algılama filtreleri, yör�
 | **`security/` & Emniyet Protokolleri** | Otomotiv siber güvenlik, telemetri şifreleme, ASIL-D MRM E-Stop (`system5`) | **28 / 28** | `GEÇTİ` ✅ |
 | **`command/` & Filo Yönetimi** | Robotaksi çağrı dağıtıcı, filo rota motoru, teleoperasyon (`system34`) | **47 / 47** | `GEÇTİ` ✅ |
 | **`certification/` & Senaryo Matrisi** | %100 Determinizm, stres testleri, hata enjeksiyon senaryoları (`system7`) | **734 / 734** | `GEÇTİ` ✅ |
-| **`advanced_2026/` & L4 Donanım Katmanı** | Hyundai Ioniq 5 CAN-FD DBC, Jetson Orin sürücüleri (`system10`) | **20 / 20** | `GEÇTİ` ✅ |
-| **`enterprise_sdk/` & Lisans Koruması** | HMAC-SHA256 donanım kilidi, yetkisiz kopyalama engeli, SDK API | **4 / 4** | `GEÇTİ` ✅ |
-| **TOPLAM DOĞRULANMIŞ TEST SETİ** | **Eksiksiz Tam Seviye-4 Otonom Sistem Mimarisi** | **1.305 / 1.305** | **`%100 BAŞARILI`** 🚀 |
+| **`advanced_2026/` & L4 Donanım Katmanı** | Hyundai Ioniq 5 CAN-FD DBC, Jetson Orin sürücüleri (`system10`) | **26 / 26** | `GEÇTİ` ✅ |
+| **TOPLAM DOĞRULANMIŞ TEST SETİ** | **Eksiksiz Tam Seviye-4 Otonom Sistem Mimarisi** | **1.307 / 1.307** | **`%100 BAŞARILI`** 🚀 |
 
 ---
 
@@ -178,7 +177,7 @@ Trustia, müşterilere (OEM'ler, filo operatörleri ve entegratörler) **kapalı
 Trustia/
 ├── 📂 .github/workflows/                 <-- Otomatik CI/CD ve Test Doğrulama Pipeline'ı
 │   ├── 📜 deploy.yml                     <-- Canlı Dağıtım İş Akışı
-│   └── 📜 ci.yml                         <-- 1.305 Testlik Doğrulama Pipeline'ı
+│   └── 📜 ci.yml                         <-- 1.307 Testlik Doğrulama Pipeline'ı
 ├── 📂 01_Trustia_Otonom_Yazilim_Core/    <-- 16.400+ Satır Seviye-4 Çekirdek Kod & Testler
 │   ├── 📂 ai/                            <-- 3D Engel Tespiti ve Çevresel Algılama
 │   ├── 📂 command/                       <-- Robotaksi Filo Çağrı Motoru ve Teleoperasyon
@@ -188,7 +187,7 @@ Trustia/
 │   ├── 📂 planning/                      <-- Hibrit A* Ackermann Yörünge Planlayıcıları
 │   ├── 📂 security/                      <-- AES-256 Şifreleme, Watchdog ve ASIL-D MRM Motoru
 │   ├── 📂 slam/                          <-- GNSS-Denied 3D NDT SLAM ve LiDAR Odometrisi
-│   ├── 📂 tests/                         <-- 1.305 Otomatik Birim ve Entegrasyon Testi
+│   ├── 📂 tests/                         <-- 1.307 Otomatik Birim ve Entegrasyon Testi
 │   ├── 📂 tools/                         <-- Enterprise SDK Derleme ve Paketleme Araçları
 │   └── 📜 trustia_cli.py                 <-- CLI Yönetim ve Test Konsolu
 ├── 📂 02_Trustia_Web_Platformu/          <-- Next.js 16 Web Platformu ve 3D Gösterge Paneli
@@ -212,7 +211,7 @@ Yazılım çekirdeğindeki tüm testleri yerel ortamda çalıştırmak için:
 # 1. Otonom yazılım dizinine geçiş yapın
 cd 01_Trustia_Otonom_Yazilim_Core
 
-# 2. 1.305 adet otomatik testi çalıştırın
+# 2. 1.307 adet otomatik testi çalıştırın
 pytest tests/ -q --tb=short
 
 # 3. Sistem denetim raporunu görüntüleyin

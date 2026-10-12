@@ -10,7 +10,7 @@
 
 ### 1. 3 ANA KLASÖR DÜZENİ (TEMİZ REPO MİMARİSİ)
 Tüm proje varlıkları istisnasız aşağıdaki 3 ana dizin altında organize edilir:
-1. **`01_Trustia_Otonom_Yazilim_Core/`**: Seviye-4 otonomi yazılımı (C++20/ROS2/Python), 1.305 testlik doğrulama kütüphanesi, CAN-FD sürücüleri, 3D LiDAR SLAM ve Enterprise SDK derleyicisi.
+1. **`01_Trustia_Otonom_Yazilim_Core/`**: Seviye-4 otonomi yazılımı (C++20/ROS2/Python), 1.307 testlik doğrulama kütüphanesi, CAN-FD sürücüleri, 3D LiDAR SLAM ve Enterprise SDK derleyicisi.
 2. **`02_Trustia_Web_Platformu/`**: Kurumsal web sitesi (`website/`, Next.js 16, React 19 ve 3D Three.js telemetri arayüzü).
 3. **`Kurumsal/`**: Resmi devlet, savunma ve akreditasyon belgeleri (`Belgeler/`, `Sunumlar/`, `Basvurular/`, `Medya/`).
 * *Kök dizine veya masaüstüne geçici, döküntü veya mükerrer dosya bırakılamaz.*
@@ -25,8 +25,8 @@ Tüm proje varlıkları istisnasız aşağıdaki 3 ana dizin altında organize e
 * Araç boyutları (dingil mesafesi, maksimum dönüş açısı), hız limitleri ve CAN parametreleri sadece ve sadece **`config/vehicle_config.yaml`** üzerinden yönetilir.
 * Yazılım; hem şehir içi Robotaksiyi (50 km/s), hem fabrika içi ağır yük AGV'sini (15 km/s), hem de havalimanı ring servisini aynı çekirdekle çalıştırır.
 
-### 4. 1.305 TESTİN KESİNTİSİZ %100 YEŞİL KALMASI
-* Yapılan her kod değişikliğinden sonra `pytest tests/ -q` komutu koşturulmalı ve **1.305 testin tamamının (%100) yeşil geçtiği** teyit edilmelidir.
+### 4. 1.307 TESTİN KESİNTİSİZ %100 YEŞİL KALMASI
+* Yapılan her kod değişikliğinden sonra `pytest tests/ -q` komutu koşturulmalı ve **1.307 testin tamamının (%100) yeşil geçtiği** teyit edilmelidir.
 * 0 başarısızlık (0 failure) ve 0 hata (0 error) kuralı esnetilemez.
 
 ### 5. OTOMOTİV EMNİYET VE ASIL-D FAILSAFE GÜVENCESİ
@@ -42,7 +42,7 @@ Tüm proje varlıkları istisnasız aşağıdaki 3 ana dizin altında organize e
 
 ```text
 Trustia/
-├── 01_Trustia_Otonom_Yazilim_Core/    ← 16.400+ Satır L4 Çekirdek, 1.305 Test, CAN-FD Hyundai Ioniq 5
+├── 01_Trustia_Otonom_Yazilim_Core/    ← 16.400+ Satır L4 Çekirdek, 1.307 Test, CAN-FD Hyundai Ioniq 5
 │   ├── ai/                            ← 3D Zemin Ayrıştırma, Engel Kümeleme & OBB
 │   ├── command/                       ← Robotaksi Filo Çağrı & Dağıtım Motoru
 │   ├── control/                       ← Pure Pursuit / Stanley Yanal Kontrol & DBC Kodlama
@@ -51,7 +51,7 @@ Trustia/
 │   ├── planning/                      ← Kinematik Hibrit A* & Quintic Polynomial Planlayıcı
 │   ├── security/                      ← ISO 26262 ASIL-D MRM, Watchdog & Güvenlik Kalkanı
 │   ├── slam/                          ← GNSS-Denied 3D NDT Pose-Graph SLAM & 400Hz ESKF
-│   ├── tests/                         ← 1.305 Adet Otomatik Birim & Entegrasyon Testi
+│   ├── tests/                         ← 1.307 Adet Otomatik Birim & Entegrasyon Testi
 │   └── tools/                         ← build_enterprise_sdk.py (Kapalı Kutu Dağıtım Aracı)
 ├── 02_Trustia_Web_Platformu/          ← Web Platformu (Next.js 16, Three.js WebGL Telemetri)
 ├── Kurumsal/                          ← Birleşik Kurumsal ve Yasal Varlıklar

@@ -1,4 +1,4 @@
-name: Trustia Continuous Integration & Verification
+name: Trustia Continuous Integration & Verification (CI)
 
 on:
   push:
@@ -12,46 +12,46 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  autonomy-core-tests:
-    name: Autonomy Core 1,301 Unit & Integration Tests
+  autonomy-core-verification:
+    name: Seviye-4 Otonomi Çekirdeği 1.307 Birim & Entegrasyon Testi
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Source Code
+      - name: Kaynak Kodunu İndir (Checkout)
         uses: actions/checkout@v4
 
-      - name: Setup Python 3.12
+      - name: Python 3.12 Kurulumu
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install Testing Dependencies
+      - name: Test Bağımlılıklarını Yükle
         run: |
           python -m pip install --upgrade pip
-          pip install pytest numpy
+          pip install pytest numpy pyyaml
 
-      - name: Execute 1,301 Automated Verification Suite
+      - name: 1.307 Otomatik Doğrulama Testini Koştur
         run: |
           cd 01_Trustia_Otonom_Yazilim_Core
           PYTHONPATH=. pytest tests/ -q --tb=short
 
   web-platform-build:
-    name: Web Platform Next.js 16 Production Build Verification
+    name: Next.js 16 Web & Telemetri Platformu Derleme Doğrulaması
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Source Code
+      - name: Kaynak Kodunu İndir (Checkout)
         uses: actions/checkout@v4
 
-      - name: Setup Node.js 20
+      - name: Node.js 20 Kurulumu
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
           cache-dependency-path: 02_Trustia_Web_Platformu/website/package-lock.json
 
-      - name: Install Node Dependencies
+      - name: Web Bağımlılıklarını Yükle
         run: npm ci
         working-directory: 02_Trustia_Web_Platformu/website
 
-      - name: Build and Export Website
+      - name: Statik Web Çıktısını Derle (Export)
         run: npm run build
         working-directory: 02_Trustia_Web_Platformu/website
