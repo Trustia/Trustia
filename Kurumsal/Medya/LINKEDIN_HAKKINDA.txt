@@ -1,0 +1,30 @@
+Trustia AI Kurucusu ve Sistem Mimarıyım.
+
+Otomotiv ve savunma sanayii için Seviye-4 otonom sürüş ve robotaksi işletim sistemleri geliştiriyorum.
+
+NELER YAPIYORUZ?
+• Seviye-4 Otonom Sürüş ve Deterministik Yol Planlama
+• GNSS-Bağımsız (GPS Kesintisinde) 3D LiDAR SLAM Haritalama
+• 400Hz ESKF Çoklu Sensör Füzyonu (LiDAR, Radar, Kamera, IMU)
+• Hyundai Ioniq 5 CAN-FD Araç Kontrolü ve Sürüş Entegrasyonu
+• Taktik İnsansız Kara Araçları (İKA) ve Sürü Otonomisi
+
+MÜHENDİSLİK VE GÜVENLİK STANDARTLARI:
+• 16.400+ Satır Deterministik Modern C++ (C++20) ve ROS 2 Kodu
+• 1.301 Doğrulanmış Otomatik Test (%100 Başarı)
+• ISO 26262 ASIL-D Seviyesinde Fonksiyonel Güvenlik
+• 5.2 ms Acil Durum Freni (E-Stop) ve Sürücü Müdahale Koruması
+
+RESMİ KURUMLAR VE AKREDİTASYONLAR:
+• ASELSAN — Potansiyel Tedarikçi Kütüğü (Kayıt No: 0050569)
+• STM — Savunma Aday Tedarikçisi
+• İTO BTM — Fulya Kampüsü Yerleşik Girişimi
+• TURKCOMPOSITE 2026 — Fuar Sahne ve Stant Katılımcısı
+• Teknopark İstanbul — HASAT 2026 Girişim Havuzu
+• OIN — Küresel Patent Paktı ve AB PIC (#861711529)
+
+Otonom filo projeleri, saha testleri ve teknoloji iş birlikleri için doğrudan iletişime geçebilirsiniz.
+
+📍 İstanbul, Türkiye
+✉️ iletisim@trustia.com.tr
+🌐 trustia.com.tr

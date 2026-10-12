@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Trustia AI - Seviye-4 Otonom Sistem ve Fikri Mülkiyet Kitabı</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #E2E8F0;
+      color: #0F172A;
+      margin: 0;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background: #FFFFFF;
+      padding: 16mm 18mm 14mm 22mm; /* Sol payı cilt/spiral için 22mm */
+      position: relative;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    /* HEADER & RUNNING HEAD */
+    .doc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1.5px solid #0F172A;
+      padding-bottom: 3.5mm;
+      margin-bottom: 5mm;
+    }
+
+    .header-logo-group {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .header-logo {
+      font-size: 15pt;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #0F172A;
+    }
+
+    .header-logo span {
+      color: #0284C7;
+    }
+
+    .header-doc-type {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.5pt;
+      font-weight: 600;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .header-meta {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.5pt;
+      color: #64748B;
+      line-height: 1.4;
+    }
+
+    /* FOOTER & RUNNING FOOT */
+    .doc-footer {
+      border-top: 1px solid #CBD5E1;
+      padding-top: 3.5mm;
+      margin-top: 4mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 7pt;
+      color: #64748B;
+    }
+
+    .doc-footer-left {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .security-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6pt;
+      font-weight: 700;
+      background: #F1F5F9;
+      border: 1px solid #CBD5E1;
+      padding: 1px 5px;
+      border-radius: 2px;
+      color: #334155;
+    }
+
+    .doc-footer-right {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      color: #0F172A;
+    }
+
+    /* TYPOGRAPHY */
+    .chapter-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #0284C7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.5mm;
+    }
+
+    .chapter-title {
+      font-size: 19pt;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.4px;
+      line-height: 1.2;
+      margin-bottom: 3.5mm;
+    }
+
+    .chapter-desc {
+      font-size: 9pt;
+      line-height: 1.55;
+      color: #334155;
+      margin-bottom: 4.5mm;
+    }
+
+    /* TECHNICAL TABLES */
+    .tech-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 7.5pt;
+      margin-bottom: 4.5mm;
+    }
+
+    .tech-table th {
+      background: #0F172A;
+      color: #FFFFFF;
+      text-align: left;
+      padding: 6px 8px;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      letter-spacing: 0.5px;
+    }
+
+    .tech-table td {
+      padding: 5.5px 8px;
+      border-bottom: 1px solid #E2E8F0;
+      color: #1E293B;
+      line-height: 1.4;
+    }
+
+    .tech-table tr:nth-child(even) td {
+      background: #F8FAFC;
+    }
+
+    .tech-table td strong {
+      color: #0F172A;
+      font-weight: 600;
+    }
+
+    .tech-table .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+    }
+
+    .status-pass {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.5pt;
+      font-weight: 700;
+      color: #16A34A;
+      background: #DCFCE7;
+      padding: 1px 5px;
+      border-radius: 2px;
+      display: inline-block;
+    }
+
+    /* METRIC CALLOUT BOXES */
+    .kpi-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3mm;
+      margin-bottom: 4.5mm;
+    }
+
+    .kpi-card {
+      border: 1px solid #CBD5E1;
+      border-left: 3.5px solid #0284C7;
+      background: #F8FAFC;
+      padding: 3mm 3.5mm;
+    }
+
+    .kpi-card.green { border-left-color: #16A34A; }
+    .kpi-card.slate { border-left-color: #0F172A; }
+    .kpi-card.amber { border-left-color: #D97706; }
+
+    .kpi-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14pt;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1;
+    }
+
+    .kpi-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 6.8pt;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      margin-top: 1.5mm;
+    }
+
+    .kpi-sub {
+      font-size: 6.2pt;
+      color: #64748B;
+      margin-top: 0.8mm;
+      line-height: 1.3;
+    }
+
+    /* DUAL COLUMN LAYOUT */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5mm;
+      margin-bottom: 4mm;
+    }
+
+    .card-box {
+      border: 1px solid #E2E8F0;
+      background: #FFFFFF;
+      padding: 4mm;
+      border-radius: 2px;
+    }
+
+    .card-title {
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 2mm;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-title::before {
+      content: "";
+      width: 4px;
+      height: 12px;
+      background: #0284C7;
+      display: inline-block;
+    }
+
+    .card-body {
+      font-size: 7.6pt;
+      line-height: 1.55;
+      color: #334155;
+    }
+
+    .card-body ul {
+      margin-left: 4mm;
+      margin-top: 1.5mm;
+    }
+
+    .card-body li {
+      margin-bottom: 1.2mm;
+    }
+
+    /* SCHEMATIC BLUEPRINT BOX */
+    .blueprint-box {
+      background: #0F172A;
+      color: #E2E8F0;
+      padding: 4.5mm;
+      border-radius: 3px;
+      margin-bottom: 4.5mm;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      line-height: 1.5;
+    }
+
+    .blueprint-title {
+      color: #38BDF8;
+      font-size: 8pt;
+      font-weight: 700;
+      margin-bottom: 2.5mm;
+      border-bottom: 1px dashed #334155;
+      padding-bottom: 1.5mm;
+    }
+
+    /* COVER PAGE SPECIAL STYLES */
+    .cover-page {
+      background: #FFFFFF;
+      padding: 22mm 20mm 18mm 25mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 297mm;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .cover-border-stripe {
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 8mm;
+      background: #0F172A;
+    }
+
+    .cover-sub-stripe {
+      position: absolute;
+      top: 0; left: 8mm; bottom: 0;
+      width: 2mm;
+      background: #0284C7;
+    }
+
+    .cover-top {
+      margin-top: 6mm;
+    }
+
+    .cover-org {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5pt;
+      font-weight: 700;
+      color: #475569;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .cover-doc-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8pt;
+      color: #64748B;
+      margin-top: 1.5mm;
+    }
+
+    .cover-middle {
+      margin: 10mm 0;
+    }
+
+    .cover-main-title {
+      font-size: 28pt;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      border-left: 5px solid #0F172A;
+      padding-left: 6mm;
+      margin-bottom: 4mm;
+    }
+
+    .cover-main-title span {
+      color: #0284C7;
+    }
+
+    .cover-subtitle {
+      font-size: 12.5pt;
+      font-weight: 500;
+      color: #334155;
+      line-height: 1.45;
+      padding-left: 7.5mm;
+      max-width: 90%;
+    }
+
+    .cover-vehicle-preview {
+      margin: 6mm 0 6mm 7.5mm;
+      border: 1px solid #CBD5E1;
+      background: #F8FAFC;
+      padding: 3mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60mm;
+    }
+
+    .cover-vehicle-preview img {
+      max-height: 52mm;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .cover-specs-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+      margin-left: 7.5mm;
+      margin-bottom: 6mm;
+    }
+
+    .cover-spec-cell {
+      border-top: 2px solid #0F172A;
+      padding-top: 2mm;
+    }
+
+    .cover-spec-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0F172A;
+    }
+
+    .cover-spec-lbl {
+      font-size: 6.5pt;
+      color: #64748B;
+      text-transform: uppercase;
+      margin-top: 0.5mm;
+    }
+
+    .cover-bottom {
+      border-top: 1.5px solid #0F172A;
+      padding-top: 4mm;
+      margin-left: 7.5mm;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .cover-author {
+      font-size: 8.5pt;
+      line-height: 1.4;
+      color: #1E293B;
+    }
+
+    .cover-author strong {
+      font-size: 10pt;
+      color: #0F172A;
+    }
+
+    .cover-date-box {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7pt;
+      color: #475569;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================================================================
+       SAYFA 1: DIŞ KAPAK (EXECUTIVE HARDCOVER)
+       =================================================================== -->
+  <div class="page cover-page">
+    <div class="cover-border-stripe"></div>
+    <div class="cover-sub-stripe"></div>
+
+    <div class="cover-top">
+      <div class="cover-org">TRUSTIA AI AUTONOMOUS MOBILITY TECHNOLOGIES</div>
+      <div class="cover-doc-id">DOKÜMAN TANIMI: TEKNİK SPESİFİKASYON, MİMARİ VE IP VARLIK DOSYASI &bull; REV 4.2</div>
+    </div>
+
+    <div class="cover-middle">
+      <div class="cover-main-title">
+        SEVİYE-4 OTONOM SÜRÜŞ VE<br>
+        <span>GNSS-DENIED SLAM</span> YAZILIM ÇEKİRDEĞİ
+      </div>
+      <div class="cover-subtitle">
+        Sivil Robotaksiler, Elektrikli Kampüs Servisleri, Fabrika İntralojistiği (AMR) ve Taktik İKA Platformları İçin Üretime Hazır Görev Kritik Otonomi Yığını
+      </div>
+
+      <div class="cover-vehicle-preview">
+        <img src="../Medya/Arac_Lidar.png" alt="Trustia Otonom Test Aracı">
+      </div>
+
+      <div class="cover-specs-strip">
+        <div class="cover-spec-cell">
+          <div class="cover-spec-val">16.400+ LOC</div>
+          <div class="cover-spec-lbl">C++20 &amp; Python 3.12 Çekirdeği</div>
+        </div>
+        <div class="cover-spec-cell">
+          <div class="cover-spec-val">1.301 / 1.301</div>
+          <div class="cover-spec-lbl">%100 Otomatik Test Kapsamı</div>
+        </div>
+        <div class="cover-spec-cell">
+          <div class="cover-spec-val">ISO 26262 ASIL-D</div>
+          <div class="cover-spec-lbl">5.2 ms Donanım E-Stop Hattı</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-author">
+        <strong>Murat Furkan Bayram</strong><br>
+        Kurucu &amp; Otonom Sistemler Başmimarı<br>
+        İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Yerleşkesi, Şişli / İstanbul
+      </div>
+      <div class="cover-date-box">
+        YAYIN TARİHİ: EKİM 2026<br>
+        TURKCOMPOSITE 2026 RESMİ YAYINI<br>
+        İSTANBUL FUAR MERKEZİ (İFM)
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 2: KURUMSAL KÜNYE, AKREDİTASYONLAR VE YÖNETİCİ ÖZETİ
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 1: YÖNETİCİ ÖZETİ</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">STRATEJİK YATIRIM VE AR-GE DEĞERLENDİRMESİ</div>
+      <div class="chapter-title">Yönetici Özeti ve Uluslararası Ekosistem Konumu</div>
+      <div class="chapter-desc">
+        Otomotiv OEM’leri, savunma sanayii ana yüklenicileri (TUSAŞ, ASELSAN, BMC Power, Otokar) ve intralojistik platform üreticileri için sıfırdan Seviye-4 otonom sürüş yığını geliştirmek; 18-24 aylık yoğun Ar-Ge takvimi, çok disiplinli mühendis ordusu ve $1.8M+ USD doğrudan bütçe riski doğurur. Trustia L4 Core, bu belirsizliği tamamen sıfırlayan, üretim seviyesinde doğrulanmış bir teknoloji varlığıdır.
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-card">
+          <div class="kpi-val">18-24 Ay</div>
+          <div class="kpi-label">Pazara Çıkış Tasarrufu</div>
+          <div class="kpi-sub">Sıfırdan geliştirme süresini haftalara indirir</div>
+        </div>
+        <div class="kpi-card green">
+          <div class="kpi-val">$300K+ USD</div>
+          <div class="kpi-label">Asgari Ar-Ge Değeri</div>
+          <div class="kpi-sub">Mühendislik ve SIL simülasyon ikamesi</div>
+        </div>
+        <div class="kpi-card slate">
+          <div class="kpi-val">%100</div>
+          <div class="kpi-label">Temiz Fikri Mülkiyet</div>
+          <div class="kpi-sub">Sıfır borç, sıfır üçüncü parti lisans bağımlılığı</div>
+        </div>
+        <div class="kpi-card amber">
+          <div class="kpi-val">1.301 Test</div>
+          <div class="kpi-label">Doğrulanmış Güvenilirlik</div>
+          <div class="kpi-sub">CI/CD hattında 46.7 saniyede %100 geçiş</div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow" style="margin-top: 4mm;">ULUSLARARASI TESCİLLİ AKREDİTASYONLAR VE BAĞLANTILAR</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">Kurum / Platform</th>
+            <th style="width: 18%;">Merkez</th>
+            <th style="width: 32%;">Resmi Tescil ve Sicil Tanımı</th>
+            <th style="width: 25%;">Stratejik Durum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Open Invention Network (OIN)</strong></td>
+            <td>Durham, ABD</td>
+            <td class="mono">Executed Bilateral Patent Defense</td>
+            <td>Resmi Karşılıklı Patent Koruması</td>
+          </tr>
+          <tr>
+            <td><strong>Avrupa Komisyonu (EU Horizon)</strong></td>
+            <td>Brüksel, AB</td>
+            <td class="mono">PIC No: 861711529</td>
+            <td>Onaylı AB Ar-Ge Katılımcısı</td>
+          </tr>
+          <tr>
+            <td><strong>EIT Urban Mobility</strong></td>
+            <td>Barselona, AB</td>
+            <td class="mono">Partner ID: CUS15554</td>
+            <td>Kentsel Mobilite Program Ortağı</td>
+          </tr>
+          <tr>
+            <td><strong>Dubai World Challenge (RTA)</strong></td>
+            <td>Dubai, BAE</td>
+            <td class="mono">Autonomous Shuttle Entry Dossier</td>
+            <td>Otonom Taşımacılık Yarışma Dosyası</td>
+          </tr>
+          <tr>
+            <td><strong>İTO Bilgiyi Ticarileştirme Merkezi</strong></td>
+            <td>İstanbul, TR</td>
+            <td class="mono">Fulya Derin Teknoloji Kampüsü</td>
+            <td>Sözleşmeli Girişimci Statüsü</td>
+          </tr>
+          <tr>
+            <td><strong>Crunchbase Institutional Profile</strong></td>
+            <td>Küresel Veri Tabanı</td>
+            <td class="mono">Verified Deep-Tech Founder</td>
+            <td>Heat Score: 85 &bull; Global Rank: 534k</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="two-col" style="margin-top: 2mm;">
+        <div class="card-box">
+          <div class="card-title">Mimari Egemenlik ve Bağımsızlık</div>
+          <div class="card-body">
+            Kapalı kutu (black-box) yabancı yazılımlar, müşteriyi sürekli lisans yenilemeye ve donanım kısıtlamalarına mahkûm eder. Trustia L4 Core, tüm C++20 ve Python kaynak kodunu eksiksiz devrederek alıcı kuruma platformu kendi yerli ihtiyaçlarına göre özgürce değiştirme ve ölçekleme hakkı sunar.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">Donanım Bağımsız (Hardware-Agnostic) Yapı</div>
+          <div class="card-body">
+            Sistem belirli bir araç modeline bağımlı değildir. CAN-FD DBC aktüatör köprüsü sayesinde elektrikli binek araçlar (Hyundai Ioniq 5, VW ID. Buzz), hafif kampüs servisleri (Pilotcar, Tragger) veya savunma sanayii İKA şasileriyle doğrudan konuşur.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 02 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 3: SEVİYE-4 TAM YIĞIN (FULL-STACK) SİSTEM MİMARİSİ
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 2: SİSTEM MİMARİSİ</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">DETERMİNİSTİK 4 KATMANLI OTONOMİ MİMARİSİ</div>
+      <div class="chapter-title">Tam Yığın (Full-Stack) Sistem Akış Şeması</div>
+      <div class="chapter-desc">
+        Trustia L4 yazılım mimarisi, sensör algılamadan aktüatör tork komutlarına kadar 4 bağımsız ve deterministik katmandan oluşur. Gerçek zamanlı ara katman (ROS 2 Humble / CycloneDDS zero-copy shared memory) ile mikrodenetleyici seviyesinde determinizm garanti altına alınmıştır.
+      </div>
+
+      <div class="blueprint-box">
+        <div class="blueprint-title">KATMANLI SİSTEM BLOK ŞEMASI (CAD ARCHITECTURE BLUEPRINT)</div>
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  KATMAN 1: ÇOK MODLU SENSÖR ALGILAMA VE FÜZYON (PERCEPTION &amp; SLAM LAYER)               │
+│  - 360° 3D LiDAR (Ouster OS2-128 Rev 7 / Livox Mid-360): 1.3M - 2.62M Nokta/sn @ 20Hz   │
+│  - 4x Sony IMX390 HDR GMSL2 Otomotiv Kameraları (YOLOv8-TensorRT Real-Time @ 60 FPS)   │
+│  - 77 GHz Continental ARS408-21 Uzun Menzilli Radar + Çift Antenli Septentrio RTK INS │
+│  - 400Hz Hata-Durum Kalman Filtresi (ESKF) &amp; 3D NDT / ICP Pose-Graph Haritalama       │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ Zero-Copy Shared Memory IPC (CycloneDDS)
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  KATMAN 2: HAREKET PLANLAMA VE DAVRANIŞ KARAR MOTORU (PLANNING &amp; CONTROL)              │
+│  - Dinamik Maliyet Haritası (Static 2D Grid + Spatio-Temporal Dinamik Engel Katmanı)  │
+│  - Kinodinamik Hibrit A* (Ackermann Şasi Geometrisi) + Dinamik Pencere Yaklaşımı (DWA) │
+│  - Quintic Polinom Yumuşatma &amp; 100 Hz Model Tahminli Kontrol (MPC) Yanal/Boyuna Takip  │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ E-Stop Kesme Hattı / 5ms Donanım Önceliği
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  KATMAN 3: GÖREV KRİTİK EMNİYET VE BEKÇİ ZAMANLAYICI (ASIL-D DECOUPLED SAFETY)         │
+│  - 5.2 ms En Kötü Senaryo Yürütme Süresi (WCET) Acil Frenleme (AEB Pipeline)          │
+│  - 200 ms Donanımsal Canlılık Bekçisi (Watchdog Timer &amp; Dead-Man Relay Switch)         │
+│  - Plausibility Check, Mantıksal Tutarlılık Denetimi ve Minimum Risk Manevrası (MRM)   │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │ Çift Hatlı İzole CAN-FD Veriyolu (5.0 Mbps)
+                                            ▼
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│  KATMAN 4: DRIVE-BY-WIRE AKTÜATÖR ENTEGRASYONU (CAN-FD DBC GATEWAY)                    │
+│  - Kvaser U100 İzole Otomotiv Ağ Geçidi üzerinden Standart DBC Mesaj Akışı            │
+│  - 100 Hz Yanal Direksiyon Komut Enjeksiyonu (EPS LKAS11 Açı / Tork Talebi)           │
+│  - 50 Hz Boyuna İvme / Fren Komut Enjeksiyonu (iBooster / ESP SCC11 Hidrolik Basınç)  │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+      </div>
+
+      <div class="chapter-eyebrow" style="margin-top: 3mm;">MİMARİ PERFORMANS VE LATENS PARAMETRELERİ</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>İşlem Hattı</th>
+            <th>Giriş Sinyali</th>
+            <th>Hedef Modül</th>
+            <th>Maksimum Gecikme (WCET)</th>
+            <th>Frekans</th>
+            <th>Emniyet Seviyesi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Acil Durum Freni (E-Stop)</strong></td>
+            <td>Optik / Radar Tetikleyici</td>
+            <td>CAN-FD Fren Aktüatörü</td>
+            <td class="mono"><strong>5.2 ms</strong></td>
+            <td class="mono">500 Hz</td>
+            <td><span class="status-pass">ASIL-D</span></td>
+          </tr>
+          <tr>
+            <td><strong>SLAM / Lokalizasyon</strong></td>
+            <td>3D LiDAR Nokta Bulutu + IMU</td>
+            <td>ESKF Konum Füzyonu</td>
+            <td class="mono"><strong>2.5 ms</strong></td>
+            <td class="mono">400 Hz</td>
+            <td><span class="status-pass">ASIL-B</span></td>
+          </tr>
+          <tr>
+            <td><strong>Yol Takip Kontrolü (MPC)</strong></td>
+            <td>Hedef Trajektori &amp; Odometri</td>
+            <td>Direksiyon Açı Komutu</td>
+            <td class="mono"><strong>4.1 ms</strong></td>
+            <td class="mono">100 Hz</td>
+            <td><span class="status-pass">ASIL-C</span></td>
+          </tr>
+          <tr>
+            <td><strong>Nesne Tespiti (Vision AI)</strong></td>
+            <td>4K GMSL2 Kamera Beslemesi</td>
+            <td>TensorRT Engel Kutusu</td>
+            <td class="mono"><strong>16.6 ms</strong></td>
+            <td class="mono">60 FPS</td>
+            <td><span class="status-pass">ASIL-B</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 03 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 4: 400Hz GNSS-DENIED 3D LIDAR SLAM VE KONUMLANDIRMA
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 3: GNSS-DENIED SLAM</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">UYDU BAĞIMSIZ SANTİMETRE HASSASİYETİNDE NAVİGASYON</div>
+      <div class="chapter-title">400Hz ESKF &amp; 3D NDT LiDAR SLAM Çekirdeği</div>
+      <div class="chapter-desc">
+        Tüneller, yer altı madenleri, kapalı lojistik depoları ve elektronik harp/karıştırma (GNSS jamming &amp; spoofing) altındaki operasyon sahalarında uydu sinyalleri tamamen kaybolur. Trustia SLAM çekirdeği, hiçbir harici altyapı (beacon/çip) gerektirmeden yalnızca yerleşik 3D LiDAR ve yüksek hızlı ataletsel sensör füzyonuyla kesintisiz santimetre hassasiyeti sunar.
+      </div>
+
+      <div class="two-col">
+        <div class="card-box">
+          <div class="card-title">3D NDT / ICP Pose-Graph Haritalama</div>
+          <div class="card-body">
+            Geleneksel noktasal eşleme yerine <strong>Normal Distributions Transform (NDT)</strong> olasılıksal voxel ızgaraları kullanılır. 1.3 Milyon nokta/saniye LiDAR verisi 3 boyutlu elipsoid gauss dağılımlarına dönüştürülerek hesaplama yükü %75 düşürülür; tünel ve kapalı alanlarda kümülatif sürüklenme (drift) oranı <strong>&lt; %0.05</strong> seviyesinde tutulur.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">400 Hz Hata-Durum Kalman Filtresi (ESKF)</div>
+          <div class="card-body">
+            Septentrio taktik seviye IMU, tekerlek açısal enkoderleri ve LiDAR odometrisi 400 Hz frekansta gevşek/sıkı kuplajlı ESKF filtresinde birleştirilir. Sistem, saniyede 400 kez aracın 6-eksenli (x, y, z, roll, pitch, yaw) uzaysal matrisini güncelleyerek sarsıntılardan etkilenmeyen kusursuz bir dead-reckoning sağlar.
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow">GNSS KESİNTİSİ BENCHMARK VE PERFORMANS TABLOSU</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Operasyonel Çevre / Test Senaryosu</th>
+            <th>GNSS Durumu</th>
+            <th>Maksimum Yanal Sapma</th>
+            <th>Konum Doğruluğu</th>
+            <th>Yenileme Hızı</th>
+            <th>Algoritma Modu</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Karayolu Tüneli (3.2 km Avrasya/Bolu Benzetimi)</strong></td>
+            <td>Sıfır Sinyal (Denial)</td>
+            <td class="mono"><strong>&lt; 3.8 cm</strong></td>
+            <td class="mono">Santimetre Seviyesi</td>
+            <td class="mono">400 Hz</td>
+            <td>3D NDT + ESKF Dead-Reckoning</td>
+          </tr>
+          <tr>
+            <td><strong>Yüksek Binalı Kentsel Kanyon (Maslak/Levent)</strong></td>
+            <td>Multipath Bozulma</td>
+            <td class="mono"><strong>&lt; 2.1 cm</strong></td>
+            <td class="mono">Santimetre Seviyesi</td>
+            <td class="mono">400 Hz</td>
+            <td>RTK-GNSS + LiDAR Graph Optimization</td>
+          </tr>
+          <tr>
+            <td><strong>Kapalı Lojistik Deposu &amp; Fabrika İçi</strong></td>
+            <td>Tamamen Kapalı Alan</td>
+            <td class="mono"><strong>&lt; 1.5 cm</strong></td>
+            <td class="mono">Milimetre/Santimetre</td>
+            <td class="mono">400 Hz</td>
+            <td>Prior HD PCL Map + ICP Localization</td>
+          </tr>
+          <tr>
+            <td><strong>Elektronik Karıştırma (Taktik Savunma Alanı)</strong></td>
+            <td>Sahte Sinyal (Spoofing)</td>
+            <td class="mono"><strong>&lt; 4.2 cm</strong></td>
+            <td class="mono">Santimetre Seviyesi</td>
+            <td class="mono">400 Hz</td>
+            <td>GNSS Reddi &bull; Saf Ataletsel LiDAR SLAM</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-box" style="margin-top: 3mm;">
+        <div class="card-title">SLAM Alt Sistem Doğrulama Metrikleri (`system1` Test Raporu)</div>
+        <div class="card-body">
+          Bağımsız birim test paketinde yer alan <strong>73 SLAM doğrulama senaryosu (73/73 PASS)</strong> kapsamında; döngü kapanımı (loop closure), voxel zemin ayrıştırması, gürültü filtreleme ve harita birleştirme test edilmiş; CPU çekirdek kullanımının tek bir x86_64 çekirdeğinde <strong>%4.2</strong>'yi geçmediği kanıtlanmıştır.
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 04 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 5: HAREKET PLANLAMA VE KİNODİNAMİK KONTROL
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 4: PLANLAMA &amp; KONTROL</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">DİNAMİK ENGEL KAÇINMA VE YOL TAKİBİ</div>
+      <div class="chapter-title">Kinodinamik Hibrit A* ve 100 Hz MPC Kontrolör</div>
+      <div class="chapter-desc">
+        Otonom bir aracın yalnızca geometrik olarak yolu bulması yetersizdir; aracın fiziksel sınırları (maksimum direksiyon açısı, devrilme momenti, yol tutuş katsayısı ve konfor ivmelenmesi) hesaba katılmalıdır. Trustia Planlama ve Kontrol çekirdeği, Ackermann kinematik kısıtlarını gerçek zamanlı optimize eden çift aşamalı bir mimariye sahiptir.
+      </div>
+
+      <div class="two-col">
+        <div class="card-box">
+          <div class="card-title">Kinematik Hibrit A* Global Yol Planlayıcı</div>
+          <div class="card-body">
+            Geleneksel 2D grid arayıcıların aksine, aracın sürekli yönelimini (heading) ve minimum dönüş yarıçapını hesaplayan <strong>3D sürekli durum uzayı (x, y, θ)</strong> üzerinde arama yapar. Reeds-Shepp eğrileri entegrasyonu sayesinde dar sokaklarda ve park manevralarında dahi kilitlenmeden en uygun yörüngeyi milisaniyeler içinde çıkarır.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">100 Hz Model Tahminli Kontrol (MPC)</div>
+          <div class="card-body">
+            Hedef yol üzerindeki 20 adımlık geleceği (prediction horizon) çözerek aracın aerodinamik ve lastik kayma dinamiklerini modeller. 60 km/s hızda viraj alırken dahi yanal rota takip hatasını <strong>&lt; 3.2 cm</strong> sınırında tutar; Pure Pursuit ve Stanley kontrolörleriyle dinamik geçişli yedeklilik sağlar.
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow">YOL PLANLAMA VE YÖRÜNGE OPTİMİZASYON PARAMETRELERİ</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Modül İsmi</th>
+            <th>Algoritmik Altyapı</th>
+            <th>Hesaplama Döngüsü</th>
+            <th>Kısıt Parametreleri</th>
+            <th>Çıktı Formatı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Global Path Search</strong></td>
+            <td>Kinodynamic Hybrid A*</td>
+            <td class="mono">20 Hz (50 ms)</td>
+            <td>Ackermann Min. R = 4.8m</td>
+            <td class="mono">nav_msgs/Path (Spline Pts)</td>
+          </tr>
+          <tr>
+            <td><strong>Local Trajectory Spline</strong></td>
+            <td>Quintic Hermite Polynomial</td>
+            <td class="mono">50 Hz (20 ms)</td>
+            <td>C2 Sürekli Eğrilik (Jerk Free)</td>
+            <td class="mono">Parametric Velocity Profile</td>
+          </tr>
+          <tr>
+            <td><strong>Lateral Controller</strong></td>
+            <td>Model Predictive Control (MPC)</td>
+            <td class="mono">100 Hz (10 ms)</td>
+            <td>Direksiyon Açı Limiti &plusmn;42°</td>
+            <td class="mono">can_msgs/SteeringAngleCmd</td>
+          </tr>
+          <tr>
+            <td><strong>Longitudinal Controller</strong></td>
+            <td>Dynamic Window Approach (DWA)</td>
+            <td class="mono">50 Hz (20 ms)</td>
+            <td>Maks. İvme: 2.2 m/s² &bull; Fren: 6.5 m/s²</td>
+            <td class="mono">can_msgs/ThrottleBrakeCmd</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-box" style="margin-top: 3mm;">
+        <div class="card-title">Dinamik Engel Kaçınma ve Ön Görü Haritası (Costmap Engine)</div>
+        <div class="card-body">
+          LiDAR ve radar verileri anlık olarak <strong>0.1m çözünürlüklü spatio-temporal (uzay-zaman) maliyet haritasında</strong> işlenir. Yayaların ve diğer araçların hareket vektörleri 3 saniyelik tahmin konileriyle genişletilir; yol üzerine aniden çıkan engellerde sistem <strong>40 milisaniye içinde</strong> alternatif kaçış rotasını hesaplar veya konforlu duruş sekansını başlatır.
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 05 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 6: ISO 26262 ASIL-D EMNİYET VE 5MS DONANIM KİLİDİ
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 5: FONKSİYONEL EMNİYET</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">OTOMOTİV EMNİYET BÜTÜNLÜĞÜ VE FALL-SAFE MİMARİSİ</div>
+      <div class="chapter-title">ISO 26262 ASIL-D Fail-Safe ve 5ms Watchdog</div>
+      <div class="chapter-desc">
+        Otonom araçlarda yapay zeka ve işletim sistemi ne kadar gelişmiş olursa olsun, yazılım kilitlenmesi veya sensör arızası durumunda aracı fiziksel olarak güvenliğe çeken bağımsız bir donanım katmanı şarttır. Trustia emniyet çekirdeği, ana bilgisayardan tamamen izole edilmiş bağımsız bir ASIL-D güvenlik denetleyicisine sahiptir.
+      </div>
+
+      <div class="two-col">
+        <div class="card-box">
+          <div class="card-title">5.2 ms Anlık Sürücü / Donanım Müdahalesi</div>
+          <div class="card-body">
+            Fiziksel sürücü direksiyona <strong>&gt; 2.5 Nm</strong> tork uyguladığında veya frene <strong>&gt; 5 bar</strong> bastığında; yazılım kararı beklenmeksizin donanımsal kesme (hardware interrupt) hattı tetiklenir. <strong>5.2 milisaniye</strong> içinde otonom sürüş devreden çıkar ve kontrol %100 insana aktarılır.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">200 ms Dead-Man Donanımsal Bekçi (Watchdog)</div>
+          <div class="card-body">
+            Ana otonom bilgisayar (NVIDIA Orin / x86_64) her 50 milisaniyede bir bağımsız güvenlik mikrodenetleyicisine şifreli CRC-16 canlılık sinyali (heartbeat) göndermek zorundadır. Sinyal <strong>200 ms</strong> boyunca kesilirse watchdog rölesi fiziksel olarak devreyi açar ve aracı durdurur.
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow">FONKSİYONEL EMNİYET VE ARIZA DURUM SENARYOLARI</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Arıza Modu (Fault Condition)</th>
+            <th>Tespit Mekanizması</th>
+            <th>Tepki Süresi</th>
+            <th>Otomatik Güvenlik Eylemi</th>
+            <th>ASIL Sınıfı</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Ana İşlemci Kilitlenmesi (Kernel Panic)</strong></td>
+            <td>Donanımsal Watchdog Timer</td>
+            <td class="mono"><strong>&lt; 200 ms</strong></td>
+            <td>Donanım rölesi E-Stop hattını çeker, hidrolik fren kilitlenir</td>
+            <td><span class="status-pass">ASIL-D</span></td>
+          </tr>
+          <tr>
+            <td><strong>CAN-FD Hattı Kopması / Bus-Off</strong></td>
+            <td>Ağ Geçidi Alive Counter Hatası</td>
+            <td class="mono"><strong>&lt; 20 ms</strong></td>
+            <td>Yedek CAN-FD kanalına geçiş; başarısızsa MRM acil fren</td>
+            <td><span class="status-pass">ASIL-D</span></td>
+          </tr>
+          <tr>
+            <td><strong>LiDAR Sensör Veri Kaybı</strong></td>
+            <td>Veri Akış Frekans Denetçisi</td>
+            <td class="mono"><strong>&lt; 50 ms</strong></td>
+            <td>Kamera + Radar füzyonuna geçiş &bull; Hızı 20 km/s'ye düşür</td>
+            <td><span class="status-pass">ASIL-B</span></td>
+          </tr>
+          <tr>
+            <td><strong>Fiziksel Sürücü Müdahalesi (Takeover)</strong></td>
+            <td>Direksiyon / Fren Tork Sensörü</td>
+            <td class="mono"><strong>5.2 ms</strong></td>
+            <td>Otonomi hattını derhal baypas et, kontrolü sürücüye ver</td>
+            <td><span class="status-pass">ASIL-D</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-box" style="margin-top: 3mm;">
+        <div class="card-title">Minimum Risk Manevrası (MRM - Degraded State Machine)</div>
+        <div class="card-body">
+          Araç kaza yapacak bir konuma asla sokulmaz. Kritik bir donanım arızası (örneğin akü voltaj düşmesi veya çift sensör kaybı) algılandığında sistem **Minimum Risk Manevrası (MRM)** durumuna geçer: Dörtlü flaşörleri yakar, 0.3g kontrollü yavaşlama ile aracı mevcut şeridinde veya emniyet şeridine çekerek yumuşak bir şekilde tamamen durdurur.
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 06 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 7: DRIVE-BY-WIRE VE CAN-FD 5.0 Mbps ARAÇ ENTEGRASYONU
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 6: DRIVE-BY-WIRE &amp; CAN-FD</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">STANDART OTOMOTİV VERİYOLU AKTÜATÖR KÖPRÜSÜ</div>
+      <div class="chapter-title">Kvaser U100 İzole CAN-FD ve DBC Entegrasyonu</div>
+      <div class="chapter-desc">
+        Trustia L4 yazılım çekirdeği, araca özel mekanik modifikasyon gerektirmeksizin fabrikasyon elektrikli direksiyon (EPS), elektronik fren (iBooster / ESP) ve motor kontrol ünitesiyle (MCU) doğrudan konuşur. 5.0 Mbps esnek veri oranına (CAN-FD) sahip çift hatlı izole ağ geçidi, aktüatör gecikmesini sıfıra indirir.
+      </div>
+
+      <div class="two-col">
+        <div class="card-box">
+          <div class="card-title">100 Hz Yanal Direksiyon Enjeksiyonu (LKAS11)</div>
+          <div class="card-body">
+            Aracın elektrikli hidrolik direksiyon kontrolcüsüne (EPS) saniyede 100 kez hedeflenen tekerlek açısı ve tork sınırı enjekte edilir. Sistem dahili 4-bit canlılık sayacı ve 8-bit CRC sağlama toplamı içerir; fabrikasyon güvenlik duvarı (SGW) baypas soketine doğrudan bağlanır.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">50 Hz Boyuna Fren / Gaz Enjeksiyonu (SCC11)</div>
+          <div class="card-body">
+            Adaptif hız sabitleme ve elektronik stabilite programı (ESP) veriyolu üzerinden hidrolik fren basıncı (0 - 150 bar) ve motor çekiş torku doğrudan talep edilir. 0.01 bar hassasiyetle çalışan fren hattı, sarsıntısız ve milimetrik duruş kontrolü sağlar.
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow">STANDART DBC MESAJ ÇERÇEVESİ VE SİNYAL SPESİFİKASYONU</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>CAN-FD Mesaj ID</th>
+            <th>Mesaj Adı</th>
+            <th>Periyot</th>
+            <th>DLC</th>
+            <th>Kritik Sinyal Alanları</th>
+            <th>Emniyet Protokolü</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono"><strong>0x110 (272)</strong></td>
+            <td><code>STEER_CMD_100HZ</code></td>
+            <td class="mono">10 ms (100 Hz)</td>
+            <td class="mono">16 Bayt</td>
+            <td>SteeringAngleTarget (-45°..+45°), TorqueLimit (Nm)</td>
+            <td class="mono">AliveCounter + CRC-8</td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>0x120 (288)</strong></td>
+            <td><code>BRAKE_CMD_50HZ</code></td>
+            <td class="mono">20 ms (50 Hz)</td>
+            <td class="mono">16 Bayt</td>
+            <td>BrakePressureTarget (bar), DecelRequest (m/s²)</td>
+            <td class="mono">AliveCounter + CRC-8</td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>0x130 (304)</strong></td>
+            <td><code>THROTTLE_CMD_50HZ</code></td>
+            <td class="mono">20 ms (50 Hz)</td>
+            <td class="mono">16 Bayt</td>
+            <td>ThrottlePedalRatio (0..100%), TargetTorque (Nm)</td>
+            <td class="mono">Rolling Counter</td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>0x500 (1280)</strong></td>
+            <td><code>WATCHDOG_HEARTBEAT</code></td>
+            <td class="mono">2 ms (500 Hz)</td>
+            <td class="mono">8 Bayt</td>
+            <td>SystemHealthCode, E-StopArmedFlag, CPU_Load</td>
+            <td class="mono">CRC-16 Poly 0x1021</td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>0x210 (528)</strong></td>
+            <td><code>WHEEL_SPEED_FEEDBACK</code></td>
+            <td class="mono">10 ms (100 Hz)</td>
+            <td class="mono">32 Bayt</td>
+            <td>WheelSpeed_FL/FR/RL/RR (km/h), DirectionFlag</td>
+            <td class="mono">ISO 11898-1:2015</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-box" style="margin-top: 3mm;">
+        <div class="card-title">Desteklenen ve Doğrulanmış Araç Şasileri</div>
+        <div class="card-body">
+          Trustia DBW mimarisi; <strong>Hyundai Ioniq 5 / Kia EV6 (E-GMP Platformu)</strong>, <strong>Volkswagen ID. Buzz (MEB Şasisi)</strong>, <strong>Pilotcar PC-2 / PC-4 (Elektrikli Hizmet Araçları)</strong>, <strong>Tragger Pro (Endüstriyel Taşıyıcı)</strong> ve askeri 4x4/paletli İKA şasileri üzerinde test edilmiş ve tam aktüatör uyumluluğu belgelenmiştir.
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 07 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 8: DONANIM LİSTESİ VE RETROFIT SPESİFİKASYONU (BOM)
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 7: DONANIM &amp; SENSÖR KİTİ (BOM)</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">OTOMOTİV DERECELİ SEVİYE-4 DONANIM VE MALZEME LİSTESİ</div>
+      <div class="chapter-title">Merkezi Bilgisayar ve Sensör Entegrasyon Paketi</div>
+      <div class="chapter-desc">
+        Trustia L4 yazılım yığını, küresel tedarik zincirinde standart kabul edilen, otomotiv dereceli (AEC-Q100 / IP67) yüksek güvenilirlikli donanım bileşenleri için optimize edilmiştir. Alıcı kurum, aşağıdaki açık malzeme listesini (BOM) kullanarak herhangi bir elektrikli aracı 2 hafta içinde Seviye-4 otonom platforma dönüştürebilir.
+      </div>
+
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Alt Sistem</th>
+            <th>Donanım Modeli ve Üretici</th>
+            <th>Teknik Özellikler</th>
+            <th>Montaj Konumu &amp; Rolü</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Merkezi AI Bilgisayar</strong></td>
+            <td><strong>NVIDIA Jetson AGX Orin 64GB</strong><br>(Seeed J501 Carrier / Neousys)</td>
+            <td>275 TOPS INT8 &bull; 2048-Çekirdek Ampere GPU &bull; 12-Çekirdek ARMv8.2 CPU &bull; 64GB LPDDR5</td>
+            <td>Araç bagaj içi IP65 soğutmalı kabin &bull; Ana yapay zeka, SLAM ve planlama beyni</td>
+          </tr>
+          <tr>
+            <td><strong>Birincil 3D SLAM LiDAR</strong></td>
+            <td><strong>Ouster OS2-128 Rev 7</strong><br>(veya Velodyne Alpha Prime 128)</td>
+            <td>128 Kanal &bull; 240 metre menzil &bull; 2.62 Milyon Nokta/sn &bull; &plusmn;1.5 cm menzil hassasiyeti</td>
+            <td>Tavan merkezi aerodinamik kubbe &bull; 360° uzun menzilli haritalama ve engel tespiti</td>
+          </tr>
+          <tr>
+            <td><strong>Kör Nokta 3D LiDAR (2x)</strong></td>
+            <td><strong>Livox Mid-360</strong><br>(Solid-State Hibrit Prizma)</td>
+            <td>360° x 59° Ultra geniş FOV &bull; 40 metre menzil &bull; Kör nokta sıfırlayıcı &bull; IP67</td>
+            <td>Ön tampon sağ/sol ve arka köşe modülleri &bull; Yaya, kaldırım ve yakın çevre tespiti</td>
+          </tr>
+          <tr>
+            <td><strong>Çevre Görsel Kameralar (4x)</strong></td>
+            <td><strong>Leopard Sony IMX390 GMSL2</strong><br>(Otomotiv HDR 8MP Sensör)</td>
+            <td>120 dB Yüksek Dinamik Aralık (HDR) &bull; 60 FPS &bull; LED Flicker Azaltma &bull; IP67</td>
+            <td>Tavan ön, arka ve yan kanat podları &bull; Şerit takibi, trafik ışığı ve tabela tanıma</td>
+          </tr>
+          <tr>
+            <td><strong>Tüm Hava Radarı (77 GHz)</strong></td>
+            <td><strong>Continental ARS 408-21</strong><br>(Otomotiv 4D Dijital Radar)</td>
+            <td>250 metre menzil &bull; Sis, yoğun yağmur, toz fırtınasında sıfır körlük &bull; Hız &plusmn;0.1 km/s</td>
+            <td>Ön ızgara altı merkezi montaj &bull; Her hava şartında acil çarpışma önleme hattı</td>
+          </tr>
+          <tr>
+            <td><strong>Taktik GNSS / INS</strong></td>
+            <td><strong>Septentrio AsteRx-m3 Pro RTK</strong><br>(Dual-Antenna Heading)</td>
+            <td>Çift frekanslı RTK (1 cm hassasiyet) &bull; Dahili MEMS IMU &bull; 400Hz ESKF çıktı döngüsü</td>
+            <td>Tavan çift GNSS anteni &amp; ağırlık merkezinde IMU &bull; Mutlak referans yönelim</td>
+          </tr>
+          <tr>
+            <td><strong>İzole Ağ Geçidi</strong></td>
+            <td><strong>Kvaser U100 Isolated CAN-FD</strong><br>(Galvanik 5000V İzolasyon)</td>
+            <td>Çift Kanal CAN-FD (5 Mbps) &bull; Ağır sanayi / otomotiv darbe koruması</td>
+            <td>OBD-II / Şasi CAN hattı bağlantısı &bull; Aktüatör tork ve açı komut köprüsü</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="two-col" style="margin-top: 2mm;">
+        <div class="card-box">
+          <div class="card-title">Güç Dağıtım ve Voltaj Yönetimi (PDU)</div>
+          <div class="card-body">
+            Tüm otonomi kiti; 12V/24V araç aküsünden izole edilmiş <strong>Victron Energy DC-DC dönüştürücü ve 48V lityum yedek batarya</strong> üzerinden beslenir. Araç motoru veya ana batarya kapansa dahi otonomi sistemi <strong>30 dakika boyunca</strong> çalışmaya ve güvenli duruş protokolünü işletmeye devam eder.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">Termal ve Titreşim Dayanıklılığı</div>
+          <div class="card-body">
+            Tasarım, **-40°C ile +85°C** endüstriyel sıcaklık aralığına ve **ISO 16750-3** otomotiv mekanik titreşim/şok testlerine uygun olarak sertleştirilmiştir. Tozlu maden sahalarında ve engebeli arazilerde arızasız çalışır.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 08 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 9: 1.301 TESTLİK OTOMATİK DOĞRULAMA VE GÜVENİLİRLİK RAPORU
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 8: DOĞRULAMA &amp; TEST RAPORU</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">YAZILIM KALİTESİ, STATİK ANALİZ VE SİMÜLASYON TESTLERİ</div>
+      <div class="chapter-title">1.301 Testlik Otomatikleştirilmiş Doğrulama Süiti</div>
+      <div class="chapter-desc">
+        Trustia kod tabanının en büyük ticari değeri, "yazılıp bırakılmış bir prototip" olmaması; otomotiv havacılık standartlarında **1.301 otomatik testten oluşan kapsamlı bir CI/CD regresyon süitiyle** sürekli doğrulanmasıdır. Tüm testler 46.71 saniyede %100 başarı oranıyla (ZERO FAILURES) tamamlanır.
+      </div>
+
+      <div class="kpi-row">
+        <div class="kpi-card green">
+          <div class="kpi-val">1.301 / 1.301</div>
+          <div class="kpi-label">Test Başarı Oranı</div>
+          <div class="kpi-sub">%100 PASS &bull; Sıfır hata / sıfır atlama</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">46.71 sn</div>
+          <div class="kpi-label">Toplam Test Süresi</div>
+          <div class="kpi-sub">PyTest &amp; GTest otomatik CI/CD hattı</div>
+        </div>
+        <div class="kpi-card slate">
+          <div class="kpi-val">%99.4</div>
+          <div class="kpi-label">Kod Kapsama (Coverage)</div>
+          <div class="kpi-sub">Kritik güvenlik dallarında tam kapsam</div>
+        </div>
+        <div class="kpi-card amber">
+          <div class="kpi-val">MISRA-C++</div>
+          <div class="kpi-label">Statik Kod Analizi</div>
+          <div class="kpi-sub">Sıfır tanımsız davranış (Undefined Behavior)</div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow" style="margin-top: 3mm;">ALT SİSTEM MODÜL TEST DAĞILIMI VE RAPORU</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Modül / Dizin</th>
+            <th>Kapsanan Sistem</th>
+            <th>Test Kapsamı ve Doğrulama Odağı</th>
+            <th>Geçen Test</th>
+            <th>Durum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="mono"><strong>core/</strong></td>
+            <td>System 6 &bull; Matematik &amp; Telemetri</td>
+            <td>Vektör cebri, dönüşüm matrisleri, telemetri akış döngüsü</td>
+            <td class="mono"><strong>88 / 88</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>slam/</strong></td>
+            <td>System 1 &bull; 3D NDT SLAM &amp; ESKF</td>
+            <td>2D/3D NDT eşleme, 400Hz ESKF füzyonu, pose-graph optimizasyonu</td>
+            <td class="mono"><strong>73 / 73</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>planning/</strong></td>
+            <td>System 1, 2 &bull; Yol Planlama</td>
+            <td>Hibrit A* Ackermann planlayıcı, DWA dinamik pencere, maliyet haritası</td>
+            <td class="mono"><strong>49 / 49</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>control/</strong></td>
+            <td>System 1, 8 &bull; Drive-by-Wire</td>
+            <td>Pure Pursuit, Stanley yanal takip, SocketCAN ve CAN-Bus sürücüleri</td>
+            <td class="mono"><strong>33 / 33</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>ai/</strong></td>
+            <td>System 9 &bull; Çevre Algılama</td>
+            <td>Çok modlu engel tespiti, zemin sınıflandırması, semantik segmentasyon</td>
+            <td class="mono"><strong>229 / 229</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>fusion/</strong></td>
+            <td>System 3 &bull; Sensör Füzyonu</td>
+            <td>LiDAR-Kamera zaman senkronizasyonu (PTP), Radar UKF izleme</td>
+            <td class="mono"><strong>64 / 64</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>safety/</strong></td>
+            <td>System 5 &bull; ASIL-D Bekçi</td>
+            <td>5ms acil durum freni tetikleyicisi, 200ms watchdog arıza enjeksiyonu</td>
+            <td class="mono"><strong>52 / 52</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+          <tr>
+            <td class="mono"><strong>scenarios/</strong></td>
+            <td>Carla 0.9.15 SIL İkiz</td>
+            <td>Gece, sis, yağmur, yaya fırlaması, tünel GPS kaybı uç senaryoları</td>
+            <td class="mono"><strong>450+ / 450+</strong></td>
+            <td><span class="status-pass">PASS</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card-box" style="margin-top: 3mm;">
+        <div class="card-title">Arıza Enjeksiyonu (Fault Injection Framework) Güvencesi</div>
+        <div class="card-body">
+          Sistem; rastgele CAN paketi kaybı, LiDAR kablosunun fiziksel kopması, IMU verisinde sapma ve işlemci aşırı yükü gibi <strong>50'den fazla donanım arızası simülasyonuna</strong> tabi tutulmuştur. Her senaryoda Trustia emniyet çekirdeği arızayı <strong>20 milisaniyede</strong> izole etmiş ve aracı sıfır riskle güvenli duruşa geçirmiştir.
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 09 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 10: TİCARİ DAĞITIM VE HEDEF PAZARLAR
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 9: TİCARİ HEDEF PAZARLAR</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">DÖRT FARKLI ENDÜSTRİYEL SEGMENTTE ANINDA DAĞITIM</div>
+      <div class="chapter-title">Ticari Dağıtım Alanları ve Platform Uyumluluğu</div>
+      <div class="chapter-desc">
+        Trustia L4 yazılım mimarisinin esnek ve modüler yapısı, tek bir araç tipiyle sınırlı değildir. Şehir içi yolcu taşımacılığından kapalı fabrika intralojistiğine ve taktik savunma araçlarına kadar geniş bir endüstriyel yelpazede doğrudan ticari gelir üretir.
+      </div>
+
+      <div class="two-col">
+        <div class="card-box">
+          <div class="card-title">1. Yolcu Robotaksileri (Passenger Mobility)</div>
+          <div class="card-body">
+            <strong>Hedef Araçlar:</strong> Hyundai Ioniq 5, Kia EV6, VW ID. Buzz.<br>
+            <strong>Kullanım Alanı:</strong> Belirlenmiş ODD koridorlarında (Maslak, İFM Fuar Vadisi, Havalimanı transfer hatları) sürücüsüz yolcu taşıma.<br>
+            <strong>Katma Değer:</strong> Taksi ve filo işletmelerinde sürücü maliyetini sıfırlar, 7/24 kesintisiz operasyon sağlar.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">2. Kampüs ve Havalimanı Elektrikli Ring Servisleri</div>
+          <div class="card-body">
+            <strong>Hedef Araçlar:</strong> Pilotcar PC-4, Tragger Pro, Cleanvac.<br>
+            <strong>Kullanım Alanı:</strong> Üniversite kampüsleri (Hacettepe HÜSMART, İTÜ), organize sanayi bölgeleri, tatil köyleri ve büyük havalimanları.<br>
+            <strong>Katma Değer:</strong> Düşük hızda (15-30 km/s) sıfır kaza riskiyle düzenli ring seferleri.
+          </div>
+        </div>
+      </div>
+
+      <div class="two-col" style="margin-top: 1mm;">
+        <div class="card-box">
+          <div class="card-title">3. Fabrika ve Depo İntralojistiği (AGV / AMR)</div>
+          <div class="card-body">
+            <strong>Hedef Platformlar:</strong> Ağır yük taşıyıcı AMR şasileri, otomatik forkliftler.<br>
+            <strong>Kullanım Alanı:</strong> Otomotiv montaj hatları (Ford Otosan, Tofaş), e-ticaret lojistik merkezleri ve kimya depoları.<br>
+            <strong>Katma Değer:</strong> Manyetik şerit veya reflektör gerektirmeyen saf 3D LiDAR SLAM ile tesis içi esnek rota optimizasyonu.
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card-title">4. Savunma Taktik İKA Platformları (Defense UGV)</div>
+          <div class="card-body">
+            <strong>Hedef Platformlar:</strong> FNSS Gölge Süvari, Otokar Alpar, Aselsan İKA şasileri.<br>
+            <strong>Kullanım Alanı:</strong> Düşmanca elektronik karıştırma (EW) altındaki sınır devriyesi, mühimmat taşıma ve tünel keşif görevleri.<br>
+            <strong>Katma Değer:</strong> Uydu sinyali kesilse bile görev tamamlayan bağımsız GNSS-Denied navigasyon kabiliyeti.
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow" style="margin-top: 3mm;">PAZAR BÜYÜKLÜĞÜ VE YATIRIM GETİRİSİ (ROI) ANALİZİ</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Uygulama Alanı</th>
+            <th>Hedef Müşteri Profili</th>
+            <th>Tipik Dağıtım Süresi</th>
+            <th>Tahmini Birim Araç Katma Değeri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>L4 Otonom Robotaksi</strong></td>
+            <td>Belediyeler, Taksi Kooperatifleri, Özel Filolar</td>
+            <td class="mono">4 - 6 Hafta</td>
+            <td class="mono">Yıllık $35,000 USD Sürücü Tasarrufu</td>
+          </tr>
+          <tr>
+            <td><strong>Kampüs / OSB Ring Aracı</strong></td>
+            <td>Üniversiteler, Havalimanları, Büyük Hastaneler</td>
+            <td class="mono">2 - 3 Hafta</td>
+            <td class="mono">Sıfır Emisyon &bull; Prestij &amp; Güvenli Ulaşım</td>
+          </tr>
+          <tr>
+            <td><strong>Fabrika İçi AMR Filosu</strong></td>
+            <td>Otomotiv OEM, Beyaz Eşya Fabrikaları</td>
+            <td class="mono">1 - 2 Hafta</td>
+            <td class="mono">%40 İntralojistik Verimlilik Artışı</td>
+          </tr>
+          <tr>
+            <td><strong>Taktik Otonom İKA</strong></td>
+            <td>Savunma Sanayii Başkanlığı (SSB) Yüklenicileri</td>
+            <td class="mono">3 - 5 Hafta</td>
+            <td class="mono">Askeri Operasyonel Bağımsızlık &amp; Can Güvenliği</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 10 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 11: FİKRİ MÜLKİYET (IP) DEVİR VE LİSANSLAMA ŞARTNAMESİ
+       =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="doc-header">
+        <div class="header-logo-group">
+          <div class="header-logo">TRUSTIA<span>.AI</span></div>
+          <div class="header-doc-type">// BÖLÜM 10: TİCARİ ŞARTNAME</div>
+        </div>
+        <div class="header-meta">DOKÜMAN REF: TR-2026-L4-SPEC<br>SINIFLANDIRMA: TİCARİ GİZLİ / B2B</div>
+      </div>
+
+      <div class="chapter-eyebrow">İKİ KADEMELİ KURUMSAL İKTİSAP MODELİ</div>
+      <div class="chapter-title">Fikri Mülkiyet (IP) Devir ve Lisanslama Şartnamesi</div>
+      <div class="chapter-desc">
+        Trustia AI, kurumsal alıcıların ve sistem entegratörlerinin bütçe ve operasyonel modellerine uygun olarak iki farklı şeffaf iktisap opsiyonu sunar. Tüm süreçler noter onaylı sözleşmeler ve uluslararası Escrow güvencesiyle yürütülür.
+      </div>
+
+      <div class="two-col">
+        <!-- PAKET A: LİSANSLAMA -->
+        <div class="card-box" style="border-top: 4px solid #0284C7;">
+          <div class="chapter-eyebrow">OPSİYON 1 // KURUMSAL TİCARİ LİSANS</div>
+          <div style="font-size: 16pt; font-weight: 800; color: #0F172A; margin: 1mm 0 2mm 0; font-family: 'JetBrains Mono', monospace;">
+            $25,000 USD <span style="font-size: 8pt; color: #64748B; font-weight: 500;">/ Yıllık veya Proje Başı</span>
+          </div>
+          <div class="card-body">
+            Mülkiyeti devralmadan, yazılımı kendi araç filosunda veya Ar-Ge projesinde ticari olarak çalıştırmak isteyen şirketler içindir:
+            <ul>
+              <li><strong>Binary / Derlenmiş Paket Teslimi:</strong> Jetson Orin ve x86 mimarisi için optimize edilmiş üretim paketleri.</li>
+              <li><strong>CAN-FD DBC Entegrasyon Desteği:</strong> 1 araç şasisi için anahtar teslim aktüatör bağlantı desteği.</li>
+              <li><strong>Yıllık Yazılım Güncellemeleri:</strong> Hata giderme ve yeni algoritma sürümlerine erişim.</li>
+              <li><strong>Sınırlı Ticari Kullanım:</strong> Proje bazlı onaylı araç sayısı kapsamında sınırsız saha çalışması.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PAKET B: TAM KOD DEVRİ -->
+        <div class="card-box" style="border-top: 4px solid #16A34A; background: #F8FAFC;">
+          <div class="chapter-eyebrow" style="color: #16A34A;">OPSİYON 2 // TAM FİKRİ MÜLKİYET (IP BUYOUT)</div>
+          <div style="font-size: 16pt; font-weight: 800; color: #16A34A; margin: 1mm 0 2mm 0; font-family: 'JetBrains Mono', monospace;">
+            $75,000 USD <span style="font-size: 8pt; color: #64748B; font-weight: 500;">/ Peşin Tam Devir</span>
+          </div>
+          <div class="card-body">
+            Yazılımın tüm telif haklarını, kaynak kodunu ve bağımsız üretim egemenliğini satın almak isteyen kurumlar içindir:
+            <ul>
+              <li><strong>%100 Kaynak Kod Mülkiyeti:</strong> 16.400+ satır C++20 ve Python kaynak kodu, repo ve derleme araçları.</li>
+              <li><strong>Sıfır Telif Ücreti (Royalty-Free):</strong> Üretilen veya satılan araç başına sıfır ek ödeme; sınırsız üretim hakkı.</li>
+              <li><strong>Noter ve Temiz IP Devri:</strong> Üçüncü taraf ipoteği olmayan tescilli hakların alıcı kuruma eksiksiz devri.</li>
+              <li><strong>2 Hafta Yerinde Mühendislik Desteği:</strong> Sistem mimarı tarafından alıcı ekibe tam aktarım brifingi.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapter-eyebrow" style="margin-top: 3mm;">DEVİR VE TESLİMAT KAPSAMI (DELIVERABLES INVENTORY)</div>
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th>Teslimat Kalemi</th>
+            <th>İçerik ve Teknik Format</th>
+            <th>Hukuki Hak Kapsamı</th>
+            <th>Teslim Süresi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tam Kaynak Kod Reposu</strong></td>
+            <td>C++20 / Python 3.12, Dockerfile, CMake build toolchains</td>
+            <td>Kalıcı, değiştirilebilir, münhasır ticari mülkiyet</td>
+            <td class="mono">İmzada Anında</td>
+          </tr>
+          <tr>
+            <td><strong>CAN-FD DBC &amp; Gateway</strong></td>
+            <td>Standart Vector DBC dosyaları, Kvaser donanım sürücüleri</td>
+            <td>Sınırsız araç şasisine gömme ve modifikasyon hakkı</td>
+            <td class="mono">İmzada Anında</td>
+          </tr>
+          <tr>
+            <td><strong>1.301 Testlik Doğrulama Süiti</strong></td>
+            <td>PyTest, GTest, Carla 0.9.15 SIL simülasyon sahneleri</td>
+            <td>Tüm test senaryolarının alıcı CI/CD hattına aktarımı</td>
+            <td class="mono">İmzada Anında</td>
+          </tr>
+          <tr>
+            <td><strong>Donanım BOM ve Kablolama</strong></td>
+            <td>27 parçalık sensör BOM listesi, pin çıkışları, montaj CAD'leri</td>
+            <td>Seri üretim araç üretim kılavuzu ve şematikler</td>
+            <td class="mono">İmzada Anında</td>
+          </tr>
+          <tr>
+            <td><strong>Doğrudan Başmimar Desteği</strong></td>
+            <td>Murat Furkan Bayram tarafından yerinde / uzaktan entegrasyon</td>
+            <td>Mühendislik ekibine 2 hafta (80 saat) birebir mentörlük</td>
+            <td class="mono">Sözleşmeyle Başlar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="doc-footer">
+      <div class="doc-footer-left">
+        <span class="security-badge">COMMERCIAL CONFIDENTIAL</span>
+        <span>TRUSTIA AI &bull; SEVİYE-4 TEKNİK SPESİFİKASYON KİTABI</span>
+      </div>
+      <div class="doc-footer-right">SAYFA 11 / 12</div>
+    </div>
+  </div>
+
+  <!-- ===================================================================
+       SAYFA 12: ARKA KAPAK, KURUCU KÜNYESİ VE DATA ROOM ERİŞİMİ
+       =================================================================== -->
+  <div class="page cover-page" style="padding-top: 18mm;">
+    <div class="cover-border-stripe"></div>
+    <div class="cover-sub-stripe"></div>
+
+    <div class="cover-top">
+      <div class="chapter-eyebrow">BÖLÜM 11 // RESMİ KURUMSAL KÜNYE VE İLETİŞİM</div>
+      <div class="chapter-title" style="font-size: 22pt;">Teknoloji Başmimarı ve Yönetim Profili</div>
+      <div class="chapter-desc" style="max-width: 95%;">
+        Trustia AI; İstanbul Ticaret Odası (İTO) Bilgiyi Ticarileştirme Merkezi (BTM) bünyesinde geliştirilen, otomotiv ve savunma sanayiine bağımsız Seviye-4 otonomi yetkinliği kazandırmayı hedefleyen tescilli bir derin teknoloji girişimidir.
+      </div>
+    </div>
+
+    <div class="cover-middle" style="margin: 4mm 0 4mm 7.5mm;">
+      <div class="two-col" style="gap: 6mm;">
+        <div class="card-box" style="border: 1.5px solid #0F172A; padding: 4.5mm;">
+          <div class="card-title" style="font-size: 11pt;">Murat Furkan Bayram</div>
+          <div style="font-family: 'JetBrains Mono', monospace; font-size: 8pt; color: #0284C7; font-weight: 700; margin-bottom: 2mm;">
+            Kurucu &amp; Otonom Sistemler Başmimarı
+          </div>
+          <div class="card-body" style="font-size: 7.8pt; line-height: 1.55;">
+            16.400+ satırlık Seviye-4 çekirdek yazılımının, 400Hz ESKF SLAM algoritmasının ve ISO 26262 ASIL-D emniyet bekçisinin tek mimarı. 1.301 birim/entegrasyon testini sıfırdan kurgulayan ve Kvaser CAN-FD aktüatör köprüsünü geliştiren sistem lideri.
+            <div style="margin-top: 3mm; border-top: 1px solid #E2E8F0; padding-top: 2mm; font-family: 'JetBrains Mono', monospace; font-size: 7.2pt; color: #0F172A;">
+              <strong>E-posta:</strong> contact@trustia.ai<br>
+              <strong>Doğrudan İletişim:</strong> +90 (551) 947 50 17<br>
+              <strong>Web Sitesi:</strong> trustia.ai / trustia.com.tr
+            </div>
+          </div>
+        </div>
+
+        <div class="card-box" style="border: 1.5px solid #CBD5E1; padding: 4.5mm; display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <div class="card-title">Resmi Şirket ve Yerleşke Bilgileri</div>
+            <div class="card-body" style="font-size: 7.8pt; line-height: 1.55;">
+              <strong>Şirket:</strong> Trustia AI Autonomous Technologies<br>
+              <strong>Bağlı Kuruluş:</strong> İstanbul Ticaret Odası (İTO)<br>
+              <strong>Kuluçka Kampüsü:</strong> BTM Fulya Derin Teknoloji Kampüsü, Fulya Mah. Mehmetçik Cad. No:24 Şişli / İstanbul<br>
+              <strong>AB Katılımcı Kodu:</strong> PIC: 861711529<br>
+              <strong>Uluslararası Patent Ağı:</strong> OIN Licensee
+            </div>
+          </div>
+
+          <div style="border-top: 1px dashed #CBD5E1; padding-top: 2.5mm; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 7pt; font-weight: 700; color: #0F172A;">PRIVATE DATA ROOM</div>
+              <div style="font-size: 6.2pt; color: #64748B;">NDA Korumalı Canlı Test &amp; Kod Erişimi</div>
+            </div>
+            <!-- Minimal Vector QR Code -->
+            <div style="width: 18mm; height: 18mm; border: 1px solid #0F172A; padding: 1mm; background: #FFF;">
+              <svg viewBox="0 0 100 100" width="100%" height="100%">
+                <rect width="100" height="100" fill="#ffffff"/>
+                <rect x="8" y="8" width="28" height="28" fill="#0F172A"/>
+                <rect x="12" y="12" width="20" height="20" fill="#ffffff"/>
+                <rect x="16" y="16" width="12" height="12" fill="#0F172A"/>
+                <rect x="64" y="8" width="28" height="28" fill="#0F172A"/>
+                <rect x="68" y="12" width="20" height="20" fill="#ffffff"/>
+                <rect x="72" y="16" width="12" height="12" fill="#0F172A"/>
+                <rect x="8" y="64" width="28" height="28" fill="#0F172A"/>
+                <rect x="12" y="68" width="20" height="20" fill="#ffffff"/>
+                <rect x="16" y="72" width="12" height="12" fill="#0F172A"/>
+                <rect x="42" y="10" width="8" height="8" fill="#0F172A"/>
+                <rect x="48" y="24" width="8" height="8" fill="#0F172A"/>
+                <rect x="12" y="44" width="8" height="8" fill="#0F172A"/>
+                <rect x="28" y="48" width="8" height="8" fill="#0F172A"/>
+                <rect x="44" y="44" width="14" height="14" fill="#0284C7"/>
+                <rect x="47" y="47" width="8" height="8" fill="#0F172A"/>
+                <rect x="66" y="44" width="8" height="8" fill="#0F172A"/>
+                <rect x="80" y="50" width="8" height="8" fill="#0F172A"/>
+                <rect x="44" y="66" width="8" height="8" fill="#0F172A"/>
+                <rect x="56" y="74" width="8" height="8" fill="#0F172A"/>
+                <rect x="68" y="66" width="8" height="8" fill="#0F172A"/>
+                <rect x="80" y="76" width="8" height="8" fill="#0F172A"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-bottom">
+      <div class="cover-author">
+        <strong>TRUSTIA AI AUTONOMOUS TECHNOLOGIES CORP.</strong><br>
+        Tüm Fikri Mülkiyet, Patent, Kaynak Kod ve Marka Hakları Saklıdır.<br>
+        TURKCOMPOSITE 2026 Uluslararası Kompozit ve İleri Teknolojiler Fuarı Özel Baskısı
+      </div>
+      <div class="cover-date-box">
+        RESMİ DOKÜMAN SERİ NO: TR-L4-2026-ENG-V4<br>
+        İSTANBUL &bull; EKİM 2026<br>
+        SAYFA 12 / 12 (SON SAYFA)
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

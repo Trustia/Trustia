@@ -1,9 +1,8 @@
 # 🛠️ TRUSTIA — DONANIM MİMARİSİ VE PARÇA LİSTESİ (BILL OF MATERIALS - BOM)
-### (HYUNDAI IONIQ 5 SEVİYE-4 ROBOTAKSİ & DUAL-USE TAKTİK İKA DONANIM KİTİ)
+### (HYUNDAI IONIQ 5 & ELEKTRİKLİ TİCARİ ARAÇLAR SEVİYE-4 ROBOTAKSİ DONANIM KİTİ)
 
 **Doküman Tarihi:** Eylül 2026 (Sürüm 2.4 — Doğrulandı)  
-**Hedef Platform:** Hyundai Ioniq 5 (E-GMP 800V Mimarisi) & Taktik Askeri İKA Şasileri  
-**Donanım Lideri:** Denizcan Özcan (ASELSAN Aday Mühendis Havuzu, İÜC EEE 3.44 GPA)  
+**Hedef Platform:** Hyundai Ioniq 5 (E-GMP 800V Mimarisi), Elektrikli Servis ve Endüstriyel Otonom Taşıtlar  
 **Tedarik Durumu:** %100 Doğrulanmış Canlı Tedarikçi Sepeti  
 
 ---
@@ -17,9 +16,9 @@
 | **Merkezi Yapay Zeka** | Seeed reServer J501 + NVIDIA Jetson AGX Orin 64GB (275 TOPS) | Seeed Studio | **181.470,15 TL** | 16.000 satır otonomi çekirdeği, TensorRT derin öğrenme, 100Hz döngü |
 | **ROS2 Rosbag SSD** | Samsung 990 PRO 4TB NVMe SSD (7450 MB/s) | PTTAVM / Tulparlife | **50.220,00 TL** | 128-LiDAR nokta bulutu ve telemetri yüksek hızlı veri kaydı |
 | **GMSL2 Kameralar (4x)** | Leopard Sony IMX390 HDR Otomotiv Kamerası | Mouser Electronics | **98.351,00 TL** | Trafik ışıkları, şerit çizgileri, yol tabelaları ve yaya tespiti |
-| **77 GHz Radarlar (2x)** | Continental ARS 408-21 Uzun Menzilli Radar | Alibaba / Continental | **59.345,00 TL** | Yoğun sis, sağanak yağış ve çöl kum fırtınasında 250m menzil |
+| **77 GHz Radarlar (2x)** | Continental ARS 408-21 Uzun Menzilli Radar | Alibaba / Continental | **59.345,00 TL** | Yoğun sis, sağanak yağış ve adverse hava koşullarında 250m menzil |
 | **RTK GNSS + IMU** | Septentrio mosaic-go Dual Anten Heading + IMU | Digi-Key / e-komponent | **52.084,00 TL** | Santimetre hassasiyetinde küresel konum ve açısal hız |
-| **5G & V2X Router** | Teltonika RUTX50 Çift SIM Endüstriyel 5G/V2X | Hepsiburada / ESET | **35.349,00 TL** | Sub-20ms canlı C2 telemetrisi, MQTT ve teleoperasyon köprüsü |
+| **5G & V2X Router** | Teltonika RUTX50 Çift SIM Endüstriyel 5G/V2X | Hepsiburada / ESET | **35.349,00 TL** | Sub-20ms canlı filo telemetrisi, MQTT ve teleoperasyon köprüsü |
 | **CAN-FD Arabirimi** | Kvaser U100 Galvanik İzoleli CAN-FD USB | Elektronomi | **24.213,00 TL** | Hyundai Ioniq 5 LKAS_FD ve SCC_FD 5 Mbps kontrol veriyolu |
 | **Kokpit Ekranı** | WaveShare 10.1 inç Kapasitif HDMI Dokunmatik Ekran | Trendyol / ERNPAZAR | **21.118,00 TL** | Kabin içi yolcu görev durumu, rota haritası ve telemetri |
 | **Mekanik & Güç Dağıtımı** | Tavan Barı, ELO 80A Röle, Mean Well DC-DC Regülatör | Yerli Üretim / Bosch | **114.029,28 TL** | Titreşim sönümleyici tavan plakası, 12V/24V regüle güç dağıtımı |
@@ -27,8 +26,8 @@
 
 ---
 
-## 2. DUAL-USE (SAVUNMA VE SİVİL) UYUMLULUK
+## 2. TİCARİ VE ENDÜSTRİYEL OTONOMİ UYUMLULUĞU
 
-1. **Sivil Robotaksi Mimarisi**: Hyundai Ioniq 5 800V E-GMP platformunda 18 dakikada ultra hızlı şarj ve 24 saat kesintisiz filo operasyonu.
-2. **Askeri Taktik İKA Mimarisi**: IP68/IP69K sızdırmazlık standartları, MIL-STD zırhlı kablaj ve NATO STANAG 4586 uyumlu mesajlaşma protokolü ile taktik kara platformlarına doğrudan entegre edilebilir.
-
+1. **Sivil Yolcu Robotaksisi**: Hyundai Ioniq 5 800V E-GMP platformunda ultra hızlı şarj ve 24 saat kesintisiz otonom yolcu taşıma operasyonu.
+2. **Kampüs & Mikromobilite Servisleri**: Kapalı kampüsler, havalimanları ve akıllı şehir transfer hatlarında sürücüsüz ring hizmeti.
+3. **Endüstriyel İntralojistik (AGV / AMR)**: Fabrika içi lojistik, depolama ve liman sahası otonom taşıma araçlarına doğrudan CAN / ROS 2 üzerinden entegrasyon.

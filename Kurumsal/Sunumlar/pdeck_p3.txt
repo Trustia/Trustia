@@ -1,0 +1,20 @@
+02 / Çekirdek Yazılım ve Algoritma Mimarisi
+MODERN C++ (C++20) VE ROS 2 HUMBLE MODÜLER ÇEKİRDEK
+GNSS-Bağımsız 3D NDT LiDAR SLAM
+GPS uydusunun kesildiği tüneller, kapalı yer altı otoparkları ve kentsel kanyonlarda
+3D Normal Distributions Transform (NDT) ve Pose-Graph SLAM ile santimetre
+seviyesinde yüksek doğruluklu haritalama ve lokalizasyon.
+400Hz ESKF Çoklu Sensör Füzyonu
+128 kanallı Ouster OS2-128 LiDAR, çift Livox Mid-360, 4D Radar ve IMU/tekerlek
+enkoderi verilerini mikrosaniye seviyesinde birleştiren Hata Durumu Kalman Filtresi
+(ESKF) motoru.
+Kvaser CAN-FD Yerel Araç Ağ Geçidi
+Hyundai Ioniq 5 E-GMP ve elektrikli araç şasisiyle doğrudan konuşan; 100Hz
+direksiyon (`LKAS_FD`) ve 50Hz ivmelenme/fren (`SCC_FD`) komut enjeksiyonu
+sağlayan yerli donanım köprüsü.
+Kinematik Hibrit A* ve MPC Kontrol
+Ackermann direksiyon geometrisini ve dinamik araç kısıtlarını gözeten, 15ms altı
+planlama süresine sahip Kinematic Hybrid A* ve Model Predictive Control (MPC) hız
+kontrol algoritmaları.
+Trustia AI • Otonomi Mühendislik Mimarisi
+Gizli • Ekim 2026

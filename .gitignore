@@ -113,3 +113,10 @@ logs/
 # --- Temporary Test Artifacts & Edits ---
 test_*_*.png
 test_*_*.jpg
+
+# Temporary Scratch
+scratch/
+
+# Local Run Records and Dumps
+01_Trustia_Otonom_Yazilim_Core/record/runs/
+01_Trustia_Otonom_Yazilim_Core/record/audit/

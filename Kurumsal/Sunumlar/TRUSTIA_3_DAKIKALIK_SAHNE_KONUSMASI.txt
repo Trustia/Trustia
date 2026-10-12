@@ -1,0 +1,56 @@
+TRUSTIA OTONOM SİSTEMLERİ — 3 DAKİKALIK RESMİ SAHNE KONUŞMASI
+Konuşmacı: Murat Furkan Bayram (CEO & Genel Müdür)
+Etkinlik: TURKCOMPOSITE 2026 // İstanbul Fuar Merkezi (İFM)
+Süre: 180 Saniye (3 Dakika)
+
+================================================================================
+[00:00 – 00:45] GİRİŞ: İNSAN HAYATI & YERİN YÜZLERCE METRE ALTI
+(Sahneye çık, salona derin ve vakur bir bakış at, sakin bir sesle başla)
+
+"Daha geçtiğimiz günlerde Soma’da, Zonguldak’ta ve daha önce İliç’te yüreğimizi yakan maden göçüklerine şahit olduk...
+
+Yerin yüzlerce metre altında, zifiri karanlıkta, zehirli gazların arasında ve tek bir GPS uydu sinyalinin dahi ulaşamadığı tünellerde insan hayatını riske atmak zorunda mıyız?
+
+Sayın Bakanım, değerli protokol ve ülkemizin kıymetli sanayi liderleri;
+Hepiniz hoş geldiniz. Ben Murat Furkan Bayram, Trustia Otonom Sistemleri'nin kurucusu ve genel müdürüyüm.
+Biz Trustia’yı bir lüks veya oyuncak olsun diye değil; insan hayatının tehlikeye girdiği her yerde makineler görev alsın, canlar kurtulsun diye inşa ettik."
+
+================================================================================
+[00:45 – 01:30] ÇÖZÜM: GNSS-DENIED 3D LIDAR SLAM VE 4 STRATEJİK ALAN
+(Ses tonunu biraz daha yükselt, kendinden emin bir şekilde devam et)
+
+"Geliştirdiğimiz yerli GNSS-Denied 3D LiDAR SLAM yazılım mimarisi; hiçbir uydu sinyaline ihtiyaç duymadan, saniyede yüz binlerce lazer ışınıyla çevresini üç boyutlu haritalar ve santimetre hassasiyetle görev yapar.
+
+Bu teknoloji sadece tek bir sektöre değil, ülkemizin 4 kritik damarına hizmet eder:
+1. Madenlerde ve Arama-Kurtarmada: Göçük altındaki tehlikeli tünellere insandan önce giren otonom keşif araçları,
+2. Milli Savunmada: GPS karartması yapılan harekat sahasında Mehmetçiğin önünde giden taktik insansız kara araçları (İKA),
+3. Tarımda: Tarlasında gece gündüz, yorulmadan çalışan çiftçimize otonom traktör gücü,
+4. Sivil Hayatta: Trafik kazalarını sıfıra indiren güvenli robotaksiler."
+
+================================================================================
+[01:30 – 02:15] SOMUT MÜHENDİSLİK: KOD VE TEST METRİKLERİ
+(Dik dur, arkandaki dev ekrandaki metrikleri işaret et)
+
+"Değerli konuklar; bugün sizlere bir temenni veya fikir anlatmıyoruz. Arkasında yüzlerce saatlik geceli gündüzlü mühendislik emeği olan, tamamen çalışan bir kod tabanı sunuyoruz:
+
+• 16.400 satırdan fazla C++20 ve Python kaynak kodu,
+• 1.301 adet doğrulanmış birim ve simülasyon testinden yüzde 100 tam başarı,
+• Ve otomotiv emniyet standardı olan ISO 26262 ASIL-D protokolleriyle, 5.2 milisaniyelik acil durum frenleme emniyeti."
+
+================================================================================
+[02:15 – 02:40] KURUMSAL MEŞRUİYET: İTO BTM & STM GÜVENCESİ
+(Göğsünü gererek, tok ve gururlu bir sesle)
+
+"Trustia, İstanbul Ticaret Odası bünyesindeki Bilgiyi Ticarileştirme Merkezi'nde (BTM) doğmuş ve bugün itibarıyla STM Savunma Teknolojileri Mühendislik A.Ş.'nin tedarikçi ekosistemine resmen dahil olmuş yerli bir derin teknoloji girişimidir."
+
+================================================================================
+[02:40 – 03:00] BÜYÜK KAPANIŞ: ATATÜRK'ÜN SÖZÜ VE STANDA DAVET
+(Gözlerini salonda gezdir, son vuruşu yap)
+
+"Ulu Önderimiz Gazi Mustafa Kemal Atatürk’ün dediği gibi:
+'Vatanını en çok seven, görevini en iyi yapandır.'
+
+Biz, Türk mühendisliğinin otonomi bayrağını en ileriye taşımak için görevimizi en iyi şekilde yapmaya söz verdik. Madencilikten savunmaya, bu milli vizyona ortak olmak isteyen tüm sanayicilerimizi ve liderlerimizi BTM standımıza canlı simülasyonumuzu görmeye davet ediyorum.
+
+Saygılarımla arz ederim."
+(Başınla selam ver, mikrofonu bırak).

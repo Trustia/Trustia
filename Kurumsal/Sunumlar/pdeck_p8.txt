@@ -1,0 +1,30 @@
+07 / Satış Şartları ve İletişim
+HIZLI, GÜVENLİ VE RESMİ DEVİR SÜRECİ
+İşlem Özeti
+Varlık Satış Bedeli: $75.000 USD (Net / Peşin Devir)
+İşlem Yapısı: %100 Fikri Mülkiyet (IP) ve Varlık Satışı (Asset Acquisition)
+Hukuki Durum: Sıfır borç, temiz mülkiyet, bağımsız devir sözleşmesi
+Ödeme Güvencesi: Doğrudan Noter Sözleşmesi / Banka Blokeli Transfer /
+Escrow
+Adım Adım Devir Protokolü
+Doğrudan İletişim
+Murat Furkan Bayram
+Kurucu & Sistem Mimarı • Trustia AI
+E-Posta: kariyer@trustia.com.tr | murat@trustia.com.tr
+Telefon: +90 537 064 04 60
+Yerleşke: İTO BTM Fulya Kampüsü, Şişli / İstanbul
+GÖRÜŞMELER STANDART GİZLİLİK (NDA) ÇERÇEVESİNDE
+YÜRÜTÜLÜR
+Trustia AI • Resmi Varlık Satışı Sunumu
+© 2026 Trustia AI. Tüm hakları saklıdır. • Ekim 2026
+1. Adım: Karşılıklı Niyet Mektubu (LOI) ve standart Gizlilik Sözleşmesi (NDA).
+■
+2. Adım: Resmi Varlık Satış Sözleşmesi (APA) imzalanması ve ödeme blokesi.
+■
+3. Adım: Git kaynak kod reposunun, mimari dokümanların ve alan adının devri.
+■
+4. Adım: Alıcı teknik heyeti tarafından kod inceleme ve test doğrulaması.
+■
+5. Adım: Ödemenin serbest bırakılması ve 30 günlük kurucu oryantasyon
+desteğinin başlaması.
+■

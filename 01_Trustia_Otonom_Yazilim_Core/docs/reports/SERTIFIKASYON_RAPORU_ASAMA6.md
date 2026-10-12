@@ -1,35 +1,35 @@
 # TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
 
-- **Tarih:** 2026-09-26
-- **Depo:** C:\Users\Murat\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
+- **Tarih:** 2026-10-11
+- **Depo:** C:\Users\Asus\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
 - **Amaç:** TÜR/EYDEP/KÜL/TSE başvuru kanıt seti (PLAN 2.2)
 
 ## 1. YERLİ KATKI DENETİMİ (TÜR)
 
 | Ölçüt | Değer |
 |---|---|
-| Taranan Python dosyası | 140 |
-| Kullanılan standart kütüphane modülü | 32 |
+| Taranan Python dosyası | 141 |
+| Kullanılan standart kütüphane modülü | 34 |
 | Ürün harici bağımlılık | 0 |
 | Geliştirme araçları (üründe yok) | controller, numpy, pytest |
 | Yerli katkı oranı | %100 |
 
-Kullanılan standart modüller: __future__, abc, argparse, ast, collections, concurrent, dataclasses, datetime, enum, hashlib, heapq, hmac, html, http, io, itertools, json, math, os, pickle, random, re, socket, statistics, struct, subprocess, sys, threading, time, tkinter, typing, uuid.
+Kullanılan standart modüller: __future__, abc, argparse, ast, collections, concurrent, dataclasses, datetime, enum, hashlib, heapq, hmac, html, http, io, itertools, json, math, mimetypes, os, pathlib, pickle, random, re, socket, statistics, struct, subprocess, sys, threading, time, tkinter, typing, uuid.
 
 ## 2. KOD VE TEST KANITI
 
 | Metrik | Değer |
 |---|---|
-| Kod satırı (Python) | 16853 |
-| Otomatik test sayısı | -1 |
-| 1.000+ test şartı | SAĞLANMADI |
+| Kod satırı (Python) | 17309 |
+| Otomatik test sayısı | 1301 |
+| 1.000+ test şartı | SAĞLANDI |
 
 ## 3. TEKNİK ŞART KONTROL LİSTESİ
 
 | Şart | Kanıt | Durum |
 |---|---|---|
 | %100 yerli yazılım (TÜR) | 3. taraf bağımlılık yok, saf Python | SAĞLANDI |
-| 1.000+ otomatik test (Sistem 7) | pytest koleksiyon sayısı (1.301 yeşil test) | EKSİK |
+| 1.000+ otomatik test (Sistem 7) | pytest koleksiyon sayısı (1.301 yeşil test) | SAĞLANDI |
 | JAUS/STANAG uyumu (AS6009/6091) | integration/jaus.py | SAĞLANDI |
 | Acil durma / güvenli durma (ISO 26262 ASIL-D) | security/estop.py + security/linkloss.py | SAĞLANDI |
 | Denetim izi (kim-ne-zaman) | security/audit.py | SAĞLANDI |
@@ -53,6 +53,6 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 
 ## 5. SONUÇ
 
-Teknik şartlarda 10/11 sağlandı. Eksikler başvuru öncesi giderilir.
+Teknik şartlarda 11/11 sağlandı. Eksikler başvuru öncesi giderilir.
 
 Bu rapor, PLAN.md Bölüm 2.2 tablosundaki belgelerin her biri için kanıt girişidir.

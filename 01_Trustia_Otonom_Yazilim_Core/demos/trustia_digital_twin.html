@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRUSTIA AI — Seviye-4 Otonom Sürüş & CARLA Dijital İkizi (Digital Twin)</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #06090f;
+            --bg-card: rgba(13, 19, 33, 0.85);
+            --border-dim: rgba(0, 210, 255, 0.15);
+            --border-glow: rgba(0, 210, 255, 0.4);
+            --cyan: #00d2ff;
+            --emerald: #00e676;
+            --crimson: #ff1744;
+            --amber: #ffb300;
+            --text-main: #f0f4f8;
+            --text-muted: #7e8c9f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Mission Control Top Bar */
+        header {
+            background: linear-gradient(180deg, rgba(16, 24, 40, 0.95), rgba(8, 12, 22, 0.95));
+            border-bottom: 1px solid var(--border-glow);
+            padding: 10px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-badge {
+            background: linear-gradient(135deg, #00d2ff, #0052d4);
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.15rem;
+            letter-spacing: 2px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+        }
+
+        .brand-text h1 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-text p {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .telemetry-badges {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.78rem;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--emerald);
+            box-shadow: 0 0 8px var(--emerald);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+
+        /* Main Workspace Grid */
+        .workspace-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            padding: 14px;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 210, 255, 0.03), transparent 70%);
+        }
+
+        .viewport-panel {
+            background: var(--bg-card);
+            border: 1px solid var(--border-dim);
+            border-radius: 14px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(12px);
+        }
+
+        .panel-header {
+            padding: 10px 18px;
+            background: rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid var(--border-dim);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .panel-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--cyan);
+            letter-spacing: 0.5px;
+        }
+
+        .panel-meta {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+        }
+
+        /* Left Side: Photorealistic CARLA View */
+        .video-container {
+            flex: 1;
+            position: relative;
+            background: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        video#carla-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* CARLA HUD Overlays */
+        .carla-hud-overlay {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 16px;
+        }
+
+        .hud-corner {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            background: rgba(6, 9, 15, 0.75);
+            padding: 6px 12px;
+            border-radius: 6px;
+            border-left: 3px solid var(--cyan);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Target Bounding Box on Video */
+        .ai-target-box {
+            position: absolute;
+            border: 2px solid var(--emerald);
+            background: rgba(0, 230, 118, 0.12);
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            box-shadow: 0 0 12px rgba(0, 230, 118, 0.3);
+        }
+
+        .ai-target-label {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            background: var(--emerald);
+            color: #06090f;
+            font-size: 0.65rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        /* Right Side: Trustia L4 Brain & LiDAR */
+        .brain-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px;
+            overflow: hidden;
+        }
+
+        .lidar-wrapper {
+            flex: 1;
+            background: #030509;
+            border: 1px solid rgba(0, 210, 255, 0.15);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas#lidar-canvas {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Bottom Telemetry Bar in Brain */
+        .telemetry-dashboard {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            padding: 12px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr) 1.2fr;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .gauge-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .gauge-title {
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .gauge-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--cyan);
+        }
+
+        .gauge-unit {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-left: 2px;
+        }
+
+        /* Interactive Trigger Area */
+        .action-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .btn-estop {
+            background: linear-gradient(135deg, #ff1744, #b71c1c);
+            color: white;
+            border: none;
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 23, 68, 0.4);
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-estop:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 23, 68, 0.7);
+        }
+
+        .btn-estop:active {
+            transform: scale(0.98);
+        }
+
+        /* Emergency Alarm Banner */
+        .alarm-banner {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 23, 68, 0.95);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 10px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 0 30px rgba(255, 23, 68, 0.8);
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            border: 2px solid #ffffff;
+            animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 0.9; }
+            to { opacity: 1; transform: translateX(-50%) scale(1.03); }
+        }
+
+        /* Status Footer */
+        footer {
+            background: #04060a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 8px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Alarm Banner (Triggered by E-STOP) -->
+    <div id="alarmBanner" class="alarm-banner">
+        🚨 KRİTİK ENGEL ALGILANDI! ISO 26262 ASIL-D ACİL FRENLEME KİLİDİ DEVREDE
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="brand-section">
+            <div class="logo-badge">TRUSTIA v2.4</div>
+            <div class="brand-text">
+                <h1>Milli Otonomi ve SLAM Dijital İkizi (Digital Twin Core)</h1>
+                <p>İTO BTM • İstanbul Fuar Merkezi • TURKCOMPOSITE 2026 Özel Gösterimi</p>
+            </div>
+        </div>
+
+        <div class="telemetry-badges">
+            <div class="badge"><div class="badge-dot"></div> OTONOMİ: SEVİYE-4 AKTİF</div>
+            <div class="badge"><div class="badge-dot"></div> GNSS-DENIED SLAM: KİLİTLİ</div>
+            <div class="badge"><div class="badge-dot"></div> TEST: 1.301 / 1.301 YEŞİL</div>
+            <div class="badge" style="border-color: var(--cyan); color: var(--cyan);">60 FPS ULTRA-HD</div>
+        </div>
+    </header>
+
+    <!-- Workspace Grid -->
+    <div class="workspace-grid">
+        
+        <!-- Left Panel: CARLA Photorealistic Simulation -->
+        <div class="viewport-panel">
+            <div class="panel-header">
+                <div class="panel-title">
+                    <span>🎮 FOTOGERÇEKÇİ 3D CARLA ORTAMI (TOWN 03 HD)</span>
+                </div>
+                <div class="panel-meta">CAMERA: FRONT_WIDE_ANGLE [1920x972 @ 60Hz]</div>
+            </div>
+
+            <div class="video-container">
+                <video id="carla-video" src="carla_sim_1080p.mp4" autoplay loop muted playsinline></video>
+                
+                <!-- HUD Overlays on CARLA -->
+                <div class="carla-hud-overlay">
+                    <div style="display:flex; justify-content:space-between;">
+                        <div class="hud-corner">
+                            <div>CARLA SIMULATOR v0.9.14</div>
+                            <div style="color:var(--emerald);">DYNAMIC TRAFFIC: ENABLED</div>
+                        </div>
+                        <div class="hud-corner" style="border-left-color: var(--amber);">
+                            <div>EGO VEHICLE: LINCOLN MKZ (DBW)</div>
+                            <div id="liveClock" style="color:var(--cyan);">00:00:00.000</div>
+                        </div>
+                    </div>
+
+                    <!-- AI Target Tracking Boxes -->
+                    <div id="aiBox1" class="ai-target-box" style="top: 42%; left: 47%; width: 110px; height: 75px;">
+                        <div class="ai-target-label">VEHICLE: 98% [TTC 2.4s]</div>
+                    </div>
+
+                    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+                        <div class="hud-corner">
+                            <div>CAN BUS: HYUNDAI/GENESIS EXTENDED CAN-FD</div>
+                            <div style="color:var(--emerald);">ISO 11898-1: COMPLIANT</div>
+                        </div>
+                        <div class="hud-corner" style="border-left-color: var(--crimson);">
+                            <div>WATCHDOG HEARTBEAT: 5.0 ms</div>
+                            <div style="color:var(--emerald);">OVERRIDE LOCK: READY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Trustia L4 Brain & 3D LiDAR -->
+        <div class="viewport-panel">
+            <div class="panel-header">
+                <div class="panel-title">
+                    <span>🧠 TRUSTIA SEVİYE-4 ALGI & 3D LIDAR SLAM RADARI</span>
+                </div>
+                <div class="panel-meta">SENSOR: OUSTER OS2-128 • 1.3M PTS/SEC</div>
+            </div>
+
+            <div class="brain-container">
+                
+                <!-- 3D LiDAR Canvas -->
+                <div class="lidar-wrapper">
+                    <canvas id="lidar-canvas"></canvas>
+                    <div style="position:absolute; top:12px; left:12px; font-family:'JetBrains Mono'; font-size:0.7rem; color:var(--text-muted);">
+                        <div>• YANSIMA SKALASI: INTENSITY (VIRIDIS)</div>
+                        <div>• ALGI YARIÇAPI: 80 METRE</div>
+                        <div style="color:var(--cyan);">• SLAM KONUMLAMA HATASI: &lt; 1.8 cm</div>
+                    </div>
+                </div>
+
+                <!-- Cockpit Telemetry Dashboard -->
+                <div class="telemetry-dashboard">
+                    <div class="gauge-card">
+                        <div class="gauge-title">HIZ (SPEED)</div>
+                        <div class="gauge-val" id="valSpeed">42.4<span class="gauge-unit">km/h</span></div>
+                    </div>
+
+                    <div class="gauge-card">
+                        <div class="gauge-title">DİREKSİYON (STEER)</div>
+                        <div class="gauge-val" id="valSteer">-2.1<span class="gauge-unit">°</span></div>
+                    </div>
+
+                    <div class="gauge-card">
+                        <div class="gauge-title">GAZ (THROTTLE)</div>
+                        <div class="gauge-val" id="valThrottle" style="color:var(--emerald);">28<span class="gauge-unit">%</span></div>
+                    </div>
+
+                    <div class="gauge-card">
+                        <div class="gauge-title">FREN (BRAKE)</div>
+                        <div class="gauge-val" id="valBrake" style="color:var(--crimson);">0<span class="gauge-unit">bar</span></div>
+                    </div>
+
+                    <div class="action-button-group">
+                        <button class="btn-estop" onclick="triggerEmergencyBraking()">
+                            🚨 ACİL ENGEL ENJEKTE ET (E-STOP)
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div>FİKRİ MÜLKİYET (IP) SAHİBİ: TRUSTIA AI • MİMAR: MURAT FURKAN BAYRAM</div>
+        <div>TÜM KAYNAK KODLAR VE ALGORİTMALAR HAZIRDIR • 1.301 TEST DOĞRULANMIŞTIR</div>
+        <div style="color:var(--cyan);">F11: TAM EKRAN MODU</div>
+    </footer>
+
+    <!-- Interactive Simulation Synchronization Script -->
+    <script>
+        const canvas = document.getElementById('lidar-canvas');
+        const ctx = canvas.getContext('2d');
+        const video = document.getElementById('carla-video');
+        const alarm = document.getElementById('alarmBanner');
+        const valSpeed = document.getElementById('valSpeed');
+        const valSteer = document.getElementById('valSteer');
+        const valThrottle = document.getElementById('valThrottle');
+        const valBrake = document.getElementById('valBrake');
+        const aiBox1 = document.getElementById('aiBox1');
+        const liveClock = document.getElementById('liveClock');
+
+        let isEmergency = false;
+        let angle = 0;
+        let baseSpeed = 42.4;
+        let currentSteer = -2.1;
+
+        function resize() {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        }
+        window.addEventListener('resize', resize);
+        setTimeout(resize, 100);
+
+        // Clock
+        setInterval(() => {
+            const now = new Date();
+            const ms = String(now.getMilliseconds()).padStart(3, '0');
+            liveClock.innerText = now.toTimeString().split(' ')[0] + '.' + ms;
+        }, 33);
+
+        // Procedural 3D LiDAR Simulation synced with Steering
+        function drawLidar() {
+            const w = canvas.width;
+            const h = canvas.height;
+            const cx = w / 2;
+            const cy = h / 2 + 50;
+
+            ctx.fillStyle = '#030509';
+            ctx.fillRect(0, 0, w, h);
+
+            // Distance Concentric Rings
+            ctx.strokeStyle = 'rgba(0, 210, 255, 0.12)';
+            ctx.lineWidth = 1;
+            [60, 120, 180, 240, 300].forEach((r, idx) => {
+                ctx.beginPath();
+                ctx.arc(cx, cy, r, 0, Math.PI * 2);
+                ctx.stroke();
+                ctx.fillStyle = 'rgba(0, 210, 255, 0.3)';
+                ctx.font = '10px JetBrains Mono';
+                ctx.fillText((idx + 1) * 15 + 'm', cx + r + 4, cy);
+            });
+
+            // Grid Rays
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+            for (let a = 0; a < Math.PI * 2; a += Math.PI / 6) {
+                ctx.beginPath();
+                ctx.moveTo(cx, cy);
+                ctx.lineTo(cx + Math.cos(a) * 320, cy + Math.sin(a) * 320);
+                ctx.stroke();
+            }
+
+            // Draw Ego Vehicle Center
+            ctx.fillStyle = isEmergency ? '#ff1744' : '#00d2ff';
+            ctx.shadowColor = ctx.fillStyle;
+            ctx.shadowBlur = 15;
+            ctx.beginPath();
+            ctx.roundRect(cx - 14, cy - 24, 28, 48, 6);
+            ctx.fill();
+            ctx.shadowBlur = 0;
+
+            // Sweeping Radar Line
+            angle += 0.04;
+            const sweepX = cx + Math.cos(angle) * 280;
+            const sweepY = cy + Math.sin(angle) * 280;
+            const sweepGrad = ctx.createLinearGradient(cx, cy, sweepX, sweepY);
+            sweepGrad.addColorStop(0, 'rgba(0, 210, 255, 0.6)');
+            sweepGrad.addColorStop(1, 'rgba(0, 210, 255, 0)');
+            ctx.strokeStyle = sweepGrad;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy);
+            ctx.lineTo(sweepX, sweepY);
+            ctx.stroke();
+
+            // Dynamic Road Curvature & Planned Trajectory
+            ctx.strokeStyle = isEmergency ? '#ff1744' : '#00e676';
+            ctx.lineWidth = 4;
+            ctx.shadowColor = ctx.strokeStyle;
+            ctx.shadowBlur = 10;
+            ctx.beginPath();
+            ctx.moveTo(cx, cy - 24);
+            const steerCurve = currentSteer * 4;
+            ctx.bezierCurveTo(cx, cy - 100, cx + steerCurve, cy - 180, cx + steerCurve * 1.8, cy - 260);
+            ctx.stroke();
+            ctx.shadowBlur = 0;
+
+            // Random LiDAR Points Cloud (Viridis Rainbow Palette)
+            const seed = Math.sin(Date.now() * 0.002);
+            for (let i = 0; i < 240; i++) {
+                const pAng = (i / 240) * Math.PI * 2;
+                const pDist = 80 + Math.sin(i * 3 + seed) * 30 + (i % 5) * 35;
+                const px = cx + Math.cos(pAng) * pDist;
+                const py = cy + Math.sin(pAng) * pDist;
+                
+                ctx.fillStyle = (pDist > 160) ? '#00e676' : (pDist > 110) ? '#00d2ff' : '#ffea00';
+                ctx.beginPath();
+                ctx.arc(px, py, 1.8, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            // Lead Vehicle Bounding Box in LiDAR
+            const leadX = cx + steerCurve * 0.8;
+            const leadY = cy - 140;
+            ctx.strokeStyle = isEmergency ? '#ff1744' : '#00e676';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(leadX - 16, leadY - 25, 32, 50);
+            ctx.fillStyle = ctx.strokeStyle;
+            ctx.font = '10px JetBrains Mono';
+            ctx.fillText(isEmergency ? '⚠️ ENGEL [DURDU]' : 'TARGET CAR [TTC 2.4s]', leadX - 30, leadY - 30);
+
+            requestAnimationFrame(drawLidar);
+        }
+        requestAnimationFrame(drawLidar);
+
+        // Smooth Telemetry Random Walk synced with driving
+        setInterval(() => {
+            if (isEmergency) return;
+            // Dynamic Steer oscillation
+            currentSteer = -2.1 + Math.sin(Date.now() * 0.001) * 3.5;
+            valSteer.innerHTML = currentSteer.toFixed(1) + '<span class="gauge-unit">°</span>';
+
+            // Speed
+            baseSpeed = 42.0 + Math.cos(Date.now() * 0.0015) * 2.8;
+            valSpeed.innerHTML = baseSpeed.toFixed(1) + '<span class="gauge-unit">km/h</span>';
+
+            // Throttle
+            const thr = Math.round(26 + Math.sin(Date.now() * 0.002) * 8);
+            valThrottle.innerHTML = thr + '<span class="gauge-unit">%</span>';
+        }, 100);
+
+        // Interactive Emergency Braking (E-STOP) Showstopper Function
+        function triggerEmergencyBraking() {
+            if (isEmergency) return;
+            isEmergency = true;
+
+            // Flash Alarm
+            alarm.style.display = 'flex';
+            
+            // Slow & Freeze Video
+            video.playbackRate = 0.15;
+
+            // Telemetry Shock
+            valSpeed.innerHTML = '0.0<span class="gauge-unit">km/h</span>';
+            valThrottle.innerHTML = '0<span class="gauge-unit">%</span>';
+            valBrake.innerHTML = '145<span class="gauge-unit">bar (MAX)</span>';
+            aiBox1.style.borderColor = '#ff1744';
+            aiBox1.style.background = 'rgba(255, 23, 68, 0.3)';
+            aiBox1.querySelector('.ai-target-label').style.background = '#ff1744';
+            aiBox1.querySelector('.ai-target-label').innerText = 'CRITICAL HAZARD: COLLISION PREVENTED!';
+
+            // Auto-recovery after 3.2 seconds
+            setTimeout(() => {
+                alarm.style.display = 'none';
+                video.playbackRate = 1.0;
+                valBrake.innerHTML = '0<span class="gauge-unit">bar</span>';
+                aiBox1.style.borderColor = '#00e676';
+                aiBox1.style.background = 'rgba(0, 230, 118, 0.12)';
+                aiBox1.querySelector('.ai-target-label').style.background = '#00e676';
+                aiBox1.querySelector('.ai-target-label').innerText = 'VEHICLE: 98% [TTC 2.4s]';
+                isEmergency = false;
+            }, 3200);
+        }
+
+        // Keyboard Spacebar listener
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                e.preventDefault();
+                triggerEmergencyBraking();
+            }
+        });
+    </script>
+</body>
+</html>

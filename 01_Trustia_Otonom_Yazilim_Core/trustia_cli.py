@@ -60,10 +60,8 @@ def run_robotaxi():
     print("Emniyet: ISO 26262 ASIL-D Minimal Risk Maneuver (MRM) Active")
     print("-" * 70)
 
-    from integration.can import CanBus, CanFrame, MotorController, SteeringController
+    from integration.can import CanBus, CanFrame, MotorController, SteeringController, ID_MOTOR_SPEED, ID_STEERING_ANGLE
     bus = CanBus()
-    motor = MotorController(bus)
-    steer = SteeringController(bus)
 
     # Simulate 10-step drive cycle
     print("[1/3] Initializing CAN-FD Bus & Heartbeat...")
@@ -73,8 +71,8 @@ def run_robotaxi():
     for i in range(1, 6):
         speed_mps = min(12.5, i * 2.5)
         angle_rad = 0.05 * (i % 3 - 1)
-        motor.command_speed(speed_mps)
-        steer.command_angle(angle_rad)
+        bus.transmit(CanFrame(arbitration_id=ID_MOTOR_SPEED, data=MotorController.encode_speed(speed_mps)))
+        bus.transmit(CanFrame(arbitration_id=ID_STEERING_ANGLE, data=SteeringController.encode(angle_rad)))
         print(f"  > Step {i}: Target Speed: {speed_mps*3.6:.1f} km/h | Steer Angle: {angle_rad:.3f} rad | Tx Count: {bus.tx_count()}")
 
     print("[3/3] ASIL-D Safety Boundary & MRM Check: 100% NOMINAL")
