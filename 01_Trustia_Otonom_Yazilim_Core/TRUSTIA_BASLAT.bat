@@ -1,24 +1,23 @@
 @echo off
-chcp 65001 > nul
-title TRUSTIA v2.4 - Seviye-4 Otonomi & Taktik C2 Kontrol Merkezi
+title TRUSTIA v2.4 - Seviye-4 Otonomi ve Taktik C2 Kontrol Merkezi
 cls
 echo ===============================================================================
-echo    TRUSTIA v2.4 — SEVİYE-4 DUAL-USE OTONOM MOBİLİTE & TAKTİK C2 SİSTEMİ
-echo    Kurucu: Murat Furkan Bayram (17 Yaş, %80) • Tescil: AB PIC #861711529
+echo    TRUSTIA v2.4 - SEVIYE-4 DUAL-USE OTONOM MOBILITE VE TAKTIK C2 SISTEMI
+echo    Kurucu: Murat Furkan Bayram (17 Yas, %%80) - Tescil: AB PIC #861711529
 echo ===============================================================================
 echo.
-echo  [1] Taktik C2 Masaüstü Konsolunu Başlat (MIL-STD-2525 / STANAG 4586 GUI)
-echo  [2] 1.305 Otomatik Test Validasyonunu Çalıştır (%100 Yeşil Test Kütüphanesi)
-echo  [3] Yapay Zeka Tehdit, EYP ve KHKN Algılama Motorunu Çalıştır
-echo  [4] Yerli Mimari, AB PIC ve NATO Uygunluk Sertifikasyon Denetimini Koştur
-echo  [5] Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Sürüş Döngüsünü Başlat
-echo  [6] Kurumsal Kimlik, Devlet Tescilleri ve Akreditasyonları Görüntüle
-echo  [7] Canlı 3D WebGL Dijital İkiz Kokpitini Başlat (Port 8090 / Tarayıcı)
-echo  [8] MetaDrive 3D Masaüstü Otonom Sürüş Simülasyonunu Başlat (Panda3D / Sokak & Trafik)
-echo  [9] Ticari Lisans ve Doğrulama Durumunu Görüntüle (Commercial License Status)
+echo  [1] Taktik C2 Masaustu Konsolunu Baslat (MIL-STD-2525 / STANAG 4586 GUI)
+echo  [2] 1.305 Otomatik Test Validasyonunu Calistir (%%100 Yesil Test Kutuphanesi)
+echo  [3] Yapay Zeka Tehdit, EYP ve KHKN Algilama Motorunu Calistir
+echo  [4] Yerli Mimari, AB PIC ve NATO Uygunluk Sertifikasyon Denetimini Kostur
+echo  [5] Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Surus Dongusunu Baslat
+echo  [6] Kurumsal Kimlik, Devlet Tescilleri ve Akreditasyonlari Goruntule
+echo  [7] Canli 3D WebGL Dijital Ikiz Kokpitini Baslat (Port 8090 / Tarayici)
+echo  [8] MetaDrive 3D Masaustu Otonom Surus Simulasyonunu Baslat (Panda3D)
+echo  [9] Ticari Lisans ve Dogrulama Durumunu Goruntule (Commercial License Status)
 echo.
 echo ===============================================================================
-set /p secim="Lütfen çalıştırmak istediğiniz işlem numarasını giriniz (1-9): "
+set /p secim="Lutfen calistirmak istediginiz islem numarasini giriniz (1-9): "
 
 if "%secim%"=="1" python trustia_cli.py gui
 if "%secim%"=="2" python trustia_cli.py test
