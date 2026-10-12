@@ -1,0 +1,32 @@
+# TRUSTIA SEVİYE-4 OTONOM SÜRÜŞ ÇEKİRDEĞİ — ARAÇ YAPILANDIRMA DOSYASI
+# Enterprise Vehicle Configuration (ISO 26262 ASIL-D Compliant)
+
+vehicle:
+  name: "Autonomous Vehicle Platform"
+  platform_id: "VEH-L4-001"
+  wheel_base_m: 3.0
+  track_width_m: 1.6
+  max_steering_angle_deg: 35.0
+  max_speed_kmh: 70.0
+
+can_bus:
+  interface: "socketcan"
+  channel: "can0"
+  protocol: "CAN-FD"
+  bitrate: 500000
+  data_bitrate: 2000000
+
+sensors:
+  lidar:
+    model: "Ouster-OS2-128"
+    ip: "192.168.1.200"
+    port: 7502
+    rate_hz: 20
+  gnss_imu:
+    enabled: true
+    fallback_to_lidar_slam: true
+
+safety:
+  asil_level: "ASIL-D"
+  mrm_safe_stop_enabled: true
+  obstacle_clearance_m: 1.5
