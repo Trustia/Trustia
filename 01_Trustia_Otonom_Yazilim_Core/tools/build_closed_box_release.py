@@ -6,9 +6,8 @@ Kurucu & Sistem Mimarı: Murat Furkan Bayram (%100 Hisse)
 Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • NATO NCAGE TR26258467723
 
 Bu araç; müşteriye giden teslimat paketinde TEK BİR SATIR BİLE OKUNABİLİR .py KODU
-BIRAKMAZ! Tüm algoritmaları (SLAM, Rota Planlama, Kontrol, CAN-FD, Yapay Zeka)
-optimize edilmiş ikili bytecode (.pyc) makine diline derler, orijinal .py kaynak
-dosyalarını paketten imha eder ve donanım kilidiyle mühürler.
+BIRAKMAZ! Tüm algoritmaları ve giriş scriptlerini optimize edilmiş ikili bytecode (.pyc)
+makine diline derler, orijinal .py kaynak dosyalarını tamamen imha eder ve donanım kilidiyle mühürler.
 """
 
 from __future__ import annotations
@@ -17,6 +16,7 @@ import os
 import sys
 import shutil
 import zipfile
+import py_compile
 import compileall
 import argparse
 import hashlib
@@ -47,12 +47,51 @@ CORE_MODULES = [
     "record"
 ]
 
-# Kök yönetim ve çalıştırma dosyaları
+# Kök yönetim ve çalıştırma scriptleri
 ROOT_SCRIPTS = [
     "trustia_cli.py",
     "trustia_live_engine.py",
     "trustia_metadrive_bridge.py"
 ]
+
+
+BATCH_LAUNCHER_CONTENT = """@echo off
+title TRUSTIA v2.4 - Seviye-4 Otonomi ve Taktik C2 Kontrol Merkezi
+cls
+echo ===============================================================================
+echo    TRUSTIA v2.4 - SEVIYE-4 DUAL-USE OTONOM MOBILITE VE TAKTIK C2 SISTEMI
+echo    Kurucu: Murat Furkan Bayram (17 Yas, %%80) - Tescil: AB PIC #861711529
+echo    Lisans: TICARI KAPALI KUTU (CLOSED-BOX COMPILED BINARY RELEASE)
+echo ===============================================================================
+echo.
+echo  [1] Taktik C2 Masaustu Konsolunu Baslat (MIL-STD-2525 / STANAG 4586 GUI)
+echo  [2] Sistem ve Alt Bilesen Dogrulama Suitini Calistir (1.305 Test Sertifikali)
+echo  [3] Yapay Zeka Tehdit, EYP ve KHKN Algilama Motorunu Calistir
+echo  [4] Yerli Mimari, AB PIC ve NATO Uygunluk Sertifikasyon Denetimini Kostur
+echo  [5] Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Surus Dongusunu Baslat
+echo  [6] Kurumsal Kimlik, Devlet Tescilleri ve Akreditasyonlari Goruntule
+echo  [7] Canli 3D WebGL Dijital Ikiz Kokpitini Baslat (Port 8090 / Tarayici)
+echo  [8] MetaDrive 3D Masaustu Otonom Surus Simulasyonunu Baslat (Panda3D)
+echo  [9] Ticari Lisans ve Dogrulama Durumunu Goruntule (Commercial License Status)
+echo.
+echo ===============================================================================
+set /p secim="Lutfen calistirmak istediginiz islem numarasini giriniz (1-9): "
+
+if "%secim%"=="1" python trustia_cli.pyc gui
+if "%secim%"=="2" python trustia_cli.pyc test
+if "%secim%"=="3" python trustia_cli.pyc threats
+if "%secim%"=="4" python trustia_cli.pyc audit
+if "%secim%"=="5" python trustia_cli.pyc robotaxi
+if "%secim%"=="6" python trustia_cli.pyc info
+if "%secim%"=="7" (
+    start "" "http://localhost:8090"
+    python trustia_live_engine.pyc
+)
+if "%secim%"=="8" python trustia_metadrive_bridge.pyc
+if "%secim%"=="9" python trustia_cli.pyc license
+
+pause
+"""
 
 
 def generate_integrity_manifest(target_dir: Path) -> dict:
@@ -94,21 +133,38 @@ def build_closed_box_release(
     package_root = stage_dir / "Trustia_L4_Autonomy_ClosedBox"
     os.makedirs(package_root, exist_ok=True)
 
-    print("\n[1/5] Çekirdek Otonomi Modülleri Kopyalanıyor ve Derleniyor...")
+    print("\n[1/5] Modüller ve Scriptler Kopyalanıyor...")
+    # 12 Modülü kopyala
     for mod in CORE_MODULES:
         src_mod = PROJECT_ROOT / mod
         dst_mod = package_root / mod
         if src_mod.exists():
             shutil.copytree(src_mod, dst_mod, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", "*.pyc"))
-            # Compile directly to legacy in-place .pyc with optimization 2 (strips docstrings & assertions)
             compileall.compile_dir(str(dst_mod), force=True, legacy=True, optimize=2, quiet=1)
 
-    print("\n[2/5] KRİTİK GÜVENLİK ADIMI: Tüm Kaynak (.py) Metin Dosyaları İmha Ediliyor...")
+    # Kök scriptleri derle ve doğrudan .pyc olarak yerleştir
+    for sname in ROOT_SCRIPTS:
+        src_script = PROJECT_ROOT / sname
+        if src_script.exists():
+            base_name = Path(sname).stem
+            dst_pyc = package_root / f"{base_name}.pyc"
+            py_compile.compile(str(src_script), str(dst_pyc), optimize=2)
+
+    # Başlatıcı batch dosyasını yerleştir
+    with open(package_root / "TRUSTIA_BASLAT.bat", "w", encoding="utf-8") as bf:
+        bf.write(BATCH_LAUNCHER_CONTENT)
+
+    # Alıcı belgelerini kopyala
+    for doc in ["README_ALICI_KURULUM.md", "COMMERCIAL_EULA.md", "LICENSE", "pyproject.toml"]:
+        d_src = PROJECT_ROOT / doc
+        if d_src.exists():
+            shutil.copy2(d_src, package_root / doc)
+
+    print("\n[2/5] KRİTİK GÜVENLİK ADIMI: Paket İçindeki TÜM .py Kaynak Dosyaları İmha Ediliyor...")
     deleted_py_count = 0
     preserved_pyc_count = 0
 
     for root, dirs, files in os.walk(package_root):
-        # Remove __pycache__ folders if any were created
         if "__pycache__" in dirs:
             shutil.rmtree(os.path.join(root, "__pycache__"), ignore_errors=True)
             dirs.remove("__pycache__")
@@ -116,41 +172,20 @@ def build_closed_box_release(
         for f in files:
             fp = Path(root) / f
             if f.endswith(".py"):
-                # Kaynak kod dosyasını tamamen sil!
                 fp.unlink()
                 deleted_py_count += 1
             elif f.endswith(".pyc"):
                 preserved_pyc_count += 1
 
+    # Güvenlik Kontrolü: Tek bir tane bile .py kalmamalı!
+    remaining_py = list(package_root.rglob("*.py"))
+    assert len(remaining_py) == 0, f"HATA: Pakette hala .py dosyası var: {remaining_py}"
+
     print(f"  * İmha Edilen Orijinal .py Dosyası : {deleted_py_count} adet (Artık kod okunamaz!)")
     print(f"  * Üretilen Kapalı .pyc İkili Dosya   : {preserved_pyc_count} adet (Saf Makine Bytecode)")
+    print(f"  * Kalan Açık .py Dosyası Sayısı      : 0 ADET (%100 KAPALI KUTU GARANTİSİ)")
 
-    print("\n[3/5] Giriş Noktası ve Başlatıcılar Ekleniyor...")
-    # Kök scriptleri derle ve kopyala
-    for sname in ROOT_SCRIPTS:
-        src_script = PROJECT_ROOT / sname
-        if src_script.exists():
-            dst_script = package_root / sname
-            shutil.copy2(src_script, dst_script)
-
-    # Başlatıcı batch dosyasını kopyala
-    bat_src = PROJECT_ROOT / "TRUSTIA_BASLAT.bat"
-    if bat_src.exists():
-        shutil.copy2(bat_src, package_root / "TRUSTIA_BASLAT.bat")
-
-    # Alıcı entegrasyon kılavuzunu ve EULA'yı kopyala
-    for doc in ["README_ALICI_KURULUM.md", "COMMERCIAL_EULA.md", "LICENSE", "pyproject.toml"]:
-        d_src = PROJECT_ROOT / doc
-        if d_src.exists():
-            shutil.copy2(d_src, package_root / doc)
-
-    # Test süitini de kapalı çalışacak şekilde ekle
-    tests_src = PROJECT_ROOT / "tests"
-    if tests_src.exists():
-        tests_dst = package_root / "tests"
-        shutil.copytree(tests_src, tests_dst, ignore=shutil.ignore_patterns("__pycache__", ".pytest_cache", "*.pyc"))
-
-    print("\n[4/5] Donanım Kilitli Lisans ve Bütünlük İmzası Üretiliyor...")
+    print("\n[3/5] Donanım Kilitli Lisans ve Bütünlük İmzası Üretiliyor...")
     if hardware_lock.lower() == "current":
         hardware_lock = LicenseManager.get_hardware_fingerprint()
 
@@ -172,7 +207,7 @@ def build_closed_box_release(
     print(f"  * Lisans Kimliği   : {license_data['license_id']}")
     print(f"  * Bütünlük İmzası  : {len(manifest)} dosya mühürlendi (SHA-256 Anti-Tamper)")
 
-    print("\n[5/5] Final Kapalı Kutu ZIP Paketi Paketleniyor...")
+    print("\n[4/5] Final Kapalı Kutu ZIP Paketi Paketleniyor...")
     zip_filename = "Trustia_L4_Autonomy_v2.4_TAM_GARANTI_KAPALI_KUTU.zip"
     zip_path = os.path.join(output_dir, zip_filename)
 
