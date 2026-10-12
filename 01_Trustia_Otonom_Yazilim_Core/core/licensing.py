@@ -34,10 +34,24 @@ class LicenseManager:
     DEFAULT_LICENSE_FILENAME = "trustia.lic"
 
     @classmethod
+    def get_hardware_fingerprint(cls) -> str:
+        """
+        Hedef araç veya bilgisayarın benzersiz donanım parmak izini üretir
+        (MAC Adresi + Bilgisayar Kimliği).
+        """
+        node_id = uuid.getnode()
+        host = os.environ.get("COMPUTERNAME", os.environ.get("HOSTNAME", "TRUSTIA_HOST"))
+        raw = f"{node_id}_{host}"
+        return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16].upper()
+
+    @classmethod
     def _compute_signature(cls, payload: Dict[str, Any]) -> str:
         """Lisans verisini HMAC-SHA256 ile imzalar."""
         # İmzalanacak alanları deterministik sırala
-        signable_keys = ["client_name", "license_id", "tier", "issue_date", "expiry_date", "max_vehicles", "features"]
+        signable_keys = [
+            "client_name", "license_id", "tier", "issue_date",
+            "expiry_date", "max_vehicles", "hardware_lock", "features"
+        ]
         canonical_str = "|".join(f"{k}:{payload.get(k)}" for k in signable_keys)
         return hmac.new(_TRUSTIA_ROOT_SIGNING_SALT, canonical_str.encode("utf-8"), hashlib.sha256).hexdigest()
 
@@ -47,6 +61,7 @@ class LicenseManager:
         client_name: str,
         expiry_date: str = "LIFETIME",
         max_vehicles: str = "UNLIMITED",
+        hardware_lock: str = "ANY",
         tier: str = "L4_ENTERPRISE_FULL_STACK",
         features: Optional[list] = None
     ) -> Dict[str, Any]:
@@ -75,6 +90,7 @@ class LicenseManager:
             "issue_date": issue_date,
             "expiry_date": expiry_date.strip().upper(),
             "max_vehicles": max_vehicles,
+            "hardware_lock": hardware_lock.strip().upper(),
             "features": features,
             "legal_basis": "5846 Sayılı FSEK & Uluslararası Bern Sözleşmesi Korumalı Eser",
             "registrations": {
@@ -104,6 +120,13 @@ class LicenseManager:
 
         if not hmac.compare_digest(expected_sig, given_sig):
             return False, "GEÇERSİZ LİSANS İMZASI: Lisans dosyası kurcalanmış veya yetkisiz üretilmiş!"
+
+        # Donanım kilidi kontrolü
+        hw_lock = license_data.get("hardware_lock", "ANY")
+        if hw_lock and hw_lock != "ANY":
+            current_hw = cls.get_hardware_fingerprint()
+            if current_hw != hw_lock:
+                return False, f"DONANIM UYUŞMAZLIĞI (HARDWARE MISMATCH): Lisans sadece kayıtlı araca aittir! (Kayıtlı: {hw_lock}, Algılanan: {current_hw})"
 
         # Tarih kontrolü
         expiry_str = license_data.get("expiry_date", "LIFETIME")
