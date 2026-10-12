@@ -1,4 +1,5 @@
 @echo off
+cd /d "%~dp0"
 title TRUSTIA v2.4 - Seviye-4 Otonomi ve Taktik C2 Kontrol Merkezi
 cls
 echo ===============================================================================

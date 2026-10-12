@@ -56,8 +56,19 @@ ROOT_SCRIPTS = [
 
 
 BATCH_LAUNCHER_CONTENT = """@echo off
+cd /d "%~dp0"
 title TRUSTIA v2.4 - Seviye-4 Otonomi ve Taktik C2 Kontrol Merkezi
 cls
+
+if not exist "%~dp0trustia_cli.pyc" (
+    echo ===============================================================================
+    echo  DIKKAT: Yazilim ZIP arsivinin icinden dogrudan calistirilamaz!
+    echo  Lutfen once ZIP dosyasina sag tiklayip Tumunu Ayikla secenegini seciniz.
+    echo ===============================================================================
+    echo.
+    pause
+    exit /b
+)
 echo ===============================================================================
 echo    TRUSTIA v2.4 - SEVIYE-4 DUAL-USE OTONOM MOBILITE VE TAKTIK C2 SISTEMI
 echo    Kurucu: Murat Furkan Bayram (17 Yas, %%80) - Tescil: AB PIC #861711529
