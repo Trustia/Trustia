@@ -103,9 +103,25 @@ def run_info():
     print("=" * 75)
 
 
+def run_license():
+    from core.licensing import LicenseManager
+    status = LicenseManager.get_system_status()
+    print("=" * 75)
+    print("  TRUSTIA AI — TİCARİ LİSANS VE DOĞRULAMA DURUMU (COMMERCIAL LICENSE)")
+    print("=" * 75)
+    print(f"  Çalışma Modu     : {status['mode']}")
+    print(f"  Lisans Sahibi    : {status['client_name']}")
+    print(f"  Lisans Kimliği   : {status['license_id']}")
+    print(f"  Yetki Seviyesi   : {status['tier']}")
+    print(f"  Son Kullanma     : {status['expiry']}")
+    print(f"  İzinli Araç Sayı : {status['vehicles']}")
+    print(f"  Doğrulama Durumu : {status['message']}")
+    print("=" * 75)
+
+
 def main():
     parser = argparse.ArgumentParser(description="TRUSTIA Dual-Use Autonomy Platform Production CLI v2.4")
-    parser.add_argument("command", choices=["gui", "audit", "test", "threats", "robotaxi", "info"], help="Command to execute")
+    parser.add_argument("command", choices=["gui", "audit", "test", "threats", "robotaxi", "info", "license"], help="Command to execute")
 
     args = parser.parse_args()
 
@@ -121,6 +137,8 @@ def main():
         run_robotaxi()
     elif args.command == "info":
         run_info()
+    elif args.command == "license":
+        run_license()
 
 
 if __name__ == "__main__":

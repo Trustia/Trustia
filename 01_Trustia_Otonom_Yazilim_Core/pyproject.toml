@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trustia-autonomy"
+version = "2.4.0"
+description = "Trustia AI — Level-4 Autonomous Driving & Tactical SLAM Core Engine"
+readme = "README.md"
+authors = [
+    { name = "Murat Furkan Bayram", email = "iletisim@trustia.com.tr" }
+]
+license = { text = "Trustia Proprietary Commercial License" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Manufacturing",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Robotics",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+keywords = ["autonomous-driving", "robotaxi", "level-4", "lidar-slam", "can-fd", "hybrid-a-star"]
+dependencies = [
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+simulation = [
+    "metadrive-simulator>=0.4.0",
+]
+
+[project.scripts]
+trustia = "trustia_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "core*",
+    "perception*",
+    "planning*",
+    "control*",
+    "slam*",
+    "integration*",
+    "security*",
+    "simulation*",
+    "v2x*",
+    "ai*",
+    "command*",
+    "record*"
+]
+exclude = ["tests*", "demos*"]

@@ -34,6 +34,7 @@ coverage.xml
 .hypothesis/
 .mypy_cache/
 .ruff_cache/
+*.lic
 
 # --- Virtual Environments ---
 .venv/
