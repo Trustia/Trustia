@@ -1,202 +1,237 @@
-# 🚗 TRUSTIA — Level-4 Autonomous Driving & Robotaxi Navigation Core IP (v2.4)
+# 🚗 TRUSTIA AI — Seviye-4 Otonom Sürüş & Robotaksi Yazılım Çekirdeği (v2.4)
 
-[![CI/CD Pipeline](https://github.com/Trustia/Trustia/actions/workflows/deploy.yml/badge.svg)](https://github.com/Trustia/Trustia/actions/workflows/deploy.yml)
-[![Tests Passing](https://img.shields.io/badge/Tests-1%2C301%20Passing%20(100%25)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
+![Trustia Banner](Kurumsal/Medya/Banner.jpg)
+
+[![Test Durumu](https://img.shields.io/badge/Testler-1%2C305%20Ba%C5%9Far%C4%B1l%C4%B1%20(%25100)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
+[![C++20 & ROS 2](https://img.shields.io/badge/C%2B%2B-20%20%7C%20ROS%202-00599C?logo=c%2B%2B&logoColor=white)](https://github.com/Trustia/Trustia)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)](https://nextjs.org)
-[![Architecture](https://img.shields.io/badge/Architecture-Civil%20Level--4%20Autonomy%20(Robotaxi%20%26%20AMR)-blue.svg)](https://trustia.com.tr)
-[![Safety Standards](https://img.shields.io/badge/Safety-ISO%2026262%20ASIL--D%20%7C%20SAE%20J3016%20L4-emerald.svg)](https://trustia.com.tr)
-[![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-CAN--FD%20%7C%20SAE%20J1939%20%7C%20ROS%202-orange.svg)](https://trustia.com.tr/robotaxi)
-[![Transaction Model](https://img.shields.io/badge/Transaction-Full%20Asset%20Sale%20%26%20IP%20Buyout-purple.svg)](https://acquire.com)
-[![Escrow Verified](https://img.shields.io/badge/Escrow-100%25%20Secured%20Transfer-darkgreen.svg)](https://escrow.com)
+[![Mimari](https://img.shields.io/badge/Mimari-Seviye--4%20Otonomi%20(Robotaksi%20%26%20AMR)-blue.svg)](https://trustia.com.tr)
+[![Güvenlik Standardı](https://img.shields.io/badge/G%C3%BCvenlik-ISO%2026262%20ASIL--D%20%7C%20SAE%20J3016%20L4-emerald.svg)](https://trustia.com.tr)
+[![Drive-by-Wire](https://img.shields.io/badge/Drive--by--Wire-CAN--FD%20%7C%20Hyundai%20Ioniq%205-orange.svg)](https://trustia.com.tr)
+[![ASELSAN Onaylı Tedarikçi](https://img.shields.io/badge/ASELSAN-Onayl%C4%B1%20Tedarik%C3%A7i%20%230050569-darkred.svg)](https://aselsan.com.tr)
+[![NATO NCAGE](https://img.shields.io/badge/NATO%20NCAGE-TR26258467723-navy.svg)](https://trustia.com.tr)
+[![AB PIC](https://img.shields.io/badge/EU%20PIC-861711529-blue.svg)](https://trustia.com.tr)
 
-> **Production-grade, hardware-agnostic Level-4 autonomous driving & GNSS-denied 3D LiDAR SLAM software stack engineered for commercial passenger robotaxis, electric delivery platforms, campus shuttles, and industrial intralogistics (AMRs). Built from scratch with C++20 and ROS 2, featuring zero black-box dependencies, 1,301 automated unit/integration tests (100% pass rate), and native CAN-FD vehicle control gateways.**
+> **Ticari yolcu robotaksileri, fabrika/depo içi otonom lojistik araçları (AMR/AGV), otonom kampüs servisleri ve savunma sanayii insansız kara araçları (İKA) için sıfırdan C++20, ROS 2 ve Python ile geliştirilmiş; donanımdan bağımsız, GNSS-Denied 3D LiDAR SLAM tabanlı Seviye-4 Otonom Sürüş Motoru.**  
+> **1.305 adet otomatik birim ve entegrasyon testi ile %100 doğrulanmış, yerel CAN-FD araç kontrol ağ geçitlerine sahip, harici kapalı kutu bağımlılığı bulunmayan kurumsal B2B otonomi yığını.**
 
 ---
 
-## 💎 1. Acquisition Overview & Turnkey Asset Deliverables
+## 🏛️ 1. Resmi Kurumsal Akreditasyonlar & Ekosistem Kayıtları
 
-Trustia AI is available for **100% Full Intellectual Property & Codebase Acquisition (Clean Asset Sale)**. The buyer acquires complete, unencumbered ownership of the production-ready Level-4 autonomy stack, complete engineering dossiers, hardware BOM specifications, test suites, brand assets, and digital domains.
+Trustia AI, ulusal ve uluslararası savunma, sanayi ve derin teknoloji ekosistemlerinde resmi tescillere sahiptir:
 
-* **Asset Sale Asking Price:** **$145,000 USD** *(Open to qualified offers)*
-* **Estimated Replacement R&D Cost:** **$300,000+ USD** *(Saves 18–24 months of specialized autonomous systems engineering)*
-* **Transaction Mechanism:** 100% clean-cut asset sale processed securely through **Escrow.com**
-* **Ownership Structure:** 100% bootstrapped and owned by the sole technical founder (Murat Furkan Bayram). Zero debt, zero venture dilution, zero encumbrances.
-* **Transition Assistance:** 30 days of direct technical onboarding and integration advisory included.
-
-### 📦 Complete Asset Inventory Included in Sale
-
-| Category | Deliverable Description | Technical Detail |
+| Kurum / Organizasyon | Bölge | Tescil / Tanım & Statü |
 | :--- | :--- | :--- |
-| **Full Source Code** | Complete Core Autonomy Engine | 16,000+ LOC in deterministic C++20 and Python 3.12 |
-| **SLAM & Localization** | GNSS-Denied 3D LiDAR SLAM | 3D NDT / ICP Pose-Graph SLAM & 400Hz ESKF multi-sensor fusion |
-| **Planning & Control** | Kinematic Path Planning & DBW | Hybrid A* Ackermann trajectory planner, Pure Pursuit & Stanley |
-| **Drive-by-Wire Gateway** | Native CAN-FD Vehicle Integration | Reverse-engineered LKAS/SCC messages, 100Hz steering/brake injection |
-| **Safety Architecture** | ISO 26262 ASIL-D Fail-Safe | 5ms instantaneous driver override, 200ms hardware watchdog, MRM |
-| **Automated Test Suite** | 1,301 Automated Tests | 100% pass rate in CI/CD pipeline covering unit, integration & scenarios |
-| **Engineering Dossiers** | Hardware BOM & Retrofit Manuals | Hyundai Ioniq 5 L4 master plan, 27-part sensor BOM, wiring schematics |
-| **Digital Web Platform** | Next.js 16 Web & Telemetry GUI | Full production website, 3D interactive console, and dispatch portal |
-| **Brand & Domains** | Global Brand Equity | `trustia.com.tr`, corporate logos, media packages, and visual assets |
+| 🛡️ **ASELSAN A.Ş.** | Ankara, TR | **Onaylı Tedarikçi Kütüğü (Firma Kodu: `#0050569`)** |
+| 🎖️ **NATO / Milli Savunma Bakanlığı** | Brüksel / Ankara | **NATO Ticari ve Devlet Kuruluşu Kodu (NCAGE: `TR26258467723`)** |
+| 🇹🇷 **STM Savunma Teknolojileri** | Ankara, TR | **Aday Tedarikçi Kaydı** (Otonom ve Yapay Zeka Sistemleri) |
+| 🇪🇺 **Avrupa Komisyonu (European Commission)** | Brüksel, AB | **Resmi AB Katılımcı Kimlik Kodu (PIC: `861711529`)** |
+| 🇪🇺 **EIT Urban Mobility** | Barselona, AB | **Kayıtlı Mobilite Partner ID (`CUS15554`)** |
+| 🚀 **Teknopark İstanbul (Cube Incubation)** | İstanbul, TR | **Ön Kuluçka Girişimi & HASAT 2026 Hızlandırma Programı** |
+| 🏛️ **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | İstanbul, TR | **Fulya Derin Teknoloji Kampüsü Yerleşik Girişimi** |
+| 🎓 **YTÜ Yıldız Teknopark** | İstanbul, TR | **Kuluçka ve Ekosistem Başvurusu** |
+| 🛡️ **Open Invention Network (OIN)** | Durham, ABD | **İkili Patent Savunma ve Karşılıklı Çapraz Lisans Anlaşması** |
 
 ---
 
-## 🏛️ 2. Verified Accreditations & Ecosystem Standing
+## 🏗️ 2. Tam Kapsamlı Seviye-4 Sistem Mimarisi
 
-| Institution / Platform | Location | Description & Standing |
-| :--- | :--- | :--- |
-| 🛡️ **Open Invention Network (OIN)** | Durham, US | Executed Bilateral Patent Defense & Cross-License Agreement |
-| 🇪🇺 **European Commission** | Brussels, EU | Official EU Participant Identification Code (PIC: `861711529`) |
-| 🇪🇺 **EIT Urban Mobility** | Barcelona, EU | Registered Partner ID (`CUS15554`) for autonomous mobility programs |
-| 🇦🇪 **Dubai World Challenge for Self-Driving** | Dubai, UAE | Official Entry Dossier submitted to Roads & Transport Authority (RTA) |
-| 🏛️ **İTO BTM (Fulya Deep-Tech Campus)** | Istanbul, TR | Contracted Deep-Tech Pre-Incubation Program Member |
-| 🌐 **Crunchbase** | Global | Verified Profile (Heat Score: 85, Global Rank: 534k) |
-
----
-
-## 🏗️ 3. Full-Stack System Architecture
+Uluslararası **SAE J3016 Seviye-4** ve **ISO 26262 ASIL-D** otomotiv standartlarına tam uyumlu 8 kritik alt sistem katmanı:
 
 ```mermaid
 flowchart TD
-    subgraph Sensors ["1. MULTI-SENSOR PERCEPTION LAYER"]
-        LIDAR["3D LiDAR (Ouster OS2-128 / Livox Mid-360)"]
-        CAM["GMSL2 Automotive Cameras (HDR 120dB)"]
-        RADAR["77GHz Automotive Radar (Continental ARS408)"]
-        IMU["Dual-Antenna RTK GNSS / INS (Septentrio)"]
+    subgraph Katman1 ["1. ÇOKLU SENSÖR VE VERİ ALIM KATMANI (SENSING)"]
+        LIDAR["3D LiDAR (Ouster OS2-128 / Livox Mid-360 Raw UDP)"]
+        CAM["GMSL2 Otomotiv Kameraları (Sony IMX390 HDR 120dB)"]
+        RADAR["77GHz Uzun Menzilli Radar (Continental ARS408-21)"]
+        IMU["Endüstriyel 6-Eksen IMU & Enkoder Telemetrisi"]
     end
 
-    subgraph Core ["2. TRUSTIA CORE AUTONOMY ENGINE (16,000+ LOC)"]
-        SLAM["3D NDT/ICP Pose-Graph SLAM (GNSS-Denied Localization)"]
-        FUSION["400Hz Error-State Kalman Filter (ESKF)"]
-        PLAN["Kinematic Hybrid A* & Dynamic Window Approach (Ackermann)"]
-        SAFETY["ISO 26262 ASIL-D Fail-Safe & 5ms Driver Override"]
+    subgraph Katman2 ["2. TRUSTIA L4 OTONOMİ ÇEKİRDEK MOTORU (16.400+ SATIR)"]
+        SLAM["GNSS-Denied 3D NDT / ICP Pose-Graph SLAM (Tünel & Şehir İçi)"]
+        ESKF["400Hz Hata Durumu Kalman Filtresi (15-State ESKF Füzyonu)"]
+        PERCEPT["Zemin Ayrıştırma (RANSAC) & 3D Bounding Box Kümeleme"]
+        PREDICT["EKF Dinamik Engel Takibi & 3-5sn Gelecek Yörünge Tahmini"]
+        FSM["Hiyerarşik Sonlu Durum Makinesi (Hierarchical FSM & ODD Yönetimi)"]
+        PLAN["Kinematik Hibrit A* & Quintic Polynomial Yörünge Planlama"]
+        SAFETY["ISO 26262 ASIL-D MRM Güvenli Duruş & 50ms Watchdog Denetimi"]
     end
 
-    subgraph Actuation ["3. VEHICLE INTEGRATION & DRIVE-BY-WIRE"]
-        DBW["Kvaser U100 Isolated CAN-FD Gateway"]
-        STEER["100Hz Lateral Steering Injection (LKAS11)"]
-        SPEED["50Hz Longitudinal Throttle/Brake Injection (SCC11)"]
-        WATCH["200ms Dead-Man Switch & Minimum Risk Maneuver (MRM)"]
+    subgraph Katman3 ["3. ARAÇ ENTEGRASYONU & DRIVE-BY-WIRE AKTÜASYONU"]
+        CAN["Kvaser U100 İzole CAN-FD Ağ Geçidi"]
+        STEER["100Hz Yanal Direksiyon Kontrolü (Pure Pursuit / Stanley DBC)"]
+        SPEED["50Hz Boylamsal İvmelenme / Elektronik Fren Torku"]
+        WATCH["Donanımsal E-Stop & Minimal Risk Manevrası (MRM Kilitlenmesi)"]
     end
 
-    subgraph Commercial ["4. COMMERCIAL DEPLOYMENT MARKETS"]
-        ROBOTAXI["Passenger Robotaxis (Hyundai Ioniq 5 / Kia EV6)"]
-        SHUTTLE["Campus & Airport Electric Shuttles"]
-        DELIVERY["Last-Mile Autonomous Delivery Platforms"]
-        INTRALOGISTICS["Industrial Factory & Warehouse AGV / AMRs"]
+    subgraph Katman4 ["4. TİCARİ UYGULAMA VE DAĞITIM ALANLARI"]
+        ROBOTAXI["Otonom Yolcu Robotaksisi (Hyundai Ioniq 5 / Kia EV6 / Martı TAVA)"]
+        INTRALOGISTICS["Fabrika ve Depo İçi Ağır Yük AGV / AMR Lojistiği"]
+        SHUTTLE["Havalimanı, Kampüs ve Kapalı Alan Otonom Ring Servisleri"]
+        DEFENSE["Savunma Sanayii Otonom İnsansız Kara Araçları (İKA)"]
     end
 
-    Sensors --> Core
-    Core --> Actuation
-    Actuation --> Commercial
+    Katman1 --> Katman2
+    Katman2 --> Katman3
+    Katman3 --> Katman4
 ```
 
 ---
 
-## 🏎️ 4. Hyundai Ioniq 5 Level-4 Retrofit Specification
+## ⚙️ 3. Evrensel Otonomi & Konfigürasyon Modeli (Universal Autonomy)
 
-| Subsystem Component | Specification & Model | Integration & Performance Metrics |
+Dünyadaki Tier-1 otonomi devlerinde (**Oxa, Apex.ai, Momenta, Waymo**) olduğu gibi, Trustia mimarisinde temel matematiksel fizik formülleri araçtan araca veya kullanım senaryosuna göre **asla değişmez**.
+
+Aynı çekirdek yazılım motoru; hem 50 km/s ile şehir trafiğinde yolcu taşıyan bir **Robotaksiyi**, hem fabrikada 15 km/s ile palet taşıyan bir **Ağır Yük AGV'sini**, hem de havalimanı **Ring Servisini** yönetir.
+
+### Tek Konfigürasyon Dosyası ile Tüm Araçlara Uyum (`config/vehicle_config.yaml`):
+Alıcı firmanın entegrasyon mühendisi koda dokunmadan, sadece aracın fiziksel ölçülerini bu dosyaya tanımlar:
+
+```yaml
+# ==============================================================================
+# TRUSTIA L4 OTONOMİ MOTORU - ARAÇ VE GÖREV KONFİGÜRASYONU
+# ==============================================================================
+vehicle:
+  name: "Hyundai_Ioniq_5_Robotaxi"   # veya "Fabrika_AGV_Platformu"
+  wheelbase_m: 3.00                  # Ön-arka dingil mesafesi (metre)
+  track_width_m: 1.63                # Tekerlek iz genişliği (metre)
+  max_steering_angle_deg: 40.0        # Maksimum direksiyon dönüş açısı
+  max_speed_kmh: 50.0                # İzin verilen maksimum otonom sürüş hızı
+  min_turning_radius_m: 5.2          # Minimum dönüş yarıçapı
+  can_interface: "can0"              # CAN-FD SocketCAN arayüzü
+  can_bitrate: 500000                # Standart CAN hızı
+  can_data_bitrate: 2000000           # CAN-FD veri hızı (2 Mbps)
+
+control:
+  lateral_controller: "pure_pursuit" # Stanley veya Pure Pursuit
+  lookahead_distance_min_m: 2.5
+  lookahead_distance_max_m: 12.0
+  lookahead_ratio: 0.45
+
+safety:
+  watchdog_timeout_ms: 50            # 50ms mesaj kesintisinde acil duruş
+  mrm_deceleration_mps2: 1.5         # Güvenli sağa çekme yavaşlama ivmesi
+  collision_safety_margin_m: 0.8     # Güvenlik tampon payı
+```
+
+Yazılım başlatıldığı anda bu parametreleri yükler; Ackermann dönüş geometrisi, Pure Pursuit yanal kontrolü ve fren-gaz profilleri **otomatik olarak o araca göre çalışır**.
+
+---
+
+## 🏎️ 4. Hyundai Ioniq 5 Seviye-4 Referans Donanım Mimarisi
+
+| Alt Sistem Bileşeni | Model ve Donanım Spesifikasyonu | Entegrasyon ve Görev Tanımı |
 | :--- | :--- | :--- |
-| **Central AI Compute** | **NVIDIA Jetson AGX Orin 64GB** | 275 TOPS INT8 • 2048-Core Ampere GPU • Seeed J501 Carrier |
-| **Primary 3D SLAM** | **Ouster OS2-128 Rev 7 LiDAR** | 128 Channels • 240m Range • 2.62M Pts/sec • Roof Center Mount |
-| **Blindspot & Near-Field** | **2x Livox Mid-360 LiDAR** | 360°x59° Field of View • 40m Range • Front/Rear Aerodynamic Pods |
-| **360° Visual Perception** | **4x Leopard Sony IMX390 GMSL2** | 120 dB High Dynamic Range (HDR) • IP67 Automotive Grade |
-| **All-Weather Radar** | **Continental ARS 408-21 (77GHz)** | 250m Long-Range Detection • Rain, Fog & Adverse Weather |
-| **High-Precision GNSS/INS** | **Septentrio AsteRx-m3 Pro RTK** | Dual-Antenna Heading • 1 cm RTK Accuracy • 400Hz ESKF Fusion |
-| **Drive-by-Wire Actuation** | **Kvaser U100 Isolated CAN-FD** | Hyundai E-GMP Native Gateway • Steering, Throttle, Brake, Shifter |
-| **Failsafe System (ASIL-D)** | **Hardware Watchdog & E-Stop** | 5ms Instant Human Takeover • 200ms Dead-Man Switch • Dual Relay |
+| **Merkezi Yapay Zeka Bilgisayarı** | **NVIDIA Jetson AGX Orin 64GB** | 275 TOPS INT8 • 2048-Çekirdek Ampere GPU • Gerçek Zamanlı Linux |
+| **Birincil 3D SLAM LiDAR** | **Ouster OS2-128 Rev 7** | 128 Kanal • 240m Menzil • Saniyede 2.62M Nokta • Tavan Montajı |
+| **Kör Nokta & Yakın Alan LiDAR** | **2x Livox Mid-360** | 360°x59° Görüş Alanı • 40m Menzil • Ön ve Arka Tampon Podları |
+| **360° Görsel Çevre Kameraları** | **4x Sony IMX390 GMSL2** | 120 dB Geniş Dinamik Aralık (HDR) • IP67 Otomotiv Standart |
+| **Her Hava Koşulu Radarı** | **Continental ARS 408-21 (77GHz)** | 250m Uzun Menzilli Tespit • Sis, Yoğun Yağmur ve Gece Görüşü |
+| **Yüksek Hassasiyetli RTK GNSS/INS** | **Septentrio AsteRx-m3 Pro** | Çift Antenli Yön Tayini • 1 cm Hassasiyet • 400Hz ESKF Füzyon |
+| **Drive-by-Wire Ağ Geçidi** | **Kvaser U100 İzole CAN-FD** | Hyundai E-GMP Veri Yolu • Direksiyon, Gaz, Fren, Vites Kontrolü |
+| **Donanımsal Güvenlik (ASIL-D)** | **Hardware Watchdog & Dual Relay** | 5ms İnsan Devralması (Takeover) • 200ms Dead-Man Güvenliği |
 
 ---
 
-## 📊 5. 1,301-Test Automated Verification Suite
+## 📊 5. 1.305 Testlik Otomatik Doğrulama Kütüphanesi
 
-The entire Trustia codebase is continuously validated through an exhaustive **1,301 automated test suite** running in 46.71 seconds with a **100% pass rate**:
+Trustia kod tabanındaki tüm matematiksel modeller, algılama filtreleri, yörünge planlayıcılar ve CAN-FD iletişim döngüleri, **1.305 adet otomatik test** ile sürekli doğrulanmaktadır:
 
-| Subsystem Module | Test Scope & Verification Focus | Tests Passed | Status |
+| Modül / Alt Sistem | Test Kapsamı ve Odak Noktası | Geçen Test Sayısı | Durum |
 | :--- | :--- | :---: | :---: |
-| **`core/` & Mathematical Primitives** | Vector arithmetic, transform matrices, telemetry stream (`system6`) | **88 / 88** | `PASS` ✅ |
-| **`slam/` & Spatial Mapping** | 2D/3D NDT LiDAR SLAM, 400Hz ESKF, pose-graph optimizer (`system1`) | **73 / 73** | `PASS` ✅ |
-| **`planning/` & Kinematics** | Hybrid A* Ackermann planner, DWA, costmap generation (`system1`, `system2`) | **49 / 49** | `PASS` ✅ |
-| **`control/` & Drive-by-Wire** | Pure Pursuit, Stanley tracking, CAN-Bus & SocketCAN (`system1`, `system8`) | **33 / 33** | `PASS` ✅ |
-| **`ai/` & Environmental Perception** | Multi-modal obstacle detection, terrain classification, semantic segmentation (`system9`) | **229 / 229** | `PASS` ✅ |
-| **`security/` & Safety Protocols** | Automotive cyber-security, anti-spoofing, telemetry encryption, E-Stop (`system5`) | **28 / 28** | `PASS` ✅ |
-| **`command/` & Fleet Teleoperation** | Autonomous fleet dispatch GUI, telemetry recording & E2E flows (`system34`) | **47 / 47** | `PASS` ✅ |
-| **`certification/` & Scenario Matrix** | 100% Determinism, stress benchmarks, scenario matrix (`system7`) | **734 / 734** | `PASS` ✅ |
-| **`advanced_2026/` & Level-4 Hardware** | Hyundai Ioniq 5 E-GMP DBW, Jetson Orin & sensor suite (`system10`) | **20 / 20** | `PASS` ✅ |
-| **TOTAL VERIFIED TEST SUITE** | **Complete Full-Stack Autonomy Architecture** | **1,301 / 1,301** | **`100% PASS`** 🚀 |
+| **`core/` & Matematiksel Temeller** | Vektör cebri, dönüşüm matrisleri, telemetri akışı (`system6`) | **88 / 88** | `GEÇTİ` ✅ |
+| **`slam/` & 3D Konumlandırma** | 3D NDT LiDAR SLAM, 400Hz ESKF, pose-graph optimizasyonu (`system1`) | **73 / 73** | `GEÇTİ` ✅ |
+| **`planning/` & Kinematik Planlama** | Hibrit A* Ackermann planlayıcı, DWA, dinamik maliyet haritası (`system1, 2`) | **49 / 49** | `GEÇTİ` ✅ |
+| **`control/` & Drive-by-Wire** | Pure Pursuit, Stanley yanal takip, SocketCAN CAN-FD sürücüsü (`system1, 8`) | **33 / 33** | `GEÇTİ` ✅ |
+| **`ai/` & Çevresel Algılama** | Çoklu mod engel tespiti, zemin segmentasyonu, 3D kümeleme (`system9`) | **229 / 229** | `GEÇTİ` ✅ |
+| **`security/` & Emniyet Protokolleri** | Otomotiv siber güvenlik, telemetri şifreleme, ASIL-D MRM E-Stop (`system5`) | **28 / 28** | `GEÇTİ` ✅ |
+| **`command/` & Filo Yönetimi** | Robotaksi çağrı dağıtıcı, filo rota motoru, teleoperasyon (`system34`) | **47 / 47** | `GEÇTİ` ✅ |
+| **`certification/` & Senaryo Matrisi** | %100 Determinizm, stres testleri, hata enjeksiyon senaryoları (`system7`) | **734 / 734** | `GEÇTİ` ✅ |
+| **`advanced_2026/` & L4 Donanım Katmanı** | Hyundai Ioniq 5 CAN-FD DBC, Jetson Orin sürücüleri (`system10`) | **20 / 20** | `GEÇTİ` ✅ |
+| **`enterprise_sdk/` & Lisans Koruması** | HMAC-SHA256 donanım kilidi, yetkisiz kopyalama engeli, SDK API | **4 / 4** | `GEÇTİ` ✅ |
+| **TOPLAM DOĞRULANMIŞ TEST SETİ** | **Eksiksiz Tam Seviye-4 Otonom Sistem Mimarisi** | **1.305 / 1.305** | **`%100 BAŞARILI`** 🚀 |
 
 ---
 
-## 📁 6. Repository Architecture
+## 🔒 6. Enterprise Autonomy SDK & Fikri Mülkiyet (IP) Koruması
+
+Trustia, müşterilere (OEM'ler, filo operatörleri ve entegratörler) **kapalı kutu (black-box) ikili bayt kod** formatında teslim edilir:
+
+1. **Sıfır Açık Kaynak Kodu Politikası:** Çekirdeğin içindeki tüm 69 modül derlenmiş `.pyc` biçiminde paketlenir; müşteriye okunabilir açık metin `.py` kaynak kodu verilmez.
+2. **Kriptografik Donanım Kilidi (Hardware-Locked):** Her yazılım paketi yalnızca hedef bilgisayarın anakart UUID'si ve MAC adresine lisanslanır. Başka bir araca veya bilgisayara kopyalandığında çalışmaz.
+3. **Temiz ve Zarif Python API'si:**
+   ```python
+   from trustia import AutonomyCore
+
+   # Araç konfigürasyonu ile otonomi motorunu başlat
+   car = AutonomyCore(config_file="config/vehicle_config.yaml")
+   car.start()
+   ```
+
+---
+
+## 📁 7. Proje Dizin Yapısı
 
 ```text
 Trustia/
-├── 📂 .github/workflows/                 <-- Production CI/CD & Automated Verification
-│   ├── 📜 deploy.yml                     <-- Automated Production Build & Deploy to trustia.com.tr
-│   └── 📜 ci.yml                         <-- Continuous 1,301 Test & Build Verification Pipeline
-├── 📂 01_Trustia_Otonom_Yazilim_Core/    <-- 16,000+ LOC Autonomy Stack, 1,301 Tests & Fleet GUI
-│   ├── 📂 ai/                            <-- Multi-Modal Obstacle & Environmental Perception
-│   ├── 📂 command/                       <-- Fleet Teleoperation & Mission Control Console
-│   ├── 📂 control/                       <-- Pure Pursuit, Stanley & CAN-FD DBW Actuation
-│   ├── 📂 core/                          <-- Mathematical Foundation & State Estimators
-│   ├── 📂 integration/                   <-- CAN-Bus J1939, ROS 2 Bridge & Gateway Protocols
-│   ├── 📂 planning/                      <-- Hybrid A* Ackermann Trajectory Planners
-│   ├── 📂 security/                      <-- AES-256 Encryption, Watchdogs & E-Stop Protocols
-│   ├── 📂 slam/                          <-- 2D/3D Pose-Graph SLAM & LiDAR Odometry
-│   ├── 📂 tests/                         <-- 1,301 Unit & Integration Automated Tests
-│   ├── 📜 TRUSTIA_BASLAT.bat             <-- Interactive Production CLI & GUI Launcher
-│   └── 📜 trustia_cli.py                 <-- Production CLI Execution Interface
-├── 📂 02_Trustia_Web_Platformu/          <-- Next.js 16 Web Platform & 3D Interactive Console
-│   └── 📂 website/                       <-- Production Web Source, Components, Pages & Three.js
-├── 📂 Kurumsal/                          <-- Corporate Assets, Acquirer Dossiers & Media
-│   ├── 📂 Belgeler/                      <-- Official Certifications & Corporate Governance
-│   ├── 📂 Sunumlar/                      <-- Acquisition Pitch Decks, One-Pager, BOM & Engineering Plans
-│   ├── 📂 Basvurular/                    <-- Accreditation Tracking & Grant Documentation
-│   └── 📂 Medya/                         <-- High-Res Logos, Real Ioniq 5 Photo Suite & Demo Videos
-├── 📜 AGENTS.md                          <-- Engineering & Systems Guidelines
-└── 📜 README.md                          <-- Flagship Acquisition & Architecture Documentation
+├── 📂 .github/workflows/                 <-- Otomatik CI/CD ve Test Doğrulama Pipeline'ı
+│   ├── 📜 deploy.yml                     <-- Canlı Dağıtım İş Akışı
+│   └── 📜 ci.yml                         <-- 1.305 Testlik Doğrulama Pipeline'ı
+├── 📂 01_Trustia_Otonom_Yazilim_Core/    <-- 16.400+ Satır Seviye-4 Çekirdek Kod & Testler
+│   ├── 📂 ai/                            <-- 3D Engel Tespiti ve Çevresel Algılama
+│   ├── 📂 command/                       <-- Robotaksi Filo Çağrı Motoru ve Teleoperasyon
+│   ├── 📂 control/                       <-- Pure Pursuit, Stanley ve CAN-FD Araç Aktüasyonu
+│   ├── 📂 core/                          <-- Durum Tahmincileri, Lisanslama ve SDK Çekirdeği
+│   ├── 📂 integration/                   <-- CAN-Bus J1939 ve ROS 2 Ağ Geçidi Protokolleri
+│   ├── 📂 planning/                      <-- Hibrit A* Ackermann Yörünge Planlayıcıları
+│   ├── 📂 security/                      <-- AES-256 Şifreleme, Watchdog ve ASIL-D MRM Motoru
+│   ├── 📂 slam/                          <-- GNSS-Denied 3D NDT SLAM ve LiDAR Odometrisi
+│   ├── 📂 tests/                         <-- 1.305 Otomatik Birim ve Entegrasyon Testi
+│   ├── 📂 tools/                         <-- Enterprise SDK Derleme ve Paketleme Araçları
+│   └── 📜 trustia_cli.py                 <-- CLI Yönetim ve Test Konsolu
+├── 📂 02_Trustia_Web_Platformu/          <-- Next.js 16 Web Platformu ve 3D Gösterge Paneli
+│   └── 📂 website/                       <-- Web Kaynak Kodları, Bileşenler ve WebGL Konsolu
+├── 📂 Kurumsal/                          <-- Resmi Belgeler, Sunumlar ve Medya Arşivi
+│   ├── 📂 Belgeler/                      <-- Tescil Belgeleri ve Kurumsal Sertifikalar
+│   ├── 📂 Sunumlar/                      <-- Yatırımcı Pitch Deck'leri, BOM ve Mühendislik Planları
+│   └── 📂 Medya/                         <-- Yüksek Çözünürlüklü Logolar, Araç Görselleri ve Videolar
+├── 📜 .gitignore                         <-- Git Dışlama Kuralları
+├── 📜 AGENTS.md                          <-- Mühendislik ve Sistem Çalışma Kuralları
+└── 📜 README.md                          <-- Ana Kurumsal Tanıtım ve Mimari Dokümantasyonu
 ```
 
 ---
 
-## 💻 7. Quickstart & Verification Execution
+## 💻 8. Test ve Doğrulama Çalıştırma Talimatları
 
-### Option A: Interactive Windows Launcher
-Double-click `01_Trustia_Otonom_Yazilim_Core/TRUSTIA_BASLAT.bat` to launch the control menu:
-* `[1]` **Launch Fleet Teleoperation Desktop Console** (Autonomous Vehicle & Robotaxi GUI)
-* `[2]` **Run 1,301-Test Automated Verification Suite** (100% Pass Rate in ~46 seconds)
-* `[3]` **Run Environmental Obstacle & Perception Engine**
-* `[4]` **Run Architecture & Codebase Compliance Audit**
+Yazılım çekirdeğindeki tüm testleri yerel ortamda çalıştırmak için:
 
-### Option B: Command Line Interface (CLI)
 ```bash
-# Navigate to the autonomy core directory
+# 1. Otonom yazılım dizinine geçiş yapın
 cd 01_Trustia_Otonom_Yazilim_Core
 
-# Launch Fleet Teleoperation GUI Console
-python trustia_cli.py gui
-
-# Run 1,301 Automated Unit & Integration Tests
+# 2. 1.305 adet otomatik testi çalıştırın
 pytest tests/ -q --tb=short
 
-# Run Environmental Perception Engine
-python trustia_cli.py threats
-
-# Run Architecture & Codebase Compliance Audit
+# 3. Sistem denetim raporunu görüntüleyin
 python trustia_cli.py audit
 ```
 
 ---
 
-## 🤝 8. Acquisition Inquiries & Escrow Transfer Process
+## 🤝 9. Kurumsal İletişim & İş Birlikleri
 
-All acquisition inquiries, due diligence requests, and purchase offers are handled directly by the founder:
+Otonom filo entegrasyonu, B2B lisanslama, teknopark ve kurumsal iş birlikleri doğrudan kurucu tarafından yürütülmektedir:
 
-* **Sole Founder & Systems Architect:** Murat Furkan Bayram (100% Equity Ownership)
-* **Official Website:** [https://trustia.com.tr](https://trustia.com.tr)
-* **Acquisition Inquiries:** [kariyer@trustia.com.tr](mailto:kariyer@trustia.com.tr) | [iletisim@trustia.com.tr](mailto:iletisim@trustia.com.tr)
-* **Executive Telephone:** +90 537 064 0460
+* **Kurucu & Sistem Mimarı:** Murat Furkan Bayram
+* **Resmi Web Sitesi:** [https://trustia.com.tr](https://trustia.com.tr)
+* **Kurumsal E-Posta:** [iletisim@trustia.com.tr](mailto:iletisim@trustia.com.tr) | [kariyer@trustia.com.tr](mailto:kariyer@trustia.com.tr)
+* **Telefon:** +90 537 064 0460
 * **LinkedIn:** [linkedin.com/in/trustia](https://www.linkedin.com/in/trustia)
-* **Marketplace Listing:** [Acquire.com Platform Listing](https://app.acquire.com)
+* **Yerleşkeler:** İTO BTM (Fulya Kampüsü, Beşiktaş / İstanbul) & Teknopark İstanbul (Kurtköy / Pendik)
 
 ---
-*© 2026 Trustia AI. All rights reserved. Intellectual Property & Technology Transfer Documentation.*
+
+*© 2026 Trustia AI. Tüm hakları saklıdır. Seviye-4 Otonom Sistemler Mühendislik Dokümantasyonu.*
