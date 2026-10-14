@@ -34,14 +34,14 @@ Bu teknoloji sadece tek bir sektöre değil, ülkemizin 4 kritik damarına hizme
 "Değerli konuklar; bugün sizlere bir temenni veya fikir anlatmıyoruz. Arkasında yüzlerce saatlik geceli gündüzlü mühendislik emeği olan, tamamen çalışan bir kod tabanı sunuyoruz:
 
 • 16.400 satırdan fazla C++20 ve Python kaynak kodu,
-• 1.301 adet doğrulanmış birim ve simülasyon testinden yüzde 100 tam başarı,
+• 1.307 adet doğrulanmış birim ve simülasyon testinden yüzde 100 tam başarı,
 • Ve otomotiv emniyet standardı olan ISO 26262 ASIL-D protokolleriyle, 5.2 milisaniyelik acil durum frenleme emniyeti."
 
 ================================================================================
-[02:15 – 02:40] KURUMSAL MEŞRUİYET: İTO BTM & STM GÜVENCESİ
+[02:15 – 02:40] KURUMSAL MEŞRUİYET: İTO BTM, ASELSAN & STM GÜVENCESİ
 (Göğsünü gererek, tok ve gururlu bir sesle)
 
-"Trustia, İstanbul Ticaret Odası bünyesindeki Bilgiyi Ticarileştirme Merkezi'nde (BTM) doğmuş ve bugün itibarıyla STM Savunma Teknolojileri Mühendislik A.Ş.'nin tedarikçi ekosistemine resmen dahil olmuş yerli bir derin teknoloji girişimidir."
+"Trustia, İstanbul Ticaret Odası bünyesindeki Bilgiyi Ticarileştirme Merkezi'nde (BTM) doğmuş; bugün itibarıyla ASELSAN Onaylı Tedarikçi kütüğüne (#0050569), NATO NCAGE koduna (TR26258467723) ve STM Savunma Teknolojileri Mühendislik A.Ş.'nin tedarikçi ekosistemine resmen dahil olmuş yerli bir derin teknoloji girişimidir."
 
 ================================================================================
 [02:40 – 03:00] BÜYÜK KAPANIŞ: ATATÜRK'ÜN SÖZÜ VE STANDA DAVET
