@@ -1,56 +1,92 @@
 TRUSTIA OTONOM SİSTEMLERİ — 3 DAKİKALIK RESMİ SAHNE KONUŞMASI
-Konuşmacı: Murat Furkan Bayram (CEO & Genel Müdür)
+(DİL SÜRÇMESİZ / FONETİK OLARAK AKICI VE KOLAY OKUNAN VERSİYON)
+
+Konuşmacı: Murat Furkan Bayram (Kurucu & Genel Müdür)
 Etkinlik: TURKCOMPOSITE 2026 // İstanbul Fuar Merkezi (İFM)
-Süre: 180 Saniye (3 Dakika)
+Süre: 180 Saniye (Tam 3 Dakika)
+
+[ÖNEMLİ SAHNE İPUCU]: 
+Arka plandaki dev ekranda tüm teknik terimler (LiDAR, SLAM, ISO 26262, NATO Kodu, ASELSAN No vb.) zaten yazıyor. 
+Sen sahnede konuşurken dilini yoracak, seni taktıracak yabancı kısaltmaları söylemek zorunda değilsin. 
+Aşağıdaki metin, sahnede su gibi akacak, tek bir hecede bile takılmayacağın şekilde Türkçe ve akıcı olarak hazırlandı.
 
 ================================================================================
-[00:00 – 00:45] GİRİŞ: İNSAN HAYATI & YERİN YÜZLERCE METRE ALTI
-(Sahneye çık, salona derin ve vakur bir bakış at, sakin bir sesle başla)
+[00:00 – 00:45] GİRİŞ: İNSAN HAYATI VE DERİN KARANLIK
+(Sahneye çık. Salona sakin ve vakur bir bakış at. Derin bir nefes al, tane tane konuşmaya başla.)
 
-"Daha geçtiğimiz günlerde Soma’da, Zonguldak’ta ve daha önce İliç’te yüreğimizi yakan maden göçüklerine şahit olduk...
+"Daha geçtiğimiz günlerde Soma’da, Zonguldak’ta ve daha önce İliç’te yüreğimizi yakan maden facialarına hep birlikte şahit olduk...
 
-Yerin yüzlerce metre altında, zifiri karanlıkta, zehirli gazların arasında ve tek bir GPS uydu sinyalinin dahi ulaşamadığı tünellerde insan hayatını riske atmak zorunda mıyız?
+Yerin yüzlerce metre altında... Zifiri karanlıkta, zehirli gazların içinde ve tek bir cep telefonu veya uydu sinyalinin dahi çekmediği tünellerde, insan hayatını riske atmak zorunda mıyız?
 
 Sayın Bakanım, değerli protokol ve ülkemizin kıymetli sanayi liderleri;
-Hepiniz hoş geldiniz. Ben Murat Furkan Bayram, Trustia Otonom Sistemleri'nin kurucusu ve genel müdürüyüm.
-Biz Trustia’yı bir lüks veya oyuncak olsun diye değil; insan hayatının tehlikeye girdiği her yerde makineler görev alsın, canlar kurtulsun diye inşa ettik."
+Hepiniz hoş geldiniz. 
+
+Ben Murat Furkan Bayram. Trustia Otonom Sistemleri'nin kurucusu ve genel müdürüyüm.
+
+Biz Trustia’yı bir heves ya da oyuncak olsun diye kurmadık. 
+İnsan hayatının tehlikeye girdiği her yerde makineler görev alsın, ocaklara ateş düşmesin, canlar kurtulsun diye kurduk."
 
 ================================================================================
-[00:45 – 01:30] ÇÖZÜM: GNSS-DENIED 3D LIDAR SLAM VE 4 STRATEJİK ALAN
-(Ses tonunu biraz daha yükselt, kendinden emin bir şekilde devam et)
+[00:45 – 01:30] ÇÖZÜM: UYDUYA BAĞIMSIZ LAZER SİSTEMİ VE 4 STRATEJİK ALAN
+(Ses tonunu biraz yükselt, kendinden emin ve dik dur.)
 
-"Geliştirdiğimiz yerli GNSS-Denied 3D LiDAR SLAM yazılım mimarisi; hiçbir uydu sinyaline ihtiyaç duymadan, saniyede yüz binlerce lazer ışınıyla çevresini üç boyutlu haritalar ve santimetre hassasiyetle görev yapar.
+"Geliştirdiğimiz yerli navigasyon teknolojisi; hiçbir uyduya veya dış sinyale ihtiyaç duymadan, saniyede yüz binlerce lazer ışınıyla çevresini üç boyutlu olarak anında haritalar ve santimetre hassasiyetle yolunu bulur.
 
-Bu teknoloji sadece tek bir sektöre değil, ülkemizin 4 kritik damarına hizmet eder:
-1. Madenlerde ve Arama-Kurtarmada: Göçük altındaki tehlikeli tünellere insandan önce giren otonom keşif araçları,
-2. Milli Savunmada: GPS karartması yapılan harekat sahasında Mehmetçiğin önünde giden taktik insansız kara araçları (İKA),
-3. Tarımda: Tarlasında gece gündüz, yorulmadan çalışan çiftçimize otonom traktör gücü,
-4. Sivil Hayatta: Trafik kazalarını sıfıra indiren güvenli robotaksiler."
+Bu sistem sadece tek bir sektöre değil; ülkemizin dört büyük stratejik alanına hizmet eder:
 
-================================================================================
-[01:30 – 02:15] SOMUT MÜHENDİSLİK: KOD VE TEST METRİKLERİ
-(Dik dur, arkandaki dev ekrandaki metrikleri işaret et)
+Birincisi, Madencilik ve Arama-Kurtarma: 
+Göçük altındaki tehlikeli tünellere insandan önce giren, can kurtaran otonom keşif araçları.
 
-"Değerli konuklar; bugün sizlere bir temenni veya fikir anlatmıyoruz. Arkasında yüzlerce saatlik geceli gündüzlü mühendislik emeği olan, tamamen çalışan bir kod tabanı sunuyoruz:
+İkincisi, Milli Savunma: 
+Elektronik harp ortamında, uyduların susturulduğu sınır ötesi harekatlarda Mehmetçiğin önünden giden insansız kara araçları.
 
-• 16.400 satırdan fazla C++20 ve Python kaynak kodu,
-• 1.307 adet doğrulanmış birim ve simülasyon testinden yüzde 100 tam başarı,
-• Ve otomotiv emniyet standardı olan ISO 26262 ASIL-D protokolleriyle, 5.2 milisaniyelik acil durum frenleme emniyeti."
+Üçüncüsü, Tarım: 
+Tarlasında gece gündüz durmadan çalışan çiftçimize otonom traktör gücü.
+
+Ve dördüncüsü, Sivil Yaşam: 
+İnsan hatasını ortadan kaldıran, kazaları sıfıra indiren güvenli robotaksiler."
 
 ================================================================================
-[02:15 – 02:40] KURUMSAL MEŞRUİYET: İTO BTM, ASELSAN & STM GÜVENCESİ
-(Göğsünü gererek, tok ve gururlu bir sesle)
+[01:30 – 02:15] SOMUT MÜHENDİSLİK: KOD VE TEST BAŞARISI
+(Arkadaki dev ekrandaki metrikleri elinle göster, tok bir ses tonuyla konuş.)
 
-"Trustia, İstanbul Ticaret Odası bünyesindeki Bilgiyi Ticarileştirme Merkezi'nde (BTM) doğmuş; bugün itibarıyla ASELSAN Onaylı Tedarikçi kütüğüne (#0050569), NATO NCAGE koduna (TR26258467723) ve STM Savunma Teknolojileri Mühendislik A.Ş.'nin tedarikçi ekosistemine resmen dahil olmuş yerli bir derin teknoloji girişimidir."
+"Değerli konuklar; 
+Bugün sizlere bir hayal veya bir temenni anlatmıyoruz. Arkasında yüzlerce saatlik geceli gündüzlü mühendislik emeği olan, tamamen çalışan bir teknoloji sunuyoruz:
+
+• On altı bin satırdan fazla, tamamen yerli ve özgün yazılım kodu...
+• Bin üç yüz yedi adet güvenlik ve simülasyon testinin tamamından, sıfır hatayla geçmiş sağlam bir mimari...
+• Ve dünya otomotiv sanayiinin en yüksek güvenlik kurallarıyla; göz açıp kapayıncaya kadar, saliseler içinde devreye giren acil frenleme sistemi."
+
+================================================================================
+[02:15 – 02:40] KURUMSAL MEŞRUİYET: RESMİ DEVLET VE SAVUNMA ONAYLARI
+(Göğsünü ger, gururlu ve kararlı bir sesle.)
+
+"Trustia; İstanbul Ticaret Odası bünyesindeki Bilgiyi Ticarileştirme Merkezi'nde, yani BTM'de filizlendi.
+
+Bugün itibarıyla; 
+ASELSAN Onaylı Tedarikçi kütüğüne girmiş, 
+NATO savunma sisteminde resmen tescillenmiş 
+ve STM Savunma Teknolojileri ekosistemine kabul edilmiş milli bir derin teknoloji girişimidir."
 
 ================================================================================
 [02:40 – 03:00] BÜYÜK KAPANIŞ: ATATÜRK'ÜN SÖZÜ VE STANDA DAVET
-(Gözlerini salonda gezdir, son vuruşu yap)
+(Gözlerini salonda gezdir, son vuruşu yap.)
 
-"Ulu Önderimiz Gazi Mustafa Kemal Atatürk’ün dediği gibi:
+"Gazi Mustafa Kemal Atatürk’ün çok güzel bir sözü vardır:
 'Vatanını en çok seven, görevini en iyi yapandır.'
 
-Biz, Türk mühendisliğinin otonomi bayrağını en ileriye taşımak için görevimizi en iyi şekilde yapmaya söz verdik. Madencilikten savunmaya, bu milli vizyona ortak olmak isteyen tüm sanayicilerimizi ve liderlerimizi BTM standımıza canlı simülasyonumuzu görmeye davet ediyorum.
+Biz Türk mühendisliğinin otonomi bayrağını en tepeye taşımak için görevimizi en iyi şekilde yapmaya söz verdik. 
 
-Saygılarımla arz ederim."
-(Başınla selam ver, mikrofonu bırak).
+Madencilikten savunmaya, bu milli vizyona ortak olmak isteyen tüm sanayicilerimizi ve kompozit liderlerimizi, BTM standımızda canlı simülasyonumuzu görmeye davet ediyorum.
+
+Beni dinlediğiniz için hepinize teşekkür eder, saygılarımı sunarım."
+(Başınla salona selam ver, mikrofonu yerine bırak.)
+
+================================================================================
+KOLAY KARŞILAŞTIRMA REHBERİ (HANGİ KELİME NEDEN DEĞİŞTİRİLDİ?):
+• "GNSS-Denied 3D LiDAR SLAM" --> "Hiçbir uyduya ihtiyaç duymayan, saniyede yüz binlerce lazer ışınıyla çevresini üç boyutlu haritalayan yerli sistem" (Dili asla yormaz, herkes anlar).
+• "C++20 ve Python kaynak kodu" --> "On altı bin satırdan fazla, tamamen yerli ve özgün yazılım kodu" (Milli ve oturaklı).
+• "ISO 26262 ASIL-D protokolleri" --> "Dünya otomotiv sanayiinin en yüksek güvenlik kuralları" (Slaytta logosu/kodu var zaten).
+• "5.2 milisaniye" --> "Göz açıp kapayıncaya kadar, saliseler içinde" (Çok daha vurucu ve akıcı).
+• "Taktik insansız kara araçları (İKA)" --> "İnsansız kara araçları" (Sade ve net).
+• "NCAGE TR26258467723 / #0050569" --> Kodları ezberden okumak yok; "NATO savunma sisteminde resmen tescillenmiş, ASELSAN Onaylı Tedarikçi kütüğüne girmiş" diyorsun, kodlar ekranda arkanda parlıyor.
