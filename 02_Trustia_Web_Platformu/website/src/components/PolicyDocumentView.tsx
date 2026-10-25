@@ -169,7 +169,7 @@ export default function PolicyDocumentView({
                   <span>Resmi Hukuki Geçerlilik</span>
                 </div>
                 <div className="text-[10px] text-slate-500 leading-tight">
-                  T.C. Kanunları, NATO STANAG ve ISO 26262 standartları uyarınca yürürlüktedir.
+                  T.C. Kanunları, SAE J3016 ve ISO 26262 ASIL-D standartları uyarınca yürürlüktedir.
                 </div>
               </div>
             </div>
