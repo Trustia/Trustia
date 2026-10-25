@@ -10,18 +10,13 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-and-deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Kaynak Kodunu İndir (Checkout)
@@ -51,12 +46,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: 02_Trustia_Web_Platformu/website/out
           publish_branch: gh-pages
-
-      - name: Sayfa Çıktısını Yükle (Artifact)
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: 02_Trustia_Web_Platformu/website/out
-
-      - name: GitHub Pages Üzerinde Yayına Al
-        id: deployment
-        uses: actions/deploy-pages@v4
