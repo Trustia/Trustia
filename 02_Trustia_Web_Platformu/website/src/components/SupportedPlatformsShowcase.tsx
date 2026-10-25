@@ -35,7 +35,7 @@ export default function SupportedPlatformsShowcase() {
         : "Designed for electronic warfare and GPS-jammed operational zones; armored defense robots powered by 3D LiDAR SLAM and swarm intelligence.",
       highlights: lang === "tr"
         ? ["GPS-Sinyalsiz 3D SLAM Haritalama", "Sürü Koordinasyonu (Swarm)", "Askeri JAUS & ROS 2 Uyumu"]
-        : ["GPS-Denied 3D SLAM Mapping", "Multi-Agent Swarm Consensus", "NATO STANAG & JAUS Compliance"],
+        : ["GPS-Denied 3D SLAM Mapping", "Multi-Agent Swarm Consensus", "JAUS & ROS 2 Dual-Use Compliance"],
       vehicles: "Hafif, Orta ve Ağır Sınıf Taktik İKA'lar",
       ctaLink: "/politika/lisans/",
       ctaText: lang === "tr" ? "Savunma Çözümlerini İncele" : "Explore Defense Solutions"
