@@ -271,7 +271,7 @@ export default function RobotaxiPage() {
                     : "bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10"
                 }`}
               >
-                0${idx + 1} // {p.title}
+                0{idx + 1} // {p.title}
               </button>
             ))}
           </div>
