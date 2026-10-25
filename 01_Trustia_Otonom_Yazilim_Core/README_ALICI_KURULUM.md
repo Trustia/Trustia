@@ -31,12 +31,12 @@ Ekranda şirketinizin adı, lisans süresi ve **"LİSANS GEÇERLİ VE ONAYLI"** 
 
 ---
 
-### 3. SİSTEM DOĞRULAMA TESTLERİ (1.305 TEST)
+### 3. SİSTEM DOĞRULAMA TESTLERİ (1.307 TEST)
 Yazılımın aracınızda veya bilgisayarınızda sıfır hatayla çalıştığını doğrulamak için test paketini çalıştırın:
 ```bash
 python trustia_cli.py test
 ```
-Tüm 1.305 test yaklaşık 20-25 saniyede yeşil olarak tamamlanacaktır.
+Tüm 1.307 test yaklaşık 20-25 saniyede yeşil olarak tamamlanacaktır.
 
 ---
 

@@ -398,8 +398,8 @@ class TrustiaLiveEngine:
                 "status": "FAIL_SAFE_STOPPED" if is_stopped else "ASIL_D_NOMINAL",
                 "last_event": self.estop.events()[-1].message if self.estop.events() else "SISTEM NORMAL",
                 "watchdog_ms": 4.8,
-                "tests_passed": 1301,
-                "tests_total": 1301,
+                "tests_passed": 1307,
+                "tests_total": 1307,
             },
             "perception": {
                 "lidar_points": lidar_points_3d,

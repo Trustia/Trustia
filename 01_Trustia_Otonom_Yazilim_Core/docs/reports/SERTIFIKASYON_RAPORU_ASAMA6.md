@@ -1,4 +1,4 @@
-﻿# TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
+# TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
 
 - **Tarih:** 2026-10-11
 - **Depo:** C:\Users\Asus\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
@@ -21,7 +21,7 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 | Metrik | Değer |
 |---|---|
 | Kod satırı (Python) | 17309 |
-| Otomatik test sayısı | 1301 |
+| Otomatik test sayısı | 1307 |
 | 1.000+ test şartı | SAĞLANDI |
 
 ## 3. TEKNİK ŞART KONTROL LİSTESİ

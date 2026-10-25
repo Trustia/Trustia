@@ -3,7 +3,7 @@ TRUSTIA Otonomi Platformu — Tam Garanti Kapalı Kutu Dağıtım Üreticisi (Cl
 Milli Seviye-4 Robotaksi & Taktik Savunma Seyrüsefer Motoru (v2.4).
 
 Kurucu & Sistem Mimarı: Murat Furkan Bayram (%100 Hisse)
-Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • NATO NCAGE TR26258467723
+Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • OIN Patent #f1e44576
 
 Bu araç; müşteriye giden teslimat paketinde TEK BİR SATIR BİLE OKUNABİLİR .py KODU
 BIRAKMAZ! Tüm algoritmaları ve giriş scriptlerini optimize edilmiş ikili bytecode (.pyc)
@@ -71,12 +71,12 @@ if not exist "%~dp0trustia_cli.pyc" (
 )
 echo ===============================================================================
 echo    TRUSTIA v2.4 - SEVIYE-4 DUAL-USE OTONOM MOBILITE VE TAKTIK C2 SISTEMI
-echo    Kurucu: Murat Furkan Bayram (17 Yas, %%80) - Tescil: AB PIC #861711529
+echo    Kurucu: Murat Furkan Bayram (%%100 Hisse, Kurucu ^& CEO) - Tescil: AB PIC #861711529
 echo    Lisans: TICARI KAPALI KUTU (CLOSED-BOX COMPILED BINARY RELEASE)
 echo ===============================================================================
 echo.
 echo  [1] Taktik C2 Masaustu Konsolunu Baslat (MIL-STD-2525 / STANAG 4586 GUI)
-echo  [2] Sistem ve Alt Bilesen Dogrulama Suitini Calistir (1.305 Test Sertifikali)
+echo  [2] Sistem ve Alt Bilesen Dogrulama Suitini Calistir (1.307 Test Sertifikali)
 echo  [3] Yapay Zeka Tehdit, EYP ve KHKN Algilama Motorunu Calistir
 echo  [4] Yerli Mimari, AB PIC ve NATO Uygunluk Sertifikasyon Denetimini Kostur
 echo  [5] Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Surus Dongusunu Baslat

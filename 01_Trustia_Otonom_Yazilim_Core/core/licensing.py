@@ -3,7 +3,7 @@ TRUSTIA Otonomi Platformu — Ticari Lisanslama & Dijital Doğrulama Motoru (v2.
 Milli Seviye-4 Robotaksi & Taktik Savunma Seyrüsefer Motoru.
 
 Kurucu & Sistem Mimarı: Murat Furkan Bayram (%100 Hisse)
-Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • NATO NCAGE TR26258467723
+Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • OIN Patent #f1e44576
 
 Bu modül; Trustia Seviye-4 otonom sürüş yazılımının müşterilere ve kurumsal alıcılara
 resmi ticari lisansla (Commercial License Key) teslim edilmesini, sahteciliğe karşı
@@ -96,7 +96,7 @@ class LicenseManager:
             "registrations": {
                 "eu_pic": "861711529",
                 "aselsan_supplier": "0050569",
-                "nato_ncage": "TR26258467723"
+                "oin_patent": "f1e44576"
             }
         }
 

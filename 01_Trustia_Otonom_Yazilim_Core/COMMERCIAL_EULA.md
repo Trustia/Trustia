@@ -4,7 +4,7 @@
 **Sürüm:** 2.4.0 (Enterprise Dual-Use Release)  
 **Yayınlanma & Tescil Tarihi:** 2026  
 **Eser Sahibi & Fikri Mülkiyet Sahibi:** Murat Furkan Bayram (%100 Hak Sahibi)  
-**Tesciller:** Avrupa Komisyonu PIC #861711529 • EIT Urban Mobility #CUS15554 • ASELSAN Onaylı Tedarikçi #0050569 • NATO NCAGE `TR26258467723`  
+**Tesciller:** Avrupa Komisyonu PIC #861711529 • EIT Urban Mobility #CUS15554 • ASELSAN Onaylı Tedarikçi #0050569 • OIN Patent Lisansı #f1e44576  
 
 ---
 
@@ -22,7 +22,7 @@ Bu Ticari Lisans Sözleşmesi; Trustia Seviye-4 Otonom Mobilite ve Seyrüsefer �
 3. **Lisans Kurcalama Yasağı:** HMAC-SHA256 dijital imzasını kırmaya, lisans kontrol mekanizmasını baypas etmeye yönelik her türlü girişim sözleşmenin derhal feshi ve cezai şart sebebidir.
 
 ### 4. GARANTİ, TEST VE DOĞRULAMA
-YAZILIM, teslim edildiği tarih itibarıyla ISO 26262 ASIL-D emniyet prensiplerine uygun olarak hazırlanmış ve **1.305 adet otomatik birim ve entegrasyon testinden %100 başarıyla (sıfır hata)** geçmiş olarak teslim edilir.
+YAZILIM, teslim edildiği tarih itibarıyla ISO 26262 ASIL-D emniyet prensiplerine uygun olarak hazırlanmış ve **1.307 adet otomatik birim ve entegrasyon testinden %100 başarıyla (sıfır hata)** geçmiş olarak teslim edilir.
 
 ### 5. YETKİLİ MAHKEME VE HUKUK
 İşbu sözleşme 5846 sayılı Fikir ve Sanat Eserleri Kanunu (FSEK), 6769 sayılı Sınai Mülkiyet Kanunu ve Bern Uluslararası Telif Hakları Sözleşmesi hükümlerine tabidir. Uyuşmazlıklarda İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri yetkilidir.

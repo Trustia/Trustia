@@ -4,11 +4,11 @@ title TRUSTIA v2.4 - Seviye-4 Otonomi ve Taktik C2 Kontrol Merkezi
 cls
 echo ===============================================================================
 echo    TRUSTIA v2.4 - SEVIYE-4 DUAL-USE OTONOM MOBILITE VE TAKTIK C2 SISTEMI
-echo    Kurucu: Murat Furkan Bayram (17 Yas, %%80) - Tescil: AB PIC #861711529
+echo    Kurucu: Murat Furkan Bayram (%%100 Hisse, Kurucu ^& CEO) - Tescil: AB PIC #861711529
 echo ===============================================================================
 echo.
 echo  [1] Taktik C2 Masaustu Konsolunu Baslat (MIL-STD-2525 / STANAG 4586 GUI)
-echo  [2] 1.305 Otomatik Test Validasyonunu Calistir (%%100 Yesil Test Kutuphanesi)
+echo  [2] 1.307 Otomatik Test Validasyonunu Calistir (%%100 Yesil Test Kutuphanesi)
 echo  [3] Yapay Zeka Tehdit, EYP ve KHKN Algilama Motorunu Calistir
 echo  [4] Yerli Mimari, AB PIC ve NATO Uygunluk Sertifikasyon Denetimini Kostur
 echo  [5] Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Surus Dongusunu Baslat

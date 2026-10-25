@@ -3,7 +3,7 @@ TRUSTIA Otonomi Platformu — Ticari Dağıtım Paketi Üreticisi (Commercial Re
 Milli Seviye-4 Robotaksi & Taktik Savunma Seyrüsefer Motoru (v2.4).
 
 Kurucu & Sistem Mimarı: Murat Furkan Bayram (%100 Hisse)
-Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • NATO NCAGE TR26258467723
+Tesciller: AB PIC #861711529 • EIT #CUS15554 • ASELSAN #0050569 • OIN Patent #f1e44576
 
 Bu script; herhangi bir müşteri veya alıcı kurumla anlaşıldığında, tek bir komutla
 müşteriye özel kriptografik lisans anahtarı üretir ve testleri onaylı, tertemiz

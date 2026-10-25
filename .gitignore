@@ -116,6 +116,10 @@ scratch/
 *banka_hesap*
 *Kimlik*
 *Pasaport*
+*Adli_Sicil*
+*Ikametgah*
+*ikametgah*
+*adli_sicil*
 
 # --- Geçici Test Çıktıları ---
 test_*_*.png

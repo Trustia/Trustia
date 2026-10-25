@@ -1,4 +1,4 @@
-﻿# 🛡️ TRUSTIA — BAYKAR, ASELSAN & SSB EYDEP Tedarikçi ve Yerlileştirme Başvuru Paketi
+# 🛡️ TRUSTIA — BAYKAR, ASELSAN & SSB EYDEP Tedarikçi ve Yerlileştirme Başvuru Paketi
 
 **Belge Kodu:** `TRST-SUPP-2026-V2.4`  
 **Başvuru Tipi:** BAYKAR Tedarikçi / ASELSAN "Gücümüz Bir" & Yerlileştirme / SSB EYDEP A Sınıfı Yazılım Tedarikçi Başvurusu  
@@ -76,7 +76,7 @@ TRUSTIA, GPS/GNSS sinyalinin kesildiği, yanıltıldığı (jamming/spoofing) ve
 
 - **Otomatik Birim ve Entegrasyon Test Sayısı:** 1.307 Adet (Tüm modüller kapsama altındadır)
 - **Test Süresi:** ~43 saniye
-- **Test Başarı Oranı:** **%100** (`1301 passed in 43.86s`)
+- **Test Başarı Oranı:** **%100** (`1.307 passed in 19.45s`)
 - **Sertifikasyon Denetim Skoru:** **9 / 9 Şart SAĞLANDI**
 - **Çalışma Zamanı Harici Bağımlılığı:** **0 (Sıfır Dış Bağımlılık / Saf Python)**
 
