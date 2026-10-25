@@ -113,20 +113,20 @@ export default function RobotaxiShowcase() {
   ];
 
   return (
-    <section id="robotaxi" className="relative z-20 py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#06080c] border-b border-white/10">
-      <div className="max-w-7xl mx-auto space-y-10 sm:space-y-14">
+    <section id="robotaxi" className="relative z-20 py-10 sm:py-16 px-4 sm:px-8 lg:px-12 bg-[#06080c] border-b border-white/10">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* 1. Executive Split Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pb-8 border-b border-white/10">
-          <div className="lg:col-span-8 space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px] font-mono tracking-wider uppercase">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 items-end pb-5 border-b border-white/10">
+          <div className="lg:col-span-8 space-y-2">
+            <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] font-mono tracking-wider uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
               <span>{lang === "tr" ? "SEVİYE 4 OTONOM SÜRÜŞ PLATFORMU // E-GMP" : "LEVEL 4 AUTONOMY STACK // E-GMP"}</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-snug">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug">
               Hyundai Ioniq 5{" "}
-              <span className="text-slate-300 font-semibold">
+              <span className="text-slate-300 font-normal">
                 {lang === "tr" ? "— Seviye-4 Otonom Filo Mimarisi" : "— Level-4 Fleet Architecture"}
               </span>
             </h2>
@@ -142,7 +142,7 @@ export default function RobotaxiShowcase() {
           <div className="lg:col-span-4 flex lg:justify-end">
             <Link
               href="/robotaxi/"
-              className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white hover:text-slate-200 uppercase tracking-wider pb-1 border-b border-white/30 hover:border-white transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-white hover:text-slate-200 uppercase tracking-wider pb-0.5 border-b border-white/30 hover:border-white transition-colors"
             >
               <span>{lang === "tr" ? "Şartname ve Donanım Yerleşimi" : "View Hardware Architecture"}</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -150,45 +150,45 @@ export default function RobotaxiShowcase() {
           </div>
         </div>
 
-        {/* 2. Integrated 4-Metric Architectural Bar (KUTUSUZ & SAÇ ÇİZGİLİ) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-6 border-y border-white/10 font-mono">
-          <div className="p-4 first:pl-0 space-y-1">
+        {/* 2. Integrated 4-Metric Architectural Bar (KUTUSUZ & KOMPAKT) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-3.5 border-y border-white/10 font-mono">
+          <div className="py-1 px-3 first:pl-0 space-y-0.5">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY STACK"}
             </span>
-            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">16.000+</div>
-            <span className="text-[11px] text-slate-400 block font-sans">
-              {lang === "tr" ? "Satır C++20 / Python Özgün Çekirdek" : "Lines of Sovereign C++20 / Python"}
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.000+</div>
+            <span className="text-[10px] text-slate-400 block font-sans">
+              {lang === "tr" ? "Satır C++20 / Python" : "Lines of Code"}
             </span>
           </div>
 
-          <div className="p-4 sm:pl-6 space-y-1">
+          <div className="py-1 px-3 sm:pl-6 space-y-0.5">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
             </span>
-            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">1.301 / 1.301</div>
-            <span className="text-[11px] text-emerald-400 block font-sans font-medium">
-              {lang === "tr" ? "%100 Başarı (Sıfır Regresyon)" : "100% Pass Rate (Zero Regression)"}
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.301 / 1.301</div>
+            <span className="text-[10px] text-emerald-400 block font-sans font-medium">
+              {lang === "tr" ? "%100 Başarı (0 Hata)" : "100% Pass Rate"}
             </span>
           </div>
 
-          <div className="p-4 sm:pl-6 space-y-1">
+          <div className="py-1 px-3 sm:pl-6 space-y-0.5">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "HESAPLAMA GÜCÜ" : "AI COMPUTE"}
             </span>
-            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">275 TOPS</div>
-            <span className="text-[11px] text-slate-400 block font-sans">
-              {lang === "tr" ? "NVIDIA Jetson AGX Orin 64GB" : "NVIDIA Jetson AGX Orin 64GB"}
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">275 TOPS</div>
+            <span className="text-[10px] text-slate-400 block font-sans">
+              Jetson AGX Orin 64GB
             </span>
           </div>
 
-          <div className="p-4 sm:pl-6 space-y-1">
+          <div className="py-1 px-3 sm:pl-6 space-y-0.5">
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "LİDAR MENZİLİ" : "LIDAR RANGE"}
             </span>
-            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">240 Metre</div>
-            <span className="text-[11px] text-slate-400 block font-sans">
-              {lang === "tr" ? "128 Kanal Ouster OS2 Rev 7" : "128-Channel Ouster OS2 Rev 7"}
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">240 Metre</div>
+            <span className="text-[10px] text-slate-400 block font-sans">
+              128 Kanal Ouster OS2
             </span>
           </div>
         </div>
