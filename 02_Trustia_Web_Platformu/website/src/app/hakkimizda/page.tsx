@@ -55,16 +55,28 @@ export default function AboutPage() {
       desc: lang === "tr"
         ? "Elektronik harp, tüneller veya uydu sinyalinin kesildiği harekat sahalarında 3D LiDAR SLAM ile santimetre hassasiyetinde seyrüsefer."
         : "Centimeter-accurate 3D LiDAR SLAM localization operating independently of satellite signals in contested or indoor environments.",
-      stat: "ASIL-D / STANAG"
+      stat: "ISO 26262 ASIL-D"
     }
   ];
 
   const credentials = [
     {
-      org: lang === "tr" ? "Open Invention Network (OIN 2.0)" : "Open Invention Network (OIN 2.0)",
+      org: lang === "tr" ? "Open Invention Network (OIN)" : "Open Invention Network (OIN)",
       reg: "Doc ID: f1e44576",
       type: lang === "tr" ? "Küresel Patent Savunma Paktı • Karşılıklı Lisans Sözleşmesi" : "Global Patent Non-Aggression Pact • Executed License",
       status: "İmzalandı"
+    },
+    {
+      org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
+      reg: "#0050569",
+      type: lang === "tr" ? "Yazılım Geliştirme • Potansiyel Tedarikçi Kütüğü" : "Software Engineering • Potential Supplier Registry",
+      status: lang === "tr" ? "Kayıtlı" : "Registered"
+    },
+    {
+      org: lang === "tr" ? "STM (Savunma Teknolojileri Mühendislik)" : "STM Defense Technologies Engineering",
+      reg: "STM-EKOSİSTEM-2026",
+      type: lang === "tr" ? "Savunma ve Derin Teknoloji Girişimcilik Ekosistemi" : "Defense & Deep-Tech Innovation Ecosystem",
+      status: lang === "tr" ? "Kayıtlı" : "Registered"
     },
     {
       org: lang === "tr" ? "Avrupa Komisyonu (European Commission)" : "European Commission",
@@ -75,91 +87,13 @@ export default function AboutPage() {
     {
       org: lang === "tr" ? "EIT Urban Mobility (Avrupa İnovasyon ve Teknoloji Enstitüsü)" : "EIT Urban Mobility (EU)",
       reg: "Partner ID: CUS15554",
-      type: lang === "tr" ? "Resmi İş Ortaklığı & 100k€ Hibe Çağrısı 26-28 (#3.1.02-1206-3732.3)" : "Official Partner & €100k Grant Application",
-      status: "Canlıda"
-    },
-    {
-      org: lang === "tr" ? "Malta Enterprise (MSRP & Start-up Finance)" : "Malta Enterprise (MSRP & Finance)",
-      reg: "1.500.000 € Hibe",
-      type: lang === "tr" ? "1.5M€ Hibe (#100062411) & Girişimci İkamet İzni (#100062412)" : "€1.5M Grant (#100062411) & Founder Residency (#100062412)",
-      status: "Başarıyla Alındı"
-    },
-    {
-      org: lang === "tr" ? "NATO NSPA & MSB TMKB" : "NATO NSPA & Defense Codification",
-      reg: "Ref: TR26258467723",
-      type: lang === "tr" ? "NATO NCAGE Askeri Tedarikçi Kodu & Milli Savunma Tescili" : "NATO NCAGE Allied Supplier Registry & MSB Codification",
-      status: "Onayda"
-    },
-    {
-      org: lang === "tr" ? "ASELSAN Tedarikçi Portalı" : "ASELSAN Defense Supplier Portal",
-      reg: "0050569CCE941FD1A49FCEFB9B7BE7D6",
-      type: lang === "tr" ? "Yazılım Geliştirme • Potansiyel Tedarikçi Kütüğü (SAP Portal Erişimli)" : "Software Engineering • Potential Supplier Registry (SAP Access)",
-      status: lang === "tr" ? "Ön Onaylı" : "Pre-Approved"
-    },
-    {
-      org: lang === "tr" ? "BAYKAR Teknoloji (Baykar Tech)" : "BAYKAR Defense Technologies",
-      reg: "Tedarikçi Portalı",
-      type: lang === "tr" ? "Resmi Alt Yüklenici & Seviye-4 Taktik İKA Otonomi Başvurusu" : "Official Subcontractor & Tactical Autonomy Application",
-      status: "Kayıt Alındı"
-    },
-    {
-      org: lang === "tr" ? "Katar Bilim ve Teknoloji Parkı (QSTP Doha)" : "Qatar Science & Technology Park (QSTP)",
-      reg: "30M$ Fon + Sprint",
-      type: lang === "tr" ? "30M$ Tech Venture Fon & 4 Hafta Doha Sprint Kuluçkası" : "$30M Tech Venture Fund & 4-Week Doha Sprint",
-      status: "Alındı"
-    },
-    {
-      org: lang === "tr" ? "Dorm Room Fund (First Round Capital)" : "Dorm Room Fund (First Round Capital)",
-      reg: "$40k - $100k SAFE",
-      type: lang === "tr" ? "San Francisco Ekibi • Derin Teknoloji SAFE Yatırım Başvurusu" : "San Francisco Team • Deep Tech SAFE Investment",
-      status: "Alındı"
-    },
-    {
-      org: lang === "tr" ? "Singapur Hükümeti (Startup SG & GIA)" : "Singapore Government (Startup SG & GIA)",
-      reg: "ID: #57428 • GIA: 6aa85fa9",
-      type: lang === "tr" ? "Enterprise Singapore Ulusal Ekosistem & Küresel İnovasyon İttifakı (B2Match)" : "Enterprise Singapore National Ecosystem & Global Innovation Alliance (B2Match)",
-      status: lang === "tr" ? "%100 Kayıtlı" : "100% Verified"
-    },
-    {
-      org: lang === "tr" ? "DEİK (Dış Ekonomik İlişkiler Kurulu)" : "Foreign Economic Relations Board (DEİK)",
-      reg: lang === "tr" ? "Resmi Davet" : "Official Invitation",
-      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Resmi Üyelik ve Ticari Diplomasi Daveti" : "Digital Technologies Business Council • Official Invitation",
-      status: lang === "tr" ? "Davet Alındı" : "Invited"
-    },
-    {
-      org: lang === "tr" ? "Teknopark İstanbul (HASAT 2026)" : "Teknopark Istanbul (HASAT 2026)",
-      reg: "100M TL Destek",
-      type: lang === "tr" ? "SSB & İTO Destekli Teknoloji Hasatı Sahnesi & Cube Incubation Başvurusu" : "Presidency of Defense Industries & ITO Deep-Tech Contest",
-      status: lang === "tr" ? "Başarıyla Alındı" : "Confirmed"
-    },
-    {
-      org: lang === "tr" ? "SSB SAYZEK (Savunma Sanayii Başkanlığı)" : "Defense Industry Agency (SAYZEK AI)",
-      reg: "Başvuru #170",
-      type: lang === "tr" ? "Simport Otonomi Simülasyonu ve Süper Bilgisayar Kaynak Tahsisi" : "Simport Simulation & Supercomputing Access",
-      status: "Onay Bekliyor"
-    },
-    {
-      org: lang === "tr" ? "Crunchbase Küresel Girişim Dizini" : "Crunchbase Global Directory",
-      reg: "Isı Puanı: 93 • Büyüme: 91 (CB: 98k)",
-      type: lang === "tr" ? "Resmi Doğrulanmış Kurumsal Profil & Teknoloji Transferi" : "Verified Corporate Profile & Technology Transfer",
-      status: "Doğrulandı"
-    },
-    {
-      org: lang === "tr" ? "Dubai World Challenge (RTA Dubai)" : "Dubai World Challenge for Self-Driving",
-      reg: "Global Challenge",
-      type: lang === "tr" ? "$1.200.000 Nakit Ödüllü Global Seviye-4 Robotaksi Yarışması" : "$1.2M Global Level 4 Robotaxi Competition",
-      status: "İncelemede"
-    },
-    {
-      org: lang === "tr" ? "NEOM Autonomous Mobility (Suudi Arabistan)" : "NEOM Autonomous Mobility (Saudi Arabia)",
-      reg: "Mega City PoC",
-      type: lang === "tr" ? "500 Milyar $ Mega Şehir Otonomi PoC & Stratejik SAFE Başvurusu" : "$500B Mega City L4 Fleet PoC Application",
-      status: "Alındı"
+      type: lang === "tr" ? "Resmi İnovasyon İş Ortaklığı" : "Official Innovation Partnership",
+      status: "Aktif"
     },
     {
       org: lang === "tr" ? "İTO Bilgiyi Ticarileştirme Merkezi (BTM)" : "Istanbul Chamber of Commerce (BTM)",
-      reg: "2026-II Sözleşme",
-      type: lang === "tr" ? "Fulya Kampüsü Sözleşmeli Ön Kuluçka Girişimi" : "Fulya Campus Contracted Pre-Incubation",
+      reg: "Fulya Kampüsü",
+      type: lang === "tr" ? "Sözleşmeli Derin Teknoloji Ön Kuluçka Girişimi" : "Contracted Deep-Tech Pre-Incubation",
       status: "Yerleşik"
     },
     {
@@ -175,10 +109,28 @@ export default function AboutPage() {
       status: "Aktif Sicil"
     },
     {
+      org: lang === "tr" ? "Singapur Hükümeti (Startup SG & GIA)" : "Singapore Government (Startup SG & GIA)",
+      reg: "ID: #57428 • GIA: 6aa85fa9",
+      type: lang === "tr" ? "Enterprise Singapore Ulusal Ekosistem & Küresel İnovasyon İttifakı" : "Enterprise Singapore National Ecosystem & Global Innovation Alliance",
+      status: lang === "tr" ? "Kayıtlı" : "Verified"
+    },
+    {
+      org: lang === "tr" ? "DEİK (Dış Ekonomik İlişkiler Kurulu)" : "Foreign Economic Relations Board (DEİK)",
+      reg: lang === "tr" ? "Resmi Davet" : "Official Invitation",
+      type: lang === "tr" ? "Dijital Teknolojiler İş Konseyi • Resmi Üyelik Daveti" : "Digital Technologies Business Council • Official Invitation",
+      status: lang === "tr" ? "Davet Alındı" : "Invited"
+    },
+    {
+      org: lang === "tr" ? "SSB SAYZEK (Savunma Sanayii Başkanlığı)" : "Defense Industry Agency (SAYZEK AI)",
+      reg: "SAYZEK-SIMPORT",
+      type: lang === "tr" ? "Simport Otonomi Simülasyonu ve Yapay Zeka Portalı" : "Simport Simulation & AI Portal Registration",
+      status: "Kayıtlı"
+    },
+    {
       org: lang === "tr" ? "BTK Akademi" : "BTK Academy",
       reg: "L2zPtN4X1ZJ",
-      type: lang === "tr" ? "Türk Savunma Sanayii Ürün ve Platformları Eğitimi" : "Defense Industry Platforms Training",
-      status: "Resmi Onaylı"
+      type: lang === "tr" ? "Türk Savunma Sanayii Ürün ve Platformları Sertifikası" : "Defense Industry Platforms Certification",
+      status: "Onaylı"
     }
   ];
 
@@ -219,8 +171,8 @@ export default function AboutPage() {
           {/* Institutional Fast Badges Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-[11px] font-mono">
             <div className="p-3 rounded-lg bg-[#0f131a] border border-slate-800">
-              <div className="text-slate-500 text-[9px] uppercase">SSB SINAVI</div>
-              <div className="font-bold text-white mt-0.5">100 / 100</div>
+              <div className="text-slate-500 text-[9px] uppercase">ASELSAN & STM</div>
+              <div className="font-bold text-white mt-0.5">#0050569</div>
             </div>
             <div className="p-3 rounded-lg bg-[#0f131a] border border-slate-800">
               <div className="text-slate-500 text-[9px] uppercase">KOSGEB</div>
