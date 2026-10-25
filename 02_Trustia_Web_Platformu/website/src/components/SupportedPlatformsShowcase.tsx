@@ -1,142 +1,178 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { Car, Shield, Tractor, ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Car, Shield, Tractor, ArrowRight, Check, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function SupportedPlatformsShowcase() {
   const { lang } = useLanguage();
-  const [activeSlide, setActiveSlide] = useState(0);
 
   const solutions = [
     {
       id: "civilian",
+      num: "01",
       icon: Car,
-      title: lang === "tr" ? "Sivil Mobilite & Robotaksi" : "Urban Mobility & Robotaxi",
-      subtitle: lang === "tr" ? "Şehir İçi Seviye 4 Otonom Filolar" : "Level 4 Autonomous City Fleets",
+      tag: lang === "tr" ? "SİVİL MOBİLİTE" : "CIVIL MOBILITY",
+      title: lang === "tr" ? "Seviye 4 Robotaksi Filoları" : "Level-4 Robotaxi Fleets",
+      subtitle: lang === "tr" ? "Şehir İçi Otonom Yolcu Taşımacılığı" : "Urban Autonomous Ride-Hailing",
       desc: lang === "tr"
-        ? "Binek ve elektrikli otomobiller için geliştirilen tak-çalıştır otonom sürüş beyni. Şehir içi yolcu taşımacılığı, servis hatları ve otonom taksi operasyonları."
-        : "Plug-and-play autonomous driving core for passenger and electric vehicles. Tailored for urban ride-hailing, campus shuttles, and autonomous taxi fleets.",
-      highlights: lang === "tr"
-        ? ["Elektronik Direksiyon (Drive-by-Wire)", "Trafik Işığı & Yaya Algılama", "Dinamik Rota Planlama"]
-        : ["Drive-by-Wire CAN Integration", "Traffic Light & Pedestrian AI", "Dynamic Route Planning"],
-      vehicles: "TOGG, Mercedes, Toyota, Hyundai, Tesla",
+        ? "Binek ve hafif ticari elektrikli araçlar için tak-çalıştır otonom sürüş beyni. Şehir içi karmaşık kavşaklar, trafik ışıkları, dinamik yaya geçitleri ve yolcu çağırma operasyonları için geliştirilmiştir."
+        : "Plug-and-play autonomous driving stack tailored for passenger EVs, navigating dense urban intersections, signalized corridors, and ride-hailing services.",
+      specs: lang === "tr"
+        ? [
+            "Elektronik Direksiyon (Drive-by-Wire CAN-FD)",
+            "1 Aralık 2024 ADS Yönetmeliği Uyumluluğu",
+            "UN ECE R157 DSSAD / EDR Kara Kutu Kaydı"
+          ]
+        : [
+            "Drive-by-Wire CAN-FD Actuation Layer",
+            "Full Compliance with Ministry ADS Regulations",
+            "UN ECE R157 DSSAD / EDR Black-Box Logging"
+          ],
+      fleet: lang === "tr" ? "Hyundai Ioniq 5, SAIC Maxus MIFA 7, TOGG" : "Hyundai Ioniq 5, SAIC Maxus MIFA 7, TOGG",
       ctaLink: "/robotaxi/",
-      ctaText: lang === "tr" ? "Hyundai Ioniq 5 Robotaksi İncele" : "Explore Hyundai Ioniq 5 Robotaxi"
+      ctaText: lang === "tr" ? "Hyundai Ioniq 5 Robotaksi Çözümü" : "Explore Robotaxi Solution"
     },
     {
       id: "defense",
+      num: "02",
       icon: Shield,
-      title: lang === "tr" ? "Savunma & İnsansız Kara Araçları (İKA)" : "Defense & Unmanned Ground Vehicles",
-      subtitle: lang === "tr" ? "GPS Olmayan Sahalarda Tam Otonomi" : "Full Autonomy in GPS-Denied Theaters",
+      tag: lang === "tr" ? "SAVUNMA VE GÜVENLİK" : "DEFENSE & TACTICAL",
+      title: lang === "tr" ? "Taktik İnsansız Kara Araçları (İKA)" : "Tactical Defense UGVs",
+      subtitle: lang === "tr" ? "GPS Olmayan Sahalarda Tam Otonomi" : "Full Autonomy in GNSS-Denied Theaters",
       desc: lang === "tr"
-        ? "Elektronik harp ve uydu sinyalinin kesildiği çatışma alanlarında; 3D LiDAR SLAM ve sürü zekası ile görev yapan zırhlı savunma robotları."
-        : "Designed for electronic warfare and GPS-jammed operational zones; armored defense robots powered by 3D LiDAR SLAM and swarm intelligence.",
-      highlights: lang === "tr"
-        ? ["GPS-Sinyalsiz 3D SLAM Haritalama", "Sürü Koordinasyonu (Swarm)", "Askeri JAUS & ROS 2 Uyumu"]
-        : ["GPS-Denied 3D SLAM Mapping", "Multi-Agent Swarm Consensus", "JAUS & ROS 2 Dual-Use Compliance"],
-      vehicles: "Hafif, Orta ve Ağır Sınıf Taktik İKA'lar",
+        ? "Elektronik harp, tüneller ve uydu sinyalinin kesildiği çatışma alanlarında; araç üzeri 3D LiDAR SLAM ve sürü zekası (swarm) ile görev yapan tekerlekli ve paletli savunma robotları."
+        : "Engineered for GPS-jammed and contested operational environments; tactical ground robots powered by on-edge 3D LiDAR SLAM, ESKF sensor fusion, and multi-agent swarm intelligence.",
+      specs: lang === "tr"
+        ? [
+            "GPS'siz Seyrüsefer (GNSS-Denied 3D LiDAR SLAM)",
+            "Çoklu Robot Sürü Koordinasyonu (Swarm)",
+            "Askeri JAUS & ROS 2 Humble Çift Kullanımlı Protokol"
+          ]
+        : [
+            "GNSS-Denied 3D LiDAR SLAM Localization",
+            "Multi-Agent Swarm Consensus & Formations",
+            "Military JAUS & ROS 2 Dual-Use Architecture"
+          ],
+      fleet: lang === "tr" ? "Hafif, Orta ve Ağır Sınıf Taktik İKA Platformları" : "Light, Medium & Heavy Tactical Wheeled/Tracked UGVs",
       ctaLink: "/politika/lisans/",
-      ctaText: lang === "tr" ? "Savunma Çözümlerini İncele" : "Explore Defense Solutions"
+      ctaText: lang === "tr" ? "Savunma Entegrasyon Şartnamesi" : "Defense Integration Specs"
     },
     {
       id: "industrial",
+      num: "03",
       icon: Tractor,
-      title: lang === "tr" ? "Endüstri, Maden & Tarım" : "Industry, Mining & Agriculture",
-      subtitle: lang === "tr" ? "Zorlu Sahalarda 7/24 Sürücüsüz Çalışma" : "24/7 Driverless Heavy Operations",
+      tag: lang === "tr" ? "ENDÜSTRİ VE LOJİSTİK" : "HEAVY INDUSTRY",
+      title: lang === "tr" ? "Ağır Hizmet, Maden ve Liman Otonomisi" : "Mining, Ports & Heavy Logistics",
+      subtitle: lang === "tr" ? "Zorlu Sahalarda 7/24 Kesintisiz Çalışma" : "24/7 Driverless Heavy Operations",
       desc: lang === "tr"
-        ? "Maden ocakları, liman lojistiği ve tarım arazilerinde insan hayatını riske atmadan 7/24 kesintisiz çalışan ağır hizmet otonomi sistemleri."
-        : "Heavy-duty autonomous logistics operating 24/7 across open-pit mines, seaport terminals, and large-scale precision agriculture without human risk.",
-      highlights: lang === "tr"
-        ? ["Ağır Arazi ve Çamur Algılama", "Otonom Konvoy & Yük Taşıma", "Gece / Sisli Görüş Desteği"]
-        : ["Off-Road Terrain Navigation", "Autonomous Convoy Logistics", "Thermal Night & Fog Vision"],
-      vehicles: "Maden Kamyonları, Otonom Traktörler, AGV",
+        ? "Açık maden ocakları, intermodal liman terminalleri ve tarım arazilerinde insan hayatını riske atmadan 7/24 kesintisiz çalışan ağır kamyon, çekici ve otonom yük taşıyıcı (AGV) yazılım mimarisi."
+        : "Heavy-duty autonomous logistics operating 24/7 across open-pit mines, container shipping berths, and agricultural tracts, eliminating human exposure from high-hazard industrial zones.",
+      specs: lang === "tr"
+        ? [
+            "Ağır Arazi ve Çamur Deformasyon Algılama",
+            "Otonom Konvoy Takibi & Yük Taşıma",
+            "Termal Gece ve Sisli Hava Görüş Füzyonu"
+          ]
+        : [
+            "Off-Road Soil & Mud Terrain Deformation AI",
+            "Autonomous Leader-Follower Convoy Tracking",
+            "Thermal LWIR Night & Dense Fog Perception"
+          ],
+      fleet: lang === "tr" ? "Maden Kamyonları, Otonom Çekiciler, Liman AGV" : "Heavy Haul Trucks, Yard Tractors, Seaport AGVs",
       ctaLink: "/iletisim/",
-      ctaText: lang === "tr" ? "Endüstriyel İş Birliği" : "Industrial Partnerships"
+      ctaText: lang === "tr" ? "Endüstriyel Çözüm Talebi" : "Request Industrial Briefing"
     }
   ];
 
   return (
-    <section id="otonomi" className="relative z-20 py-10 sm:py-20 px-3.5 sm:px-8 bg-[#090b0e] border-b border-white/10">
-      <div className="max-w-6xl mx-auto space-y-6 sm:space-y-12">
+    <section id="otonomi" className="relative z-20 py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#080a0e] border-b border-white/10">
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
         
-        {/* Executive Clean Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-2 sm:space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase">
-            <span>{lang === "tr" ? "UYGULAMA ALANLARI & ÇÖZÜMLER" : "APPLICATIONS & SOLUTIONS"}</span>
-          </div>
-          
-          <h2 className="text-xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
-            {lang === "tr" ? "Ne Yapıyoruz? Hangi Alanlarda Çalışıyoruz?" : "What We Do & Where We Operate"}
-          </h2>
-          
-          <p className="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed max-w-2xl mx-auto">
-            {lang === "tr"
-              ? "Trustia AI; donanım bağımsız evrensel bir otonomi beynidir. Standart CAN-Bus ve Drive-by-Wire haberleşmesi ile her türlü aracı tam otonom hale getirir."
-              : "Trustia AI is a universal, hardware-agnostic autonomy core. It transforms commercial, defense, and industrial vehicles into fully autonomous systems."}
-          </p>
+        {/* Executive Balanced Header (Left: Title & Badge, Right: Architectural Scope) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pb-8 border-b border-white/10">
+          <div className="lg:col-span-7 space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px] font-mono tracking-wider uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>{lang === "tr" ? "UYGULAMA ALANLARI VE PLATFORM ENTEGRASYONU" : "DEPLOYMENT DOMAINS & INTEGRATION"}</span>
+            </div>
 
-          {/* Mobile Swipe Hint */}
-          <div className="flex sm:hidden items-center justify-center gap-1.5 text-[10px] font-mono text-slate-400 pt-1">
-            <span>←</span>
-            <span>{lang === "tr" ? "Yana kaydırarak inceleyin" : "Swipe horizontally"}</span>
-            <span>→</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
+              {lang === "tr"
+                ? "Çift Kullanımlı (Dual-Use) Otonomi Çözümleri"
+                : "Dual-Use Autonomous Solutions"}
+            </h2>
+          </div>
+
+          <div className="lg:col-span-5">
+            <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
+              {lang === "tr"
+                ? "Trustia AI; donanım bağımsız evrensel yazılım mimarisiyle sivil elektrikli araçlardan taktik savunma robotlarına ve ağır hizmet maden kamyonlarına kadar her şasiye 100 Hz standart CAN-FD köprüsüyle entegre olur."
+                : "A sovereign hardware-agnostic autonomy stack interfacing seamlessly across passenger EVs, tactical defense robotics, and heavy mining fleets via 100 Hz CAN-FD abstraction."}
+            </p>
           </div>
         </div>
 
-        {/* 
-          Responsive Layout:
-          - Mobile: Horizontal Snap Swipe Carousel (No endless vertical scrolling!)
-          - Desktop: Clean 3-Column Grid (100% Preserved)
-        */}
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-3.5 pb-2 pt-1 px-1 scrollbar-none no-scrollbar sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible">
+        {/* 3 Refined Architectural Panels (Full width, No clunky box clutter!) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {solutions.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.id}
-                className="w-[84vw] max-w-[340px] shrink-0 snap-center sm:w-auto p-5 sm:p-7 rounded-2xl bg-[#0d1017] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-5 group"
+                className="p-6 sm:p-8 rounded-2xl bg-[#0c0f15] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-6 group"
               >
-                <div className="space-y-3 sm:space-y-4">
-                  {/* Icon & Title */}
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-200 group-hover:text-white transition-colors">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+                {/* Upper Content */}
+                <div className="space-y-5">
+                  {/* Top Bar: Number & Category Badge */}
+                  <div className="flex items-center justify-between pb-4 border-b border-white/5">
+                    <span className="font-mono text-xs font-bold text-slate-500 group-hover:text-slate-300 transition-colors">
+                      {item.num} //
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300 uppercase tracking-wider font-semibold">
+                      {item.tag}
+                    </span>
                   </div>
 
-                  <div>
-                    <span className="text-[9px] sm:text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-0.5">
-                      {item.subtitle}
-                    </span>
-                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                  {/* Title & Subtitle */}
+                  <div className="space-y-1">
+                    <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight leading-snug">
                       {item.title}
                     </h3>
+                    <div className="text-[11px] font-mono text-slate-400">
+                      {item.subtitle}
+                    </div>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-400 font-normal leading-relaxed">
+                  {/* Narrative Description */}
+                  <p className="text-xs text-slate-300 leading-relaxed font-sans">
                     {item.desc}
                   </p>
 
-                  {/* Key Highlights */}
-                  <div className="pt-2 space-y-1.5 sm:space-y-2 border-t border-white/5">
-                    {item.highlights.map((h, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-[11px] sm:text-xs text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                        <span>{h}</span>
+                  {/* Technical Specifications List */}
+                  <div className="pt-3 border-t border-white/5 space-y-2">
+                    <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+                      {lang === "tr" ? "Teknik Yetkinlikler:" : "Key Technical Features:"}
+                    </div>
+                    {item.specs.map((specText, sIdx) => (
+                      <div key={sIdx} className="flex items-start gap-2 text-xs text-slate-300 font-sans">
+                        <Check className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                        <span>{specText}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Footer Link & Compatible Fleet */}
-                <div className="pt-4 border-t border-white/5 space-y-3">
-                  <div className="text-[10px] font-mono text-slate-400">
-                    <span className="text-slate-300 font-semibold">{lang === "tr" ? "Uyumlu:" : "Fleet:"}</span> {item.vehicles}
+                {/* Bottom Footer: Compatible Fleet & Sleek Action Link */}
+                <div className="pt-5 border-t border-white/10 space-y-3.5">
+                  <div className="text-[11px] font-mono text-slate-400">
+                    <span className="text-slate-200 font-semibold">{lang === "tr" ? "Uyumlu Şasi:" : "Compatible Fleet:"}</span>{" "}
+                    <span className="text-slate-300">{item.fleet}</span>
                   </div>
 
                   <Link
                     href={item.ctaLink}
-                    className="w-full py-2 px-3 rounded-lg bg-white/5 border border-white/10 hover:bg-white hover:text-slate-950 text-slate-200 font-mono text-xs font-semibold tracking-wider uppercase flex items-center justify-between transition-all group-hover:border-white/30"
+                    className="inline-flex items-center gap-2 text-xs font-mono font-semibold text-white group-hover:text-slate-200 uppercase tracking-wider transition-colors pt-1"
                   >
                     <span>{item.ctaText}</span>
                     <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
