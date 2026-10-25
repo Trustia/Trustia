@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRUSTIA L4 ROBOTAXI — 3D MISSION CONTROL & COCKPIT (SAIC MAXUS MIFA 7)</title>
+  <!-- Three.js & OrbitControls for Real-Time 3D LiDAR & Vehicle Rendering -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --card-bg: rgba(13, 19, 33, 0.88);
+      --border-color: rgba(56, 189, 248, 0.2);
+      --accent-cyan: #06b6d4;
+      --accent-blue: #3b82f6;
+      --accent-green: #10b981;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    body, html { width: 100%; height: 100%; overflow: hidden; background-color: var(--bg-dark); color: var(--text-main); }
+
+    /* Main Container */
+    #viewport-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+    #canvas3d { width: 100%; height: 100%; display: block; }
+
+    /* UI Overlay Layer */
+    .ui-overlay { position: absolute; z-index: 10; pointer-events: none; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 16px; }
+    .interactive { pointer-events: auto; }
+
+    /* Top Bar */
+    .top-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--card-bg); backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color); border-radius: 12px;
+      padding: 10px 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-logo { font-size: 20px; font-weight: 900; letter-spacing: 2px; color: var(--accent-cyan); text-shadow: 0 0 16px rgba(6,182,212,0.6); }
+    .brand-sub { font-size: 11px; font-weight: 700; color: var(--text-muted); letter-spacing: 1.5px; border-left: 2px solid #334155; padding-left: 12px; }
+
+    .status-badges { display: flex; gap: 8px; }
+    .badge {
+      font-size: 10px; font-weight: 700; padding: 5px 12px; border-radius: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; }
+    .badge-blue { background: rgba(30, 58, 138, 0.6); border: 1px solid #2563eb; color: #93c5fd; }
+    .badge-blue .badge-dot { background: #60a5fa; box-shadow: 0 0 8px #60a5fa; }
+    .badge-green { background: rgba(6, 78, 59, 0.6); border: 1px solid #059669; color: #6ee7b7; }
+    .badge-green .badge-dot { background: #34d399; box-shadow: 0 0 8px #34d399; }
+    .badge-purple { background: rgba(76, 29, 149, 0.6); border: 1px solid #7c3aed; color: #c4b5fd; }
+    .badge-purple .badge-dot { background: #a78bfa; box-shadow: 0 0 8px #a78bfa; }
+
+    /* Center Middle Content: Side Panels */
+    .middle-layer { display: flex; justify-content: space-between; align-items: flex-start; margin-top: 16px; flex: 1; pointer-events: none; }
+
+    .panel {
+      width: 320px; background: var(--card-bg); backdrop-filter: blur(14px);
+      border: 1px solid var(--border-color); border-radius: 12px; padding: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5); display: flex; flex-direction: column; gap: 14px;
+    }
+    .panel-title {
+      font-size: 11px; font-weight: 800; color: var(--accent-cyan); letter-spacing: 1px;
+      text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 8px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+
+    /* Gauge Cards */
+    .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .metric-card {
+      background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 8px; padding: 10px;
+    }
+    .metric-label { font-size: 10px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+    .metric-value { font-size: 22px; font-weight: 800; color: var(--text-main); font-variant-numeric: tabular-nums; margin-top: 2px; }
+    .metric-unit { font-size: 11px; font-weight: 600; color: var(--text-muted); margin-left: 2px; }
+
+    /* CAN-FD Real-Time Hex Stream Monitor */
+    .can-monitor {
+      background: #04060a; border: 1px solid #1e293b; border-radius: 8px; padding: 8px;
+      font-family: "Courier New", Courier, monospace; font-size: 10px; color: #10b981;
+      height: 120px; overflow-y: auto; display: flex; flex-direction: column; gap: 3px;
+    }
+    .can-row { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 2px; }
+    .can-id { color: #38bdf8; font-weight: bold; }
+    .can-data { color: #94a3b8; }
+    .can-tag { color: #f59e0b; }
+
+    /* Camera Switcher Pill Bar */
+    .cam-switcher {
+      position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%);
+      background: var(--card-bg); backdrop-filter: blur(10px); border: 1px solid var(--border-color);
+      border-radius: 30px; padding: 6px 10px; display: flex; gap: 8px;
+    }
+    .cam-btn {
+      background: transparent; border: 1px solid transparent; color: var(--text-muted);
+      padding: 6px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+    }
+    .cam-btn.active {
+      background: var(--accent-cyan); color: #04060a; border-color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(6,182,212,0.5);
+    }
+
+    /* Bottom Control Bar */
+    .bottom-bar {
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--card-bg); backdrop-filter: blur(12px); border: 1px solid var(--border-color);
+      border-radius: 12px; padding: 12px 20px; box-shadow: 0 -4px 32px rgba(0,0,0,0.6);
+    }
+    .action-group { display: flex; gap: 12px; align-items: center; }
+    .btn-action {
+      padding: 10px 22px; border-radius: 8px; font-size: 12px; font-weight: 800; letter-spacing: 0.5px;
+      cursor: pointer; transition: all 0.2s; display: flex; align-items: center; gap: 8px; border: none;
+    }
+    .btn-estop {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white;
+      box-shadow: 0 0 20px rgba(239,68,68,0.4);
+    }
+    .btn-estop:hover { background: #b91c1c; box-shadow: 0 0 25px rgba(239,68,68,0.7); }
+    .btn-mode {
+      background: #1e293b; border: 1px solid #334155; color: #e2e8f0;
+    }
+    .btn-mode.active-l4 {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); border-color: #38bdf8;
+      box-shadow: 0 0 15px rgba(56,189,248,0.3);
+    }
+
+    .trip-summary { display: flex; gap: 24px; align-items: center; }
+    .trip-item { display: flex; flex-direction: column; }
+    .trip-item .k { font-size: 10px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+    .trip-item .v { font-size: 14px; font-weight: 800; color: #38bdf8; }
+  </style>
+</head>
+<body>
+
+  <!-- 3D WebGL Three.js Viewport -->
+  <div id="viewport-container">
+    <canvas id="canvas3d"></canvas>
+  </div>
+
+  <!-- HUD Overlay -->
+  <div class="ui-overlay">
+
+    <!-- Top Status Bar -->
+    <header class="top-bar interactive">
+      <div class="brand">
+        <div class="brand-logo">TRUSTIA AI</div>
+        <div class="brand-sub">L4 ROBOTAXI ENTERPRISE MISSION CONTROL</div>
+      </div>
+      <div class="status-badges">
+        <div class="badge badge-blue"><span class="badge-dot"></span> SAIC MAXUS MIFA 7</div>
+        <div class="badge badge-green"><span class="badge-dot"></span> CAN-FD 500k/2M ACTIVE</div>
+        <div class="badge badge-green"><span class="badge-dot"></span> ASIL-D MRM: READY (12ms)</div>
+        <div class="badge badge-blue"><span class="badge-dot"></span> CALMCAR: 1oo2D ARBITRATED</div>
+        <div class="badge badge-purple"><span class="badge-dot"></span> KVKK m.9: EDGE SEALED</div>
+      </div>
+    </header>
+
+    <!-- Center Middle Panels -->
+    <div class="middle-layer">
+      <!-- Left Telemetry Panel -->
+      <aside class="panel interactive">
+        <div class="panel-title">
+          <span>ARAÇ DİNAMİĞİ & CAN-FD</span>
+          <span style="color:#10b981;">100 Hz</span>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <div class="metric-label">Hız (Velocity)</div>
+            <div class="metric-value" id="val-speed">32.4<span class="metric-unit">km/h</span></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Direksiyon Açısı</div>
+            <div class="metric-value" id="val-steer" style="color:#38bdf8;">+3.8<span class="metric-unit">°</span></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Yanal Sapma (CTE)</div>
+            <div class="metric-value" id="val-cte" style="color:#10b981;">2.8<span class="metric-unit">cm</span></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Batarya (% SoC)</div>
+            <div class="metric-value" id="val-bat" style="color:#f59e0b;">88<span class="metric-unit">%</span></div>
+          </div>
+        </div>
+
+        <div class="panel-title" style="margin-top:4px;">
+          <span>ISO 11898-1 CAN-FD CANLI AKIŞI</span>
+          <span id="can-tx-count" style="color:#94a3b8;">Tx: 0</span>
+        </div>
+        <div class="can-monitor" id="can-stream">
+          <!-- Live CAN-FD Frames populated by JS -->
+        </div>
+      </aside>
+
+      <!-- Right Perception & Arbiter Panel -->
+      <aside class="panel interactive">
+        <div class="panel-title">
+          <span>HESAI 3D LiDAR & ALGI HAKEMİ</span>
+          <span style="color:#06b6d4;">20 Hz</span>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric-card">
+            <div class="metric-label">Aktif Engel Sayısı</div>
+            <div class="metric-value" id="val-obs-count">3<span class="metric-unit">Adet</span></div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">En Yakın TTC</div>
+            <div class="metric-value" id="val-ttc" style="color:#10b981;">4.8<span class="metric-unit">s</span></div>
+          </div>
+        </div>
+
+        <div class="panel-title" style="margin-top:4px;">
+          <span>CALMCAR HORIZON J6 GÜVENLİK KORUMASI</span>
+        </div>
+        <div style="font-size:11px; color:#cbd5e1; line-height: 1.6; background:rgba(15,23,42,0.6); padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.05);">
+          <div>• <b>1oo2D Mimarisi:</b> E2E Model Doğrulaması Aktif</div>
+          <div>• <b>Halüsinasyon İzolasyonu:</b> 0 Hayalet Frenleme</div>
+          <div>• <b>KVKK m.9 Kalkanı:</b> Çin Bulut Senkronizasyonu Engellendi</div>
+          <div>• <b>Konumlandırma:</b> 400Hz ESKF (GPS-Denied Hazır)</div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Camera Switcher -->
+    <div class="cam-switcher interactive">
+      <button class="cam-btn active" id="btn-cam-chase" onclick="setCameraMode('chase')">Araç Takip (Chase)</button>
+      <button class="cam-btn" id="btn-cam-top" onclick="setCameraMode('top')">Kuşbakışı (BEV)</button>
+      <button class="cam-btn" id="btn-cam-free" onclick="setCameraMode('free')">Serbest 3D (Orbit)</button>
+    </div>
+
+    <!-- Bottom Action Bar -->
+    <footer class="bottom-bar interactive">
+      <div class="action-group">
+        <button class="btn-action btn-mode active-l4" id="btn-toggle-mode" onclick="toggleDriveMode()">
+          <span>SEVİYE-4 TAM OTONOM SÜRÜŞ AKTİF</span>
+        </button>
+        <button class="btn-action btn-estop" onclick="triggerEmergencyStop()">
+          <span>ASIL-D ACİL DURMA (MRM)</span>
+        </button>
+      </div>
+
+      <div class="trip-summary">
+        <div class="trip-item">
+          <span class="k">GÖREV / YOLCU</span>
+          <span class="v">Dr. Ali Onuralp Ünal (Ankara Bilkent)</span>
+        </div>
+        <div class="trip-item">
+          <span class="k">HEDEF VARİS</span>
+          <span class="v">Hacettepe Teknokent Kapalı Pist</span>
+        </div>
+        <div class="trip-item">
+          <span class="k">KALAN MESAFE</span>
+          <span class="v" id="val-distance">1.4 km</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- 3D Three.js Engine Script -->
+  <script>
+    // --- 3D Scene Initialization ---
+    const canvas = document.getElementById("canvas3d");
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.shadowMap.enabled = true;
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x06080e);
+    scene.fog = new THREE.FogExp2(0x06080e, 0.015);
+
+    // Camera
+    const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 12, -22);
+
+    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.maxPolarAngle = Math.PI / 2.05;
+
+    // Lights
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    scene.add(ambientLight);
+
+    const dirLight = new THREE.DirectionalLight(0x38bdf8, 1.2);
+    dirLight.position.set(20, 40, 20);
+    dirLight.castShadow = true;
+    scene.add(dirLight);
+
+    const hemiLight = new THREE.HemisphereLight(0x06b6d4, 0x0f172a, 0.5);
+    scene.add(hemiLight);
+
+    // --- Ground Grid & Road Surface ---
+    const gridHelper = new THREE.GridHelper(200, 50, 0x0284c7, 0x1e293b);
+    gridHelper.position.y = -0.02;
+    scene.add(gridHelper);
+
+    // Roadway with asphalt texture feel
+    const roadGeo = new THREE.PlaneGeometry(16, 250);
+    const roadMat = new THREE.MeshStandardMaterial({ color: 0x0f172a, roughness: 0.8 });
+    const road = new THREE.Mesh(roadGeo, roadMat);
+    road.rotation.x = -Math.PI / 2;
+    road.position.z = 50;
+    scene.add(road);
+
+    // Road Lane Markings
+    const laneMat = new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.6 });
+    for (let z = -50; z < 150; z += 10) {
+      const dashGeo = new THREE.PlaneGeometry(0.3, 5);
+      const dash = new THREE.Mesh(dashGeo, laneMat);
+      dash.rotation.x = -Math.PI / 2;
+      dash.position.set(0, 0.01, z);
+      scene.add(dash);
+    }
+
+    // --- 3D SAIC Maxus MIFA 7 Vehicle Model ---
+    const carGroup = new THREE.Group();
+    scene.add(carGroup);
+
+    // Vehicle Body (Maxus MIFA 7 dimensions: 4.9m L, 1.88m W, 1.76m H)
+    const bodyMat = new THREE.MeshStandardMaterial({ color: 0x0284c7, metalness: 0.7, roughness: 0.2 });
+    const bodyGeo = new THREE.BoxGeometry(1.88, 1.2, 4.9);
+    const carBody = new THREE.Mesh(bodyGeo, bodyMat);
+    carBody.position.y = 0.9;
+    carBody.castShadow = true;
+    carGroup.add(carBody);
+
+    // Cabin Glass
+    const glassMat = new THREE.MeshStandardMaterial({ color: 0x04060a, metalness: 0.9, roughness: 0.1, transparent: true, opacity: 0.85 });
+    const glassGeo = new THREE.BoxGeometry(1.75, 0.65, 3.2);
+    const cabin = new THREE.Mesh(glassGeo, glassMat);
+    cabin.position.set(0, 1.6, -0.2);
+    carGroup.add(cabin);
+
+    // Roof LiDAR Sensor Dome (Hesai Pandar64 / Ouster OS2)
+    const lidarDomeMat = new THREE.MeshStandardMaterial({ color: 0x06b6d4, emissive: 0x06b6d4, emissiveIntensity: 0.5 });
+    const lidarGeo = new THREE.CylinderGeometry(0.2, 0.2, 0.25, 16);
+    const lidarDome = new THREE.Mesh(lidarGeo, lidarDomeMat);
+    lidarDome.position.set(0, 2.05, 0.3);
+    carGroup.add(lidarDome);
+
+    // Headlights
+    const lightMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const hlLeft = new THREE.Mesh(new THREE.BoxGeometry(0.35, 0.12, 0.1), lightMat);
+    hlLeft.position.set(0.65, 0.85, 2.45);
+    carGroup.add(hlLeft);
+    const hlRight = hlLeft.clone();
+    hlRight.position.x = -0.65;
+    carGroup.add(hlRight);
+
+    // Brake Lights
+    const brakeMat = new THREE.MeshBasicMaterial({ color: 0xef4444 });
+    const bl = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.1, 0.1), brakeMat);
+    bl.position.set(0, 0.95, -2.45);
+    carGroup.add(bl);
+
+    // Wheels (4 Wheels)
+    const wheelMat = new THREE.MeshStandardMaterial({ color: 0x1e293b, roughness: 0.7 });
+    const wheelGeo = new THREE.CylinderGeometry(0.38, 0.38, 0.28, 20);
+    const wheels = [];
+    const wheelPos = [
+      [-0.85, 0.38, 1.48],  // Front Left (track: 1.615m / 2 = ~0.8m)
+      [0.85, 0.38, 1.48],   // Front Right
+      [-0.85, 0.38, -1.48], // Rear Left
+      [0.85, 0.38, -1.48],  // Rear Right
+    ];
+    wheelPos.forEach((pos, idx) => {
+      const w = new THREE.Mesh(wheelGeo, wheelMat);
+      w.rotation.z = Math.PI / 2;
+      w.position.set(pos[0], pos[1], pos[2]);
+      carGroup.add(w);
+      wheels.push(w);
+    });
+
+    // --- 3D LiDAR Point Cloud Waves (Expanding concentric rings) ---
+    const lidarRings = [];
+    for (let r = 2; r < 25; r += 2) {
+      const ringGeo = new THREE.RingGeometry(r, r + 0.08, 64);
+      const ringMat = new THREE.MeshBasicMaterial({
+        color: 0x06b6d4, transparent: true, opacity: Math.max(0.05, 0.5 - r * 0.02), side: THREE.DoubleSide
+      });
+      const ring = new THREE.Mesh(ringGeo, ringMat);
+      ring.rotation.x = -Math.PI / 2;
+      ring.position.y = 0.05;
+      carGroup.add(ring);
+      lidarRings.push(ring);
+    }
+
+    // --- 3D Planned Trajectory Ribbon (Quintic Spline) ---
+    const trajPoints = [];
+    for (let i = 0; i < 40; i++) {
+      const z = i * 2.5;
+      const x = Math.sin(i * 0.15) * 2.2;
+      trajPoints.push(new THREE.Vector3(x, 0.08, z));
+    }
+    const curve = new THREE.CatmullRomCurve3(trajPoints);
+    const trajGeo = new THREE.TubeGeometry(curve, 60, 0.2, 8, false);
+    const trajMat = new THREE.MeshBasicMaterial({ color: 0x38bdf8, transparent: true, opacity: 0.85 });
+    const trajMesh = new THREE.Mesh(trajGeo, trajMat);
+    scene.add(trajMesh);
+
+    // --- 3D Obstacle Bounding Boxes ---
+    const obstacles3D = [];
+    const obsData = [
+      { type: "VEHICLE (Sedan)", x: 3.2, z: 28, w: 1.8, h: 1.4, d: 4.5, color: 0xef4444 },
+      { type: "PEDESTRIAN", x: -2.8, z: 45, w: 0.8, h: 1.8, d: 0.8, color: 0xf59e0b },
+      { type: "CYCLIST", x: 3.5, z: 65, w: 0.8, h: 1.6, d: 1.8, color: 0x10b981 }
+    ];
+
+    obsData.forEach(obs => {
+      const boxGeo = new THREE.BoxGeometry(obs.w, obs.h, obs.d);
+      const boxMat = new THREE.MeshStandardMaterial({ color: obs.color, transparent: true, opacity: 0.35, wireframe: false });
+      const boxMesh = new THREE.Mesh(boxGeo, boxMat);
+      boxMesh.position.set(obs.x, obs.h / 2, obs.z);
+      scene.add(boxMesh);
+
+      // Wireframe outline
+      const edgeGeo = new THREE.EdgesGeometry(boxGeo);
+      const edgeMat = new THREE.LineBasicMaterial({ color: obs.color, linewidth: 2 });
+      const wireframe = new THREE.LineSegments(edgeGeo, edgeMat);
+      boxMesh.add(wireframe);
+
+      obstacles3D.push(boxMesh);
+    });
+
+    // --- Live CAN-FD Terminal Stream Generator ---
+    const canMonitor = document.getElementById("can-stream");
+    let frameSeq = 0;
+    const canTemplates = [
+      { id: "0x1A0", tag: "LKAS_STEER", len: "16B", desc: "EPS Angle: +3.8° | Rate: 42°/s" },
+      { id: "0x1A1", tag: "ACC_BRAKE", len: "16B", desc: "Torque: +145Nm | Decel: 0.0 m/s²" },
+      { id: "0x010", tag: "HEARTBEAT", len: "08B", desc: "ASIL-D Watchdog Heartbeat OK" },
+      { id: "0x386", tag: "WHL_SPEED", len: "16B", desc: "FL:32.4 FR:32.4 RL:32.3 RR:32.3" },
+      { id: "0x544", tag: "BMS_800V", len: "08B", desc: "SoC: 88.4% | Temp: 24.5°C | 90kWh" }
+    ];
+
+    function pushCanFrame() {
+      frameSeq++;
+      const item = canTemplates[frameSeq % canTemplates.length];
+      const row = document.createElement("div");
+      row.className = "can-row";
+      row.innerHTML = `<span class="can-id">${item.id}</span> <span class="can-tag">[${item.tag}]</span> <span class="can-data">${item.desc}</span>`;
+      canMonitor.appendChild(row);
+      if (canMonitor.children.length > 8) {
+        canMonitor.removeChild(canMonitor.firstChild);
+      }
+      canMonitor.scrollTop = canMonitor.scrollHeight;
+      document.getElementById("can-tx-count").innerText = `Tx: ${frameSeq * 10}`;
+    }
+    setInterval(pushCanFrame, 150);
+
+    // --- Camera Modes ---
+    let cameraMode = "chase";
+    function setCameraMode(mode) {
+      cameraMode = mode;
+      document.querySelectorAll(".cam-btn").forEach(b => b.classList.remove("active"));
+      if (mode === "chase") document.getElementById("btn-cam-chase").classList.add("active");
+      if (mode === "top") document.getElementById("btn-cam-top").classList.add("active");
+      if (mode === "free") document.getElementById("btn-cam-free").classList.add("active");
+    }
+
+    // --- Interactive Buttons ---
+    let isAutonomous = true;
+    function toggleDriveMode() {
+      isAutonomous = !isAutonomous;
+      const btn = document.getElementById("btn-toggle-mode");
+      if (isAutonomous) {
+        btn.innerHTML = "<span>SEVİYE-4 TAM OTONOM SÜRÜŞ AKTİF</span>";
+        btn.className = "btn-action btn-mode active-l4";
+      } else {
+        btn.innerHTML = "<span>MANUEL KONTROL (SÜRÜCÜ MÜDAHALESİ)</span>";
+        btn.className = "btn-action btn-mode";
+      }
+    }
+
+    function triggerEmergencyStop() {
+      isAutonomous = false;
+      alert("ASIL-D MINIMAL RISK MANEUVER (MRM) AKTİF!\nSAIC Maxus MIFA 7 6.5 m/s² ivmeyle güvenli durduruldu.");
+      const btn = document.getElementById("btn-toggle-mode");
+      btn.innerHTML = "<span>MRM GÜVENLİ DURMA MODU</span>";
+      btn.className = "btn-action btn-estop";
+    }
+
+    // --- 60 FPS Render & Simulation Loop ---
+    let simTime = 0;
+    function animate() {
+      requestAnimationFrame(animate);
+      simTime += 0.02;
+
+      if (isAutonomous) {
+        // Vehicle forward progress and curve tracking
+        const pathProg = (simTime * 4.0) % 75;
+        const targetX = Math.sin(pathProg * 0.06) * 2.2;
+        carGroup.position.z = pathProg - 20;
+        carGroup.position.x = targetX;
+
+        // Front Wheel Steering Angle Animation
+        const steerAngle = Math.cos(pathProg * 0.06) * 0.25;
+        wheels[0].rotation.y = steerAngle;
+        wheels[1].rotation.y = steerAngle;
+        carGroup.rotation.y = steerAngle * 0.6;
+
+        // Wheel Rotation
+        wheels.forEach(w => w.rotation.x += 0.15);
+
+        // Update Gauges
+        document.getElementById("val-speed").innerHTML = `${(32.4 + Math.sin(simTime)*1.5).toFixed(1)}<span class="metric-unit">km/h</span>`;
+        document.getElementById("val-steer").innerHTML = `${(steerAngle * (180/Math.PI)).toFixed(1)}<span class="metric-unit">°</span>`;
+        document.getElementById("val-cte").innerHTML = `${(Math.abs(steerAngle) * 8.5).toFixed(1)}<span class="metric-unit">cm</span>`;
+      }
+
+      // Camera view update
+      if (cameraMode === "chase") {
+        camera.position.x = carGroup.position.x;
+        camera.position.y = carGroup.position.y + 6.5;
+        camera.position.z = carGroup.position.z - 14;
+        controls.target.set(carGroup.position.x, carGroup.position.y + 1.2, carGroup.position.z + 8);
+      } else if (cameraMode === "top") {
+        camera.position.set(carGroup.position.x, 40, carGroup.position.z + 5);
+        controls.target.set(carGroup.position.x, 0, carGroup.position.z + 5);
+      }
+
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // Window Resize Handler
+    window.addEventListener("resize", () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
+</body>
+</html>

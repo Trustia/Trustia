@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trustia AI — Seviye-4 Otonom Sürüş Yönetici Brifingi</title>
+  <style>
+    :root {
+      --bg: #0b0e14;
+      --surface: #121721;
+      --surface-border: #232c3d;
+      --text-main: #f8fafc;
+      --text-secondary: #94a3b8;
+      --brand: #2563eb;
+      --brand-accent: #38bdf8;
+      --emerald: #10b981;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --code-font: "Consolas", "Monaco", monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-stack);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      height: 54px;
+      padding: 0 28px;
+      background: #080a0f;
+      border-bottom: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+    }
+
+    .header-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .slide-counter {
+      font-family: var(--code-font);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--brand-accent);
+      min-width: 75px;
+      text-align: right;
+    }
+
+    .btn-nav {
+      background: #1e293b;
+      color: #ffffff;
+      border: 1px solid #334155;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-nav:hover { background: #334155; }
+
+    .btn-fs {
+      background: transparent;
+      color: var(--brand-accent);
+      border: 1px solid #1e3a8a;
+      padding: 6px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    main {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 32px;
+    }
+
+    .slide-wrapper {
+      position: absolute;
+      width: 100%;
+      max-width: 1280px;
+      height: calc(100vh - 110px);
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      animation: fadeIn 0.2s ease-in-out;
+    }
+
+    .slide-wrapper.active { display: flex; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(3px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-header {
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--surface-border);
+      padding-bottom: 10px;
+    }
+
+    .slide-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--brand-accent);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .slide-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .slide-body {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-right: 4px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+
+    .card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+
+    ul.points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    ul.points li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 1.02rem;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+
+    ul.points li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--brand-accent);
+      font-weight: bold;
+    }
+
+    ul.points li strong { color: #ffffff; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .three-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+    }
+
+    .highlight {
+      border-left: 3px solid var(--brand-accent);
+      background: rgba(14, 165, 233, 0.06);
+      padding: 12px 16px;
+      font-size: 1.02rem;
+      color: #e0f2fe;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .highlight strong { color: #ffffff; }
+
+    table.simple-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      margin-top: 6px;
+    }
+
+    table.simple-table th, table.simple-table td {
+      border: 1px solid var(--surface-border);
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    table.simple-table th {
+      background: #0e131d;
+      color: #94a3b8;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    table.simple-table td {
+      background: rgba(18, 23, 33, 0.6);
+      color: #cbd5e1;
+    }
+
+    table.simple-table tr.total td {
+      background: #111a2e;
+      color: var(--emerald);
+      font-weight: 700;
+    }
+
+    .diagram-box {
+      background: #080a0f;
+      border: 1px solid var(--surface-border);
+      border-radius: 4px;
+      padding: 12px;
+      font-family: var(--code-font);
+      font-size: 0.82rem;
+      color: #38bdf8;
+      white-space: pre;
+      overflow-x: auto;
+      line-height: 1.35;
+    }
+
+    footer {
+      height: 36px;
+      padding: 0 28px;
+      background: #080a0f;
+      border-top: 1px solid var(--surface-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #64748b;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <div class="brand-title">TRUSTIA AI</div>
+      <div class="header-sub">SAIC Maxus MIFA 7 • Seviye-4 Otonom Filo Brifingi</div>
+    </div>
+    <div class="header-right">
+      <div class="slide-counter" id="counter">01 / 10</div>
+      <button class="btn-nav" onclick="prevSlide()">Geri</button>
+      <button class="btn-nav" onclick="nextSlide()">İleri</button>
+      <button class="btn-fs" onclick="toggleFullscreen()">Tam Ekran (F11)</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- SLAYT 1 -->
+    <div class="slide-wrapper active">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 01 • GİRİŞ VE HEDEF</div>
+        <h2 class="slide-title">Trustia AI: Yerli Seviye-4 Otonom Sürüş Güvenlik Sistemi</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card">
+          <h3>Ortak Hedefimiz</h3>
+          <p>Tripy Mobility'nin araç filosunu, <strong>SAIC Maxus MIFA 7</strong> elektrikli araçlarıyla Türkiye'nin ilk ticari <strong>Seviye-4 Robotaxi</strong> operasyonuna dönüştürmek; Sanayi Bakanlığı tip onayı alabilecek yerli otonom yazılım omurgasını kurmaktır.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Kurumsal Altyapı ve Mülkiyet</h3>
+            <ul class="points">
+              <li><strong>Avrupa Birliği Ortaklığı:</strong> AB EIT Kentsel Mobilite ağı partnerliği.</li>
+              <li><strong>Savunma Standartları:</strong> Kritik askeri sistemlerde kullanılan yüksek güvenlikli yazılım disiplini.</li>
+              <li><strong>%100 Yerli Mülkiyet:</strong> Geliştirilen tüm otonom sürüş algoritmaları ve araç bağlantı kodları şahsıma aittir.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Bugünkü Taahhüdümüz</h3>
+            <ul class="points">
+              <li><strong>Hazır Yazılım:</strong> Maxus MIFA 7 şasisine özel olarak hazırlanmış ve test edilmiş otonom sürüş yazılımı.</li>
+              <li><strong>95 Milisaniye Tepki Hızı:</strong> Aracın anlık tehlikelere insandan 3 kat daha hızlı tepki vermesi.</li>
+              <li><strong>60 Günde Pist Testi:</strong> Hacettepe Teknokent kapalı pistinde 60 günde tamamlanacak somut yol haritası.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 2 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 02 • SAHADAKİ KRİTİK İHTİYAÇ</div>
+        <h2 class="slide-title">Çin Menşeili Yazılım Riskleri ve Yeni Yasal Zorunluluklar</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card">
+          <h3>Mevcut Durum: Horizon J6P ve CalmCar Kamera Sistemi</h3>
+          <p>Araçlarımızda Çin menşeili CalmCar kamera sistemi bulunmaktadır. Bu sistem yolu iyi görür; ancak ticari yolcu taşımada tek başına kullanılması 3 büyük risk doğurur:</p>
+        </div>
+
+        <div class="three-col">
+          <div class="card">
+            <h3>1. Hayalet Frenleme Riski</h3>
+            <p>Kamera tabanlı yapay zeka; yoldaki bir gölgeyi veya poşeti duvar zannedip 70 km hızla giderken aniden sert fren yapabilir ve kazaya yol açabilir.</p>
+          </div>
+          <div class="card">
+            <h3>2. 1 Aralık 2024 Yönetmeliği</h3>
+            <p>Sanayi Bakanlığı'nın yeni mevzuatına göre; araçta bağımsız bir <strong>Güvenlik Denetçisi</strong> ve kazaları kaydeden <strong>Otonom Kara Kutusu</strong> yoksa ticari yolcu taşıma izni alınamaz.</p>
+          </div>
+          <div class="card">
+            <h3>3. Veri Güvenliği (KVKK)</h3>
+            <p>Çin yazılımlarının yolcu ve sokak görüntülerini Çin sunucularına aktarma riski vardır. Bu durum Türkiye'de ağır para cezası ve araçların bağlanması demektir.</p>
+          </div>
+        </div>
+
+        <div class="highlight">
+          <strong>Çözümümüz:</strong> CalmCar sistemini çöpe atmıyoruz; üzerine yerli <strong>Trustia Güvenlik Hakemi</strong>'ni kurarak aracı yasalara ve tam güvenliğe kavuşturuyoruz.
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 3 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 03 • ÇİFT GÜVENLİK SİSTEMİ</div>
+        <h2 class="slide-title">Trustia Çift Kontrollü Güvenlik Hakemi Mimarisi</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card">
+          <h3>Havacılık Standardında Çift Kanallı Güvenlik</h3>
+          <p>Uçaklarda olduğu gibi; kritik direksiyon ve fren kararları asla tek bir yapay zekaya bırakılmaz:</p>
+        </div>
+
+        <div class="diagram-box">
+  [KAMERALAR VE RADARLAR]                       [3D LAZER TARAYICI (LIDAR)]
+             |                                              |
+             v                                              v
++-----------------------------+               +-----------------------------+
+| 1. KANAL: CalmCar Kameralar |               | 2. KANAL: Trustia Denetçi   |
+| * Yolu ve şeritleri görür   |               | * 3D Lazer Harita Taraması  |
+| * Bir gidiş rotası önerir   |               | * Bağımsız Güvenlik Sınırı  |
++--------------+--------------+               +--------------+--------------+
+               \                                            /
+                \                                          /
+                 v                                        v
+        +---------------------------------------------------------+
+        |              TRUSTIA GÜVENLİK HAKEMİ                    |
+        | * İki sistemi birbiriyle karşılaştırır (0 Hata)         |
+        | * Kamera yanılsalar bile lazer doğrulamadıkça durdurmaz |
+        | * Bilgisayar donarsa 50 milisaniyede aracı güvenle durdurur |
+        | * Görüntüleri Türkiye sınırları içinde güvenle kilitler |
+        +----------------------------+----------------------------+
+                                     | (Onaylanmış Güvenli Komut)
+                                     v
+                  [MAXUS MIFA 7 DİREKSİYON VE FREN SİSTEMİ]
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Sıfır Hayalet Frenleme</h3>
+            <p>Kamera bir gölgeyi engel sansa bile, Trustia'nın lazer tarayıcısı yolu boş gördüğü sürece araca gereksiz panik fren yaptırılmaz.</p>
+          </div>
+          <div class="card">
+            <h3>Otomatik Güvenli Duruş</h3>
+            <p>Ana bilgisayarda bir kilitlenme olursa, sistem 50 milisaniyede durumu anlar; aracı şeridinde tutarak konforlu bir şekilde durdurur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 4 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 04 • ARAÇ DİNAMİĞİ</div>
+        <h2 class="slide-title">Maxus MIFA 7 Dinamiği ve 95 Milisaniye Tepki Hızı</h2>
+      </div>
+      <div class="slide-body">
+        <div class="two-col">
+          <div class="card">
+            <h3>Maxus MIFA 7 Şasi Özellikleri</h3>
+            <ul class="points">
+              <li><strong>Tekerlek Aralığı:</strong> 2.975 metre (Geniş gövdeli araç).</li>
+              <li><strong>Boş Ağırlık:</strong> 2.239 kg.</li>
+              <li><strong>Yol Takip Modeli:</strong> Geniş gövdenin yüksek hızda şeritte sağa sola gezinmesini engelleyen özel matematiksel denge modeli.</li>
+              <li><strong>Yolcu Konforu:</strong> Virajlarda yolcuyu sarsmayan yumuşak direksiyon geçişleri.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>95 Milisaniye Anlık Tepki Süresi</h3>
+            <p>50 km hızla giden bir araç saniyede 14 metre yol alır. Güvenlik için kararın 100 milisaniyenin altında verilmesi şarttır:</p>
+            <table class="simple-table">
+              <tr><td>1. Lazer Taraması ve Harita Eşleme</td><td>28 ms</td></tr>
+              <tr><td>2. Kameraların Yolu Tanıması</td><td>32 ms</td></tr>
+              <tr><td>3. Trustia Güvenlik Hakemi Onayı</td><td>15 ms</td></tr>
+              <tr><td>4. Direksiyon ve Fren Hesabı</td><td>5 ms</td></tr>
+              <tr><td>5. Tekerleğe Komutun Ulaşması</td><td>15 ms</td></tr>
+              <tr class="total"><td>TOPLAM TEPKİ SÜRESİ</td><td>95 ms (Göz kırpmasından hızlı)</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 5 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 05 • ŞASİ VE GÜVENLİK</div>
+        <h2 class="slide-title">Şasi Haberleşmesi ve Anında Sürücü Kontrolü</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card">
+          <h3>Aracın Kendi Beyniyle Doğrudan İletişim (CAN-FD)</h3>
+          <p>Yazılımımız aracın orijinal elektrik hattına bağlanarak doğrudan ve şifreli komut gönderir:</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Gönderilen Temel Komutlar</h3>
+            <ul class="points">
+              <li><strong>Direksiyon Komutu:</strong> Milimetrik açı ve tork kontrolü (Saniyede 100 kez).</li>
+              <li><strong>Fren ve Gaz Komutu:</strong> Yumuşak duruş ve kalkış ayarı (Saniyede 50 kez).</li>
+              <li><strong>Kalp Atışı Sinyali:</strong> Sistemin canlı olduğunu araca bildiren güvenlik sinyali.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Sürücünün Direksiyonu Devralması</h3>
+            <div class="highlight" style="margin-bottom: 8px;">
+              <strong>Anında Manuel Kontrol:</strong> Güvenlik sürücüsü direksiyona hafifçe (3.5 Nm) dokunduğu anda sistem <strong>10 milisaniyede</strong> otonom modu kapatır ve kontrolü insana devreder.
+            </div>
+            <p>Bu özellik; Birleşmiş Milletler ve Türkiye otonom güvenlik yönetmeliklerinin zorunlu kıldığı en temel emniyet şartıdır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 6 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 06 • KESİNTİSİZ KONUM</div>
+        <h2 class="slide-title">Tünellerde ve Binalar Arasında Kesintisiz Yol Alma</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card">
+          <h3>GPS Kesintisi Problemi</h3>
+          <p>Ankara'da Kızılay'da yüksek binaların arasında, alt geçitlerde veya kapalı otoparklarda uydu (GPS) sinyali kaybolur. Sadece uyduya güvenen bir araç tünelde yolu şaşırır.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Çözüm: 3D Lazer ve Hareket Sensörleri</h3>
+            <ul class="points">
+              <li><strong>Lazer Taraması:</strong> Araç çevredeki binaları ve direkleri haritayla saniyede 10 kez eşleştirir.</li>
+              <li><strong>Hareket Sensörleri:</strong> Tekerleklerin dönüşünü saniyede 400 kez ölçerek santimetrik hesap yapar.</li>
+              <li><strong>Sonuç:</strong> Uydu sinyali tamamen kopsa bile araç 1 dakika boyunca şeridinden milim sapmaz.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Saha Testi Başarımı</h3>
+            <div class="highlight">
+              <strong>Ölçülen Sapma:</strong> 60 saniye boyunca sıfır GPS sinyaliyle gidildiğinde toplam şerit sapması <strong>4.2 santimetrenin</strong> altındadır.
+            </div>
+            <p style="margin-top: 8px;">Konum hatası 15 santimi geçerse araç hızını otomatik 30 km'ye düşürür; 30 santimi geçerse kenara çekip durur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 7 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 07 • YASAL UYUMLULUK</div>
+        <h2 class="slide-title">1 Aralık 2024 Yönetmeliği ve Uluslararası Standartlar</h2>
+      </div>
+      <div class="slide-body">
+        <div class="three-col">
+          <div class="card">
+            <h3>1. Türkiye Mevzuatı</h3>
+            <p><strong>Sanayi Bakanlığı Tip Onayı:</strong></p>
+            <ul class="points">
+              <li><strong>Otonom Kara Kutusu:</strong> Aracın her hareketini yerel hafızada şifreli saklar.</li>
+              <li><strong>Yazılım Kimliği:</strong> Bakanlığın denetleyebileceği resmi yazılım onay numarası.</li>
+              <li><strong>Veri Kalkanı:</strong> Yolcu görüntüleri Türkiye dışına çıkamaz.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>2. PAVE Europe Uyumu</h3>
+            <p><strong>Tripy'nin Avrupa Üyeliği:</strong></p>
+            <ul class="points">
+              <li>Waymo ve Mobileye gibi dünya devleriyle aynı güvenlik raporlama standartları.</li>
+              <li>Halka ve denetçilere güven veren şeffaf güvenlik kayıtları.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>3. İngiltere / Londra</h3>
+            <p><strong>Londra Ulaşım İdaresi (TfL):</strong></p>
+            <ul class="points">
+              <li>İngiltere Otonom Araçlar Yasası'na uygun bağımsız denetim altyapısı.</li>
+              <li>Tripy'nin Londra'da otonom taksi lisansı almasını kolaylaştıran hazır yapı.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 8 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 08 • STRATEJİK İŞ BİRLİĞİ</div>
+        <h2 class="slide-title">Savunma Sanayii Standartları ve İhracat Gücü</h2>
+      </div>
+      <div class="slide-body">
+        <div class="card">
+          <h3>MİA Teknoloji Katar Anlaşması (Barzan Holdings)</h3>
+          <p>MİA Teknoloji, 28 Eylül'de Katar Savunma Bakanlığı iştiraki Barzan Holdings ile önemli bir güvenlik ve sınır koruma anlaşması imzalamıştır. Askeri tesislerde ve güvenlik araçlarında Çin menşeili yazılımların kullanılması ambargolar nedeniyle yasaktır.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h3>Savunma Seviyesinde Yerli Yazılım</h3>
+            <ul class="points">
+              <li>Trustia otonom yazılım çekirdeği, savunma sanayii ve güvenlik kurumlarının katı siber güvenlik kriterlerine göre geliştirilmiştir.</li>
+              <li>Maxus MIFA 7 için hazırladığımız otonom kontrol sistemi, insansız kara araçlarıyla aynı güçlü matematiği paylaşır.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>MİA Teknoloji İçin Çok Boyutlu Değer</h3>
+            <ul class="points">
+              <li><strong>Sivil Filo:</strong> Tripy Robotaxi filosu yabancı yazılım bağımlılığından ve yasal cezalardan kurtulur.</li>
+              <li><strong>İhracat Gücü:</strong> MİA Teknoloji, Katar ve Körfez ülkelerine satacağı otonom güvenlik araçlarında yerli yazılım kullanarak rakiplerinin önüne geçer.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 9 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 09 • PİST TESTİ PLANI</div>
+        <h2 class="slide-title">60 Günlük Hacettepe Teknokent Pist Yol Haritası</h2>
+      </div>
+      <div class="slide-body">
+        <div class="three-col">
+          <div class="card">
+            <h3>1. AŞAMA: Laboratuvar ve Şasi</h3>
+            <p><strong>1 - 15. Gün:</strong></p>
+            <ul class="points">
+              <li>Araç dururken elektrik hatlarının ve sinyallerin kontrolü.</li>
+              <li>Direksiyon ve fren komutlarının simülatörle denenmesi.</li>
+              <li>Sürücünün direksiyona dokununca devralma testleri.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>2. AŞAMA: Kapalı Pist 30 km/s</h3>
+            <p><strong>16 - 35. Gün:</strong></p>
+            <ul class="points">
+              <li>Hacettepe pistinde 30 km hızla kendi kendine şerit takibi.</li>
+              <li>Gölge ve yalancı engellerde gereksiz fren yapmama testi.</li>
+              <li>Tünel ve köprü altı GPS karartma denemeleri.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>3. AŞAMA: Yönetim Sürüşü</h3>
+            <p><strong>36 - 60. Gün:</strong></p>
+            <ul class="points">
+              <li>50 km hızda hareketli manken önünde acil duruş testi.</li>
+              <li>Tripy telefon uygulamasından araç çağırma bağlantısı.</li>
+              <li><strong>60. Gün:</strong> Yönetim Kurulu'na Hacettepe'de canlı sürücüsüz gösterim.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLAYT 10 -->
+    <div class="slide-wrapper">
+      <div class="slide-header">
+        <div class="slide-category">SLAYT 10 • TİCARİ TEKLİF</div>
+        <h2 class="slide-title">Ortaklık Modeli, Değerleme ve Şartname</h2>
+      </div>
+      <div class="slide-body">
+        <div class="two-col">
+          <div class="card">
+            <h3>Şirket Değerlemesi ve Yatırım Talebi</h3>
+            <ul class="points">
+              <li><strong>Şirket Değerlemesi:</strong> 2.5 – 3.0 Milyon Dolar</li>
+              <li><strong>Yatırım Talebi:</strong> <strong>15 – 20 Milyon TL Peşin Nakit</strong></li>
+              <li><strong>Verilecek Pay:</strong> <strong>%15 – %20 Azınlık Hissesi</strong> (Trustia AI)</li>
+              <li><strong>Finansal Gerçek:</strong> Bu rakam, MİA Teknoloji'nin kasasındaki 501 Milyon TL nakdin yalnızca <strong>%3.5'idir.</strong></li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Filo Lisansı ve Fikri Mülkiyet</h3>
+            <ul class="points">
+              <li><strong>Araç Başına Aylık Lisans:</strong> 350 – 500 Dolar (Sürekli harita güncellemesi, yazılım desteği ve bakım).</li>
+              <li><strong>Fikri Mülkiyet Korunumu:</strong> Ana kaynak kodlar kurucuda kalır; Tripy'ye tam kullanım lisansı ve hazır program kütüphaneleri verilir.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="highlight" style="text-align: center; padding: 14px;">
+          <strong>Sonuç:</strong> Türkiye'nin ilk Seviye-4 ticari Robotaxisini 60 günde sahaya çıkarmak için yazılımımız, testlerimiz ve ekibimiz hazırdır. Teşekkür ederiz.
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>TRUSTIA ARTIFICIAL INTELLIGENCE TECHNOLOGIES • SAIC MAXUS MIFA 7 ROBOTAXI BRİFİNGİ</div>
+    <div>Klavye: [← Geri] [→ İleri] [F11 Tam Ekran]</div>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slide-wrapper');
+    const counter = document.getElementById('counter');
+
+    function updateSlide(index) {
+      if (index < 0) index = 0;
+      if (index >= slides.length) index = slides.length - 1;
+      slides[currentIndex].classList.remove('active');
+      currentIndex = index;
+      slides[currentIndex].classList.add('active');
+      const num = String(currentIndex + 1).padStart(2, '0');
+      const total = String(slides.length).padStart(2, '0');
+      counter.textContent = `${num} / ${total}`;
+    }
+
+    function nextSlide() { updateSlide(currentIndex + 1); }
+    function prevSlide() { updateSlide(currentIndex - 1); }
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => console.error(err));
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        nextSlide();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        prevSlide();
+      }
+    });
+  </script>
+</body>
+</html>

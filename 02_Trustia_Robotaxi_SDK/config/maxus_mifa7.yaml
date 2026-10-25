@@ -1,0 +1,72 @@
+# ==============================================================================
+# TRUSTIA SEVİYE-4 ROBOTAKSİ KURUMSAL YAZILIM SDK (v2.4-ENTERPRISE)
+# ARAÇ YAPILANDIRMA DOSYASI — SAIC MAXUS MIFA 7 ELEKTRİKLİ MPV PLATFORMU
+# Standart: ISO 26262 ASIL-D & UN/ECE R157 / Türkiye YOAK Yönetmeliği Uyumlu
+# ==============================================================================
+
+vehicle:
+  name: "Tripy SAIC Maxus MIFA 7 Autonomous Robotaxi"
+  platform_id: "TRIPY-MIFA7-L4-001"
+  vehicle_type: "PASSENGER_EV_MPV"
+  wheel_base_m: 2.975             # SAIC Maxus MIFA 7 dingil mesafesi (mm -> m)
+  front_track_width_m: 1.615      # Ön iz genişliği (Fabrika el kitabı)
+  rear_track_width_m: 1.630       # Arka iz genişliği (Fabrika el kitabı)
+  track_width_m: 1.622            # Ortalama iz genişliği
+  length_m: 4.907                 # Araç toplam uzunluğu
+  width_m: 1.885                  # Araç toplam genişliği (aynalar hariç)
+  height_m: 1.768                 # Araç toplam yüksekliği (tavan rayı dahil)
+  curb_weight_kg: 2239.0          # 90 kWh batarya boş ağırlığı
+  gross_vehicle_mass_kg: 2856.0   # Azami yüklü ağırlık (GVM)
+  max_steering_angle_deg: 35.0    # Maksimum direksiyon mekanik açısı (+/- deg)
+  max_steering_rate_deg_s: 180.0  # Maksimum direksiyon dönüş açısal hızı
+  max_speed_kmh: 50.0             # Şehir içi yasal robotaksi tavan hızı
+  max_acceleration_mps2: 2.0      # Yolcu konforu ivmelenme sınırı (ISO 15622)
+  max_deceleration_mps2: 3.5      # Normal frenleme yavaşlama sınırı
+  emergency_deceleration_mps2: 6.5 # ASIL-D Acil Durum MRM frenleme ivmesi
+
+can_bus:
+  interface: "socketcan"          # Linux socketcan / Peak PCAN / Kvaser
+  channel: "can0"
+  protocol: "CAN-FD"              # ISO 11898-1:2015 CAN-FD Yüksek Hızlı Veri Yolu
+  arbitration_bitrate: 500000     # 500 kbps (Klasik CAN kimlik arbitrajı)
+  data_bitrate: 2000000           # 2 Mbps - 5 Mbps (Yüksek hızlı yük aktarımı)
+  fd_padding: true
+  heartbeat_interval_ms: 20       # 50 Hz güvenlik gözetim frekansı
+
+calmcar_gateway:
+  soc_platform: "Horizon Robotics Journey 6P (560 TOPS Nash BPU)"
+  safety_soc: "Infineon AURIX TC397 / TC4xx (ASIL-D)"
+  perception_input: "CalmDrive 3.0 End-to-End Multimodal VLA"
+  redundancy_architecture: "1oo2D Heterogeneous Cross-Checking"
+  deterministic_arbiter_enabled: true  # Trustia deterministik güvenlik filtresi aktif
+  edge_sealing_data_firewall: true     # KVKK m.9 & CB Bilgi Güvenliği sızıntı kalkanı
+  allowed_telemetry_endpoint: "api.tripy.im / tr-cloud"
+  block_foreign_cloud_sync: true       # CalmForge Çin bulut senkronizasyonunu engelle
+
+sensors:
+  lidar_primary:
+    model: "Hesai Pandar64 / Ouster OS2-128"
+    ip: "192.168.1.201"
+    port: 2368
+    fov_deg: 360.0
+    scan_rate_hz: 20
+    mount_position_m: [1.85, 0.0, 1.88] # Tavana montaj [x_ileri, y_sol, z_yukari]
+  lidar_solid_state_fl:
+    model: "Livox Mid-360"
+    ip: "192.168.1.202"
+    mount_position_m: [2.35, 0.75, 0.65] # Ön sol tampon kör nokta sensörü
+  lidar_solid_state_fr:
+    model: "Livox Mid-360"
+    ip: "192.168.1.203"
+    mount_position_m: [2.35, -0.75, 0.65] # Ön sağ tampon kör nokta sensörü
+  gnss_ins:
+    model: "RTK-GNSS Dual-Antenna + 6-DOF IMU"
+    rate_hz: 100
+    fallback_to_ndt_slam: true   # Tünel/yeraltı otoparkında SLAM'e pürüzsüz geçiş
+
+safety:
+  asil_level: "ASIL-D"
+  watchdog_timeout_ms: 50         # 50 milisaniye içinde yanıt gelmezse MRM tetikle
+  mrm_safe_stop_enabled: true     # Güvenli durma / emniyetli şerit kenarı çekilme
+  cross_track_error_threshold_m: 0.35 # 35 cm'den fazla hat payında otonomi uyarısı
+  obstacle_clearance_safety_margin_m: 1.2 # Şehir içi engel güvenlik çemberi
