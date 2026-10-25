@@ -11,7 +11,7 @@ Bu dizin; şirketin kurumsal tescil belgelerini, patent savunma paktı sözleşm
 ```text
 Kurumsal/
 ├── Belgeler/      ← Resmi Devlet Tescilleri, OIN Lisans Sözleşmesi, Tedarikçi Belgeleri
-├── Sunumlar/      ← Yatırımcı Pitch Deck'leri, Finansal Model, Ioniq 5 Planı ve Özgeçmişler
+├── Sunumlar/      ← Yatırımcı Pitch Deck'leri (TR/EN), Ioniq 5 Otonomi Planları ve Özgeçmişler
 ├── Basvurular/    ← EIT Urban Mobility, Teknopark İstanbul HASAT, KOSGEB Başvuru Kütükleri
 └── Medya/         ← Banner.jpg, Logo.png, Tanıtım Filmleri ve Kurumsal Videolar
 ```
