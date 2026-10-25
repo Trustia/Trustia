@@ -34,12 +34,12 @@ const translations: Record<Language, Record<string, string>> = {
     nav_contact: "İLETİŞİM",
 
     // Hero Section
-    hero_badge: "MİLLİ ÇİFT AMAÇLI OTONOMİ PLATFORMU",
-    hero_title_1: "Sivil ve Savunma Platformları İçin",
-    hero_title_2: "Seviye 4 Yerli Otonomi",
-    hero_desc: "Şehir içi Robotaksi filoları ve GPS olmayan harekat sahalarındaki İnsansız Savunma Robotları için tam bağımsız yerli otonomi yazılımı.",
-    hero_btn_explore: "ÇÖZÜMLERİ İNCELE",
-    hero_btn_demo: "DEMO TALEP ET",
+    hero_badge: "// C++20 & ROS 2 • DETERMINISTIC AUTONOMY CORE",
+    hero_title_1: "Ticari Filolar ve Savunma Platformları İçin",
+    hero_title_2: "Seviye 4 Otonom Sürüş Mimarisi",
+    hero_desc: "128 kanallı 3D LiDAR ve 77GHz radar füzyonunu 100 Hz CAN-FD aktüatör köprüsüyle birleştiren; şehir içi koridorlarda ve GPS'siz harekat sahalarında çalışan bağımsız otonomi çekirdeği.",
+    hero_btn_explore: "MİMARİYİ İNCELE →",
+    hero_btn_demo: "ŞARTNAME TALEP ET",
     hero_sound_mute: "Sessiz",
     hero_sound_unmute: "Ses Açık",
 
@@ -146,12 +146,12 @@ const translations: Record<Language, Record<string, string>> = {
     nav_contact: "CONTACT",
 
     // Hero Section
-    hero_badge: "SOVEREIGN AUTONOMOUS SYSTEMS",
-    hero_title_1: "For Driverless Cities & Defense",
-    hero_title_2: "Level 4 Sovereign Autonomy",
-    hero_desc: "Trustia AI develops high-reliability Level-4 autonomous driving software for urban Robotaxi fleets and GPS-denied tactical Unmanned Ground Vehicles.",
-    hero_btn_explore: "EXPLORE SOLUTIONS",
-    hero_btn_demo: "REQUEST DEMO",
+    hero_badge: "// C++20 & ROS 2 • DETERMINISTIC AUTONOMY CORE",
+    hero_title_1: "For Commercial Fleets & Defense Platforms",
+    hero_title_2: "Level 4 Autonomous Driving Architecture",
+    hero_desc: "Fusing 128-channel 3D LiDAR and 77GHz radar across a 100 Hz synchronous CAN-FD actuation bridge; sovereign autonomy stack engineered for urban ODD and GNSS-denied theaters.",
+    hero_btn_explore: "EXPLORE ARCHITECTURE →",
+    hero_btn_demo: "REQUEST SPECIFICATIONS",
     hero_sound_mute: "Muted",
     hero_sound_unmute: "Audio On",
 
