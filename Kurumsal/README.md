@@ -13,7 +13,7 @@ Kurumsal/
 ├── Belgeler/      ← Resmi Devlet Tescilleri, OIN Lisans Sözleşmesi, Tedarikçi Belgeleri
 ├── Sunumlar/      ← ASELSAN Sunumu, Pitch Deck'ler, Mühendislik Portalları, BOM Listeleri
 ├── Basvurular/    ← EIT Urban Mobility, Teknopark İstanbul HASAT, KOSGEB Başvuru Kütükleri
-└── Medya/         ← Banner.jpg, Logo.png, Fuar Tanıtım Ekranları ve Kurumsal Videolar
+└── Medya/         ← Banner.jpg, Logo.png, Tanıtım Filmleri ve Kurumsal Videolar
 ```
 
 ---
