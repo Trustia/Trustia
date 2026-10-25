@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import HeroVideo from "@/components/HeroVideo";
 import RobotaxiShowcase from "@/components/RobotaxiShowcase";
-import GalleryShowcase from "@/components/GalleryShowcase";
 import SupportedPlatformsShowcase from "@/components/SupportedPlatformsShowcase";
 import FeatureVideo from "@/components/FeatureVideo";
 import TechMatrixShowcase from "@/components/TechMatrixShowcase";
@@ -59,19 +58,16 @@ export default function Home() {
       {/* Sovereign Level 4 Robotaxi Platform Showcase (Hyundai Ioniq 5 E-GMP) */}
       <RobotaxiShowcase />
 
-      {/* 5. 5 Real Photos Gallery Showcase */}
-      <GalleryShowcase />
-
       {/* 4. Supported Vehicles & Integration Platforms Matrix */}
       <SupportedPlatformsShowcase />
 
       {/* 5. Pure Panoramic Cinematic Video Strip */}
       <FeatureVideo />
 
-      {/* 5. Complete 6-Grid Executive Defense Tech Matrix (SLAM, Hybrid A*, EYP/CBRN, Swarm, HMAC-SHA256, ROS 2) */}
+      {/* 6. Complete Executive Defense & Automotive Tech Matrix */}
       <TechMatrixShowcase />
 
-      {/* 6. Comprehensive Corporate Footer */}
+      {/* 7. Comprehensive Corporate Footer */}
       <Footer />
     </main>
   );
