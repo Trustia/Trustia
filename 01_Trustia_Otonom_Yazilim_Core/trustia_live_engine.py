@@ -540,7 +540,7 @@ def run_server(host: str = "0.0.0.0", port: int = 8090) -> None:
     
     print("=" * 72)
     print("        TRUSTIA AI — SEVIYE-4 OTONOM SÜRÜŞ ÇEKİRDEK MOTORU")
-    print("       16.000+ Satır Kod Tabanı & 1.301 Birim Test Entegrasyonu")
+    print("       16.400+ Satır Kod Tabanı & 1.307 Birim Test Entegrasyonu")
     print("=" * 72)
     print(f"[*] Otonomi Motoru Başlatılıyor... (Algı + SLAM + A* + PID + ASIL-D)")
     engine.start()

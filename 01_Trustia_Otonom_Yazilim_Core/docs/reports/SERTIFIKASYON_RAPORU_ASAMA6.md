@@ -1,4 +1,4 @@
-# TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
+﻿# TRUSTIA SERTİFİKASYON UYGUNLUK RAPORU — AŞAMA 6
 
 - **Tarih:** 2026-10-11
 - **Depo:** C:\Users\Asus\Desktop\Trustia\01_Trustia_Otonom_Yazilim_Core
@@ -29,7 +29,7 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 | Şart | Kanıt | Durum |
 |---|---|---|
 | %100 yerli yazılım (TÜR) | 3. taraf bağımlılık yok, saf Python | SAĞLANDI |
-| 1.000+ otomatik test (Sistem 7) | pytest koleksiyon sayısı (1.301 yeşil test) | SAĞLANDI |
+| 1.000+ otomatik test (Sistem 7) | pytest koleksiyon sayısı (1.307 yeşil test) | SAĞLANDI |
 | JAUS/STANAG uyumu (AS6009/6091) | integration/jaus.py | SAĞLANDI |
 | Acil durma / güvenli durma (ISO 26262 ASIL-D) | security/estop.py + security/linkloss.py | SAĞLANDI |
 | Denetim izi (kim-ne-zaman) | security/audit.py | SAĞLANDI |
@@ -56,3 +56,4 @@ Kullanılan standart modüller: __future__, abc, argparse, ast, collections, con
 Teknik şartlarda 11/11 sağlandı. Eksikler başvuru öncesi giderilir.
 
 Bu rapor, PLAN.md Bölüm 2.2 tablosundaki belgelerin her biri için kanıt girişidir.
+

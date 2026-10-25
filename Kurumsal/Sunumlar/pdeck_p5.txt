@@ -1,5 +1,5 @@
-04 / Test Mimarisi ve Doğrulama Durumu
-CARLA & GAZEBO DİJİTAL İKİZİNDE 1.301 OTOMATİK TEST
+﻿04 / Test Mimarisi ve Doğrulama Durumu
+CARLA & GAZEBO DİJİTAL İKİZİNDE 1.307 OTOMATİK TEST
 Alt Sistem / Test Paketi
 Test
 Sayısı
@@ -54,7 +54,7 @@ Döngüsü
 %100
 GEÇTİ
 Şeffaf Doğrulama Durumu: Saha Entegrasyonuna Hazır
-1.301 testin tamamı CARLA ve Gazebo dijital ikiz simülasyon ortamında ve CI/CD
+1.307 testin tamamı CARLA ve Gazebo dijital ikiz simülasyon ortamında ve CI/CD
 pipeline'ında eksiksiz doğrulanmıştır. Fiziksel pist testleri için kod ve donanım
 şartnameleri eksiksiz teslim edilecektir.
 ISO 26262 ASIL-D Emniyet Koruması
@@ -69,3 +69,4 @@ devresinin devreye girmesi.
 Asgari Risk Manevrası (MRM): Sensör körleşmesinde aracı güvenli şeritte
 durdurma.
 ■
+

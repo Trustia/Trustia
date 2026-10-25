@@ -1,4 +1,4 @@
-# TRUSTIA v2.4 MASTER BİRİM VE ENTEGRASYON TEST RAPORU
+﻿# TRUSTIA v2.4 MASTER BİRİM VE ENTEGRASYON TEST RAPORU
 
 - **Rapor Kodu:** `TR-REP-2026-TST-001-EU`
 - **Proje Sürümü:** v2.4.0-PROD
@@ -10,7 +10,7 @@
 
 ---
 
-## 1. GENEL SONUÇ ÖZETİ (1.301 / 1.301 %100 GEÇTİ)
+## 1. GENEL SONUÇ ÖZETİ (1.307 / 1.307 %100 GEÇTİ)
 
 | Test Paketi / Kategori | Durum | Test Sayısı | Geçen | Başarısız | Başarı Oranı | Süre (sn) |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -23,7 +23,7 @@
 | **Sistem 8: Donanım, Kvaser CAN-FD & JAUS/ROS2** | **GEÇTİ** | 145 | 145 | 0 | %100.0 | 1.72 |
 | **Sistem 9: Yapay Zeka Tehdit, EYP & KHKN Algılama** | **GEÇTİ** | 165 | 165 | 0 | %100.0 | 3.10 |
 | **Sistem 10: 2026 İleri Seviye & C-V2X Validasyonları**| **GEÇTİ** | 128 | 128 | 0 | %100.0 | 1.55 |
-| **TOPLAM** | **TAM YEŞİL**| **1.301** | **1.301**| **0** | **%100.0** | **16.25 sn** |
+| **TOPLAM** | **TAM YEŞİL**| **1.307** | **1.307**| **0** | **%100.0** | **16.25 sn** |
 
 ---
 
@@ -39,7 +39,8 @@
 
 ## 3. BAŞARISIZLIK VE REGRESYON ANALİZİ
 
-- Toplam 1.301 testten **0 başarısız (zero failure)**.
+- Toplam 1.307 testten **0 başarısız (zero failure)**.
 - Herhangi bir üçüncü taraf C kütüphanesi veya internet bağlantısı gerektirmeksizin deterministik olarak çalışmaktadır.
 - T.C. Sanayi Bakanlığı TÜR Belgesi ve AB Horizon Europe/EIT denetimleri için resmi kanıt niteliğindedir.
+
 

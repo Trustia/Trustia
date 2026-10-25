@@ -1,4 +1,4 @@
-# 🌍 KAPSAMLI YERLİ VE YABANCI İKA & ROBOTAKSİ OTONOMİ ARAŞTIRMA RAPORU (2026)
+﻿# 🌍 KAPSAMLI YERLİ VE YABANCI İKA & ROBOTAKSİ OTONOMİ ARAŞTIRMA RAPORU (2026)
 
 **Araştırma & Güncelleme Tarihi:** 13 Eylül 2026  
 **Sürüm:** v2.4.0-PROD  
@@ -44,11 +44,12 @@
 | **Haberleşme Standardı** | SAE AS6091 (JAUS) / ROS 2 | ADVENT / Standart CAN | **SAE JAUS + ROS 2 + C-V2X Telemetri Sunucusu** |
 | **Tehdit Yönetimi** | Mayın / EYP Karantinası | Sensör İhbarı | **Yapay Zeka EYP + KHKN Gaz/Radyasyon İzolasyonu** |
 | **Fonksiyonel Güvenlik**| ISO 26262 ASIL-D | Kısmi Donanım E-Stop | **ASIL-D MRM (<5ms) + Şifreli HMAC-SHA256 Audit** |
-| **Test Doğrulaması** | Yüksek Kapsama | Prototip Doğrulama | **1.301 / 1.301 Otomatik Birim & Entegrasyon Testi** |
+| **Test Doğrulaması** | Yüksek Kapsama | Prototip Doğrulama | **1.307 / 1.307 Otomatik Birim & Entegrasyon Testi** |
 
 ---
 
 ## 4. DEĞERLENDİRME VE GELECEK VİZYONU
 
 Araştırmalar açıkça göstermektedir ki; **TRUSTIA v2.4**, hem Türkiye'deki HAVELSAN BARKAN / BAYKAR / ASELSAN çizgisindeki milli savunma vizyonunu, hem de DARPA RACER ve ABD Ordusu'nun "Vehicle-Agnostic" konseptini ve sivil Seviye-4 robotaksi gereksinimlerini tek bir deterministik kod tabanında başarıyla birleştiren küresel kalibrede bir teknoloji varlığıdır.
+
 

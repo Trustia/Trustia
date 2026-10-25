@@ -1,4 +1,4 @@
-# 🚜 TRUSTIA v2.4 — SEVİYE-4 TİCARİ VE ROBOTAKSİ SAHA TEST PROTOKOLÜ
+﻿# 🚜 TRUSTIA v2.4 — SEVİYE-4 TİCARİ VE ROBOTAKSİ SAHA TEST PROTOKOLÜ
 ## (Field Testing & Proving Ground Validation Protocol)
 
 **Doküman Kodu:** `TR-DOC-2026-VAL-04`  
@@ -14,7 +14,7 @@
 
 Bu protokol, Trustia Seviye-4 otonomi yazılım çekirdeğinin **Hyundai Ioniq 5 E-GMP Otonom Robotaksi**, elektrikli servis minibüsleri ve endüstriyel lojistik taşıtları üzerinde icra edeceği fiziksel kapalı pist ve yarı açık saha testlerinin güvenlik, kalibrasyon ve doğrulama süreçlerini düzenler.
 
-Yazılım, **1.301 / 1.301 otomatik testten (%100 Başarı)** geçmiş olup; fiziksel pist aşamasında ISO 26262 ASIL-D fonksiyonel güvenlik ve SAE J3016 Seviye-4 otonom emniyet normlarını eksiksiz karşılamakla yükümlüdür.
+Yazılım, **1.307 / 1.307 otomatik testten (%100 Başarı)** geçmiş olup; fiziksel pist aşamasında ISO 26262 ASIL-D fonksiyonel güvenlik ve SAE J3016 Seviye-4 otonom emniyet normlarını eksiksiz karşılamakla yükümlüdür.
 
 ---
 
@@ -70,3 +70,4 @@ Test icra raporları, her test sürüşü sonrasında `record/recorder.py` taraf
 **Mühür ve İmza:**  
 **Trustia AI — Otonom Sistemler Mühendislik Heyeti**  
 Murat Furkan Bayram — Kurucu & Sistem Mimarı (%100 Mülkiyet)  
+

@@ -172,7 +172,7 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
-            "name": "ASELSAN and STM Defense Supplier Registry ID",
+            "name": "ASELSAN, NATO NCAGE (TR26258467723) and STM Defense Supplier Registry ID",
             "value": "0050569"
           },
           {
@@ -227,7 +227,7 @@ export default function RootLayout({
           "CAN-FD Integration",
           "Hyundai Ioniq 5 E-GMP Platform",
           "Unmanned Ground Vehicles (UGV)",
-          "1301 Automated Unit Tests",
+          "1307 Automated Unit Tests",
           "Global Innovation Alliance (GIA)",
           "Enterprise Singapore Deep Tech Network",
           "EntrePass Framework"

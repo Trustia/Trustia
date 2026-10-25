@@ -1,4 +1,4 @@
-# 🛡️ TRUSTIA — BAYKAR, ASELSAN & SSB EYDEP Tedarikçi ve Yerlileştirme Başvuru Paketi
+﻿# 🛡️ TRUSTIA — BAYKAR, ASELSAN & SSB EYDEP Tedarikçi ve Yerlileştirme Başvuru Paketi
 
 **Belge Kodu:** `TRST-SUPP-2026-V2.4`  
 **Başvuru Tipi:** BAYKAR Tedarikçi / ASELSAN "Gücümüz Bir" & Yerlileştirme / SSB EYDEP A Sınıfı Yazılım Tedarikçi Başvurusu  
@@ -44,7 +44,7 @@ TRUSTIA, GPS/GNSS sinyalinin kesildiği, yanıltıldığı (jamming/spoofing) ve
 |  SİSTEM 3: Komuta Merkezi (MIL-STD-2525 C2 Konsolu & Sesli Komut) |
 |  SİSTEM 5: Siber Güvenlik (HMAC-SHA256, E-Stop, RTH Eve Dönüş)    |
 +-------------------------------------------------------------------+
-|  SİSTEM 6 & 7: Test & Sertifikasyon (1.301 Otomatik Test)         |
+|  SİSTEM 6 & 7: Test & Sertifikasyon (1.307 Otomatik Test)         |
 +-------------------------------------------------------------------+
 ```
 
@@ -68,13 +68,13 @@ TRUSTIA, GPS/GNSS sinyalinin kesildiği, yanıltıldığı (jamming/spoofing) ve
 | **CAN 2.0 / CAN FD** | ISO 11898 Sürücü & Aktüatör Katmanı | `integration/can.py` | SAĞLANDI |
 | **TÜR Belgesi (TOBB)** | %100 Yerli Bağımlılıksız Kod Taraması | `core/certification.py` | **SAĞLANDI (%100)** |
 | **MIL-STD-2525** | Askeri Semboloji Komuta Konsolu | `command/tactical_gui.py` | SAĞLANDI |
-| **TSE TS ISO/IEC 25051** | Yazılım Kalite ve Test Şartı (1.000+ Test) | **1.301 Geçen Test** | **SAĞLANDI (%100)** |
+| **TSE TS ISO/IEC 25051** | Yazılım Kalite ve Test Şartı (1.000+ Test) | **1.307 Geçen Test** | **SAĞLANDI (%100)** |
 
 ---
 
 ## 📊 4. KALİTE GÜVENCE VE TEST DOĞRULAMA KANITLARI
 
-- **Otomatik Birim ve Entegrasyon Test Sayısı:** 1.301 Adet (Tüm modüller kapsama altındadır)
+- **Otomatik Birim ve Entegrasyon Test Sayısı:** 1.307 Adet (Tüm modüller kapsama altındadır)
 - **Test Süresi:** ~43 saniye
 - **Test Başarı Oranı:** **%100** (`1301 passed in 43.86s`)
 - **Sertifikasyon Denetim Skoru:** **9 / 9 Şart SAĞLANDI**
@@ -101,3 +101,4 @@ Başvuru dosyası paketine aşağıdaki resmi teknik ve admi belgeler dahildir:
 
 **Tedarikçi Adayı:** TRUSTIA Otonomi Ekibi  
 **İletişim / Portal Başvuru Kod:** `0050569CCE941FD1A49FCEFB9B7BE7D6`  
+

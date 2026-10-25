@@ -1,4 +1,4 @@
-# TRUSTIA — MİLLİ OTONOMİ PLATFORMU
+﻿# TRUSTIA — MİLLİ OTONOMİ PLATFORMU
 ## Proje Planı ve Teknik Yol Haritası — Sürüm 2.4 (Dual-Use Robotaksi & Askeri Mimari)
 
 ---
@@ -32,10 +32,11 @@ Taksi filolarına, belediyelere ve araç üreticilerine (BAYKAR, ASELSAN, HAVELS
 
 ## BÖLÜM 3: TAMAMLANMIŞ SİSTEM MİMARİSİ VE TEST DURUMU
 
-* **Birim & Entegrasyon Testleri**: 1.301 test %100 doğrulandı (`python -m pytest`).
+* **Birim & Entegrasyon Testleri**: 1.307 test %100 doğrulandı (`python -m pytest`).
 * **Otomatik Denetim**: AST taramasıyla harici runtime bağımlılığı taşımadığı (%100 yerli katkı) onaylandı.
 * **Taktik Arayüz**: NATO MIL-STD-2525 Standartlarında Masaüstü C2 Konsolu (`command/tactical_gui.py`).
 * **Donanım BOM**: 27 parçalık Seviye-4 dönüşüm kiti (Ouster OS2-128 + Jetson Orin 64GB) onaylandı.
 
 **NİHAİ DURUM: TRUSTIA Platformu v2.4 sürümü itibariyle %100 tamamlanmış, tüm testleri geçmiş, AB PIC ve ulusal savunma tescilleriyle üretime ve ticari lansmana hazır hale gelmiştir.**
+
 

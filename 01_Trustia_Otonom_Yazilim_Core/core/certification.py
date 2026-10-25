@@ -172,7 +172,7 @@ class CertificationAudit:
             ),
             ChecklistItem(
                 "1.000+ otomatik test (Sistem 7)",
-                "pytest koleksiyon sayısı (1.301 yeşil test)",
+                "pytest koleksiyon sayısı (1.307 yeşil test)",
                 self.test_count() >= 1000,
             ),
             ChecklistItem(

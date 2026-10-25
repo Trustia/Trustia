@@ -5,7 +5,7 @@ Milli Seviye-4 Robotaksi & Taktik Savunma Seyrüsefer Motoru.
 Kullanım:
   python trustia_cli.py gui           -> Taktik Masaüstü Konsolunu Başlatır (MIL-STD-2525 / STANAG 4586)
   python trustia_cli.py audit         -> %100 Yerli Katkı AST Sertifikasyon Denetimini Çalıştırır (TÜR/TSE)
-  python trustia_cli.py test          -> Tüm 1.301 Birim ve Entegrasyon Testini Koşturur
+  python trustia_cli.py test          -> Tüm 1.307 Birim ve Entegrasyon Testini Koşturur
   python trustia_cli.py threats       -> Askeri EYP, Mayın ve KHKN Tehdit Analizini Çalıştırır
   python trustia_cli.py robotaxi      -> Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Sürüş Döngüsünü Başlatır
   python trustia_cli.py info          -> Kurumsal Kimlik, Tesciller (AB PIC, EIT, BAYKAR, ASELSAN) ve Künye

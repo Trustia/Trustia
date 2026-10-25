@@ -1,4 +1,4 @@
-01 / Stratejik Satın Alma ve Değerleme Fırsatı
+﻿01 / Stratejik Satın Alma ve Değerleme Fırsatı
 YENİDEN ÜRETİM MALİYETİNE KARŞI VARLIK SATIŞI
 Pazara Girişte 18-24 Ay ve $345K Tasarruf
 Sıfırdan Seviye-4 otonom sürüş yazılımı geliştirmek 18 ila 24 ay yoğun mühendislik
@@ -16,9 +16,10 @@ $75K
 DOĞRUDAN SATIN ALMA BEDELİ
 $345K
 MODELLENEN AR-GE İKAME DEĞERİ
-16.000+
+16.400++
 DETERMİNİSTİK C++ / PYTHON KODU
-1.301
+1.307
 DOĞRULANMIŞ OTOMATİK TEST
 Trustia AI • Varlık Satışı ve Teknoloji Devri Sunumu
 Gizli • Ekim 2026
+

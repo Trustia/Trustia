@@ -1,4 +1,4 @@
-# 🌐 2026 KÜRESEL SAVUNMA SANAYİİ VE OTONOM MOBİLİTE TEKNOLOJİLERİ ARAŞTIRMA RAPORU
+﻿# 🌐 2026 KÜRESEL SAVUNMA SANAYİİ VE OTONOM MOBİLİTE TEKNOLOJİLERİ ARAŞTIRMA RAPORU
 
 **Araştırma & Güncelleme Tarihi:** 13 Eylül 2026  
 **Sürüm:** v2.4.0-PROD  
@@ -18,7 +18,7 @@
 2. **Mayın, EYP ve Engelsiz Arazi Geçişleri**:
    * Fort Hood askeri üssünde 36. İstihkam Tugayı ile yapılan testlerde, yazılım katmanının GPS sinyali olmadan mayınlı ve engelli arazileri otonom geçebildiği doğrulanmıştır.
 
-> **TRUSTIA İle Uyumu:** TRUSTIA platformumuz, `core/certification.py` ve `integration/jaus.py` altyapısı sayesinde tam olarak DARPA RACER vizyonundaki gibi **donanımdan bağımsız yazılım ayrıştırmasını** (%100 Yerli Katkı ve 1.301 test teminatı ile) sağlamaktadır.
+> **TRUSTIA İle Uyumu:** TRUSTIA platformumuz, `core/certification.py` ve `integration/jaus.py` altyapısı sayesinde tam olarak DARPA RACER vizyonundaki gibi **donanımdan bağımsız yazılım ayrıştırmasını** (%100 Yerli Katkı ve 1.307 test teminatı ile) sağlamaktadır.
 
 ---
 
@@ -50,4 +50,5 @@ NATO müttefik kara kuvvetlerinde monolitik (kapalı) sistemlerden **Açık Mima
 ## 4. SONUÇ VE DEĞERLENDİRME
 
 Yaptığımız küresel pazar ve teknoloji araştırması göstermektedir ki; **TRUSTIA v2.4 Otonomi Platformumuz dünyadaki en güncel 2026 DARPA RACER, NATO STANAG ve SAE Seviye-4 Robotaksi trendleriyle %100 örtüşen modern, deterministik ve yüksek değerli bir mimariye sahiptir.**
+
 

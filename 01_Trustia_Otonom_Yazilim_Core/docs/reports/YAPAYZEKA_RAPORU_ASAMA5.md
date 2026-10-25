@@ -1,11 +1,11 @@
-# TRUSTIA v2.4 YAPAY ZEKA VE TEHDİT ALGILAMA RAPORU
+﻿# TRUSTIA v2.4 YAPAY ZEKA VE TEHDİT ALGILAMA RAPORU
 
 - **Rapor Kodu:** `TR-REP-2026-AI-005-EU`
 - **Proje Sürümü:** v2.4.0-PROD
 - **Tarih:** 13 Eylül 2026
 - **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Hisse)
 - **Resmi Sicil:** AB Katılımcı Kodu (PIC): `861711529` • EIT Urban Mobility Partner ID: `CUS15554`
-- **Kapsam:** Sistem 9 (Yapay Zeka & Tehdit Algı Motoru) + Sistem 7 (1.301 Otomatik Test Teminatı)
+- **Kapsam:** Sistem 9 (Yapay Zeka & Tehdit Algı Motoru) + Sistem 7 (1.307 Otomatik Test Teminatı)
 - **Durum:** TAM DOĞRULANDI — SIFIR DIŞ BAĞIMLILIK (%100 Saf Deterministik Yerli Mimari)
 
 ---
@@ -18,7 +18,7 @@
 | **Sistem 9: Tehdit & EYP Algılama** | Tuzak teli (tripwire), anti-tank mayını, plastik patlayıcı ve UXO mühimmat tespiti (`ai/bomb_detector.py`) | 20m mesafeden algılama, 15m - 30m dinamik karantina çemberi |
 | **Sistem 9: KHKN / CBRN Algılama** | Kimyasal, Biyolojik, Radyolojik ve Nükleer gaz/parçacık yayılım tespiti (`ai/cbrn_detector.py`) | PPM ve CPM eşik izleme, rüzgar yönüne göre dinamik tahliye koridoru |
 | **Sistem 9: Çoklu Sensör Füzyonu** | LiDAR nokta bulutu + RGB kamera + Termal/Kızılötesi sensör füzyonu (`ai/fusion.py`) | Gece/gündüz adaptif ağırlıklandırma, sis/toz/yağmur parazit eleme |
-| **Sistem 7: Test Teminatı** | Master birim ve entegrasyon test kütüphanesi | **1.301 / 1.301 Test %100 Yeşil**, sıfır hata |
+| **Sistem 7: Test Teminatı** | Master birim ve entegrasyon test kütüphanesi | **1.307 / 1.307 Test %100 Yeşil**, sıfır hata |
 
 ---
 
@@ -41,7 +41,7 @@
 
 | Metrik | Ölçülen Değer | Kabul Eşiği |
 |---|---|---|
-| **Otomatik Test Sayısı** | **1.301 test (tamamı yeşil)** | ≥ 1.000 test |
+| **Otomatik Test Sayısı** | **1.307 test (tamamı yeşil)** | ≥ 1.000 test |
 | **Test Başarı Oranı** | **%100.0** | %100 |
 | **MLP Keşif (Eval) Doğruluğu** | **%91.7** | ≥ %85.0 |
 | **Kural Tabanlı Arazi Tanıma** | **%94.2** | ≥ %90.0 |
@@ -53,4 +53,5 @@
 ## 4. MÜHENDİSLİK KARARI
 
 Yapay zeka ve tehdit algılama mimarisi, harici hiçbir yabancı kütüphaneye (PyTorch, TensorFlow, OpenCV) ihtiyaç duymadan tamamen saf deterministik olarak çalışmakta olup, hem sivil kentsel sürüşte yol güvenliğini hem de askeri görevlerde mayın/EYP/KHKN korumasını eksiksiz sağlamaktadır.
+
 

@@ -1,4 +1,4 @@
-# TRUSTIA v2.4 GÜVENLİK, SİBER-FİZİKSEL VE ENTEGRASYON RAPORU
+﻿# TRUSTIA v2.4 GÜVENLİK, SİBER-FİZİKSEL VE ENTEGRASYON RAPORU
 
 - **Rapor Kodu:** `TR-REP-2026-SEC-004-EU`
 - **Proje Sürümü:** v2.4.0-PROD
@@ -50,5 +50,6 @@
 
 ## 4. MÜHENDİSLİK KARARI
 
-Güvenlik mimarisi, sivil SAE Seviye-4 otonom sürüş (Hyundai Ioniq 5) ve askeri taktik İKA operasyonları için fail-safe (hata durumunda güvenli) çalışma garantisine sahiptir. 1.301 otomatik test kapsamında tüm güvenlik istisnaları başarıyla onaylanmıştır.
+Güvenlik mimarisi, sivil SAE Seviye-4 otonom sürüş (Hyundai Ioniq 5) ve askeri taktik İKA operasyonları için fail-safe (hata durumunda güvenli) çalışma garantisine sahiptir. 1.307 otomatik test kapsamında tüm güvenlik istisnaları başarıyla onaylanmıştır.
+
 

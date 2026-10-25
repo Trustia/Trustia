@@ -1,4 +1,4 @@
-# 🇹🇷 TÜRKİYE VE KÜRESEL DUAL-USE OTONOMİ PAZARI BOŞLUK ANALİZİ (2026)
+﻿# 🇹🇷 TÜRKİYE VE KÜRESEL DUAL-USE OTONOMİ PAZARI BOŞLUK ANALİZİ (2026)
 
 **Araştırma & Güncelleme Tarihi:** 13 Eylül 2026  
 **Sürüm:** v2.4.0  
@@ -41,7 +41,7 @@ Savunma ve otomotiv sektöründe güçlü **metal, şasi ve montaj üreticileri*
 | **Sertifikasyon Uyum** | Kısmi / Dışa Bağımlı | **TÜR Belgesi, AB PIC `861711529` ve EIT `CUS15554` Onaylı** |
 | **Entegrasyon Esnekliği** | Araca Özel Kapalı Yazılım | **Donanım-Bağımsız (SAE JAUS, ROS 2, Hyundai CAN-FD Uyumlu)** |
 | **Paket Kapsamı** | Yalnızca Navigasyon | **3D SLAM + Rota + Pure Pursuit + EYP + KHKN + Sürü + C-V2X** |
-| **Test Teminatı** | Prototip Seviyesi | **1.301 / 1.301 %100 Başarılı Otomatik Birim & Entegrasyon Testi** |
+| **Test Teminatı** | Prototip Seviyesi | **1.307 / 1.307 %100 Başarılı Otomatik Birim & Entegrasyon Testi** |
 | **Fonlama & Değerleme** | Belirsiz Ar-Ge | **Melek Yatırım Ağı (150M TL Val.), QSTP 30M$ Fon, EIT 100k€** |
 
 ---
@@ -49,4 +49,5 @@ Savunma ve otomotiv sektöründe güçlü **metal, şasi ve montaj üreticileri*
 ## 4. STRATEJİK SONUÇ VE PAZAR FIRSATI
 
 Türkiye'deki ve Avrupa'daki OEM'ler araç gövdelerini imal etmekte, fakat %100 yerli katkı sertifikalı, ISO 26262 ASIL-D ve SAE Seviye-4 standartlarında çalışan deterministik bir otonomi beynine muhtaç durumdadır. **TRUSTIA**, hem 1.15M TL (~$23.8k) maliyetli Ioniq 5 Seviye-4 dönüşüm kitiyle hem de taktik savunma yazılım paketiyle bu boşluğu küresel ölçekte doldurmaktadır.
+
 

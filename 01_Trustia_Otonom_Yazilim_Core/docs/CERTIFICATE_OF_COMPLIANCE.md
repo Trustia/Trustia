@@ -1,4 +1,4 @@
-# 📜 TRUSTIA OTONOMİ PLATFORMU — YAZILIM DOĞRULAMA VE UYGUNLUK SERTİFİKASI
+﻿# 📜 TRUSTIA OTONOMİ PLATFORMU — YAZILIM DOĞRULAMA VE UYGUNLUK SERTİFİKASI
 ### (SOFTWARE VERIFICATION & AUDIT CERTIFICATE OF COMPLIANCE)
 
 **Sertifika Numarası:** `TRUSTIA-2026-VAL-010-EU`  
@@ -33,7 +33,7 @@ Bu sertifika belgesi, **TRUSTIA Otonomi Platformu** yazılımının aşağıdaki
 |  SİSTEM 4: Veri Kayıt   |  SİSTEM 5: Güvenlik (ASIL-D MRM, E-Stop)|
 +-------------------------------------------------------------------+
 |  SİSTEM 6: Altyapı (Mesajlaşma, 100Hz Timing, WGS84/UTM, C-V2X)   |
-|  SİSTEM 7: Test & Sertifikasyon (1.301 / 1.301 Yeşil Test)        |
+|  SİSTEM 7: Test & Sertifikasyon (1.307 / 1.307 Yeşil Test)        |
 +-------------------------------------------------------------------+
 ```
 
@@ -48,7 +48,7 @@ Bu sertifika belgesi, **TRUSTIA Otonomi Platformu** yazılımının aşağıdaki
 | **Open Invention Network (OIN)** | Küresel Patent Koruma ve Çapraz Lisanslama Paktı | TESCİLLİ (Tier 5) |
 | **Taranan Python / C++ Dosyası** | 157 Dosya | ONAYLANDI |
 | **Toplam Kod Hacmi (Lines of Code)** | 16.746+ Satır | ONAYLANDI |
-| **Otomatik Birim & Entegrasyon Testi** | 1.301 / 1.301 Test | **%100 GEÇTİ** |
+| **Otomatik Birim & Entegrasyon Testi** | 1.307 / 1.307 Test | **%100 GEÇTİ** |
 | **Dış Bağımlılık Oranı (Black-Box)** | Sıfır Üçüncü Parti Bağımlılık (Saf C++/Python & NumPy) | **%100 BAĞIMSIZ** |
 | **Araç Veriyolu Protokolü** | ISO 11898-1 CAN-FD (Hyundai Ioniq 5 LKAS/SCC) | ONAYLANDI |
 | **İletişim Güvenlik Protokolü** | HMAC-SHA256 İmzalı Telemetri & AES-256 Şifreleme | ONAYLANDI |
@@ -69,3 +69,4 @@ Bu sertifika belgesi, **TRUSTIA Otonomi Platformu** yazılımının aşağıdaki
 **ONAYLAYAN BİRİM:**  
 **TRUSTIA Automated Software Quality & Certification Engine**  
 *Avrupa Birliği Horizon Europe, EIT Urban Mobility, TSE TS ISO/IEC 25051 ve SAE J3016 Seviye-4 Otonom Sistem Standartları Kanıt Dosyası.*
+

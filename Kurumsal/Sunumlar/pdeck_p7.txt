@@ -1,12 +1,12 @@
-06 / Devredilecek Varlık Paketi (Turnkey IP)
+﻿06 / Devredilecek Varlık Paketi (Turnkey IP)
 SATIN ALAN KURUMA EKSİKSİZ TESLİM EDİLECEK UNSURLAR
 1. Eksiksiz Özgün Kaynak Kod Deposu
-16.000+ satırlık C++20 ve Python kod tabanı, ROS 2 düğümleri, CAN-FD sürücüleri,
+16.400++ satırlık C++20 ve Python kod tabanı, ROS 2 düğümleri, CAN-FD sürücüleri,
 V2X motoru ve temiz Git geçmişi.
 2. %100 Fikri Mülkiyet (IP) ve Ticari Haklar
 Tüm 3D LiDAR SLAM motoru, ESKF algoritmaları, yörünge planlayıcılar ve sistem
 mimarisi telif haklarının şartsız devri.
-3. CARLA Dijital İkizi & 1.301 Test Paketi
+3. CARLA Dijital İkizi & 1.307 Test Paketi
 Sistemin hatasız çalıştığını ispatlayan otomatik CI/CD test harness'ları, simülasyon
 senaryoları ve doğrulama raporları.
 4. Donanım BOM Şartnamesi ve Kablolama
@@ -20,3 +20,4 @@ Sistem mimarı Murat Furkan Bayram tarafından alıcı teknik ekibe 30 gün boyu
 birebir mimari devir teslim, kod oryantasyonu ve danışmanlık.
 Trustia AI • Devredilecek Varlık Envanteri
 Gizli • Ekim 2026
+

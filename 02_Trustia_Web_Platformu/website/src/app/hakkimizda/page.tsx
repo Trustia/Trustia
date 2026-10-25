@@ -115,9 +115,9 @@ export default function AboutPage() {
         : "Bilateral executed license conferring patent immunity across 4,000+ participating international corporations covering Linux and Level-4 autonomy software."
     },
     {
-      org: "ASELSAN & STM Savunma Ekosistemi",
+      org: "NATO / MSB, ASELSAN & STM",
       role: lang === "tr" ? "Kayıtlı Girişim ve Yazılım Tedarikçi Ağı" : "Defense Supplier & Startup Ecosystem Registry",
-      id: "Tedarikçi Kodu: #0050569 • STM Ekosistem 2026",
+      id: "NCAGE: TR26258467723 • ASELSAN #0050569",
       desc: lang === "tr"
         ? "ASELSAN Tedarikçi Kütüğü'ne 'Yazılım Geliştirme' alanında kayıtlı girişim statüsündeyiz. STM derin teknoloji girişimcilik ekosistemi ve SSB SAYZEK portalı onaylıdır."
         : "Formally registered in the ASELSAN Defense Supplier Registry (#0050569) under Software Engineering and accredited within the STM deep-tech ecosystem."
