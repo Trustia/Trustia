@@ -15,6 +15,9 @@
 [![STM Savunma Ekosistemi](https://img.shields.io/badge/STM-Tedarik%C3%A7i%20Ekosistemi%20%23KAYITLI-blue.svg)](https://trustia.com.tr)
 [![AB PIC](https://img.shields.io/badge/EU%20PIC-861711529-blue.svg)](https://trustia.com.tr)
 [![OIN 2.0](https://img.shields.io/badge/OIN%202.0-Patent%20Savunma%20%23f1e44576-purple.svg)](https://trustia.com.tr)
+[![Teknopark İstanbul](https://img.shields.io/badge/Teknopark%20%C4%B0stanbul-HASAT%202026-critical.svg)](https://trustia.com.tr)
+[![İTO BTM](https://img.shields.io/badge/%C4%B0TO%20BTM-Fulya%20Kamp%C3%BCs%C3%BC-blue.svg)](https://trustia.com.tr)
+[![KOSGEB](https://img.shields.io/badge/KOSGEB-%C4%B0leri%20Giri%C5%9Fimci-success.svg)](https://trustia.com.tr)
 
 **[🌐 Resmi Web Platformu](https://trustia.com.tr)** • **[🚗 Robotaksi Mimarisi](https://trustia.com.tr/robotaxi/)** • **[📑 Kurumsal Dokümantasyon](https://trustia.com.tr/hakkimizda/)** • **[📩 İletişim & Şartname](https://trustia.com.tr/iletisim/)**
 
@@ -99,6 +102,7 @@ Trustia mimarisi; yapay zeka çıkarımlarının yarattığı belirsizlikleri (s
 - **`01_Trustia_Otonom_Yazilim_Core/integration/`**: Gerçek zamanlı Linux SocketCAN CAN-FD sürücüsü ve ROS 2 Humble araç köprüsü (Drive-by-Wire).
 - **`01_Trustia_Otonom_Yazilim_Core/security/`**: ISO 26262 ASIL-D uyumlu 50 ms Watchdog, Minimal Risk Maneuver (MRM emniyetli sağa çekme) ve 5 ms acil fren mekanizmaları.
 - **`01_Trustia_Otonom_Yazilim_Core/command/`**: Çoklu araç telemetri yönlendiricisi, filo dağıtım motoru ve dinamik rota tahsis sistemi.
+- **`01_Trustia_Otonom_Yazilim_Core/core/`**: AutonomyCore üst düzey API, otonom durum makineleri (FSM) ve donanım kilitli HMAC lisanslama motoru.
 
 ---
 
@@ -171,13 +175,16 @@ cd Trustia/01_Trustia_Otonom_Yazilim_Core
 # 2. 1.307 Doğrulama Testini Koşturun
 python trustia_cli.py test
 
-# 3. Otonomi Motorunu Simülasyon Modunda Başlatın
-python trustia_cli.py run --sim --vehicle=ioniq5
+# 3. Hyundai Ioniq 5 Seviye-4 CAN-FD Otonom Sürüş Döngüsünü Başlatın
+python trustia_cli.py robotaxi
 
-# 4. Donanım ve CAN-FD Bağlantı Sağlığını Denetleyin
-python trustia_cli.py status
+# 4. Fonksiyonel Güvenlik ve Mimari Sertifikasyon Denetimini Çalıştırın
+python trustia_cli.py audit
 
-# 5. Kapalı Kutu B2B Enterprise SDK Paketini Derleyin
+# 5. Kurumsal Kimlik, Tescil ve Künye Bilgisini Görüntüleyin
+python trustia_cli.py info
+
+# 6. Kapalı Kutu B2B Enterprise SDK Paketini Derleyin
 python tools/build_enterprise_sdk.py --target=jetson-orin
 ```
 
