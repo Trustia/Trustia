@@ -11,7 +11,7 @@ import ConsoleBranding from "@/components/ConsoleBranding";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { lang } = useLanguage();
 
   return (
     <main className="relative w-full bg-[#090b0e] text-white font-sans selection:bg-[#C8FF00] selection:text-black overflow-x-hidden">
@@ -24,35 +24,21 @@ export default function Home() {
       {/* 2. Fullscreen Video Background */}
       <HeroVideo />
 
-      {/* Hero Content Section - Compact Executive Corner Placement */}
-      <section className="relative w-full h-screen min-h-[560px] flex items-end justify-start px-4 sm:px-10 md:px-14 pb-10 sm:pb-14 z-10 pointer-events-none">
-        <div className="max-w-sm sm:max-w-md text-left space-y-2 pointer-events-auto">
-          {/* Corporate Badge */}
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-black/60 border border-white/15 text-slate-300 text-[10px] font-mono font-medium tracking-wider uppercase backdrop-blur-md">
-            <span>{t("hero_badge")}</span>
+      {/* 3. Pure Cinematic Video Viewport - 100% Unobstructed Autonomous Cockpit */}
+      <section className="relative w-full h-screen min-h-[580px] flex items-end justify-center pb-8 z-10 pointer-events-none">
+        {/* Subtle Luxury Scroll Pill */}
+        <a
+          href="#otonomi"
+          className="pointer-events-auto flex flex-col items-center gap-2 text-slate-400/70 hover:text-white transition-colors cursor-pointer group select-none"
+          aria-label={lang === "tr" ? "Mimariyi İncele" : "Explore Architecture"}
+        >
+          <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400 group-hover:text-[#C8FF00] transition-colors">
+            {lang === "tr" ? "MİMARİ" : "ARCHITECTURE"}
+          </span>
+          <div className="w-5 h-8 rounded-full border border-white/20 group-hover:border-[#C8FF00]/50 flex items-start justify-center p-1.5 backdrop-blur-sm bg-black/30 transition-colors shadow-lg">
+            <div className="w-1 h-2 rounded-full bg-white/70 group-hover:bg-[#C8FF00] animate-bounce transition-colors" />
           </div>
-
-          {/* Clean 2-Line Headline */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug drop-shadow-xl">
-            {t("hero_title_1")} <br />
-            <span className="text-slate-200">{t("hero_title_2")}</span>
-          </h1>
-
-          {/* Responsive Compact Subtitle */}
-          <p className="text-slate-300 text-xs font-normal leading-relaxed drop-shadow-md">
-            {t("hero_desc")}
-          </p>
-
-          {/* Clean Executive Action Button */}
-          <div className="pt-2">
-            <a
-              href="#otonomi"
-              className="px-4 py-2 rounded-lg bg-white text-slate-950 font-semibold text-xs tracking-wider uppercase hover:bg-slate-200 transition-colors inline-flex items-center gap-2 shadow-lg"
-            >
-              <span>{t("hero_btn_explore")}</span>
-            </a>
-          </div>
-        </div>
+        </a>
       </section>
 
       {/* Sovereign Level 4 Robotaxi Platform Showcase (Hyundai Ioniq 5 E-GMP) */}
