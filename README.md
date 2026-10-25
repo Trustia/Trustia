@@ -40,7 +40,6 @@ Trustia AI, ulusal ve uluslararası savunma, sanayi ve derin teknoloji ekosistem
 | 🏛️ **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | İstanbul, TR | **Fulya Derin Teknoloji Kampüsü Yerleşik Girişimi** |
 | 📜 **KOSGEB** | İstanbul, TR | **İleri Girişimci Sertifikası (`KSB01UGE0115153370`)** |
 | 📜 **BTK** | Ankara, TR | **Savunma Sanayii ve Yapay Zeka Sertifikasyonu (`L2zPtN4X1ZJ`)** |
-| 🚗 **Martı Technologies (TAVA İttifakı)** | İstanbul, TR | **Robotaksi Filo Entegrasyonu ve Teknik İnceleme Süreci** |
 
 ---
 

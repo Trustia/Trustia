@@ -81,7 +81,6 @@ Trustia/
   * 🛡️ **Open Invention Network (OIN):** İmzalı İkili Patent Savunma Paktı Lisansı.
   * 📜 **KOSGEB:** İleri Girişimci Sertifikası (`KSB01UGE0115153370`).
   * 📜 **BTK:** Savunma Sanayii ve Yapay Zeka Sertifikasyonu (`L2zPtN4X1ZJ`).
-  * 🚗 **Martı Technologies (TAVA İttifakı):** Robotaksi filo entegrasyonu ve teknik inceleme süreci.
 
 ---
 *© 2026 Trustia AI Technologies. Tüm hakları saklıdır.*
