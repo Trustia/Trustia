@@ -284,6 +284,11 @@ export default function RootLayout({
     <html lang="tr" className="dark scroll-smooth">
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){window.addEventListener('error',function(e){var m=(e&&e.message)?e.message:'';if(m.indexOf('chunk')!==-1||m.indexOf('Loading chunk')!==-1||m.indexOf('Failed to fetch')!==-1){if(!sessionStorage.getItem('chunk_retry')){sessionStorage.setItem('chunk_retry','1');window.location.reload();}}});window.addEventListener('unhandledrejection',function(e){var r=(e&&e.reason)?(e.reason.message||e.reason.name||''):'';if(r.indexOf('chunk')!==-1||r.indexOf('ChunkLoadError')!==-1||r.indexOf('Failed to fetch')!==-1){if(!sessionStorage.getItem('chunk_retry')){sessionStorage.setItem('chunk_retry','1');window.location.reload();}}});})();`
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />

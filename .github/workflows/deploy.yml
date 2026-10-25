@@ -3,6 +3,9 @@ name: Deploy Trustia Web Platform to GitHub Pages
 on:
   push:
     branches: ["main"]
+    paths:
+      - "02_Trustia_Web_Platformu/**"
+      - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
 permissions:

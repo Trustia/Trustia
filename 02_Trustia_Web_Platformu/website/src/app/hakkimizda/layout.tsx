@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda & Milli Otonomi Vizyonu | TRUSTIA AI",
+  title: "Hakkımızda & Milli Otonomi Vizyonu",
   description:
     "Trustia AI; kurucusu ve tek pay sahibi Murat Furkan Bayram liderliğinde geliştirilen, 16.400+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği ve 1.307 doğrulanmış test teminatıyla çalışan yerli derin teknoloji girişimidir.",
   keywords: [

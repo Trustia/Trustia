@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "İletişim, Ar-Ge Merkezi & Şartname Talebi | TRUSTIA AI",
+  title: "İletişim, Ar-Ge Merkezi & Şartname Talebi",
   description:
     "Trustia AI kurumsal santral, Ar-Ge merkezi (İTO BTM Fulya Yerleşkesi, Şişli / İstanbul), teknik şartname talepleri ve OEM otonomi entegrasyonu başvuru kanalları.",
   keywords: [
