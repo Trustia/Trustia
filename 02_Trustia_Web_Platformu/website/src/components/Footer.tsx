@@ -48,9 +48,9 @@ export default function Footer() {
                 <Shield className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
                 <span>OIN 2.0 Patent Lisansı: #f1e44576</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-400">
-                <Shield className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                <span>ASELSAN: #0050569 • NATO: TR2625846</span>
+              <div className="flex items-center gap-2 text-slate-300 font-medium">
+                <Shield className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
+                <span>ASELSAN & STM Tedarikçi Ağı: #0050569</span>
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <Shield className="w-3.5 h-3.5 text-slate-500 shrink-0" />
@@ -62,7 +62,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <Cpu className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                <span>SAE J3016 Level 4 • STANAG 4586</span>
+                <span>SAE J3016 Seviye 4 • ISO 26262 ASIL-D</span>
               </div>
             </div>
           </div>
@@ -112,13 +112,13 @@ export default function Footer() {
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
                 <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "ASELSAN Potansiyel Tedarikçi" : "ASELSAN Defense Supplier"}
+                  {lang === "tr" ? "ASELSAN & STM Tedarikçi Ağı" : "ASELSAN & STM Supplier Network"}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
                 <Link href="/politika/ihracat/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "NATO NCAGE Askeri Tedarikçi" : "NATO NCAGE Military Supplier"}
+                  {lang === "tr" ? "Çift Kullanım (Dual-Use) İhracat" : "Dual-Use Technology Export"}
                 </Link>
               </li>
               <li className="flex items-center gap-2.5">
@@ -196,7 +196,7 @@ export default function Footer() {
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
             <Link href="/politika/ihracat/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
-              {lang === "tr" ? "İhracat Kontrol (5201/MSB)" : "Export Control"}
+              {lang === "tr" ? "İhracat Kontrol (Dual-Use)" : "Export Control"}
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
             <Link href="/politika/mulkiyet/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
@@ -216,4 +216,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+                  }
