@@ -1,182 +1,158 @@
 "use client";
 
 import Link from "next/link";
-import { CheckCircle2, MapPin, Globe, Shield, Cpu } from "lucide-react";
+import { ShieldCheck, Cpu, Code2, Scale } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
   const { lang, t } = useLanguage();
 
   return (
-    <footer id="kurumsal" className="w-full bg-[#05070a] border-t border-[#161b22] text-slate-400 font-sans text-xs pt-20 pb-12 px-6 sm:px-12 relative z-20 selection:bg-[#C8FF00] selection:text-black">
-      
-      {/* Background Subtle Low-Opacity Grid Pattern */}
-      <div className="absolute inset-0 bg-tactical-grid opacity-15 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto relative z-10">
+    <footer id="kurumsal" className="w-full bg-[#07090d] border-t border-white/10 text-slate-400 font-sans text-xs pt-16 pb-12 px-6 sm:px-12 relative z-20 selection:bg-slate-700 selection:text-white">
+      <div className="max-w-7xl mx-auto space-y-12">
         
         {/* 4 Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           
-          {/* Column 1: Şirket / Company */}
-          <div className="space-y-5">
-            <Link href="/" className="inline-flex items-center gap-2.5 group select-none">
-              <div className="w-8 h-8 rounded-lg overflow-hidden border border-[#C8FF00]/40 shadow-[0_0_12px_rgba(200,255,0,0.4)] group-hover:scale-105 transition-transform">
+          {/* Column 1: Şirket & Mühendislik Temeli */}
+          <div className="space-y-4">
+            <Link href="/" className="inline-flex items-center gap-2 group select-none">
+              <div className="w-7 h-7 rounded overflow-hidden border border-white/15 bg-white/5 flex items-center justify-center group-hover:border-white/30 transition-colors">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo.png" alt="Trustia AI Logo" className="w-full h-full object-cover" />
               </div>
-              <div className="flex items-center gap-1">
-                <span className="font-orbitron font-extrabold text-2xl text-white tracking-wider">Trustia</span>
-                <span className="font-orbitron font-extrabold text-2xl text-[#C8FF00] tracking-wider drop-shadow-[0_0_12px_rgba(200,255,0,0.4)]">AI</span>
+              <div className="flex items-center gap-1.5">
+                <span className="font-bold text-base text-white tracking-tight">Trustia</span>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 font-semibold">AI</span>
               </div>
             </Link>
 
-            <p className="text-slate-400 text-xs leading-relaxed font-light">
+            <p className="text-slate-400 text-xs leading-relaxed font-normal">
               {t("footer_tagline")}
             </p>
 
-            <div className="pt-2 space-y-2 font-mono text-[11px] text-slate-300">
-              <div className="flex items-center gap-2 text-[#C8FF00] font-medium">
-                <Globe className="w-3.5 h-3.5 shrink-0" />
-                <span>{t("footer_made_in")}</span>
+            <div className="pt-2 space-y-1.5 font-mono text-[11px] text-slate-400 divide-y divide-white/5">
+              <div className="pt-1.5 first:pt-0 flex items-center gap-2 text-slate-300">
+                <Code2 className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <span>16.000+ Satır C++20 / ROS 2</span>
               </div>
-              <div className="flex items-center gap-2 text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                <span>{t("footer_locations")}</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300 font-medium">
-                <Shield className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
-                <span>OIN 2.0 Patent Lisansı: #f1e44576</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-300 font-medium">
-                <Shield className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
-                <span>ASELSAN & STM Tedarikçi Ağı: #0050569</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-400">
-                <Shield className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                <span>EU PIC: 861711529 • EITUM: CUS15554</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-400">
-                <Globe className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                <span>SG Startup SG: #57428 • GIA Partner</span>
-              </div>
-              <div className="flex items-center gap-2 text-slate-400">
+              <div className="pt-1.5 flex items-center gap-2">
                 <Cpu className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                <span>1.301 / 1.301 Doğrulanmış Test</span>
+              </div>
+              <div className="pt-1.5 flex items-center gap-2">
+                <ShieldCheck className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                 <span>SAE J3016 Seviye 4 • ISO 26262 ASIL-D</span>
+              </div>
+              <div className="pt-1.5 flex items-center gap-2">
+                <Scale className="w-3.5 h-3.5 text-slate-500 shrink-0" />
+                <span>OIN 2.0 Patent Lisansı: #f1e44576</span>
               </div>
             </div>
           </div>
 
-          {/* Column 2: Platform */}
-          <div className="space-y-5">
-            <h5 className="font-mono text-xs font-bold text-white tracking-widest uppercase">{t("footer_col_platform")}</h5>
-            <ul className="space-y-3 font-normal text-slate-300">
+          {/* Column 2: Çözümler / Solutions */}
+          <div className="space-y-4">
+            <h5 className="font-mono text-[11px] font-bold text-white tracking-widest uppercase">
+              // {t("footer_col_platform")}
+            </h5>
+            <ul className="space-y-2.5 font-normal text-slate-300">
               <li>
-                <Link href="/politika/lisans/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  {t("footer_link_arch")}
+                <Link href="/robotaxi/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "Referans Otonomi Mimarisi (RAD)" : "Reference Autonomy Architecture (RAD)"}
                 </Link>
               </li>
               <li>
-                <Link href="/robotaxi/" className="text-[#C8FF00] hover:text-white font-medium transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  Hyundai Ioniq 5 Robotaksi
+                <Link href="/politika/siber/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "3D NDT SLAM & Haritalama" : "3D NDT SLAM & Mapping"}
                 </Link>
               </li>
               <li>
-                <Link href="/politika/siber/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  {t("footer_link_perception")}
+                <Link href="/politika/lisans/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "Çoklu Sensör Füzyonu (LiDAR & Radar)" : "Multi-Sensor Fusion Core"}
                 </Link>
               </li>
               <li>
-                <Link href="/politika/etik/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  {t("footer_link_ros")}
+                <Link href="/robotaxi/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "100 Hz CAN-FD Sürüş Köprüsü" : "100 Hz CAN-FD Drive Bridge"}
                 </Link>
               </li>
               <li>
-                <Link href="/politika/otonom-guvenlik/" className="hover:text-[#C8FF00] transition-colors duration-200 hover:translate-x-0.5 inline-block">
-                  {lang === "tr" ? "ASIL-D Güvenlik Protokolü" : "ASIL-D Safety Protocol"}
+                <Link href="/politika/otonom-guvenlik/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "ASIL-D Güvenlik & Devralma Protokolü" : "ASIL-D Fail-Safe & Override"}
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Sertifikasyon / Certification */}
-          <div className="space-y-5">
-            <h5 className="font-mono text-xs font-bold text-white tracking-widest uppercase">{t("footer_col_cert")}</h5>
+          {/* Column 3: Standartlar ve Uyumluluk */}
+          <div className="space-y-4">
+            <h5 className="font-mono text-[11px] font-bold text-white tracking-widest uppercase">
+              // {t("footer_col_cert")}
+            </h5>
             <ul className="space-y-2.5 font-normal text-slate-300">
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/oin-lisans/" className="hover:text-[#C8FF00] transition-colors font-medium text-white">
-                  {lang === "tr" ? "OIN 2.0 Patent Paktı" : "OIN 2.0 Patent Pact"}
+              <li>
+                <Link href="/politika/otonom-guvenlik/" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
+                  <span>ISO 26262 ASIL-D</span>
+                  <span className="text-[10px] font-mono text-slate-300">Fonksiyonel Emniyet</span>
                 </Link>
               </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "ASELSAN & STM Tedarikçi Ağı" : "ASELSAN & STM Supplier Network"}
+              <li>
+                <Link href="/politika/otonom-guvenlik/" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
+                  <span>UN ECE R157</span>
+                  <span className="text-[10px] font-mono text-slate-300">Otonom Regülasyon</span>
                 </Link>
               </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/ihracat/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "Çift Kullanım (Dual-Use) İhracat" : "Dual-Use Technology Export"}
+              <li>
+                <Link href="/politika/oin-lisans/" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
+                  <span>OIN 2.0 Patent Paktı</span>
+                  <span className="text-[10px] font-mono text-slate-300">#f1e44576</span>
                 </Link>
               </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "SSB SAYZEK Simülasyon (#170)" : "SSB SAYZEK AI Platform (#170)"}
+              <li>
+                <Link href="/politika/yerlilik/" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
+                  <span>ASELSAN & STM Tedarikçi Ağı</span>
+                  <span className="text-[10px] font-mono text-slate-300">#0050569</span>
                 </Link>
               </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "İTO BTM Fulya Ön Kuluçka" : "ITO BTM Fulya Incubation"}
-                </Link>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "Teknopark İstanbul (HASAT 2026)" : "Teknopark Istanbul (HASAT 2026)"}
-                </Link>
-              </li>
-              <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8FF00] shrink-0" />
-                <Link href="/politika/yerlilik/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "KOSGEB İleri Girişimci" : "KOSGEB Advanced Entrepreneur"}
+              <li>
+                <Link href="/politika/ihracat/" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
+                  <span>Çift Kullanım (Dual-Use)</span>
+                  <span className="text-[10px] font-mono text-slate-300">İhracat Uyumu</span>
                 </Link>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Kurumsal / Corporate */}
-          <div className="space-y-5">
-            <h5 className="font-mono text-xs font-bold text-white tracking-widest uppercase">{t("footer_col_corporate")}</h5>
-            <ul className="space-y-3 font-normal text-slate-300">
+          <div className="space-y-4">
+            <h5 className="font-mono text-[11px] font-bold text-white tracking-widest uppercase">
+              // {t("footer_col_corporate")}
+            </h5>
+            <ul className="space-y-2.5 font-normal text-slate-300">
               <li>
-                <Link href="/hakkimizda/" className="hover:text-[#C8FF00] transition-colors">
+                <Link href="/hakkimizda/" className="hover:text-white transition-colors duration-150 inline-block">
                   {t("footer_link_about")}
                 </Link>
               </li>
               <li>
-                <Link href="/iletisim/" className="hover:text-[#C8FF00] transition-colors flex items-center gap-2">
-                  <span>{t("footer_link_career")}</span>
-                  <span className="text-[9px] font-mono px-1.5 py-0.5 bg-[#C8FF00]/15 text-[#C8FF00] border border-[#C8FF00]/30 rounded font-bold">{t("footer_badge_join")}</span>
+                <Link href="/iletisim/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {t("footer_link_career")}
                 </Link>
               </li>
               <li>
-                <Link href="/iletisim/" className="hover:text-[#C8FF00] transition-colors">
+                <Link href="/iletisim/" className="hover:text-white transition-colors duration-150 inline-block">
                   {t("footer_link_contact")}
                 </Link>
               </li>
               <li>
-                <Link href="/politika/oin-lisans/" className="hover:text-[#C8FF00] transition-colors flex items-center gap-1.5 text-white font-medium">
-                  <span>{lang === "tr" ? "OIN Patent Lisansı" : "OIN Patent License"}</span>
-                  <span className="text-[9px] font-mono px-1.5 py-0.5 bg-emerald-950/60 text-emerald-400 border border-emerald-800 rounded font-bold">PDF</span>
+                <Link href="/politika/oin-lisans/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "OIN 2.0 Patent Lisansı" : "OIN 2.0 Patent License"}
                 </Link>
               </li>
               <li>
-                <Link href="/politika/mulkiyet/" className="hover:text-[#C8FF00] transition-colors">
-                  {lang === "tr" ? "Fikri Mülkiyet & Basın Kiti" : "IP & Press Kit"}
+                <Link href="/politika/mulkiyet/" className="hover:text-white transition-colors duration-150 inline-block">
+                  {lang === "tr" ? "Fikri Mülkiyet & Lisanslar" : "IP & Licensing"}
                 </Link>
               </li>
             </ul>
@@ -184,31 +160,31 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Clean Silicon Valley / Defense Standard Corporate Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
+        {/* Bottom Bar: Muted Monochrome Defense Layout */}
+        <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-400">
           <div className="text-center md:text-left text-slate-400">
-            © {new Date().getFullYear()} <span className="text-white font-bold tracking-wide">Trustia AI</span> {t("footer_rights")}
+            © {new Date().getFullYear()} <span className="text-white font-medium">Trustia AI</span>. {t("footer_rights")}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-[11px]">
-            <Link href="/politika/kvkk/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
-              {lang === "tr" ? "Gizlilik Politikası (KVKK/GDPR)" : "Privacy Policy (GDPR)"}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] text-slate-400">
+            <Link href="/politika/kvkk/" className="hover:text-white transition-colors">
+              {lang === "tr" ? "Gizlilik (KVKK/GDPR)" : "Privacy Policy"}
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
-            <Link href="/politika/ihracat/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
-              {lang === "tr" ? "İhracat Kontrol (Dual-Use)" : "Export Control"}
+            <Link href="/politika/ihracat/" className="hover:text-white transition-colors">
+              {lang === "tr" ? "İhracat Kontrol" : "Export Control"}
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
-            <Link href="/politika/mulkiyet/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
+            <Link href="/politika/mulkiyet/" className="hover:text-white transition-colors">
               {lang === "tr" ? "Fikri Mülkiyet" : "Intellectual Property"}
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
-            <Link href="/politika/oin-lisans/" className="text-[#C8FF00] hover:underline font-bold transition-colors">
-              {lang === "tr" ? "OIN 2.0 Lisansı (PDF)" : "OIN 2.0 License (PDF)"}
+            <Link href="/politika/oin-lisans/" className="hover:text-white transition-colors">
+              OIN 2.0
             </Link>
             <span className="text-white/20 hidden sm:inline">•</span>
-            <Link href="/politika/lisans/" className="text-slate-400 hover:text-[#C8FF00] transition-colors">
-              {lang === "tr" ? "SLA & EULA" : "SLA & EULA"}
+            <Link href="/politika/lisans/" className="hover:text-white transition-colors">
+              SLA & EULA
             </Link>
           </div>
         </div>
@@ -216,4 +192,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-                  }
+}
