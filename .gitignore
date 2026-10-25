@@ -120,3 +120,7 @@ scratch/
 # --- Geçici Test Çıktıları ---
 test_*_*.png
 test_*_*.jpg
+
+# --- Yerel İhracat & Jupyter Not Defterleri ---
+02_Trustia_Robotaxi_SDK/
+*.ipynb

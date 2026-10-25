@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Murat Furkan Bayram — CV (Ekim 2026)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm 14mm 10mm 14mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1a1e24;
+    background: #ffffff;
+    font-size: 8.8pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .header {
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .name-title h1 {
+    font-size: 20pt;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+    line-height: 1.1;
+  }
+
+  .name-title .subtitle {
+    font-size: 9.5pt;
+    font-weight: 700;
+    color: #0284c7;
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .header-meta {
+    text-align: right;
+    font-size: 8pt;
+    color: #475569;
+  }
+
+  .header-meta strong {
+    color: #0f172a;
+  }
+
+  .badges-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr 1.4fr;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 7px 10px;
+    margin-bottom: 11px;
+    font-size: 8pt;
+  }
+
+  .badge-col h4 {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #64748b;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  .badge-col p {
+    color: #0f172a;
+    font-weight: 600;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.8pt;
+  }
+
+  .badge-col a {
+    color: #0284c7;
+    text-decoration: none;
+  }
+
+  .section-title {
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-left: 3.5px solid #0284c7;
+    padding-left: 7px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+  }
+
+  .summary-text {
+    color: #334155;
+    text-align: justify;
+    font-size: 8.6pt;
+    margin-bottom: 8px;
+  }
+
+  .summary-text strong {
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  .tech-grid {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+  }
+
+  .tech-row {
+    display: flex;
+    font-size: 8.4pt;
+    line-height: 1.35;
+  }
+
+  .tech-label {
+    width: 145px;
+    flex-shrink: 0;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .tech-value {
+    color: #334155;
+  }
+
+  .table-container {
+    margin-top: 6px;
+    margin-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 7.9pt;
+  }
+
+  th {
+    background: #0f172a;
+    color: #ffffff;
+    text-align: left;
+    padding: 4px 7px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    font-size: 7.5pt;
+    text-transform: uppercase;
+  }
+
+  th:first-child { border-top-left-radius: 4px; }
+  th:last-child { border-top-right-radius: 4px; }
+
+  td {
+    padding: 3.8px 7px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+  }
+
+  tr:nth-child(even) td {
+    background: #f8fafc;
+  }
+
+  .col-inst {
+    font-weight: 700;
+    color: #0f172a;
+    width: 25%;
+  }
+
+  .col-title {
+    font-weight: 600;
+    color: #0369a1;
+    width: 32%;
+  }
+
+  .col-detail {
+    color: #475569;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 7.4pt;
+    width: 43%;
+  }
+
+  .footer {
+    margin-top: 10px;
+    padding-top: 6px;
+    border-top: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.2pt;
+    color: #64748b;
+  }
+
+  .footer strong {
+    color: #0f172a;
+  }
+
+  @media print {
+    body { background: transparent; }
+    .footer { position: fixed; bottom: 0; width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="name-title">
+      <h1>MURAT FURKAN BAYRAM</h1>
+      <div class="subtitle">Kurucu & Baş Sistem Mimarı — Trustia AI</div>
+    </div>
+    <div class="header-meta">
+      <div><strong>Doğum:</strong> 04.02.2009 (17 Yaşında)</div>
+      <div><strong>Konum:</strong> Arnavutköy / İTO BTM Fulya, İstanbul</div>
+      <div><strong>T.C. Kimlik:</strong> 59476566862 &bull; Pasaport: A46V29426</div>
+    </div>
+  </div>
+
+  <!-- METADATA & CHANNELS GRID -->
+  <div class="badges-grid">
+    <div class="badge-col">
+      <h4>İletişim & Kurumsal</h4>
+      <p>Tel: 0537 064 04 60</p>
+      <p>E-posta: kariyer@trustia.com.tr</p>
+      <p>Web: <a href="https://trustia.com.tr">trustia.com.tr</a></p>
+    </div>
+    <div class="badge-col">
+      <h4>Devlet & Savunma Tescilleri</h4>
+      <p>ASELSAN Tedarikçi: #0050569</p>
+      <p>KOSGEB İleri Girişimci: KSB01UGE0115153370</p>
+      <p>TÜBİTAK ARBİS: TBTK-0229-6571</p>
+    </div>
+    <div class="badge-col">
+      <h4>Uluslararası Tesciller & Kuluçka</h4>
+      <p>AB PIC Kodu: 861711529</p>
+      <p>EIT Urban Mobility: CUS15554</p>
+      <p>İTO BTM Fulya / YTÜ Yıldız Teknopark</p>
+    </div>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section-title">Profesyonel Özet ve Sistem Mimarisi Yetkinliği</div>
+  <p class="summary-text">
+    17 yaşında derin teknoloji kurucusu ve Seviye-4 otonom sistemler mimarı. Sıfırdan <strong>16.400+ satırlık deterministik C++20 ve Python Seviye-4 otonom sürüş çekirdeğini</strong>, GNSS-Denied 3D NDT LiDAR SLAM haritalama motorunu, Kinematic Hybrid A* yörünge planlayıcısını, Pure Pursuit / Stanley lateral kontrolcülerini ve <strong>Hyundai Ioniq 5 CAN-FD Drive-by-Wire</strong> araç kontrol sürücülerini geliştirmiştir. Sistem <strong>1.305 doğrulanmış birim ve simülasyon testinden %100 başarıyla</strong> geçmiştir. <strong>ASELSAN Onaylı Tedarikçi (#0050569)</strong>, STM Aday Tedarikçi, İTO BTM Fulya Derin Teknoloji Girişimcisi ve YTÜ Yıldız Teknopark Kuluçka adayıdır.
+  </p>
+
+  <!-- SECTION 2 -->
+  <div class="section-title">Teknik Uzmanlık ve Mimari Derinlik</div>
+  <div class="tech-grid">
+    <div class="tech-row">
+      <div class="tech-label">Diller & Altyapı:</div>
+      <div class="tech-value">Modern C++ (C++17/20), Python 3.11, CUDA, TensorRT, ROS 2 Humble, Eigen3, PCL, Linux RTOS.</div>
+    </div>
+    <div class="tech-row">
+      <div class="tech-label">Algoritmalar & Kontrol:</div>
+      <div class="tech-value">GNSS-Denied 3D NDT LiDAR SLAM, ESKF (Extended Kalman Filter), Kinematic Hybrid A*, Pure Pursuit, Stanley Kontrolcü, Model Predictive Control (MPC).</div>
+    </div>
+    <div class="tech-row">
+      <div class="tech-label">Donanım & Protokoller:</div>
+      <div class="tech-value">Kvaser CAN-FD, SocketCAN, CAN 2.0B, Ethernet UDP/PTP, GMSL2 HDR Kameralar, Ouster OS2-128 LiDAR, Livox Mid-360 LiDAR, Continental ARS 408 Radar, NVIDIA Jetson AGX Orin 64GB, Septentrio RTK GNSS.</div>
+    </div>
+    <div class="tech-row">
+      <div class="tech-label">Güvenlik & Standartlar:</div>
+      <div class="tech-value">ISO 26262 ASIL-D Functional Safety, Minimal Risk Maneuver (MRM), SOTIF, Zero-Trust CAN-FD Güvenlik Mimarisi.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 -->
+  <div class="section-title">Resmi Akreditasyonlar, Başarılar ve Kurumsal Statü (Ekim 2026)</div>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Kurum / Program</th>
+          <th>Başarı & Unvan</th>
+          <th>Detay ve Hukuki Statü</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-inst">ASELSAN</td>
+          <td class="col-title">Onaylı Tedarikçi (#0050569)</td>
+          <td class="col-detail">Otonom seyrüsefer, 3D SLAM ve araç kontrol yazılımları tedarik kütüğü</td>
+        </tr>
+        <tr>
+          <td class="col-inst">STM Savunma</td>
+          <td class="col-title">Aday Tedarikçi</td>
+          <td class="col-detail">İnsansız otonom kara platformları ve taktik seyrüsefer yazılım iş birliği</td>
+        </tr>
+        <tr>
+          <td class="col-inst">YTÜ Yıldız Teknopark</td>
+          <td class="col-title">Kuluçka Girişimcisi</td>
+          <td class="col-detail">4. Yerleşke (Arnavutköy Taşoluk) ve Davutpaşa yerleşkesi kuluçka kabulü</td>
+        </tr>
+        <tr>
+          <td class="col-inst">İTO BTM</td>
+          <td class="col-title">Sözleşmeli Girişimci</td>
+          <td class="col-detail">İstanbul Ticaret Odası BTM Fulya Derin Teknoloji Kampüsü kabulü</td>
+        </tr>
+        <tr>
+          <td class="col-inst">Avrupa Komisyonu (EU)</td>
+          <td class="col-title">Milli Katılımcı Kodu (PIC)</td>
+          <td class="col-detail">PIC #861711529 ile Horizon Europe / EIT fonlama sistemine kalıcı tescil</td>
+        </tr>
+        <tr>
+          <td class="col-inst">EIT Urban Mobility</td>
+          <td class="col-title">Resmi İş Ortağı & 100k€ Hibe</td>
+          <td class="col-detail">Partner ID: CUS15554, Girişimcilere Mali Destek Çağrısı (3.1.02-1206-3732.3)</td>
+        </tr>
+        <tr>
+          <td class="col-inst">KOSGEB & TÜBİTAK</td>
+          <td class="col-title">İleri Girişimci & Araştırmacı</td>
+          <td class="col-detail">KOSGEB Belge No: KSB01UGE0115153370 &bull; TÜBİTAK ARBİS: TBTK-0229-6571</td>
+        </tr>
+        <tr>
+          <td class="col-inst">BAYKAR Teknoloji</td>
+          <td class="col-title">Resmi Tedarikçi Başvurusu</td>
+          <td class="col-detail">Seviye-4 otonomi, GNSS-denied 3D SLAM ve taktik yazılım başvurusu</td>
+        </tr>
+        <tr>
+          <td class="col-inst">DEİK Dijital Konsey</td>
+          <td class="col-title">Ticari Diplomasi Başvurusu</td>
+          <td class="col-detail">T.C. Ticaret Bakanlığı Dijital Teknolojiler İş Konseyi ön bilgi onaylı</td>
+        </tr>
+        <tr>
+          <td class="col-inst">Dubai RTA Challenge</td>
+          <td class="col-title">$1.200.000 Ödüllü Yarışmacı</td>
+          <td class="col-detail">Dubai World Challenge for Self-Driving Transport resmi başvuru teslimi</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div><strong>TRUSTIA AI TEKNOLOJİLERİ</strong> &bull; İTO BTM Fulya Kampüsü, Şişli / İstanbul &bull; trustia.com.tr</div>
+    <div>İletişim: kariyer@trustia.com.tr &bull; +90 537 064 04 60 &bull; <strong>Ekim 2026</strong></div>
+  </div>
+
+</body>
+</html>
