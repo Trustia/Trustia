@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi sivil Robotaksi filoları ve GPS sinyalinin bulunmadığı harekat sahalarında görev yapan İnsansız Savunma Robotları için V2X, 3D SLAM, 5 saniyelik yörünge tahmini ve Seviye 4 yerli otonomi yazılım platformudur. Open Invention Network (OIN 2.0 Lisansı: #f1e44576), NATO NCAGE (TR26258467723), ASELSAN tedarikçi (#0050569), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Malta Enterprise ve İTO BTM tescilli. (İstanbul, Türkiye).",
+    "Trustia AI; şehir içi sivil Robotaksi filoları ve kritik otonom test platformları için ISO 26262 ASIL-D, 3D LiDAR SLAM ve Seviye 4 yerli otonomi yazılım platformudur. Open Invention Network (OIN 2.0 Lisansı: #f1e44576), ASELSAN & STM Tedarikçi Ağı (#0050569), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554) ve İTO BTM tescilli. (İstanbul, Türkiye).",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
@@ -34,7 +34,8 @@ export const metadata: Metadata = {
     "3D SLAM",
     "yörünge tahmini",
     "Hybrid A*",
-    "STANAG 4586",
+    "SAE J3016 Seviye 4",
+    "ISO 26262 ASIL-D",
     "SAE JAUS AS6091",
     "ROS 2 Humble",
     "CAN FD bridge",
@@ -171,13 +172,8 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
-            "name": "NATO Allied NCAGE Military Supplier Reference",
-            "value": "TR26258467723"
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "Malta Enterprise 1.5M Euro Grant Application",
-            "value": "100062411"
+            "name": "ASELSAN and STM Defense Supplier Registry ID",
+            "value": "0050569"
           },
           {
             "@type": "PropertyValue",
@@ -224,7 +220,8 @@ export default function RootLayout({
           "3D LiDAR SLAM",
           "GPS-Denied Navigation",
           "Trajectory Prediction AI",
-          "STANAG 4586 Level 4",
+          "ISO 26262 ASIL-D Functional Safety",
+          "SAE J3016 Level 4 Autonomy",
           "SAE AS6091 JAUS",
           "ROS 2 Humble",
           "CAN-FD Integration",
@@ -291,4 +288,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+    }
