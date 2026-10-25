@@ -1,3 +1,6 @@
+# Trustia AI Technologies Robots Policy
+# https://trustia.com.tr
+
 User-agent: *
 Allow: /
 
@@ -11,17 +14,29 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Modern AI Agents & LLM Indexing (AI Search & Overview Optimization)
+User-agent: Baiduspider
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Modern AI Agents & LLM Indexing (Generative Engine Optimization - GEO)
+User-agent: Google-Extended
+Allow: /
+
 User-agent: GPTBot
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
@@ -30,5 +45,13 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# Canonical Sitemap
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Canonical Sitemap & Machine-Readable Knowledge
 Sitemap: https://trustia.com.tr/sitemap.xml
+Disallow: /api/
+Disallow: /_next/
