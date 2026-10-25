@@ -16,13 +16,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Top Ticker
     top_ticker_btm: "🛡️ Open Invention Network (OIN 2.0 Lisans ID: f1e44576) & İTO BTM",
     top_ticker_teknopark: "🇪🇺 Avrupa Komisyonu (PIC: 861711529) & EIT Urban Mobility (CUS15554)",
-    top_ticker_yc: "🇹🇷 ASELSAN Tedarikçi Portalı (#0050569) & NATO NCAGE (TR26258467723)",
+    top_ticker_yc: "🇹🇷 ASELSAN & STM Tedarikçi Kütüğü (#0050569)",
     top_ticker_ssb: "🇸🇬 Startup SG (#57428) & Teknopark İstanbul HASAT 2026",
 
     // Institutional Ecosystem
     eco_badge: "RESMİ KURUMLAR & GLOBAL AKREDİTASYONLAR",
     eco_title: "Devlet, AB ve Ekosistem Onaylarımız",
-    eco_desc: "Open Invention Network (OIN 2.0 Lisansı: #f1e44576), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility, ASELSAN (#0050569), NATO NCAGE (TR26258467723) ve İTO BTM tescilli resmi süreçlerimiz.",
+    eco_desc: "Open Invention Network (OIN Lisansı: #f1e44576), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), ASELSAN (#0050569) & STM Tedarikçi Ekosistemi ve İTO BTM tescilli resmi süreçlerimiz.",
 
     // Navbar
     nav_about: "HAKKIMIZDA",
@@ -48,15 +48,15 @@ const translations: Record<Language, Record<string, string>> = {
     gallery_title: "Saha Testleri ve Platform Entegrasyonları",
     gallery_desc: "Farklı araç ve robot konfigürasyonlarında çalışan yerli otonomi yazılım beyni",
     gallery_p1_title: "01 // ARAZİ VE SAHA TESTİ",
-    gallery_p1_badge: "BARKAN İKA",
+    gallery_p1_badge: "TAKTİK İKA",
     gallery_p2_title: "02 // SENSÖR FÜZYONU",
-    gallery_p2_badge: "ALPAR İKA",
+    gallery_p2_badge: "AĞIR İKA",
     gallery_p3_title: "03 // ENGEL KAÇINMA",
     gallery_p3_badge: "HİBRİT ROTA",
     gallery_p4_title: "04 // ÇEVRE ALGILAMA",
-    gallery_p4_badge: "KAPGAN 8x8",
+    gallery_p4_badge: "8x8 OTONOMİ",
     gallery_p5_title: "05 // SÜRÜ ZEKASI",
-    gallery_p5_badge: "ENGA 6x6",
+    gallery_p5_badge: "6x6 OTONOMİ",
 
     // About Page
     about_back: "← ANA SAYFAYA DÖN",
@@ -128,13 +128,13 @@ const translations: Record<Language, Record<string, string>> = {
     // Top Ticker
     top_ticker_btm: "🛡️ Open Invention Network (OIN 2.0 License ID: f1e44576) & ITO BTM",
     top_ticker_teknopark: "🇪🇺 European Commission (PIC: 861711529) & EIT Urban Mobility (CUS15554)",
-    top_ticker_yc: "🇹🇷 ASELSAN Defense Supplier (#0050569) & NATO NCAGE (TR26258467723)",
+    top_ticker_yc: "🇹🇷 ASELSAN & STM Defense Supplier Registry (#0050569)",
     top_ticker_ssb: "🇸🇬 Startup SG (#57428) & Teknopark Istanbul HASAT 2026",
 
     // Institutional Ecosystem
     eco_badge: "INSTITUTIONAL ACCREDITATIONS & GLOBAL ALLIANCES",
     eco_title: "European Union, Defense & Sovereign Ecosystem",
-    eco_desc: "Officially registered by Open Invention Network (OIN 2.0 License: #f1e44576), European Commission (PIC: 861711529), EIT Urban Mobility, ASELSAN (#0050569), NATO NCAGE (TR26258467723), and ITO BTM.",
+    eco_desc: "Officially registered by Open Invention Network (OIN License: #f1e44576), European Commission (PIC: 861711529), EIT Urban Mobility (CUS15554), ASELSAN (#0050569) & STM Defense Supplier Ecosystem, and ITO BTM.",
 
     // Navbar
     nav_about: "ABOUT US",
@@ -160,15 +160,15 @@ const translations: Record<Language, Record<string, string>> = {
     gallery_title: "Field Operations & Platform Integrations",
     gallery_desc: "Autonomous software core running seamlessly across diverse vehicle and robot configurations",
     gallery_p1_title: "01 // FIELD OPERATIONS",
-    gallery_p1_badge: "BARKAN UGV",
+    gallery_p1_badge: "TACTICAL UGV",
     gallery_p2_title: "02 // SENSOR FUSION",
-    gallery_p2_badge: "ALPAR UGV",
+    gallery_p2_badge: "HEAVY UGV",
     gallery_p3_title: "03 // OBSTACLE AVOIDANCE",
     gallery_p3_badge: "HYBRID PATH",
     gallery_p4_title: "04 // PERCEPTION AI",
-    gallery_p4_badge: "KAPGAN 8x8",
+    gallery_p4_badge: "8x8 AUTONOMY",
     gallery_p5_title: "05 // SWARM INTEL",
-    gallery_p5_badge: "ENGA 6x6",
+    gallery_p5_badge: "6x6 AUTONOMY",
 
     // About Page
     about_back: "← BACK TO HOME",
@@ -203,7 +203,7 @@ const translations: Record<Language, Record<string, string>> = {
     contact_btn_submit: "Submit Inquiry",
     contact_direct_note: "Your inquiry is routed directly to the selected department's engineering leadership pool.",
     contact_loc_title: "Headquarters & R&D Center",
-    contact_loc_hq: "Fulya İTO BTM Fulya Kampüsü Residence İTO BTM Campus, Şişli / Istanbul, Turkey",
+    contact_loc_hq: "ITO BTM Fulya Campus, Şişli / Istanbul, Turkey",
     contact_hours_title: "Operating Hours",
     contact_hours_desc: "Weekdays: 09:00 - 18:00 (Field Operations 24/7)",
     contact_success_title: "Inquiry Successfully Dispatched",
