@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hyundai Ioniq 5 Seviye 4 Yerli Robotaksi Platformu",
+  title: "Hyundai Ioniq 5 Seviye 4 Referans Otonomi Mimarisi (RAD)",
   description:
-    "Trustia AI; Hyundai Ioniq 5 (E-GMP) platformunda 128 kanallı LiDAR, 4x GMSL2 HDR kamera, 77GHz radar ve 100 Hz CAN-FD aktüatör mimarisiyle çalışan Seviye 4 yerli Robotaksi otonomi mimarisidir. (İstanbul, Türkiye).",
+    "Trustia AI; Hyundai Ioniq 5 (E-GMP) platformunda 128 kanallı 3D LiDAR, 4x GMSL2 HDR kamera, 77GHz radar ve 100 Hz CAN-FD aktüatör mimarisiyle çalışan Seviye 4 referans otonomi mimarisidir.",
   keywords: [
     "Robotaksi",
     "Yerli Robotaksi",
@@ -17,15 +17,13 @@ export const metadata: Metadata = {
     "Livox Mid-360",
     "Jetson AGX Orin",
     "Sony IMX390 GMSL2",
-    "Trustia AI",
-    "İTO BTM",
-    "Bilişim Vadisi"
+    "Trustia AI"
   ],
   alternates: {
     canonical: "https://trustia.com.tr/robotaxi/",
   },
   openGraph: {
-    title: "Hyundai Ioniq 5 Seviye 4 Yerli Robotaksi Platformu | TRUSTIA AI",
+    title: "Hyundai Ioniq 5 Seviye 4 Referans Otonomi Mimarisi | TRUSTIA AI",
     description:
       "27 parçalık doğrulanmış donanım kiti, 128 kanallı 3D LiDAR, 4x GMSL2 HDR kamera, 77GHz radar ve 16.000 satır deterministik yerli otonomi çekirdeği.",
     url: "https://trustia.com.tr/robotaxi/",
@@ -33,19 +31,19 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://trustia.com.tr/robotaxi/ioniq5_foto_1.png",
+        url: "https://trustia.com.tr/logo.png",
         width: 1200,
-        height: 675,
-        alt: "Hyundai Ioniq 5 Level 4 Autonomous Robotaxi Test Vehicle",
+        height: 630,
+        alt: "Trustia AI Seviye 4 Otonomi Mimarisi",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hyundai Ioniq 5 Seviye 4 Yerli Robotaksi Platformu | TRUSTIA AI",
+    title: "Hyundai Ioniq 5 Seviye 4 Referans Otonomi Mimarisi | TRUSTIA AI",
     description:
       "128ch LiDAR, 4x GMSL2 HDR Vision, 77GHz Radar and 100 Hz CAN-FD Drive-by-Wire on Hyundai Ioniq 5 E-GMP Platform.",
-    images: ["https://trustia.com.tr/robotaxi/ioniq5_foto_1.png"],
+    images: ["https://trustia.com.tr/logo.png"],
   },
 };
 
