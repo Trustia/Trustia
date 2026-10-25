@@ -14,7 +14,8 @@ import {
   ArrowLeft,
   Zap,
   ShieldCheck,
-  Activity
+  Activity,
+  Crosshair
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -22,52 +23,50 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export default function RobotaxiPage() {
   const { lang } = useLanguage();
-  const [selectedPhoto, setSelectedPhoto] = useState(0);
+  const [activeSensor, setActiveSensor] = useState<"all" | "lidar" | "radar" | "camera" | "compute">("all");
 
-  const photos = [
-    {
-      src: "/robotaxi/ioniq5_foto_1.png",
-      title: lang === "tr" ? "Ön Çeyrek Dış Görünüm" : "Front 3/4 Exterior",
-      desc: lang === "tr" ? "Hyundai Ioniq 5 2024 Advance E-GMP Platformu" : "Hyundai Ioniq 5 2024 Advance E-GMP Chassis",
-      tag: "GENEL BAKIŞ"
+  const sensorDetails = {
+    all: {
+      tag: lang === "tr" ? "360° ÇOKLU SENSÖR FÜZYONU" : "360° MULTI-SENSOR FUSION",
+      title: lang === "tr" ? "Erken ve Geç Füzyonlu Birleşik Algılama Çekirdeği" : "Early & Late Multi-Modal Perception Core",
+      desc: lang === "tr"
+        ? "LiDAR 3D nokta bulutları, 77GHz Doppler radar kinematik vektörleri ve 4x GMSL2 HDR kamera akışları EKF ve derin öznitelik düzeyinde birleştirilir. Sıfır kör nokta ile deterministik çevre modeli oluşturulur."
+        : "LiDAR 3D point clouds, 77GHz Doppler radar kinematic vectors, and 4x GMSL2 HDR camera streams fused via EKF and feature-level fusion for zero-blindspot deterministic world modeling.",
+      metric: "240m Menzil • 0.05m Hassasiyet • <15ms Uçtan Uca Gecikme"
     },
-    {
-      src: "/robotaxi/ioniq5_foto_2.png",
-      title: lang === "tr" ? "Ön Tampon & Sensör Podu" : "Front Bumper & Sensor Pod",
-      desc: lang === "tr" ? "Livox Mid-360 LiDAR ve 77GHz Radar Görüş Açısı" : "Livox Mid-360 LiDAR & 77GHz Radar Coverage",
-      tag: "LİDAR & RADAR"
+    lidar: {
+      tag: lang === "tr" ? "BİRİNCİL 3D SLAM VE DERİNLİK" : "PRIMARY 3D SLAM & DEPTH",
+      title: lang === "tr" ? "Ouster OS2-128 Rev 7 3D LiDAR (Tavan Montaj)" : "Ouster OS2-128 Rev 7 3D LiDAR (Roof Mount)",
+      desc: lang === "tr"
+        ? "Tavan merkezine entegre 128 kanal ile saniyede 2.62 milyon nokta üretir. GPS'siz tünel, yer altı ve kanyon alanlarında 3D NDT SLAM santimetre hassasiyetinde uzaysal haritalama icra eder."
+        : "Roof-mounted 128-channel solid-state spinning LiDAR generating 2.62M points/sec for GPS-denied 3D NDT SLAM spatial localization.",
+      metric: "240 Metre • 128 Kanal • 0.1° Açısal Çözünürlük • UDP Gbit Ethernet"
     },
-    {
-      src: "/robotaxi/ioniq5_foto_3.png",
-      title: lang === "tr" ? "Yan Profil & Dingil Mesafesi" : "Side Profile & Wheelbase",
-      desc: lang === "tr" ? "3.000 mm Dingil Mesafesi ve Tavan Barı Hizalaması" : "3,000 mm Wheelbase & Roof Rack Alignment",
-      tag: "ŞASİ & MEKANİK"
+    radar: {
+      tag: lang === "tr" ? "TÜM HAVA KOŞULLARI VE DOPPLER HIZ" : "ALL-WEATHER DOPPLER VELOCITY",
+      title: lang === "tr" ? "Continental ARS 408-21 77GHz Otomotiv Radarı" : "Continental ARS 408-21 77GHz Automotive Radar",
+      desc: lang === "tr"
+        ? "Yoğun sis, sağanak yağmur, kar ve toza tam nüfuz eden doğrudan Doppler radyal hız tespiti. 250 metreye kadar öndeki araç ve hareketli cisimlerin hız vektörlerini anlık çıkarır."
+        : "Penetrates dense fog, heavy rain, snow, and dust with direct Doppler radial velocity measurements up to 250 meters.",
+      metric: "250 Metre Menzil • ±0.1 km/s Hız Hassasiyeti • CAN-FD Veri Yolu"
     },
-    {
-      src: "/robotaxi/ioniq5_foto_4.png",
-      title: lang === "tr" ? "Arka Çeyrek Görünüm" : "Rear 3/4 Exterior",
-      desc: lang === "tr" ? "Arka Spoyler Altı IP68 Kablo Geçiş Körüğü" : "Rear Spoiler IP68 Tailgate Cable Entry",
-      tag: "IP68 YALITIM"
+    camera: {
+      tag: lang === "tr" ? "360° ÇEVRESEL GÖRSEL ALGILAMA" : "360° SURROUND VISION",
+      title: lang === "tr" ? "4x Leopard Sony IMX390 HDR GMSL2 Kamera" : "4x Leopard Sony IMX390 HDR GMSL2 Camera Array",
+      desc: lang === "tr"
+        ? "Ön, sol, sağ ve arka hatlara konumlandırılmış 120° FOV lensler ile 120 dB süper dinamik aralık. Doğrudan güneş parlaması ve tünel çıkışlarında LED titreşim (LFM) sönümleme."
+        : "Synchronized 120° FOV surround cameras with 120 dB dynamic range, mitigating extreme lighting flares and tunnel transitions.",
+      metric: "120 dB HDR • 60 FPS Senkron • IP67 Muhafaza • Donanımsal FSYNC"
     },
-    {
-      src: "/robotaxi/ioniq5_foto_5.png",
-      title: lang === "tr" ? "Arka Düz Görünüm" : "Rear Straight View",
-      desc: lang === "tr" ? "Geri Görüş HDR Kamerası ve Park Sensörleri" : "Rear HDR Vision & Ultrasonic Park Array",
-      tag: "360° GÖRÜŞ"
-    },
-    {
-      src: "/robotaxi/ioniq5_foto_6.png",
-      title: lang === "tr" ? "Ön Kokpit & Telemetri Konsolu" : "Cockpit & Telemetry Console",
-      desc: lang === "tr" ? "10.1\" IPS Dokunmatik Harita ve Schneider E-Stop Butonu" : "10.1\" Touch C2 Map & Schneider E-Stop",
-      tag: "KOKPİT C2"
-    },
-    {
-      src: "/robotaxi/ioniq5_foto_7.png",
-      title: lang === "tr" ? "VIP Arka Yolcu Alanı" : "VIP Passenger Cabin",
-      desc: lang === "tr" ? "E-GMP Düz Zemin ve Otonom Yolcu Konforu" : "E-GMP Flat Floor & Autonomous Ride Comfort",
-      tag: "YOLCU KONFORU"
+    compute: {
+      tag: lang === "tr" ? "MERKEZİ HESAPLAMA VE AKTÜATÖR KÖPRÜSÜ" : "AI COMPUTE & ACTUATION BRIDGE",
+      title: lang === "tr" ? "NVIDIA Jetson AGX Orin 64GB + CAN-FD Köprüsü" : "NVIDIA Jetson AGX Orin 64GB + CAN-FD Bridge",
+      desc: lang === "tr"
+        ? "275 TOPS merkezi otonom yapay zeka gücü. LKAS11 direksiyon torku ve SCC_FD fren/gaz komutlarını şasi CAN-FD hattına 100 Hz frekansta deterministik olarak aktarır. 5ms donanımsal devralma kesmesi."
+        : "275 TOPS central AI compute interfacing directly with vehicle CAN-FD at 100 Hz cyclic rate with 5ms hard-interrupt safety fallback.",
+      metric: "275 TOPS INT8 • 100 Hz Senkron Çevrim • 5ms Devralma • 4TB NVMe"
     }
-  ];
+  };
 
   const specs = [
     {
@@ -120,6 +119,8 @@ export default function RobotaxiPage() {
     }
   ];
 
+  const current = sensorDetails[activeSensor];
+
   return (
     <main className="relative min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white overflow-x-hidden pt-20 sm:pt-28 pb-12">
       <Navbar />
@@ -140,19 +141,19 @@ export default function RobotaxiPage() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-white/10">
             <div className="space-y-1.5 max-w-3xl">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 text-[10px] font-mono tracking-wider uppercase">
-                <span>{lang === "tr" ? "SEVİYE 4 OTONOM SÜRÜŞ PLATFORMU" : "LEVEL 4 AUTONOMOUS PLATFORM"}</span>
+                <span>{lang === "tr" ? "REFERANS OTONOMİ MİMARİSİ (RAD) // E-GMP" : "REFERENCE AUTONOMY ARCHITECTURE // E-GMP"}</span>
               </div>
               
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug">
                 Hyundai Ioniq 5 (E-GMP){" "}
                 <span className="text-slate-300 font-normal">
-                  {lang === "tr" ? "— Seviye-4 Otonom Sürüş Mimarisi" : "— Level-4 Autonomous Fleet Architecture"}
+                  {lang === "tr" ? "— Seviye 4 Donanım ve Sensör Mimarisi" : "— Level 4 Hardware & Sensor Blueprint"}
                 </span>
               </h1>
               
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
                 {lang === "tr"
-                  ? "128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsü ile donatılmış; 16.000 satır özgün deterministik otonomi çekirdeği."
+                  ? "Kurumsal filolar ve OEM entegrasyonu için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.000 satır özgün deterministik otonomi şartnamesi."
                   : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, and 100 Hz CAN-FD drive-by-wire across 16,000 lines of sovereign autonomy software."}
               </p>
             </div>
@@ -178,7 +179,7 @@ export default function RobotaxiPage() {
             </span>
             <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.000+</div>
             <span className="text-[10px] text-slate-400 block font-sans">
-              {lang === "tr" ? "Satır C++20 / Python" : "Lines of Code"}
+              {lang === "tr" ? "Satır C++20 / ROS 2" : "Lines of Code (C++20)"}
             </span>
           </div>
 
@@ -213,73 +214,189 @@ export default function RobotaxiPage() {
           </div>
         </div>
 
-        {/* 3. Photo Gallery */}
+        {/* 3. Interactive Sensor Fusion Blueprint Visualizer */}
         <div className="space-y-3 pt-2">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-white/10">
             <div>
               <div className="text-[10px] font-mono text-slate-400 font-semibold tracking-wider uppercase">
-                // {lang === "tr" ? "FİZİKSEL TEST PLATFORMU" : "PHYSICAL TEST PLATFORM"}
+                // {lang === "tr" ? "DONANIM VE SENSÖR YERLEŞİM ŞARTNAMESİ" : "HARDWARE & SENSOR PLACEMENT BLUEPRINT"}
               </div>
               <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                {lang === "tr" ? "Hyundai Ioniq 5 Donanım Yerleşimi" : "Hyundai Ioniq 5 Hardware Layout"}
+                {lang === "tr" ? "360° Sensör Kapsama ve CAN-FD Veri Yolu Mimarisi" : "360° Sensor Coverage & CAN-FD Topology"}
               </h2>
             </div>
-            <div className="text-[10px] font-mono text-slate-400">
-              {lang === "tr" ? "Detayları görmek için panellere tıklayın" : "Click labels to inspect locations"}
+            
+            {/* Filter Pills */}
+            <div className="flex flex-wrap items-center gap-1.5">
+              {[
+                { id: "all" as const, label: lang === "tr" ? "TÜMÜ (360°)" : "ALL (360°)" },
+                { id: "lidar" as const, label: "OUSTER 128K LİDAR" },
+                { id: "radar" as const, label: "77GHz RADAR" },
+                { id: "camera" as const, label: "4x HDR KAMERA" },
+                { id: "compute" as const, label: "ORIN & CAN-FD" }
+              ].map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveSensor(tab.id)}
+                  className={`px-2.5 py-1 rounded text-[11px] font-mono transition-all duration-200 cursor-pointer ${
+                    activeSensor === tab.id
+                      ? "bg-white text-slate-950 font-bold shadow-md"
+                      : "bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10"
+                  }`}
+                >
+                  {tab.label}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Main Photo Frame */}
-          <div className="relative rounded-xl overflow-hidden border border-white/10 bg-[#0a0d13] aspect-[16/9] sm:aspect-[21/9] max-h-[500px] group">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={photos[selectedPhoto].src}
-              alt={photos[selectedPhoto].title}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 pointer-events-none" />
-
-            {/* Top Tag */}
-            <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] font-mono">
-              <span className="px-2 py-0.5 rounded bg-black/70 border border-white/15 text-slate-300 backdrop-blur-md">
-                E-GMP // 3.000 mm DİNGİL MESAFESİ
+          {/* Technical Vector Canvas (360° FOV Blueprint) */}
+          <div className="relative rounded-xl overflow-hidden border border-white/10 bg-[#080b11] aspect-[16/9] sm:aspect-[21/9] max-h-[480px] flex items-center justify-center p-4">
+            
+            {/* Coordinate Grid Header */}
+            <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] font-mono text-slate-400 pointer-events-none">
+              <span className="px-2 py-0.5 rounded bg-black/60 border border-white/10">
+                TOP-DOWN // 360° SENSÖR KAPSAMA GEOMETRİSİ
               </span>
-              <span className="px-2 py-0.5 rounded bg-black/70 border border-white/10 text-slate-400">
-                {selectedPhoto + 1} / {photos.length}
+              <span className="text-slate-400">
+                ÖLÇEK: 1:100 (240m ÇAP) • E-GMP ŞASİ
               </span>
             </div>
 
-            {/* Photo Caption Overlay */}
-            <div className="absolute bottom-3 left-3 right-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-              <div className="space-y-0.5">
-                <span className="px-1.5 py-0.5 rounded bg-white/10 border border-white/20 text-white font-mono text-[9px] uppercase tracking-wider inline-block">
-                  {photos[selectedPhoto].tag}
-                </span>
-                <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
-                  {photos[selectedPhoto].title}
-                </h3>
-                <p className="text-slate-300 text-xs max-w-xl font-sans">
-                  {photos[selectedPhoto].desc}
-                </p>
-              </div>
+            {/* High-Precision SVG Sensor Topology */}
+            <svg viewBox="0 0 600 340" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="archGridPage" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
+                </pattern>
+                <radialGradient id="lidarGlowPage" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.25" />
+                  <stop offset="70%" stopColor="#38bdf8" stopOpacity="0.06" />
+                  <stop offset="100%" stopColor="#38bdf8" stopOpacity="0" />
+                </radialGradient>
+                <linearGradient id="radarBeamPage" x1="0%" y1="100%" x2="0%" y2="0%">
+                  <stop offset="0%" stopColor="#34d399" stopOpacity="0.35" />
+                  <stop offset="100%" stopColor="#34d399" stopOpacity="0.02" />
+                </linearGradient>
+              </defs>
+
+              <rect width="600" height="340" fill="url(#archGridPage)" />
+
+              {/* Range Rings (50m, 100m, 180m, 240m) */}
+              <circle cx="300" cy="170" r="45" stroke="rgba(255,255,255,0.08)" strokeDasharray="3 3" />
+              <circle cx="300" cy="170" r="90" stroke="rgba(255,255,255,0.08)" strokeDasharray="3 3" />
+              <circle cx="300" cy="170" r="140" stroke="rgba(255,255,255,0.06)" strokeDasharray="3 3" />
+
+              {/* Range Labels */}
+              <text x="304" y="122" fill="rgba(148,163,184,0.5)" fontSize="8" fontFamily="monospace">50m</text>
+              <text x="304" y="77" fill="rgba(148,163,184,0.5)" fontSize="8" fontFamily="monospace">100m</text>
+              <text x="304" y="28" fill="rgba(148,163,184,0.5)" fontSize="8" fontFamily="monospace">200m (LiDAR)</text>
+
+              {/* --- 1. LiDAR 360° Zone --- */}
+              {(activeSensor === "all" || activeSensor === "lidar") && (
+                <g className="transition-opacity duration-300">
+                  <circle cx="300" cy="170" r="145" fill="url(#lidarGlowPage)" />
+                  <circle cx="300" cy="170" r="145" stroke="#38bdf8" strokeWidth="1" strokeDasharray="4 4" opacity="0.4" />
+                  <line x1="300" y1="170" x2="300" y2="25" stroke="#38bdf8" strokeWidth="1" strokeDasharray="2 4" opacity="0.4" />
+                  <line x1="300" y1="170" x2="445" y2="170" stroke="#38bdf8" strokeWidth="1" strokeDasharray="2 4" opacity="0.3" />
+                  <line x1="300" y1="170" x2="155" y2="170" stroke="#38bdf8" strokeWidth="1" strokeDasharray="2 4" opacity="0.3" />
+                </g>
+              )}
+
+              {/* --- 2. Radar Forward Long-Range Cone (250m, 77GHz) --- */}
+              {(activeSensor === "all" || activeSensor === "radar") && (
+                <g className="transition-opacity duration-300">
+                  <path
+                    d="M 300 135 L 210 15 A 180 180 0 0 1 390 15 Z"
+                    fill="url(#radarBeamPage)"
+                    stroke="#34d399"
+                    strokeWidth="1.2"
+                    opacity="0.8"
+                  />
+                  <path d="M 240 55 A 140 140 0 0 1 360 55" stroke="#34d399" strokeWidth="1" strokeDasharray="2 3" opacity="0.6" />
+                  <path d="M 265 95 A 90 90 0 0 1 335 95" stroke="#34d399" strokeWidth="1" strokeDasharray="2 3" opacity="0.6" />
+                  <text x="300" y="22" textAnchor="middle" fill="#34d399" fontSize="9" fontFamily="monospace" fontWeight="bold">
+                    77GHz DOPPLER RADAR // 250m MENZİL
+                  </text>
+                </g>
+              )}
+
+              {/* --- 3. 4x Surround HDR Cameras (120° FOV Each) --- */}
+              {(activeSensor === "all" || activeSensor === "camera") && (
+                <g className="transition-opacity duration-300" opacity="0.75">
+                  <polygon points="300,140 200,45 400,45" fill="rgba(245,158,11,0.08)" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2 2" />
+                  <polygon points="280,170 170,95 170,245" fill="rgba(245,158,11,0.08)" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2 2" />
+                  <polygon points="320,170 430,95 430,245" fill="rgba(245,158,11,0.08)" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2 2" />
+                  <polygon points="300,205 210,295 390,295" fill="rgba(245,158,11,0.08)" stroke="#f59e0b" strokeWidth="1" strokeDasharray="2 2" />
+                </g>
+              )}
+
+              {/* --- 4. Vehicle Chassis Silhouette (Hyundai E-GMP 3.000 mm Wheelbase) --- */}
+              <g>
+                <rect x="281" y="132" width="38" height="78" rx="8" fill="#0f172a" stroke="#475569" strokeWidth="1.5" />
+                <rect x="284" y="148" width="32" height="46" rx="4" fill="#1e293b" stroke="#334155" strokeWidth="1" />
+                
+                <rect x="277" y="140" width="4" height="12" rx="1.5" fill="#64748b" />
+                <rect x="319" y="140" width="4" height="12" rx="1.5" fill="#64748b" />
+                <rect x="277" y="190" width="4" height="12" rx="1.5" fill="#64748b" />
+                <rect x="319" y="190" width="4" height="12" rx="1.5" fill="#64748b" />
+
+                <line x1="272" y1="146" x2="272" y2="196" stroke="rgba(148,163,184,0.4)" strokeWidth="0.8" />
+                <text x="268" y="173" textAnchor="end" fill="rgba(148,163,184,0.7)" fontSize="7" fontFamily="monospace">3.000mm</text>
+
+                {/* Bumper Pods */}
+                <circle cx="286" cy="134" r="3" fill="#38bdf8" stroke="#ffffff" strokeWidth="1" />
+                <circle cx="314" cy="134" r="3" fill="#38bdf8" stroke="#ffffff" strokeWidth="1" />
+
+                {/* Roof LiDAR */}
+                <circle cx="300" cy="168" r="5" fill="#0284c7" stroke="#38bdf8" strokeWidth="1.5" />
+                <circle cx="300" cy="168" r="2" fill="#ffffff" />
+
+                {/* Sub-Trunk Compute Hub */}
+                <rect x="288" y="196" width="24" height="10" rx="2" fill="#047857" stroke="#34d399" strokeWidth="1" />
+                <text x="300" y="203" textAnchor="middle" fill="#ffffff" fontSize="6" fontFamily="monospace" fontWeight="bold">ORIN</text>
+
+                {/* CAN-FD Bus Backbone Line */}
+                {(activeSensor === "all" || activeSensor === "compute") && (
+                  <line x1="300" y1="136" x2="300" y2="196" stroke="#10b981" strokeWidth="1.5" strokeDasharray="3 2" />
+                )}
+              </g>
+
+              {/* Callout Labels with Connecting Hairlines */}
+              <g fontFamily="monospace" fontSize="8" fill="#94a3b8">
+                <path d="M 305 168 L 380 145 L 440 145" stroke="rgba(56,189,248,0.5)" strokeWidth="0.8" />
+                <text x="445" y="148" fill="#38bdf8" fontWeight="bold">OUSTER OS2-128 (TAVAN)</text>
+
+                <path d="M 283 134 L 210 120 L 150 120" stroke="rgba(56,189,248,0.5)" strokeWidth="0.8" />
+                <text x="145" y="123" textAnchor="end" fill="#38bdf8">2x LIVOX MID-360 (TAMPON)</text>
+
+                <path d="M 312 201 L 380 215 L 440 215" stroke="rgba(52,211,153,0.5)" strokeWidth="0.8" />
+                <text x="445" y="218" fill="#34d399" fontWeight="bold">JETSON ORIN + 100Hz CAN-FD</text>
+
+                <path d="M 277 170 L 210 190 L 150 190" stroke="rgba(245,158,11,0.5)" strokeWidth="0.8" />
+                <text x="145" y="193" textAnchor="end" fill="#f59e0b">4x SONY IMX390 GMSL2 HDR</text>
+              </g>
+            </svg>
+
+            {/* Bottom Right Homologation Tag */}
+            <div className="absolute bottom-3 right-3 flex items-center gap-2 text-[9px] font-mono text-slate-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+              <span>ISO 26262 ASIL-D & UN ECE R157 UYUMLU</span>
             </div>
           </div>
 
-          {/* Clean Monospaced Text Pills Selector (NO CLASSIFIED AD THUMBNAIL BOXES!) */}
-          <div className="flex flex-wrap items-center gap-2 pt-1">
-            {photos.map((p, idx) => (
-              <button
-                key={idx}
-                onClick={() => setSelectedPhoto(idx)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-all duration-200 cursor-pointer ${
-                  selectedPhoto === idx
-                    ? "bg-white text-slate-950 font-bold shadow-md"
-                    : "bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10"
-                }`}
-              >
-                0{idx + 1} // {p.title}
-              </button>
-            ))}
+          {/* Dynamic Specification Bar of Selected Sensor */}
+          <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1">
+            <div className="flex items-center justify-between text-[10px] font-mono">
+              <span className="text-slate-300 font-semibold">{current.tag}</span>
+              <span className="text-slate-400">{current.metric}</span>
+            </div>
+            <div className="text-xs sm:text-sm font-bold text-white tracking-tight">
+              {current.title}
+            </div>
+            <p className="text-[11px] text-slate-300 leading-relaxed font-sans">
+              {current.desc}
+            </p>
           </div>
         </div>
 
@@ -399,8 +516,8 @@ export default function RobotaxiPage() {
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "5G GPS Coğrafi Çit (Geofence):" : "5G GPS Geofencing & Remote Kill:"}</b>{" "}
                   {lang === "tr"
-                    ? "Test sahası (BTM veya Bilişim Vadisi) dışına çıkış halinde motor kilitlenir; 7/24 teleoperasyon C2 ile yönetilir."
-                    : "Vehicle locks drive if exiting authorized test perimeter; monitored 24/7 via tactical desktop C2."}
+                    ? "Tanımlı Operasyonel Tasarım Alanı (ODD) ve coğrafi koridor dışına çıkış halinde motor kilitlenir; 7/24 teleoperasyon C2 ile yönetilir."
+                    : "Vehicle locks drive if exiting authorized Operational Design Domain (ODD) corridor; monitored 24/7 via tactical desktop C2."}
                 </span>
               </li>
             </ul>
@@ -408,57 +525,57 @@ export default function RobotaxiPage() {
 
         </div>
 
-        {/* 6. Four-Stage Proving Ground Plan (KUTUSUZ ENTEGRE ÇİZGİLİ ŞERİT) */}
+        {/* 6. Authentic Enterprise Integration & Validation Model */}
         <div className="space-y-3 pt-6 border-t border-white/10">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-white/10">
             <div>
               <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
-                // {lang === "tr" ? "SAHA TEST YOL HARİTASI" : "DEPLOYMENT ROADMAP"}
+                // {lang === "tr" ? "KURUMSAL ENTEGRASYON VE DOĞRULAMA MODELİ" : "ENTERPRISE INTEGRATION & VALIDATION PROTOCOL"}
               </div>
               <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                {lang === "tr" ? "4 Kademeli Test ve İzin Protokolü" : "4-Stage Safe Deployment Process"}
+                {lang === "tr" ? "4 Kademeli Otonomi Entegrasyon ve Dağıtım Modeli" : "4-Stage Autonomous Deployment Model"}
               </h2>
             </div>
             <div className="text-[10px] font-mono text-emerald-400 font-semibold">
-              UN ECE R157 & ADS UYUMLU
+              ISO 26262 ASIL-D & UN ECE R157 UYUMLU
             </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-3 border-y border-white/10 font-mono">
             <div className="py-2 px-3 first:pl-0 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 01 // SİMÜLASYON</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">Webots 3D Dijital İkiz</div>
+              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 01 // YAZILIM ÇEKİRDEĞİ</div>
+              <div className="text-xs sm:text-sm font-bold text-white font-sans">SIL & 3D Dijital İkiz</div>
               <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
-                1.301 birim test, SLAM haritalama, Pure Pursuit rota takibi.
+                Webots simülasyonu, 1.301 birim test, NDT SLAM haritalama, Pure Pursuit rota takibi.
               </div>
               <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">%100 Doğrulandı</div>
             </div>
 
             <div className="py-2 px-3 sm:pl-6 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 02 // KAPALI PİST</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">Bilişim Vadisi Gebze</div>
+              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 02 // CAN-FD HIL TESTİ</div>
+              <div className="text-xs sm:text-sm font-bold text-white font-sans">Aktüatör Bench Doğrulama</div>
               <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
-                1.5 km asfalt parkur, cansız mankenler, yapay kavşak ve dur-kalk akışı.
+                100 Hz LKAS11 direksiyon torku ve 50 Hz SCC_FD fren/gaz donanımsal bench testi.
               </div>
-              <div className="text-[10px] text-slate-400 font-medium pt-0.5">Sıfır Riskli Parkur</div>
+              <div className="text-[10px] text-slate-400 font-medium pt-0.5">5ms Emniyet Kesmesi</div>
             </div>
 
             <div className="py-2 px-3 sm:pl-6 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 03 // KAMPÜS</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">İTO BTM Fulya Kampüs</div>
+              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 03 // SENSÖR FÜZYONU</div>
+              <div className="text-xs sm:text-sm font-bold text-white font-sans">Zamansal Kalibrasyon</div>
               <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
-                Kapalı yerleşkede 20-30 km/s hızla otonom yolcu alma ve bırakma.
+                128 kanal LiDAR + 77GHz Radar + Sony HDR kamera uzaysal matris ve FSYNC kalibrasyonu.
               </div>
-              <div className="text-[10px] text-slate-400 font-medium pt-0.5">BTM Özel Alan İzni</div>
+              <div className="text-[10px] text-slate-400 font-medium pt-0.5">Santimetre Hassasiyet</div>
             </div>
 
             <div className="py-2 px-3 sm:pl-6 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 04 // AÇIK YOL</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">Şehir İçi Pilot Hat</div>
+              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 04 // FİLO ENTEGRASYONU</div>
+              <div className="text-xs sm:text-sm font-bold text-white font-sans">ODD Saha Validasyonu</div>
               <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
-                Koltukta emniyet sürücüsü eşliğinde karma trafikte Seviye 4 sürüş.
+                Kurumsal filo operatörleri ile tanımlı operasyonel koridorda ortak pilot validasyon.
               </div>
-              <div className="text-[10px] text-slate-400 font-medium pt-0.5">Sanayi Bak. & T Plaka</div>
+              <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">Filo İş Birliği Modeli</div>
             </div>
           </div>
         </div>
