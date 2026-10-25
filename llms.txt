@@ -35,7 +35,6 @@ Trustia AI, sivil ticari elektrikli araç filoları (Robotaksi) ve zorlu harekat
 - **İTO BTM:** Fulya Derin Teknoloji Kampüsü Yerleşik Girişimi.
 - **KOSGEB:** İleri Girişimci Sertifikası (KSB01UGE0115153370).
 - **BTK:** Savunma Sanayii ve Yapay Zeka Sertifikasyonu (L2zPtN4X1ZJ).
-- **Martı Technologies (TAVA İttifakı):** Robotaksi filo entegrasyonu ve teknik inceleme süreci.
 
 ## Önemli Sayfalar ve Dokümantasyon
 - Ana Sayfa: https://trustia.com.tr/
