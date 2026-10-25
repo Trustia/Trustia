@@ -170,42 +170,46 @@ export default function RobotaxiPage() {
           </div>
         </div>
 
-        {/* 2. Four KPI Metric Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="p-5 rounded-xl bg-[#0f131a] border border-slate-800 space-y-1">
-            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
+        {/* 2. Integrated 4-Metric Architectural Bar (KUTUSUZ & SAÇ ÇİZGİLİ) */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-6 border-y border-white/10 font-mono">
+          <div className="p-4 first:pl-0 space-y-1">
+            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY STACK"}
-            </div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">16.000+</div>
-            <div className="text-xs text-slate-400 font-medium">
-              {lang === "tr" ? "Satır Özgün C++ / Python" : "Lines of Sovereign Code"}
-            </div>
+            </span>
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">16.000+</div>
+            <span className="text-[11px] text-slate-400 block font-sans">
+              {lang === "tr" ? "Satır C++20 / Python Özgün Çekirdek" : "Lines of Sovereign C++20 / Python"}
+            </span>
           </div>
 
-          <div className="p-5 rounded-xl bg-[#0f131a] border border-slate-800 space-y-1">
-            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
-              {lang === "tr" ? "BİRİM & ENTEGRASYON TESTİ" : "AUTOMATED TESTS"}
-            </div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">1.301 / 1.301</div>
-            <div className="text-xs text-emerald-400 font-medium">
-              {lang === "tr" ? "%100 Başarı (0 Hata)" : "100% Pass Rate (0 Errors)"}
-            </div>
+          <div className="p-4 sm:pl-6 space-y-1">
+            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+              {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
+            </span>
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">1.301 / 1.301</div>
+            <span className="text-[11px] text-emerald-400 block font-sans font-medium">
+              {lang === "tr" ? "%100 Başarı (Sıfır Regresyon)" : "100% Pass Rate (Zero Regression)"}
+            </span>
           </div>
 
-          <div className="p-5 rounded-xl bg-[#0f131a] border border-slate-800 space-y-1">
-            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
+          <div className="p-4 sm:pl-6 space-y-1">
+            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "MERKEZİ HESAPLAMA" : "COMPUTE POWER"}
-            </div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">275 TOPS</div>
-            <div className="text-xs text-slate-400 font-medium">NVIDIA Jetson AGX Orin</div>
+            </span>
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">275 TOPS</div>
+            <span className="text-[11px] text-slate-400 block font-sans">
+              {lang === "tr" ? "NVIDIA Jetson AGX Orin 64GB" : "NVIDIA Jetson AGX Orin 64GB"}
+            </span>
           </div>
 
-          <div className="p-5 rounded-xl bg-[#0f131a] border border-slate-800 space-y-1">
-            <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider">
-              {lang === "tr" ? "ALGILAMA MENZİLİ" : "PERCEPTION RANGE"}
-            </div>
-            <div className="text-2xl sm:text-3xl font-bold text-white">240 Metre</div>
-            <div className="text-xs text-slate-400 font-medium">128 Kanal 3D LiDAR SLAM</div>
+          <div className="p-4 sm:pl-6 space-y-1">
+            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+              {lang === "tr" ? "LİDAR MENZİLİ" : "LIDAR RANGE"}
+            </span>
+            <div className="text-xl sm:text-2xl font-bold text-white tracking-tight">240 Metre</div>
+            <span className="text-[11px] text-slate-400 block font-sans">
+              {lang === "tr" ? "128 Kanal Ouster OS2 Rev 7" : "128-Channel Ouster OS2 Rev 7"}
+            </span>
           </div>
         </div>
 
@@ -221,7 +225,7 @@ export default function RobotaxiPage() {
               </h2>
             </div>
             <div className="text-xs font-mono text-slate-400">
-              {lang === "tr" ? "Görselleri incelemek için küçük resimlere tıklayın" : "Click thumbnails to inspect sensor locations"}
+              {lang === "tr" ? "Görselleri incelemek için sekmelere tıklayın" : "Click tabs to inspect sensor locations"}
             </div>
           </div>
 
@@ -233,7 +237,7 @@ export default function RobotaxiPage() {
               alt={photos[selectedPhoto].title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.01]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-black/60 pointer-events-none" />
 
             {/* Photo Caption Overlay */}
             <div className="absolute bottom-5 left-5 right-5 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
@@ -255,58 +259,51 @@ export default function RobotaxiPage() {
             </div>
           </div>
 
-          {/* Thumbnails Row */}
-          <div className="grid grid-cols-4 sm:grid-cols-7 gap-2.5">
-            {photos.map((p, i) => (
+          {/* Clean Monospaced Text Pills Selector (NO CLASSIFIED AD THUMBNAIL BOXES!) */}
+          <div className="flex flex-wrap items-center gap-2 pt-1">
+            {photos.map((p, idx) => (
               <button
-                key={i}
-                onClick={() => setSelectedPhoto(i)}
-                className={`relative rounded-lg overflow-hidden aspect-[4/3] border transition-all duration-200 cursor-pointer ${
-                  selectedPhoto === i
-                    ? "border-white ring-1 ring-white/60"
-                    : "border-slate-800 opacity-60 hover:opacity-100"
+                key={idx}
+                onClick={() => setSelectedPhoto(idx)}
+                className={`px-3.5 py-2 rounded-lg text-xs font-mono transition-all duration-200 cursor-pointer ${
+                  selectedPhoto === idx
+                    ? "bg-white text-slate-950 font-bold shadow-md"
+                    : "bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10"
                 }`}
               >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.src} alt={p.title} className="w-full h-full object-cover" />
-                <span className="absolute bottom-1 right-1 px-1.5 py-0.5 rounded bg-black/80 text-[8px] font-mono text-white font-bold">
-                  0{i + 1}
-                </span>
+                0${idx + 1} // {p.title}
               </button>
             ))}
           </div>
         </div>
 
-        {/* 4. Turnkey Sensor & Hardware Matrix */}
-        <div className="space-y-4">
+        {/* 4. Turnkey Sensor & Hardware Matrix (KUTUSUZ EDİTORYAL MİMARİ) */}
+        <div className="space-y-6 pt-6 border-t border-white/10">
           <div>
             <div className="text-xs font-mono text-slate-400 font-semibold tracking-wider uppercase">
-              {lang === "tr" ? "DONANIM VE SENSÖR MİMARİSİ" : "HARDWARE & SENSOR FUSION"}
+              // {lang === "tr" ? "DONANIM VE SENSÖR MİMARİSİ" : "HARDWARE & SENSOR FUSION"}
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
               {lang === "tr" ? "27 Parçalık Tam Teşekküllü Seviye 4 Donanım Seti" : "27-Item Level-4 Turnkey Sensor Suite"}
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 divide-y divide-white/10">
             {specs.map((item, idx) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={idx}
-                  className="p-5 rounded-xl bg-[#0f131a] border border-slate-800 hover:border-slate-700 transition-colors space-y-3"
-                >
-                  <div className="w-9 h-9 rounded-lg bg-slate-800/60 border border-slate-700 flex items-center justify-center text-slate-300">
+                <div key={idx} className="py-4 flex items-start gap-3.5">
+                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
                     <Icon className="w-4 h-4" />
                   </div>
-                  <div>
-                    <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                  <div className="space-y-0.5 min-w-0">
+                    <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
                       {item.title}
                     </div>
-                    <div className="text-sm font-bold text-white mt-0.5 leading-snug">
+                    <div className="text-sm font-bold text-white tracking-tight">
                       {item.val}
                     </div>
-                    <div className="text-[11px] text-slate-400 mt-1 leading-normal">
+                    <div className="text-xs text-slate-400 font-sans">
                       {item.sub}
                     </div>
                   </div>
