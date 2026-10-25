@@ -5,7 +5,6 @@ import HeroVideo from "@/components/HeroVideo";
 import RobotaxiShowcase from "@/components/RobotaxiShowcase";
 import SupportedPlatformsShowcase from "@/components/SupportedPlatformsShowcase";
 import FeatureVideo from "@/components/FeatureVideo";
-import TechMatrixShowcase from "@/components/TechMatrixShowcase";
 import Footer from "@/components/Footer";
 import ConsoleBranding from "@/components/ConsoleBranding";
 
@@ -18,10 +17,10 @@ export default function Home() {
       {/* 1. 100% Frameless Transparent Glass Navbar with Language Toggle */}
       <Navbar />
 
-      {/* 2. Apple / Console Scroll-Driven Shrink Hero Video */}
+      {/* 2. Fullscreen Video Background */}
       <HeroVideo />
 
-      {/* Sovereign Level 4 Robotaxi Platform Showcase (Hyundai Ioniq 5 E-GMP) */}
+      {/* 3. Sovereign Level 4 Robotaxi Platform Showcase (Hyundai Ioniq 5 E-GMP) */}
       <RobotaxiShowcase />
 
       {/* 4. Supported Vehicles & Integration Platforms Matrix */}
@@ -30,10 +29,7 @@ export default function Home() {
       {/* 5. Pure Panoramic Cinematic Video Strip */}
       <FeatureVideo />
 
-      {/* 6. Complete Executive Defense & Automotive Tech Matrix */}
-      <TechMatrixShowcase />
-
-      {/* 7. Comprehensive Corporate Footer */}
+      {/* 6. Comprehensive Corporate Footer */}
       <Footer />
     </main>
   );
