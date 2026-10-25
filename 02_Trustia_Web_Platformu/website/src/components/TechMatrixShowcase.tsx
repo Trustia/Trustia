@@ -100,7 +100,7 @@ export default function TechMatrixShowcase() {
   ];
 
   return (
-    <section id="teknoloji" className="relative z-20 py-20 sm:py-28 px-4 sm:px-8 lg:px-12 bg-[#07090d] border-b border-white/10">
+    <section id="teknoloji" className="relative z-40 py-20 sm:py-28 px-4 sm:px-8 lg:px-12 bg-[#07090d] rounded-t-[32px] sm:rounded-t-[44px] border-t border-white/15 shadow-[0_-25px_60px_rgba(0,0,0,0.95)]">
       <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
         
         {/* Executive Split Header */}
