@@ -137,6 +137,13 @@ export default function RootLayout({
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
         "description": "Milli Çift Amaçlı Seviye 4 Otonom Sürüş, V2X Akıllı Şehir ve Askeri İnsansız Kara Aracı (İKA) Otonomi Yazılım Platformu.",
+        "founder": {
+          "@type": "Person",
+          "name": "Murat Furkan Bayram",
+          "jobTitle": "Kurucu, Tek Pay Sahibi & Sistem Mimarı",
+          "nationality": "TR",
+          "sameAs": "https://www.linkedin.com/in/trustia"
+        },
         "foundingLocation": {
           "@type": "Place",
           "name": "İstanbul, Türkiye"
@@ -240,7 +247,7 @@ export default function RootLayout({
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
         "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.400+ satır C++/Python, 1.307 doğrulanmış test, OIN 2.0 patent korumalı.",
-        "softwareVersion": "3.0.0",
+        "softwareVersion": "4.2.0",
         "offers": {
           "@type": "Offer",
           "price": "0",

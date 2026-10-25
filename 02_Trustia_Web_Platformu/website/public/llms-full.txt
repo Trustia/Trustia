@@ -1,0 +1,53 @@
+# TRUSTIA AI TECHNOLOGIES — COMPREHENSIVE ARCHITECTURAL REFERENCE
+
+## Executive Summary
+Trustia AI Technologies is an autonomous systems engineering company founded and 100% owned by Murat Furkan Bayram (Founder, CEO & Lead Systems Architect), headquartered in Istanbul, Turkey. Trustia develops deterministic, sovereign Level-4 autonomous driving software cores for commercial electric vehicle fleets (passenger Robotaxis), defense robotics (Unmanned Ground Vehicles - UGVs), and heavy industrial transport (open-pit mining and seaport automated guided vehicles - AGVs).
+
+## Codebase & Verification Metrics
+- Total Proprietary Codebase: 19,390+ lines of native C++20, ROS 2 Humble, and Python 3.12.
+- Level-4 Autonomy Stack: 16,400+ lines of algorithmic core without external black-box library dependencies.
+- Automated Test Suite: 1,307 verified unit, simulation, and Hardware-in-the-Loop (HIL) tests passing with a 100% success rate (0 failures, 0 regressions).
+- Execution Speed: Entire 1,307-suite automated regression test runs in under 45 seconds on standard Linux CI pipelines.
+
+## Autonomy Stack Architecture
+1. Perception & Detection:
+   - 3D ground segmentation, European / domestic lane geometry detection.
+   - 3D bounding box obstacle clustering and kinematic velocity estimation.
+   - LWIR thermal camera & 77GHz radar sensor fusion for zero-light and heavy fog environments.
+2. Localization & Mapping (GNSS-Denied):
+   - 3D Normal Distributions Transform (NDT) LiDAR Pose-Graph SLAM.
+   - 400 Hz Error-State Kalman Filter (ESKF) fusing IMU and wheel odometry.
+   - Sub-5cm trajectory accuracy even inside tunnels, underground facilities, and electronic-warfare GPS-jammed sectors.
+3. Path Planning:
+   - Kinematic Hybrid A* search considering vehicle non-holonomic constraints (turning radius, wheelbase).
+   - Quintic polynomial path generation with jerk-limited acceleration profiles.
+4. Vehicle Actuation:
+   - 100 Hz SocketCAN CAN-FD bridge communicating with vehicle drive-by-wire (DBW) ECUs.
+   - Pure Pursuit and Stanley lateral path tracking controllers.
+   - SecOC (Secure Onboard Communication) with HMAC-SHA256 message authentication.
+5. Functional Safety (ISO 26262 ASIL-D):
+   - 50 ms Watchdog heartbeat monitor.
+   - 5 ms hardware steering/brake driver override.
+   - Minimal Risk Maneuver (MRM) executing a controlled deceleration of 1.5 m/s² to bring the vehicle safely to the road shoulder upon primary subsystem failure.
+   - Full UN ECE R157 and Turkish ADS (1 December 2024) compliant EDR/DSSAD autonomous black-box flight recorder.
+
+## Primary Vehicle Deployment: Hyundai Ioniq 5 Robotaxi
+- Platform: Hyundai E-GMP dedicated 800V EV architecture.
+- Sensor Kit:
+  - 1x Ouster OS2-128 long-range 3D LiDAR (240m range, 128 channels).
+  - 2x Livox Mid-360 solid-state blind-spot LiDARs.
+  - 4x Sony IMX390 automotive GMSL2 HDR cameras (120dB dynamic range).
+  - 1x Continental ARS408 77GHz long-range radar.
+  - Compute: NVIDIA Jetson AGX Orin 64GB delivering 275 TOPS of INT8 AI inference.
+
+## Corporate Registrations & Accreditations
+- ASELSAN A.Ş.: Approved Supplier Registry (#0050569, SAP: FZQHEXGFMTJU).
+- STM Savunma Teknolojileri: Candidate Supplier & Deep Tech Ecosystem Member.
+- Open Invention Network (OIN 2.0): Bilateral Executed Patent Non-Aggression Community License (#f1e445769a9934114db095c4f5430a0e749d8201).
+- European Commission: Participant Identification Code (EU PIC: 861711529).
+- EIT Urban Mobility: Official Innovation Partner (ID: CUS15554).
+- Teknopark İstanbul: Cube Incubation Startup & HASAT 2026 Acceleration Program.
+- İTO BTM: Istanbul Chamber of Commerce BTM (Fulya Deep Tech Campus) Resident.
+- KOSGEB: Advanced Entrepreneurship Certification (KSB01UGE0115153370).
+- BTK: Defense Industry and Artificial Intelligence Certification (L2zPtN4X1ZJ).
+- Martı Technologies: TAVA Alliance Robotaxi Fleet Integration and Technical Review.

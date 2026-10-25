@@ -4,7 +4,7 @@
   <!-- 1. Home / Ana Sayfa -->
   <url>
     <loc>https://trustia.com.tr/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/" />
@@ -14,7 +14,7 @@
   <!-- 2. Level 4 Robotaxi Showcase -->
   <url>
     <loc>https://trustia.com.tr/robotaxi/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/robotaxi/" />
@@ -24,7 +24,7 @@
   <!-- 3. About Us / Hakkımızda -->
   <url>
     <loc>https://trustia.com.tr/hakkimizda/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/hakkimizda/" />
@@ -34,7 +34,7 @@
   <!-- 4. Contact & Headquarters / İletişim -->
   <url>
     <loc>https://trustia.com.tr/iletisim/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/iletisim/" />
@@ -44,7 +44,7 @@
   <!-- 5. OIN 2.0 Global Patent Agreement -->
   <url>
     <loc>https://trustia.com.tr/politika/oin-lisans/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/oin-lisans/" />
@@ -54,7 +54,7 @@
   <!-- 6. Autonomy Licensing & SLA Policy -->
   <url>
     <loc>https://trustia.com.tr/politika/lisans/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/lisans/" />
@@ -64,7 +64,7 @@
   <!-- 7. Level 4 Safety & ISO 26262 ASIL-D Protocol -->
   <url>
     <loc>https://trustia.com.tr/politika/otonom-guvenlik/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/otonom-guvenlik/" />
@@ -74,7 +74,7 @@
   <!-- 8. 100% Sovereign Defense IP & National Technology Commitment -->
   <url>
     <loc>https://trustia.com.tr/politika/yerlilik/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/yerlilik/" />
@@ -84,7 +84,7 @@
   <!-- 9. Military-Grade Cyber Defense & Cryptography -->
   <url>
     <loc>https://trustia.com.tr/politika/siber/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/siber/" />
@@ -94,7 +94,7 @@
   <!-- 10. Autonomous Systems & AI Ethics Charter -->
   <url>
     <loc>https://trustia.com.tr/politika/etik/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/etik/" />
@@ -104,17 +104,17 @@
   <!-- 11. Intellectual Property & TÜRKPATENT Rights -->
   <url>
     <loc>https://trustia.com.tr/politika/mulkiyet/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/mulkiyet/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://trustia.com.tr/politika/mulkiyet/" />
   </url>
 
-  <!-- 12. Defense Export Controls (5201/MSB) & NATO NCAGE -->
+  <!-- 12. Defense Export Controls (5201/MSB Dual-Use) -->
   <url>
     <loc>https://trustia.com.tr/politika/ihracat/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/ihracat/" />
@@ -124,7 +124,7 @@
   <!-- 13. Data Privacy Policy (KVKK & GDPR) -->
   <url>
     <loc>https://trustia.com.tr/politika/kvkk/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/kvkk/" />
@@ -134,7 +134,7 @@
   <!-- 14. Data Privacy Policy Alias -->
   <url>
     <loc>https://trustia.com.tr/politika/gizlilik/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <xhtml:link rel="alternate" hreflang="tr" href="https://trustia.com.tr/politika/gizlilik/" />

@@ -1,5 +1,6 @@
 import PolicyDocumentView from "@/components/PolicyDocumentView";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 export interface PolicyContent {
   tr: {
@@ -761,6 +762,44 @@ export const policyData: Record<string, PolicyContent> = {
 
 export function generateStaticParams() {
   return Object.keys(policyData).map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const policy = policyData[resolvedParams.slug];
+  if (!policy) {
+    return {
+      title: "Kurumsal Politika | TRUSTIA AI",
+    };
+  }
+
+  return {
+    title: `${policy.tr.badge} — ${policy.tr.title} | TRUSTIA AI`,
+    description: policy.tr.summary,
+    alternates: {
+      canonical: `https://trustia.com.tr/politika/${resolvedParams.slug}/`,
+    },
+    openGraph: {
+      title: `${policy.tr.title} | TRUSTIA AI`,
+      description: policy.tr.summary,
+      url: `https://trustia.com.tr/politika/${resolvedParams.slug}/`,
+      siteName: "TRUSTIA AI",
+      images: [
+        {
+          url: "https://trustia.com.tr/og-image.jpg?v=2026",
+          width: 1200,
+          height: 630,
+          alt: policy.tr.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${policy.tr.title} | TRUSTIA AI`,
+      description: policy.tr.summary,
+      images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
+    },
+  };
 }
 
 export default async function PolicyPage({ params }: { params: Promise<{ slug: string }> }) {

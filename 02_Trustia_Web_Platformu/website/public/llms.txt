@@ -1,0 +1,47 @@
+# TRUSTIA AI TECHNOLOGIES (trustia.com.tr)
+
+> Deterministik Seviye-4 Otonom Sürüş ve Çift Amaçlı Otonomi Yazılım Çekirdeği
+
+Trustia AI, sivil ticari elektrikli araç filoları (Robotaksi) ve zorlu harekat sahalarında görev yapan savunma sistemleri için sıfırdan geliştirilmiş bağımsız, deterministik Seviye-4 otonom sürüş yazılım çekirdeği sunan derin teknoloji şirketidir.
+
+## Kurumsal Yönetişim ve Mülkiyet
+- **Kurucu, Tek Pay Sahibi ve Sistem Mimarı:** Murat Furkan Bayram (%100 Mülkiyet & Fikri Sermaye).
+- **Kuruluş Yeri:** İstanbul, Türkiye.
+- **Ar-Ge & Kuluçka Kampüsü:** İTO Bilgiyi Ticarileştirme Merkezi (BTM Fulya Yerleşkesi) & Teknopark İstanbul (Cube Incubation HASAT 2026).
+- **Resmi Web Sitesi:** https://trustia.com.tr
+- **Resmi E-posta:** iletisim@trustia.com.tr / kariyer@trustia.com.tr
+
+## Temel Mühendislik ve Yazılım Metrikleri
+- **Yazılım Çekirdeği Hacmi:** 16.400+ Satır özgün deterministik L4 otonomi çekirdeği (C++20, ROS 2 Humble ve Python 3.12 mimarisi; toplam kod tabanı 19.390+ satır).
+- **Doğrulanmış Test Kütüphanesi:** 1.307 / 1.307 otomatik birim, donanım döngülü (HIL) ve simülasyon testi (%100 Yeşil, 0 Hata, 0 Regresyon).
+- **Fonksiyonel Güvenlik:** ISO 26262 ASIL-D MRM (Minimal Risk Maneuver), 50ms Watchdog zamanlayıcısı, 5ms acil sürücü devralma (Hardware Override).
+- **Siber Güvenlik & Haberleşme:** 100 Hz SocketCAN CAN-FD köprüsü, SecOC kriptografik doğrulama (HMAC-SHA256).
+- **Konumlandırma:** GPS Olmayan (GNSS-Denied) sahalarda 3D NDT LiDAR SLAM ve 400 Hz Hata Durum Kalman Filtresi (ESKF) ile 4.2 cm yörünge hassasiyeti.
+- **Yörünge Planlama:** Kinematik Hibrit A* ve Quintic Polynomial yumuşak hız profilleri.
+
+## Referans Araç ve Platformlar
+- **Sivil Mobilite:** Hyundai Ioniq 5 (E-GMP Platformu) Seviye-4 Robotaksi Referans Mimarisi (128 Kanal Ouster OS2-128 LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar, 275 TOPS Jetson AGX Orin).
+- **Filo Entegrasyonu:** UN ECE R157 ve 1 Aralık 2024 ADS Yönetmeliği uyumlu EDR/DSSAD otonom kara kutu kaydı.
+- **Savunma ve Taktik:** Hafif, orta ve ağır sınıf İnsansız Kara Araçları (İKA), SAE JAUS AS6091 ve ROS 2 çift amaçlı taktik otonomi.
+- **Ağır Sanayi & Lojistik:** Maden ocakları, intermodal limanlar ve tarım arazileri için 7/24 sürücüsüz yük taşıyıcı (AGV) ve konvoy otonomisi.
+
+## Resmi Akreditasyonlar ve Tescil Kütüğü
+- **ASELSAN A.Ş.:** Onaylı Tedarikçi Kütüğü (Firma Kodu: #0050569, SAP: FZQHEXGFMTJU).
+- **STM Savunma Teknolojileri:** Aday Tedarikçi & Derin Teknoloji Ekosistem Kaydı.
+- **Open Invention Network (OIN 2.0):** Karşılıklı Patent Savunma Paktı Lisansı (#f1e445769a9934114db095c4f5430a0e749d8201).
+- **Avrupa Komisyonu:** Katılımcı Kimlik Kodu (EU PIC: 861711529).
+- **EIT Urban Mobility:** Resmi İnovasyon Ortağı (Partner ID: CUS15554).
+- **Teknopark İstanbul (Cube Incubation):** Ön Kuluçka Girişimi & HASAT 2026 Hızlandırma Programı.
+- **İTO BTM:** Fulya Derin Teknoloji Kampüsü Yerleşik Girişimi.
+- **KOSGEB:** İleri Girişimci Sertifikası (KSB01UGE0115153370).
+- **BTK:** Savunma Sanayii ve Yapay Zeka Sertifikasyonu (L2zPtN4X1ZJ).
+- **Martı Technologies (TAVA İttifakı):** Robotaksi filo entegrasyonu ve teknik inceleme süreci.
+
+## Önemli Sayfalar ve Dokümantasyon
+- Ana Sayfa: https://trustia.com.tr/
+- Hyundai Ioniq 5 Robotaksi Mimarisi: https://trustia.com.tr/robotaxi/
+- Kurumsal ve Mühendislik Vizyonu: https://trustia.com.tr/hakkimizda/
+- İletişim ve Ar-Ge Merkezi: https://trustia.com.tr/iletisim/
+- OIN Patent Koruma Bildirgesi: https://trustia.com.tr/politika/oin-lisans/
+- Otonom Emniyet ve ISO 26262 ASIL-D: https://trustia.com.tr/politika/otonom-guvenlik/
+- B2B Enterprise SDK ve Lisanslama: https://trustia.com.tr/politika/lisans/
