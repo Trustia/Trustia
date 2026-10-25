@@ -9,11 +9,11 @@ export default function GalleryShowcase() {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const photos = [
-    { src: "/gallery/1.webp", title: t("gallery_p1_title"), badge: t("gallery_p1_badge"), alt: "HAVELSAN BARKAN UGV" },
-    { src: "/gallery/2.jpg", title: t("gallery_p2_title"), badge: t("gallery_p2_badge"), alt: "OTOKAR ALPAR UGV" },
+    { src: "/gallery/1.webp", title: t("gallery_p1_title"), badge: t("gallery_p1_badge"), alt: "Tactical UGV Field Testing" },
+    { src: "/gallery/2.jpg", title: t("gallery_p2_title"), badge: t("gallery_p2_badge"), alt: "Heavy Tactical Autonomy Platform" },
     { src: "/gallery/3.jpeg", title: t("gallery_p3_title"), badge: t("gallery_p3_badge"), alt: "Obstacle Avoidance UGV" },
-    { src: "/gallery/4.jpg", title: t("gallery_p4_title"), badge: t("gallery_p4_badge"), alt: "HAVELSAN KAPGAN 8x8 UGV" },
-    { src: "/gallery/5.jpg", title: t("gallery_p5_title"), badge: t("gallery_p5_badge"), alt: "ENGA 6x6 Tactical UGV" },
+    { src: "/gallery/4.jpg", title: t("gallery_p4_title"), badge: t("gallery_p4_badge"), alt: "8x8 Tactical Autonomous Vehicle" },
+    { src: "/gallery/5.jpg", title: t("gallery_p5_title"), badge: t("gallery_p5_badge"), alt: "6x6 Swarm Autonomy Platform" },
   ];
 
   return (
