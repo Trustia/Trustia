@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hyundai Ioniq 5 Seviye 4 Referans Otonomi Mimarisi | TRUSTIA AI",
     description:
-      "27 parçalık doğrulanmış donanım kiti, 128 kanallı 3D LiDAR, 4x GMSL2 HDR kamera, 77GHz radar ve 16.000 satır deterministik yerli otonomi çekirdeği.",
+      "27 parçalık doğrulanmış donanım kiti, 128 kanallı 3D LiDAR, 4x GMSL2 HDR kamera, 77GHz radar ve 16.400+ satır deterministik yerli otonomi çekirdeği.",
     url: "https://trustia.com.tr/robotaxi/",
     siteName: "TRUSTIA AI",
     type: "website",

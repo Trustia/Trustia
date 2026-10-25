@@ -38,7 +38,7 @@ export default function AboutPage() {
   const specs = [
     { label: lang === "tr" ? "Fikri Mülkiyet & Sermaye" : "IP Custody & Equity", value: lang === "tr" ? "%100 Milli & Bağımsız" : "100% Sovereign & Proprietary" },
     { label: lang === "tr" ? "Yazılım Çekirdeği" : "Core Architecture", value: "C++20 • Python 3.12 • ROS 2" },
-    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.301 / 1.301 Test (%100 Başarı)" : "1,301 / 1,301 Unit Tests (100%)" },
+    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.307 / 1.307 Test (%100 Başarı)" : "1,307 / 1,307 Unit Tests (100%)" },
     { label: lang === "tr" ? "Fonksiyonel Emniyet" : "Safety Integrity", value: "ISO 26262 ASIL-D • 5ms Override" },
     { label: lang === "tr" ? "Konumlandırma (GNSS-Denied)" : "Localization (GNSS-Denied)", value: lang === "tr" ? "3D LiDAR SLAM • 4.2 cm Hassasiyet" : "3D LiDAR SLAM • 4.2 cm Drift" },
     { label: lang === "tr" ? "Araç Arayüzü (DBW)" : "Actuation Interface (DBW)", value: "100 Hz Standart CAN-FD / SecOC" },
@@ -252,8 +252,8 @@ export default function AboutPage() {
             </p>
             <p>
               {lang === "tr"
-                ? "Trustia AI; İstanbul merkezli olarak, fikri mülkiyeti bütünüyle yerli sermayeye ait, sıfırdan inşa edilmiş deterministik bir otonomi çekirdeği geliştirme kararıyla kurulmuştur. 16.000'i aşkın satırdan oluşan özgün C++20 ve Python mimarimiz; yabancı hiçbir kapalı kütüphaneye dayanmaksızın 1.301 otomatik test hattıyla doğrulanmış olup, sivil karayollarında Robotaksi filolarından zorlu coğrafyalardaki taktik savunma robotlarına kadar her türlü araç şasisine tak-çalıştır entegre edilebilmektedir."
-                : "Trustia AI was established in Istanbul with 100% sovereign equity and proprietary source code custody. Comprising over 16,000 lines of original C++20 and Python architecture, validated across 1,301 automated verification test suites, our stack interfaces plug-and-play across passenger EVs and tactical platforms alike."}
+                ? "Trustia AI; İstanbul merkezli olarak, fikri mülkiyeti bütünüyle yerli sermayeye ait, sıfırdan inşa edilmiş deterministik bir otonomi çekirdeği geliştirme kararıyla kurulmuştur. 16.400'ü aşkın satırdan oluşan özgün C++20 ve Python mimarimiz; yabancı hiçbir kapalı kütüphaneye dayanmaksızın 1.307 otomatik test hattıyla doğrulanmış olup, sivil karayollarında Robotaksi filolarından zorlu coğrafyalardaki taktik savunma robotlarına kadar her türlü araç şasisine tak-çalıştır entegre edilebilmektedir."
+                : "Trustia AI was established in Istanbul with 100% sovereign equity and proprietary source code custody. Comprising over 16,400 lines of original C++20 and Python architecture, validated across 1,307 automated verification test suites, our stack interfaces plug-and-play across passenger EVs and tactical platforms alike."}
             </p>
           </div>
         </div>

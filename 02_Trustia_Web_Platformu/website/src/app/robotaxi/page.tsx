@@ -153,8 +153,8 @@ export default function RobotaxiPage() {
               
               <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
                 {lang === "tr"
-                  ? "Kurumsal filolar ve OEM entegrasyonu için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.000 satır özgün deterministik otonomi şartnamesi."
-                  : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, and 100 Hz CAN-FD drive-by-wire across 16,000 lines of sovereign autonomy software."}
+                  ? "Kurumsal filolar ve OEM entegrasyonu için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.400+ satır özgün deterministik otonomi şartnamesi."
+                  : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, and 100 Hz CAN-FD drive-by-wire across 16,400+ lines of sovereign autonomy software."}
               </p>
             </div>
 
@@ -177,7 +177,7 @@ export default function RobotaxiPage() {
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY STACK"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.000+</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.400+</div>
             <span className="text-[10px] text-slate-400 block font-sans">
               {lang === "tr" ? "Satır C++20 / ROS 2" : "Lines of Code (C++20)"}
             </span>
@@ -187,7 +187,7 @@ export default function RobotaxiPage() {
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.301 / 1.301</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.307 / 1.307</div>
             <span className="text-[10px] text-emerald-400 block font-sans font-medium">
               {lang === "tr" ? "%100 Başarı (0 Hata)" : "100% Pass Rate"}
             </span>
@@ -546,7 +546,7 @@ export default function RobotaxiPage() {
               <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 01 // YAZILIM ÇEKİRDEĞİ</div>
               <div className="text-xs sm:text-sm font-bold text-white font-sans">SIL & 3D Dijital İkiz</div>
               <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
-                Webots simülasyonu, 1.301 birim test, NDT SLAM haritalama, Pure Pursuit rota takibi.
+                Webots simülasyonu, 1.307 birim test, NDT SLAM haritalama, Pure Pursuit rota takibi.
               </div>
               <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">%100 Doğrulandı</div>
             </div>

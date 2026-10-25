@@ -163,7 +163,7 @@ export default function RobotaxiShowcase() {
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY STACK"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.000+</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.400+</div>
             <span className="text-[10px] text-slate-400 block font-sans">
               {lang === "tr" ? "Satır C++20 / ROS 2" : "Lines of Code (C++20)"}
             </span>
@@ -173,7 +173,7 @@ export default function RobotaxiShowcase() {
             <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.301 / 1.301</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.307 / 1.307</div>
             <span className="text-[10px] text-emerald-400 block font-sans font-medium">
               {lang === "tr" ? "%100 Başarı (0 Hata)" : "100% Pass Rate"}
             </span>

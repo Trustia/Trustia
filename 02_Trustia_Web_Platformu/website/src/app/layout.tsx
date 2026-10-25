@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu",
     description:
-      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM ve 1.301 Doğrulanmış Test. AB PIC: 861711529, EITUM: CUS15554, Singapur Startup SG: #57428, İTO BTM & ASELSAN Akreditasyonlu.",
+      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM ve 1.307 Doğrulanmış Test. AB PIC: 861711529, EITUM: CUS15554, Singapur Startup SG: #57428, İTO BTM & ASELSAN Akreditasyonlu.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core",
     description:
-      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,301 verified tests. EU PIC: 861711529 • SG Startup SG: #57428.",
+      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,307 verified tests. EU PIC: 861711529 • SG Startup SG: #57428.",
     images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
@@ -239,7 +239,7 @@ export default function RootLayout({
         "name": "TRUSTIA AI Autonomous Core Stack",
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
-        "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.000+ satır C++/Python, 1.301 doğrulanmış test, OIN 2.0 patent korumalı.",
+        "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.400+ satır C++/Python, 1.307 doğrulanmış test, OIN 2.0 patent korumalı.",
         "softwareVersion": "3.0.0",
         "offers": {
           "@type": "Offer",
