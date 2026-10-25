@@ -172,7 +172,7 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
-            "name": "ASELSAN, NATO NCAGE (TR26258467723) and STM Defense Supplier Registry ID",
+            "name": "ASELSAN and STM Defense Supplier Registry ID",
             "value": "0050569"
           },
           {

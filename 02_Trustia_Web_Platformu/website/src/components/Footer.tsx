@@ -51,11 +51,6 @@ export default function Footer() {
                   <span className="text-slate-500 text-[11px]">#{'0050569'}</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-slate-300">
-                  <ShieldCheck className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                  <span>NATO / MSB NCAGE</span>
-                  <span className="text-slate-500 text-[11px]">TR26258467723</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-slate-300">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
                   <span>OIN Patent Paktı</span>
                   <span className="text-slate-500 text-[11px]">#{'f1e44576'}</span>
