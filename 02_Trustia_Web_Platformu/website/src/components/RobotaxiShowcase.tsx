@@ -120,7 +120,7 @@ export default function RobotaxiShowcase() {
   const current = sensorDetails[activeSensor];
 
   return (
-    <section id="robotaxi" className="relative z-20 py-12 sm:py-20 px-4 sm:px-8 lg:px-12 bg-[#06080c] rounded-t-[32px] sm:rounded-t-[44px] border-t border-white/15 shadow-[0_-25px_60px_rgba(0,0,0,0.95)]">
+    <section id="robotaxi" className="relative z-20 py-10 sm:py-16 px-4 sm:px-8 lg:px-12 bg-[#06080c] border-b border-white/10">
       <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8">
         
         {/* 1. Executive Split Header */}

@@ -7,7 +7,6 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function HeroVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const { lang } = useLanguage();
 
   useEffect(() => {
@@ -18,26 +17,6 @@ export default function HeroVideo() {
         playPromise.catch(() => {});
       }
     }
-  }, []);
-
-  useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentY = window.scrollY;
-          // Progress as user scrolls the first 500px
-          const progress = Math.min(1, Math.max(0, currentY / 500));
-          setScrollProgress(progress);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleSound = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -55,82 +34,40 @@ export default function HeroVideo() {
     }
   };
 
-  // Stacking Cards Depth Effect (Card 1)
-  // As Card 2 rises over Card 1, Card 1 scales down and dims into the background
-  const scale = 1 - scrollProgress * 0.08;
-  const overlayOpacity = scrollProgress * 0.5;
-  const indicatorOpacity = Math.max(0, 1 - scrollProgress * 2.5);
-
   return (
-    <div className="sticky top-0 left-0 w-full h-screen overflow-hidden z-10 flex items-center justify-center bg-[#05070a]">
-      {/* 3D Depth Card 1 Wrapper */}
-      <div
-        style={{
-          transform: `scale(${scale})`,
-          willChange: "transform",
-        }}
-        className="relative w-full h-full overflow-hidden transition-transform duration-75 ease-out"
+    <div className="relative w-full h-screen min-h-[580px] sm:min-h-[600px] overflow-hidden bg-[#07090c]">
+      {/* Fullscreen Video Background */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-105 pointer-events-auto"
       >
-        {/* Video Player */}
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-105 pointer-events-auto"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
+        <source src="/hero-video.mp4" type="video/mp4" />
+      </video>
 
-        {/* Dynamic Dark Depth Overlay (Dims as next card stacks on top) */}
-        <div
-          style={{ opacity: overlayOpacity }}
-          className="absolute inset-0 bg-black pointer-events-none z-2 transition-opacity duration-75"
-        />
+      {/* Subtle Dark Vignette & Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-black/20 to-black/40 pointer-events-none z-1" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#090b0e]/60 via-transparent to-transparent pointer-events-none z-1" />
 
-        {/* Ambient Dark Gradients */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-black/20 to-black/40 pointer-events-none z-1" />
-
-        {/* Sound Button */}
-        <button
-          type="button"
-          onClick={toggleSound}
-          className="absolute bottom-6 right-4 sm:bottom-8 sm:right-8 z-30 px-3.5 py-2.5 sm:px-4 sm:py-2 rounded-full bg-black/70 border border-white/25 text-slate-200 hover:text-[#C8FF00] hover:border-[#C8FF00]/60 active:scale-95 transition-all backdrop-blur-md pointer-events-auto flex items-center gap-2 text-xs font-mono select-none cursor-pointer shadow-2xl touch-manipulation min-h-[44px]"
-          title={lang === "tr" ? "Ses Kontrolü" : "Audio Control"}
-        >
-          {isMuted ? (
-            <VolumeX className="w-4 h-4 text-slate-400 group-hover:text-red-400 transition-colors" />
-          ) : (
-            <Volume2 className="w-4 h-4 text-[#C8FF00] animate-pulse" />
-          )}
-          <span className="font-semibold tracking-wide">
-            {isMuted ? (lang === "tr" ? "Sessiz" : "Muted") : (lang === "tr" ? "Ses Açık" : "Audio On")}
-          </span>
-        </button>
-
-        {/* Luxury Scroll Pill */}
-        <div
-          style={{
-            opacity: indicatorOpacity,
-            pointerEvents: indicatorOpacity > 0.1 ? "auto" : "none",
-          }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-slate-400/80 hover:text-white transition-opacity select-none"
-        >
-          <a
-            href="#robotaxi"
-            className="flex flex-col items-center gap-2 group cursor-pointer"
-            aria-label={lang === "tr" ? "Mimariyi İncele" : "Explore Architecture"}
-          >
-            <span className="text-[10px] font-mono tracking-widest uppercase text-slate-400 group-hover:text-[#C8FF00] transition-colors">
-              {lang === "tr" ? "MİMARİ" : "ARCHITECTURE"}
-            </span>
-            <div className="w-5 h-8 rounded-full border border-white/20 group-hover:border-[#C8FF00]/50 flex items-start justify-center p-1.5 backdrop-blur-sm bg-black/40 transition-colors shadow-lg">
-              <div className="w-1 h-2 rounded-full bg-white/70 group-hover:bg-[#C8FF00] animate-bounce transition-colors" />
-            </div>
-          </a>
-        </div>
-      </div>
+      {/* Responsive Touch-Friendly Sound Control Button */}
+      <button
+        type="button"
+        onClick={toggleSound}
+        className="absolute bottom-5 right-4 sm:bottom-8 sm:right-8 z-30 px-3.5 py-2.5 sm:px-4 sm:py-2 rounded-full bg-black/70 border border-white/25 text-slate-200 hover:text-[#C8FF00] hover:border-[#C8FF00]/60 active:scale-95 transition-all backdrop-blur-md pointer-events-auto flex items-center gap-2 text-xs font-mono select-none cursor-pointer shadow-2xl touch-manipulation min-h-[44px]"
+        title={lang === "tr" ? "Ses Kontrolü" : "Audio Control"}
+      >
+        {isMuted ? (
+          <VolumeX className="w-4 h-4 text-slate-400 group-hover:text-red-400 transition-colors" />
+        ) : (
+          <Volume2 className="w-4 h-4 text-[#C8FF00] animate-pulse" />
+        )}
+        <span className="font-semibold tracking-wide">
+          {isMuted ? (lang === "tr" ? "Sessiz" : "Muted") : (lang === "tr" ? "Ses Açık" : "Audio On")}
+        </span>
+      </button>
     </div>
   );
 }

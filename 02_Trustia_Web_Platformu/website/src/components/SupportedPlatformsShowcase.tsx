@@ -86,7 +86,7 @@ export default function SupportedPlatformsShowcase() {
   ];
 
   return (
-    <section id="otonomi" className="relative z-30 py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#080a0e] rounded-t-[32px] sm:rounded-t-[44px] border-t border-white/15 shadow-[0_-25px_60px_rgba(0,0,0,0.95)]">
+    <section id="otonomi" className="relative z-20 py-16 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#080a0e] border-b border-white/10">
       <div className="max-w-7xl mx-auto space-y-12 sm:space-y-16">
         
         {/* Executive Balanced Header (Left: Title & Badge, Right: Architectural Scope) */}
