@@ -2,12 +2,19 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Car, Shield, Tractor, ArrowRight, Check, ChevronDown } from "lucide-react";
+import { Car, Shield, Tractor, ArrowRight, Check } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function SupportedPlatformsShowcase() {
   const { lang } = useLanguage();
-  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const scrollLeft = e.currentTarget.scrollLeft;
+    const itemWidth = e.currentTarget.offsetWidth * 0.82;
+    const idx = Math.round(scrollLeft / itemWidth);
+    setActiveSlide(Math.min(Math.max(idx, 0), 2));
+  };
 
   const solutions = [
     {
@@ -118,62 +125,71 @@ export default function SupportedPlatformsShowcase() {
           </div>
         </div>
 
-        {/* 1. Mobile Tactical Accordion (lg:hidden) */}
-        <div className="block lg:hidden space-y-2.5">
-          {solutions.map((item, idx) => {
-            const Icon = item.icon;
-            const isOpen = openAccordion === idx;
-            return (
-              <div
-                key={item.id}
-                className={`border transition-all duration-300 overflow-hidden ${
-                  isOpen
-                    ? "border-[#14120c] bg-[#DCD0B8] shadow-md"
-                    : "border-[#26221b]/20 bg-[#DCD0B8]/70 hover:border-[#26221b]/40"
-                }`}
-              >
-                {/* Accordion Header Row */}
-                <button
-                  onClick={() => setOpenAccordion(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between p-3.5 text-left cursor-pointer transition-colors"
-                  aria-expanded={isOpen}
+        {/* 1. Mobile Horizontal Swipeable Cards (lg:hidden) */}
+        <div className="block lg:hidden space-y-3">
+          {/* Top Indicator */}
+          <div className="flex items-center justify-between text-[11px] font-mono text-[#5c5344]">
+            <div className="flex items-center gap-1.5 font-bold text-[#14120c]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#14120c] animate-pulse" />
+              <span>{lang === "tr" ? "KAYDIRARAK KEŞFEDİN" : "SWIPE TO EXPLORE"}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              {solutions.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-1.5 transition-all duration-300 ${
+                    activeSlide === i ? "w-5 bg-[#14120c]" : "w-1.5 bg-[#26221b]/25"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Swipe Track */}
+          <div
+            onScroll={handleScroll}
+            className="flex gap-3.5 overflow-x-auto snap-x snap-mandatory scrollbar-none pb-2 -mx-4 px-4"
+          >
+            {solutions.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.id}
+                  className="w-[84vw] max-w-[340px] shrink-0 snap-center p-5 bg-[#DCD0B8] border border-[#26221b]/20 shadow-md flex flex-col justify-between space-y-4"
                 >
-                  <div className="flex items-center gap-2.5 min-w-0 pr-2">
-                    <span className="font-mono text-xs font-bold text-[#26221b] shrink-0">
-                      {item.num} //
-                    </span>
-                    <div className="w-7 h-7 flex items-center justify-center bg-[#26221b]/10 text-[#14120c] shrink-0">
-                      <Icon className="w-3.5 h-3.5" />
+                  <div className="space-y-3.5">
+                    {/* Top Bar: Number & Category Badge */}
+                    <div className="flex items-center justify-between pb-3 border-b border-[#26221b]/15">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-xs font-bold text-[#26221b]">
+                          {item.num} //
+                        </span>
+                        <span className="px-2 py-0.5 bg-[#26221b]/10 border border-[#26221b]/20 text-[10px] font-mono text-[#14120c] uppercase tracking-wider font-bold">
+                          {item.tag}
+                        </span>
+                      </div>
+                      <div className="w-7 h-7 flex items-center justify-center bg-[#26221b]/10 text-[#14120c]">
+                        <Icon className="w-3.5 h-3.5" />
+                      </div>
                     </div>
-                    <div className="min-w-0">
-                      <div className="text-xs font-bold text-[#14120c] tracking-tight leading-snug truncate">
+
+                    {/* Title & Subtitle */}
+                    <div className="space-y-1">
+                      <h3 className="text-base font-bold text-[#14120c] tracking-tight leading-snug">
                         {item.title}
-                      </div>
-                      <div className="text-[10px] font-mono text-[#5c5344] uppercase tracking-wider truncate">
-                        {item.tag}
+                      </h3>
+                      <div className="text-[11px] font-mono text-[#5c5344]">
+                        {item.subtitle}
                       </div>
                     </div>
-                  </div>
 
-                  <div
-                    className={`w-6 h-6 border flex items-center justify-center shrink-0 transition-all duration-200 ${
-                      isOpen
-                        ? "bg-[#14120c] text-[#E5D6BC] border-[#14120c] rotate-180"
-                        : "bg-[#26221b]/10 text-[#14120c] border-[#26221b]/20"
-                    }`}
-                  >
-                    <ChevronDown className="w-3.5 h-3.5" />
-                  </div>
-                </button>
-
-                {/* Collapsible Content */}
-                {isOpen && (
-                  <div className="px-3.5 pb-4 pt-2 border-t border-[#26221b]/15 space-y-3 bg-[#D4C7AE]/50 animate-in fade-in duration-200">
+                    {/* Narrative Description */}
                     <p className="text-xs text-[#26221b] leading-relaxed font-sans">
                       {item.desc}
                     </p>
 
-                    <div className="space-y-1.5 pt-1">
+                    {/* Technical Specifications */}
+                    <div className="pt-2.5 border-t border-[#26221b]/15 space-y-1.5">
                       <div className="text-[10px] font-mono text-[#5c5344] uppercase tracking-wider font-bold">
                         {lang === "tr" ? "Teknik Yetkinlikler:" : "Key Technical Features:"}
                       </div>
@@ -184,28 +200,29 @@ export default function SupportedPlatformsShowcase() {
                         </div>
                       ))}
                     </div>
-
-                    <div className="pt-2 border-t border-[#26221b]/15 space-y-2.5">
-                      <div className="text-[10px] font-mono text-[#5c5344]">
-                        <span className="text-[#14120c] font-bold">
-                          {lang === "tr" ? "Uyumlu Şasi:" : "Compatible Fleet:"}
-                        </span>{" "}
-                        <span className="text-[#26221b]">{item.fleet}</span>
-                      </div>
-
-                      <Link
-                        href={item.ctaLink}
-                        className="w-full py-2.5 px-3 bg-[#14120c] hover:bg-black text-[#E5D6BC] flex items-center justify-between text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
-                      >
-                        <span>{item.ctaText}</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
                   </div>
-                )}
-              </div>
-            );
-          })}
+
+                  {/* Bottom Footer: Compatible Fleet & Button */}
+                  <div className="pt-3 border-t border-[#26221b]/15 space-y-3">
+                    <div className="text-[10px] font-mono text-[#5c5344]">
+                      <span className="text-[#14120c] font-bold">
+                        {lang === "tr" ? "Uyumlu Şasi:" : "Compatible Fleet:"}
+                      </span>{" "}
+                      <span className="text-[#26221b]">{item.fleet}</span>
+                    </div>
+
+                    <Link
+                      href={item.ctaLink}
+                      className="w-full py-2.5 px-3 bg-[#14120c] hover:bg-black text-[#E5D6BC] flex items-center justify-between text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                    >
+                      <span>{item.ctaText}</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         {/* 2. Desktop 3-Column Panels (Overland AI Tactical Sand Style) */}
