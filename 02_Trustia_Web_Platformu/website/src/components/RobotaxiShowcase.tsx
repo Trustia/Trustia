@@ -6,6 +6,15 @@ import { ArrowRight, ShieldCheck, Cpu, Eye, Radio, Zap, Layers, Activity } from 
 import { useLanguage } from "@/context/LanguageContext";
 import TacticalVehicleWireframe, { MIFA7_CALLOUTS } from "@/components/TacticalVehicleWireframe";
 
+const COMPONENT_TABS = [
+  { id: "lidar", labelTr: "3D LİDAR", labelEn: "3D LIDAR" },
+  { id: "livox", labelTr: "KÖR NOKTA", labelEn: "BLIND SPOT" },
+  { id: "canfd", labelTr: "CAN-FD SÜRÜŞ", labelEn: "CAN-FD DRIVE" },
+  { id: "compute", labelTr: "OTONOM BEYİN", labelEn: "AI COMPUTE" },
+  { id: "vision", labelTr: "360° KAMERA", labelEn: "360° VISION" },
+  { id: "safety", labelTr: "EMNİYET HAKEMİ", labelEn: "SAFETY ARBITER" },
+];
+
 export default function RobotaxiShowcase() {
   const { lang } = useLanguage();
   const [activeCalloutId, setActiveCalloutId] = useState<string>("lidar");
@@ -111,8 +120,8 @@ export default function RobotaxiShowcase() {
         - SAIC Maxus MIFA 7 Tripy Mobility Otonom Robotaksi Şasisi
       */}
 
-      {/* Arka Plan Silik Taktiksel Damga Metni */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] sm:text-[14vw] font-mono font-black text-white/[0.015] tracking-tighter uppercase pointer-events-none select-none whitespace-nowrap z-0">
+      {/* Arka Plan Silik Taktiksel Damga Metni (Tam Aracın Arkasında) */}
+      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[11vw] sm:text-[13vw] font-mono font-black text-white/[0.015] tracking-tighter uppercase pointer-events-none select-none whitespace-nowrap z-0">
         TRIPY MIFA 7
       </div>
 
@@ -178,21 +187,22 @@ export default function RobotaxiShowcase() {
               <span className="text-slate-400 hidden sm:inline">DİNGİL: 2.975mm • UZUNLUK: 4.907mm</span>
             </div>
 
-            {/* Frameless Tactical Selector Strip */}
-            <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-1 -mx-2 px-2 sm:mx-0 sm:px-0">
-              {MIFA7_CALLOUTS.map((callout) => {
-                const isActive = activeCalloutId === callout.id;
+            {/* Frameless Tactical Selector Strip (100% SIFIR KUTU, PURE UNDERLINE TABS) */}
+            <div className="flex items-center gap-2 sm:gap-4 overflow-x-auto no-scrollbar py-1 -mx-2 px-2 sm:mx-0 sm:px-0">
+              {COMPONENT_TABS.map((tab) => {
+                const isActive = activeCalloutId === tab.id;
                 return (
                   <button
-                    key={callout.id}
-                    onClick={() => setActiveCalloutId(callout.id)}
-                    className={`shrink-0 px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider transition-all duration-150 cursor-pointer ${
+                    key={tab.id}
+                    onClick={() => setActiveCalloutId(tab.id)}
+                    className={`shrink-0 pb-1.5 pt-1 px-1 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase transition-all duration-150 cursor-pointer flex items-center gap-1.5 border-b-2 ${
                       isActive
-                        ? "bg-[#E4F80D] text-black font-bold shadow-[0_0_10px_rgba(228,248,13,0.4)]"
-                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                        ? "text-[#E4F80D] font-bold border-[#E4F80D] drop-shadow-[0_0_8px_rgba(228,248,13,0.6)]"
+                        : "text-slate-400 hover:text-white border-transparent"
                     }`}
                   >
-                    {callout.name.split(" ")[0]}
+                    {isActive && <span className="w-1.5 h-1.5 bg-[#E4F80D]" />}
+                    <span>{lang === "tr" ? tab.labelTr : tab.labelEn}</span>
                   </button>
                 );
               })}
