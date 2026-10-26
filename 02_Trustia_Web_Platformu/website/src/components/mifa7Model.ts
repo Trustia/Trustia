@@ -1,6 +1,6 @@
-// SAIC Maxus MIFA 7 Autonomous Robotaxi (Tripy Mobility) 3D Wireframe Model
+// SAIC Maxus MIFA 7 Autonomous Robotaxi 3D Wireframe Model
 // 100% Authentic Procedural Vector CAD Geometry: 2975mm Wheelbase, 4907mm Length, 1768mm Height
-// Tripy Aerodynamic Roof Sensor Pod, Twin Front Camera Cowlings, Central LiDAR, Vertical LED Fangs
+// Aerodynamic Roof Sensor Pod, Twin Front Camera Cowlings, Central LiDAR, Vertical LED Fangs
 
 export interface Mifa7WireframeModel {
   PXYZ: Float32Array;

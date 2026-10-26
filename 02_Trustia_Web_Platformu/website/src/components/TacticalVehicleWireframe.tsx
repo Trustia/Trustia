@@ -15,7 +15,7 @@ export const MIFA7_CALLOUTS: TacticalCallout[] = [
   {
     id: "lidar",
     name: "OUSTER OS2-128 3D LIDAR",
-    at: [0, 1950, 800], // Center of Tripy aerodynamic roof pod
+    at: [0, 1950, 800], // Center of aerodynamic roof pod
     dir: [0, 1.2, 0.3],
     spec: "240m Menzil • 3D NDT SLAM • 2.62M Nokta/sn",
   },
@@ -31,7 +31,7 @@ export const MIFA7_CALLOUTS: TacticalCallout[] = [
     name: "100Hz CAN-FD DRIVE-BY-WIRE",
     at: [-420, 650, 1200], // EPS steering rack & i-Booster
     dir: [0, -0.6, 1.2],
-    spec: "Tripy EPS & i-Booster • 1.4 ms Gecikme • 5 ms Devralma Kesmesi",
+    spec: "Şasi EPS & i-Booster • 1.4 ms Gecikme • 5 ms Devralma Kesmesi",
   },
   {
     id: "compute",

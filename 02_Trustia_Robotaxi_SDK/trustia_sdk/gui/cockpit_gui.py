@@ -1,6 +1,6 @@
 """
 TRUSTIA Otonomi Platformu — Kurumsal Seviye-4 Robotaksi Kokpit ve Teşhis Konsolu (GUI).
-SAIC Maxus MIFA 7 & Tripy Mobility Saha Test ve Operatör Arayüzü.
+SAIC Maxus MIFA 7 Saha Test ve Operatör Arayüzü.
 
 Tamamen Sivil, Modern Karanlık Tema (Dark Tech UI) — Sıfır Üçüncü Taraf Bağımlılık (Saf Tkinter).
 """
@@ -22,7 +22,7 @@ from trustia_sdk.perception.calmcar_bridge import CalmCarSafetyArbiter
 
 
 class RobotaxiCockpitApp(tk.Tk):
-    """Tripy Mobility SAIC Maxus MIFA 7 Saha ve Mühendislik Kokpit Konsolu."""
+    """SAIC Maxus MIFA 7 Saha ve Mühendislik Kokpit Konsolu."""
 
     def __init__(self) -> None:
         super().__init__()

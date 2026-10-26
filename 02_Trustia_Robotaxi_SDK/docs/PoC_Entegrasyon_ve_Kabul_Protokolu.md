@@ -1,8 +1,8 @@
-# TRUSTIA AI x TRIPY MOBILITY (SAIC MAXUS MIFA 7)
+# TRUSTIA SEVİYE-4 ROBOTAKSİ PLATFORMU (SAIC MAXUS MIFA 7)
 ## Seviye-4 Otonom Sürüş PoC Entegrasyon ve Kabul Protokolü (ICD)
 
 **Belge No:** TRU-ICD-2026-MIFA7  
-**Hedef Muhatap:** Mustafa Nicem Tanyeri (CTO, Tripy Mobility)  
+**Kapsam:** SAIC Maxus MIFA 7 Elektrikli MPV Seviye-4 Otonomi Entegrasyonu  
 **Sistem Mimarı:** Murat Furkan Bayram (%100 Fikri Mülkiyet Sahibi)  
 **Standartlar:** ISO 26262:2018 ASIL-D • ISO 11898-1:2015 CAN-FD • UN/ECE R157 ALKS • ISO 14229 UDS  
 
@@ -137,16 +137,20 @@ Tam DBC dosyası [canbus/maxus_mifa7_chassis.dbc](file:///C:/Users/Asus/Desktop/
 
 ---
 
-### 5. TOPLANTI PROTOKOLÜ: MUTUAL NDA VE 60 GÜNLÜK POC PROTOKOLÜ
+### 5. POC TEST AŞAMALARI VE KABUL KRİTERLERİ (ACCEPTANCE CRITERIA)
 
-Salı günü masaya oturulduğunda imzalanacak hukuki protokolün şartları:
+PoC süreci aşağıdaki 3 fazda ve teknik doğrulama kriterlerine göre icra edilir:
 
-1. **Fikri Mülkiyet (IP) Garantisi:**
+1. **Fikri Mülkiyet ve Dağıtım Modeli:**
    * Trustia AI algoritmaları, Hybrid A* kinematik modeli ve ASIL-D güvenlik hakemi kodları Murat Furkan Bayram'ın %100 şahsi mülkiyetindedir (5846 Sayılı FSEK m.8).
-   * Tripy Mobility'ye kaynak kodu verilmez; derlenmiş kapalı kutu Linux binary'si (`.so`) ve `vehicle_config.yaml` ayar dosyası teslim edilir.
-2. **60 Günlük PoC Yol Haritası:**
-   * **Gün 1 - 15:** Maxus MIFA 7 CAN-FD veriyolu dinleme, DBC eşleme ve direksiyon/fren aktüatör kalibrasyonu.
-   * **Gün 16 - 35:** CalmCar algı akışı ile Trustia Safety Arbiter'ın laboratuvar bench testi.
-   * **Gün 36 - 60:** Hacettepe Teknokent kapalı pistinde 50 km/s hızda otonom sürüş, engel kaçınma ve MRM güvenli durma testi.
-3. **Kapanış & Sermaye Girişi:**
-   * PoC başarıyla tamamlandığında MİA Teknoloji'den **15 - 20 Milyon TL PEŞİN NAKİT sermaye girişi (%15-%20 azınlık payı karşılığı)** ve araç başı aylık **350 - 500 USD lisans anlaşması** imzalanır.
+   * Müşteri ve entegratörlere açık kaynak `.py` kodu teslim edilmez; derlenmiş kapalı kutu Linux binary'si (`.so` / `.pyc`), HMAC donanım kilidi ve `vehicle_config.yaml` ayar dosyası formatında teslim edilir.
+
+2. **60 Günlük PoC Mühendislik Yol Haritası:**
+   * **Faz 1 (Gün 1 - 15) Veri Yolu ve Aktüatör Eşlemesi:** Maxus MIFA 7 CAN-FD veriyolu dinleme, DBC sinyal eşleme, direksiyon açısı ve fren aktüatör kalibrasyonu.
+   * **Faz 2 (Gün 16 - 35) Çoklu Algı ve Emniyet Hakemi Entegrasyonu:** CalmCar / kamera algı akışı ile Trustia Safety Arbiter'ın laboratuvar bench testi, 50ms Watchdog doğrulama.
+   * **Faz 3 (Gün 36 - 60) Kapalı Pist Otonom Sürüş Doğrulaması:** Kapalı test pistinde 50 km/s azami hızda şerit takip, kavşak geçişi, dinamik engel kaçınma ve MRM güvenli durma kabul testleri.
+
+3. **Teknik Kabul ve Devreye Alma Kriterleri:**
+   * Uçtan uca döngü gecikmesinin $\le 95.0\ \text{ms}$ olduğu tescillenmelidir.
+   * Acil durumlarda 50 ms içinde MRM devreye girmeli, 1.5 m/s² kontrollü frenlemeyle araç emniyet şeridine çekilmelidir.
+   * Donanımsal devralmada (takeover) $\ge 3.5\ \text{Nm}$ direksiyon veya $\ge 8.0\ \text{bar}$ fren müdahalesinde 5 ms içinde otonomi manuel sürücüye devredilmelidir.

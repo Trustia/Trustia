@@ -3,7 +3,7 @@ TRUSTIA Otonomi Teknolojileri — Seviye-4 Robotaksi Kurumsal SDK (v2.4-Enterpri
 Milli Otonom Sürüş Güvenlik Hakemi, CAN-FD Denetleyici ve Seyrüsefer Motoru.
 
 Fikri Mülkiyet Sahibi: Murat Furkan Bayram (%100 Hisse)
-Müşteri / Hedef Platform: Tripy Mobility & MİA Teknoloji (SAIC Maxus MIFA 7)
+Referans Platform: SAIC Maxus MIFA 7 Elektrikli MPV
 Standartlar: ISO 26262 ASIL-D • ISO 11898-1 CAN-FD • UN/ECE R157 • KVKK m.9 Uyumlu
 """
 

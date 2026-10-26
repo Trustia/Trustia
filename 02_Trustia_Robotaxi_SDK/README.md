@@ -10,7 +10,7 @@
 
 ## 1. MİMARİ GENEL BAKIŞ
 
-Bu SDK, **Tripy Mobility** ve **MİA Teknoloji** ortaklığı kapsamında SAIC Maxus MIFA 7 elektrikli MPV araçlarının Seviye-4 otonom taksi operasyonlarına dönüştürülmesi için geliştirilmiş **%100 Milli Deterministik Güvenlik Hakemi, Seyrüsefer ve CAN-FD Aktüatör Kütüphanesidir**.
+Bu SDK, SAIC Maxus MIFA 7 elektrikli MPV platformu ve ticari filo operasyonları için geliştirilmiş **%100 Milli Deterministik Güvenlik Hakemi, Seyrüsefer ve CAN-FD Aktüatör Kütüphanesidir**.
 
 ```
                            ┌───────────────────────────────┐
@@ -55,7 +55,7 @@ Bu SDK, **Tripy Mobility** ve **MİA Teknoloji** ortaklığı kapsamında SAIC M
   * `planning/`: SAIC Maxus MIFA 7 kinematik Hybrid A* rota planlayıcısı (`hybrid_astar.py`).
   * `control/`: Stanley yol takip ve boyuna hız PID denetleyicisi (`stanley_controller.py`).
   * `safety/`: ISO 26262 ASIL-D Minimal Risk Maneuver (MRM) ve 50ms Watchdog (`asil_d_mrm.py`).
-  * `fleet/`: Tripy merkezi bulut platformu için JSON telemetri ve görev köprüsü (`telemetry_api.py`).
+  * `fleet/`: Merkezi filo bulut platformu ve operasyon merkezi için JSON telemetri ve görev köprüsü (`telemetry_api.py`).
   * `gui/`: Sivil test sürücüsü ve saha mühendisi Robotaksi Kokpit Konsolu (`cockpit_gui.py`).
 * `robotaxi_cli.py`: Komut satırı yönetim aracı.
 * `tests/test_sdk.py`: 9 temel alt sistemin otomatik doğrulama süiti.
@@ -86,10 +86,10 @@ python robotaxi_cli.py audit
 
 ---
 
-## 4. TRIPY MÜHENDİSLİK ENTEGRASYON REHBERİ
+## 4. KURUMSAL FİLO VE MÜHENDİSLİK ENTEGRASYON REHBERİ
 
 ### Parametre Değişikliği (Kod Düzenlemeye Gerek Yoktur)
-Tripy mühendisleri araç dingil mesafesini, maksimum hız sınırını veya CAN ID'lerini değiştirmek istediklerinde **kaynak koda dokunmaz**. Tüm ayarlar `config/maxus_mifa7.yaml` dosyasından yönetilir:
+Saha ve entegrasyon mühendisleri araç dingil mesafesini, maksimum hız sınırını veya CAN ID'lerini değiştirmek istediklerinde **kaynak koda dokunmaz**. Tüm ayarlar `config/maxus_mifa7.yaml` dosyasından yönetilir:
 
 ```yaml
 vehicle:

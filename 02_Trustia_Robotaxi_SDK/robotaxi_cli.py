@@ -7,7 +7,7 @@ Kullanım:
   python robotaxi_cli.py drive        -> SAIC Maxus MIFA 7 100 Hz CAN-FD Otonom Sürüş Döngüsünü Başlatır
   python robotaxi_cli.py audit        -> ISO 26262 ASIL-D & 1 Aralık 2024 Resmî Gazete Tebliği Uygunluk Denetimi
   python robotaxi_cli.py test         -> Bağımsız Birim ve Entegrasyon Testlerini Çalıştırır
-  python robotaxi_cli.py license      -> Tripy Mobility Ticari Lisans Durumunu ve HMAC İmzasını Doğrular
+  python robotaxi_cli.py license      -> Kurumsal Ticari Lisans Durumunu ve HMAC İmzasını Doğrular
   python robotaxi_cli.py info         -> Kurumsal Kimlik, Tesciller (AB PIC, EIT) ve Künye Bilgisi
 """
 
@@ -30,7 +30,7 @@ def run_drive():
     print("=" * 75)
     print("  TRUSTIA AI — SAIC MAXUS MIFA 7 SEVİYE-4 CAN-FD ROBOTAKSİ DÖNGÜSÜ")
     print("=" * 75)
-    print("Hedef Platform : SAIC Maxus MIFA 7 Electric MPV (Tripy Mobility)")
+    print("Hedef Platform : SAIC Maxus MIFA 7 Electric MPV")
     print("İletişim Hattı : ISO 11898-1 CAN-FD (500 kbps Arbitraj / 2 Mbps Veri)")
     print("Hesaplama Ünitesi: CalmCar Horizon Robotics Journey 6 (J6M) + Infineon TC397")
     print("Emniyet Standardı: ISO 26262 ASIL-D Minimal Risk Maneuver (MRM)")
@@ -97,7 +97,7 @@ def run_audit():
         print(f"  * {title:<52} : [ {status} ]")
 
     print("-" * 75)
-    print("UYGUNLUK KARARI: Tripy Mobility SAIC Maxus MIFA 7 Kapalı Alan PoC Testine Hazır!")
+    print("UYGUNLUK KARARI: SAIC Maxus MIFA 7 Kapalı Alan PoC Testine Hazır!")
     print("=" * 75)
 
 
@@ -128,7 +128,7 @@ def run_info():
     print("  TRUSTIA AI TEKNOLOJİLERİ — SEVİYE-4 ROBOTAKSİ PLATFORM KÜNYESİ")
     print("=" * 75)
     print("Kurucu & Sistem Mimarı: Murat Furkan Bayram (%100 Fikri Mülkiyet)")
-    print("Hedef Müşteri & Partner: Tripy Mobility & MİA Teknoloji (SAIC Maxus MIFA 7)")
+    print("Referans Platform: SAIC Maxus MIFA 7 Seviye-4 Robotaksi")
     print("Merkez: İTO Bilgiyi Ticarileştirme Merkezi (BTM) Fulya Yerleşkesi, İstanbul")
     print("-" * 75)
     print("RESMİ AKREDİTASYON VE TESCİLLER:")

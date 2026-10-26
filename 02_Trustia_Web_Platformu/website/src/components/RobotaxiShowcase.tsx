@@ -57,8 +57,8 @@ export default function RobotaxiShowcase() {
       badge: "ÖN TAMPON KÖR NOKTA",
     },
     canfd: {
-      titleTr: "100 Hz Senkron CAN-FD Aktüatör Köprüsü (Tripy EPS & i-Booster)",
-      titleEn: "100 Hz Synchronous CAN-FD Bridge (Tripy EPS & i-Booster)",
+      titleTr: "100 Hz Senkron CAN-FD Aktüatör Köprüsü (Şasi EPS & i-Booster)",
+      titleEn: "100 Hz Synchronous CAN-FD Bridge (Chassis EPS & i-Booster)",
       tagTr: "DONANIMSAL AKTÜASYON & SÜRÜŞ KÖPRÜSÜ",
       tagEn: "DRIVE-BY-WIRE & CHASSIS ACTUATION",
       descTr:

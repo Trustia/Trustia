@@ -5,8 +5,8 @@
 # ==============================================================================
 
 vehicle:
-  name: "Tripy SAIC Maxus MIFA 7 Autonomous Robotaxi"
-  platform_id: "TRIPY-MIFA7-L4-001"
+  name: "SAIC Maxus MIFA 7 Autonomous Robotaxi"
+  platform_id: "MAXUS-MIFA7-L4-001"
   vehicle_type: "PASSENGER_EV_MPV"
   wheel_base_m: 2.975             # SAIC Maxus MIFA 7 dingil mesafesi (mm -> m)
   front_track_width_m: 1.615      # Ön iz genişliği (Fabrika el kitabı)
