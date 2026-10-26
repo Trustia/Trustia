@@ -31,8 +31,8 @@ export default function HeroVideo() {
       </video>
 
       {/* Subtle Dark Vignette & Ambient Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#090b0e] via-black/20 to-black/40 pointer-events-none z-1" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#090b0e]/60 via-transparent to-transparent pointer-events-none z-1" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#221d16] via-black/20 to-black/40 pointer-events-none z-1" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#221d16]/60 via-transparent to-transparent pointer-events-none z-1" />
     </div>
   );
 }

@@ -111,38 +111,38 @@ export default function RobotaxiShowcase() {
   return (
     <section
       id="robotaxi"
-      className="relative z-20 pt-20 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-12 bg-[#090b0e] text-white select-none overflow-hidden scroll-mt-20 sm:scroll-mt-28"
+      className="relative z-20 pt-20 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-12 bg-gradient-to-b from-[#221d16] via-[#2f281f] to-[#252018] text-white select-none overflow-hidden scroll-mt-20 sm:scroll-mt-28 border-b border-[#E5D6BC]/20"
     >
       {/* Soft Ambient Spotlight directly behind 3D MIFA 7 Vehicle */}
-      <div className="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(228,248,13,0.06),transparent_70%)] pointer-events-none blur-3xl z-0" />
+      <div className="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(228,248,13,0.08),transparent_70%)] pointer-events-none blur-3xl z-0" />
 
       <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8 relative z-10">
         
         {/* ========================================================
             1. PUNCHY EXECUTIVE HEADER (SIFIR KUTU)
            ======================================================== */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-[#E5D6BC]/20">
           <div className="space-y-2.5 max-w-3xl">
             {/* Taktik HUD Başlığı */}
-            <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-slate-300">
+            <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-[#E5D6BC]/80">
               <span className="text-[#E4F80D] font-bold">[+]</span>
               <span className="text-white font-semibold">
                 {lang === "tr" ? "SEVİYE-4 ROBOTAKSİ MİMARİSİ" : "LEVEL-4 ROBOTAXI ARCHITECTURE"}
               </span>
-              <span className="text-slate-600">/</span>
+              <span className="text-[#E5D6BC]/40">/</span>
               <span className="text-[#E4F80D] font-bold">SAIC MAXUS MIFA 7</span>
-              <span className="text-slate-600">/</span>
-              <span className="text-slate-400">TRIPY MOBILITY</span>
+              <span className="text-[#E5D6BC]/40">/</span>
+              <span className="text-[#E5D6BC]/70">TRIPY MOBILITY</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight font-sans">
               <span className="block text-white">Tripy SAIC Maxus MIFA 7</span>
-              <span className="block text-slate-300 font-light text-lg sm:text-2xl lg:text-3xl mt-1">
+              <span className="block text-[#E5D6BC] font-light text-lg sm:text-2xl lg:text-3xl mt-1">
                 {lang === "tr" ? "Seviye-4 Otonom Sürüş Mimarisi" : "Level-4 Autonomous Driving Architecture"}
               </span>
             </h2>
 
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-0.5">
+            <p className="text-[#E5D6BC]/80 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-0.5">
               {lang === "tr"
                 ? "Tripy Mobility ticari elektrikli filoları için geliştirilmiş; 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM ve ISO 26262 ASIL-D deterministik seyrüsefer referans yazılım mimarisi."
                 : "Deterministic Level-4 autonomy architecture engineered for Tripy Mobility commercial electric fleets via 100 Hz CAN-FD drive-by-wire and 3D LiDAR SLAM."}
@@ -164,18 +164,18 @@ export default function RobotaxiShowcase() {
         {/* ========================================================
             2. 3D TACTICAL VEHICLE WIREFRAME (100% KUTUSUZ / FRAMELESS)
             - Saf Maxus MIFA 7 Şasisi (2.975mm Dingil Mesafesi)
-            - Arka plan zifiri karanlığa doğrudan gömülü (Kutu yok!)
+            - Arka plan zengin sıcak taktik bronz zeminle uyumlu
             - Kullanıcı fareyle ve mobilde parmağıyla 3D çevirebilir
            ======================================================== */}
         <div className="space-y-4">
           
           {/* Frameless Top Bar: Coordinate Readout & Component Switcher */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-white/10">
-            <div className="flex items-center gap-2 text-[10px] font-mono tracking-wider text-slate-300">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-[#E5D6BC]/20">
+            <div className="flex items-center gap-2 text-[10px] font-mono tracking-wider text-[#E5D6BC]/80">
               <span className="w-2 h-2 bg-[#E4F80D] animate-pulse" />
               <span className="text-white font-bold">SAIC MAXUS MIFA 7 // 3D ŞASİ TOPOLOJİSİ</span>
-              <span className="text-slate-600 hidden sm:inline">/</span>
-              <span className="text-slate-400 hidden sm:inline">DİNGİL: 2.975mm • UZUNLUK: 4.907mm</span>
+              <span className="text-[#E5D6BC]/40 hidden sm:inline">/</span>
+              <span className="text-[#E5D6BC]/60 hidden sm:inline">DİNGİL: 2.975mm • UZUNLUK: 4.907mm</span>
             </div>
 
             {/* Frameless Tactical Selector Strip (100% SIFIR KUTU, PURE UNDERLINE TABS) */}
@@ -189,7 +189,7 @@ export default function RobotaxiShowcase() {
                     className={`shrink-0 pb-1.5 pt-1 px-1 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase transition-all duration-150 cursor-pointer flex items-center gap-1.5 border-b-2 ${
                       isActive
                         ? "text-[#E4F80D] font-bold border-[#E4F80D] drop-shadow-[0_0_8px_rgba(228,248,13,0.6)]"
-                        : "text-slate-400 hover:text-white border-transparent"
+                        : "text-[#E5D6BC]/60 hover:text-white border-transparent"
                     }`}
                   >
                     {isActive && <span className="w-1.5 h-1.5 bg-[#E4F80D]" />}
@@ -201,7 +201,7 @@ export default function RobotaxiShowcase() {
           </div>
 
           {/* Full-Bleed 100% Frameless 3D Wireframe Canvas */}
-          <div className="relative w-full h-[340px] xs:h-[400px] sm:h-[480px] lg:h-[560px]">
+          <div className="relative w-full h-[360px] xs:h-[420px] sm:h-[500px] lg:h-[580px]">
             <TacticalVehicleWireframe
               activeId={activeCalloutId}
               onSelectCallout={setActiveCalloutId}
@@ -210,33 +210,33 @@ export default function RobotaxiShowcase() {
           </div>
 
           {/* Frameless Active Specification HUD (Sıfır Kutu, Saf Tipografi) */}
-          <div className="pt-4 border-t border-white/10 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="pt-4 border-t border-[#E5D6BC]/20 flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div className="space-y-1.5 max-w-2xl">
               <div className="flex items-center gap-2 font-mono text-[10px]">
                 <span className="text-[#E4F80D] font-bold">
                   [ {current.badge} ]
                 </span>
-                <span className="text-slate-500">/</span>
-                <span className="text-slate-400 uppercase tracking-wider">
+                <span className="text-[#E5D6BC]/40">/</span>
+                <span className="text-[#E5D6BC]/80 uppercase tracking-wider">
                   {lang === "tr" ? current.tagTr : current.tagEn}
                 </span>
               </div>
               <div className="text-base sm:text-lg font-bold text-white tracking-tight">
                 {lang === "tr" ? current.titleTr : current.titleEn}
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed font-sans font-normal">
+              <p className="text-xs text-[#E5D6BC]/85 leading-relaxed font-sans font-normal">
                 {lang === "tr" ? current.descTr : current.descEn}
               </p>
             </div>
 
-            <div className="shrink-0 text-left md:text-right font-mono space-y-1 md:pl-6 md:border-l border-white/10">
-              <span className="text-[10px] text-slate-400 uppercase tracking-widest block font-medium">
+            <div className="shrink-0 text-left md:text-right font-mono space-y-1 md:pl-6 md:border-l border-[#E5D6BC]/20">
+              <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-widest block font-medium">
                 // DONANIM METRİĞİ
               </span>
               <div className="text-xs sm:text-[13px] font-bold text-[#E4F80D] tracking-tight">
                 {current.spec}
               </div>
-              <div className="text-[10px] text-slate-400">
+              <div className="text-[10px] text-[#E5D6BC]/60">
                 UN ECE R157 &amp; ISO 26262 ASIL-D
               </div>
             </div>
@@ -249,8 +249,8 @@ export default function RobotaxiShowcase() {
             - 16.400+ LOC, 1.307 Tests, 100 Hz CAN-FD, 560 TOPS
             - Sıfır kutu, sıfır kart sınırı!
            ======================================================== */}
-        <div className="pt-6 border-t border-white/10 space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-[11px] text-slate-400 uppercase tracking-wider">
+        <div className="pt-6 border-t border-[#E5D6BC]/20 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-[11px] text-[#E5D6BC]/70 uppercase tracking-wider">
             <div className="flex items-center gap-2">
               <span className="text-[#E4F80D] font-bold">//</span>
               <span className="text-white font-semibold">TRİPY SAHA ENTEGRASYON VE DOĞRULAMA KÜTÜĞÜ</span>
@@ -261,23 +261,23 @@ export default function RobotaxiShowcase() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 font-mono">
             {/* Stat 1 */}
             <div className="space-y-1">
-              <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+              <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-wider block font-semibold">
                 YAZILIM ÇEKİRDEĞİ
               </span>
               <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 16.400+
               </div>
-              <span className="text-[11px] text-slate-400 font-sans block">
+              <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
                 Satır C++20 / ROS 2 Çekirdek
               </span>
             </div>
 
             {/* Stat 2 */}
-            <div className="space-y-1 sm:border-l border-white/10 sm:pl-6">
-              <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <div className="space-y-1 sm:border-l border-[#E5D6BC]/20 sm:pl-6">
+              <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-wider block font-semibold">
                 DOĞRULAMA KÜTÜPHANESİ
               </span>
-              <div className="text-2xl sm:text-3xl font-black text-[#C8FF00] tracking-tight">
+              <div className="text-2xl sm:text-3xl font-black text-[#E4F80D] tracking-tight">
                 1.307 / 1.307
               </div>
               <span className="text-[11px] text-emerald-400 font-sans font-medium block">
@@ -286,27 +286,27 @@ export default function RobotaxiShowcase() {
             </div>
 
             {/* Stat 3 */}
-            <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-white/10 pt-4 sm:pt-0 sm:pl-6">
-              <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-[#E5D6BC]/20 pt-4 sm:pt-0 sm:pl-6">
+              <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-wider block font-semibold">
                 CAN-FD ÇEVRİMİ
               </span>
               <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 100 Hz
               </div>
-              <span className="text-[11px] text-slate-400 font-sans block">
+              <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
                 Tripy EPS &amp; i-Booster Senkron
               </span>
             </div>
 
             {/* Stat 4 */}
-            <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-white/10 pt-4 sm:pt-0 sm:pl-6">
-              <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-[#E5D6BC]/20 pt-4 sm:pt-0 sm:pl-6">
+              <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-wider block font-semibold">
                 DONANIMSAL KESME
               </span>
               <div className="text-2xl sm:text-3xl font-black text-[#E4F80D] tracking-tight">
                 5 ms
               </div>
-              <span className="text-[11px] text-slate-400 font-sans block">
+              <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
                 Acil Durum Devralma Güvencesi
               </span>
             </div>

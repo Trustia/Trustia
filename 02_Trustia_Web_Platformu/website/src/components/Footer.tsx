@@ -26,8 +26,8 @@ export default function Footer() {
         interactive={true}
       />
 
-      {/* Top Edge Seamless Gradient Blend (Merges cleanly from #090b0e section above) */}
-      <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-[#090b0e] to-transparent pointer-events-none z-1" />
+      {/* Top Edge Seamless Gradient Blend */}
+      <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-[#14120c] to-transparent pointer-events-none z-1" />
 
       {/* Subtle Radial Ambient Center Glow for High Contrast Legibility */}
       <div className="absolute inset-0 bg-radial-[at_50%_50%] from-transparent via-[#14120c]/20 to-[#14120c]/60 pointer-events-none z-1" />
