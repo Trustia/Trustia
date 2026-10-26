@@ -6,7 +6,7 @@ export default function FeatureVideo() {
   const { lang } = useLanguage();
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#090b0e] z-20">
+    <section className="relative w-full overflow-hidden bg-[#14120c] z-20">
       {/* 
         Full-Bleed Panoramic Cinematic Video:
         - 100% Edge-to-edge full width (no boxes, no borders, no padding/margin gaps)
@@ -14,9 +14,9 @@ export default function FeatureVideo() {
         - Hardware GPU acceleration and enhanced contrast/clarity filters
       */}
       <div className="relative w-full aspect-[16/9] sm:aspect-[1920/1038] max-h-[88vh] overflow-hidden bg-black flex items-center justify-center">
-        {/* Subtle Edge Ambient Blend (Merges video seamlessly into dark sections above and below) */}
-        <div className="absolute top-0 inset-x-0 h-12 sm:h-20 bg-gradient-to-b from-[#090b0e] via-[#090b0e]/40 to-transparent pointer-events-none z-10" />
-        <div className="absolute bottom-0 inset-x-0 h-12 sm:h-20 bg-gradient-to-t from-[#090b0e] via-[#090b0e]/40 to-transparent pointer-events-none z-10" />
+        {/* Subtle Edge Ambient Blend (Merges video seamlessly into sand above and footer below) */}
+        <div className="absolute top-0 inset-x-0 h-12 sm:h-20 bg-gradient-to-b from-[#14120c] via-[#14120c]/40 to-transparent pointer-events-none z-10" />
+        <div className="absolute bottom-0 inset-x-0 h-12 sm:h-20 bg-gradient-to-t from-[#14120c] via-[#14120c]/50 to-transparent pointer-events-none z-10" />
 
         <video
           src="/features-video.mp4"

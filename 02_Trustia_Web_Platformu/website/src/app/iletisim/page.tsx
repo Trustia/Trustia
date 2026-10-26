@@ -18,23 +18,26 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-28 sm:pt-36 pb-16">
+    <main className="min-h-screen bg-gradient-to-b from-[#1c1813] via-[#28221a] to-[#1c1813] text-[#f5efe6] font-sans selection:bg-[#E4F80D] selection:text-black pt-28 sm:pt-36 pb-16 relative overflow-hidden">
       <Navbar />
+
+      {/* Ambient Tactical Sand/Gold Glow */}
+      <div className="absolute top-0 inset-x-0 h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(229,214,188,0.10),transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-8 sm:space-y-10">
 
         {/* 1. Header */}
-        <div className="space-y-3 pb-6 border-b border-white/10">
-          <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <Link href="/" className="hover:text-white flex items-center gap-1 transition-colors">
+        <div className="space-y-3 pb-6 border-b border-[#E5D6BC]/15">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#E5D6BC]/70">
+            <Link href="/" className="hover:text-[#E5D6BC] flex items-center gap-1 transition-colors">
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>{t("contact_back")}</span>
             </Link>
             <span>/</span>
-            <span className="text-slate-200 font-semibold">{lang === "tr" ? "İLETİŞİM" : "CONTACT"}</span>
+            <span className="text-[#E5D6BC] font-semibold">{lang === "tr" ? "İLETİŞİM" : "CONTACT"}</span>
           </div>
 
-          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-slate-800/80 border border-slate-700 text-slate-300 text-[10px] font-mono font-medium tracking-wider uppercase">
+          <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded bg-[#E5D6BC]/10 border border-[#E5D6BC]/25 text-[#E5D6BC] text-[10px] font-mono font-medium tracking-wider uppercase">
             <span>{t("contact_page_badge")}</span>
           </div>
 
@@ -42,7 +45,7 @@ export default function ContactPage() {
             {t("contact_page_title")}
           </h1>
 
-          <p className="text-slate-400 text-xs sm:text-sm max-w-2xl leading-relaxed">
+          <p className="text-[#d6cebf] text-xs sm:text-sm max-w-2xl leading-relaxed">
             {t("contact_page_desc")}
           </p>
         </div>
@@ -54,8 +57,8 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-4">
             
             {/* Department Emails Card */}
-            <div className="p-5 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3">
-              <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+            <div className="p-5 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/20 space-y-3">
+              <div className="text-[11px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
                 {t("contact_dept_title")}
               </div>
 
@@ -65,15 +68,15 @@ export default function ContactPage() {
                   <a
                     key={idx}
                     href={`mailto:${ch.email}`}
-                    className="p-3 rounded-xl bg-[#07090d] border border-slate-800 hover:border-slate-600 transition-colors block group"
+                    className="p-3 rounded-xl bg-[#1b1610] border border-[#E5D6BC]/20 hover:border-[#E5D6BC]/45 transition-colors block group"
                   >
-                    <div className="text-xs font-semibold text-white group-hover:text-slate-200">
+                    <div className="text-xs font-semibold text-white group-hover:text-[#E5D6BC]">
                       {ch.title}
                     </div>
-                    <div className="text-xs font-mono text-slate-300 mt-0.5">
+                    <div className="text-xs font-mono text-[#E5D6BC] mt-0.5">
                       {ch.email}
                     </div>
-                    <div className="text-[10px] text-slate-500 mt-1">
+                    <div className="text-[10px] text-[#d6cebf]/80 mt-1">
                       {ch.desc}
                     </div>
                   </a>
@@ -82,25 +85,25 @@ export default function ContactPage() {
             </div>
 
             {/* Physical Location Card */}
-            <div className="p-5 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3">
-              <div className="text-[11px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+            <div className="p-5 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/20 space-y-3">
+              <div className="text-[11px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
                 {t("contact_loc_title")}
               </div>
 
-              <div className="space-y-2.5 text-xs text-slate-300">
+              <div className="space-y-2.5 text-xs text-[#d6cebf]">
                 <div className="flex items-start gap-2.5">
-                  <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                  <MapPin className="w-4 h-4 text-[#E5D6BC] shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-white">İTO BTM Kampüsü</div>
-                    <div className="text-slate-400 text-[11px]">İTO BTM Fulya Kampüsü, Şişli / İstanbul</div>
+                    <div className="text-[#d6cebf]/80 text-[11px]">İTO BTM Fulya Kampüsü, Şişli / İstanbul</div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-2.5">
-                  <Clock className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                  <Clock className="w-4 h-4 text-[#E5D6BC] shrink-0 mt-0.5" />
                   <div>
                     <div className="font-semibold text-white">{t("contact_hours_title")}</div>
-                    <div className="text-slate-400 text-[11px]">{t("contact_hours_desc")}</div>
+                    <div className="text-[#d6cebf]/80 text-[11px]">{t("contact_hours_desc")}</div>
                   </div>
                 </div>
               </div>

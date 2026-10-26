@@ -49,32 +49,35 @@ export default function PolicyDocumentView({
   const sidebarEntries = Object.entries(policyData).filter(([slug]) => slug !== "gizlilik");
 
   return (
-    <main className="min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white pt-28 sm:pt-36 pb-16">
+    <main className="min-h-screen bg-gradient-to-b from-[#1c1813] via-[#28221a] to-[#1c1813] text-[#f5efe6] font-sans selection:bg-[#E4F80D] selection:text-black pt-28 sm:pt-36 pb-16 relative overflow-hidden">
       <Navbar />
+
+      {/* Ambient Tactical Sand/Gold Glow */}
+      <div className="absolute top-0 inset-x-0 h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(229,214,188,0.10),transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6 sm:space-y-8">
 
         {/* 1. Header & Breadcrumb */}
-        <div className="space-y-3 pb-6 border-b border-white/10">
-          <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <Link href="/" className="hover:text-white flex items-center gap-1 transition-colors">
+        <div className="space-y-3 pb-6 border-b border-[#E5D6BC]/15">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#E5D6BC]/70">
+            <Link href="/" className="hover:text-[#E5D6BC] flex items-center gap-1 transition-colors">
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>{lang === "tr" ? "Ana Sayfa" : "Home"}</span>
             </Link>
             <span>/</span>
-            <span className="text-slate-400">{lang === "tr" ? "POLİTİKALAR" : "POLICIES"}</span>
+            <span className="text-[#E5D6BC]/70">{lang === "tr" ? "POLİTİKALAR" : "POLICIES"}</span>
             <span>/</span>
-            <span className="text-slate-200 font-semibold truncate">{activeData.category}</span>
+            <span className="text-[#E5D6BC] font-semibold truncate">{activeData.category}</span>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 pt-1">
-            <span className="px-2.5 py-0.5 rounded bg-slate-800 border border-slate-700 text-slate-300 text-[10px] font-mono font-semibold uppercase tracking-wider">
+            <span className="px-2.5 py-0.5 rounded bg-[#E5D6BC]/10 border border-[#E5D6BC]/25 text-[#E5D6BC] text-[10px] font-mono font-semibold uppercase tracking-wider">
               {activeData.category}
             </span>
-            <span className="px-2.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400 text-[10px] font-mono">
+            <span className="px-2.5 py-0.5 rounded bg-[#251f18] border border-[#E5D6BC]/20 text-[#E5D6BC] text-[10px] font-mono">
               {activeData.docNo}
             </span>
-            <span className="px-2.5 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400 text-[10px] font-mono">
+            <span className="px-2.5 py-0.5 rounded bg-[#251f18] border border-[#E5D6BC]/20 text-[#E5D6BC] text-[10px] font-mono">
               {activeData.subBadge}
             </span>
           </div>
@@ -83,7 +86,7 @@ export default function PolicyDocumentView({
             {activeData.title}
           </h1>
 
-          <p className="text-slate-400 text-xs sm:text-sm max-w-3xl leading-relaxed">
+          <p className="text-[#d6cebf] text-xs sm:text-sm max-w-3xl leading-relaxed">
             {activeData.summary}
           </p>
         </div>
@@ -109,11 +112,11 @@ export default function PolicyDocumentView({
                   href={`/politika/${slug}/`}
                   className={`px-3 py-2 rounded-lg font-mono text-xs whitespace-nowrap shrink-0 flex items-center gap-1.5 transition-all border ${
                     isActive
-                      ? "bg-white text-slate-950 font-bold border-white"
-                      : "bg-[#0f131a] text-slate-400 border-slate-800 hover:text-white"
+                      ? "bg-[#E5D6BC] text-[#14120c] font-bold border-[#E5D6BC] shadow-md"
+                      : "bg-[#251f18] text-[#E5D6BC]/80 border-[#E5D6BC]/20 hover:text-white"
                   }`}
                 >
-                  <ItemIcon className={`w-3.5 h-3.5 ${isActive ? "text-slate-950" : "text-slate-400"}`} />
+                  <ItemIcon className={`w-3.5 h-3.5 ${isActive ? "text-[#14120c]" : "text-[#E5D6BC]"}`} />
                   <span>{itemData.category}</span>
                 </Link>
               );
@@ -126,12 +129,12 @@ export default function PolicyDocumentView({
           
           {/* Left Desktop Sidebar (4 Cols) */}
           <aside className="hidden lg:block lg:col-span-4 space-y-4">
-            <div className="sticky top-28 p-5 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <span className="font-mono text-xs font-semibold text-slate-300 uppercase tracking-wider">
+            <div className="sticky top-28 p-5 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/20 space-y-3">
+              <div className="flex items-center justify-between border-b border-[#E5D6BC]/20 pb-3">
+                <span className="font-mono text-xs font-semibold text-[#E5D6BC] uppercase tracking-wider">
                   {lang === "tr" ? "KURUMSAL POLİTİKALAR" : "CORPORATE POLICIES"}
                 </span>
-                <span className="text-[10px] font-mono text-slate-400 px-2 py-0.5 rounded bg-slate-900 border border-slate-800">
+                <span className="text-[10px] font-mono text-slate-400 px-2 py-0.5 rounded bg-[#18140e] border border-[#E5D6BC]/20 text-[#E5D6BC]">
                   {sidebarEntries.length} {lang === "tr" ? "DOKÜMAN" : "DOCS"}
                 </span>
               </div>
@@ -153,7 +156,7 @@ export default function PolicyDocumentView({
                       }`}
                     >
                       <div className="flex items-center gap-2.5 overflow-hidden">
-                        <ItemIcon className={`w-4 h-4 shrink-0 ${isActive ? "text-slate-950" : "text-slate-400"}`} />
+                        <ItemIcon className={`w-4 h-4 shrink-0 ${isActive ? "text-[#14120c]" : "text-[#E5D6BC]"}`} />
                         <span className="truncate">{itemData.category}</span>
                       </div>
                       <ChevronRight className={`w-3.5 h-3.5 shrink-0 ${isActive ? "text-slate-950" : "opacity-0 group-hover:opacity-100"}`} />
@@ -163,12 +166,12 @@ export default function PolicyDocumentView({
               </nav>
 
               {/* Official Registry Stamp */}
-              <div className="pt-3 border-t border-slate-800 text-[11px] text-slate-400 font-mono space-y-1.5">
+              <div className="pt-3 border-t border-[#E5D6BC]/20 text-[11px] text-slate-400 font-mono space-y-1.5">
                 <div className="text-white font-semibold flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
                   <span>Resmi Hukuki Geçerlilik</span>
                 </div>
-                <div className="text-[10px] text-slate-500 leading-tight">
+                <div className="text-[10px] text-[#d6cebf]/80 leading-tight">
                   T.C. Kanunları, SAE J3016 ve ISO 26262 ASIL-D standartları uyarınca yürürlüktedir.
                 </div>
               </div>
@@ -179,7 +182,7 @@ export default function PolicyDocumentView({
           <div className="lg:col-span-8 space-y-6">
             
             {/* Document Meta Ribbon */}
-            <div className="p-4 sm:p-5 rounded-2xl bg-[#0f131a] border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs font-mono">
               <div className="flex items-center gap-3 text-slate-300">
                 <div className="flex items-center gap-1.5">
                   <Building className="w-3.5 h-3.5 text-slate-400" />
@@ -199,7 +202,7 @@ export default function PolicyDocumentView({
                     target="_blank"
                     rel="noopener noreferrer"
                     download
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-[#C8FF00] hover:bg-[#d4ff33] text-black font-bold text-[11px] transition-all shadow-[0_0_12px_rgba(200,255,0,0.3)]"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#E5D6BC] hover:bg-white text-[#14120c] font-bold text-[11px] transition-all shadow-md"
                   >
                     <Download className="w-3.5 h-3.5" />
                     <span>{lang === "tr" ? "İmzalı OIN Lisans PDF" : "Signed OIN License PDF"}</span>
@@ -208,7 +211,7 @@ export default function PolicyDocumentView({
 
                 <button
                   onClick={() => typeof window !== "undefined" && window.print()}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer text-[11px]"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#18140e] hover:bg-[#251f18] border border-[#E5D6BC]/20 text-[#E5D6BC] hover:text-white transition-colors cursor-pointer text-[11px]"
                 >
                   <Printer className="w-3.5 h-3.5" />
                   <span>{lang === "tr" ? "Yazdır / PDF" : "Print / PDF"}</span>
@@ -221,16 +224,16 @@ export default function PolicyDocumentView({
               {activeData.sections.map((sec: any, index: number) => (
                 <div
                   key={index}
-                  className="p-5 sm:p-7 rounded-2xl bg-[#0f131a] border border-slate-800 space-y-3.5"
+                  className="p-5 sm:p-7 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/20 space-y-3.5"
                 >
                   <h2 className="text-sm sm:text-base font-bold text-white tracking-tight flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-slate-400"></span>
+                    <span className="w-2 h-2 rounded-full bg-[#E5D6BC]"></span>
                     <span>{sec.heading}</span>
                   </h2>
 
-                  <div className="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans pl-4 border-l border-slate-800">
+                  <div className="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans pl-4 border-l-2 border-[#E5D6BC]/25">
                     {sec.items.map((itemText: string, iIdx: number) => (
-                      <p key={iIdx} className="text-slate-300">
+                      <p key={iIdx} className="text-[#d6cebf]">
                         {itemText}
                       </p>
                     ))}
@@ -240,7 +243,7 @@ export default function PolicyDocumentView({
             </div>
 
             {/* Official Closing Compliance Box */}
-            <div className="p-5 rounded-2xl bg-[#0c0f14] border border-slate-800 text-xs text-slate-400 space-y-2">
+            <div className="p-5 rounded-2xl bg-[#1b1610] border border-[#E5D6BC]/20 text-xs text-slate-400 space-y-2">
               <div className="font-semibold text-white flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                 <span>{lang === "tr" ? "Resmi Yürürlük ve İletişim" : "Official Notice & Contact"}</span>

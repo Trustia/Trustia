@@ -10,7 +10,7 @@ import ConsoleBranding from "@/components/ConsoleBranding";
 
 export default function Home() {
   return (
-    <main className="relative w-full bg-[#090b0e] text-white font-sans selection:bg-[#C8FF00] selection:text-black overflow-x-hidden">
+    <main className="relative w-full bg-[#1c1813] text-[#f5efe6] font-sans selection:bg-[#E4F80D] selection:text-black overflow-x-hidden">
       {/* DevTools Browser Console Corporate Branding */}
       <ConsoleBranding />
 

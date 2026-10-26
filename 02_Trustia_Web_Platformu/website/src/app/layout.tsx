@@ -3,7 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const viewport: Viewport = {
-  themeColor: "#090b0e",
+  themeColor: "#1c1813",
   colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
@@ -293,7 +293,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-[#090b0e] text-[#e1e7ec] antialiased selection:bg-[#C8FF00] selection:text-black font-sans min-h-screen overflow-x-hidden">
+      <body className="bg-[#1c1813] text-[#f5efe6] antialiased selection:bg-[#E4F80D] selection:text-black font-sans min-h-screen overflow-x-hidden">
         <LanguageProvider>
           {children}
         </LanguageProvider>

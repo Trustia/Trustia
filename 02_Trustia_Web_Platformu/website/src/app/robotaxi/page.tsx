@@ -122,36 +122,39 @@ export default function RobotaxiPage() {
   const current = sensorDetails[activeSensor];
 
   return (
-    <main className="relative min-h-screen bg-[#07090d] text-white font-sans selection:bg-slate-700 selection:text-white overflow-x-hidden pt-20 sm:pt-28 pb-12">
+    <main className="relative min-h-screen bg-gradient-to-b from-[#1c1813] via-[#28221a] to-[#1c1813] text-[#f5efe6] font-sans selection:bg-[#E4F80D] selection:text-black overflow-x-hidden pt-20 sm:pt-28 pb-12">
       <Navbar />
+
+      {/* Ambient Tactical Sand/Gold Glow */}
+      <div className="absolute top-0 inset-x-0 h-[600px] bg-[radial-gradient(ellipse_at_top,rgba(229,214,188,0.10),transparent_70%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-8 space-y-6 sm:space-y-8">
 
         {/* 1. Breadcrumb & Header */}
         <div className="space-y-2.5">
-          <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <Link href="/" className="hover:text-white flex items-center gap-1 transition-colors">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#E5D6BC]/70">
+            <Link href="/" className="hover:text-[#E5D6BC] flex items-center gap-1 transition-colors">
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>{lang === "tr" ? "Ana Sayfa" : "Home"}</span>
             </Link>
             <span>/</span>
-            <span className="text-slate-200 font-semibold">ROBOTAXI</span>
+            <span className="text-[#E5D6BC] font-semibold">ROBOTAXI</span>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-white/10">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-[#E5D6BC]/15">
             <div className="space-y-1.5 max-w-3xl">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 text-[10px] font-mono tracking-wider uppercase">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#E5D6BC]/10 border border-[#E5D6BC]/25 text-[#E5D6BC] text-[10px] font-mono tracking-wider uppercase">
                 <span>{lang === "tr" ? "REFERANS OTONOMİ MİMARİSİ (RAD) // E-GMP" : "REFERENCE AUTONOMY ARCHITECTURE // E-GMP"}</span>
               </div>
               
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug">
                 Hyundai Ioniq 5 (E-GMP){" "}
-                <span className="text-slate-300 font-normal">
+                <span className="text-[#E5D6BC] font-normal block sm:inline">
                   {lang === "tr" ? "— Seviye 4 Donanım ve Sensör Mimarisi" : "— Level 4 Hardware & Sensor Blueprint"}
                 </span>
               </h1>
               
-              <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
+              <p className="text-[#d6cebf] text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
                 {lang === "tr"
                   ? "Kurumsal filolar ve OEM entegrasyonu için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.400+ satır özgün deterministik otonomi şartnamesi."
                   : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, and 100 Hz CAN-FD drive-by-wire across 16,400+ lines of sovereign autonomy software."}
@@ -162,7 +165,7 @@ export default function RobotaxiPage() {
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <Link
                 href="/iletisim/"
-                className="px-4 py-2 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-1.5"
+                className="px-4 py-2 rounded-lg bg-[#E5D6BC] text-[#14120c] hover:bg-white font-bold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-1.5 shadow-md"
               >
                 <span>{lang === "tr" ? "Şartname ve Talep" : "Enterprise Spec"}</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -172,19 +175,19 @@ export default function RobotaxiPage() {
         </div>
 
         {/* 2. Integrated 4-Metric Architectural Bar (KUTUSUZ & KOMPAKT) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-3.5 border-y border-white/10 font-mono">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E5D6BC]/15 py-3.5 border-y border-[#E5D6BC]/20 font-mono">
           <div className="py-1 px-3 first:pl-0 space-y-0.5">
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY STACK"}
             </span>
             <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.400+</div>
-            <span className="text-[10px] text-slate-400 block font-sans">
+            <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
               {lang === "tr" ? "Satır C++20 / ROS 2" : "Lines of Code (C++20)"}
             </span>
           </div>
 
           <div className="py-1 px-3 sm:pl-6 space-y-0.5">
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
             </span>
             <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.307 / 1.307</div>
@@ -194,21 +197,21 @@ export default function RobotaxiPage() {
           </div>
 
           <div className="py-1 px-3 sm:pl-6 space-y-0.5">
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "MERKEZİ HESAPLAMA" : "COMPUTE POWER"}
             </span>
             <div className="text-lg sm:text-xl font-bold text-white tracking-tight">275 TOPS</div>
-            <span className="text-[10px] text-slate-400 block font-sans">
+            <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
               Jetson AGX Orin 64GB
             </span>
           </div>
 
           <div className="py-1 px-3 sm:pl-6 space-y-0.5">
-            <span className="text-[10px] text-slate-400 uppercase tracking-wider block font-semibold">
+            <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "LİDAR MENZİLİ" : "LIDAR RANGE"}
             </span>
             <div className="text-lg sm:text-xl font-bold text-white tracking-tight">240 Metre</div>
-            <span className="text-[10px] text-slate-400 block font-sans">
+            <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
               128 Kanal Ouster OS2
             </span>
           </div>
@@ -216,9 +219,9 @@ export default function RobotaxiPage() {
 
         {/* 3. Interactive Sensor Fusion Blueprint Visualizer */}
         <div className="space-y-3 pt-2">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-white/10">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-[#E5D6BC]/15">
             <div>
-              <div className="text-[10px] font-mono text-slate-400 font-semibold tracking-wider uppercase">
+              <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
                 // {lang === "tr" ? "DONANIM VE SENSÖR YERLEŞİM ŞARTNAMESİ" : "HARDWARE & SENSOR PLACEMENT BLUEPRINT"}
               </div>
               <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
@@ -240,8 +243,8 @@ export default function RobotaxiPage() {
                   onClick={() => setActiveSensor(tab.id)}
                   className={`px-2.5 py-1 rounded text-[11px] font-mono transition-all duration-200 cursor-pointer ${
                     activeSensor === tab.id
-                      ? "bg-white text-slate-950 font-bold shadow-md"
-                      : "bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white border border-white/10"
+                      ? "bg-[#E5D6BC] text-[#14120c] font-bold shadow-md"
+                      : "bg-[#251f18] hover:bg-[#2e261e] text-[#E5D6BC]/80 hover:text-white border border-[#E5D6BC]/20"
                   }`}
                 >
                   {tab.label}
@@ -251,11 +254,11 @@ export default function RobotaxiPage() {
           </div>
 
           {/* Technical Vector Canvas (360° FOV Blueprint) */}
-          <div className="relative rounded-xl overflow-hidden border border-white/10 bg-[#080b11] aspect-[16/9] sm:aspect-[21/9] max-h-[480px] flex items-center justify-center p-4">
+          <div className="relative rounded-xl overflow-hidden border border-[#E5D6BC]/25 bg-[#18140e] aspect-[16/9] sm:aspect-[21/9] max-h-[480px] flex items-center justify-center p-4 shadow-inner">
             
             {/* Coordinate Grid Header */}
             <div className="absolute top-3 left-3 right-3 flex items-center justify-between text-[10px] font-mono text-slate-400 pointer-events-none">
-              <span className="px-2 py-0.5 rounded bg-black/60 border border-white/10">
+              <span className="px-2 py-0.5 rounded bg-black/60 border border-[#E5D6BC]/15">
                 TOP-DOWN // 360° SENSÖR KAPSAMA GEOMETRİSİ
               </span>
               <span className="text-slate-400">
@@ -283,14 +286,14 @@ export default function RobotaxiPage() {
               <rect width="600" height="340" fill="url(#archGridPage)" />
 
               {/* Range Rings (50m, 100m, 180m, 240m) */}
-              <circle cx="300" cy="170" r="45" stroke="rgba(255,255,255,0.08)" strokeDasharray="3 3" />
-              <circle cx="300" cy="170" r="90" stroke="rgba(255,255,255,0.08)" strokeDasharray="3 3" />
-              <circle cx="300" cy="170" r="140" stroke="rgba(255,255,255,0.06)" strokeDasharray="3 3" />
+              <circle cx="300" cy="170" r="45" stroke="rgba(229,214,188,0.15)" strokeDasharray="3 3" />
+              <circle cx="300" cy="170" r="90" stroke="rgba(229,214,188,0.15)" strokeDasharray="3 3" />
+              <circle cx="300" cy="170" r="140" stroke="rgba(229,214,188,0.12)" strokeDasharray="3 3" />
 
               {/* Range Labels */}
-              <text x="304" y="122" fill="rgba(148,163,184,0.5)" fontSize="8" fontFamily="monospace">50m</text>
-              <text x="304" y="77" fill="rgba(148,163,184,0.5)" fontSize="8" fontFamily="monospace">100m</text>
-              <text x="304" y="28" fill="rgba(148,163,184,0.5)" fontSize="8" fontFamily="monospace">200m (LiDAR)</text>
+              <text x="304" y="122" fill="rgba(229,214,188,0.7)" fontSize="8" fontFamily="monospace">50m</text>
+              <text x="304" y="77" fill="rgba(229,214,188,0.7)" fontSize="8" fontFamily="monospace">100m</text>
+              <text x="304" y="28" fill="rgba(229,214,188,0.7)" fontSize="8" fontFamily="monospace">200m (LiDAR)</text>
 
               {/* --- 1. LiDAR 360° Zone --- */}
               {(activeSensor === "all" || activeSensor === "lidar") && (
@@ -386,24 +389,24 @@ export default function RobotaxiPage() {
           </div>
 
           {/* Dynamic Specification Bar of Selected Sensor */}
-          <div className="p-3.5 rounded-lg bg-white/5 border border-white/10 space-y-1">
+          <div className="p-4 rounded-xl bg-[#251f18] border border-[#E5D6BC]/25 space-y-1 shadow-md">
             <div className="flex items-center justify-between text-[10px] font-mono">
-              <span className="text-slate-300 font-semibold">{current.tag}</span>
-              <span className="text-slate-400">{current.metric}</span>
+              <span className="text-[#E5D6BC] font-semibold">{current.tag}</span>
+              <span className="text-[#E5D6BC]/75">{current.metric}</span>
             </div>
             <div className="text-xs sm:text-sm font-bold text-white tracking-tight">
               {current.title}
             </div>
-            <p className="text-[11px] text-slate-300 leading-relaxed font-sans">
+            <p className="text-[11px] text-[#d6cebf] leading-relaxed font-sans">
               {current.desc}
             </p>
           </div>
         </div>
 
         {/* 4. Turnkey Sensor & Hardware Matrix (KUTUSUZ EDİTORYAL MİMARİ) */}
-        <div className="space-y-4 pt-4 border-t border-white/10">
-          <div className="pb-2 border-b border-white/10">
-            <div className="text-[10px] font-mono text-slate-400 font-semibold tracking-wider uppercase">
+        <div className="space-y-4 pt-4 border-t border-[#E5D6BC]/15">
+          <div className="pb-2 border-b border-[#E5D6BC]/15">
+            <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
               // {lang === "tr" ? "DONANIM VE SENSÖR MİMARİSİ" : "HARDWARE & SENSOR FUSION"}
             </div>
             <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
@@ -416,17 +419,17 @@ export default function RobotaxiPage() {
               const Icon = item.icon;
               return (
                 <div key={idx} className="py-3 flex items-start gap-3">
-                  <div className="w-7 h-7 rounded bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 shrink-0 mt-0.5">
+                  <div className="w-7 h-7 rounded bg-[#251f18] border border-[#E5D6BC]/25 flex items-center justify-center text-[#E5D6BC] shrink-0 mt-0.5">
                     <Icon className="w-3.5 h-3.5" />
                   </div>
                   <div className="space-y-0.5 min-w-0">
-                    <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+                    <div className="text-[10px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
                       {item.title}
                     </div>
                     <div className="text-xs sm:text-sm font-bold text-white tracking-tight">
                       {item.val}
                     </div>
-                    <div className="text-[11px] text-slate-400 font-sans">
+                    <div className="text-[11px] text-[#d6cebf]/80 font-sans">
                       {item.sub}
                     </div>
                   </div>
@@ -437,12 +440,12 @@ export default function RobotaxiPage() {
         </div>
 
         {/* 5. Architecture & Safety Protocols (KUTUSUZ EDİTORYAL ÇİFT SÜTUN) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6 border-t border-white/10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6 border-t border-[#E5D6BC]/15">
           
           {/* E-GMP & CAN-FD Integration */}
           <div className="space-y-3">
-            <div className="border-b border-white/10 pb-2">
-              <div className="text-[10px] font-mono text-slate-400 font-semibold tracking-wider uppercase">
+            <div className="border-b border-[#E5D6BC]/15 pb-2">
+              <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
                 // {lang === "tr" ? "E-GMP CAN-FD ENTEGRASYONU" : "E-GMP CAN-FD ARCHITECTURE"}
               </div>
               <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
@@ -450,9 +453,9 @@ export default function RobotaxiPage() {
               </h3>
             </div>
 
-            <ul className="space-y-2.5 text-xs text-slate-300 divide-y divide-white/5">
+            <ul className="space-y-2.5 text-xs text-[#d6cebf] divide-y divide-[#E5D6BC]/10">
               <li className="pt-2 first:pt-0 flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "Dikiz Aynası ADAS Y-Harness:" : "Rearview ADAS Y-Harness:"}</b>{" "}
                   {lang === "tr"
@@ -461,7 +464,7 @@ export default function RobotaxiPage() {
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "57 Litrelik Sub-Trunk Hesaplama Havuzu:" : "57-Liter Sub-Trunk Compute Hub:"}</b>{" "}
                   {lang === "tr"
@@ -470,7 +473,7 @@ export default function RobotaxiPage() {
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "IP68 No-Drill Tavan Geçişi:" : "IP68 Zero-Penetration Roof Routing:"}</b>{" "}
                   {lang === "tr"
@@ -483,8 +486,8 @@ export default function RobotaxiPage() {
 
           {/* Safety & Human Takeover */}
           <div className="space-y-3">
-            <div className="border-b border-white/10 pb-2">
-              <div className="text-[10px] font-mono text-slate-400 font-semibold tracking-wider uppercase">
+            <div className="border-b border-[#E5D6BC]/15 pb-2">
+              <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
                 // {lang === "tr" ? "GÜVENLİK VE DEVİR PROTOKOLLERİ" : "SAFETY & TAKEOVER PROTOCOLS"}
               </div>
               <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
@@ -492,9 +495,9 @@ export default function RobotaxiPage() {
               </h3>
             </div>
 
-            <ul className="space-y-2.5 text-xs text-slate-300 divide-y divide-white/5">
+            <ul className="space-y-2.5 text-xs text-[#d6cebf] divide-y divide-[#E5D6BC]/10">
               <li className="pt-2 first:pt-0 flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "Anlık Sürücü Müdahalesi (5ms):" : "Instant Human Takeover (5ms):"}</b>{" "}
                   {lang === "tr"
@@ -503,7 +506,7 @@ export default function RobotaxiPage() {
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "200ms Watchdog & MRM Fail-Safe:" : "200ms Watchdog & MRM Fail-Safe:"}</b>{" "}
                   {lang === "tr"
@@ -512,7 +515,7 @@ export default function RobotaxiPage() {
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "5G GPS Coğrafi Çit (Geofence):" : "5G GPS Geofencing & Remote Kill:"}</b>{" "}
                   {lang === "tr"
@@ -526,10 +529,10 @@ export default function RobotaxiPage() {
         </div>
 
         {/* 6. Authentic Enterprise Integration & Validation Model */}
-        <div className="space-y-3 pt-6 border-t border-white/10">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-white/10">
+        <div className="space-y-3 pt-6 border-t border-[#E5D6BC]/15">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-[#E5D6BC]/15">
             <div>
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+              <div className="text-[10px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
                 // {lang === "tr" ? "KURUMSAL ENTEGRASYON VE DOĞRULAMA MODELİ" : "ENTERPRISE INTEGRATION & VALIDATION PROTOCOL"}
               </div>
               <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
@@ -541,11 +544,11 @@ export default function RobotaxiPage() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-3 border-y border-white/10 font-mono">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-3 border-y border-[#E5D6BC]/15 font-mono">
             <div className="py-2 px-3 first:pl-0 space-y-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 01 // YAZILIM ÇEKİRDEĞİ</div>
               <div className="text-xs sm:text-sm font-bold text-white font-sans">SIL & 3D Dijital İkiz</div>
-              <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
+              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
                 Webots simülasyonu, 1.307 birim test, NDT SLAM haritalama, Pure Pursuit rota takibi.
               </div>
               <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">%100 Doğrulandı</div>
@@ -554,7 +557,7 @@ export default function RobotaxiPage() {
             <div className="py-2 px-3 sm:pl-6 space-y-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 02 // CAN-FD HIL TESTİ</div>
               <div className="text-xs sm:text-sm font-bold text-white font-sans">Aktüatör Bench Doğrulama</div>
-              <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
+              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
                 100 Hz LKAS11 direksiyon torku ve 50 Hz SCC_FD fren/gaz donanımsal bench testi.
               </div>
               <div className="text-[10px] text-slate-400 font-medium pt-0.5">5ms Emniyet Kesmesi</div>
@@ -563,7 +566,7 @@ export default function RobotaxiPage() {
             <div className="py-2 px-3 sm:pl-6 space-y-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 03 // SENSÖR FÜZYONU</div>
               <div className="text-xs sm:text-sm font-bold text-white font-sans">Zamansal Kalibrasyon</div>
-              <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
+              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
                 128 kanal LiDAR + 77GHz Radar + Sony HDR kamera uzaysal matris ve FSYNC kalibrasyonu.
               </div>
               <div className="text-[10px] text-slate-400 font-medium pt-0.5">Santimetre Hassasiyet</div>
@@ -572,7 +575,7 @@ export default function RobotaxiPage() {
             <div className="py-2 px-3 sm:pl-6 space-y-1">
               <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 04 // FİLO ENTEGRASYONU</div>
               <div className="text-xs sm:text-sm font-bold text-white font-sans">ODD Saha Validasyonu</div>
-              <div className="text-[11px] text-slate-400 leading-relaxed font-sans">
+              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
                 Kurumsal filo operatörleri ile tanımlı operasyonel koridorda ortak pilot validasyon.
               </div>
               <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">Filo İş Birliği Modeli</div>
@@ -581,15 +584,15 @@ export default function RobotaxiPage() {
         </div>
 
         {/* 7. Institutional NDA Technical Cooperation Bar */}
-        <div className="py-4 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="py-6 px-6 sm:px-8 rounded-2xl bg-gradient-to-r from-[#282017] via-[#352a1e] to-[#282017] border border-[#E5D6BC]/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center md:text-left max-w-2xl">
-            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
+            <div className="text-[10px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
               // {lang === "tr" ? "KURUMSAL TEKNİK İŞBİRLİĞİ" : "INSTITUTIONAL TECHNICAL COOPERATION"}
             </div>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
               {lang === "tr" ? "Mühendislik Şartnamesi ve Entegrasyon Protokolü" : "Engineering Specification & Integration Protocol"}
             </h3>
-            <p className="text-slate-400 text-xs leading-relaxed">
+            <p className="text-[#d6cebf] text-xs leading-relaxed">
               {lang === "tr"
                 ? "Donanım mimarisi, sensör yerleşim geometrisi, CAN-FD sinyal protokolleri ve platform güvenlik standartları kurumsal gizlilik sözleşmesi (NDA) kapsamında OEM ve savunma sanayii ortaklarıyla paylaşılmaktadır."
                 : "Detailed hardware schematics, sensor mounting geometry, CAN-FD bus protocols, and functional safety architecture are available to qualified OEM and defense partners under institutional NDA."}
@@ -598,7 +601,7 @@ export default function RobotaxiPage() {
 
           <Link
             href="/iletisim"
-            className="w-full sm:w-auto px-4 py-2 rounded-lg bg-white text-slate-950 hover:bg-slate-200 font-semibold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5 shrink-0"
+            className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#E5D6BC] text-[#14120c] hover:bg-white font-bold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5 shrink-0 shadow-lg"
           >
             <Lock className="w-3.5 h-3.5" />
             <span>{lang === "tr" ? "NDA İLE TALEP ET" : "REQUEST VIA NDA"}</span>
