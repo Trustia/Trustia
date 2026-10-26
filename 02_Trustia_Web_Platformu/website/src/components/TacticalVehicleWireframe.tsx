@@ -427,11 +427,6 @@ export default function TacticalVehicleWireframe({
     isDraggingRef.current = false;
   };
 
-  const handleWheel = (e: React.WheelEvent) => {
-    const zoomDelta = e.deltaY * -0.001;
-    zoomRef.current = Math.max(0.7, Math.min(1.8, zoomRef.current + zoomDelta));
-  };
-
   return (
     <div
       ref={containerRef}
@@ -440,7 +435,6 @@ export default function TacticalVehicleWireframe({
         touchAction: "none",
         backgroundColor: "transparent",
       }}
-      onWheel={handleWheel}
     >
       {/* 100% Frameless Canvas (No boxes, no cards, no borders!) */}
       <canvas
@@ -477,13 +471,6 @@ export default function TacticalVehicleWireframe({
             </div>
           );
         })}
-      </div>
-
-      {/* Subtle Drag Rotation Helper Text at Bottom */}
-      <div className="absolute bottom-2 inset-x-0 mx-auto px-4 flex items-center justify-center pointer-events-none z-10 text-[10px] font-mono tracking-widest uppercase">
-        <span className="text-white/40 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
-          ↔ 360° ÇEVİR • ↕ AÇI DEĞİŞTİR • SAIC MAXUS MIFA 7 (2.975mm)
-        </span>
       </div>
     </div>
   );
