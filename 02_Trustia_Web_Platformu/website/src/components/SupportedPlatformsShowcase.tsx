@@ -41,7 +41,7 @@ export default function SupportedPlatformsShowcase() {
           ],
       fleet: lang === "tr" ? "Hyundai Ioniq 5, SAIC Maxus MIFA 7, TOGG" : "Hyundai Ioniq 5, SAIC Maxus MIFA 7, TOGG",
       ctaLink: "/robotaxi/",
-      ctaText: lang === "tr" ? "Hyundai Ioniq 5 Robotaksi Çözümü" : "Explore Robotaxi Solution"
+      ctaText: lang === "tr" ? "Robotaksi Çözümü" : "Robotaxi Architecture"
     },
     {
       id: "defense",
@@ -67,7 +67,7 @@ export default function SupportedPlatformsShowcase() {
           ],
       fleet: lang === "tr" ? "Hafif, Orta ve Ağır Sınıf Taktik İKA Platformları" : "Light, Medium & Heavy Tactical Wheeled/Tracked UGVs",
       ctaLink: "/politika/lisans/",
-      ctaText: lang === "tr" ? "Savunma Entegrasyon Şartnamesi" : "Defense Integration Specs"
+      ctaText: lang === "tr" ? "Savunma Entegrasyonu" : "Defense Specifications"
     },
     {
       id: "industrial",
@@ -93,7 +93,7 @@ export default function SupportedPlatformsShowcase() {
           ],
       fleet: lang === "tr" ? "Maden Kamyonları, Otonom Çekiciler, Liman AGV" : "Heavy Haul Trucks, Yard Tractors, Seaport AGVs",
       ctaLink: "/iletisim/",
-      ctaText: lang === "tr" ? "Endüstriyel Çözüm Talebi" : "Request Industrial Briefing"
+      ctaText: lang === "tr" ? "Endüstriyel Çözümler" : "Industrial Solutions"
     }
   ];
 
@@ -127,22 +127,16 @@ export default function SupportedPlatformsShowcase() {
 
         {/* 1. Mobile Horizontal Swipeable Cards (lg:hidden) */}
         <div className="block lg:hidden space-y-3">
-          {/* Top Indicator */}
-          <div className="flex items-center justify-between text-[11px] font-mono text-[#5c5344]">
-            <div className="flex items-center gap-1.5 font-bold text-[#14120c]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#14120c] animate-pulse" />
-              <span>{lang === "tr" ? "KAYDIRARAK KEŞFEDİN" : "SWIPE TO EXPLORE"}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              {solutions.map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-1.5 transition-all duration-300 ${
-                    activeSlide === i ? "w-5 bg-[#14120c]" : "w-1.5 bg-[#26221b]/25"
-                  }`}
-                />
-              ))}
-            </div>
+          {/* Centered Minimal Indicator Dots (No text) */}
+          <div className="flex items-center justify-center gap-1.5 pb-0.5">
+            {solutions.map((_, i) => (
+              <div
+                key={i}
+                className={`h-1 rounded-full transition-all duration-300 ${
+                  activeSlide === i ? "w-6 bg-[#14120c]" : "w-1.5 bg-[#26221b]/30"
+                }`}
+              />
+            ))}
           </div>
 
           {/* Swipe Track */}
@@ -158,19 +152,17 @@ export default function SupportedPlatformsShowcase() {
                   className="w-[84vw] max-w-[340px] shrink-0 snap-center p-5 bg-[#DCD0B8] border border-[#26221b]/20 shadow-md flex flex-col justify-between space-y-4"
                 >
                   <div className="space-y-3.5">
-                    {/* Top Bar: Number & Category Badge */}
+                    {/* Top Bar: Number, Tag & Icon (Clean, no box badges) */}
                     <div className="flex items-center justify-between pb-3 border-b border-[#26221b]/15">
                       <div className="flex items-center gap-2">
                         <span className="font-mono text-xs font-bold text-[#26221b]">
                           {item.num} //
                         </span>
-                        <span className="px-2 py-0.5 bg-[#26221b]/10 border border-[#26221b]/20 text-[10px] font-mono text-[#14120c] uppercase tracking-wider font-bold">
+                        <span className="text-[10px] font-mono text-[#5c5344] uppercase tracking-wider font-bold">
                           {item.tag}
                         </span>
                       </div>
-                      <div className="w-7 h-7 flex items-center justify-center bg-[#26221b]/10 text-[#14120c]">
-                        <Icon className="w-3.5 h-3.5" />
-                      </div>
+                      <Icon className="w-4 h-4 text-[#14120c] shrink-0" />
                     </div>
 
                     {/* Title & Subtitle */}
@@ -202,8 +194,8 @@ export default function SupportedPlatformsShowcase() {
                     </div>
                   </div>
 
-                  {/* Bottom Footer: Compatible Fleet & Button */}
-                  <div className="pt-3 border-t border-[#26221b]/15 space-y-3">
+                  {/* Bottom Footer: Compatible Fleet & Underline Link (No black box!) */}
+                  <div className="pt-3 border-t border-[#26221b]/15 space-y-2.5">
                     <div className="text-[10px] font-mono text-[#5c5344]">
                       <span className="text-[#14120c] font-bold">
                         {lang === "tr" ? "Uyumlu Şasi:" : "Compatible Fleet:"}
@@ -213,10 +205,10 @@ export default function SupportedPlatformsShowcase() {
 
                     <Link
                       href={item.ctaLink}
-                      className="w-full py-2.5 px-3 bg-[#14120c] hover:bg-black text-[#E5D6BC] flex items-center justify-between text-xs font-mono font-bold uppercase tracking-wider transition-all duration-200 cursor-pointer shadow-sm"
+                      className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#14120c] hover:text-black uppercase tracking-wider transition-colors pt-1 border-b-2 border-[#14120c] w-fit group"
                     >
-                      <span>{item.ctaText}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span className="whitespace-nowrap">{item.ctaText}</span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 shrink-0" />
                     </Link>
                   </div>
                 </div>
