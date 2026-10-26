@@ -102,14 +102,14 @@ export default function SupportedPlatformsShowcase() {
       <div className="max-w-7xl mx-auto space-y-6 sm:space-y-14 relative z-10">
         
         {/* Tactical Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-12 items-end pb-5 sm:pb-8 border-b border-[#26221b]/15">
-          <div className="lg:col-span-7 space-y-2.5">
-            <div className="inline-flex items-center gap-2 px-2.5 py-1 bg-[#26221b]/10 border border-[#26221b]/15 text-[#26221b] text-[10px] sm:text-[11px] font-mono tracking-wider uppercase font-bold">
-              <span className="text-[#26221b] font-bold">[+]</span>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-12 items-end pb-4 sm:pb-8 border-b border-[#26221b]/15">
+          <div className="lg:col-span-7 space-y-2">
+            <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase font-bold text-[#5c5344]">
+              <span className="text-[#14120c] font-extrabold">[+]</span>
               <span>{lang === "tr" ? "UYGULAMA ALANLARI VE PLATFORM ENTEGRASYONU" : "DEPLOYMENT DOMAINS & CHASSIS INTEGRATION"}</span>
             </div>
 
-            <h2 className="text-xl sm:text-3xl md:text-4xl font-extrabold text-[#14120c] tracking-tight leading-tight">
+            <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#14120c] tracking-tight leading-snug">
               {lang === "tr"
                 ? "Çift Kullanımlı (Dual-Use) Otonomi Çözümleri"
                 : "Dual-Use Autonomous Driving Stack"}
@@ -119,8 +119,8 @@ export default function SupportedPlatformsShowcase() {
           <div className="lg:col-span-5">
             <p className="text-xs sm:text-sm text-[#383226] font-medium leading-relaxed">
               {lang === "tr"
-                ? "Trustia AI; donanım bağımsız evrensel yazılım mimarisiyle sivil elektrikli araçlardan taktik savunma robotlarına ve ağır hizmet maden kamyonlarına kadar her şasiye 100 Hz standart CAN-FD köprüsüyle entegre olur."
-                : "A sovereign hardware-agnostic autonomy stack interfacing seamlessly across passenger EVs, tactical defense robotics, and heavy mining fleets via 100 Hz CAN-FD abstraction."}
+                ? "Donanım bağımsız evrensel yazılım mimarisi; sivil elektrikli araçlardan taktik savunma robotlarına ve ağır maden filolarına kadar her şasiye 100 Hz CAN-FD ile entegre olur."
+                : "Hardware-agnostic universal autonomy stack interfacing seamlessly across passenger EVs, tactical defense UGVs, and heavy mining fleets via 100 Hz CAN-FD."}
             </p>
           </div>
         </div>
