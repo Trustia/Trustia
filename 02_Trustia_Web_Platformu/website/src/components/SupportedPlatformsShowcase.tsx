@@ -4,6 +4,44 @@ import { useState } from "react";
 import Link from "next/link";
 import { Car, Shield, Tractor, ArrowRight, Check, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import TopographicCanvas from "@/components/TopographicCanvas";
+
+const DOMAIN_THEMES: Record<
+  string,
+  {
+    accentBorder: string;
+    numColor: string;
+    badgeBg: string;
+    iconBg: string;
+    checkColor: string;
+    glow: string;
+  }
+> = {
+  civilian: {
+    accentBorder: "hover:border-emerald-500/50",
+    numColor: "text-emerald-400",
+    badgeBg: "bg-emerald-500/10 border-emerald-500/30 text-emerald-300",
+    iconBg: "bg-emerald-500/20 text-emerald-400",
+    checkColor: "text-emerald-400",
+    glow: "group-hover:shadow-[0_0_30px_rgba(52,211,153,0.15)]",
+  },
+  defense: {
+    accentBorder: "border-white/15 hover:border-[#E4F80D]/60",
+    numColor: "text-[#E4F80D]",
+    badgeBg: "bg-[#E4F80D]/10 border-[#E4F80D]/30 text-[#E4F80D]",
+    iconBg: "bg-[#E4F80D]/20 text-[#E4F80D]",
+    checkColor: "text-[#E4F80D]",
+    glow: "group-hover:shadow-[0_0_30px_rgba(228,248,13,0.15)]",
+  },
+  industrial: {
+    accentBorder: "hover:border-cyan-500/50",
+    numColor: "text-cyan-400",
+    badgeBg: "bg-cyan-500/10 border-cyan-500/30 text-cyan-300",
+    iconBg: "bg-cyan-500/20 text-cyan-400",
+    checkColor: "text-cyan-400",
+    glow: "group-hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]",
+  },
+};
 
 export default function SupportedPlatformsShowcase() {
   const { lang } = useLanguage();
@@ -110,8 +148,34 @@ export default function SupportedPlatformsShowcase() {
   ];
 
   return (
-    <section id="otonomi" className="relative z-20 py-12 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#080a0e] border-b border-white/10">
-      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-16">
+    <section id="otonomi" className="relative z-20 py-12 sm:py-24 px-4 sm:px-8 lg:px-12 bg-gradient-to-b from-[#090b0e] via-[#0c1017] to-[#090b0e] border-b border-white/10 overflow-hidden select-none">
+      {/* 1. Tactical Topographic Elevation Contours Canvas Layer */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-screen">
+        <TopographicCanvas
+          className="absolute inset-0 w-full h-full pointer-events-none"
+          inkColor="168, 159, 140"
+          bands={36}
+          step={9}
+          freq={0.018}
+          interactive={false}
+        />
+      </div>
+
+      {/* 2. Atmospheric Multi-Point Lighting Accents behind the 3 domains */}
+      <div className="absolute top-1/3 left-[15%] -translate-x-1/2 w-[450px] h-[450px] rounded-full blur-[140px] bg-emerald-500/10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] rounded-full blur-[160px] bg-[#E4F80D]/10 pointer-events-none" />
+      <div className="absolute top-1/3 right-[15%] translate-x-1/2 w-[450px] h-[450px] rounded-full blur-[140px] bg-cyan-500/10 pointer-events-none" />
+
+      {/* 3. Subtle Engineering Dot Grid */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-20"
+        style={{
+          backgroundImage: "radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px)",
+          backgroundSize: "36px 36px",
+        }}
+      />
+
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-16 relative z-10">
         
         {/* Executive Balanced Header (Left: Title & Badge, Right: Architectural Scope) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-end pb-6 sm:pb-8 border-b border-white/10">
@@ -244,25 +308,45 @@ export default function SupportedPlatformsShowcase() {
           </div>
         </div>
 
-        {/* 2. Desktop 3-Column Architectural Panels (100% UNTOUCHED ORIGINAL LAYOUT) */}
+        {/* 2. Desktop 3-Column Architectural Panels (Rich Tactical Glass with Domain Lighting) */}
         <div className="hidden lg:grid lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {solutions.map((item) => {
             const Icon = item.icon;
+            const theme = DOMAIN_THEMES[item.id] || DOMAIN_THEMES.defense;
             return (
               <div
                 key={item.id}
-                className="p-6 sm:p-8 rounded-2xl bg-[#0c0f15] border border-white/10 hover:border-white/20 transition-all duration-300 flex flex-col justify-between space-y-6 group"
+                className={`p-6 sm:p-8 rounded-2xl bg-gradient-to-b from-[#141b27]/90 via-[#0d121c]/95 to-[#07090e]/95 border border-white/10 ${theme.accentBorder} ${theme.glow} backdrop-blur-md transition-all duration-300 flex flex-col justify-between space-y-6 group relative overflow-hidden`}
               >
+                {/* Subtle top edge glow strip */}
+                <div
+                  className="absolute top-0 inset-x-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background:
+                      item.id === "civilian"
+                        ? "linear-gradient(90deg, transparent, #34d399, transparent)"
+                        : item.id === "defense"
+                        ? "linear-gradient(90deg, transparent, #E4F80D, transparent)"
+                        : "linear-gradient(90deg, transparent, #38bdf8, transparent)",
+                  }}
+                />
+
                 {/* Upper Content */}
                 <div className="space-y-5">
                   {/* Top Bar: Number & Category Badge */}
-                  <div className="flex items-center justify-between pb-4 border-b border-white/5">
-                    <span className="font-mono text-xs font-bold text-slate-500 group-hover:text-slate-300 transition-colors">
-                      {item.num} //
-                    </span>
-                    <span className="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300 uppercase tracking-wider font-semibold">
-                      {item.tag}
-                    </span>
+                  <div className="flex items-center justify-between pb-4 border-b border-white/10">
+                    <div className="flex items-center gap-2">
+                      <span className={`font-mono text-xs font-bold ${theme.numColor}`}>
+                        {item.num} //
+                      </span>
+                      <span className={`px-2.5 py-0.5 rounded border text-[10px] font-mono uppercase tracking-wider font-semibold ${theme.badgeBg}`}>
+                        {item.tag}
+                      </span>
+                    </div>
+
+                    <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${theme.iconBg}`}>
+                      <Icon className="w-4 h-4" />
+                    </div>
                   </div>
 
                   {/* Title & Subtitle */}
@@ -281,13 +365,13 @@ export default function SupportedPlatformsShowcase() {
                   </p>
 
                   {/* Technical Specifications List */}
-                  <div className="pt-3 border-t border-white/5 space-y-2">
+                  <div className="pt-3 border-t border-white/10 space-y-2">
                     <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider font-semibold">
                       {lang === "tr" ? "Teknik Yetkinlikler:" : "Key Technical Features:"}
                     </div>
                     {item.specs.map((specText, sIdx) => (
                       <div key={sIdx} className="flex items-start gap-2 text-xs text-slate-300 font-sans">
-                        <Check className="w-3.5 h-3.5 text-slate-400 shrink-0 mt-0.5" />
+                        <Check className={`w-3.5 h-3.5 ${theme.checkColor} shrink-0 mt-0.5`} />
                         <span>{specText}</span>
                       </div>
                     ))}

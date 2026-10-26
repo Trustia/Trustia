@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Cpu, Eye, Radio, Zap, Layers, Activity } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import TacticalVehicleWireframe, { MIFA7_CALLOUTS } from "@/components/TacticalVehicleWireframe";
+import TacticalBackgroundLayers from "@/components/TacticalBackgroundLayers";
+import HUDTelemetryBar from "@/components/HUDTelemetryBar";
 
 const COMPONENT_TABS = [
   { id: "lidar", labelTr: "3D LİDAR", labelEn: "3D LIDAR" },
@@ -114,18 +116,20 @@ export default function RobotaxiShowcase() {
       className="relative z-20 pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-8 lg:px-12 bg-[#090b0e] text-white select-none overflow-hidden scroll-mt-28 sm:scroll-mt-36"
     >
       {/* 
-        100% KUTUSUZ & ÇERÇEVESİZ SAF TİPOGRAFİK VE 3D MİMARİ
-        - Sıfır kutu, sıfır çerçeve, sıfır kart sınırı!
-        - Arka plan zifiri karanlık ile pürüzsüz akıcı
-        - SAIC Maxus MIFA 7 Tripy Mobility Otonom Robotaksi Şasisi
+        TAKTİKSEL DERİNLİKLİ MİMARİ (SIFIR KUTU / OVERLAND AI & ANDURIL EKOLÜ)
+        - Çok Katmanlı Hacimsel Radyal Aydınlatma (Lime, Khaki, Stealth Navy)
+        - Prosedürel 2D Topografik İzokontur Yükselti Çizgileri
+        - Taktik Mühendislik Izgarası & Nişangahlar (+)
+        - Konsantrik LiDAR / Radar Menzil Retikülleri (50m, 120m, 240m)
+        - Işıldayan Neon Stencil Filigranı (TRIPY MIFA 7)
       */}
+      <TacticalBackgroundLayers
+        watermarkText="TRIPY MIFA 7"
+        theme="robotaxi"
+        showTopo={true}
+      />
 
-      {/* Arka Plan Silik Taktiksel Damga Metni (Tam Aracın Arkasında) */}
-      <div className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[11vw] sm:text-[13vw] font-mono font-black text-white/[0.015] tracking-tighter uppercase pointer-events-none select-none whitespace-nowrap z-0">
-        TRIPY MIFA 7
-      </div>
-
-      <div className="max-w-7xl mx-auto space-y-10 sm:space-y-14 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12 relative z-10">
         
         {/* ========================================================
             1. PUNCHY EXECUTIVE HEADER (SIFIR KUTU)
@@ -169,6 +173,9 @@ export default function RobotaxiShowcase() {
             </Link>
           </div>
         </div>
+
+        {/* Real-Time Overland-Style HUD Telemetry Ribbon */}
+        <HUDTelemetryBar />
 
         {/* ========================================================
             2. 3D TACTICAL VEHICLE WIREFRAME (100% KUTUSUZ / FRAMELESS)

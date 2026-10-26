@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getMifa7WireframeModel, Mifa7WireframeModel } from "./mifa7Model";
 
 export interface TacticalCallout {
@@ -98,13 +98,6 @@ export default function TacticalVehicleWireframe({
   // Holographic Assembly & Explosion Animation Progress (0 -> 1)
   const assemblyTRef = useRef<number>(0.0);
   const isAssemblingRef = useRef<boolean>(true);
-  const [assemblyPct, setAssemblyPct] = useState<number>(0);
-
-  // Trigger assembly animation
-  const triggerAssembly = useCallback(() => {
-    assemblyTRef.current = 0.0;
-    isAssemblingRef.current = true;
-  }, []);
 
   // Re-trigger assembly pulse when active component changes
   useEffect(() => {
@@ -147,7 +140,6 @@ export default function TacticalVehicleWireframe({
         if (assemblyTRef.current >= 1.0) {
           isAssemblingRef.current = false;
         }
-        setAssemblyPct(Math.floor(assemblyTRef.current * 100));
       }
 
       const assemblyT = assemblyTRef.current;
@@ -463,14 +455,6 @@ export default function TacticalVehicleWireframe({
         }}
       />
 
-      {/* Assembly Progress Indicator (during holographic formation) */}
-      {assemblyPct < 100 && (
-        <div className="absolute top-2 left-3 pointer-events-none z-10 flex items-center gap-2 font-mono text-[10px] text-[#E4F80D] uppercase tracking-wider">
-          <span className="w-1.5 h-1.5 bg-[#E4F80D] animate-ping" />
-          <span>OTONOM ŞASİ BİRLEŞTİRİLİYOR... [ %{assemblyPct} ]</span>
-        </div>
-      )}
-
       {/* Floating Tactical Yellow HUD Badges (Projected onto Maxus MIFA 7) */}
       <div className="absolute inset-0 pointer-events-none">
         {labelCoords.map((lbl) => {
@@ -495,17 +479,11 @@ export default function TacticalVehicleWireframe({
         })}
       </div>
 
-      {/* Subtle Drag Rotation Helper Text & Re-assemble button at Bottom */}
-      <div className="absolute bottom-2 inset-x-0 mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 pointer-events-none z-10 text-[10px] font-mono tracking-widest uppercase">
+      {/* Subtle Drag Rotation Helper Text at Bottom */}
+      <div className="absolute bottom-2 inset-x-0 mx-auto px-4 flex items-center justify-center pointer-events-none z-10 text-[10px] font-mono tracking-widest uppercase">
         <span className="text-white/40 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
           ↔ 360° ÇEVİR • ↕ AÇI DEĞİŞTİR • SAIC MAXUS MIFA 7 (2.975mm)
         </span>
-        <button
-          onClick={triggerAssembly}
-          className="pointer-events-auto px-2 py-0.5 text-[#E4F80D] hover:text-white border-b border-[#E4F80D] transition-colors cursor-pointer"
-        >
-          [ ⟳ PARÇALARI YENİDEN BİRLEŞTİR ]
-        </button>
       </div>
     </div>
   );
