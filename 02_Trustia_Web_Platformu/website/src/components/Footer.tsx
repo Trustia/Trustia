@@ -217,15 +217,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Clean, Balanced Editorial Strip */}
-        {/* Desktop View (100% UNTOUCHED ORIGINAL LAYOUT) */}
+        {/* Desktop View */}
         <div className="hidden sm:flex items-center justify-between gap-4 text-xs text-slate-400 font-normal">
           <div className="flex items-center gap-2">
             <span>© {new Date().getFullYear()}</span>
             <span className="text-white font-medium">Trustia AI Technologies</span>
-            <span className="text-slate-600">•</span>
-            <span className="text-slate-500">
-              {lang === "tr" ? "İstanbul, Türkiye (Ar-Ge ve Mühendislik)" : "Istanbul, TR • Autonomy Engineering"}
-            </span>
           </div>
 
           <div className="flex items-center gap-4 text-[11px] text-slate-400 font-mono">

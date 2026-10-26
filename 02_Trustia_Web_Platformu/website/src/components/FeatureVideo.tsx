@@ -1,6 +1,10 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function FeatureVideo() {
+  const { lang } = useLanguage();
+
   return (
     <section className="relative w-full overflow-hidden bg-[#090b0e] z-20">
       {/* 
@@ -25,6 +29,16 @@ export default function FeatureVideo() {
           className="w-full h-full object-cover object-center filter contrast-[1.06] brightness-[1.02] saturate-[1.04] pointer-events-none select-none transform-gpu will-change-transform"
           style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
+
+        {/* Tactical Reference / Representative Video Watermark */}
+        <div className="absolute bottom-3 right-3 sm:bottom-5 sm:right-6 z-20 pointer-events-none select-none">
+          <div className="flex items-center gap-2 px-2.5 py-1 rounded bg-black/60 backdrop-blur-md text-[10px] sm:text-[11px] font-mono tracking-wider text-slate-300 border border-white/10">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00]/80" />
+            <span>
+              {lang === "tr" ? "Temsili Gösterim / Alıntı Video" : "Representative Footage / Reference"}
+            </span>
+          </div>
+        </div>
       </div>
     </section>
   );
