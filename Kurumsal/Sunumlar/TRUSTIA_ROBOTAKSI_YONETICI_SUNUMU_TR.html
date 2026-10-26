@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trustia — Seviye-4 Otonom Taksi Yönetici Sunumu</title>
+  <style>
+    :root {
+      --arkaplan: #090c12;
+      --kart: #111622;
+      --kenarlik: #1e2638;
+      --metin-ana: #ffffff;
+      --metin-gri: #94a3b8;
+      --mavi: #2563eb;
+      --acik-mavi: #38bdf8;
+      --yesil: #10b981;
+      --vurgu: #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--arkaplan);
+      color: var(--metin-ana);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      user-select: none;
+    }
+
+    /* Üst Başlık Şeridi */
+    header {
+      height: 60px;
+      padding: 0 32px;
+      background: #06080d;
+      border-bottom: 1px solid var(--kenarlik);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .logo-alani {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-yazi {
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 2.5px;
+      color: #ffffff;
+    }
+
+    .rozet {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(37, 99, 235, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: var(--acik-mavi);
+      text-transform: uppercase;
+    }
+
+    .sayfa-numarasi {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--metin-gri);
+      letter-spacing: 1px;
+    }
+
+    /* Slayt Alanı */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 48px;
+      position: relative;
+    }
+
+    .slayt {
+      display: none;
+      width: 100%;
+      max-width: 1100px;
+      animation: beliriş 0.3s ease-out;
+    }
+
+    .slayt.aktif {
+      display: block;
+    }
+
+    @keyframes beliriş {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .kategori {
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--acik-mavi);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .kategori::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: var(--acik-mavi);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      line-height: 1.25;
+      margin-bottom: 28px;
+      color: #ffffff;
+    }
+
+    .kart-izgara {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .bilgi-karti {
+      background: var(--kart);
+      border: 1px solid var(--kenarlik);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bilgi-karti.vurgulu {
+      border-color: rgba(56, 189, 248, 0.4);
+      background: linear-gradient(180deg, rgba(37, 99, 235, 0.08) 0%, var(--kart) 100%);
+    }
+
+    .kart-sayi {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--acik-mavi);
+    }
+
+    .kart-baslik {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .kart-metin {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #cbd5e1;
+    }
+
+    /* Okuma Metni Şeridi (Konuşmacı Rehberi) */
+    .okuma-seridi {
+      margin-top: 20px;
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 4px solid var(--yesil);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 20px;
+    }
+
+    .okuma-etiket {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--yesil);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .okuma-soz {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: #f1f5f9;
+      font-style: italic;
+    }
+
+    /* Alt Denetim Çubuğu */
+    footer {
+      height: 70px;
+      padding: 0 32px;
+      background: #06080d;
+      border-top: 1px solid var(--kenarlik);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+
+    .tus-ipucu {
+      font-size: 0.85rem;
+      color: var(--metin-gri);
+      display: flex;
+      gap: 16px;
+    }
+
+    .tus {
+      display: inline-block;
+      padding: 3px 8px;
+      background: #171d2b;
+      border: 1px solid #2d3748;
+      border-radius: 4px;
+      font-weight: 700;
+      color: #e2e8f0;
+      font-size: 0.75rem;
+    }
+
+    .buton-grubu {
+      display: flex;
+      gap: 12px;
+    }
+
+    button {
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-ikincil {
+      background: #171d2b;
+      border: 1px solid #2d3748;
+      color: #e2e8f0;
+    }
+
+    .btn-ikincil:hover {
+      background: #232c3d;
+      color: #ffffff;
+    }
+
+    .btn-birincil {
+      background: var(--mavi);
+      border: 1px solid var(--acik-mavi);
+      color: #ffffff;
+    }
+
+    .btn-birincil:hover {
+      background: #1d4ed8;
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.4);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Üst Başlık -->
+  <header>
+    <div class="logo-alani">
+      <div class="logo-yazi">TRUSTIA</div>
+      <div class="rozet">Seviye-4 Otonomi</div>
+    </div>
+    <div class="sayfa-numarasi" id="sayfaGosterge">Slayt 1 / 6</div>
+  </header>
+
+  <!-- Slayt İçerikleri -->
+  <main>
+
+    <!-- Slayt 1: Giriş ve Kimlik -->
+    <section class="slayt aktif" data-slayt="1">
+      <div class="kategori">Kurumsal Giriş</div>
+      <h1>Seviye-4 Otonom Taksi Yazılım ve Güvenlik Altyapısı</h1>
+      
+      <div class="kart-izgara">
+        <div class="bilgi-karti vurgulu">
+          <div class="kart-baslik">Sistem Mimarisi</div>
+          <div class="kart-metin">Elektrikli yolcu araçlarını şehir içinde sürücüsüz yolcu taşıyabilen otonom taksilere dönüştüren yerli yazılım omurgası.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-baslik">Fikri Mülkiyet ve Güvenlik</div>
+          <div class="kart-metin">%100 yerli kaynak kodları, uluslararası otomotiv güvenlik standartları ve 1.307 otomatik doğrulama testi.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-baslik">Doğrudan Araç Şasi Uyumu</div>
+          <div class="kart-metin">Direksiyon ve frene saniyede 100 kez komut gönderen, insan müdahalesinde anında devreden çıkan güvenli sürüş hattı.</div>
+        </div>
+      </div>
+
+      <div class="okuma-seridi">
+        <div class="okuma-etiket">Ekranda Sesli Okuyacağınız Cümle:</div>
+        <div class="okuma-soz">"Merhabalar, hoş geldiniz. Bugün sizlere elektrikli araç filolarını şehir içi yollarda güvenle yolcu taşıyabilen Seviye-4 otonom taksilere dönüştüren yerli yazılım ve güvenlik altyapımızı aktaracağım."</div>
+      </div>
+    </section>
+
+    <!-- Slayt 2: Temel Güvenlik İhtiyacı -->
+    <section class="slayt" data-slayt="2">
+      <div class="kategori">Temel Güvenlik İhtiyacı</div>
+      <h1>Neden Sadece Kamera ve Yapay Zeka Yetmez?</h1>
+      
+      <div class="kart-izgara">
+        <div class="bilgi-karti">
+          <div class="kart-sayi">01</div>
+          <div class="kart-baslik">Açıklanamayan Kararlar Riski</div>
+          <div class="kart-metin">Kamera tabanlı yapay zeka modelleri beklenmedik yol durumlarında sebepsiz sert fren veya şeritten sapma yapabilir. Yolcu taşıyan bir araçta bu kabul edilemez.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-sayi">02</div>
+          <div class="kart-baslik">Donanım ve İşlemci Arızası</div>
+          <div class="kart-metin">Kamera kirlendiğinde veya araç içi bilgisayar donduğunda aracın güvenle sağa çekip durmasını sağlayan bağımsız bir güvenlik katmanı şarttır.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-sayi">03</div>
+          <div class="kart-baslik">Veri Güvenliği ve Resmî Mevzuat</div>
+          <div class="kart-metin">Resmî Gazete Otonom Tebliği ve Kişisel Veri Kanunu gereğince yol ve kamera verilerinin yurt dışı sunuculara akması yasaktır; sistem araç içinde kapalı çalışmalıdır.</div>
+        </div>
+      </div>
+
+      <div class="okuma-seridi">
+        <div class="okuma-etiket">Ekranda Sesli Okuyacağınız Cümle:</div>
+        <div class="okuma-soz">"Bir aracı otonom yapmak sadece kamera takmakla bitmiyor. Yapay zekanın yanıldığı veya donduğu anda devreye girip yolcuyu koruyan bağımsız bir yerli emniyet hakemine ihtiyaç var."</div>
+      </div>
+    </section>
+
+    <!-- Slayt 3: Trustia Güvenlik Hakemi -->
+    <section class="slayt" data-slayt="3">
+      <div class="kategori">Trustia Çözümü</div>
+      <h1>Çift Denetimli Yerli Emniyet Hakemi</h1>
+      
+      <div class="kart-izgara">
+        <div class="bilgi-karti vurgulu">
+          <div class="kart-baslik">Çift Kontrol Doğrulaması</div>
+          <div class="kart-metin">Kameradan gelen rota adayı, lazer mesafe ölçümleriyle anlık olarak doğrulanır. İki sistem uyuşmadığında araç asla tehlikeli bir manevra yapmaz.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-baslik">50 Milisaniye Güvenlik Bekçisi</div>
+          <div class="kart-metin">Sistem her 20 milisaniyede bir kendini denetler. Bilgisayardan komut kesilirse 50 milisaniye içinde acil emniyet prosedürü başlar.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-baslik">Kontrollü Sağa Çekme ve Durma</div>
+          <div class="kart-metin">Acil durumda araç savrulmadan, yolcu konforunu bozmayacak şekilde saniyede 1.5 metre yavaşlayarak kontrollü biçimde durur.</div>
+        </div>
+      </div>
+
+      <div class="okuma-seridi">
+        <div class="okuma-etiket">Ekranda Sesli Okuyacağınız Cümle:</div>
+        <div class="okuma-soz">"Biz araç beyni ile şasi arasına giren yerli hakemiz. Kamera yanılsa bile bizim sistemimiz 50 milisaniyede durumu fark eder ve aracı emniyetle durdurur."</div>
+      </div>
+    </section>
+
+    <!-- Slayt 4: Araç Şasisi ve Sürüş Hattı -->
+    <section class="slayt" data-slayt="4">
+      <div class="kategori">Şasi Entegrasyonu</div>
+      <h1>Yüksek Hızlı Şasi Sürüş Hattı ve İnsan Önceliği</h1>
+      
+      <div class="kart-izgara">
+        <div class="bilgi-karti">
+          <div class="kart-sayi">100 Hz</div>
+          <div class="kart-baslik">Saniyede 100 Kez Komut</div>
+          <div class="kart-metin">Araç direksiyon açısı, gaz ve fren komutları şasiye saniyede 100 kez kesintisiz iletilir. Sürüş akıcı ve pürüzsüzdür.</div>
+        </div>
+        <div class="bilgi-karti vurgulu">
+          <div class="kart-sayi">1.4 ms</div>
+          <div class="kart-baslik">Saniyenin Binde Biri Gecikme</div>
+          <div class="kart-metin">Mesaj gecikme süresi yalnızca 1.4 milisaniyedir. Normal bir insanın tepki süresinden 200 kat daha hızlıdır.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-sayi">5 ms</div>
+          <div class="kart-baslik">Anında İnsan Müdahalesi</div>
+          <div class="kart-metin">Güvenlik sürücüsü direksiyona hafifçe dokunduğu anda sistem 5 milisaniyede otonom kontrolü bırakır ve yönetimi insana verir.</div>
+        </div>
+      </div>
+
+      <div class="okuma-seridi">
+        <div class="okuma-etiket">Ekranda Sesli Okuyacağınız Cümle:</div>
+        <div class="okuma-soz">"Sistemimiz araca milisaniyeler seviyesinde hükmederken; güvenlik sürücüsü direksiyona dokunduğu an tüm kontrolü derhal insana devredecek şekilde tasarlanmıştır."</div>
+      </div>
+    </section>
+
+    <!-- Slayt 5: GPS Olmayan Alanlar -->
+    <section class="slayt" data-slayt="5">
+      <div class="kategori">Konumlandırma Teknolojisi</div>
+      <h1>Tünellerde ve Kapalı Alanlarda Kesintisiz Sürüş</h1>
+      
+      <div class="kart-izgara">
+        <div class="bilgi-karti">
+          <div class="kart-baslik">Uydu Bağımlılığı Yoktur</div>
+          <div class="kart-metin">Şehir içi alt geçitlerde, gökdelenlerin arasında veya katlı otoparklarda uydu sinyali kesilse dahi araç yolunu ve şeridini şaşırmaz.</div>
+        </div>
+        <div class="bilgi-karti vurgulu">
+          <div class="kart-baslik">3 Boyutlu Lazer Haritalama</div>
+          <div class="kart-metin">Tavandaki lazer tarayıcı saniyede 2.6 milyon nokta üreterek aracın etrafını santimetre hassasiyetinde 3 boyutlu olarak anlık haritalandırır.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-baslik">Silik Şeritlerde Güvenli Takip</div>
+          <div class="kart-metin">Yol çizgileri silinmiş veya hava yağışlı olsa bile araç yol sınırlarını bordür taşlarından ve zemin yapısından algılar.</div>
+        </div>
+      </div>
+
+      <div class="okuma-seridi">
+        <div class="okuma-etiket">Ekranda Sesli Okuyacağınız Cümle:</div>
+        <div class="okuma-soz">"Uydu sinyalinin kaybolduğu tünellerde ve alt geçitlerde dahi lazer haritalama sayesinde aracımız santimetre şaşmadan kendi şeridinde kalır."</div>
+      </div>
+    </section>
+
+    <!-- Slayt 6: Ortak Çalışma Planı -->
+    <section class="slayt" data-slayt="6">
+      <div class="kategori">Ortak Çalışma Teklifi</div>
+      <h1>60 Günlük Saha Doğrulama ve Test Yol Haritası</h1>
+      
+      <div class="kart-izgara">
+        <div class="bilgi-karti">
+          <div class="kart-sayi">Faz 1</div>
+          <div class="kart-baslik">İlk 15 Gün: Masa Başı ve Şasi Testi</div>
+          <div class="kart-metin">Aracın veri hattına bağlanma, direksiyon ve fren motorlarının park halinde sıfır hızda güvenle test edilmesi.</div>
+        </div>
+        <div class="bilgi-karti">
+          <div class="kart-sayi">Faz 2</div>
+          <div class="kart-baslik">30. Gün: Kapalı Pist Düşük Hız Testi</div>
+          <div class="kart-metin">Kapalı test alanında 30 km/s hızda temel şerit takip, kavşak dönüşleri ve güvenli duruş denemeleri.</div>
+        </div>
+        <div class="bilgi-karti vurgulu">
+          <div class="kart-sayi">Faz 3</div>
+          <div class="kart-baslik">60. Gün: 50 km/s Tam Otonom Sürüş</div>
+          <div class="kart-metin">Azami şehir içi hızında engelden kaçınma, yolcu alma simülasyonu ve resmî mevzuat uygunluk raporu teslimi.</div>
+        </div>
+      </div>
+
+      <div class="okuma-seridi">
+        <div class="okuma-etiket">Ekranda Sesli Okuyacağınız Cümle:</div>
+        <div class="okuma-soz">"Gelin, aracı kapalı piste çekelim ve 60 günlük bir saha doğrulama süreci başlatalım. Araç pistte hatasız döndüğünde ticari adımları birlikte atarız."</div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Alt Denetim Çubuğu -->
+  <footer>
+    <div class="tus-ipucu">
+      <span>İlerle: <span class="tus">Sağ Ok</span> veya <span class="tus">Boşluk</span></span>
+      <span>Geri: <span class="tus">Sol Ok</span></span>
+      <span>Tam Ekran: <span class="tus">F11</span></span>
+    </div>
+
+    <div class="buton-grubu">
+      <button class="btn-ikincil" id="oncekiBtn" onclick="oncekiSlayt()">◄ Önceki</button>
+      <button class="btn-birincil" id="sonrakiBtn" onclick="sonrakiSlayt()">Sonraki ►</button>
+    </div>
+  </footer>
+
+  <script>
+    let aktifSlayt = 1;
+    const toplamSlayt = 6;
+
+    function gosterSlayt(n) {
+      if (n < 1) n = 1;
+      if (n > toplamSlayt) n = toplamSlayt;
+      aktifSlayt = n;
+
+      document.querySelectorAll('.slayt').forEach(s => s.classList.remove('aktif'));
+      const secilen = document.querySelector(`.slayt[data-slayt="${aktifSlayt}"]`);
+      if (secilen) secilen.classList.add('aktif');
+
+      document.getElementById('sayfaGosterge').textContent = `Slayt ${aktifSlayt} / ${toplamSlayt}`;
+      document.getElementById('oncekiBtn').style.opacity = aktifSlayt === 1 ? '0.4' : '1';
+      document.getElementById('sonrakiBtn').textContent = aktifSlayt === toplamSlayt ? 'Tamamla ✓' : 'Sonraki ►';
+    }
+
+    function sonrakiSlayt() {
+      if (aktifSlayt < toplamSlayt) {
+        gosterSlayt(aktifSlayt + 1);
+      }
+    }
+
+    function oncekiSlayt() {
+      if (aktifSlayt > 1) {
+        gosterSlayt(aktifSlayt - 1);
+      }
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        sonrakiSlayt();
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        oncekiSlayt();
+      }
+    });
+
+    gosterSlayt(1);
+  </script>
+</body>
+</html>
