@@ -30,14 +30,11 @@ export default function FeatureVideo() {
           style={{ imageRendering: "-webkit-optimize-contrast" }}
         />
 
-        {/* Tactical Reference / Representative Video Watermark */}
-        <div className="absolute bottom-3 right-3 sm:bottom-5 sm:right-6 z-20 pointer-events-none select-none">
-          <div className="flex items-center gap-2 px-2.5 py-1 rounded bg-black/60 backdrop-blur-md text-[10px] sm:text-[11px] font-mono tracking-wider text-slate-300 border border-white/10">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C8FF00]/80" />
-            <span>
-              {lang === "tr" ? "Temsili Gösterim / Alıntı Video" : "Representative Footage / Reference"}
-            </span>
-          </div>
+        {/* 100% KUTUSUZ & ÇERÇEVESİZ SAF TİPOGRAFİK GÖSTERGE */}
+        <div className="absolute bottom-3 right-4 sm:bottom-5 sm:right-8 z-20 pointer-events-none select-none">
+          <span className="text-[10px] sm:text-[11px] font-mono tracking-wider text-white/50 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
+            {lang === "tr" ? "* Temsili Gösterim / Alıntı Video" : "* Representative Footage / Reference"}
+          </span>
         </div>
       </div>
     </section>
