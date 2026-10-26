@@ -125,27 +125,26 @@ export default function RobotaxiShowcase() {
           <div className="space-y-2.5 max-w-3xl">
             {/* Taktik HUD Başlığı */}
             <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-[#E5D6BC]/80">
-              <span className="text-[#E4F80D] font-bold">[+]</span>
               <span className="text-white font-semibold">
                 {lang === "tr" ? "SEVİYE-4 ROBOTAKSİ MİMARİSİ" : "LEVEL-4 ROBOTAXI ARCHITECTURE"}
               </span>
               <span className="text-[#E5D6BC]/40">/</span>
               <span className="text-[#E4F80D] font-bold">SAIC MAXUS MIFA 7</span>
               <span className="text-[#E5D6BC]/40">/</span>
-              <span className="text-[#E5D6BC]/70">TRIPY MOBILITY</span>
+              <span className="text-[#E5D6BC]/70">{lang === "tr" ? "ELEKTRİKLİ FİLO MİMARİSİ" : "COMMERCIAL EV FLEET"}</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight font-sans">
-              <span className="block text-white">Tripy SAIC Maxus MIFA 7</span>
+              <span className="block text-white">SAIC Maxus MIFA 7</span>
               <span className="block text-[#E5D6BC] font-light text-lg sm:text-2xl lg:text-3xl mt-1">
-                {lang === "tr" ? "Seviye-4 Otonom Sürüş Mimarisi" : "Level-4 Autonomous Driving Architecture"}
+                {lang === "tr" ? "Seviye-4 Ticari Robotaksi Mimarisi" : "Level-4 Commercial Robotaxi Architecture"}
               </span>
             </h2>
 
             <p className="text-[#E5D6BC]/80 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-0.5">
               {lang === "tr"
-                ? "Tripy Mobility ticari elektrikli filoları için geliştirilmiş; 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM ve ISO 26262 ASIL-D deterministik seyrüsefer referans yazılım mimarisi."
-                : "Deterministic Level-4 autonomy architecture engineered for Tripy Mobility commercial electric fleets via 100 Hz CAN-FD drive-by-wire and 3D LiDAR SLAM."}
+                ? "Ticari elektrikli yolcu filoları ve kentsel robotaksi operasyonları için geliştirilmiş; 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM ve ISO 26262 ASIL-D deterministik seyrüsefer referans mimarisi."
+                : "Deterministic Level-4 autonomy architecture engineered for commercial electric fleets via 100 Hz CAN-FD drive-by-wire and 3D LiDAR SLAM."}
             </p>
           </div>
 
@@ -253,7 +252,7 @@ export default function RobotaxiShowcase() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-[11px] text-[#E5D6BC]/70 uppercase tracking-wider">
             <div className="flex items-center gap-2">
               <span className="text-[#E4F80D] font-bold">//</span>
-              <span className="text-white font-semibold">TRİPY SAHA ENTEGRASYON VE DOĞRULAMA KÜTÜĞÜ</span>
+              <span className="text-white font-semibold">{lang === "tr" ? "L4 ROBOTAKSİ SAHA ENTEGRASYON VE DOĞRULAMA KÜTÜĞÜ" : "L4 ROBOTAXI DEPLOYMENT & VERIFICATION LOG"}</span>
             </div>
             <span className="text-[#E4F80D] font-semibold">%100 MİLLİ SEVİYE-4 ÇEKİRDEK</span>
           </div>
@@ -294,7 +293,7 @@ export default function RobotaxiShowcase() {
                 100 Hz
               </div>
               <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
-                Tripy EPS &amp; i-Booster Senkron
+                {lang === "tr" ? "Drive-by-Wire (EPS & i-Booster)" : "Drive-by-Wire (EPS & i-Booster)"}
               </span>
             </div>
 

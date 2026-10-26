@@ -144,11 +144,11 @@ export default function RobotaxiPage() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-[#E5D6BC]/15">
             <div className="space-y-1.5 max-w-3xl">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#E5D6BC]/10 border border-[#E5D6BC]/25 text-[#E5D6BC] text-[10px] font-mono tracking-wider uppercase">
-                <span>{lang === "tr" ? "REFERANS OTONOMİ MİMARİSİ (RAD) // E-GMP" : "REFERENCE AUTONOMY ARCHITECTURE // E-GMP"}</span>
+                <span>{lang === "tr" ? "REFERANS OTONOMİ MİMARİSİ // SAIC MAXUS MIFA 7" : "REFERENCE AUTONOMY ARCHITECTURE // SAIC MAXUS MIFA 7"}</span>
               </div>
               
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug">
-                Hyundai Ioniq 5 (E-GMP){" "}
+                SAIC Maxus MIFA 7{" "}
                 <span className="text-[#E5D6BC] font-normal block sm:inline">
                   {lang === "tr" ? "— Seviye 4 Donanım ve Sensör Mimarisi" : "— Level 4 Hardware & Sensor Blueprint"}
                 </span>
@@ -156,7 +156,7 @@ export default function RobotaxiPage() {
               
               <p className="text-[#d6cebf] text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
                 {lang === "tr"
-                  ? "Kurumsal filolar ve OEM entegrasyonu için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.400+ satır özgün deterministik otonomi şartnamesi."
+                  ? "Ticari yolcu filoları ve kentsel robotaksi operasyonları için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.400+ satır özgün deterministik otonomi şartnamesi."
                   : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, and 100 Hz CAN-FD drive-by-wire across 16,400+ lines of sovereign autonomy software."}
               </p>
             </div>
@@ -262,7 +262,7 @@ export default function RobotaxiPage() {
                 TOP-DOWN // 360° SENSÖR KAPSAMA GEOMETRİSİ
               </span>
               <span className="text-slate-400">
-                ÖLÇEK: 1:100 (240m ÇAP) • E-GMP ŞASİ
+                ÖLÇEK: 1:100 (240m ÇAP) • SAIC MAXUS MIFA 7 ŞASİ
               </span>
             </div>
 
@@ -345,7 +345,7 @@ export default function RobotaxiPage() {
                 <rect x="319" y="190" width="4" height="12" rx="1.5" fill="#64748b" />
 
                 <line x1="272" y1="146" x2="272" y2="196" stroke="rgba(148,163,184,0.4)" strokeWidth="0.8" />
-                <text x="268" y="173" textAnchor="end" fill="rgba(148,163,184,0.7)" fontSize="7" fontFamily="monospace">3.000mm</text>
+                <text x="268" y="173" textAnchor="end" fill="rgba(148,163,184,0.7)" fontSize="7" fontFamily="monospace">2.975mm</text>
 
                 {/* Bumper Pods */}
                 <circle cx="286" cy="134" r="3" fill="#38bdf8" stroke="#ffffff" strokeWidth="1" />
@@ -446,7 +446,7 @@ export default function RobotaxiPage() {
           <div className="space-y-3">
             <div className="border-b border-[#E5D6BC]/15 pb-2">
               <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
-                // {lang === "tr" ? "E-GMP CAN-FD ENTEGRASYONU" : "E-GMP CAN-FD ARCHITECTURE"}
+                // {lang === "tr" ? "SAIC MAXUS MIFA 7 CAN-FD ENTEGRASYONU" : "SAIC MAXUS MIFA 7 CAN-FD ARCHITECTURE"}
               </div>
               <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
                 {lang === "tr" ? "Sıfır Delme & Tak-Çalıştır Şasi Uyumu" : "Zero-Drill & Plug-and-Play Integration"}
@@ -459,14 +459,14 @@ export default function RobotaxiPage() {
                 <span>
                   <b className="text-white font-medium">{lang === "tr" ? "Dikiz Aynası ADAS Y-Harness:" : "Rearview ADAS Y-Harness:"}</b>{" "}
                   {lang === "tr"
-                    ? "OBD-II gateway kısıtlamasına takılmadan şasi CAN-FD hattına 100 Hz direksiyon (LKAS11) ve 50 Hz fren/gaz (SCC_FD) sinyali iletilir."
-                    : "Transmits 100 Hz steering (LKAS11) and 50 Hz brake/accel (SCC_FD) directly into chassis CAN-FD without gateway latency."}
+                    ? "OBD-II gateway kısıtlamasına takılmadan şasi CAN-FD hattına 100 Hz direksiyon (EPS) ve 50 Hz fren/gaz (i-Booster) sinyali iletilir."
+                    : "Transmits 100 Hz steering (EPS) and 50 Hz brake/accel (i-Booster) directly into chassis CAN-FD without gateway latency."}
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "57 Litrelik Sub-Trunk Hesaplama Havuzu:" : "57-Liter Sub-Trunk Compute Hub:"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "Bagaj Altı Hesaplama ve Güç Havuzu:" : "Sub-Trunk Compute & Power Hub:"}</b>{" "}
                   {lang === "tr"
                     ? "Jetson Orin, sigorta panosu, 5G router ve DC-DC regülatör bagaj altı havuzuna yerleştirilir; iç mekan düzeni korunur."
                     : "Jetson Orin, fuse box, 5G router, and DC-DC regulator fit discreetly in the sub-trunk compartment."}
