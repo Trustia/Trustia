@@ -247,45 +247,39 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Mobile View (sm:hidden - Dedicated High-End Ergonomic Layout) */}
-        <div className="flex sm:hidden flex-col items-center gap-4 text-center pt-2">
-          {/* Symmetrical 2x2 Glass Pill Grid for Compliance & Legal Links */}
-          <div className="grid grid-cols-2 gap-2 w-full max-w-xs font-mono text-[11px]">
-            <Link
-              href="/politika/kvkk/"
-              className="py-2.5 px-3 rounded-lg bg-white/[0.04] border border-white/10 text-slate-300 hover:text-white active:bg-white/10 transition-colors flex items-center justify-center font-medium"
-            >
-              KVKK / GDPR
-            </Link>
-            <Link
-              href="/politika/ihracat/"
-              className="py-2.5 px-3 rounded-lg bg-white/[0.04] border border-white/10 text-slate-300 hover:text-white active:bg-white/10 transition-colors flex items-center justify-center font-medium"
-            >
-              Dual-Use
-            </Link>
-            <Link
-              href="/politika/oin-lisans/"
-              className="py-2.5 px-3 rounded-lg bg-white/[0.04] border border-white/10 text-slate-300 hover:text-white active:bg-white/10 transition-colors flex items-center justify-center font-medium"
-            >
-              OIN 2.0
-            </Link>
-            <Link
-              href="/politika/lisans/"
-              className="py-2.5 px-3 rounded-lg bg-white/[0.04] border border-white/10 text-slate-300 hover:text-white active:bg-white/10 transition-colors flex items-center justify-center font-medium"
-            >
-              SLA / EULA
-            </Link>
+        {/* Mobile View: 100% KUTUSUZ & ÇERÇEVESİZ TİPOGRAFİK DÜZEN */}
+        <div className="flex sm:hidden flex-col items-center gap-3 text-center pt-2 font-mono text-xs">
+          {/* Pure Typographic Legal Links (Sıfır Kutu, Sıfır Kenarlık) */}
+          <div className="flex flex-col items-center gap-1.5 text-[11px] text-slate-400">
+            <div className="flex items-center gap-3">
+              <Link href="/politika/kvkk/" className="hover:text-white transition-colors">
+                KVKK / GDPR
+              </Link>
+              <span className="text-slate-600">/</span>
+              <Link href="/politika/ihracat/" className="hover:text-white transition-colors">
+                Dual-Use
+              </Link>
+            </div>
+            <div className="flex items-center gap-3">
+              <Link href="/politika/oin-lisans/" className="hover:text-white transition-colors">
+                OIN 2.0
+              </Link>
+              <span className="text-slate-600">/</span>
+              <Link href="/politika/lisans/" className="hover:text-white transition-colors">
+                SLA / EULA
+              </Link>
+            </div>
           </div>
 
-          {/* Symmetrical Centered Copyright & Location */}
-          <div className="space-y-1 text-xs text-slate-400">
-            <div className="flex items-center justify-center gap-1.5 font-medium text-slate-300">
+          {/* Copyright & Location (Sıfır Kutu, Taktik Künye) */}
+          <div className="text-[11px] text-slate-500 font-sans space-y-0.5 pt-1">
+            <div className="flex items-center justify-center gap-1.5">
               <span>© {new Date().getFullYear()}</span>
-              <span className="text-white font-semibold">Trustia AI Technologies</span>
+              <span className="text-slate-300 font-medium">Trustia AI Technologies</span>
             </div>
-            <p className="text-[11px] text-slate-400">
+            <div className="text-[10px] text-slate-500">
               {lang === "tr" ? "İstanbul, Türkiye • Tüm Hakları Saklıdır" : "Istanbul, TR • All Rights Reserved"}
-            </p>
+            </div>
           </div>
         </div>
 
