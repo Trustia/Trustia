@@ -12,8 +12,6 @@ import {
   CheckCircle2,
   Lock,
   Radio,
-  MapPin,
-  Building,
   Zap,
   Activity,
   Layers,
@@ -364,35 +362,6 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* 6. Physical Infrastructure & Proving Grounds */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8 border-t border-[#E5D6BC]/15">
-          <div className="p-6 sm:p-7 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/15 space-y-3">
-            <div className="flex items-center gap-2 text-[#E5D6BC] font-mono text-xs uppercase font-semibold">
-              <Building className="w-4 h-4 text-[#E5D6BC]" />
-              <span>{lang === "tr" ? "YÖNETİM VE AR-GE MERKEZİ" : "HEADQUARTERS & R&D"}</span>
-            </div>
-            <div className="text-base font-bold text-white">İTO BTM Kampüsü</div>
-            <p className="text-xs text-[#d6cebf] leading-relaxed font-sans">
-              {lang === "tr"
-                ? "İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (BTM Fulya Kampüsü, Şişli / İstanbul). Çekirdek yazılım mimarisi, simülasyon sunucuları ve filo teleoperasyon merkezi."
-                : "Istanbul Chamber of Commerce BTM (Fulya Campus, Sisli / Istanbul). Core autonomy stack engineering and fleet teleoperation hub."}
-            </p>
-          </div>
-
-          <div className="p-6 sm:p-7 rounded-2xl bg-[#251f18] border border-[#E5D6BC]/15 space-y-3">
-            <div className="flex items-center gap-2 text-[#E5D6BC] font-mono text-xs uppercase font-semibold">
-              <MapPin className="w-4 h-4 text-[#E5D6BC]" />
-              <span>{lang === "tr" ? "SAHA TEST VE PİST SAHALARI" : "PROVING GROUNDS"}</span>
-            </div>
-            <div className="text-base font-bold text-white">Bilişim Vadisi & Hacettepe Teknokent</div>
-            <p className="text-xs text-[#d6cebf] leading-relaxed font-sans">
-              {lang === "tr"
-                ? "Bilişim Vadisi Gebze 1.5 km kapalı test pisti ve Hacettepe Teknokent otonom sürüş test sahası. Gerçek araç üzerinde CAN-FD aktüatör, SLAM ve dinamik engel testleri."
-                : "Bilisim Vadisi Gebze 1.5 km proving grounds and Hacettepe Teknokent autonomous track. Drive-by-Wire verification and dynamic obstacle avoidance trials."}
-            </p>
           </div>
         </div>
 

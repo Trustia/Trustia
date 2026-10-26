@@ -111,7 +111,7 @@ export default function RobotaxiShowcase() {
   return (
     <section
       id="robotaxi"
-      className="relative z-20 pt-20 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-12 bg-gradient-to-b from-[#221d16] via-[#2f281f] to-[#252018] text-white select-none overflow-hidden scroll-mt-20 sm:scroll-mt-28 border-b border-[#E5D6BC]/20"
+      className="hidden md:block relative z-20 pt-20 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-12 bg-gradient-to-b from-[#221d16] via-[#2f281f] to-[#252018] text-white select-none overflow-hidden scroll-mt-20 sm:scroll-mt-28 border-b border-[#E5D6BC]/20"
     >
       {/* Soft Ambient Spotlight directly behind 3D MIFA 7 Vehicle */}
       <div className="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(228,248,13,0.08),transparent_70%)] pointer-events-none blur-3xl z-0" />
