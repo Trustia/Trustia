@@ -103,20 +103,19 @@ export default function SupportedPlatformsShowcase() {
         
         {/* Tactical Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-12 items-end pb-4 sm:pb-8 border-b border-[#26221b]/15">
-          <div className="lg:col-span-7 space-y-2">
-            <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-mono tracking-wider uppercase font-bold text-[#5c5344]">
-              <span className="text-[#14120c] font-extrabold">[+]</span>
-              <span>{lang === "tr" ? "UYGULAMA ALANLARI VE PLATFORM ENTEGRASYONU" : "DEPLOYMENT DOMAINS & CHASSIS INTEGRATION"}</span>
+          <div className="lg:col-span-8 space-y-2">
+            <div className="text-[10px] sm:text-[11px] font-mono tracking-wider uppercase font-bold text-[#5c5344]">
+              {lang === "tr" ? "UYGULAMA ALANLARI VE PLATFORM ENTEGRASYONU" : "DEPLOYMENT DOMAINS & CHASSIS INTEGRATION"}
             </div>
 
-            <h2 className="text-base sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#14120c] tracking-tight leading-snug">
+            <h2 className="text-base sm:text-2xl md:text-3xl lg:text-[34px] font-extrabold text-[#14120c] tracking-tight leading-snug">
               {lang === "tr"
                 ? "Çift Kullanımlı (Dual-Use) Otonomi Çözümleri"
                 : "Dual-Use Autonomous Driving Stack"}
             </h2>
           </div>
 
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <p className="text-xs sm:text-sm text-[#383226] font-medium leading-relaxed">
               {lang === "tr"
                 ? "Donanım bağımsız evrensel yazılım mimarisi; sivil elektrikli araçlardan taktik savunma robotlarına ve ağır maden filolarına kadar her şasiye 100 Hz CAN-FD ile entegre olur."
@@ -228,20 +227,18 @@ export default function SupportedPlatformsShowcase() {
               >
                 {/* Upper Content */}
                 <div className="space-y-5">
-                  {/* Top Bar: Number & Category Badge */}
+                  {/* Top Bar: Number & Category Badge (Clean, no boxes) */}
                   <div className="flex items-center justify-between pb-4 border-b border-[#26221b]/15">
                     <div className="flex items-center gap-2">
                       <span className="font-mono text-xs font-bold text-[#26221b]">
                         {item.num} //
                       </span>
-                      <span className="px-2.5 py-0.5 bg-[#26221b]/10 border border-[#26221b]/20 text-[10px] font-mono text-[#14120c] uppercase tracking-wider font-bold">
+                      <span className="text-[10px] font-mono text-[#5c5344] uppercase tracking-wider font-bold">
                         {item.tag}
                       </span>
                     </div>
 
-                    <div className="w-8 h-8 flex items-center justify-center bg-[#26221b]/10 text-[#14120c]">
-                      <Icon className="w-4 h-4" />
-                    </div>
+                    <Icon className="w-4 h-4 text-[#14120c]" />
                   </div>
 
                   {/* Title & Subtitle */}
