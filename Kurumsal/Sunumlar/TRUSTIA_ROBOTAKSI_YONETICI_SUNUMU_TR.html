@@ -8,9 +8,7 @@
     :root {
       --arkaplan: #080b11;
       --kart: #101522;
-      --kart-hover: #141b2c;
       --kenarlik: #1e273a;
-      --kenarlik-vurgu: #38bdf8;
       --metin-ana: #ffffff;
       --metin-gri: #94a3b8;
       --metin-acik: #cbd5e1;
@@ -36,7 +34,7 @@
 
     /* Üst Şerit */
     header {
-      height: 64px;
+      height: 60px;
       padding: 0 36px;
       background: #05070c;
       border-bottom: 1px solid var(--kenarlik);
@@ -84,7 +82,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 36px 54px;
+      padding: 24px 50px;
       position: relative;
     }
 
@@ -92,7 +90,7 @@
       display: none;
       width: 100%;
       max-width: 1200px;
-      animation: beliriş 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: beliriş 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .slayt.aktif {
@@ -100,17 +98,17 @@
     }
 
     @keyframes beliriş {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .kategori {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 2.5px;
       color: var(--acik-mavi);
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -127,10 +125,10 @@
     }
 
     h1 {
-      font-size: 2.35rem;
+      font-size: 2.15rem;
       font-weight: 800;
       line-height: 1.25;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
       color: #ffffff;
       letter-spacing: -0.5px;
     }
@@ -139,29 +137,26 @@
     .kart-izgara {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 18px;
     }
 
     .bilgi-karti {
       background: var(--kart);
       border: 1px solid var(--kenarlik);
-      border-radius: 14px;
-      padding: 28px 24px;
+      border-radius: 12px;
+      padding: 20px 22px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
-      min-height: 280px;
-      transition: all 0.2s ease;
+      gap: 8px;
     }
 
     .bilgi-karti.vurgulu {
       border-color: rgba(56, 189, 248, 0.45);
       background: linear-gradient(180deg, rgba(37, 99, 235, 0.1) 0%, var(--kart) 100%);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
     .kart-etiket {
-      font-size: 0.75rem;
+      font-size: 0.74rem;
       font-weight: 800;
       letter-spacing: 1.5px;
       color: var(--acik-mavi);
@@ -170,34 +165,48 @@
     }
 
     .kart-sayi {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: 900;
       color: var(--acik-mavi);
-      letter-spacing: -0.5px;
     }
 
     .kart-baslik {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       color: #ffffff;
       line-height: 1.35;
     }
 
     .kart-metin {
-      font-size: 1.05rem;
-      line-height: 1.65;
+      font-size: 0.92rem;
+      line-height: 1.55;
       color: var(--metin-acik);
-      font-weight: 400;
     }
 
-    .kart-metin strong {
-      color: #ffffff;
+    /* Alttaki Yeşil Kutu (Yönetici Vurgusu / Murat'ın Okuyacağı Metin) */
+    .yesil-kutu {
+      margin-top: 20px;
+      background: rgba(16, 185, 129, 0.09);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-left: 5px solid var(--yesil);
+      border-radius: 10px;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .yesil-kutu-metin {
+      font-size: 1.15rem;
       font-weight: 600;
+      line-height: 1.55;
+      color: #f8fafc;
+      letter-spacing: 0.2px;
     }
 
     /* Alt Denetim Şeridi */
     footer {
-      height: 72px;
+      height: 64px;
       padding: 0 36px;
       background: #05070c;
       border-top: 1px solid var(--kenarlik);
@@ -208,7 +217,7 @@
     }
 
     .tus-ipucu {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--metin-gri);
       display: flex;
       gap: 20px;
@@ -227,13 +236,13 @@
 
     .buton-grubu {
       display: flex;
-      gap: 14px;
+      gap: 12px;
     }
 
     button {
-      padding: 11px 24px;
+      padding: 9px 22px;
       border-radius: 8px;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -261,7 +270,7 @@
 
     .btn-birincil:hover {
       background: #1d4ed8;
-      box-shadow: 0 0 18px rgba(37, 99, 235, 0.45);
+      box-shadow: 0 0 16px rgba(37, 99, 235, 0.45);
     }
   </style>
 </head>
@@ -279,33 +288,37 @@
   <!-- Ana Slaytlar -->
   <main>
 
-    <!-- Slayt 1: Kurumsal Giriş ve Şirket Künyesi -->
+    <!-- Slayt 1: Şirket ve Mimari Künyesi -->
     <section class="slayt aktif" data-slayt="1">
-      <div class="kategori">Kurumsal Giriş ve Şirket Künyesi</div>
+      <div class="kategori">Kurumsal Giriş</div>
       <h1>Trustia Otonomi Teknolojileri — Şirket ve Mimari Künyesi</h1>
       
       <div class="kart-izgara">
         <div class="bilgi-karti vurgulu">
           <div class="kart-etiket">Mülkiyet & Sermaye</div>
           <div class="kart-baslik">%100 Bağımsız Yerli Sermaye</div>
-          <div class="kart-metin">Trustia; kurucusu ve tek pay sahibi Murat Furkan Bayram tarafından, fikri mülkiyeti bütünüyle bağımsız yerli sermayeye ait, sıfırdan inşa edilmiş deterministik Seviye-4 otonom sürüş mimarisidir.</div>
+          <div class="kart-metin">Kurucusu ve tek pay sahibi Murat Furkan Bayram tarafından, fikri mülkiyeti bütünüyle bağımsız yerli sermayeye ait mimari.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Özgün Kod Tabanı</div>
           <div class="kart-baslik">16.400 Satır Özgün Mimari</div>
-          <div class="kart-metin">Çekirdek yazılımımız hiçbir yabancı kapalı kütüphaneye dayanmaz; 16.400'ü aşkın satırdan oluşan özgün yapısıyla her türlü elektrikli araç şasisine tak-çalıştır entegre edilebilmektedir.</div>
+          <div class="kart-metin">Hiçbir yabancı kapalı kütüphaneye dayanmayan, elektrikli araç şasilerine tak-çalıştır entegre edilebilen otonom sürüş omurgası.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Sıfır Hata Güvencesi</div>
           <div class="kart-baslik">1.307 Otomatik Doğrulama Testi</div>
-          <div class="kart-metin">Yazılımın tüm matematiksel, kinematik ve mantıksal güvenlik fonksiyonları 1.307 bağımsız otomatik test hattından yüzde yüz başarıyla ve sıfır hatayla geçmiştir.</div>
+          <div class="kart-metin">Tüm matematiksel ve güvenlik fonksiyonları 1.307 bağımsız test hattından yüzde yüz başarıyla ve sıfır hatayla geçmiştir.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Trustia; hiçbir yabancı firmaya veya lisansa bağımlı olmadan, 16.400 satırlık özgün mimarisi ve 1.307 otomatik güvenlik testiyle sıfır hatayla çalışan, fikri mülkiyeti yüzde yüz yerli sermayeye ait bağımsız bir otonomi çekirdeğidir."</div>
       </div>
     </section>
 
-    <!-- Slayt 2: Resmî Devlet, Savunma ve Kurumsal Akreditasyonlar -->
+    <!-- Slayt 2: Devlet, Savunma ve Kurumsal Tesciller -->
     <section class="slayt" data-slayt="2">
       <div class="kategori">Resmî Tescil ve Akreditasyon Kütüğü</div>
       <h1>Devlet, Savunma Sanayii ve Kurumsal Tescillerimiz</h1>
@@ -314,24 +327,28 @@
         <div class="bilgi-karti vurgulu">
           <div class="kart-etiket">Savunma Sanayii Kütüğü</div>
           <div class="kart-baslik">ASELSAN ve STM Akreditasyonu</div>
-          <div class="kart-metin">ASELSAN Onaylı Tedarikçi Kütüğü (Firma Kodu: #0050569, Kurumsal SAP Kodu: FZQHEXGFMTJU) ve STM Savunma Teknolojileri Aday Tedarikçi Kütüğüne kayıtlı tescilli altyapı.</div>
+          <div class="kart-metin">ASELSAN Onaylı Tedarikçi Kütüğü (Firma: #0050569, Kurumsal SAP: FZQHEXGFMTJU) ve STM Aday Tedarikçi Kütüğüne kayıtlı tescilli altyapı.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Teknoloji Kampüsleri</div>
           <div class="kart-baslik">İTO BTM ve Teknopark İstanbul</div>
-          <div class="kart-metin">İstanbul Ticaret Odası Bilgiyi Ticarileştirme Merkezi (BTM Fulya Derin Teknoloji Kampüsü) yerleşik girişimi ve Teknopark İstanbul Cube Incubation HASAT Programı bünyesindedir.</div>
+          <div class="kart-metin">İTO BTM Fulya Derin Teknoloji Kampüsü yerleşik girişimi ve Teknopark İstanbul Cube Incubation HASAT Programı bünyesindedir.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Uluslararası & Ulusal Kayıt</div>
           <div class="kart-baslik">Avrupa Komisyonu, KOSGEB ve BTK</div>
-          <div class="kart-metin">Avrupa Komisyonu Katılımcı Kimliği (PIC: 861711529), EIT Urban Mobility Ortaklığı (CUS15554), KOSGEB İleri Girişimci ve BTK Yapay Zeka Sertifikasyonları tamdır.</div>
+          <div class="kart-metin">Avrupa Komisyonu Kimliği (PIC: 861711529), EIT Urban Mobility (CUS15554), KOSGEB İleri Girişimci ve BTK Sertifikasyonları tamdır.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Şirketimiz; ASELSAN onaylı tedarikçi kütüğünden Teknopark İstanbul ve İTO BTM derin teknoloji kampüslerine, Avrupa Komisyonu tescilinden KOSGEB ve BTK onaylarına kadar devletimizin ve savunma sanayiimizin en üst düzey kurumsal güvencesi altındadır."</div>
       </div>
     </section>
 
-    <!-- Slayt 3: Fikri Mülkiyet, Lisanslama ve Hukuki Güvence -->
+    <!-- Slayt 3: Fikri Mülkiyet ve Lisanslama Politikası -->
     <section class="slayt" data-slayt="3">
       <div class="kategori">Fikri Mülkiyet ve Lisanslama Politikası</div>
       <h1>Fikri Mülkiyet Güvencesi ve Kurumsal Lisanslama</h1>
@@ -340,24 +357,28 @@
         <div class="bilgi-karti">
           <div class="kart-etiket">Yasal Koruma</div>
           <div class="kart-baslik">5846 Sayılı Kanun ve Bern Sözleşmesi</div>
-          <div class="kart-metin">Yazılımımız 5846 Sayılı Fikir ve Sanat Eserleri Kanunu ile Uluslararası Bern Sözleşmesi kapsamında koruma altındadır; şirketimiz hiçbir yabancı sermayeye bağımlı değildir.</div>
+          <div class="kart-metin">5846 Sayılı FSEK ve Uluslararası Bern Sözleşmesi kapsamında korunmakta olup; hiçbir yabancı sermayeye bağımlılığı yoktur.</div>
         </div>
 
         <div class="bilgi-karti vurgulu">
           <div class="kart-etiket">Ticari Dağıtım Modeli</div>
           <div class="kart-baslik">Kapalı Kutu ve Donanım Kilitli Teslimat</div>
-          <div class="kart-metin">Müşterilere ve entegratörlere açık kaynak kod verilmez; kurumsal güvenlik gereği sadece derlenmiş ikili paket, şifrelenmiş donanım kilidi ve parametre ayar dosyası teslim edilir.</div>
+          <div class="kart-metin">Açık kaynak kod riski olmadan; derlenmiş ikili paket, şifrelenmiş donanım kilidi ve parametre ayar dosyası formatında teslim edilir.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Patent Savunma Paktı</div>
           <div class="kart-baslik">Open Invention Network (OIN) Paktı</div>
-          <div class="kart-metin">Şirketimiz imzalı OIN Patent Savunma Paktı üyesidir; temel altyapılarda uluslararası patent barışı sağlanırken ticari otonomi çekirdeğimiz tam hukuki koruma altındadır.</div>
+          <div class="kart-metin">İmzalı OIN Patent Savunma Paktı üyesidir; temel altyapılarda patent barışı sağlanırken ticari otonomi çekirdeği tam koruma altındadır.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Fikri mülkiyetimiz kanunlarla ve uluslararası patent savunma paktıyla korunmakta olup; iş ortaklarımıza açık kaynak kod riski taşımadan, donanıma kilitli ve şifreli güvenli paket olarak teslim edilmektedir."</div>
       </div>
     </section>
 
-    <!-- Slayt 4: Kritik Güvenlik İhtiyacı -->
+    <!-- Slayt 4: Temel Güvenlik İhtiyacı -->
     <section class="slayt" data-slayt="4">
       <div class="kategori">Temel Güvenlik İhtiyacı</div>
       <h1>Neden Sadece Kamera ve Yapay Zeka Yetmez?</h1>
@@ -366,7 +387,7 @@
         <div class="bilgi-karti">
           <div class="kart-sayi">01</div>
           <div class="kart-baslik">Açıklanamayan Kararlar ve Hatalı Fren</div>
-          <div class="kart-metin">Kamera tabanlı derin öğrenme modelleri beklenmedik yol durumlarında sebepsiz sert fren veya şeritten sapma yapabilir. Yolcu taşıyan bir araçta bu kabul edilemez bir risktir.</div>
+          <div class="kart-metin">Kamera tabanlı yapay zeka beklenmedik yol durumlarında sebepsiz sert fren veya şeritten sapma yapabilir; yolcuda kabul edilemez bir risktir.</div>
         </div>
 
         <div class="bilgi-karti">
@@ -378,8 +399,12 @@
         <div class="bilgi-karti">
           <div class="kart-sayi">03</div>
           <div class="kart-baslik">Veri Güvenliği ve Resmî Mevzuat</div>
-          <div class="kart-metin">Resmî Gazete Otonom Araç Tebliği ve Kişisel Veri Kanunu gereğince yol ve kamera görüntülerinin yurt dışı sunuculara akması yasaktır; sistem araç içinde kapalı çalışmalıdır.</div>
+          <div class="kart-metin">Resmî Gazete Otonom Tebliği ve KVKK gereğince yol ve kamera görüntülerinin yurt dışı sunuculara akması yasaktır; sistem araç içinde kapalı kalmalıdır.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Bir aracı otonom yapmak sadece kamera takmakla bitmiyor; yapay zekanın yanıldığı, sebepsiz fren yaptığı veya bilgisayarın donduğu anda devreye girip yolcuyu koruyan bağımsız bir yerli emniyet hakemine ihtiyaç var."</div>
       </div>
     </section>
 
@@ -392,13 +417,13 @@
         <div class="bilgi-karti vurgulu">
           <div class="kart-etiket">Çapraz Doğrulama</div>
           <div class="kart-baslik">Çift Kontrol Mekanizması</div>
-          <div class="kart-metin">Kameradan gelen rota önerisi, 3 boyutlu lazer ölçümleriyle anlık çapraz doğrulanır; iki bağımsız sistem teyit etmeden araç asla riskli bir manevraya girmez.</div>
+          <div class="kart-metin">Kameradan gelen rota önerisi, 3 boyutlu lazer ölçümleriyle anlık çapraz doğrulanır; iki sistem teyit etmeden riskli manevraya girilmez.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Donanımsal Bekçi</div>
           <div class="kart-baslik">50 Milisaniye Güvenlik Bekçisi</div>
-          <div class="kart-metin">Sistem her 20 milisaniyede bir kendini denetler; bilgisayardan gelen komut kesilirse 50 milisaniye içinde acil emniyet protokolünü devreye alır.</div>
+          <div class="kart-metin">Sistem her 20 milisaniyede bir kendini denetler; bilgisayardan gelen komut kesilirse 50 milisaniyede acil emniyet prosedürü başlar.</div>
         </div>
 
         <div class="bilgi-karti">
@@ -406,6 +431,10 @@
           <div class="kart-baslik">Kontrollü Sağa Çekme ve Durma</div>
           <div class="kart-metin">Acil durumda araç savrulmadan, yolcu konforunu bozmayacak şekilde saniyede 1.5 metre kontrollü yavaşlayarak güvenli biçimde durur.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Biz araç beyni ile şasi arasına giren yerli emniyet hakemiz; kamera yanılsa bile sistemimiz 50 milisaniyede durumu fark eder ve aracı yolcuyu sarsmadan saniyede 1.5 metre kontrollü yavaşlatıp sağa çekerek durdurur."</div>
       </div>
     </section>
 
@@ -418,20 +447,24 @@
         <div class="bilgi-karti">
           <div class="kart-sayi">100 Hz</div>
           <div class="kart-baslik">Saniyede 100 Kez Komut İletimi</div>
-          <div class="kart-metin">Araç direksiyon açısı, gaz ve fren komutları araç şasisine saniyede 100 kez kesintisiz iletilir; sarsıntısız ve akıcı bir sürüş sağlanır.</div>
+          <div class="kart-metin">Direksiyon açısı, gaz ve fren komutları araç şasisine saniyede 100 kez kesintisiz iletilir; sarsıntısız ve akıcı sürüş sağlanır.</div>
         </div>
 
         <div class="bilgi-karti vurgulu">
           <div class="kart-sayi">1.4 ms</div>
           <div class="kart-baslik">Saniyenin Binde Biri Gecikme</div>
-          <div class="kart-metin">Mesaj iletim gecikmesi yalnızca 1.4 milisaniyedir; insanın ortalama tepki süresi olan 300 milisaniyeden yaklaşık 200 kat daha hızlıdır.</div>
+          <div class="kart-metin">Mesaj iletim gecikmesi yalnızca 1.4 milisaniyedir; insanın ortalama tepki süresinden (300 ms) yaklaşık 200 kat daha hızlıdır.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-sayi">5 ms</div>
           <div class="kart-baslik">Anında İnsan Müdahalesi</div>
-          <div class="kart-metin">Güvenlik sürücüsü direksiyona hafifçe dokunduğu veya frene bastığı anda, sistem 5 milisaniyede otonom kontrolü bırakır ve yönetimi tamamen insana verir.</div>
+          <div class="kart-metin">Sürücü direksiyona hafifçe dokunduğu veya frene bastığı anda, sistem 5 milisaniyede otonom kontrolü bırakır ve yönetimi insana verir.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Sistemimiz araç direksiyonuna ve frenine saniyenin binde biri hızında hükmederken; güvenlik sürücüsü direksiyona veya frene dokunduğu anda tüm kontrolü 5 milisaniyede insana devredecek şekilde tasarlanmıştır."</div>
       </div>
     </section>
 
@@ -444,24 +477,28 @@
         <div class="bilgi-karti">
           <div class="kart-etiket">Sıfır Uydu Bağımlılığı</div>
           <div class="kart-baslik">Uydu Sinyali Olmadan Sürüş</div>
-          <div class="kart-metin">Şehir içi alt geçitlerde, yüksek gökdelenlerin arasında veya yer altı otoparklarında uydu sinyali kesilse dahi araç yolunu ve şeridini şaşırmaz.</div>
+          <div class="kart-metin">Şehir içi alt geçitlerde, gökdelenlerin arasında veya yer altı otoparklarında uydu sinyali kesilse dahi araç şeridini şaşırmaz.</div>
         </div>
 
         <div class="bilgi-karti vurgulu">
           <div class="kart-sayi">2.6M</div>
           <div class="kart-baslik">Saniyede 2.6 Milyon Nokta</div>
-          <div class="kart-metin">Tavandaki lazer tarayıcı saniyede 2.6 milyon nokta üreterek aracın etrafını santimetre hassasiyetinde anlık olarak 3 boyutlu haritalandırır.</div>
+          <div class="kart-metin">Tavandaki lazer tarayıcı saniyede 2.6 milyon nokta üreterek aracın etrafını santimetre hassasiyetinde 3 boyutlu haritalandırır.</div>
         </div>
 
         <div class="bilgi-karti">
           <div class="kart-etiket">Fiziksel Yol Takibi</div>
           <div class="kart-baslik">Silik Şeritlerde Güvenli Takip</div>
-          <div class="kart-metin">Yol çizgileri silinmiş, aşınmış veya hava yağışlı olsa bile araç yol sınırlarını bordür taşlarından ve zemin yapısından algılar.</div>
+          <div class="kart-metin">Yol çizgileri silinmiş veya hava yağışlı olsa bile araç yol sınırlarını bordür taşlarından ve zemin yapısından algılar.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Uydu sinyalinin kaybolduğu tünellerde, alt geçitlerde ve katlı otoparklarda dahi lazer haritalama sayesinde aracımız santimetre şaşmadan kendi şeridinde ve güvenli rotasında kalır."</div>
       </div>
     </section>
 
-    <!-- Slayt 8: Ortak Çalışma Planı (60 Günlük Saha Doğrulama) -->
+    <!-- Slayt 8: 60 Günlük Saha Doğrulama -->
     <section class="slayt" data-slayt="8">
       <div class="kategori">Ortak Çalışma Teklifi</div>
       <h1>60 Günlük Saha Doğrulama ve Test Yol Haritası</h1>
@@ -470,7 +507,7 @@
         <div class="bilgi-karti">
           <div class="kart-sayi">Faz 1</div>
           <div class="kart-baslik">İlk 15 Gün: Masa Başı ve Şasi Eşleme</div>
-          <div class="kart-metin">Aracın veri hattına bağlanma, direksiyon açısı ve fren aktüatörlerinin park halinde sıfır hızda güvenle test edilip doğrulanması.</div>
+          <div class="kart-metin">Aracın veri hattına bağlanma, direksiyon açısı ve fren aktüatörlerinin park halinde sıfır hızda güvenle test edilmesi.</div>
         </div>
 
         <div class="bilgi-karti">
@@ -482,8 +519,12 @@
         <div class="bilgi-karti vurgulu">
           <div class="kart-sayi">Faz 3</div>
           <div class="kart-baslik">60. Gün: 50 km/s Tam Otonom Sürüş</div>
-          <div class="kart-metin">Şehir içi azami hızda tam otonom sürüş, engelden kaçınma, yolcu alma simülasyonu ve resmî mevzuat uygunluk dosyasının teslimi.</div>
+          <div class="kart-metin">Şehir içi azami hızda tam otonom sürüş, engelden kaçınma, yolcu alma simülasyonu ve resmî mevzuat dosyasının teslimi.</div>
         </div>
+      </div>
+
+      <div class="yesil-kutu">
+        <div class="yesil-kutu-metin">"Gelin, aracı kapalı piste çekelim ve 60 günlük bir saha doğrulama süreci başlatalım; araç pistte hatasız döndüğünde ve resmi mevzuat raporunu sunduğumuzda ticari adımları birlikte atalım."</div>
       </div>
     </section>
 
