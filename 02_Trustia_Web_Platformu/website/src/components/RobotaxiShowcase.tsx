@@ -5,8 +5,6 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Cpu, Eye, Radio, Zap, Layers, Activity } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import TacticalVehicleWireframe, { MIFA7_CALLOUTS } from "@/components/TacticalVehicleWireframe";
-import TacticalBackgroundLayers from "@/components/TacticalBackgroundLayers";
-import HUDTelemetryBar from "@/components/HUDTelemetryBar";
 
 const COMPONENT_TABS = [
   { id: "lidar", labelTr: "3D LİDAR", labelEn: "3D LIDAR" },
@@ -113,29 +111,18 @@ export default function RobotaxiShowcase() {
   return (
     <section
       id="robotaxi"
-      className="relative z-20 pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-8 lg:px-12 bg-[#090b0e] text-white select-none overflow-hidden scroll-mt-28 sm:scroll-mt-36"
+      className="relative z-20 pt-20 sm:pt-28 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-12 bg-[#090b0e] text-white select-none overflow-hidden scroll-mt-20 sm:scroll-mt-28"
     >
-      {/* 
-        TAKTİKSEL DERİNLİKLİ MİMARİ (SIFIR KUTU / OVERLAND AI & ANDURIL EKOLÜ)
-        - Çok Katmanlı Hacimsel Radyal Aydınlatma (Lime, Khaki, Stealth Navy)
-        - Prosedürel 2D Topografik İzokontur Yükselti Çizgileri
-        - Taktik Mühendislik Izgarası & Nişangahlar (+)
-        - Konsantrik LiDAR / Radar Menzil Retikülleri (50m, 120m, 240m)
-        - Işıldayan Neon Stencil Filigranı (TRIPY MIFA 7)
-      */}
-      <TacticalBackgroundLayers
-        watermarkText="TRIPY MIFA 7"
-        theme="robotaxi"
-        showTopo={true}
-      />
+      {/* Soft Ambient Spotlight directly behind 3D MIFA 7 Vehicle */}
+      <div className="absolute top-[52%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[1000px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(228,248,13,0.06),transparent_70%)] pointer-events-none blur-3xl z-0" />
 
-      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-6 sm:space-y-8 relative z-10">
         
         {/* ========================================================
             1. PUNCHY EXECUTIVE HEADER (SIFIR KUTU)
            ======================================================== */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-white/10">
-          <div className="space-y-3 max-w-3xl">
+          <div className="space-y-2.5 max-w-3xl">
             {/* Taktik HUD Başlığı */}
             <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-widest text-slate-300">
               <span className="text-[#E4F80D] font-bold">[+]</span>
@@ -150,12 +137,12 @@ export default function RobotaxiShowcase() {
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight font-sans">
               <span className="block text-white">Tripy SAIC Maxus MIFA 7</span>
-              <span className="block text-slate-300 font-light text-lg sm:text-2xl lg:text-3xl mt-1.5">
+              <span className="block text-slate-300 font-light text-lg sm:text-2xl lg:text-3xl mt-1">
                 {lang === "tr" ? "Seviye-4 Otonom Sürüş Mimarisi" : "Level-4 Autonomous Driving Architecture"}
               </span>
             </h2>
 
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-1">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-0.5">
               {lang === "tr"
                 ? "Tripy Mobility ticari elektrikli filoları için geliştirilmiş; 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM ve ISO 26262 ASIL-D deterministik seyrüsefer referans yazılım mimarisi."
                 : "Deterministic Level-4 autonomy architecture engineered for Tripy Mobility commercial electric fleets via 100 Hz CAN-FD drive-by-wire and 3D LiDAR SLAM."}
@@ -173,9 +160,6 @@ export default function RobotaxiShowcase() {
             </Link>
           </div>
         </div>
-
-        {/* Real-Time Overland-Style HUD Telemetry Ribbon */}
-        <HUDTelemetryBar />
 
         {/* ========================================================
             2. 3D TACTICAL VEHICLE WIREFRAME (100% KUTUSUZ / FRAMELESS)

@@ -192,7 +192,7 @@ export default function TacticalVehicleWireframe({
       const baseScale = Math.min(width / (m.R * 2.3), height / (m.R * 1.6));
       const scale = baseScale * zoomRef.current;
       const cx = width / 2;
-      const cy = height * 0.52;
+      const cy = height * 0.50;
 
       // Project 3D point (X, Y, Z) into 2D Screen Space
       const project = (px: number, py: number, pz: number): [number, number, number] => {
