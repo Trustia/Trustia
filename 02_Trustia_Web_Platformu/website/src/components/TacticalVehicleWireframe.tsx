@@ -95,15 +95,11 @@ export default function TacticalVehicleWireframe({
   const isVisibleRef = useRef<boolean>(false);
   const pulseRef = useRef<number>(0);
 
-  // Store activeId in a ref so switching tabs never restarts canvas or triggers re-assembly
+  // Store activeId in a ref so switching tabs never restarts canvas or triggers re-renders
   const activeIdRef = useRef<string>(activeId);
   useEffect(() => {
     activeIdRef.current = activeId;
   }, [activeId]);
-
-  // Holographic Assembly Progress (runs only once on initial load, 0 -> 1)
-  const assemblyTRef = useRef<number>(0.0);
-  const isAssemblingRef = useRef<boolean>(true);
 
   // Initialize MIFA 7 model instantly
   useEffect(() => {
@@ -134,20 +130,7 @@ export default function TacticalVehicleWireframe({
         return;
       }
 
-      // 1. Advance Holographic Assembly Animation
-      if (isAssemblingRef.current) {
-        assemblyTRef.current = Math.min(1.0, assemblyTRef.current + dt * 0.95);
-        if (assemblyTRef.current >= 1.0) {
-          isAssemblingRef.current = false;
-        }
-      }
-
-      const assemblyT = assemblyTRef.current;
-      // Smooth cubic ease out
-      const ease = 1 - Math.pow(1 - assemblyT, 3);
-      const inv = 1 - ease;
-
-      // 2. Inertial Rotation & Decay
+      // 1. Inertial Rotation & Decay
       if (!isDraggingRef.current) {
         yawRef.current += spinSpeedXRef.current * dt;
         pitchRef.current += spinSpeedYRef.current * dt;
@@ -217,7 +200,7 @@ export default function TacticalVehicleWireframe({
         return [sx, sy, z2];
       };
 
-      // 5. Transform Lines with Holographic Assembly & Depth-Sorting
+      // 4. Transform Lines with Depth-Sorting
       const { PXYZ, start, npoly } = m;
       const bucketsCount = 20;
       const depthBuckets: number[][] = Array.from({ length: bucketsCount }, () => []);
@@ -226,32 +209,15 @@ export default function TacticalVehicleWireframe({
         const s = start[i];
         const e = start[i + 1];
 
-        // Disperse line outward when assemblyT < 1.0
-        let offsetX = 0,
-          offsetY = 0,
-          offsetZ = 0;
-
-        if (inv > 0.001) {
-          const pseudo = (Math.sin(i * 12.9898 + 78.233) * 43758.5453) % 1;
-          const pRand = Math.abs(pseudo);
-          const angle = (i * 0.21) % (Math.PI * 2);
-          const expandR = (450 + pRand * 850) * inv;
-          const lift = Math.sin(i * 0.35) * 550 * inv;
-
-          offsetX = Math.cos(angle) * expandR;
-          offsetY = lift + (pRand - 0.5) * 350 * inv;
-          offsetZ = Math.sin(angle) * expandR;
-        }
-
         let hasPrev = false;
         let prevX = 0,
           prevY = 0,
           prevZ = 0;
 
         for (let idx = s; idx < e; idx++) {
-          const rawX = PXYZ[idx * 3] + offsetX;
-          const rawY = PXYZ[idx * 3 + 1] + offsetY;
-          const rawZ = PXYZ[idx * 3 + 2] + offsetZ;
+          const rawX = PXYZ[idx * 3];
+          const rawY = PXYZ[idx * 3 + 1];
+          const rawZ = PXYZ[idx * 3 + 2];
 
           const [sx, sy, sz] = project(rawX, rawY, rawZ);
           if (hasPrev) {
@@ -267,36 +233,19 @@ export default function TacticalVehicleWireframe({
         }
       }
 
-      // 6. Draw Maxus MIFA 7 Vehicle Wireframe with Depth Fading (NO BOXES!)
+      // 5. Draw Maxus MIFA 7 Vehicle Wireframe with Depth Fading (NO BOXES, Clean CAD)
       ctx.lineWidth = width < 768 ? 0.7 : 0.6;
       for (let b = 0; b < bucketsCount; b++) {
         const lines = depthBuckets[b];
         if (!lines.length) continue;
         const alpha = Math.max(0.18, 0.68 - (0.45 * b) / bucketsCount);
-
-        // Flash glowing neon volt yellow while assembling, settle to white CAD
-        if (inv > 0.01) {
-          ctx.strokeStyle = `rgba(228, 248, 13, ${(alpha * (0.4 + inv * 0.6)).toFixed(3)})`;
-        } else {
-          ctx.strokeStyle = `rgba(235, 238, 245, ${alpha.toFixed(3)})`;
-        }
+        ctx.strokeStyle = `rgba(235, 238, 245, ${alpha.toFixed(3)})`;
 
         ctx.beginPath();
         for (let j = 0; j < lines.length; j += 4) {
           ctx.moveTo(lines[j], lines[j + 1]);
           ctx.lineTo(lines[j + 2], lines[j + 3]);
         }
-        ctx.stroke();
-      }
-
-      // 7. Holographic Scanning Laser Line during assembly
-      if (inv > 0.01) {
-        const scanY = cy - (-0.6 + ease * 1.2) * (height * 0.45);
-        ctx.beginPath();
-        ctx.moveTo(cx - width * 0.38, scanY);
-        ctx.lineTo(cx + width * 0.38, scanY);
-        ctx.lineWidth = 1.5;
-        ctx.strokeStyle = "rgba(228, 248, 13, 0.45)";
         ctx.stroke();
       }
 
