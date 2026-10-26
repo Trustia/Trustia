@@ -102,7 +102,7 @@ export default function RobotaxiShowcase() {
   return (
     <section
       id="robotaxi"
-      className="relative z-20 py-14 sm:py-24 px-4 sm:px-8 lg:px-12 bg-[#090b0e] text-white select-none overflow-hidden"
+      className="relative z-20 pt-28 sm:pt-36 pb-16 sm:pb-24 px-4 sm:px-8 lg:px-12 bg-[#090b0e] text-white select-none overflow-hidden scroll-mt-28 sm:scroll-mt-36"
     >
       {/* 
         100% KUTUSUZ & ÇERÇEVESİZ SAF TİPOGRAFİK VE 3D MİMARİ
@@ -135,14 +135,14 @@ export default function RobotaxiShowcase() {
               <span className="text-slate-400">TRIPY MOBILITY</span>
             </div>
 
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight font-sans">
-              Tripy SAIC Maxus MIFA 7{" "}
-              <span className="text-slate-300 font-light block sm:inline">
-                {lang === "tr" ? "— Seviye-4 Otonom Sürüş Mimarisi" : "— Level-4 Autonomy Stack"}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight font-sans">
+              <span className="block text-white">Tripy SAIC Maxus MIFA 7</span>
+              <span className="block text-slate-300 font-light text-lg sm:text-2xl lg:text-3xl mt-1.5">
+                {lang === "tr" ? "Seviye-4 Otonom Sürüş Mimarisi" : "Level-4 Autonomous Driving Architecture"}
               </span>
             </h2>
 
-            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
+            <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-1">
               {lang === "tr"
                 ? "Tripy Mobility ticari elektrikli filoları için geliştirilmiş; 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM ve ISO 26262 ASIL-D deterministik seyrüsefer referans yazılım mimarisi."
                 : "Deterministic Level-4 autonomy architecture engineered for Tripy Mobility commercial electric fleets via 100 Hz CAN-FD drive-by-wire and 3D LiDAR SLAM."}

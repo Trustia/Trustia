@@ -1,13 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getMifa7WireframeModel, Mifa7WireframeModel } from "./mifa7Model";
 
 export interface TacticalCallout {
   id: string;
   name: string;
   at: [number, number, number];
-  size: [number, number, number];
   dir: [number, number, number];
   spec: string;
 }
@@ -16,48 +15,42 @@ export const MIFA7_CALLOUTS: TacticalCallout[] = [
   {
     id: "lidar",
     name: "OUSTER OS2-128 3D LIDAR",
-    at: [0, 1900, 250],
-    size: [320, 140, 300],
+    at: [0, 1950, 800], // Center of Tripy aerodynamic roof pod
     dir: [0, 1.2, 0.3],
     spec: "240m Menzil • 3D NDT SLAM • 2.62M Nokta/sn",
   },
   {
     id: "livox",
     name: "2x LIVOX MID-360 KÖR NOKTA",
-    at: [-740, 650, 2410],
-    size: [180, 140, 140],
+    at: [-740, 520, 2410], // Left front bumper corner intake
     dir: [-0.9, 0.4, 1.1],
     spec: "360° x 59° FOV • Ön Tampon Yakın Mesafe Yaya & Bordür",
   },
   {
     id: "canfd",
     name: "100Hz CAN-FD DRIVE-BY-WIRE",
-    at: [0, 500, 1480],
-    size: [300, 160, 240],
+    at: [-420, 650, 1200], // EPS steering rack & i-Booster
     dir: [0, -0.6, 1.2],
     spec: "Tripy EPS & i-Booster • 1.4 ms Gecikme • 5 ms Devralma Kesmesi",
   },
   {
     id: "compute",
     name: "560 TOPS MERKEZİ OTONOM BEYİN",
-    at: [0, 420, -150],
-    size: [440, 180, 420],
+    at: [0, 320, 400], // Underfloor electronics hub
     dir: [0.9, -0.7, -0.6],
     spec: "NVIDIA Orin & Horizon BPU • 4TB NVMe Kara Kutu (EDR)",
   },
   {
     id: "vision",
     name: "4x SONY IMX390 HDR KAMERA",
-    at: [0, 1550, 950],
-    size: [480, 120, 380],
+    at: [0, 1860, 1220], // Roof pod front twin camera cowlings
     dir: [0, 1.1, 0.8],
     spec: "120 dB Dinamik Aralık • 60 FPS Senkronize FSYNC",
   },
   {
     id: "safety",
     name: "ISO 26262 ASIL-D WATCHDOG",
-    at: [-380, 750, 400],
-    size: [280, 140, 260],
+    at: [0, 450, -200], // Central ASIL-D safety arbiter
     dir: [-1.1, 0.5, 0.3],
     spec: "50 ms Donanımsal Watchdog • 1.5 m/s² Kontrollü MRM Sağa Çekme",
   },
@@ -95,134 +88,116 @@ export default function TacticalVehicleWireframe({
   const isDraggingRef = useRef<boolean>(false);
   const dragStartXRef = useRef<number>(0);
   const isVisibleRef = useRef<boolean>(false);
+  const pulseRef = useRef<number>(0);
 
   // Initialize MIFA 7 model instantly
   useEffect(() => {
     modelRef.current = getMifa7WireframeModel();
   }, []);
 
-  // 3D Bounding Box Edge Generator
-  const getBoxEdges = useCallback(
-    (
-      cx: number,
-      cy: number,
-      cz: number,
-      sx: number,
-      sy: number,
-      sz: number
-    ): Array<[[number, number, number], [number, number, number]]> => {
-      const hx = sx / 2,
-        hy = sy / 2,
-        hz = sz / 2;
-      const c = [
-        [cx - hx, cy - hy, cz - hz],
-        [cx + hx, cy - hy, cz - hz],
-        [cx + hx, cy + hy, cz - hz],
-        [cx - hx, cy + hy, cz - hz],
-        [cx - hx, cy - hy, cz + hz],
-        [cx + hx, cy - hy, cz + hz],
-        [cx + hx, cy + hy, cz + hz],
-        [cx - hx, cy + hy, cz + hz],
-      ];
-      return [
-        [0, 1], [1, 2], [2, 3], [3, 0],
-        [4, 5], [5, 6], [6, 7], [7, 4],
-        [0, 4], [1, 5], [2, 6], [3, 7],
-      ].map(([i1, i2]) => [
-        c[i1] as [number, number, number],
-        c[i2] as [number, number, number],
-      ]);
-    },
-    []
-  );
-
-  // Main Render Loop (100% frameless, hardware accelerated)
+  // Main 3D Canvas Rendering Loop
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animId: number | null = null;
+    let animId: number;
     let lastTime = performance.now();
 
-    const pitch = -0.25; // ~14 deg isometric top-angle view
-    const bucketsCount = 10;
-    const depthBuckets: number[][] = Array.from({ length: bucketsCount }, () => []);
+    function render() {
+      if (!ctx || !canvas) return;
 
-    function render(now: number) {
-      if (!canvas || !ctx) return;
-      const model = modelRef.current || getMifa7WireframeModel();
-
-      const dt = Math.min(0.05, (now - lastTime) / 1000 || 0);
+      const now = performance.now();
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
       lastTime = now;
+      pulseRef.current += dt * 3;
 
-      // Auto inertia spin when user is not dragging
-      if (!isDraggingRef.current) {
-        yawRef.current += spinSpeedRef.current * dt * 0.9;
-        spinSpeedRef.current += (0.07 - spinSpeedRef.current) * 0.05;
+      const m = modelRef.current;
+      if (!m) {
+        if (isVisibleRef.current) animId = requestAnimationFrame(render);
+        return;
       }
 
-      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      // 1. Inertial Rotation Decay & Auto-Orbit
+      if (!isDraggingRef.current) {
+        yawRef.current += spinSpeedRef.current * dt;
+        spinSpeedRef.current *= Math.pow(0.85, dt * 60);
+        if (Math.abs(spinSpeedRef.current) < 0.04) {
+          spinSpeedRef.current = 0.04; // Smooth continuous idle rotation
+        }
+      }
+
+      // 2. High-DPI Canvas Resizing
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
-
-      if (canvas.width !== Math.round(width * dpr) || canvas.height !== Math.round(height * dpr)) {
-        canvas.width = Math.round(width * dpr);
-        canvas.height = Math.round(height * dpr);
+      if (canvas.width !== width * dpr || canvas.height !== height * dpr) {
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
       }
 
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx.save();
+      ctx.scale(dpr, dpr);
       ctx.clearRect(0, 0, width, height);
 
+      // 3. 3D Camera Setup
       const yaw = yawRef.current;
+      const pitch = 0.32; // Slight downward isometric perspective
       const cosY = Math.cos(yaw),
         sinY = Math.sin(yaw);
       const cosP = Math.cos(pitch),
         sinP = Math.sin(pitch);
 
-      const center = model.M;
-      const projectedRadius = model.RY * cosP + model.R * Math.abs(sinP);
-      const fit = width < 768 ? 0.98 : 0.88;
-      const scale = Math.min(width / 2 / model.R, height / 2 / projectedRadius) * fit;
+      // Scale model to fit canvas cleanly with comfortable margins
+      const scale = Math.min(width / (m.R * 2.35), height / (m.R * 1.65));
+      const cx = width / 2;
+      const cy = height * 0.52;
 
-      const screenCenterX = width / 2;
-      const screenCenterY = height / 2 + (width < 768 ? 15 : 25);
-
-      // Project point [px, py, pz] to screen [sx, sy, depth]
+      // Project 3D point (X, Y, Z) into 2D Screen Space
       const project = (px: number, py: number, pz: number): [number, number, number] => {
-        const dx = px - center[0];
-        const dy = py - center[1];
-        const dz = pz - center[2];
-        const rotY = -dx * sinY + dz * cosY;
-        const sx = screenCenterX + (dx * cosY + dz * sinY) * scale;
-        const sy = screenCenterY - (dy * cosP - rotY * sinP) * scale;
-        const depth = dy * sinP + rotY * cosP;
-        return [sx, sy, depth];
+        // Shift relative to center M
+        const dx = px - m.M[0];
+        const dy = py - m.M[1];
+        const dz = pz - m.M[2];
+
+        // Yaw rotation
+        const x1 = dx * cosY - dz * sinY;
+        const z1 = dx * sinY + dz * cosY;
+
+        // Pitch rotation
+        const y2 = dy * cosP - z1 * sinP;
+        const z2 = dy * sinP + z1 * cosP;
+
+        // Isometric perspective projection
+        const focal = 3200;
+        const pFactor = focal / (focal + z2 * 0.45);
+        const sx = cx + x1 * scale * pFactor;
+        const sy = cy - y2 * scale * pFactor;
+
+        return [sx, sy, z2];
       };
 
-      // Clear depth buckets
-      for (let i = 0; i < bucketsCount; i++) depthBuckets[i].length = 0;
+      // 4. Transform & Depth-Sort Lines
+      const { PXYZ, start, npoly } = m;
+      const bucketsCount = 20;
+      const depthBuckets: number[][] = Array.from({ length: bucketsCount }, () => []);
 
-      const { PXYZ, start, npoly } = model;
-      const depthSpan = 2600;
-
-      // Group wireframe segments into depth buckets for realistic 3D depth cueing
       for (let i = 0; i < npoly; i++) {
-        const pStart = start[i];
-        const pEnd = start[i + 1];
+        const s = start[i];
+        const e = start[i + 1];
+        let hasPrev = false;
         let prevX = 0,
           prevY = 0,
-          prevZ = 0,
-          hasPrev = false;
+          prevZ = 0;
 
-        for (let p = pStart; p < pEnd; p++) {
-          const [sx, sy, sz] = project(PXYZ[3 * p], PXYZ[3 * p + 1], PXYZ[3 * p + 2]);
+        for (let idx = s; idx < e; idx++) {
+          const [sx, sy, sz] = project(PXYZ[idx * 3], PXYZ[idx * 3 + 1], PXYZ[idx * 3 + 2]);
           if (hasPrev) {
-            const avgDepth = (prevZ + sz) / 2;
-            const normDepth = Math.min(1, Math.max(0, (avgDepth + depthSpan) / (2 * depthSpan)));
-            const bucketIdx = Math.min(bucketsCount - 1, (normDepth * bucketsCount) | 0);
-            depthBuckets[bucketIdx].push(prevX, prevY, sx, sy);
+            const avgZ = (prevZ + sz) / 2;
+            const normZ = Math.max(0, Math.min(1, (avgZ + m.R) / (2 * m.R)));
+            const bIdx = Math.min(bucketsCount - 1, Math.floor(normZ * bucketsCount));
+            depthBuckets[bIdx].push(prevX, prevY, sx, sy);
           }
           prevX = sx;
           prevY = sy;
@@ -231,13 +206,13 @@ export default function TacticalVehicleWireframe({
         }
       }
 
-      // 1. Draw Maxus MIFA 7 Vehicle Wireframe with Depth Fading
-      ctx.lineWidth = width < 768 ? 0.6 : 0.5;
+      // 5. Draw Maxus MIFA 7 Vehicle Wireframe with Depth Fading (NO BOXES!)
+      ctx.lineWidth = width < 768 ? 0.7 : 0.6;
       for (let b = 0; b < bucketsCount; b++) {
         const lines = depthBuckets[b];
         if (!lines.length) continue;
-        const alpha = Math.max(0.18, 0.65 - (0.45 * b) / bucketsCount);
-        ctx.strokeStyle = `rgba(242, 238, 230, ${alpha.toFixed(3)})`;
+        const alpha = Math.max(0.18, 0.68 - (0.45 * b) / bucketsCount);
+        ctx.strokeStyle = `rgba(235, 238, 245, ${alpha.toFixed(3)})`;
         ctx.beginPath();
         for (let j = 0; j < lines.length; j += 4) {
           ctx.moveTo(lines[j], lines[j + 1]);
@@ -246,7 +221,7 @@ export default function TacticalVehicleWireframe({
         ctx.stroke();
       }
 
-      // 2. Draw 3D Tactical Bounding Boxes & Anchors on Maxus MIFA 7
+      // 6. Draw Tactical Reticle / Waypoint Anchors (SIFIR KUTU - Sadece Taktiksel Nişangah Noktaları)
       const updatedLabels: Array<{
         id: string;
         name: string;
@@ -258,54 +233,47 @@ export default function TacticalVehicleWireframe({
 
       MIFA7_CALLOUTS.forEach((callout) => {
         const isSelected = activeId === callout.id || (!activeId && callout.id === "lidar");
-        const edges = getBoxEdges(
-          callout.at[0],
-          callout.at[1],
-          callout.at[2],
-          callout.size[0],
-          callout.size[1],
-          callout.size[2]
-        );
-
         const [anchorX, anchorY] = project(callout.at[0], callout.at[1], callout.at[2]);
 
-        ctx.beginPath();
-        edges.forEach(([p1, p2]) => {
-          const [x1, y1] = project(p1[0], p1[1], p1[2]);
-          const [x2, y2] = project(p2[0], p2[1], p2[2]);
-          ctx.moveTo(x1, y1);
-          ctx.lineTo(x2, y2);
-        });
-
         if (isSelected) {
-          // Tactical Volt Yellow Highlight (#E4F80D)
-          ctx.lineWidth = 1.8;
-          ctx.strokeStyle = "rgba(228, 248, 13, 0.98)";
-          ctx.stroke();
+          const pulse = Math.sin(pulseRef.current) * 0.5 + 0.5; // 0..1
+          const ringR = 9 + pulse * 4;
 
-          // Subtle outer glow
-          ctx.lineWidth = 4;
-          ctx.strokeStyle = "rgba(228, 248, 13, 0.25)";
-          ctx.stroke();
-
-          // 7x7px solid anchor square on mounting point
-          ctx.fillStyle = "rgb(228, 248, 13)";
-          ctx.fillRect(anchorX - 3.5, anchorY - 3.5, 7, 7);
-
-          // Dashed projection stem to label
+          // Outer pulsing ring
           ctx.beginPath();
-          ctx.setLineDash([4, 4]);
+          ctx.arc(anchorX, anchorY, ringR, 0, Math.PI * 2);
+          ctx.lineWidth = 1.2;
+          ctx.strokeStyle = `rgba(228, 248, 13, ${0.4 + pulse * 0.4})`;
+          ctx.stroke();
+
+          // Subtle glow bloom
+          ctx.beginPath();
+          ctx.arc(anchorX, anchorY, 18, 0, Math.PI * 2);
+          ctx.lineWidth = 4;
+          ctx.strokeStyle = "rgba(228, 248, 13, 0.15)";
+          ctx.stroke();
+
+          // Solid center core dot
+          ctx.beginPath();
+          ctx.arc(anchorX, anchorY, 3.5, 0, Math.PI * 2);
+          ctx.fillStyle = "#E4F80D";
+          ctx.fill();
+
+          // Dashed vertical leader line extending up to the floating HUD label
+          ctx.beginPath();
+          ctx.setLineDash([3, 3]);
           ctx.lineWidth = 1;
-          ctx.strokeStyle = "rgba(228, 248, 13, 0.65)";
-          ctx.moveTo(anchorX, anchorY);
-          ctx.lineTo(anchorX, anchorY - 24);
+          ctx.strokeStyle = "rgba(228, 248, 13, 0.75)";
+          ctx.moveTo(anchorX, anchorY - 6);
+          ctx.lineTo(anchorX, anchorY - 26);
           ctx.stroke();
           ctx.setLineDash([]);
         } else {
-          // Passive tactical wireframe box
-          ctx.lineWidth = 0.8;
-          ctx.strokeStyle = "rgba(228, 248, 13, 0.35)";
-          ctx.stroke();
+          // Passive subtle waypoint dot on component
+          ctx.beginPath();
+          ctx.arc(anchorX, anchorY, 2.5, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(228, 248, 13, 0.4)";
+          ctx.fill();
         }
 
         updatedLabels.push({
@@ -319,6 +287,7 @@ export default function TacticalVehicleWireframe({
       });
 
       setLabelCoords(updatedLabels);
+      ctx.restore();
 
       if (isVisibleRef.current) {
         animId = requestAnimationFrame(render);
@@ -329,29 +298,31 @@ export default function TacticalVehicleWireframe({
     const observer = new IntersectionObserver(
       (entries) => {
         isVisibleRef.current = entries[0].isIntersecting;
-        if (isVisibleRef.current && !animId) {
+        if (isVisibleRef.current) {
           lastTime = performance.now();
           animId = requestAnimationFrame(render);
-        } else if (!isVisibleRef.current && animId) {
+        } else if (animId) {
           cancelAnimationFrame(animId);
-          animId = null;
         }
       },
-      { rootMargin: "150px" }
+      { threshold: 0.05 }
     );
-    observer.observe(canvas);
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
     return () => {
       observer.disconnect();
       if (animId) cancelAnimationFrame(animId);
     };
-  }, [activeId, getBoxEdges]);
+  }, [activeId]);
 
   // Pointer Interaction (Smooth Drag to Rotate on PC & Mobile)
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
     dragStartXRef.current = e.clientX;
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    spinSpeedRef.current = 0;
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
@@ -362,20 +333,16 @@ export default function TacticalVehicleWireframe({
     spinSpeedRef.current = dx * 0.01;
   };
 
-  const handlePointerUp = (e: React.PointerEvent) => {
+  const handlePointerUp = () => {
     isDraggingRef.current = false;
-    try {
-      (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-    } catch {
-      // ignore
-    }
   };
 
   return (
     <div
       ref={containerRef}
-      className={`relative w-full overflow-hidden select-none touch-none ${className}`}
+      className={`relative w-full h-full select-none ${className}`}
       style={{
+        touchAction: "none",
         backgroundColor: "transparent",
       }}
     >
@@ -402,12 +369,12 @@ export default function TacticalVehicleWireframe({
               className="absolute z-20 transition-all duration-150 transform -translate-x-1/2 -translate-y-full pointer-events-auto cursor-pointer"
               style={{
                 left: `${lbl.x}px`,
-                top: `${lbl.y - 18}px`,
+                top: `${lbl.y - 24}px`,
               }}
               onClick={() => onSelectCallout?.(lbl.id)}
             >
               {/* Tactical Volt Yellow Badge (0px border-radius, pure black text) */}
-              <div className="px-2 py-0.5 bg-[#E4F80D] text-black font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(228,248,13,0.6)] flex items-center gap-1.5 whitespace-nowrap">
+              <div className="px-2.5 py-1 bg-[#E4F80D] text-black font-mono text-[10px] sm:text-[11px] font-bold uppercase tracking-wider shadow-[0_0_15px_rgba(228,248,13,0.7)] flex items-center gap-1.5 whitespace-nowrap">
                 <span className="w-1.5 h-1.5 bg-black" />
                 <span>{lbl.name}</span>
               </div>
@@ -419,7 +386,7 @@ export default function TacticalVehicleWireframe({
       {/* Subtle Drag Rotation Helper Text at Bottom */}
       <div className="absolute bottom-2 inset-x-0 mx-auto text-center pointer-events-none z-10">
         <span className="text-[10px] font-mono tracking-widest uppercase text-white/40 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
-          ↔ 3D ÇEVİRMEK İÇİN SÜRÜKLEYİN • SAIC MAXUS MIFA 7 (2.975mm)
+          ↔ 3D ÇEVİRMEK İÇİN SÜRÜKLEYİN • SAIC MAXUS MIFA 7 (2.975mm DİNGİL)
         </span>
       </div>
     </div>
