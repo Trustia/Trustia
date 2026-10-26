@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { getMifa7WireframeModel, Mifa7WireframeModel } from "./mifa7Model";
 
 export interface TacticalCallout {
@@ -82,13 +82,35 @@ export default function TacticalVehicleWireframe({
     }>
   >([]);
 
-  // State refs for animation & interaction
+  // State refs for 3D Camera & Interaction
   const yawRef = useRef<number>(-2.45);
-  const spinSpeedRef = useRef<number>(0.07);
+  // Default pitch looking DOWN from above (elevated isometric 3/4 perspective)
+  const pitchRef = useRef<number>(-0.32);
+  const spinSpeedXRef = useRef<number>(0.07);
+  const spinSpeedYRef = useRef<number>(0);
+  const zoomRef = useRef<number>(1.0);
   const isDraggingRef = useRef<boolean>(false);
   const dragStartXRef = useRef<number>(0);
+  const dragStartYRef = useRef<number>(0);
   const isVisibleRef = useRef<boolean>(false);
   const pulseRef = useRef<number>(0);
+
+  // Holographic Assembly & Explosion Animation Progress (0 -> 1)
+  const assemblyTRef = useRef<number>(0.0);
+  const isAssemblingRef = useRef<boolean>(true);
+  const [assemblyPct, setAssemblyPct] = useState<number>(0);
+
+  // Trigger assembly animation
+  const triggerAssembly = useCallback(() => {
+    assemblyTRef.current = 0.0;
+    isAssemblingRef.current = true;
+  }, []);
+
+  // Re-trigger assembly pulse when active component changes
+  useEffect(() => {
+    assemblyTRef.current = 0.0;
+    isAssemblingRef.current = true;
+  }, [activeId]);
 
   // Initialize MIFA 7 model instantly
   useEffect(() => {
@@ -119,16 +141,41 @@ export default function TacticalVehicleWireframe({
         return;
       }
 
-      // 1. Inertial Rotation Decay & Auto-Orbit
+      // 1. Advance Holographic Assembly Animation
+      if (isAssemblingRef.current) {
+        assemblyTRef.current = Math.min(1.0, assemblyTRef.current + dt * 0.95);
+        if (assemblyTRef.current >= 1.0) {
+          isAssemblingRef.current = false;
+        }
+        setAssemblyPct(Math.floor(assemblyTRef.current * 100));
+      }
+
+      const assemblyT = assemblyTRef.current;
+      // Smooth cubic ease out
+      const ease = 1 - Math.pow(1 - assemblyT, 3);
+      const inv = 1 - ease;
+
+      // 2. Inertial Rotation & Decay
       if (!isDraggingRef.current) {
-        yawRef.current += spinSpeedRef.current * dt;
-        spinSpeedRef.current *= Math.pow(0.85, dt * 60);
-        if (Math.abs(spinSpeedRef.current) < 0.04) {
-          spinSpeedRef.current = 0.04; // Smooth continuous idle rotation
+        yawRef.current += spinSpeedXRef.current * dt;
+        pitchRef.current += spinSpeedYRef.current * dt;
+
+        spinSpeedXRef.current *= Math.pow(0.85, dt * 60);
+        spinSpeedYRef.current *= Math.pow(0.85, dt * 60);
+
+        if (Math.abs(spinSpeedXRef.current) < 0.04) {
+          spinSpeedXRef.current = 0.04; // Smooth continuous idle spin
+        }
+        // Slowly drift pitch back to optimal elevated angle when idle
+        if (Math.abs(spinSpeedYRef.current) < 0.02) {
+          pitchRef.current += (-0.32 - pitchRef.current) * dt * 0.8;
         }
       }
 
-      // 2. High-DPI Canvas Resizing
+      // Clamp pitch between -1.05 (high aerial view) and +0.45 (ground view)
+      pitchRef.current = Math.max(-1.05, Math.min(0.45, pitchRef.current));
+
+      // 3. High-DPI Canvas Resizing
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const width = canvas.clientWidth;
       const height = canvas.clientHeight;
@@ -141,22 +188,22 @@ export default function TacticalVehicleWireframe({
       ctx.scale(dpr, dpr);
       ctx.clearRect(0, 0, width, height);
 
-      // 3. 3D Camera Setup
+      // 4. 3D Camera Setup
       const yaw = yawRef.current;
-      const pitch = 0.32; // Slight downward isometric perspective
+      const pitch = pitchRef.current;
       const cosY = Math.cos(yaw),
         sinY = Math.sin(yaw);
       const cosP = Math.cos(pitch),
         sinP = Math.sin(pitch);
 
-      // Scale model to fit canvas cleanly with comfortable margins
-      const scale = Math.min(width / (m.R * 2.35), height / (m.R * 1.65));
+      // Scale model to fit canvas cleanly with comfortable margins & zoom
+      const baseScale = Math.min(width / (m.R * 2.3), height / (m.R * 1.6));
+      const scale = baseScale * zoomRef.current;
       const cx = width / 2;
       const cy = height * 0.52;
 
       // Project 3D point (X, Y, Z) into 2D Screen Space
       const project = (px: number, py: number, pz: number): [number, number, number] => {
-        // Shift relative to center M
         const dx = px - m.M[0];
         const dy = py - m.M[1];
         const dz = pz - m.M[2];
@@ -178,7 +225,7 @@ export default function TacticalVehicleWireframe({
         return [sx, sy, z2];
       };
 
-      // 4. Transform & Depth-Sort Lines
+      // 5. Transform Lines with Holographic Assembly & Depth-Sorting
       const { PXYZ, start, npoly } = m;
       const bucketsCount = 20;
       const depthBuckets: number[][] = Array.from({ length: bucketsCount }, () => []);
@@ -186,13 +233,35 @@ export default function TacticalVehicleWireframe({
       for (let i = 0; i < npoly; i++) {
         const s = start[i];
         const e = start[i + 1];
+
+        // Disperse line outward when assemblyT < 1.0
+        let offsetX = 0,
+          offsetY = 0,
+          offsetZ = 0;
+
+        if (inv > 0.001) {
+          const pseudo = (Math.sin(i * 12.9898 + 78.233) * 43758.5453) % 1;
+          const pRand = Math.abs(pseudo);
+          const angle = (i * 0.21) % (Math.PI * 2);
+          const expandR = (450 + pRand * 850) * inv;
+          const lift = Math.sin(i * 0.35) * 550 * inv;
+
+          offsetX = Math.cos(angle) * expandR;
+          offsetY = lift + (pRand - 0.5) * 350 * inv;
+          offsetZ = Math.sin(angle) * expandR;
+        }
+
         let hasPrev = false;
         let prevX = 0,
           prevY = 0,
           prevZ = 0;
 
         for (let idx = s; idx < e; idx++) {
-          const [sx, sy, sz] = project(PXYZ[idx * 3], PXYZ[idx * 3 + 1], PXYZ[idx * 3 + 2]);
+          const rawX = PXYZ[idx * 3] + offsetX;
+          const rawY = PXYZ[idx * 3 + 1] + offsetY;
+          const rawZ = PXYZ[idx * 3 + 2] + offsetZ;
+
+          const [sx, sy, sz] = project(rawX, rawY, rawZ);
           if (hasPrev) {
             const avgZ = (prevZ + sz) / 2;
             const normZ = Math.max(0, Math.min(1, (avgZ + m.R) / (2 * m.R)));
@@ -206,13 +275,20 @@ export default function TacticalVehicleWireframe({
         }
       }
 
-      // 5. Draw Maxus MIFA 7 Vehicle Wireframe with Depth Fading (NO BOXES!)
+      // 6. Draw Maxus MIFA 7 Vehicle Wireframe with Depth Fading (NO BOXES!)
       ctx.lineWidth = width < 768 ? 0.7 : 0.6;
       for (let b = 0; b < bucketsCount; b++) {
         const lines = depthBuckets[b];
         if (!lines.length) continue;
         const alpha = Math.max(0.18, 0.68 - (0.45 * b) / bucketsCount);
-        ctx.strokeStyle = `rgba(235, 238, 245, ${alpha.toFixed(3)})`;
+
+        // Flash glowing neon volt yellow while assembling, settle to white CAD
+        if (inv > 0.01) {
+          ctx.strokeStyle = `rgba(228, 248, 13, ${(alpha * (0.4 + inv * 0.6)).toFixed(3)})`;
+        } else {
+          ctx.strokeStyle = `rgba(235, 238, 245, ${alpha.toFixed(3)})`;
+        }
+
         ctx.beginPath();
         for (let j = 0; j < lines.length; j += 4) {
           ctx.moveTo(lines[j], lines[j + 1]);
@@ -221,7 +297,18 @@ export default function TacticalVehicleWireframe({
         ctx.stroke();
       }
 
-      // 6. Draw Tactical Reticle / Waypoint Anchors (SIFIR KUTU - Sadece Taktiksel Nişangah Noktaları)
+      // 7. Holographic Scanning Laser Line during assembly
+      if (inv > 0.01) {
+        const scanY = cy - (-0.6 + ease * 1.2) * (height * 0.45);
+        ctx.beginPath();
+        ctx.moveTo(cx - width * 0.38, scanY);
+        ctx.lineTo(cx + width * 0.38, scanY);
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = "rgba(228, 248, 13, 0.45)";
+        ctx.stroke();
+      }
+
+      // 8. Draw Tactical Reticle / Waypoint Anchors (SIFIR KUTU - Sadece Taktiksel Nişangah Noktaları)
       const updatedLabels: Array<{
         id: string;
         name: string;
@@ -318,23 +405,39 @@ export default function TacticalVehicleWireframe({
     };
   }, [activeId]);
 
-  // Pointer Interaction (Smooth Drag to Rotate on PC & Mobile)
+  // Pointer Interaction (Smooth Drag to Rotate on PC & Mobile in Full 3D: Both Yaw & Pitch!)
   const handlePointerDown = (e: React.PointerEvent) => {
     isDraggingRef.current = true;
     dragStartXRef.current = e.clientX;
-    spinSpeedRef.current = 0;
+    dragStartYRef.current = e.clientY;
+    spinSpeedXRef.current = 0;
+    spinSpeedYRef.current = 0;
   };
 
   const handlePointerMove = (e: React.PointerEvent) => {
     if (!isDraggingRef.current) return;
     const dx = e.clientX - dragStartXRef.current;
+    const dy = e.clientY - dragStartYRef.current;
     dragStartXRef.current = e.clientX;
+    dragStartYRef.current = e.clientY;
+
+    // Horizontal drag -> Yaw (360 degrees continuous spin)
     yawRef.current += dx * 0.007;
-    spinSpeedRef.current = dx * 0.01;
+    spinSpeedXRef.current = dx * 0.01;
+
+    // Vertical drag -> Pitch (Tilt up & down freely!)
+    pitchRef.current -= dy * 0.006;
+    pitchRef.current = Math.max(-1.05, Math.min(0.45, pitchRef.current));
+    spinSpeedYRef.current = -dy * 0.008;
   };
 
   const handlePointerUp = () => {
     isDraggingRef.current = false;
+  };
+
+  const handleWheel = (e: React.WheelEvent) => {
+    const zoomDelta = e.deltaY * -0.001;
+    zoomRef.current = Math.max(0.7, Math.min(1.8, zoomRef.current + zoomDelta));
   };
 
   return (
@@ -345,6 +448,7 @@ export default function TacticalVehicleWireframe({
         touchAction: "none",
         backgroundColor: "transparent",
       }}
+      onWheel={handleWheel}
     >
       {/* 100% Frameless Canvas (No boxes, no cards, no borders!) */}
       <canvas
@@ -358,6 +462,14 @@ export default function TacticalVehicleWireframe({
           touchAction: "none",
         }}
       />
+
+      {/* Assembly Progress Indicator (during holographic formation) */}
+      {assemblyPct < 100 && (
+        <div className="absolute top-2 left-3 pointer-events-none z-10 flex items-center gap-2 font-mono text-[10px] text-[#E4F80D] uppercase tracking-wider">
+          <span className="w-1.5 h-1.5 bg-[#E4F80D] animate-ping" />
+          <span>OTONOM ŞASİ BİRLEŞTİRİLİYOR... [ %{assemblyPct} ]</span>
+        </div>
+      )}
 
       {/* Floating Tactical Yellow HUD Badges (Projected onto Maxus MIFA 7) */}
       <div className="absolute inset-0 pointer-events-none">
@@ -383,11 +495,17 @@ export default function TacticalVehicleWireframe({
         })}
       </div>
 
-      {/* Subtle Drag Rotation Helper Text at Bottom */}
-      <div className="absolute bottom-2 inset-x-0 mx-auto text-center pointer-events-none z-10">
-        <span className="text-[10px] font-mono tracking-widest uppercase text-white/40 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
-          ↔ 3D ÇEVİRMEK İÇİN SÜRÜKLEYİN • SAIC MAXUS MIFA 7 (2.975mm DİNGİL)
+      {/* Subtle Drag Rotation Helper Text & Re-assemble button at Bottom */}
+      <div className="absolute bottom-2 inset-x-0 mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2 pointer-events-none z-10 text-[10px] font-mono tracking-widest uppercase">
+        <span className="text-white/40 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+          ↔ 360° ÇEVİR • ↕ AÇI DEĞİŞTİR • SAIC MAXUS MIFA 7 (2.975mm)
         </span>
+        <button
+          onClick={triggerAssembly}
+          className="pointer-events-auto px-2 py-0.5 text-[#E4F80D] hover:text-white border-b border-[#E4F80D] transition-colors cursor-pointer"
+        >
+          [ ⟳ PARÇALARI YENİDEN BİRLEŞTİR ]
+        </button>
       </div>
     </div>
   );
