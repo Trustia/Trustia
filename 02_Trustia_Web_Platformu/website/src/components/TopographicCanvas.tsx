@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 interface TopographicCanvasProps {
   className?: string;
-  inkColor?: string; // RGB string like "216, 200, 124" or "200, 255, 0"
+  inkColor?: string; // RGB string like "216, 200, 124" (Overland tactical gold)
   bands?: number;
   step?: number;
   freq?: number;
@@ -13,9 +13,9 @@ interface TopographicCanvasProps {
 
 export default function TopographicCanvas({
   className = "absolute inset-0 w-full h-full",
-  inkColor = "216, 200, 124", // Overland tactical gold tone
+  inkColor = "216, 200, 124", // Overland military gold tone
   bands = 44,
-  step = 8,
+  step = 7,
   freq = 0.021,
   interactive = true,
 }: TopographicCanvasProps) {
@@ -82,15 +82,13 @@ export default function TopographicCanvas({
     const ripples: Array<{ x: number; y: number; r: number; amp: number }> = [];
 
     const majorEvery = 8;
-    const minorAlpha = 0.22;
-    const majorAlpha = 0.55;
-    const bumpAmp = 0.5;
-    const bumpRadius = 130;
+    const bumpAmp = 0.55;
+    const bumpRadius = 140;
 
     let width = 0;
     let height = 0;
     let dpr = 1;
-    let isVisible = false;
+    let isMobile = false;
 
     // 4-octave Fractal Brownian Motion (fBm)
     function fbm(x: number, y: number) {
@@ -128,13 +126,14 @@ export default function TopographicCanvas({
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
 
-      const cols = Math.ceil(width / step) + 2;
-      const rows = Math.ceil(height / step) + 2;
+      const effectiveStep = isMobile ? Math.max(step, 6) : step;
+      const cols = Math.ceil(width / effectiveStep) + 2;
+      const rows = Math.ceil(height / effectiveStep) + 2;
       const grid = new Int16Array(cols * rows);
 
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
-          const val = (elevation(c * step, r * step) * bands) | 0;
+          const val = (elevation(c * effectiveStep, r * effectiveStep) * bands) | 0;
           grid[r * cols + c] = val > bands - 1 ? bands - 1 : val;
         }
       }
@@ -153,14 +152,14 @@ export default function TopographicCanvas({
           const maxVal = Math.max(v00, v10, v11, v01);
           if (maxVal <= minVal) continue;
 
-          const px = c * step;
-          const py = r * step;
+          const px = c * effectiveStep;
+          const py = r * effectiveStep;
 
           // Midpoints of cell edges
-          const top: [number, number] = [px + step / 2, py];
-          const right: [number, number] = [px + step, py + step / 2];
-          const bottom: [number, number] = [px + step / 2, py + step];
-          const left: [number, number] = [px, py + step / 2];
+          const top: [number, number] = [px + effectiveStep / 2, py];
+          const right: [number, number] = [px + effectiveStep, py + effectiveStep / 2];
+          const bottom: [number, number] = [px + effectiveStep / 2, py + effectiveStep];
+          const left: [number, number] = [px, py + effectiveStep / 2];
 
           for (let level = minVal + 1; level <= maxVal; level++) {
             const targetPath = level % majorEvery === 0 ? majorPath : minorPath;
@@ -213,13 +212,19 @@ export default function TopographicCanvas({
         }
       }
 
+      // High-contrast, clear visibility tuned for both desktop and mobile screens
+      const minorAlpha = isMobile ? 0.45 : 0.38;
+      const majorAlpha = isMobile ? 0.88 : 0.78;
+      const minorWidth = isMobile ? 0.95 : 0.85;
+      const majorWidth = isMobile ? 1.5 : 1.35;
+
       // Draw minor contour lines
-      ctx.lineWidth = 0.7;
+      ctx.lineWidth = minorWidth;
       ctx.strokeStyle = `rgba(${inkColor}, ${minorAlpha})`;
       ctx.stroke(minorPath);
 
       // Draw major index contour lines
-      ctx.lineWidth = 1.1;
+      ctx.lineWidth = majorWidth;
       ctx.strokeStyle = `rgba(${inkColor}, ${majorAlpha})`;
       ctx.stroke(majorPath);
     }
@@ -229,6 +234,7 @@ export default function TopographicCanvas({
       dpr = Math.min(window.devicePixelRatio || 1, 2);
       width = canvas.clientWidth;
       height = canvas.clientHeight;
+      isMobile = width < 768;
       if (width > 0 && height > 0) {
         canvas.width = Math.round(width * dpr);
         canvas.height = Math.round(height * dpr);
@@ -240,7 +246,6 @@ export default function TopographicCanvas({
       if (!canvas) return;
       const rect = canvas.getBoundingClientRect();
       if (rect.width && rect.height && rect.top < window.innerHeight + 500 && rect.bottom > -500) {
-        isVisible = true;
         resize();
       }
     }
@@ -286,7 +291,6 @@ export default function TopographicCanvas({
     // Observers
     const observer = new IntersectionObserver((entries) => {
       if (entries[0].isIntersecting) {
-        isVisible = true;
         resize();
       }
     });
@@ -298,6 +302,7 @@ export default function TopographicCanvas({
     if (interactive) {
       canvas.addEventListener("click", handleInteract as EventListener);
       canvas.addEventListener("dblclick", handleDblClick);
+      canvas.addEventListener("touchstart", handleInteract as EventListener, { passive: true });
     }
 
     checkVisibility();
@@ -309,6 +314,7 @@ export default function TopographicCanvas({
       if (interactive) {
         canvas.removeEventListener("click", handleInteract as EventListener);
         canvas.removeEventListener("dblclick", handleDblClick);
+        canvas.removeEventListener("touchstart", handleInteract as EventListener);
       }
     };
   }, [inkColor, bands, step, freq, interactive]);
