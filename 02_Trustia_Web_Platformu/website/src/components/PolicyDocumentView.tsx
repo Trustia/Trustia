@@ -169,10 +169,10 @@ export default function PolicyDocumentView({
               <div className="pt-3 border-t border-[#E5D6BC]/20 text-[11px] text-slate-400 font-mono space-y-1.5">
                 <div className="text-white font-semibold flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                  <span>Resmi Hukuki Geçerlilik</span>
+                  <span>{lang === "tr" ? "Resmi Hukuki Geçerlilik" : "Statutory Legal Validity"}</span>
                 </div>
                 <div className="text-[10px] text-[#d6cebf]/80 leading-tight">
-                  T.C. Kanunları, SAE J3016 ve ISO 26262 ASIL-D standartları uyarınca yürürlüktedir.
+                  {lang === "tr" ? "T.C. Kanunları, SAE J3016 ve ISO 26262 ASIL-D standartları uyarınca yürürlüktedir." : "Enacted under Turkish Commercial Law, SAE J3016, and ISO 26262 ASIL-D standards."}
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function PolicyDocumentView({
               <div className="flex items-center gap-3 text-slate-300">
                 <div className="flex items-center gap-1.5">
                   <Building className="w-3.5 h-3.5 text-slate-400" />
-                  <span>Trustia AI Legal & Compliance</span>
+                  <span>{lang === "tr" ? "Trustia Teknoloji Hukuk & Lisanslama" : "Trustia Technology Legal & Compliance"}</span>
                 </div>
                 <span>•</span>
                 <div className="flex items-center gap-1.5 text-slate-400">
@@ -246,12 +246,12 @@ export default function PolicyDocumentView({
             <div className="p-5 rounded-2xl bg-[#1b1610] border border-[#E5D6BC]/20 text-xs text-slate-400 space-y-2">
               <div className="font-semibold text-white flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <span>{lang === "tr" ? "Resmi Yürürlük ve İletişim" : "Official Notice & Contact"}</span>
+                <span>{lang === "tr" ? "Kurumsal Yürürlük ve İletişim" : "Corporate Enactment & Contact"}</span>
               </div>
               <p className="leading-relaxed">
                 {lang === "tr"
-                  ? "Bu kurumsal politika dokümanı, Trustia AI Yönetim Kurulu ve Hukuk Müşavirliği tarafından onaylanarak yürürlüğe konulmuştur. Sözleşme, lisanslama ve uyumluluk talepleriniz için doğrudan 'hukuk@trustia.com.tr' adresi ile iletişime geçebilirsiniz."
-                  : "This institutional policy document is formally certified and enacted by the Trustia AI Executive Board and Legal Directorate. For licensing, OEM compliance, and legal inquiries, contact 'hukuk@trustia.com.tr'."}
+                  ? "İşbu kurumsal politika ve teknik taahhütler; TRUSTIA TEKNOLOJİ Kurucu Yönetimi ve Sistem Mimarlığı tarafından belirlenmiş olup, şirketin fikri mülkiyetini, Seviye-4 otonomi yazılım çekirdeğini ve B2B kurumsal iş birliklerini güvence altına almak üzere yürürlüktedir. Resmi teknik lisanslama, şartname ve kurumsal iş birliği talepleri için doğrudan 'hukuk@trustia.com.tr' ve 'iletisim@trustia.com.tr' adresleri yetkilidir."
+                  : "These corporate policy standards and technical commitments are enacted by the Trustia Technology Founder & Systems Architecture Directorate, safeguarding proprietary Level-4 autonomy IP, verification suites, and enterprise engagements. For formal licensing, technical specifications, and institutional partnerships, contact 'hukuk@trustia.com.tr' and 'iletisim@trustia.com.tr'."}
               </p>
             </div>
 
