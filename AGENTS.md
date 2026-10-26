@@ -71,7 +71,6 @@ Trustia/
 * **Kurucu & Sistem Mimarı:** Murat Furkan Bayram (%100 Mülkiyet, Tel: +90 537 064 0460, E-posta: `kariyer@trustia.com.tr` / `iletisim@trustia.com.tr`).
 * **Resmi Akreditasyon ve Tescil Kütüğü:**
   * 🛡️ **ASELSAN A.Ş.:** Onaylı Tedarikçi Kütüğü (Firma Kodu: `#0050569`, SAP: `FZQHEXGFMTJU`).
-  * 🎖️ **NATO / MSB:** Resmi NATO Ticari ve Devlet Kuruluşu Kodu (`NCAGE: TR26258467723`).
   * 🇹🇷 **STM Savunma Teknolojileri:** Aday Tedarikçi Kütüğü.
   * 🇪🇺 **Avrupa Komisyonu:** Katılımcı Kimlik Kodu (`EU PIC: 861711529`).
   * 🇪🇺 **EIT Urban Mobility:** Partner ID (`CUS15554`).

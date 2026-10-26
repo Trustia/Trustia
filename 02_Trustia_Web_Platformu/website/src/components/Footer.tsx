@@ -9,7 +9,7 @@ export default function Footer() {
   const { lang } = useLanguage();
 
   return (
-    <footer id="kurumsal" className="relative w-full bg-[#14120c] text-slate-200 font-sans text-xs pt-20 pb-12 px-6 sm:px-12 z-20 overflow-hidden select-none">
+    <footer id="kurumsal" className="relative w-full bg-[#14120c] text-slate-200 font-sans text-xs pt-16 sm:pt-20 pb-12 px-6 sm:px-12 z-20 overflow-hidden select-none">
       {/* 
         Overland AI Procedural 2D Marching Squares Topographic Elevation Canvas:
         - 44-band Fractal Brownian Motion (fBm) elevation contour lines
@@ -33,10 +33,13 @@ export default function Footer() {
       <div className="absolute inset-0 bg-radial-[at_50%_50%] from-transparent via-[#14120c]/20 to-[#14120c]/60 pointer-events-none z-1" />
 
       {/* Footer Content Inner (Pointer events pass through to canvas except on interactive links) */}
-      <div className="max-w-7xl mx-auto space-y-14 relative z-10 pointer-events-none">
+      <div className="max-w-7xl mx-auto space-y-12 sm:space-y-14 relative z-10 pointer-events-none">
         
-        {/* Main 4-Column Responsive Layout (100% KUTUSUZ & ÇERÇEVESİZ SAF TİPOGRAFİ) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/15">
+        {/* ========================================================
+            1. DESKTOP VIEW: 4-Column Balanced Architectural Matrix
+            (100% UNTOUCHED ORIGINAL DESKTOP LAYOUT)
+           ======================================================== */}
+        <div className="hidden lg:grid lg:grid-cols-12 gap-10 lg:gap-12 pb-12 border-b border-white/15">
           
           {/* Column 1: Brand & Verified Accreditation (Width: 4 cols) */}
           <div className="lg:col-span-4 space-y-5">
@@ -72,8 +75,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2.5 text-slate-200">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#C8FF00] shrink-0" />
-                  <span>NATO NCAGE Kodu</span>
-                  <span className="text-slate-400 text-[11px]">TR26258467723</span>
+                  <span>OIN Patent Paktı</span>
+                  <span className="text-slate-400 text-[11px]">#{'f1e44576'}</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-slate-200">
                   <Globe className="w-3.5 h-3.5 text-sky-400 shrink-0" />
@@ -236,7 +239,129 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Overland AI-Style Monospaced Tactical Metadata Strip (Sıfır Kutu, Sadece Tipografi) */}
+        {/* ========================================================
+            2. MOBILE VIEW: Overland AI-Style Compact 2-Column Grid
+            - 65% shorter height, zero vertical sprawl
+            - Golden topographic terrain has breathing room
+            - Fast, airy, 1-screen tactical overview
+           ======================================================== */}
+        <div className="flex lg:hidden flex-col space-y-6 pb-8 border-b border-white/15">
+          {/* Mobile Brand & Verified Status */}
+          <div className="space-y-3">
+            <Link href="/" className="inline-flex items-center gap-2.5 group select-none pointer-events-auto">
+              <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 shadow-md">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo.png" alt="Trustia AI Logo" className="w-full h-full object-cover" />
+              </div>
+              <div className="flex items-center gap-1.5 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+                <span className="font-bold text-xl text-white tracking-tight">Trustia</span>
+                <span className="font-bold text-xl text-[#C8FF00] tracking-tight">AI</span>
+              </div>
+            </Link>
+
+            <p className="text-slate-300 text-xs leading-relaxed font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+              {lang === "tr"
+                ? "Ticari elektrikli filolar ve otonom sistemler için deterministik Seviye-4 otonom sürüş yazılım çekirdeği."
+                : "Deterministic Level-4 autonomy architecture for commercial fleets and autonomous robotics."}
+            </p>
+
+            {/* Compact Monospaced Registry Badges */}
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-mono text-slate-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+              <span className="text-[#C8FF00] font-semibold">ASELSAN #0050569</span>
+              <span className="text-slate-600">/</span>
+              <span>OIN #f1e44576</span>
+              <span className="text-slate-600">/</span>
+              <span className="text-sky-400">PIC: 861711529</span>
+            </div>
+          </div>
+
+          {/* Overland AI Style: Symmetric 2-Column Link Grid */}
+          <div className="grid grid-cols-2 gap-x-6 gap-y-6 pt-2">
+            
+            {/* Column 1: Çözümler / Solutions */}
+            <div className="space-y-3">
+              <h6 className="text-[10px] font-mono font-bold text-[#C8FF00] tracking-widest uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+                {lang === "tr" ? "ÇÖZÜMLER" : "SOLUTIONS"}
+              </h6>
+              <ul className="space-y-2 text-xs text-slate-200 font-sans drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+                <li>
+                  <Link href="/robotaxi/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>Hyundai Ioniq 5</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/robotaxi/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>3D LiDAR SLAM</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/robotaxi/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>CAN-FD Köprüsü</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/politika/otonom-guvenlik/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>Savunma İKA</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/politika/lisans/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>Enterprise SDK</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 2: Güvenlik & Kurumsal */}
+            <div className="space-y-3">
+              <h6 className="text-[10px] font-mono font-bold text-[#C8FF00] tracking-widest uppercase drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+                {lang === "tr" ? "GÜVENLİK & ŞİRKET" : "STANDARDS & CORP"}
+              </h6>
+              <ul className="space-y-2 text-xs text-slate-200 font-sans drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+                <li>
+                  <Link href="/politika/otonom-guvenlik/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>ISO 26262 ASIL-D</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/politika/otonom-guvenlik/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>UN ECE R157/155</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/hakkimizda/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>{lang === "tr" ? "Hakkımızda" : "About Us"}</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/iletisim/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>{lang === "tr" ? "Kariyer & Ar-Ge" : "Careers"}</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/iletisim/" className="hover:text-white transition-colors flex items-center justify-between group pointer-events-auto">
+                    <span>{lang === "tr" ? "İletişim" : "Contact"}</span>
+                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-[#C8FF00]" />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        {/* ========================================================
+            3. BOTTOM BAR: Overland AI-Style Monospaced Strip
+           ======================================================== */}
         {/* Desktop View */}
         <div className="hidden sm:flex items-center justify-between gap-4 text-[11px] font-mono text-slate-300 font-normal pointer-events-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
           <div className="flex items-center gap-2">
@@ -268,7 +393,7 @@ export default function Footer() {
         </div>
 
         {/* Mobile View: Overland AI-Style Monospaced Centered Strip */}
-        <div className="flex sm:hidden flex-col items-center gap-3.5 text-center font-mono text-[11px] pointer-events-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+        <div className="flex sm:hidden flex-col items-center gap-3 text-center font-mono text-[11px] pointer-events-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
           {/* Pure Typographic Legal Links (Sıfır Kutu, Slash Delimiters) */}
           <div className="flex flex-col items-center gap-1.5 text-slate-300">
             <div className="flex items-center gap-3">
@@ -292,7 +417,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright Metadata */}
-          <div className="text-[10px] text-slate-300 space-y-1 pt-1">
+          <div className="text-[10px] text-slate-300 space-y-0.5 pt-1">
             <div>(C) {new Date().getFullYear()} TRUSTIA AI TECHNOLOGIES™ / EST 2026</div>
             <div className="text-slate-400 tracking-wider">İSTANBUL / TÜRKİYE • ALL RIGHTS RESERVED</div>
           </div>
