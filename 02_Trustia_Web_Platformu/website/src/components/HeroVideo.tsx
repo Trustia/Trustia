@@ -17,22 +17,24 @@ export default function HeroVideo() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen min-h-[580px] sm:min-h-[600px] overflow-hidden bg-[#07090c]">
-      {/* Fullscreen Video Background - 100% Permanently Muted Ambient Atmosphere */}
+    <div className="relative w-full h-screen min-h-[580px] sm:min-h-[600px] overflow-hidden bg-black">
+      {/* Fullscreen Video Background - 100% Permanently Muted Ambient Atmosphere (Zero Color Tint) */}
       <video
         ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-full object-cover object-center filter brightness-[0.92] contrast-105 pointer-events-none select-none"
+        className="w-full h-full object-cover object-center pointer-events-none select-none"
       >
         <source src="/hero-video.mp4" type="video/mp4" />
       </video>
 
-      {/* Subtle Dark Vignette & Ambient Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#221d16] via-black/20 to-black/40 pointer-events-none z-1" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#221d16]/60 via-transparent to-transparent pointer-events-none z-1" />
+      {/* Subtle Pure Dark Top Vignette for Navbar Contrast (Zero Color Alteration) */}
+      <div className="absolute top-0 inset-x-0 h-28 bg-gradient-to-b from-black/60 via-black/20 to-transparent pointer-events-none z-1" />
+
+      {/* Subtle Pure Dark Bottom Fade for Natural Section Transition */}
+      <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-1" />
     </div>
   );
 }
