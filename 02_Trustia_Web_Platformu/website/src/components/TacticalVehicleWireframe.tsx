@@ -95,15 +95,15 @@ export default function TacticalVehicleWireframe({
   const isVisibleRef = useRef<boolean>(false);
   const pulseRef = useRef<number>(0);
 
-  // Holographic Assembly & Explosion Animation Progress (0 -> 1)
+  // Store activeId in a ref so switching tabs never restarts canvas or triggers re-assembly
+  const activeIdRef = useRef<string>(activeId);
+  useEffect(() => {
+    activeIdRef.current = activeId;
+  }, [activeId]);
+
+  // Holographic Assembly Progress (runs only once on initial load, 0 -> 1)
   const assemblyTRef = useRef<number>(0.0);
   const isAssemblingRef = useRef<boolean>(true);
-
-  // Re-trigger assembly pulse when active component changes
-  useEffect(() => {
-    assemblyTRef.current = 0.0;
-    isAssemblingRef.current = true;
-  }, [activeId]);
 
   // Initialize MIFA 7 model instantly
   useEffect(() => {
@@ -311,7 +311,7 @@ export default function TacticalVehicleWireframe({
       }> = [];
 
       MIFA7_CALLOUTS.forEach((callout) => {
-        const isSelected = activeId === callout.id || (!activeId && callout.id === "lidar");
+        const isSelected = activeIdRef.current === callout.id || (!activeIdRef.current && callout.id === "lidar");
         const [anchorX, anchorY] = project(callout.at[0], callout.at[1], callout.at[2]);
 
         if (isSelected) {
@@ -395,7 +395,7 @@ export default function TacticalVehicleWireframe({
       observer.disconnect();
       if (animId) cancelAnimationFrame(animId);
     };
-  }, [activeId]);
+  }, []);
 
   // Pointer Interaction (Smooth Drag to Rotate on PC & Mobile in Full 3D: Both Yaw & Pitch!)
   const handlePointerDown = (e: React.PointerEvent) => {
