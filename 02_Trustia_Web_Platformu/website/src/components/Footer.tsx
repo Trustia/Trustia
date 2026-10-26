@@ -246,9 +246,9 @@ export default function Footer() {
             - Fast, airy, 1-screen tactical overview
            ======================================================== */}
         <div className="flex lg:hidden flex-col space-y-6 pb-8 border-b border-white/15">
-          {/* Mobile Brand & Verified Status */}
-          <div className="space-y-3">
-            <Link href="/" className="inline-flex items-center gap-2.5 group select-none pointer-events-auto">
+          {/* Mobile Brand & Verified Status - Perfectly Centered & Symmetrical */}
+          <div className="space-y-3.5 text-center flex flex-col items-center justify-center">
+            <Link href="/" className="inline-flex items-center gap-2.5 group select-none pointer-events-auto justify-center">
               <div className="w-8 h-8 rounded-lg overflow-hidden shrink-0 shadow-md">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/logo.png" alt="Trustia AI Logo" className="w-full h-full object-cover" />
@@ -259,19 +259,22 @@ export default function Footer() {
               </div>
             </Link>
 
-            <p className="text-slate-300 text-xs leading-relaxed font-normal drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
+            <p className="text-slate-300 text-xs leading-relaxed font-normal max-w-sm mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
               {lang === "tr"
                 ? "Ticari elektrikli filolar ve otonom sistemler için deterministik Seviye-4 otonom sürüş yazılım çekirdeği."
                 : "Deterministic Level-4 autonomy architecture for commercial fleets and autonomous robotics."}
             </p>
 
-            {/* Compact Monospaced Registry Badges */}
-            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-mono text-slate-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
-              <span className="text-[#C8FF00] font-semibold">ASELSAN #0050569</span>
-              <span className="text-slate-600">/</span>
-              <span>OIN #f1e44576</span>
-              <span className="text-slate-600">/</span>
-              <span className="text-sky-400">PIC: 861711529</span>
+            {/* Symmetrical 2-Row Monospaced Registry Badges (2 top, 1 bottom center) */}
+            <div className="flex flex-col items-center justify-center gap-1.5 text-[11px] font-mono text-slate-300 drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)] w-full pt-1">
+              <div className="flex items-center justify-center gap-2.5">
+                <span className="text-[#C8FF00] font-semibold">ASELSAN #0050569</span>
+                <span className="text-slate-600 select-none">/</span>
+                <span className="text-slate-200">OIN #f1e44576</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <span className="text-sky-400">AB PIC: 861711529</span>
+              </div>
             </div>
           </div>
 

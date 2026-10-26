@@ -31,7 +31,7 @@ export default function FeatureVideo() {
         />
 
         {/* 100% KUTUSUZ & ÇERÇEVESİZ SAF TİPOGRAFİK GÖSTERGE */}
-        <div className="absolute bottom-3 right-4 sm:bottom-5 sm:right-8 z-20 pointer-events-none select-none">
+        <div className="absolute bottom-3 inset-x-0 mx-auto text-center sm:inset-x-auto sm:left-auto sm:right-8 sm:bottom-5 sm:text-right z-20 pointer-events-none select-none px-4 sm:px-0">
           <span className="text-[10px] sm:text-[11px] font-mono tracking-wider text-white/50 drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">
             {lang === "tr" ? "* Temsili Gösterim / Alıntı Video" : "* Representative Footage / Reference"}
           </span>

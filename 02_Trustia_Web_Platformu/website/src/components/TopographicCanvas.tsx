@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 
 interface TopographicCanvasProps {
   className?: string;
-  inkColor?: string; // RGB string like "216, 200, 124" (Overland tactical gold)
+  inkColor?: string; // RGB string like "216, 200, 124"
   bands?: number;
   step?: number;
   freq?: number;
@@ -13,9 +13,9 @@ interface TopographicCanvasProps {
 
 export default function TopographicCanvas({
   className = "absolute inset-0 w-full h-full",
-  inkColor = "216, 200, 124", // Overland military gold tone
+  inkColor = "216, 200, 124",
   bands = 44,
-  step = 7,
+  step = 8,
   freq = 0.021,
   interactive = true,
 }: TopographicCanvasProps) {
@@ -90,6 +90,12 @@ export default function TopographicCanvas({
     let dpr = 1;
     let isMobile = false;
 
+    // Cache precomputed base fBm heightfield to guarantee 0% lag on PC
+    let cols = 0;
+    let rows = 0;
+    let effectiveStep = step;
+    let baseFbmGrid: Float32Array | null = null;
+
     // 4-octave Fractal Brownian Motion (fBm)
     function fbm(x: number, y: number) {
       let amp = 1;
@@ -106,34 +112,48 @@ export default function TopographicCanvas({
       return norm < 0 ? 0 : norm > 1 ? 1 : norm;
     }
 
-    function elevation(x: number, y: number) {
-      let h = fbm(x / step, y / step);
-      for (const rip of ripples) {
-        const dSq = (x - rip.x) ** 2 + (y - rip.y) ** 2;
-        const rSq = rip.r * rip.r;
-        if (dSq < rSq) {
-          const factor = 1 - dSq / rSq;
-          h += rip.amp * factor * factor;
+    function computeBaseGrid() {
+      if (width <= 0 || height <= 0) return;
+      effectiveStep = isMobile ? 7 : Math.max(step, 8);
+      cols = Math.ceil(width / effectiveStep) + 2;
+      rows = Math.ceil(height / effectiveStep) + 2;
+      baseFbmGrid = new Float32Array(cols * rows);
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          baseFbmGrid[r * cols + c] = fbm(c, r);
         }
       }
-      return Math.min(1.6, h);
     }
 
-    // Marching Squares algorithm to extract 2D contour paths
     function renderContours() {
-      if (!ctx || width <= 0 || height <= 0) return;
+      if (!ctx || width <= 0 || height <= 0 || !baseFbmGrid) return;
 
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, width, height);
 
-      const effectiveStep = isMobile ? Math.max(step, 6) : step;
-      const cols = Math.ceil(width / effectiveStep) + 2;
-      const rows = Math.ceil(height / effectiveStep) + 2;
       const grid = new Int16Array(cols * rows);
+      const hasRipples = ripples.length > 0;
 
       for (let r = 0; r < rows; r++) {
+        const py = r * effectiveStep;
         for (let c = 0; c < cols; c++) {
-          const val = (elevation(c * effectiveStep, r * effectiveStep) * bands) | 0;
+          const px = c * effectiveStep;
+          let h = baseFbmGrid[r * cols + c];
+
+          if (hasRipples) {
+            for (const rip of ripples) {
+              const dSq = (px - rip.x) ** 2 + (py - rip.y) ** 2;
+              const rSq = rip.r * rip.r;
+              if (dSq < rSq) {
+                const factor = 1 - dSq / rSq;
+                h += rip.amp * factor * factor;
+              }
+            }
+            if (h > 1.6) h = 1.6;
+          }
+
+          const val = (h * bands) | 0;
           grid[r * cols + c] = val > bands - 1 ? bands - 1 : val;
         }
       }
@@ -155,7 +175,6 @@ export default function TopographicCanvas({
           const px = c * effectiveStep;
           const py = r * effectiveStep;
 
-          // Midpoints of cell edges
           const top: [number, number] = [px + effectiveStep / 2, py];
           const right: [number, number] = [px + effectiveStep, py + effectiveStep / 2];
           const bottom: [number, number] = [px + effectiveStep / 2, py + effectiveStep];
@@ -212,18 +231,15 @@ export default function TopographicCanvas({
         }
       }
 
-      // High-contrast, clear visibility tuned for both desktop and mobile screens
       const minorAlpha = isMobile ? 0.45 : 0.38;
       const majorAlpha = isMobile ? 0.88 : 0.78;
       const minorWidth = isMobile ? 0.95 : 0.85;
       const majorWidth = isMobile ? 1.5 : 1.35;
 
-      // Draw minor contour lines
       ctx.lineWidth = minorWidth;
       ctx.strokeStyle = `rgba(${inkColor}, ${minorAlpha})`;
       ctx.stroke(minorPath);
 
-      // Draw major index contour lines
       ctx.lineWidth = majorWidth;
       ctx.strokeStyle = `rgba(${inkColor}, ${majorAlpha})`;
       ctx.stroke(majorPath);
@@ -231,26 +247,28 @@ export default function TopographicCanvas({
 
     function resize() {
       if (!canvas) return;
-      dpr = Math.min(window.devicePixelRatio || 1, 2);
-      width = canvas.clientWidth;
-      height = canvas.clientHeight;
+      // Cap DPR to 1.5 on desktop to eliminate fill-rate stutter while maintaining crisp lines
+      dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+      const newWidth = canvas.clientWidth;
+      const newHeight = canvas.clientHeight;
+
+      if (newWidth === width && newHeight === height && baseFbmGrid) {
+        return;
+      }
+
+      width = newWidth;
+      height = newHeight;
       isMobile = width < 768;
+
       if (width > 0 && height > 0) {
         canvas.width = Math.round(width * dpr);
         canvas.height = Math.round(height * dpr);
+        computeBaseGrid();
         renderContours();
       }
     }
 
-    function checkVisibility() {
-      if (!canvas) return;
-      const rect = canvas.getBoundingClientRect();
-      if (rect.width && rect.height && rect.top < window.innerHeight + 500 && rect.bottom > -500) {
-        resize();
-      }
-    }
-
-    // Click / touch interaction: creates expanding ripple height elevation
+    let animId: number | null = null;
     const handleInteract = (e: MouseEvent | TouchEvent) => {
       if (!interactive || !canvas) return;
       const rect = canvas.getBoundingClientRect();
@@ -265,39 +283,53 @@ export default function TopographicCanvas({
       };
 
       ripples.push(rip);
-      if (ripples.length > 20) ripples.shift();
+      if (ripples.length > 8) ripples.shift();
 
       const startTime = performance.now();
       const animDuration = 450;
+
+      if (animId) cancelAnimationFrame(animId);
 
       function anim(now: number) {
         const progress = Math.min(1, (now - startTime) / animDuration);
         rip.r = 10 + (bumpRadius - 10) * (1 - (1 - progress) ** 3);
         renderContours();
         if (progress < 1) {
-          requestAnimationFrame(anim);
+          animId = requestAnimationFrame(anim);
+        } else {
+          ripples.length = 0;
+          renderContours();
         }
       }
-      requestAnimationFrame(anim);
+      animId = requestAnimationFrame(anim);
     };
 
     const handleDblClick = () => {
       if (!interactive) return;
       noiseGen = createNoise((1e9 * Math.random()) | 0);
       ripples.length = 0;
+      computeBaseGrid();
       renderContours();
     };
 
-    // Observers
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        resize();
-      }
-    });
+    // Use IntersectionObserver only — NO SCROLL LISTENER! (Guarantees zero scroll lag on PC)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          resize();
+        }
+      },
+      { rootMargin: "200px" }
+    );
     observer.observe(canvas);
 
-    window.addEventListener("resize", resize, { passive: true });
-    window.addEventListener("scroll", checkVisibility, { passive: true });
+    let resizeTimeout: NodeJS.Timeout | null = null;
+    const handleDebouncedResize = () => {
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(resize, 100);
+    };
+
+    window.addEventListener("resize", handleDebouncedResize, { passive: true });
 
     if (interactive) {
       canvas.addEventListener("click", handleInteract as EventListener);
@@ -305,12 +337,13 @@ export default function TopographicCanvas({
       canvas.addEventListener("touchstart", handleInteract as EventListener, { passive: true });
     }
 
-    checkVisibility();
+    resize();
 
     return () => {
       observer.disconnect();
-      window.removeEventListener("resize", resize);
-      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", handleDebouncedResize);
+      if (resizeTimeout) clearTimeout(resizeTimeout);
+      if (animId) cancelAnimationFrame(animId);
       if (interactive) {
         canvas.removeEventListener("click", handleInteract as EventListener);
         canvas.removeEventListener("dblclick", handleDblClick);
