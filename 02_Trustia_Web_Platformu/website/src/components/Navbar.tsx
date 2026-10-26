@@ -38,46 +38,13 @@ export default function Navbar() {
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
         
-        {/* Brand Logo with Dynamic High-Res Flag on the Diagonal Tip of "I" */}
-        <Link href="/" className="relative inline-flex items-center group select-none py-0.5 pr-4 shrink-0 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+        {/* Brand Logo */}
+        <Link href="/" className="inline-flex items-center group select-none py-0.5 pr-2 shrink-0 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
           <span className="font-syncopate font-bold text-xs sm:text-base md:text-lg tracking-[0.14em] sm:tracking-[0.2em] text-white uppercase group-hover:text-slate-200 transition-colors">
             TRUSTIA
           </span>
-          
-          <span className="relative font-syncopate font-black text-xs sm:text-base md:text-lg tracking-[0.14em] sm:tracking-[0.2em] text-[#C8FF00] drop-shadow-[0_0_15px_rgba(200,255,0,0.8)] ml-1 sm:ml-1.5 inline-block">
+          <span className="font-syncopate font-black text-xs sm:text-base md:text-lg tracking-[0.14em] sm:tracking-[0.2em] text-[#C8FF00] drop-shadow-[0_0_15px_rgba(200,255,0,0.8)] ml-1 sm:ml-1.5 inline-block">
             AI
-            
-            {/* Dynamic Flag Floating Directly Over the Top-Right Diagonal of "I" */}
-            <span
-              className="absolute -top-2 -right-4 sm:-top-2.5 sm:-right-5 z-20 flex items-center pointer-events-none"
-              title={lang === "tr" ? "Milli Teknoloji (Türkiye)" : "Global Platform (English)"}
-            >
-              <span className="relative block w-5 h-3.5 rounded-[2px] overflow-hidden shadow-sm border border-white/30">
-                {lang === "tr" ? (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    key="tr-flag"
-                    src="/flags/tr.svg"
-                    alt="Türkiye Bayrağı"
-                    width={20}
-                    height={14}
-                    style={{ width: "20px", height: "14px", objectFit: "cover" }}
-                    className="w-5 h-3.5 object-cover"
-                  />
-                ) : (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    key="us-flag"
-                    src="/flags/us.svg"
-                    alt="USA Flag"
-                    width={20}
-                    height={14}
-                    style={{ width: "20px", height: "14px", objectFit: "cover" }}
-                    className="w-5 h-3.5 object-cover"
-                  />
-                )}
-              </span>
-            </span>
           </span>
         </Link>
 
