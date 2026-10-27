@@ -25,10 +25,12 @@
 |                                                 | (Aday Yörünge & Bounding Box)                   |
 |                                                 v                                                 |
 |  +---------------------------------------------------------------------------------------------+  |
-|  | İKİNCİL DETERMINİSTİK EMNİYET HAKEMİ: TRUSTIA ROBOTAXI SDK (ASIL-D)                         |  |
+|  | İKİNCİL DETERMINİSTİK EMNİYET HAKEMİ: TRUSTIA ROBOTAXI SDK v4.3 (ASIL-D | 21 ALT SİSTEM)    |  |
 |  | * 3D LiDAR NDT & 400 Hz Error-State Kalman Filtresi (ESKF) ile Bağımsız Konumlandırma       |  |
 |  | * Çift-Sensör Çapraz Doğrulama (Cross-Sensor Validation - 0 Hayalet Frenleme)               |  |
-|  | * Kinematik Hybrid A* ve Stanley Yol Takip Denetleyicisi (2.975m Dingil Mesafesi)          |  |
+|  | * Kinematik Hybrid A* + Frenet Frame + S-Curve Jerk-Limited Trajectory Optimizer            |  |
+|  | * Stanley + MPC Yanal/Boyuna Kontrol + Lastik Kayma / Sürtünme Kestiricisi (Pacejka)        |  |
+|  | * UNECE R157 Kara Kutu (DSSAD), SOTIF ISO 21448 ODD, UDS 0x19/0x22, V2X SPaT & VRU Tahmini |  |
 |  | * KVKK m.9 Uç Veri Kalkanı (Çin CalmForge Bulut Senkronizasyon İzolasyonu)                  |  |
 |  | * 50ms Donanımsal Watchdog & Minimal Risk Maneuver (MRM) Güvenli Durma Makinesi             |  |
 |  +----------------------------------------------+----------------------------------------------+  |
@@ -119,7 +121,7 @@ Otonom sürüş devredeyken sürücünün direksiyona veya pedala dokunduğu and
 
 ### 4. CAN DBC SİNYAL HARİTASI VE AKTÜATÖR KODLARI
 
-Tam DBC dosyası [canbus/maxus_mifa7_chassis.dbc](file:///C:/Users/Asus/Desktop/Trustia/02_Trustia_Robotaxi_SDK/canbus/maxus_mifa7_chassis.dbc) yolunda oluşturulmuştur:
+Tam DBC dosyası `canbus/maxus_mifa7_chassis.dbc` dizininde oluşturulmuştur:
 
 * **0x1A0 (416) `MIFA7_STEERING_CMD` (100 Hz):**
   * `STEER_TARGET_ANGLE`: [-35.0°, +35.0°], Çözünürlük: 0.01°/bit.

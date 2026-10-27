@@ -71,7 +71,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "4. Açık İnovasyon İlkeleri ve Fikri Mülkiyet Egemenliği",
           items: [
-            "Trustia Teknoloji, açık kaynak dünyasının temel yapı taşlarına saygı duyarken; şirket bünyesinde sıfırdan geliştirilen 16.400'ü aşkın satırlık özgün C++20 ve Python deterministik otonomi algoritmalarının, hibrit rota planlayıcılarının ve araç kontrol modellerinin fikri mülkiyetini bütünüyle kendi mülkiyetinde tutar.",
+            "Trustia Teknoloji, açık kaynak dünyasının temel yapı taşlarına saygı duyarken; şirket bünyesinde sıfırdan geliştirilen 29.748'i aşkın satırlık (198 dosya) özgün C++20, Python ve TypeScript deterministik otonomi algoritmalarının, hibrit rota planlayıcılarının ve araç kontrol modellerinin fikri mülkiyetini bütünüyle kendi mülkiyetinde tutar.",
             "Açık İnovasyon Bildirgesi; temel altyapı katmanlarında küresel iş birliğini ve patent barışını temin ederken, Trustia'nın ticari yazılım çekirdeği (Closed-Box Enterprise SDK) üzerindeki bağımsız mülkiyet haklarını, patentlerini ve şirket sermayesini tam güvence altına almaktadır."
           ]
         }
@@ -113,7 +113,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "4. Open Innovation Governance & Proprietary Core Custody",
           items: [
-            "While championing open standards across core operating systems, Trustia maintains undivided, sovereign ownership over its 16,400+ lines of deterministic C++20 and Python Level-4 planning, Stanley control, and 3D SLAM algorithms.",
+            "While championing open standards across core operating systems, Trustia maintains undivided, sovereign ownership over its 29,748+ lines (198 files) of deterministic C++20, Python, and TypeScript Level-4 planning, Stanley control, and 3D SLAM algorithms.",
             "The Open Innovation Charter guarantees standard interoperability at the base layer while preserving Trustia's exclusive closed-box commercial distribution rights and proprietary trade secrets."
           ]
         }
@@ -496,7 +496,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "1. Fikri Mülkiyetin Yasal Sahibi, Tekil Hak İyeliği ve Bağımsız Sermaye",
           items: [
             "Trustia Seviye-4 Otonom Sürüş Çekirdeği, CAN-FD sürücüleri, 3D LiDAR SLAM algoritmaları ve araç kontrol yazılımlarının fikri ve sınai mülkiyeti bütünüyle TRUSTIA TEKNOLOJİ ve şirketin kurucusu Murat Furkan Bayram'a aittir.",
-            "Şirketimiz, hiçbir yabancı girişim sermayesi fonunun veya yabancı otonomi tedarikçisinin kapalı kutu lisansına bağımlı değildir. 16.400'ü aşkın satırlık kod tabanı yerli imkanlarla sıfırdan geliştirilmiş olup, şirketin en değerli stratejik sermayesini teşkil eder.",
+            "Şirketimiz, hiçbir yabancı girişim sermayesi fonunun veya yabancı otonomi tedarikçisinin kapalı kutu lisansına bağımlı değildir. 29.748'i aşkın satırlık (198 dosya) kod tabanı yerli imkanlarla sıfırdan geliştirilmiş olup, şirketin en değerli stratejik sermayesini teşkil eder.",
             "Alıcı kurumlara sağlanan lisanslar yalnızca yazılımın kapalı kutu derlenmiş versiyonunun kullanım hakkını kapsar; kaynak kodu üzerindeki mülkiyet veya telif hakkı hiçbir surette devredilemez."
           ]
         },
@@ -539,7 +539,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "1. Exclusive Title, Founder Equity & Sovereign Codebase Ownership",
           items: [
             "The Trustia Level-4 AutonomyCore, CAN-FD communication drivers, 3D LiDAR SLAM solvers, and chassis actuation layers constitute the exclusive, undivided intellectual property of TRUSTIA TECHNOLOGY and its founder Murat Furkan Bayram.",
-            "Our software architecture is entirely independent of foreign closed-source venture royalties. Spanning over 16,400 lines of sovereign C++20 and Python code verified through 1,307 automated test suites, the codebase represents the enterprise's primary strategic capital.",
+            "Our software architecture is entirely independent of foreign closed-source venture royalties. Spanning over 29,748 lines (198 files) of sovereign C++20, Python, and TypeScript code verified through 1,307 + 21 automated test suites, the codebase represents the enterprise's primary strategic capital.",
             "Client licensing agreements confer strictly bounded runtime execution permissions; under no circumstances is source code ownership, copyright, or moral rights transferred."
           ]
         },
@@ -844,13 +844,13 @@ export const policyData: Record<string, PolicyContent> = {
   "dogrulama": {
     iconName: "ShieldCheck",
     tr: {
-      title: "1.307 Testlik Sürekli Doğrulama, SIL/HIL Simülasyonu ve Otomotiv Kalite Standardı",
-      badge: "1.307 TEST: %100",
+      title: "1.307 + 21 Testlik Sürekli Doğrulama, SIL/HIL Simülasyonu ve Otomotiv Kalite Standardı",
+      badge: "1.328 TEST: %100",
       subBadge: "KALİTE GÜVENCESİ v4.2",
       category: "DOĞRULAMA & KALİTE",
       docNo: "TR-QA-2026/Rev.4",
       effectiveDate: "2026-10-26",
-      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin 1.307 otomatik testlik kesintisiz doğrulama kütüphanesini, Sıfır Hata (Zero Failure) ilkesini, Yazılım Döngüde (SIL) ve Donanım Döngüde (HIL) kalite taahhüdünü resmileştirir.",
+      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin 1.307 + 21 (1.328) otomatik testlik kesintisiz doğrulama kütüphanesini, Sıfır Hata (Zero Failure) ilkesini, Yazılım Döngüde (SIL) ve Donanım Döngüde (HIL) kalite taahhüdünü resmileştirir.",
       sections: [
         {
           heading: "1. 1.307 Doğrulama Testi: Çekirdek Otonominin Matematiksel Güvencesi",
@@ -887,13 +887,13 @@ export const policyData: Record<string, PolicyContent> = {
       ]
     },
     en: {
-      title: "1,307 Automated Verification Suites, SIL/HIL Simulation & Automotive QA Standard",
-      badge: "1,307 TESTS: 100%",
+      title: "1,307 + 21 Automated Verification Suites, SIL/HIL Simulation & Automotive QA Standard",
+      badge: "1,328 TESTS: 100%",
       subBadge: "QA STANDARD v4.2",
       category: "VERIFICATION & QA",
       docNo: "TR-QA-2026/Rev.4",
       effectiveDate: "2026-10-26",
-      summary: "Establishes Trustia's rigorous engineering quality assurance standard, anchored by continuous 100% execution across 1,307 automated verification tests, Software-in-the-Loop (SIL) simulation, and Hardware-in-the-Loop (HIL) actuator bench testing.",
+      summary: "Establishes Trustia's rigorous engineering quality assurance standard, anchored by continuous 100% execution across 1,307 + 21 (1,328) automated verification tests, Software-in-the-Loop (SIL) simulation, and Hardware-in-the-Loop (HIL) actuator bench testing.",
       sections: [
         {
           heading: "1. 1,307 Verification Suites: Mathematical Autonomy Certification",

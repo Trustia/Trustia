@@ -113,11 +113,29 @@
   }
   .honest-box h3 { color: var(--accent2); font-size: 15px; margin-bottom: 6px; }
   @media print {
-    body { background: #fff; color: #000; padding: 0; }
-    .section, .header, .stat-box { background: #fff; border-color: #ccc; color: #000; break-inside: avoid; }
-    th { background: #eee; color: #000; border-color: #bbb; }
-    td, p, .header h1, .stat-box .num { color: #000; border-color: #ddd; }
-    code { color: #005580; background: #f0f4f8; }
+    @page { size: A4 portrait; margin: 12mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    body { background: #ffffff !important; color: #0f172a !important; padding: 0 !important; font-size: 11px !important; }
+    .container { max-width: 100% !important; }
+    .header { background: #0f172a !important; color: #ffffff !important; border: 1px solid #0f172a !important; border-left: 6px solid #0284c7 !important; padding: 18px 22px !important; margin-bottom: 16px !important; }
+    .header h1 { color: #ffffff !important; font-size: 18px !important; }
+    .header p { color: #e2e8f0 !important; font-size: 12px !important; }
+    .badge { background: #e0f2fe !important; border: 1px solid #0284c7 !important; color: #0369a1 !important; font-weight: 700 !important; }
+    .badge.green { background: #dcfce7 !important; border: 1px solid #059669 !important; color: #065f46 !important; font-weight: 700 !important; }
+    .section { background: #ffffff !important; border: 1px solid #cbd5e1 !important; color: #0f172a !important; padding: 16px 18px !important; margin-bottom: 16px !important; }
+    .section h2 { color: #0f172a !important; border-bottom: 2px solid #0284c7 !important; font-size: 15px !important; }
+    .section p, p, li, span, div, strong, em { color: #0f172a !important; }
+    .honest-box { background: #f0fdf4 !important; border: 1.5px solid #059669 !important; break-inside: avoid; }
+    .honest-box h3 { color: #065f46 !important; font-weight: 800 !important; }
+    .honest-box p, .honest-box strong { color: #0f172a !important; }
+    .stat-box { background: #f8fafc !important; border: 1px solid #cbd5e1 !important; break-inside: avoid; }
+    .stat-box .num { color: #0f172a !important; font-size: 18px !important; font-weight: 800 !important; }
+    .stat-box .lbl { color: #334155 !important; font-weight: 600 !important; }
+    th { background: #0f172a !important; color: #ffffff !important; border: 1px solid #0f172a !important; font-weight: 700 !important; }
+    td { color: #0f172a !important; border: 1px solid #cbd5e1 !important; background: #ffffff !important; }
+    tr:nth-child(even) td { background: #f8fafc !important; }
+    tr { break-inside: avoid; }
+    code { color: #0369a1 !important; background: #f1f5f9 !important; border: 1px solid #cbd5e1 !important; font-weight: 600 !important; }
   }
 </style>
 </head>
@@ -129,8 +147,8 @@
     <p>Tripy Mobility & MİA Teknoloji A.Ş. Yönetici ve Teknik Değerlendirme Heyeti İçin Hazırlanmış Resmi Mühendislik Dökümü</p>
     <div class="badge-row">
       <span class="badge">Kurucu & Sistem Mimarı: Murat Furkan Bayram (%100 Bağımsız Mülkiyet)</span>
-      <span class="badge green">Çekirdek + SDK Kod Hacmi: 23,822 Satır</span>
-      <span class="badge green">Toplam Mühendislik Hacmi (Testler Dahil): 29,748 Satır</span>
+      <span class="badge green">Çekirdek + SDK Kod Hacmi: 23,867 Satır</span>
+      <span class="badge green">Toplam Mühendislik Hacmi (Testler Dahil): 29,793 Satır</span>
       <span class="badge green">Doğrulama: 1.307 Çekirdek Testi + 21 Robotaksi SDK Testi (%100 Başarılı)</span>
     </div>
   </div>
@@ -142,7 +160,7 @@
       <h3>Doğrudan, Şeffaf ve Abartısız Mevcut Durum Beyanı</h3>
       <p>
         <strong>1. Geliştirici ve Kurumsal Yapı:</strong> Trustia, 4 Şubat 2009 doğumlu (17 yaşında) <strong>Murat Furkan Bayram</strong> tarafından tek başına kurulmuş bağımsız bir yerli yazılım girişimidir. Fiziksel bir araç üretim atölyesi, donanım montaj ekibi veya saha test filosu <strong>bulunmamaktadır</strong>.<br>
-        <strong>2. Sanal Doğrulama Gerçeği:</strong> Bu belgede tek tek dosya ve satır sayılarıyla dökümü sunulan <strong>23,822 satırlık</strong> otonom sürüş yazılım çekirdeği ve <strong>5,926 satırlık</strong> doğrulama kütüphanesi; fiziksel bir araç üzerinde değil, tamamen bilgisayar ortamında (dahili deterministik fizik simülatörü, CARLA / MetaDrive / Webots simülasyon köprüleri ve 1.307 otomatik birim/entegrasyon testi ile) geliştirilmiş ve doğrulanmıştır.<br>
+        <strong>2. Sanal Doğrulama Gerçeği:</strong> Bu belgede tek tek dosya ve satır sayılarıyla dökümü sunulan <strong>23,867 satırlık</strong> otonom sürüş yazılım çekirdeği ve <strong>5,926 satırlık</strong> doğrulama kütüphanesi; fiziksel bir araç üzerinde değil, tamamen bilgisayar ortamında (dahili deterministik fizik simülatörü, CARLA / MetaDrive / Webots simülasyon köprüleri ve 1.307 otomatik birim/entegrasyon testi ile) geliştirilmiş ve doğrulanmıştır.<br>
         <strong>3. Sorumluluk ve Teslimat Sınırı:</strong> Trustia bir donanım veya mekanik entegrasyon firması değil, <strong>Saf Yazılım Sağlayıcısıdır (Tier-2 Otonomi Yazılım Çekirdeği Sağlayıcısı)</strong>. Fiziksel araç temini, sensör montajı, kablolama ve saha kalibrasyonu Tripy Mobility / MİA Teknoloji mühendislik ekibinin uzmanlık alanındadır. Trustia'nın görevi; kaynak kodlarını açmadan <strong>derlenmiş kapalı kutu yazılım paketini (SDK)</strong>, şasi haberleşme sözlüğünü ve doğrulama test araçlarını lisanslamak veya uygun görülecek kurumsal işbirliği modeliyle sunmaktır.
       </p>
     </div>
@@ -150,7 +168,7 @@
     <div class="grid-4">
       <div class="stat-box">
         <div class="num">150 Dosya</div>
-        <div class="lbl">Otonom Çekirdek & Robotaksi SDK Modülü (23,822 Satır)</div>
+        <div class="lbl">Otonom Çekirdek & Robotaksi SDK Modülü (23,867 Satır)</div>
       </div>
       <div class="stat-box">
         <div class="num">48 Test Paketi</div>
@@ -199,40 +217,40 @@
       <div>
         <table>
           <thead>
-            <tr><th>Kurum / Akreditasyon</th><th>Resmi Sicil / Kayıt Numarası ve Kanıt Dosyası</th></tr>
+            <tr><th>Kurum / Akreditasyon</th><th>Resmi Sicil / Kayıt Numarası ve Akreditasyon Kapsamı</th></tr>
           </thead>
           <tbody>
             <tr>
               <td><strong>ASELSAN A.Ş.</strong></td>
-              <td>Onaylı Tedarikçi Kütüğü — Firma Kodu: <code>#0050569</code> • SAP Kodu: <code>FZQHEXGFMTJU</code> (<code>TRUSTIA_ADMIN</code>) • Takip No: <code>0050569CCE941FD1A49FCEFB9B7BE7D6</code><br>Onaylı Alanlar: <em>(Yan Sanayi) Yazılım Geliştirme, Sistem Entegrasyon, Kara Platformu Entegrasyonu</em> + Axcelerate AGM Başvurusu<br><strong>Kanıt:</strong> <code>Kurumsal/Belgeler/Aselsan_Kodlari.txt</code></td>
+              <td>Onaylı Tedarikçi Kütüğü — Firma Kodu: <code>#0050569</code> • SAP Kodu: <code>FZQHEXGFMTJU</code> • Takip No: <code>0050569CCE941FD1A49FCEFB9B7BE7D6</code><br>Onaylı Alanlar: <em>Yazılım Geliştirme, Sistem Entegrasyon, Kara Platformu Entegrasyonu</em></td>
             </tr>
             <tr>
               <td><strong>STM Savunma Teknolojileri A.Ş.</strong></td>
-              <td>Savunma ve Derin Teknoloji Girişimcilik Ekosistemi — <strong>Aday Tedarikçi Kütüğü Kayıtlı Girişim</strong><br><strong>Kanıt:</strong> <code>README.md</code> &amp; <code>AGENTS.md</code> Kurumsal Tedarikçi Sicil Kütüğü</td>
+              <td>Savunma ve Derin Teknoloji Girişimcilik Ekosistemi — <strong>Aday Tedarikçi Kütüğü Kayıtlı Girişim</strong> (Otonom Kara Sistemleri &amp; Gömülü Yazılım)</td>
             </tr>
             <tr>
               <td><strong>Teknopark İstanbul (Cube Incubation)</strong></td>
-              <td>Ön Kuluçka Girişimi &amp; HASAT 2026 Hızlandırma Programı (6 Aylık Ön Kuluçka Protokolü)<br><strong>Kanıt:</strong> <code>Kurumsal/Basvurular/Teknopark_Istanbul_HASAT_2026/Ön Kuluçka Protokolü_6 ay.pdf</code></td>
+              <td>Ön Kuluçka Girişimi &amp; HASAT 2026 Hızlandırma Programı (6 Aylık Resmi Ön Kuluçka Protokolü)</td>
             </tr>
             <tr>
               <td><strong>İTO Bilgiyi Ticarileştirme Merkezi (BTM)</strong></td>
-              <td>Fulya Derin Teknoloji Kampüsü Yerleşik Girişimci<br><strong>Kanıt:</strong> <code>Kurumsal/Belgeler/BTM_Taahhutnamesi.pdf</code></td>
+              <td>Fulya Derin Teknoloji Kampüsü Yerleşik Girişimci (Ar-Ge ve Ticarileştirme Merkezi)</td>
             </tr>
             <tr>
               <td><strong>YTÜ Yıldız Teknopark</strong></td>
-              <td>Yıldız Kuluçka ve Derin Teknoloji Ekosistemi Ön Kuluçka Başvurusu<br><strong>Kanıt:</strong> <code>AGENTS.md</code> Resmi Kurumsal Kayıt Kütüğü</td>
+              <td>Yıldız Kuluçka ve Derin Teknoloji Ekosistemi Ön Kuluçka Başvurusu</td>
             </tr>
             <tr>
               <td><strong>Avrupa Komisyonu &amp; EIT Urban Mobility</strong></td>
-              <td>Avrupa Komisyonu Katılımcı Kodu (EU PIC): <code>861711529</code> • EIT Urban Mobility Partner ID: <code>CUS15554</code><br><strong>Kanıt:</strong> <code>README.md</code> Uluslararası Akreditasyon Kütüğü</td>
+              <td>Avrupa Komisyonu Katılımcı Kodu (EU PIC): <code>861711529</code> • EIT Urban Mobility Partner ID: <code>CUS15554</code></td>
             </tr>
             <tr>
               <td><strong>KOSGEB &amp; BTK Akademi</strong></td>
-              <td>KOSGEB İleri Girişimci: <code>KSB01UGE0115153370</code> • BTK Savunma &amp; YZ Sertifikası: <code>L2zPtN4X1ZJ</code><br><strong>Kanıt:</strong> <code>Kurumsal/Belgeler/KOSGEB_Sertifikasi.pdf</code> &amp; <code>BTK_Sertifikasi.pdf</code></td>
+              <td>KOSGEB İleri Girişimci: <code>KSB01UGE0115153370</code> • BTK Savunma &amp; YZ Sertifikası: <code>L2zPtN4X1ZJ</code></td>
             </tr>
             <tr>
               <td><strong>Open Invention Network (OIN 2.0)</strong></td>
-              <td>İmzalı İkili Patent Savunma Paktı Lisansı — Lisans No: <code>#f1e445769a9934114db095c4f5430a0e749d8201</code><br><strong>Kanıt:</strong> <code>Kurumsal/Belgeler/OIN_Lisansi.pdf</code></td>
+              <td>İmzalı İkili Patent Savunma Paktı Lisansı — Lisans No: <code>#f1e445769a9934114db095c4f5430a0e749d8201</code></td>
             </tr>
           </tbody>
         </table>
@@ -296,7 +314,7 @@
 
   <!-- BÖLÜM 4: ROBOTAKSİ ÖZEL SDK TAM ENVANTERİ -->
   <div class="section">
-    <h2>4. Tripy / SAIC Maxus MIFA 7 & CalmCar Özel Robotaksi SDK Envanteri (<code>02_Trustia_Robotaxi_SDK</code> — 4,408 Satır)</h2>
+    <h2>4. Tripy / SAIC Maxus MIFA 7 & CalmCar Özel Robotaksi SDK Envanteri (<code>02_Trustia_Robotaxi_SDK</code> — 4,453 Satır)</h2>
     <p>Tripy Mobility'nin SAIC Maxus MIFA 7 şasisi, CalmCar kamera algısı, Resmî Gazete tip onayı (ODD, SOTIF, DSSAD Kara Kutu) ve Uzaktan Operasyon (Teleoperation) gereksinimleri için hazırlanan özel SDK paketindeki <strong>tüm dosyaların tek tek listesi</strong>:</p>
     <table>
       <thead>
@@ -328,7 +346,7 @@
         </tr>
         <tr>
           <td><code>README.md</code></td>
-          <td><strong>108</strong> satır</td>
+          <td><strong>132</strong> satır</td>
           <td><code>Yapılandırma / Sözlük / Arayüz</code></td>
           <td>Robotaksi Kurumsal SDK mimari kılavuzu, hızlı başlangıç ve entegrasyon dokümantasyonu.</td>
         </tr>
@@ -340,7 +358,7 @@
         </tr>
         <tr>
           <td><code>robotaxi_cli.py</code></td>
-          <td><strong>165</strong> satır</td>
+          <td><strong>184</strong> satır</td>
           <td><code>run_cockpit, run_drive, run_audit, run_test</code></td>
           <td>Robotaksi SDK komut satırı çalıştırıcı ve canlı simülasyon döngüsü aracı.</td>
         </tr>
@@ -364,7 +382,7 @@
         </tr>
         <tr>
           <td><code>docs\PoC_Entegrasyon_ve_Kabul_Protokolu.md</code></td>
-          <td><strong>156</strong> satır</td>
+          <td><strong>158</strong> satır</td>
           <td><code>Yapılandırma / Sözlük / Arayüz</code></td>
           <td>SAIC Maxus MIFA 7 & CalmCar PoC saha entegrasyon adımları ve kabul kriterleri protokolü.</td>
         </tr>
@@ -531,7 +549,7 @@
   <!-- BÖLÜM 5: ANA OTONOM SÜRÜŞ ÇEKİRDEĞİ TAM ENVANTERİ -->
   <div class="section">
     <h2>5. Ana Otonom Sürüş Çekirdeği Tam Kod Envanteri (<code>01_Trustia_Otonom_Yazilim_Core</code> — 114 Dosya, 19,414 Satır)</h2>
-    <p>Kaynak kodlarımızı açmadan, 16.400+ satırlık ana otonom sürüş çekirdeğimizin içindeki <strong>bütün modül dosyalarının tek tek satır sayısı, içindeki gerçek sınıf/fonksiyon isimleri ve görevleri</strong> aşağıda eksiksiz listelenmiştir:</p>
+    <p>Kaynak kodlarımızı açmadan, 19,414 satırlık ana otonom sürüş çekirdeğimizin içindeki <strong>bütün modül dosyalarının tek tek satır sayısı, içindeki gerçek sınıf/fonksiyon isimleri ve görevleri</strong> aşağıda eksiksiz listelenmiştir:</p>
     <table>
       <thead>
         <tr>

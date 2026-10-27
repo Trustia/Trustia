@@ -24,8 +24,8 @@
 
 </div>
 
-> **Ticari yolcu robotaksileri, fabrika/depo lojistik araçları (AMR/AGV), otonom kampüs ring servisleri ve savunma sanayii insansız kara araçları (İKA) için sıfırdan C++20, ROS 2 ve Python ile geliştirilmiş; donanımdan bağımsız, GNSS-Denied 3D LiDAR SLAM tabanlı Seviye-4 Otonom Sürüş Motoru.**  
-> **1.307 adet otomatik birim ve entegrasyon testi ile %100 doğrulanmış, yerel CAN-FD araç kontrol ağ geçitlerine sahip, harici kapalı kutu bağımlılığı bulunmayan kurumsal B2B otonomi yığını.**
+> **Ticari yolcu robotaksileri, fabrika/depo lojistik araçları (AMR/AGV), otonom kampüs ring servisleri ve savunma sanayii insansız kara araçları (İKA) için sıfırdan C++20, ROS 2 ve Python ile geliştirilmiş; donanımdan bağımsız, GNSS-Denied 3D LiDAR SLAM tabanlı Seviye-4 Otonom Sürüş Motoru (198 Dosya / 29.748+ Satır).**  
+> **1.307 adet Çekirdek + 21 adet Robotaksi SDK olmak üzere toplam 1.328 otomatik birim ve entegrasyon testi ile %100 doğrulanmış, yerel CAN-FD araç kontrol ağ geçitlerine sahip, harici kapalı kutu bağımlılığı bulunmayan kurumsal B2B otonomi yığını.**
 
 ---
 
@@ -96,15 +96,20 @@ Trustia mimarisi; yapay zeka çıkarımlarının yarattığı belirsizlikleri (s
         └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Modül Sorumluluk Tablosu:
-- **`01_Trustia_Otonom_Yazilim_Core/ai/`**: 3D LiDAR nokta bulutu zemin filtreleme (RANSAC / Ground Plane Segmentation), DBSCAN engel kümeleme, yönlendirilmiş sınırlayıcı kutu (OBB) ve yörünge tahmini.
-- **`01_Trustia_Otonom_Yazilim_Core/slam/`**: GPS'siz (GNSS-Denied) ortamlarda 3D NDT Pose-Graph SLAM ve 400 Hz Hata Durum Kalman Filtresi (ESKF) ile 4.2 cm yörünge hassasiyeti.
-- **`01_Trustia_Otonom_Yazilim_Core/planning/`**: Kinematik Hibrit A* yol arama algoritması ve sarsıntısız (jerk-limited) Quintic Polynomial hız eğrisi üretimi.
-- **`01_Trustia_Otonom_Yazilim_Core/control/`**: Stanley ve Pure Pursuit yanal izleme denetleyicileri; PID boylamsal hız yönetimi ve endüstri standardı DBC sinyal kodlayıcı.
-- **`01_Trustia_Otonom_Yazilim_Core/integration/`**: Gerçek zamanlı Linux SocketCAN CAN-FD sürücüsü ve ROS 2 Humble araç köprüsü (Drive-by-Wire).
-- **`01_Trustia_Otonom_Yazilim_Core/security/`**: ISO 26262 ASIL-D uyumlu 50 ms Watchdog, Minimal Risk Maneuver (MRM emniyetli sağa çekme) ve 5 ms acil fren mekanizmaları.
-- **`01_Trustia_Otonom_Yazilim_Core/command/`**: Çoklu araç telemetri yönlendiricisi, filo dağıtım motoru ve dinamik rota tahsis sistemi.
-- **`01_Trustia_Otonom_Yazilim_Core/core/`**: AutonomyCore üst düzey API, otonom durum makineleri (FSM) ve donanım kilitli HMAC lisanslama motoru.
+### Modül Sorumluluk Tablosu (198 Dosya / 29.748+ Satır):
+- **`01_Trustia_Otonom_Yazilim_Core/` (122 Dosya / 19.414 Satır — 1.307 Test)**:
+  - **`ai/`**: 3D LiDAR nokta bulutu zemin filtreleme (RANSAC / Ground Plane Segmentation), DBSCAN engel kümeleme, yönlendirilmiş sınırlayıcı kutu (OBB) ve yörünge tahmini.
+  - **`slam/`**: GPS'siz (GNSS-Denied) ortamlarda 3D NDT Pose-Graph SLAM ve 400 Hz Hata Durum Kalman Filtresi (ESKF) ile 4.2 cm yörünge hassasiyeti.
+  - **`planning/`**: Kinematik Hibrit A* yol arama algoritması ve sarsıntısız (jerk-limited) Quintic Polynomial hız eğrisi üretimi.
+  - **`control/`**: Stanley ve Pure Pursuit yanal izleme denetleyicileri; PID boylamsal hız yönetimi ve endüstri standardı DBC sinyal kodlayıcı.
+  - **`integration/`**: Gerçek zamanlı Linux SocketCAN CAN-FD sürücüsü ve ROS 2 Humble araç köprüsü (Drive-by-Wire).
+  - **`security/`**: ISO 26262 ASIL-D uyumlu 50 ms Watchdog, Minimal Risk Maneuver (MRM emniyetli sağa çekme) ve 5 ms acil fren mekanizmaları.
+  - **`command/`**: Çoklu araç telemetri yönlendiricisi, filo dağıtım motoru ve dinamik rota tahsis sistemi.
+  - **`core/`**: AutonomyCore üst düzey API, otonom durum makineleri (FSM) ve donanım kilitli HMAC lisanslama motoru.
+- **`02_Trustia_Robotaxi_SDK/` (36 Dosya / 3.310 Satır — 21 Alt Sistem & 21 Test)**:
+  - SAIC Maxus MIFA 7 ve çoklu şasi entegrasyonu için 20 tam otonomi modülü: ASIL-D Çift Sensör Emniyet Hakemi, 400 Hz ESKF & 3D NDT SLAM, Frenet Frame Quintic & S-Curve Jerk-Limited Planlayıcı, MPC & Pacejka Lastik Kayma / Yol Sürtünmesi Kestiricisi, UNECE R157 Kara Kutu (DSSAD), SOTIF ISO 21448 ODD Monitörü, ISO 14229 UDS (0x19/0x22) Arıza Teşhisi, V2X SPaT (1380 B) ve VRU Yaya Yörünge Tahmini.
+- **`02_Trustia_Web_Platformu/` (40 Dosya / 7.024 Satır)**:
+  - Next.js 16, React 19, Three.js WebGL 3D Telemetri & Dijital İkiz Simülasyonu ve 8 Kurumsal Politika & Yasal Regülasyon Portalı.
 
 ---
 
@@ -133,14 +138,16 @@ Trustia mimarisi, elektrikli araç üreticilerinin küresel mimarilerine tak-ça
 
 ---
 
-## 🧪 5. 1.307 Testlik Sürekli Doğrulama Hattı (%100 Yeşil)
+## 🧪 5. 1.307 + 21 Testlik Sürekli Doğrulama Hattı (%100 Yeşil)
 
-Trustia çekirdeği, yapılan her kod revizyonunda otomatik olarak koşturulan **1.307 adet otomatik test** ile korunmaktadır:
+Trustia çekirdeği ve Robotaksi SDK paketi, yapılan her kod revizyonunda otomatik olarak koşturulan **1.307 + 21 = 1.328 adet otomatik test** ile korunmaktadır:
 
 ```bash
-cd 01_Trustia_Otonom_Yazilim_Core
-pytest tests/ -q
+cd 01_Trustia_Otonom_Yazilim_Core && pytest tests/ -q
 # Çıktı: 1307 passed in 39.06s (100% PASS, 0 FAILURE, 0 ERROR)
+
+cd ../02_Trustia_Robotaxi_SDK && pytest tests/ -q
+# Çıktı: 21 passed in 0.45s (100% PASS, 0 FAILURE, 0 ERROR)
 ```
 
 | Doğrulama Alanı | Test Sayısı | Durum | Standardizasyon Referansı |
@@ -152,7 +159,8 @@ pytest tests/ -q
 | **CAN-FD Aktüatör & DBW Ağ Geçidi** | 196 Test | ✅ %100 Yeşil | ISO 11898-1:2015 & SocketCAN G/Ç Testleri |
 | **ISO 26262 ASIL-D MRM & E-Stop** | 144 Test | ✅ %100 Yeşil | Minimal Risk Manevrası & 50ms Watchdog |
 | **Donanım Döngülü (HIL) & Simülasyon** | 100 Test | ✅ %100 Yeşil | CARLA & Webots Dijital İkiz Senaryoları |
-| **TOPLAM** | **1.307 Test** | **%100 BAŞARI** | **0 Hata • 0 Regresyon • 0 Uyarı** |
+| **Robotaksi SDK (20 L4 Alt Sistem & E2E)** | 21 Test | ✅ %100 Yeşil | UNECE R157 DSSAD, SOTIF ODD, UDS, MPC & V2X |
+| **TOPLAM** | **1.307 + 21 Test** | **%100 BAŞARI** | **0 Hata • 0 Regresyon • 0 Uyarı** |
 
 ---
 

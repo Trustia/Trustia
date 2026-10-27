@@ -2,17 +2,18 @@
 
 > [!NOTE]
 > Bu rehber, Trustia Seviye-4 Otonom Sürüş projesinde çalışan yapay zeka asistanları (AI Agents) ve sistem mimarları için bağlayıcı çalışma prensiplerini ve kurumsal hafızayı belirler.
-> **Son Güncelleme:** 12 Ekim 2026 | **Sürüm:** v2.4 (Enterprise L4 Core)
+> **Son Güncelleme:** 27 Ekim 2026 | **Sürüm:** v4.3 (Enterprise L4 Core & Robotaxi SDK — 198 Dosya / 29.748+ Satır)
 
 ---
 
 ## 🎯 6 TEMEL MÜHENDİSLİK VE ÇALIŞMA İLKESİ
 
-### 1. 3 ANA KLASÖR DÜZENİ (TEMİZ REPO MİMARİSİ)
-Tüm proje varlıkları istisnasız aşağıdaki 3 ana dizin altında organize edilir:
+### 1. ANA KLASÖR DÜZENİ (TEMİZ REPO MİMARİSİ)
+Tüm proje varlıkları istisnasız aşağıdaki ana dizinler altında organize edilir:
 1. **`01_Trustia_Otonom_Yazilim_Core/`**: Seviye-4 otonomi yazılımı (C++20/ROS2/Python), 1.307 testlik doğrulama kütüphanesi, CAN-FD sürücüleri, 3D LiDAR SLAM ve Enterprise SDK derleyicisi.
-2. **`02_Trustia_Web_Platformu/`**: Kurumsal web sitesi (`website/`, Next.js 16, React 19 ve 3D Three.js telemetri arayüzü).
-3. **`Kurumsal/`**: Resmi devlet, savunma ve akreditasyon belgeleri (`Belgeler/`, `Sunumlar/`, `Basvurular/`, `Medya/`).
+2. **`02_Trustia_Robotaxi_SDK/`**: SAIC Maxus MIFA 7 & Çoklu Şasi Seviye-4 Robotaksi Değerlendirme SDK'sı (21 alt sistem, 21 doğrulama testi, Closed-Box SDK paketleyici).
+3. **`02_Trustia_Web_Platformu/`**: Kurumsal web sitesi (`website/`, Next.js 16, React 19 ve 3D Three.js telemetri arayüzü).
+4. **`Kurumsal/`**: Resmi devlet, savunma ve akreditasyon belgeleri (`Belgeler/`, `Sunumlar/`, `Basvurular/`, `Medya/`).
 * *Kök dizine veya masaüstüne geçici, döküntü veya mükerrer dosya bırakılamaz.*
 
 ### 2. B2B ENTERPRISE SDK & FİKRİ MÜLKİYET (IP) KORUMA KURALI
@@ -42,7 +43,7 @@ Tüm proje varlıkları istisnasız aşağıdaki 3 ana dizin altında organize e
 
 ```text
 Trustia/
-├── 01_Trustia_Otonom_Yazilim_Core/    ← 16.400+ Satır L4 Çekirdek, 1.307 Test, CAN-FD Hyundai Ioniq 5
+├── 01_Trustia_Otonom_Yazilim_Core/    ← 19.414 Satır L4 Çekirdek, 1.307 Test, CAN-FD Hyundai Ioniq 5
 │   ├── ai/                            ← 3D Zemin Ayrıştırma, Engel Kümeleme & OBB
 │   ├── command/                       ← Robotaksi Filo Çağrı & Dağıtım Motoru
 │   ├── control/                       ← Pure Pursuit / Stanley Yanal Kontrol & DBC Kodlama
@@ -53,7 +54,8 @@ Trustia/
 │   ├── slam/                          ← GNSS-Denied 3D NDT Pose-Graph SLAM & 400Hz ESKF
 │   ├── tests/                         ← 1.307 Adet Otomatik Birim & Entegrasyon Testi
 │   └── tools/                         ← build_enterprise_sdk.py (Kapalı Kutu Dağıtım Aracı)
-├── 02_Trustia_Web_Platformu/          ← Web Platformu (Next.js 16, Three.js WebGL Telemetri)
+├── 02_Trustia_Robotaxi_SDK/           ← 3.310 Satır SAIC Maxus MIFA 7 L4 Robotaksi SDK, 21 Alt Sistem, 21 Test
+├── 02_Trustia_Web_Platformu/          ← 7.024 Satır Web Platformu (Next.js 16, Three.js WebGL Telemetri)
 ├── Kurumsal/                          ← Birleşik Kurumsal ve Yasal Varlıklar
 │   ├── Belgeler/                      ← Resmi Tescil, Tedarikçi ve Akreditasyon Belgeleri
 │   ├── Sunumlar/                      ← Pitch Deck'ler, BOM Listeleri ve Mühendislik Planları
