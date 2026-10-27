@@ -1,11 +1,18 @@
-# Trustia AI Technologies Robots Policy
+# Trustia AI Technologies Robots & AI Indexing Policy (v4.3 Enterprise)
 # https://trustia.com.tr
+# Last Updated: 2026-10-27
 
 User-agent: *
 Allow: /
 
-# Search Engine Crawlers
+# Major Search Engine Crawlers
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
 Allow: /
 
 User-agent: Bingbot
@@ -25,6 +32,12 @@ User-agent: Google-Extended
 Allow: /
 
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -51,7 +64,11 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Canonical Sitemap & Machine-Readable Knowledge
+# Canonical Sitemaps & Machine-Readable LLM Knowledge Manifests
 Sitemap: https://trustia.com.tr/sitemap.xml
+# LLMs.txt Standard Endpoints:
+# https://trustia.com.tr/llms.txt
+# https://trustia.com.tr/llms-full.txt
+
 Disallow: /api/
 Disallow: /_next/

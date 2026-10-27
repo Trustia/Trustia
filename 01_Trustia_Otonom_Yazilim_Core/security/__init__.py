@@ -18,6 +18,31 @@ from security.crypto import SecureMessage
 from security.estop import EmergencyStop, EstopEvent, EstopListener, EstopState
 from security.linkloss import LinkLossDecision, LinkLossManager, LinkState
 from security.validate import CommandGuard, ValidationResult
+from security.odd_sotif_dssad import (
+    DssadEventRecord,
+    Iso21448SotifSupervisor,
+    OddBoundaryConfig,
+    OddDomainMonitor,
+    OddEvaluationResult,
+    SimulationVsFieldProfile,
+    SotifAssessment,
+    UnR157DssadBlackbox,
+)
+from security.can_ids_r155 import (
+    CanFrameSecurityEvent,
+    CanIdProfile,
+    UnR155CanBusIds,
+)
+from security.rss_ieee2846 import (
+    ResponsibilitySensitiveSafety,
+    RssParameters,
+    RssSafetyVerdict,
+)
+from security.sums_un_r156 import (
+    SoftwareUpdatePackage,
+    SumsUpdateResult,
+    UnR156SumsManager,
+)
 
 
 class Shield:

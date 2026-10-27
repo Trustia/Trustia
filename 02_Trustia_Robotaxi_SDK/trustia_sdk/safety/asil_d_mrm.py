@@ -43,11 +43,17 @@ class AsilDSafetySupervisor:
     def __init__(
         self,
         watchdog_timeout_ms: float = 50.0,
+        self_check_interval_ms: float = 20.0,
+        human_override_response_ms: float = 5.0,
         max_cross_track_m: float = 0.50,
+        safe_pullover_decel_mps2: float = 1.5,
         emergency_stop_decel_mps2: float = 6.5
     ) -> None:
         self.watchdog_timeout_ms = watchdog_timeout_ms
+        self.self_check_interval_ms = self_check_interval_ms
+        self.human_override_response_ms = human_override_response_ms
         self.max_cross_track = max_cross_track_m
+        self.safe_pullover_decel = safe_pullover_decel_mps2
         self.mrm_decel = emergency_stop_decel_mps2
 
         self.current_state = SafetyState.NOMINAL_AUTONOMOUS
@@ -130,7 +136,7 @@ class AsilDSafetySupervisor:
         if self.current_state == SafetyState.MRM_EMERGENCY_STOP:
             return -self.mrm_decel # Sert ve acil duruş (-6.5 m/s2)
         elif self.current_state == SafetyState.MRM_SAFE_PULLOVER:
-            return -2.5 # Emniyetli yavaşlama ve şerit kenarına sığınma (-2.5 m/s2)
+            return -self.safe_pullover_decel # Kontrollü yavaşlama ve sağa çekilme (-1.5 m/s2)
         elif self.current_state == SafetyState.DEGRADED_CAUTION:
             return -1.0 # Hızı güvenli seviyeye çekme (-1.0 m/s2)
         return 0.0

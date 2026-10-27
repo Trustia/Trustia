@@ -17,49 +17,54 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi sivil Robotaksi filoları ve kritik otonom test platformları için ISO 26262 ASIL-D, 3D LiDAR SLAM ve Seviye 4 yerli otonomi yazılım platformudur. Open Invention Network (OIN 2.0 Lisansı: #f1e44576), ASELSAN & STM Tedarikçi Ağı (#0050569), Avrupa Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554) ve İTO BTM tescilli. (İstanbul, Türkiye).",
+    "Trustia AI; şehir içi ticari Robotaksi filoları (SAIC Maxus MIFA 7, Hyundai Ioniq 5 E-GMP) ve kritik otonom platformlar için ISO 26262 ASIL-D, IEEE 2846 RSS, UN R155/R156/R157, 3D LiDAR SLAM ve 1.307 + 21 testle doğrulanmış Seviye-4 yerli otonomi yazılım platformudur. ASELSAN (#0050569) & STM Tedarikçi Kütüğü, OIN 2.0 (#f1e44576), AB Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli.",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
     "Trustia Teknoloji",
+    "Murat Furkan Bayram",
     "otonomi yazılımı",
     "robotaksi",
     "yerli robotaksi",
+    "SAIC Maxus MIFA 7 Robotaksi",
+    "Hyundai Ioniq 5 Robotaksi",
     "seviye 4 otonom sürüş",
     "insansız kara aracı",
     "İKA otonomi",
+    "IEEE 2846 RSS",
+    "ISO 21448 SOTIF",
+    "UN ECE R155 R156 R157",
+    "AB 2022/1426 Otonom Araç Yönetmeliği",
+    "Frenet Lattice Planner",
+    "Model Predictive Control MPC",
+    "Lanelet2 HD Map",
+    "IEEE 1588 PTP LiDAR Deskewing",
+    "CARLA 0.9.15 Simülasyon Köprüsü",
     "V2X",
     "C-V2X",
     "GPS-denied navigation",
-    "3D SLAM",
-    "yörünge tahmini",
+    "3D NDT SLAM",
+    "400 Hz ESKF",
     "Hybrid A*",
     "SAE J3016 Seviye 4",
     "ISO 26262 ASIL-D",
     "SAE JAUS AS6091",
     "ROS 2 Humble",
     "CAN FD bridge",
-    "savunma sanayii",
-    "İTO BTM",
-    "Teknopark İstanbul",
+    "ASELSAN Onaylı Tedarikçi #0050569",
+    "STM Savunma Teknolojileri Tedarikçi",
+    "İTO BTM Fulya",
+    "Teknopark İstanbul Cube Incubation",
     "Teknopark İstanbul HASAT 2026",
-    "KOSGEB İleri Girişimci",
-    "İstanbul",
+    "YTÜ Yıldız Teknopark",
+    "KOSGEB İleri Girişimci KSB01UGE0115153370",
+    "BTK L2zPtN4X1ZJ",
     "Avrupa Komisyonu PIC 861711529",
     "EIT Urban Mobility CUS15554",
-    "Singapore Startup SG #57428",
-    "Singapore Global Innovation Alliance GIA",
-    "B2Match Singapore Joint Innovation",
-    "Enterprise Singapore",
-    "EntrePass Singapore",
-    "QSTP Doha Sprint",
-    "BAYKAR Teknoloji",
-    "ASELSAN Tedarikçi",
-    "DEİK Dijital Teknolojiler",
-    "Crunchbase Trustia AI",
+    "Open Invention Network OIN #f1e44576",
   ],
   authors: [
-    { name: "Trustia AI", url: "https://trustia.com.tr" },
+    { name: "Murat Furkan Bayram — Trustia AI", url: "https://trustia.com.tr" },
   ],
   creator: "Trustia AI",
   publisher: "Trustia AI",
@@ -82,9 +87,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Askeri Otonomi Platformu",
+    title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Çift Amaçlı Otonomi Platformu",
     description:
-      "Milli Çift Amaçlı Otonomi Mimarisi: Hyundai Ioniq 5 Seviye 4 Robotaksi, 3D LiDAR SLAM ve 1.307 Doğrulanmış Test. AB PIC: 861711529, EITUM: CUS15554, Singapur Startup SG: #57428, İTO BTM & ASELSAN Akreditasyonlu.",
+      "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye-4 Robotaksi, 29.748+ Satır Kod, 20 Uluslararası L4 Modülü ve 1.307 + 21 Doğrulanmış Test. ASELSAN (#0050569), STM, OIN 2.0 (#f1e44576), AB PIC: 861711529, EITUM: CUS15554, Teknopark İstanbul & İTO BTM.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -102,9 +107,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "TRUSTIA AI — Level 4 Autonomous Driving & Defense Robotics Core",
+    title: "TRUSTIA AI — Level 4 Autonomous Driving & Robotaxi SDK Core",
     description:
-      "Dual-use Level 4 sovereign autonomy software featuring Hyundai Ioniq 5 Robotaxi, 3D LiDAR SLAM, and 1,307 verified tests. EU PIC: 861711529 • SG Startup SG: #57428.",
+      "Sovereign Level-4 autonomy stack (29,748+ LOC, 20 L4 modules, 1,307 + 21 verified tests) for SAIC Maxus MIFA 7 & Hyundai Ioniq 5. ASELSAN (#0050569), STM, OIN 2.0 & EU PIC: 861711529.",
     images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
@@ -136,7 +141,7 @@ export default function RootLayout({
         "url": "https://trustia.com.tr",
         "logo": "https://trustia.com.tr/logo.png",
         "image": "https://trustia.com.tr/og-image.jpg",
-        "description": "Milli Çift Amaçlı Seviye 4 Otonom Sürüş, V2X Akıllı Şehir ve Askeri İnsansız Kara Aracı (İKA) Otonomi Yazılım Platformu.",
+        "description": "Milli Çift Amaçlı Seviye 4 Otonom Sürüş, Ticari Robotaksi SDK, V2X Akıllı Şehir ve İnsansız Kara Aracı (İKA) Otonomi Yazılım Platformu.",
         "founder": {
           "@type": "Person",
           "name": "Murat Furkan Bayram",
@@ -166,10 +171,7 @@ export default function RootLayout({
         "sameAs": [
           "https://github.com/Trustia/Trustia",
           "https://trustia.com.tr",
-          "https://www.linkedin.com/in/trustia",
-          "https://www.crunchbase.com/organization/trustia-ai",
-          "https://www.startupsg.gov.sg/profiles/57428",
-          "https://www.b2match.com/e/joint-innovation-with-singapore-2024"
+          "https://www.linkedin.com/in/trustia"
         ],
         "identifier": [
           {
@@ -179,8 +181,13 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
-            "name": "ASELSAN and STM Defense Supplier Registry ID",
-            "value": "0050569"
+            "name": "ASELSAN Approved Supplier Registry ID & SAP Code",
+            "value": "0050569 / FZQHEXGFMTJU / 0050569CCE941FD1A49FCEFB9B7BE7D6"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "STM Savunma Teknolojileri Defense Supplier Registry",
+            "value": "REGISTERED_CANDIDATE_SUPPLIER_2026"
           },
           {
             "@type": "PropertyValue",
@@ -194,60 +201,54 @@ export default function RootLayout({
           },
           {
             "@type": "PropertyValue",
-            "name": "Singapore Government Startup SG Profile ID",
-            "value": "57428"
+            "name": "Teknopark Istanbul Cube Incubation & HASAT 2026 Protocol",
+            "value": "CONFIRMED_6_MONTH_INCUBATION"
           },
           {
             "@type": "PropertyValue",
-            "name": "Enterprise Singapore GIA Application Response ID",
-            "value": "6aa85fa93dc42d7feef1bc57"
+            "name": "ITO BTM Fulya Deep-Tech Campus Residency",
+            "value": "RESIDENT_ENTREPRENEUR"
           },
           {
             "@type": "PropertyValue",
-            "name": "ASELSAN Approved Potential Supplier ID",
-            "value": "0050569CCE941FD1A49FCEFB9B7BE7D6"
+            "name": "YTU Yildiz Teknopark Incubation Ecosystem",
+            "value": "REGISTERED_APPLICANT"
           },
           {
             "@type": "PropertyValue",
-            "name": "Teknopark Istanbul HASAT 2026 Submission",
-            "value": "CONFIRMED"
-          },
-          {
-            "@type": "PropertyValue",
-            "name": "SSB SAYZEK Simulation ID",
-            "value": "170"
+            "name": "KOSGEB Advanced Entrepreneur Certificate & BTK AI Certificate",
+            "value": "KSB01UGE0115153370 / L2zPtN4X1ZJ"
           }
         ],
         "knowsAbout": [
           "Level 4 Autonomous Driving",
-          "Open Invention Network (OIN 2.0)",
-          "Cross-License Patent Immunity",
-          "Robotaxi Fleet Management",
-          "V2X / C-V2X Communication",
-          "3D LiDAR SLAM",
-          "GPS-Denied Navigation",
-          "Trajectory Prediction AI",
-          "ISO 26262 ASIL-D Functional Safety",
-          "SAE J3016 Level 4 Autonomy",
-          "SAE AS6091 JAUS",
-          "ROS 2 Humble",
-          "CAN-FD Integration",
+          "SAIC Maxus MIFA 7 Robotaxi Architecture",
           "Hyundai Ioniq 5 E-GMP Platform",
-          "Unmanned Ground Vehicles (UGV)",
-          "1307 Automated Unit Tests",
-          "Global Innovation Alliance (GIA)",
-          "Enterprise Singapore Deep Tech Network",
-          "EntrePass Framework"
+          "ISO 26262 ASIL-D Functional Safety",
+          "IEEE 2846 Responsibility-Sensitive Safety (RSS)",
+          "ISO 21448 SOTIF Safety of the Intended Functionality",
+          "UN ECE R155 CSMS CAN-FD Intrusion Detection",
+          "UN ECE R156 SUMS RXSWIN & Atomic Rollback",
+          "UN ECE R157 DSSAD SHA-256 Blackbox",
+          "EU 2022/1426 Automated Driving System Type Approval",
+          "Frenet (s, d) Jerk-Optimal Lattice Trajectory Planning",
+          "Receding-Horizon Model Predictive Control (MPC)",
+          "Lanelet2 HD Map & Traffic Rule Engine",
+          "IEEE 1588v2 PTP & 3D LiDAR Motion Deskewing",
+          "ISO/TR 23049 External HMI (eHMI) & Siren Detection",
+          "3D LiDAR NDT SLAM & 400 Hz ESKF",
+          "CARLA 0.9.15+ Synchronous Simulation Bridge",
+          "1307 Core Tests and 21 Robotaxi SDK Tests"
         ]
       },
       {
         "@type": "SoftwareApplication",
         "@id": "https://trustia.com.tr/#software",
-        "name": "TRUSTIA AI Autonomous Core Stack",
+        "name": "TRUSTIA AI Autonomous Core & Robotaxi Enterprise SDK",
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
-        "description": "Seviye 4 yerli deterministik otonom sürüş, V2X ve askeri robotik otonomi yazılım çekirdeği. 16.400+ satır C++/Python, 1.307 doğrulanmış test, OIN 2.0 patent korumalı.",
-        "softwareVersion": "4.2.0",
+        "description": "Seviye 4 yerli deterministik otonom sürüş, SAIC Maxus MIFA 7 / Hyundai Ioniq 5 Robotaksi SDK ve askeri robotik otonomi yazılım çekirdeği. 198 dosya, 29.748+ satır kod, 20 uluslararası L4 modülü, 1.307 + 21 doğrulanmış test, OIN 2.0 patent korumalı.",
+        "softwareVersion": "4.3.0-enterprise",
         "offers": {
           "@type": "Offer",
           "price": "0",
@@ -300,4 +301,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-    }
+}

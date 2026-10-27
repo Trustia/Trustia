@@ -39,6 +39,12 @@ from integration.jaus import (
     command_to_message,
     message_to_command,
 )
+from integration.carla_bridge import (
+    CarlaSensorSnapshot,
+    CarlaSimulationConfig,
+    CarlaVehicleControl,
+    TrustiaCarlaBridge,
+)
 
 __all__ = [
     "CanBus",
@@ -68,4 +74,8 @@ __all__ = [
     "ServiceId",
     "command_to_message",
     "message_to_command",
+    "CarlaSensorSnapshot",
+    "CarlaSimulationConfig",
+    "CarlaVehicleControl",
+    "TrustiaCarlaBridge",
 ]

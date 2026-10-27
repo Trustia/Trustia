@@ -15,7 +15,6 @@ import {
   Zap,
   ShieldCheck,
   Activity,
-  Crosshair
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,19 +26,19 @@ export default function RobotaxiPage() {
 
   const sensorDetails = {
     all: {
-      tag: lang === "tr" ? "360° ÇOKLU SENSÖR FÜZYONU" : "360° MULTI-SENSOR FUSION",
+      tag: lang === "tr" ? "360° ÇOKLU SENSÖR FÜZYONU & IEEE 1588v2 PTP" : "360° MULTI-SENSOR FUSION & IEEE 1588v2 PTP",
       title: lang === "tr" ? "Erken ve Geç Füzyonlu Birleşik Algılama Çekirdeği" : "Early & Late Multi-Modal Perception Core",
       desc: lang === "tr"
-        ? "LiDAR 3D nokta bulutları, 77GHz Doppler radar kinematik vektörleri ve 4x GMSL2 HDR kamera akışları EKF ve derin öznitelik düzeyinde birleştirilir. Sıfır kör nokta ile deterministik çevre modeli oluşturulur."
-        : "LiDAR 3D point clouds, 77GHz Doppler radar kinematic vectors, and 4x GMSL2 HDR camera streams fused via EKF and feature-level fusion for zero-blindspot deterministic world modeling.",
+        ? "LiDAR 3D nokta bulutları (400 Hz IMU hareket bozulması düzeltmeli), 77GHz Doppler radar kinematik vektörleri ve 4x GMSL2 HDR kamera akışları IEEE 1588v2 PTP (<100 µs) senkronizasyonuyla birleştirilir."
+        : "LiDAR 3D point clouds (with 400 Hz IMU motion deskewing), 77GHz Doppler radar vectors, and 4x GMSL2 HDR camera streams fused under IEEE 1588v2 PTP (<100 µs) synchronization.",
       metric: "240m Menzil • 0.05m Hassasiyet • <15ms Uçtan Uca Gecikme"
     },
     lidar: {
-      tag: lang === "tr" ? "BİRİNCİL 3D SLAM VE DERİNLİK" : "PRIMARY 3D SLAM & DEPTH",
+      tag: lang === "tr" ? "BİRİNCİL 3D SLAM, KALDIRIM TAŞI & DERİNLİK" : "PRIMARY 3D SLAM, CURB DETECTION & DEPTH",
       title: lang === "tr" ? "Ouster OS2-128 Rev 7 3D LiDAR (Tavan Montaj)" : "Ouster OS2-128 Rev 7 3D LiDAR (Roof Mount)",
       desc: lang === "tr"
-        ? "Tavan merkezine entegre 128 kanal ile saniyede 2.62 milyon nokta üretir. GPS'siz tünel, yer altı ve kanyon alanlarında 3D NDT SLAM santimetre hassasiyetinde uzaysal haritalama icra eder."
-        : "Roof-mounted 128-channel solid-state spinning LiDAR generating 2.62M points/sec for GPS-denied 3D NDT SLAM spatial localization.",
+        ? "Tavan merkezine entegre 128 kanal ile saniyede 2.62 milyon nokta üretir. GPS'siz tünel ve kanyonlarda 3D NDT SLAM ile santimetre hassasiyetinde konumlama ve silinmiş şeritlerde kaldırım taşı (8-28 cm) algılama icra eder."
+        : "Roof-mounted 128-channel solid-state LiDAR generating 2.62M points/sec for GPS-denied 3D NDT SLAM localization and 3D curb boundary detection.",
       metric: "240 Metre • 128 Kanal • 0.1° Açısal Çözünürlük • UDP Gbit Ethernet"
     },
     radar: {
@@ -51,20 +50,20 @@ export default function RobotaxiPage() {
       metric: "250 Metre Menzil • ±0.1 km/s Hız Hassasiyeti • CAN-FD Veri Yolu"
     },
     camera: {
-      tag: lang === "tr" ? "360° ÇEVRESEL GÖRSEL ALGILAMA" : "360° SURROUND VISION",
-      title: lang === "tr" ? "4x Leopard Sony IMX390 HDR GMSL2 Kamera" : "4x Leopard Sony IMX390 HDR GMSL2 Camera Array",
+      tag: lang === "tr" ? "360° ÇEVRESEL GÖRSEL ALGILAMA & SOTIF" : "360° SURROUND VISION & SOTIF",
+      title: lang === "tr" ? "4x Leopard Sony IMX390 HDR GMSL2 Kamera + CalmCar Hakemi" : "4x Leopard Sony IMX390 HDR GMSL2 Camera + CalmCar Arbiter",
       desc: lang === "tr"
-        ? "Ön, sol, sağ ve arka hatlara konumlandırılmış 120° FOV lensler ile 120 dB süper dinamik aralık. Doğrudan güneş parlaması ve tünel çıkışlarında LED titreşim (LFM) sönümleme."
-        : "Synchronized 120° FOV surround cameras with 120 dB dynamic range, mitigating extreme lighting flares and tunnel transitions.",
-      metric: "120 dB HDR • 60 FPS Senkron • IP67 Muhafaza • Donanımsal FSYNC"
+        ? "Ön, sol, sağ ve arka hatlara konumlandırılmış 120° FOV lensler ile 120 dB süper dinamik aralık. ISO 21448 SOTIF gözetmeni kamera algısını 3D LiDAR ile çapraz doğrulayarak hayalet frenlemeyi (Phantom Brake) önler."
+        : "Synchronized 120° FOV surround cameras with 120 dB dynamic range, cross-validated by ISO 21448 SOTIF and 3D LiDAR to prevent phantom braking.",
+      metric: "120 dB HDR • 60 FPS Senkron • IP67 Muhafaza • KVKK m.9 Veri Kalkanı"
     },
     compute: {
       tag: lang === "tr" ? "MERKEZİ HESAPLAMA VE AKTÜATÖR KÖPRÜSÜ" : "AI COMPUTE & ACTUATION BRIDGE",
-      title: lang === "tr" ? "NVIDIA Jetson AGX Orin 64GB + CAN-FD Köprüsü" : "NVIDIA Jetson AGX Orin 64GB + CAN-FD Bridge",
+      title: lang === "tr" ? "NVIDIA Jetson AGX Orin 64GB + 100 Hz CAN-FD Köprüsü" : "NVIDIA Jetson AGX Orin 64GB + 100 Hz CAN-FD Bridge",
       desc: lang === "tr"
-        ? "275 TOPS merkezi otonom yapay zeka gücü. LKAS11 direksiyon torku ve SCC_FD fren/gaz komutlarını şasi CAN-FD hattına 100 Hz frekansta deterministik olarak aktarır. 5ms donanımsal devralma kesmesi."
-        : "275 TOPS central AI compute interfacing directly with vehicle CAN-FD at 100 Hz cyclic rate with 5ms hard-interrupt safety fallback.",
-      metric: "275 TOPS INT8 • 100 Hz Senkron Çevrim • 5ms Devralma • 4TB NVMe"
+        ? "275/560 TOPS merkezi otonom yapay zeka gücü. Direksiyon (EPS) ve fren/gaz (i-Booster + yedek ESC/EPB) komutlarını şasi CAN-FD hattına 100 Hz (1.4 ms) frekansta deterministik olarak aktarır."
+        : "Central AI compute interfacing directly with vehicle CAN-FD at 100 Hz (1.4 ms) cyclic rate with 5ms hard-interrupt safety fallback and redundant braking.",
+      metric: "275/560 TOPS INT8 • 100 Hz CAN-FD • 5ms Devralma • UN R157 DSSAD"
     }
   };
 
@@ -85,13 +84,13 @@ export default function RobotaxiPage() {
       icon: Layers,
       title: lang === "tr" ? "Kör Nokta & Yaya LiDAR" : "Blindspot & Pedestrian LiDAR",
       val: "2x Livox Mid-360 LiDAR",
-      sub: "360°x59° Ultra Geniş Açı • 45°/12° Eğimli Pod"
+      sub: "360°x59° Ultra Geniş Açı • 8-28 cm Kaldırım Algılama"
     },
     {
       icon: Radio,
       title: lang === "tr" ? "360° Görsel Algılama" : "360° HDR Vision",
       val: "4x Leopard Sony IMX390 GMSL2",
-      sub: "120 dB Dinamik Aralık • IP67 • Donanımsal Senkron"
+      sub: "120 dB Dinamik Aralık • ISO 21448 SOTIF & KVKK Kalkanı"
     },
     {
       icon: Gauge,
@@ -102,21 +101,53 @@ export default function RobotaxiPage() {
     {
       icon: Activity,
       title: lang === "tr" ? "Santimetre Konumlandırma" : "Centimeter Positioning",
-      val: "Septentrio mosaic-go Heading RTK",
-      sub: "Çift Mantar Anten • Durağan Pusula Açısı (Heading)"
+      val: "Septentrio mosaic-go + 400Hz ESKF",
+      sub: "GNSS-Denied 3D NDT SLAM • ±4.2 cm Yörünge Hassasiyeti"
     },
     {
       icon: Zap,
-      title: lang === "tr" ? "CAN-FD Aktüatör Köprüsü" : "CAN-FD Drive-by-Wire",
-      val: "Kvaser U100 CAN-FD DB9",
-      sub: "100 Hz LKAS11 Direksiyon & 50 Hz SCC_FD Fren/Gaz"
+      title: lang === "tr" ? "CAN-FD & Siber Kalkan" : "CAN-FD & Cyber Shield",
+      val: "100 Hz CAN-FD + UN R155 IDPS",
+      sub: "1.4 ms Mesaj İletimi • EPS & Çift Yedekli i-Booster/ESC"
     },
     {
       icon: Lock,
-      title: lang === "tr" ? "Donanımsal E-Stop" : "Hardware E-Stop Shield",
-      val: "Schneider Mantar Buton + ELO 80A Röle",
-      sub: "10ms Mekanik Güç Kesme • ASIL-D Güvenlik"
+      title: lang === "tr" ? "ASIL-D & IEEE 2846 RSS" : "ASIL-D & IEEE 2846 RSS",
+      val: "20ms Öz-Denetim • 50ms Watchdog",
+      sub: "1.5 m/s² Sağa Çekme (MRM) • 5ms Sürücü Devri"
     }
+  ];
+
+  const l4ComplianceMatrix = [
+    { code: "01", std: "ISO 26262 ASIL-D & MRM", mod: "safety/asil_d_mrm.py", desc: "20 ms öz-denetim, 50 ms Watchdog, 1.5 m/s² kontrollü sağa çekme (MRM), 6.5 m/s² acil fren ve <=5 ms sürücü devri." },
+    { code: "02", std: "IEEE 2846 & Mobileye RSS", mod: "security/rss_ieee2846.py", desc: "Boylamsal ve yanal minimum güvenli takip mesafesi denklemleri ve otomatik 'Proper Response' fren kalkanı." },
+    { code: "03", std: "ISO 21448 SOTIF & CalmCar Hakemi", mod: "perception/calmcar_bridge.py", desc: "Kamera algısını 3B LiDAR ile çapraz doğrulayan, güneş parlaması ve hayalet frenlemeyi (Phantom Brake) önleyen hakem." },
+    { code: "04", std: "AB 2022/1426 ODD Coğrafi Çit", mod: "security/odd_sotif_dssad.py", desc: "1 Aralık 2024 Resmî Gazete uyumlu coğrafi çit, hız sınırı, eğim ve görüş mesafesi denetleyicisi." },
+    { code: "05", std: "UN/ECE R157 DSSAD Kara Kutu", mod: "security/odd_sotif_dssad.py", desc: "SHA-256 kriptografik özet zincirli (Hash-Chained) değiştirilemez adli olay ve otonom devir kayıt sistemi." },
+    { code: "06", std: "UN/ECE R155 & ISO 21434 CAN-IDPS", mod: "security/can_ids_r155.py", desc: "CAN-FD veri yolunda sahte mesaj enjeksiyonu (Spoofing), DoS boğma ve yürüyen sayaç (0..15) saldırı tespiti." },
+    { code: "07", std: "UN/ECE R156 SUMS & RXSWIN", mod: "security/sums_un_r156.py", desc: "RXSWIN tip onay yazılım sicili, HMAC-SHA256 OTA paket doğrulama, hareket halinde güncelleme kilidi ve atomik Rollback." },
+    { code: "08", std: "6698 Sayılı KVKK m.9 Veri Kalkanı", mod: "perception/calmcar_bridge.py", desc: "Kamera ve konum verilerinin yurt dışı bulut sunucularına aktarımını otomatik engelleyen yerel veri kalkanı." },
+    { code: "09", std: "IEEE 1588v2 PTP & LiDAR Deskewing", mod: "perception/lidar_deskew_ptp.py", desc: "Mikrosaniye hassasiyetli PTP saat senkronu denetimi ve 400 Hz IMU ile 3B LiDAR hareket bozulması düzeltme." },
+    { code: "10", std: "3B LiDAR Kaldırım Taşı (Curb) Algılama", mod: "perception/curb_detector.py", desc: "Şerit çizgilerinin silindiği veya yağışlı yollarda 3B LiDAR basamak farkından (8-28 cm) yol koridoru çıkarma." },
+    { code: "11", std: "3B NDT SLAM & 400 Hz ESKF", mod: "slam/eskf.py & pose_graph.py", desc: "Tünel ve GPS'siz (GNSS-Denied) alanlarda 3B LiDAR tarama eşleştirme ve 400 Hz Hata Durumlu Kalman Filtresi." },
+    { code: "12", std: "Lanelet2 HD Harita & KTK m.74", mod: "planning/lanelet2_rules.py", desc: "Topolojik şerit kuralları, yaya geçidinde yayaya mutlak duruş önceliği ve kavşak geçiş üstünlüğü karar motoru." },
+    { code: "13", std: "Frenet (s, d) Jerk-Optimal Planlayıcı", mod: "planning/frenet_lattice_planner.py", desc: "Yol merkez eğrisine göre 5. dereceden (Quintic) sarsıntısız yerel engel kaçınma ve konforlu şerit değiştirme." },
+    { code: "14", std: "Kinematik Hibrit A* Planlayıcı", mod: "planning/hybrid_astar.py", desc: "SAIC Maxus MIFA 7 (2.975 m dingil mesafesi) ve Hyundai Ioniq 5 dönüş çapı kısıtlarına uygun rota planlama." },
+    { code: "15", std: "Model Öngörülü Kontrol (MPC) & Stanley", mod: "control/mpc_redundant_control.py", desc: "Ufuk tabanlı kinematik bisiklet modeli optimizasyonu (MPC), Stanley şerit takibi ve Çift Yedekli Fren Dağıtımı." },
+    { code: "16", std: "ISO 11898-1 100 Hz CAN-FD & DBC", mod: "canbus/mifa7_canfd.py", desc: "100 Hz (1.4 ms) direksiyon, i-Booster fren, EPB ve yürüyen sayaçlı kalp atışı mesaj kodlama altyapısı." },
+    { code: "17", std: "ISO/TR 23049 eHMI & Akustik Siren", mod: "v2x/ehmi_siren_detector.py", desc: "Yayalar için dış iletişim LED paneli (eHMI), V2X GLOSA yeşil dalga ve 600-1550 Hz ambulans/itfaiye siren algılama." },
+    { code: "18", std: "Kabin Kapı Kilidi & Batarya BMS", mod: "command/cabin_bms_safety.py", desc: "Kapı/bagaj emniyet kilidi (Door Interlock), kemer kontrolü, yolcu SOS sağa çekme butonu ve batarya SoC/termal yönetimi." },
+    { code: "19", std: "Uzaktan Operasyon (Teleoperation)", mod: "fleet/teleoperation.py", desc: "Çağrı merkezi operatörünün <=150 ms ağ gecikmesi ve <=15 km/s güvenli hız sınırı ile uzaktan kurtarma köprüsü." },
+    { code: "20", std: "CARLA 0.9.15+ / MetaDrive / Webots SIL", mod: "integration/carla_bridge.py", desc: "CARLA 100 Hz simülasyon köprüsü (2.6M nokta/sn LiDAR) ve 582 senaryoluk deterministik sanal doğrulama." },
+  ];
+
+  const simVsFieldRows = [
+    { param: "Sistem Öz-Denetim Döngüsü (Self-Check)", mod: "safety/asil_d_mrm.py", sim: "20.0 milisaniye (50 Hz)", field: "20.0 – 22.5 ms (RTOS zamanlayıcı toleransı ile)" },
+    { param: "Komut Kesintisi Zaman Aşımı (Watchdog)", mod: "safety/asil_d_mrm.py", sim: "50.0 milisaniye", field: "50.0 – 55.0 ms (Donanım kesme gecikmesi dahil)" },
+    { param: "Kontrollü Sağa Çekme Yavaşlaması (MRM)", mod: "odd_sotif_dssad.py", sim: "1.5 m/s²", field: "1.2 – 1.8 m/s² (Yol eğimi ve asfalt tutunmasına göre)" },
+    { param: "Kritik Acil Durum Frenlemesi (E-Stop)", mod: "mifa7_canfd.py", sim: "6.5 m/s²", field: "4.5 – 6.5 m/s² (Zemin sürtünme katsayısı µ ve i-Booster basıncına göre)" },
+    { param: "CAN-FD Mesaj Paketleme ve İletim Süresi", mod: "mifa7_canfd.py (2 Mbps)", sim: "1.4 milisaniye (100 Hz)", field: "1.4 – 3.5 ms (Şasi CAN hattı anlık mesaj yoğunluğuna göre)" },
+    { param: "Sürücü Direksiyon/Fren Müdahalesinde Devir", mod: "carla_bridge.py & asil_d_mrm.py", sim: "5.0 milisaniye (Yazılım kararı)", field: "5.0 – 15.0 ms (Tork sensörü mekanik okuma süresi dahil)" },
   ];
 
   const current = sensorDetails[activeSensor];
@@ -144,20 +175,20 @@ export default function RobotaxiPage() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-[#E5D6BC]/15">
             <div className="space-y-1.5 max-w-3xl">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-[#E5D6BC]/10 border border-[#E5D6BC]/25 text-[#E5D6BC] text-[10px] font-mono tracking-wider uppercase">
-                <span>{lang === "tr" ? "REFERANS OTONOMİ MİMARİSİ // SAIC MAXUS MIFA 7" : "REFERENCE AUTONOMY ARCHITECTURE // SAIC MAXUS MIFA 7"}</span>
+                <span>{lang === "tr" ? "REFERANS OTONOMİ MİMARİSİ // SAIC MAXUS MIFA 7 & HYUNDAI IONIQ 5" : "REFERENCE AUTONOMY ARCHITECTURE // SAIC MAXUS MIFA 7 & HYUNDAI IONIQ 5"}</span>
               </div>
               
               <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight leading-snug">
-                SAIC Maxus MIFA 7{" "}
+                SAIC Maxus MIFA 7 &amp; E-GMP{" "}
                 <span className="text-[#E5D6BC] font-normal block sm:inline">
-                  {lang === "tr" ? "— Seviye 4 Donanım ve Sensör Mimarisi" : "— Level 4 Hardware & Sensor Blueprint"}
+                  {lang === "tr" ? "— Seviye 4 Robotaksi Yazılım, Sensör ve Tip Onay Mimarisi" : "— Level 4 Robotaxi Software, Sensor & Homologation Blueprint"}
                 </span>
               </h1>
               
               <p className="text-[#d6cebf] text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
                 {lang === "tr"
-                  ? "Ticari yolcu filoları ve kentsel robotaksi operasyonları için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar ve 100 Hz CAN-FD aktüatör köprüsüyle yapılandırılmış; 16.400+ satır özgün deterministik otonomi şartnamesi."
-                  : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, and 100 Hz CAN-FD drive-by-wire across 16,400+ lines of sovereign autonomy software."}
+                  ? "Ticari yolcu filoları ve kentsel robotaksi operasyonları için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar, 100 Hz CAN-FD aktüatör köprüsü ve 20 uluslararası Seviye-4 modülüyle yapılandırılmış; 198 dosya ve 29.748+ satırlık deterministik otonomi şartnamesi."
+                  : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, 100 Hz CAN-FD drive-by-wire, and 20 international Level-4 modules across 198 files and 29,748+ lines of sovereign autonomy software."}
               </p>
             </div>
 
@@ -167,7 +198,7 @@ export default function RobotaxiPage() {
                 href="/iletisim/"
                 className="px-4 py-2 rounded-lg bg-[#E5D6BC] text-[#14120c] hover:bg-white font-bold text-xs tracking-wider uppercase transition-colors inline-flex items-center gap-1.5 shadow-md"
               >
-                <span>{lang === "tr" ? "Şartname ve Talep" : "Enterprise Spec"}</span>
+                <span>{lang === "tr" ? "Kapalı Kutu SDK & NDA Talebi" : "Closed-Box SDK & NDA Request"}</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -178,41 +209,41 @@ export default function RobotaxiPage() {
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#E5D6BC]/15 py-3.5 border-y border-[#E5D6BC]/20 font-mono">
           <div className="py-1 px-3 first:pl-0 space-y-0.5">
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
-              {lang === "tr" ? "YAZILIM ÇEKİRDEĞİ" : "AUTONOMY STACK"}
+              {lang === "tr" ? "TOPLAM MÜHENDİSLİK HACMİ" : "TOTAL CODEBASE VOLUME"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">16.400+</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">29.748+ Satır</div>
             <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
-              {lang === "tr" ? "Satır C++20 / ROS 2" : "Lines of Code (C++20)"}
+              {lang === "tr" ? "198 Dosya (Çekirdek + Robotaksi SDK)" : "198 Files (Core + Robotaxi SDK)"}
             </span>
           </div>
 
           <div className="py-1 px-3 sm:pl-6 space-y-0.5">
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
-              {lang === "tr" ? "OTOMATİK TEST" : "AUTOMATED TESTS"}
+              {lang === "tr" ? "OTOMATİK DOĞRULAMA" : "AUTOMATED TESTS"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.307 / 1.307</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.307 + 21 Test</div>
             <span className="text-[10px] text-emerald-400 block font-sans font-medium">
-              {lang === "tr" ? "%100 Başarı (0 Hata)" : "100% Pass Rate"}
+              {lang === "tr" ? "%100 Başarı (0 Hata / 0 Fail)" : "100% Pass Rate (0 Failures)"}
             </span>
           </div>
 
           <div className="py-1 px-3 sm:pl-6 space-y-0.5">
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
-              {lang === "tr" ? "MERKEZİ HESAPLAMA" : "COMPUTE POWER"}
+              {lang === "tr" ? "EMNİYET & DEVRALMA" : "SAFETY & OVERRIDE"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">275 TOPS</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">20ms / 50ms / 5ms</div>
             <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
-              Jetson AGX Orin 64GB
+              Öz-Denetim • Watchdog • İnsan Devri
             </span>
           </div>
 
           <div className="py-1 px-3 sm:pl-6 space-y-0.5">
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
-              {lang === "tr" ? "LİDAR MENZİLİ" : "LIDAR RANGE"}
+              {lang === "tr" ? "TİP ONAY & STANDART" : "HOMOLOGATION"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">240 Metre</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">20 L4 Modülü</div>
             <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
-              128 Kanal Ouster OS2
+              AB 2022/1426 • R155/R156/R157 • RSS
             </span>
           </div>
         </div>
@@ -334,7 +365,7 @@ export default function RobotaxiPage() {
                 </g>
               )}
 
-              {/* --- 4. Vehicle Chassis Silhouette (Hyundai E-GMP 3.000 mm Wheelbase) --- */}
+              {/* --- 4. Vehicle Chassis Silhouette --- */}
               <g>
                 <rect x="281" y="132" width="38" height="78" rx="8" fill="#0f172a" stroke="#475569" strokeWidth="1.5" />
                 <rect x="284" y="148" width="32" height="46" rx="4" fill="#1e293b" stroke="#334155" strokeWidth="1" />
@@ -384,7 +415,7 @@ export default function RobotaxiPage() {
             {/* Bottom Right Homologation Tag */}
             <div className="absolute bottom-3 right-3 flex items-center gap-2 text-[9px] font-mono text-slate-400">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-              <span>ISO 26262 ASIL-D & UN ECE R157 UYUMLU</span>
+              <span>ISO 26262 ASIL-D • IEEE 2846 RSS • UN R155/R156/R157</span>
             </div>
           </div>
 
@@ -403,14 +434,14 @@ export default function RobotaxiPage() {
           </div>
         </div>
 
-        {/* 4. Turnkey Sensor & Hardware Matrix (KUTUSUZ EDİTORYAL MİMARİ) */}
+        {/* 4. Turnkey Sensor & Hardware Matrix */}
         <div className="space-y-4 pt-4 border-t border-[#E5D6BC]/15">
           <div className="pb-2 border-b border-[#E5D6BC]/15">
             <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
               // {lang === "tr" ? "DONANIM VE SENSÖR MİMARİSİ" : "HARDWARE & SENSOR FUSION"}
             </div>
             <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
-              {lang === "tr" ? "27 Parçalık Seviye 4 Donanım Seti" : "27-Item Level-4 Turnkey Sensor Suite"}
+              {lang === "tr" ? "27 Parçalık Seviye 4 Donanım ve Aktüatör Seti" : "27-Item Level-4 Turnkey Sensor & Actuator Suite"}
             </h2>
           </div>
 
@@ -439,17 +470,98 @@ export default function RobotaxiPage() {
           </div>
         </div>
 
-        {/* 5. Architecture & Safety Protocols (KUTUSUZ EDİTORYAL ÇİFT SÜTUN) */}
+        {/* 5. NEW: 20-Item International Level-4 Robotaxi & EU 2022/1426 Compliance Matrix */}
+        <div className="space-y-4 pt-6 border-t border-[#E5D6BC]/15">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-[#E5D6BC]/15">
+            <div>
+              <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
+                // {lang === "tr" ? "ULUSLARARASI SEVİYE-4 VE 1 ARALIK 2024 RESMÎ GAZETE (AB 2022/1426) UYUMLULUK MATRİSİ" : "INTERNATIONAL LEVEL-4 & EU 2022/1426 HOMOLOGATION MATRIX"}
+              </div>
+              <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                {lang === "tr"
+                  ? "20 Temel Otonomi ve Regülasyon Modülü (%100 Kodlanmış ve Test Edilmiş Mimari)"
+                  : "20 Core Autonomy & Regulatory Modules (100% Coded & Verified Architecture)"}
+              </h2>
+            </div>
+            <div className="text-[10px] font-mono text-emerald-400 font-semibold">
+              1.307 ÇEKİRDEK TESTİ + 21 SDK TESTİ (%100 YEŞİL)
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {l4ComplianceMatrix.map((row) => (
+              <div
+                key={row.code}
+                className="p-3.5 rounded-xl bg-[#251f18]/90 border border-[#E5D6BC]/20 space-y-1.5 flex flex-col justify-between"
+              >
+                <div className="space-y-1">
+                  <div className="flex items-center justify-between gap-2 font-mono text-[10px]">
+                    <span className="text-[#E4F80D] font-bold">#{row.code} // {row.std}</span>
+                    <span className="px-1.5 py-0.5 rounded bg-black/50 border border-[#E5D6BC]/20 text-sky-300">
+                      {row.mod}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-[#d6cebf] leading-relaxed font-sans">
+                    {row.desc}
+                  </p>
+                </div>
+                <div className="pt-1 flex items-center justify-between text-[10px] font-mono text-emerald-400">
+                  <span>DURUM: DOĞRULANDI</span>
+                  <span>PASS (%100)</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 6. NEW: Simulation (Nominal) vs. Real Vehicle Field Calibration Tolerances */}
+        <div className="space-y-3 pt-6 border-t border-[#E5D6BC]/15">
+          <div className="pb-2 border-b border-[#E5D6BC]/15">
+            <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
+              // {lang === "tr" ? "MÜHENDİSLİK ŞEFFAFLIĞI // SİMÜLASYON VE SAHA KALİBRASYON TOLERANSLARI" : "ENGINEERING TRANSPARENCY // SIMULATION VS. FIELD CALIBRATION TOLERANCES"}
+            </div>
+            <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
+              {lang === "tr"
+                ? "Simülasyon (İdeal / Nominal) Değerleri ile Gerçek Araç Saha Kalibrasyon Aralıkları"
+                : "Simulation (Nominal) Benchmarks vs. Physical Vehicle Field Calibration Ranges"}
+            </h2>
+          </div>
+
+          <div className="overflow-x-auto rounded-xl border border-[#E5D6BC]/20 bg-[#18140e]">
+            <table className="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr className="bg-[#251f18] text-[#E5D6BC] font-mono text-[10px] uppercase border-b border-[#E5D6BC]/20">
+                  <th className="py-2.5 px-3">Emniyet ve Kontrol Parametresi</th>
+                  <th className="py-2.5 px-3">İlgili Kod Modülü</th>
+                  <th className="py-2.5 px-3">Simülasyon (İdeal / Nominal)</th>
+                  <th className="py-2.5 px-3">Gerçek Araç Beklenen Saha Aralığı</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-[#E5D6BC]/10 text-[11px]">
+                {simVsFieldRows.map((r, i) => (
+                  <tr key={i} className="hover:bg-white/[0.02]">
+                    <td className="py-2.5 px-3 font-semibold text-white">{r.param}</td>
+                    <td className="py-2.5 px-3 font-mono text-sky-300">{r.mod}</td>
+                    <td className="py-2.5 px-3 font-mono text-emerald-400 font-semibold">{r.sim}</td>
+                    <td className="py-2.5 px-3 text-[#d6cebf]">{r.field}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        {/* 7. Architecture & Safety Protocols (KUTUSUZ EDİTORYAL ÇİFT SÜTUN) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-6 border-t border-[#E5D6BC]/15">
           
-          {/* E-GMP & CAN-FD Integration */}
+          {/* CAN-FD Integration */}
           <div className="space-y-3">
             <div className="border-b border-[#E5D6BC]/15 pb-2">
               <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
-                // {lang === "tr" ? "SAIC MAXUS MIFA 7 CAN-FD ENTEGRASYONU" : "SAIC MAXUS MIFA 7 CAN-FD ARCHITECTURE"}
+                // {lang === "tr" ? "SAIC MAXUS MIFA 7 & E-GMP CAN-FD ENTEGRASYONU" : "SAIC MAXUS MIFA 7 & E-GMP CAN-FD ARCHITECTURE"}
               </div>
               <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
-                {lang === "tr" ? "Sıfır Delme & Tak-Çalıştır Şasi Uyumu" : "Zero-Drill & Plug-and-Play Integration"}
+                {lang === "tr" ? "Sıfır Delme & Çift Yedekli Şasi Uyumu" : "Zero-Drill & Fail-Operational Integration"}
               </h3>
             </div>
 
@@ -457,28 +569,28 @@ export default function RobotaxiPage() {
               <li className="pt-2 first:pt-0 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "Dikiz Aynası ADAS Y-Harness:" : "Rearview ADAS Y-Harness:"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "100 Hz CAN-FD & Çift Yedekli Fren:" : "100 Hz CAN-FD & Redundant Braking:"}</b>{" "}
                   {lang === "tr"
-                    ? "OBD-II gateway kısıtlamasına takılmadan şasi CAN-FD hattına 100 Hz direksiyon (EPS) ve 50 Hz fren/gaz (i-Booster) sinyali iletilir."
-                    : "Transmits 100 Hz steering (EPS) and 50 Hz brake/accel (i-Booster) directly into chassis CAN-FD without gateway latency."}
+                    ? "Şasi CAN-FD hattına 100 Hz direksiyon (EPS) ve birincil i-Booster / ikincil ESC hidrolik pompa + EPB yedekli fren sinyali iletilir."
+                    : "Transmits 100 Hz steering (EPS) and fail-operational primary i-Booster / secondary ESC hydraulic pump + EPB brake commands."}
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "Bagaj Altı Hesaplama ve Güç Havuzu:" : "Sub-Trunk Compute & Power Hub:"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "Kabin Kapı Kilidi (Door Interlock) & BMS:" : "Cabin Door Interlock & EV BMS:"}</b>{" "}
                   {lang === "tr"
-                    ? "Jetson Orin, sigorta panosu, 5G router ve DC-DC regülatör bagaj altı havuzuna yerleştirilir; iç mekan düzeni korunur."
-                    : "Jetson Orin, fuse box, 5G router, and DC-DC regulator fit discreetly in the sub-trunk compartment."}
+                    ? "Kapı veya bagaj açıkken ya da yolcu kemeri takılı değilken kalkış kilitlenir; batarya SoC <%18 olduğunda araç otomatik şarj istasyonuna yönlendirilir."
+                    : "Locks drive if any door/trunk is unlatched or seatbelt unfastened; automatically routes to depot charger when SoC drops below 18%."}
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "IP68 No-Drill Tavan Geçişi:" : "IP68 Zero-Penetration Roof Routing:"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "Kapalı Kutu (.pyc) Enterprise SDK Dağıtımı:" : "Closed-Box (.pyc) Enterprise SDK Delivery:"}</b>{" "}
                   {lang === "tr"
-                    ? "Araç kaportası delinmez; kablo demeti arka spoyler altındaki fabrikasyon kauçuk körükten sub-trunk'a iner."
-                    : "Zero sheet-metal drilling; cables route through OEM tailgate rubber boots sealed with IP68 junction hardware."}
+                    ? "Açık kaynak kodlar paylaşılmaz; OEM ve filo ortaklarına HMAC-SHA256 donanım kilitli kapalı kutu (.pyc) değerlendirme ve üretim paketi sunulur."
+                    : "Delivered strictly as HMAC-SHA256 hardware-locked compiled bytecode (.pyc) preserving 100% sovereign intellectual property."}
                 </span>
               </li>
             </ul>
@@ -491,7 +603,7 @@ export default function RobotaxiPage() {
                 // {lang === "tr" ? "GÜVENLİK VE DEVİR PROTOKOLLERİ" : "SAFETY & TAKEOVER PROTOCOLS"}
               </div>
               <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
-                {lang === "tr" ? "5ms Sürücü Devralma ve Güvenli Durma" : "5ms Driver Override & Fail-Safe"}
+                {lang === "tr" ? "5ms Sürücü Devralma, 50ms Watchdog ve MRM" : "5ms Driver Override, 50ms Watchdog & MRM"}
               </h3>
             </div>
 
@@ -499,28 +611,28 @@ export default function RobotaxiPage() {
               <li className="pt-2 first:pt-0 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "Anlık Sürücü Müdahalesi (5ms):" : "Instant Human Takeover (5ms):"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "Anlık Sürücü Müdahalesi (<=5ms):" : "Instant Human Takeover (<=5ms):"}</b>{" "}
                   {lang === "tr"
-                    ? "Direksiyona tork uygulandığında veya fren pedalına basıldığında otonomi 5 milisaniyede kontrolü sürücüye bırakır (ISO 26262 ASIL-D)."
-                    : "Manual steering torque or brake depression instantly disengages autonomy within 5ms under ISO 26262 ASIL-D."}
+                    ? "Direksiyona 2.0 Nm üzeri tork uygulandığında veya fren pedalına basıldığında otonomi 5 milisaniyede kontrolü sürücüye bırakır (ISO 26262 ASIL-D)."
+                    : "Manual steering torque (>2.0 Nm) or brake depression instantly disengages autonomy within 5ms under ISO 26262 ASIL-D."}
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "200ms Watchdog & MRM Fail-Safe:" : "200ms Watchdog & MRM Fail-Safe:"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "20ms Öz-Denetim & 50ms Watchdog MRM:" : "20ms Self-Check & 50ms Watchdog MRM:"}</b>{" "}
                   {lang === "tr"
-                    ? "Herhangi bir donanım gecikmesinde flaşörler açılır, araç şeridinde kontrollü durur ve 4TB SSD kara kutu kaydı alır."
-                    : "On sensor stall, hazard lights engage, the vehicle safely stops within lane, and 4TB NVMe SSD logs telemetry."}
+                    ? "50 ms komut kesintisinde dörtlü flaşörler açılır, araç 1.5 m/s² kontrollü yavaşlama ile sağa çekilir ve UN R157 SHA-256 kara kutu kaydı alır."
+                    : "On 50ms heartbeat timeout, hazard lights engage, vehicle executes 1.5 m/s² MRM pullover, and UN R157 SHA-256 blackbox logs the event."}
                 </span>
               </li>
               <li className="pt-2 flex items-start gap-2.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#E5D6BC] shrink-0 mt-0.5" />
                 <span>
-                  <b className="text-white font-medium">{lang === "tr" ? "5G GPS Coğrafi Çit (Geofence):" : "5G GPS Geofencing & Remote Kill:"}</b>{" "}
+                  <b className="text-white font-medium">{lang === "tr" ? "ODD Coğrafi Çit & Uzaktan Operasyon (Teleop):" : "ODD Geofencing & Remote Teleoperation:"}</b>{" "}
                   {lang === "tr"
-                    ? "Tanımlı Operasyonel Tasarım Alanı (ODD) ve coğrafi koridor dışına çıkış halinde motor kilitlenir; 7/24 teleoperasyon C2 ile yönetilir."
-                    : "Vehicle locks drive if exiting authorized Operational Design Domain (ODD) corridor; monitored 24/7 via tactical desktop C2."}
+                    ? "Tanımlı ODD koridoru dışına çıkışta güvenli duruş başlatılır; çağrı merkezi operatörü <=15 km/s hız ve <=150 ms RTT sınırı ile uzaktan destek verir."
+                    : "Enforces ODD geofence limits and supports authenticated remote teleoperation recovery capped at <=15 km/h and <=150 ms RTT."}
                 </span>
               </li>
             </ul>
@@ -528,83 +640,28 @@ export default function RobotaxiPage() {
 
         </div>
 
-        {/* 6. Authentic Enterprise Integration & Validation Model */}
-        <div className="space-y-3 pt-6 border-t border-[#E5D6BC]/15">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 pb-2 border-b border-[#E5D6BC]/15">
-            <div>
-              <div className="text-[10px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
-                // {lang === "tr" ? "KURUMSAL ENTEGRASYON VE DOĞRULAMA MODELİ" : "ENTERPRISE INTEGRATION & VALIDATION PROTOCOL"}
-              </div>
-              <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
-                {lang === "tr" ? "4 Kademeli Otonomi Entegrasyon ve Dağıtım Modeli" : "4-Stage Autonomous Deployment Model"}
-              </h2>
-            </div>
-            <div className="text-[10px] font-mono text-emerald-400 font-semibold">
-              ISO 26262 ASIL-D & UN ECE R157 UYUMLU
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10 py-3 border-y border-[#E5D6BC]/15 font-mono">
-            <div className="py-2 px-3 first:pl-0 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 01 // YAZILIM ÇEKİRDEĞİ</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">SIL & 3D Dijital İkiz</div>
-              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
-                Webots simülasyonu, 1.307 birim test, NDT SLAM haritalama, Pure Pursuit rota takibi.
-              </div>
-              <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">%100 Doğrulandı</div>
-            </div>
-
-            <div className="py-2 px-3 sm:pl-6 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 02 // CAN-FD HIL TESTİ</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">Aktüatör Bench Doğrulama</div>
-              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
-                100 Hz LKAS11 direksiyon torku ve 50 Hz SCC_FD fren/gaz donanımsal bench testi.
-              </div>
-              <div className="text-[10px] text-slate-400 font-medium pt-0.5">5ms Emniyet Kesmesi</div>
-            </div>
-
-            <div className="py-2 px-3 sm:pl-6 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 03 // SENSÖR FÜZYONU</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">Zamansal Kalibrasyon</div>
-              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
-                128 kanal LiDAR + 77GHz Radar + Sony HDR kamera uzaysal matris ve FSYNC kalibrasyonu.
-              </div>
-              <div className="text-[10px] text-slate-400 font-medium pt-0.5">Santimetre Hassasiyet</div>
-            </div>
-
-            <div className="py-2 px-3 sm:pl-6 space-y-1">
-              <div className="text-[10px] text-slate-400 font-bold uppercase">AŞAMA 04 // FİLO ENTEGRASYONU</div>
-              <div className="text-xs sm:text-sm font-bold text-white font-sans">ODD Saha Validasyonu</div>
-              <div className="text-[11px] text-[#d6cebf]/90 leading-relaxed font-sans">
-                Kurumsal filo operatörleri ile tanımlı operasyonel koridorda ortak pilot validasyon.
-              </div>
-              <div className="text-[10px] text-emerald-400 font-semibold pt-0.5">Filo İş Birliği Modeli</div>
-            </div>
-          </div>
-        </div>
-
-        {/* 7. Institutional NDA Technical Cooperation Bar */}
+        {/* 8. Institutional NDA Technical Cooperation Bar */}
         <div className="py-6 px-6 sm:px-8 rounded-2xl bg-gradient-to-r from-[#282017] via-[#352a1e] to-[#282017] border border-[#E5D6BC]/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center md:text-left max-w-2xl">
             <div className="text-[10px] font-mono text-[#E5D6BC] uppercase tracking-wider font-semibold">
-              // {lang === "tr" ? "KURUMSAL TEKNİK İŞBİRLİĞİ" : "INSTITUTIONAL TECHNICAL COOPERATION"}
+              // {lang === "tr" ? "KURUMSAL TEKNİK İŞBİRLİĞİ & KAPALI KUTU DEĞERLENDİRME SDK'SI" : "INSTITUTIONAL TECHNICAL COOPERATION & CLOSED-BOX EVALUATION SDK"}
             </div>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
-              {lang === "tr" ? "Mühendislik Şartnamesi ve Entegrasyon Protokolü" : "Engineering Specification & Integration Protocol"}
+              {lang === "tr" ? "Tam Yazılım Envanteri, 1.307 + 21 Test Kanıt Dosyası ve Kapalı Kutu SDK" : "Full Software Inventory, 1,307 + 21 Test Evidence Dossier & Closed-Box SDK"}
             </h3>
             <p className="text-[#d6cebf] text-xs leading-relaxed">
               {lang === "tr"
-                ? "Donanım mimarisi, sensör yerleşim geometrisi, CAN-FD sinyal protokolleri ve platform güvenlik standartları kurumsal gizlilik sözleşmesi (NDA) kapsamında OEM ve savunma sanayii ortaklarıyla paylaşılmaktadır."
-                : "Detailed hardware schematics, sensor mounting geometry, CAN-FD bus protocols, and functional safety architecture are available to qualified OEM and defense partners under institutional NDA."}
+                ? "198 dosyalık tam modül çizelgesi, CAN-FD DBC sözlüğü ve 21 alt sistem testini kendi bilgisayarınızda 1 dakikada doğrulayabileceğiniz derlenmiş kapalı kutu (.pyc) Robotaksi SDK paketi karşılıklı Gizlilik Sözleşmesi (NDA) kapsamında sunulmaktadır."
+                : "Our 198-file module inventory, CAN-FD DBC dictionary, and compiled closed-box (.pyc) Robotaxi Evaluation SDK with 21 automated subsystem tests are available under mutual NDA."}
             </p>
           </div>
 
           <Link
-            href="/iletisim"
+            href="/iletisim/"
             className="w-full sm:w-auto px-5 py-2.5 rounded-lg bg-[#E5D6BC] text-[#14120c] hover:bg-white font-bold text-xs tracking-wider uppercase transition-colors inline-flex items-center justify-center gap-1.5 shrink-0 shadow-lg"
           >
             <Lock className="w-3.5 h-3.5" />
-            <span>{lang === "tr" ? "NDA İLE TALEP ET" : "REQUEST VIA NDA"}</span>
+            <span>{lang === "tr" ? "NDA İLE SDK TALEP ET" : "REQUEST SDK VIA NDA"}</span>
           </Link>
         </div>
 

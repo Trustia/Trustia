@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Cpu, Eye, Radio, Zap, Layers, Activity } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
-import TacticalVehicleWireframe, { MIFA7_CALLOUTS } from "@/components/TacticalVehicleWireframe";
+import TacticalVehicleWireframe from "@/components/TacticalVehicleWireframe";
 
 const COMPONENT_TABS = [
   { id: "lidar", labelTr: "3D LİDAR", labelEn: "3D LIDAR" },
@@ -35,73 +35,73 @@ export default function RobotaxiShowcase() {
     lidar: {
       titleTr: "Ouster OS2-128 Rev 7 3D LiDAR (Tavan Otonom Pod)",
       titleEn: "Ouster OS2-128 Rev 7 3D LiDAR (Roof Mount)",
-      tagTr: "BİRİNCİL 3D SLAM & UZAYSAL HARİTALAMA",
-      tagEn: "PRIMARY 3D SLAM & SPATIAL MAPPING",
+      tagTr: "BİRİNCİL 3D SLAM & IEEE 1588v2 PTP DESKEWING",
+      tagEn: "PRIMARY 3D SLAM & IEEE 1588v2 PTP DESKEWING",
       descTr:
-        "Tavan merkezine entegre 128 kanal ile saniyede 2.62 milyon nokta üretir. GPS'siz tünel, yer altı otoparkı ve kanyonlarda 3D NDT SLAM santimetre hassasiyetinde uzaysal konumlandırma icra eder.",
+        "Tavan merkezine entegre 128 kanal ile saniyede 2.62 milyon nokta üretir. IEEE 1588v2 PTP zaman senkronizasyonu ve 400 Hz IMU ego-motion deskewing ile GPS'siz tünel ve kanyonlarda 3D NDT SLAM konumlandırma icra eder.",
       descEn:
-        "Roof-mounted 128-channel solid-state LiDAR generating 2.62M pts/sec for GPS-denied 3D NDT SLAM spatial localization in tunnels and urban canyons.",
-      spec: "240m Menzil • 128 Kanal • 0.1° Açısal Çözünürlük • UDP Gbit Ethernet",
+        "Roof-mounted 128-channel solid-state LiDAR generating 2.62M pts/sec with IEEE 1588v2 PTP motion deskewing for GPS-denied 3D NDT SLAM spatial localization.",
+      spec: "240m Menzil • 128 Kanal • PTP < 1 µs • UDP Gbit Ethernet",
       badge: "TAVAN SENSÖR PODU",
     },
     livox: {
       titleTr: "2x Livox Mid-360 LiDAR (Ön Tampon Podları)",
       titleEn: "2x Livox Mid-360 LiDAR (Front Bumper Pods)",
-      tagTr: "KÖR NOKTASIZ YAKIN ÇEVRE ALGISI",
+      tagTr: "KÖR NOKTASIZ YAKIN ÇEVRE & YAYA ALGISI",
       tagEn: "ZERO-BLINDSPOT PERIMETER SENSING",
       descTr:
-        "Ön sağ ve sol tampon köşelerine entegre çift LiDAR ile 360° x 59° ultra geniş açı. Şehir içi operasyonda yaya, bordür, düşük kotlu engel ve kavşak kör noktalarını sıfırlar.",
+        "Ön sağ ve sol tampon köşelerine entegre çift LiDAR ile 360° x 59° ultra geniş açı. Şehir içi operasyonda yaya, bisikletli, bordür, düşük kotlu engel ve kavşak kör noktalarını sıfırlar.",
       descEn:
         "Dual bumper-integrated LiDARs delivering comprehensive 360° x 59° ultra-wide pedestrian and near-field obstacle tracking.",
       spec: "360° x 59° FOV • 40m Menzil • Santimetre Hassasiyet",
       badge: "ÖN TAMPON KÖR NOKTA",
     },
     canfd: {
-      titleTr: "100 Hz Senkron CAN-FD Aktüatör Köprüsü (Şasi EPS & i-Booster)",
-      titleEn: "100 Hz Synchronous CAN-FD Bridge (Chassis EPS & i-Booster)",
-      tagTr: "DONANIMSAL AKTÜASYON & SÜRÜŞ KÖPRÜSÜ",
-      tagEn: "DRIVE-BY-WIRE & CHASSIS ACTUATION",
+      titleTr: "100 Hz Senkron CAN-FD & UN R155 IDPS Köprüsü (EPS & i-Booster)",
+      titleEn: "100 Hz Synchronous CAN-FD & UN R155 IDPS Bridge (EPS & i-Booster)",
+      tagTr: "FAIL-OPERATIONAL AKTÜASYON & SÜRÜŞ KÖPRÜSÜ",
+      tagEn: "FAIL-OPERATIONAL DRIVE-BY-WIRE & CHASSIS ACTUATION",
       descTr:
-        "SAIC Maxus MIFA 7 şasisine doğrudan 100 Hz senkron tork, fren ve gaz komut iletimi. 1.4 ms mesaj gecikmesi ve 5 ms donanımsal devralma kesmesi (hardware override) güvencesi.",
+        "SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 şasilerine doğrudan 100 Hz senkron tork, fren (i-Booster + yedekli ESC/EPB) ve gaz komut iletimi. UN R155 CAN-FD siber saldırı tespiti, 1.4 ms gecikme ve 5 ms donanımsal devralma kesmesi.",
       descEn:
-        "Native 100 Hz cyclic torque, brake, and throttle actuation over Maxus MIFA 7 CAN-FD gateways with 1.4ms latency and 5ms hardware override.",
-      spec: "100 Hz Senkron Çevrim • 1.4 ms Gecikme • 5 ms Devralma Kesmesi",
+        "Native 100 Hz cyclic torque, fail-operational brake (i-Booster + ESC/EPB), and throttle actuation with UN R155 CAN-FD IDPS, 1.4ms latency, and 5ms hardware override.",
+      spec: "100 Hz Senkron • UN R155 IDPS • 1.4 ms Gecikme • 5 ms Kesme",
       badge: "CAN-FD DRIVE-BY-WIRE",
     },
     compute: {
       titleTr: "560 TOPS Merkezi Otonom Beyin (Horizon Nash BPU / NVIDIA Orin)",
       titleEn: "560 TOPS Central Autonomy Compute (Horizon / NVIDIA Orin)",
-      tagTr: "MERKEZİ OTONOM YAPAY ZEKA BİLGİSAYARI",
-      tagEn: "CENTRAL AUTONOMY AI COMPUTE",
+      tagTr: "FRENET LATTICE, MPC, LANELET2 & UN R157 KARA KUTU",
+      tagEn: "FRENET LATTICE, MPC, LANELET2 & UN R157 BLACK-BOX",
       descTr:
-        "560 TOPS merkezi yapay zeka işlem gücü. Hibrit A* kinematik yörünge planlama, çoklu sensör füzyonu ve sürekli telemetri kara kutu (DSSAD/EDR) kayıtlarını deterministik yürütür.",
+        "560 TOPS merkezi yapay zeka işlem gücü. Frenet 5. derece polinom kafes planlama, Kayan Ufuklu MPC kontrol, Lanelet2 HD harita kural motoru ve UN R157 DSSAD/EDR kriptografik kara kutu kayıtlarını deterministik yürütür.",
       descEn:
-        "560 TOPS central AI compute executing Hybrid A* path planning, multi-sensor fusion, and continuous EDR black-box telemetry.",
-      spec: "560 TOPS INT8 • 64GB LPDDR5 • 4TB NVMe Kara Kutu",
+        "560 TOPS central AI compute executing Frenet Quintic Lattice path planning, Receding-Horizon MPC, Lanelet2 rules, and UN R157 DSSAD/EDR black-box telemetry.",
+      spec: "560 TOPS INT8 • 64GB LPDDR5 • 4TB NVMe • UN R156 SUMS OTA",
       badge: "ZEMİN ALTI OTONOM BEYİN",
     },
     vision: {
-      titleTr: "4x Sony IMX390 GMSL2 HDR Kamera Paketi",
-      titleEn: "4x Sony IMX390 GMSL2 HDR Surround Vision",
-      tagTr: "360° ÇEVRESEL GÖRSEL ALGILAMA",
-      tagEn: "360° SURROUND VISUAL PERCEPTION",
+      titleTr: "4x Sony IMX390 GMSL2 HDR Kamera & eHMI / Siren Algılama",
+      titleEn: "4x Sony IMX390 GMSL2 HDR Vision & eHMI / Siren Detection",
+      tagTr: "360° GÖRSEL FÜZYON & ACİL DURUM SİREN KORİDORU",
+      tagEn: "360° VISUAL FUSION & EMERGENCY SIREN CORRIDOR",
       descTr:
-        "Ön cam, yan aynalar ve arka spoyler hatlarında 120° FOV lenslerle 120 dB süper dinamik aralık. Doğrudan güneş parlaması ve tünel çıkışlarında donanımsal FSYNC senkron çevre görüş.",
+        "Ön cam, yan aynalar ve arka spoyler hatlarında 120 dB HDR çevre görüş. ISO/TR 23049 dış yaya iletişim ekranı (eHMI) ve 600-1550 Hz ambulans/itfaiye siren tespitiyle otonom fermuar sistemi koridor açma yeteneği.",
       descEn:
-        "Synchronized 120° FOV surround cameras with 120 dB dynamic range, mitigating extreme lighting flares and tunnel transitions.",
-      spec: "120 dB Dinamik Aralık • 60 FPS Senkron • IP67 Donanım FSYNC",
-      badge: "360° GÖRSEL FÜZYON",
+        "Synchronized 120 dB HDR surround cameras coupled with ISO/TR 23049 pedestrian eHMI and acoustic emergency siren detection for automated emergency corridor formation.",
+      spec: "120 dB HDR • 60 FPS FSYNC • ISO/TR 23049 eHMI & Siren DSP",
+      badge: "360° GÖRSEL & AKUSTİK FÜZYON",
     },
     safety: {
-      titleTr: "ISO 26262 ASIL-D Emniyet Hakemi & Watchdog",
-      titleEn: "ISO 26262 ASIL-D Safety Arbiter & Watchdog",
-      tagTr: "FONKSİYONEL GÜVENLİK VE ACİL DEVRE KESME",
-      tagEn: "FUNCTIONAL SAFETY & FAILSAFE INTERRUPT",
+      titleTr: "ISO 26262 ASIL-D, IEEE 2846 RSS & ISO 21448 SOTIF Emniyet Hakemi",
+      titleEn: "ISO 26262 ASIL-D, IEEE 2846 RSS & ISO 21448 SOTIF Safety Arbiter",
+      tagTr: "FONKSİYONEL GÜVENLİK, MRM VE KABİN / BMS EMNİYETİ",
+      tagEn: "FUNCTIONAL SAFETY, MRM & CABIN / BMS INTERLOCK",
       descTr:
-        "50 ms kontrol zaman aşımı durumunda devreye giren Minimal Risk Maneuver (MRM). 1.5 m/s² kontrollü sağa çekme, acil durum frenleme ve E-Stop donanımsal koruma kalkanı.",
+        "IEEE 2846 RSS matematiksel takip mesafesi, ODD/SOTIF sınır denetçisi, yolcu kapı/kemer/SOS kilidi ve 50 ms Watchdog. İhlal anında 1.5 m/s² kontrollü sağa çekme (MRM), dörtlü flaşör ve 5G/WebRTC Teleoperasyon devri.",
       descEn:
-        "50ms watchdog hardware interrupt triggering Minimal Risk Maneuver (MRM) with 1.5 m/s² controlled pullover deceleration and E-Stop.",
-      spec: "ISO 26262 ASIL-D • 50 ms Watchdog • 1.5 m/s² MRM Sağa Çekme",
+        "IEEE 2846 RSS mathematical safety envelope, ODD/SOTIF supervisor, passenger cabin interlock, and 50ms watchdog triggering 1.5 m/s² MRM pullover and 5G/WebRTC teleoperation.",
+      spec: "ISO 26262 ASIL-D • IEEE 2846 RSS • 50 ms Watchdog • 1.5 m/s² MRM",
       badge: "FAILSAFE GÜVENLİK HAKEMİ",
     },
   };
@@ -129,9 +129,9 @@ export default function RobotaxiShowcase() {
                 {lang === "tr" ? "SEVİYE-4 ROBOTAKSİ MİMARİSİ" : "LEVEL-4 ROBOTAXI ARCHITECTURE"}
               </span>
               <span className="text-[#E5D6BC]/40">/</span>
-              <span className="text-[#E4F80D] font-bold">SAIC MAXUS MIFA 7</span>
+              <span className="text-[#E4F80D] font-bold">SAIC MAXUS MIFA 7 &amp; HYUNDAI IONIQ 5</span>
               <span className="text-[#E5D6BC]/40">/</span>
-              <span className="text-[#E5D6BC]/70">{lang === "tr" ? "ELEKTRİKLİ FİLO MİMARİSİ" : "COMMERCIAL EV FLEET"}</span>
+              <span className="text-[#E5D6BC]/70">{lang === "tr" ? "AB 2022/1426 TAM UYUMLU" : "EU 2022/1426 COMPLIANT"}</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight font-sans">
@@ -143,8 +143,8 @@ export default function RobotaxiShowcase() {
 
             <p className="text-[#E5D6BC]/80 text-xs sm:text-sm leading-relaxed max-w-2xl font-normal pt-0.5">
               {lang === "tr"
-                ? "Ticari elektrikli yolcu filoları ve kentsel robotaksi operasyonları için geliştirilmiş; 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM ve ISO 26262 ASIL-D deterministik seyrüsefer referans mimarisi."
-                : "Deterministic Level-4 autonomy architecture engineered for commercial electric fleets via 100 Hz CAN-FD drive-by-wire and 3D LiDAR SLAM."}
+                ? "Ticari elektrikli yolcu filoları ve kentsel robotaksi operasyonları için geliştirilmiş; 20 uluslararası L4 modülü, 100 Hz senkron CAN-FD aktüatör kontrolü (EPS & i-Booster), 3D LiDAR SLAM, IEEE 2846 RSS ve ISO 26262 ASIL-D deterministik seyrüsefer referans mimarisi."
+                : "Deterministic Level-4 autonomy architecture engineered for commercial electric fleets across 20 international L4 modules via 100 Hz CAN-FD drive-by-wire, 3D LiDAR SLAM, and IEEE 2846 RSS."}
             </p>
           </div>
 
@@ -154,7 +154,7 @@ export default function RobotaxiShowcase() {
               href="/robotaxi/"
               className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider px-4 py-2.5 bg-[#E4F80D] text-black font-bold hover:bg-white transition-all shadow-[0_2px_12px_rgba(228,248,13,0.3)] cursor-pointer"
             >
-              <span>{lang === "tr" ? "Mühendislik Şartnamesi (NDA)" : "Engineering Blueprint (NDA)"}</span>
+              <span>{lang === "tr" ? "Mühendislik Şartnamesi (20 Modül)" : "Engineering Blueprint (20 Modules)"}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -162,9 +162,6 @@ export default function RobotaxiShowcase() {
 
         {/* ========================================================
             2. 3D TACTICAL VEHICLE WIREFRAME (100% KUTUSUZ / FRAMELESS)
-            - Saf Maxus MIFA 7 Şasisi (2.975mm Dingil Mesafesi)
-            - Arka plan zengin sıcak taktik bronz zeminle uyumlu
-            - Kullanıcı fareyle ve mobilde parmağıyla 3D çevirebilir
            ======================================================== */}
         <div className="space-y-4">
           
@@ -230,13 +227,13 @@ export default function RobotaxiShowcase() {
 
             <div className="shrink-0 text-left md:text-right font-mono space-y-1 md:pl-6 md:border-l border-[#E5D6BC]/20">
               <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-widest block font-medium">
-                // DONANIM METRİĞİ
+                // DONANIM &amp; EMNİYET METRİĞİ
               </span>
               <div className="text-xs sm:text-[13px] font-bold text-[#E4F80D] tracking-tight">
                 {current.spec}
               </div>
               <div className="text-[10px] text-[#E5D6BC]/60">
-                UN ECE R157 &amp; ISO 26262 ASIL-D
+                UN R155/R156/R157 • IEEE 2846 • ISO 26262 ASIL-D
               </div>
             </div>
           </div>
@@ -245,8 +242,7 @@ export default function RobotaxiShowcase() {
 
         {/* ========================================================
             3. VERIFIED BENCHMARKS (100% KUTUSUZ / PURE TYPOGRAPHY)
-            - 16.400+ LOC, 1.307 Tests, 100 Hz CAN-FD, 560 TOPS
-            - Sıfır kutu, sıfır kart sınırı!
+            - 29.748+ LOC (198 Files), 1.307 + 21 Tests, 100 Hz CAN-FD, 5 ms Interrupt
            ======================================================== */}
         <div className="pt-6 border-t border-[#E5D6BC]/20 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-[11px] text-[#E5D6BC]/70 uppercase tracking-wider">
@@ -254,20 +250,20 @@ export default function RobotaxiShowcase() {
               <span className="text-[#E4F80D] font-bold">//</span>
               <span className="text-white font-semibold">{lang === "tr" ? "L4 ROBOTAKSİ SAHA ENTEGRASYON VE DOĞRULAMA KÜTÜĞÜ" : "L4 ROBOTAXI DEPLOYMENT & VERIFICATION LOG"}</span>
             </div>
-            <span className="text-[#E4F80D] font-semibold">%100 MİLLİ SEVİYE-4 ÇEKİRDEK</span>
+            <span className="text-[#E4F80D] font-semibold">%100 MİLLİ SEVİYE-4 ÇEKİRDEK &amp; KAPALI KUTU SDK</span>
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 font-mono">
             {/* Stat 1 */}
             <div className="space-y-1">
               <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-wider block font-semibold">
-                YAZILIM ÇEKİRDEĞİ
+                YAZILIM ENVANTERİ
               </span>
               <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                16.400+
+                29.748+
               </div>
               <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
-                Satır C++20 / ROS 2 Çekirdek
+                Satır Kod (198 Dosya • 20 L4 Modül)
               </span>
             </div>
 
@@ -277,7 +273,7 @@ export default function RobotaxiShowcase() {
                 DOĞRULAMA KÜTÜPHANESİ
               </span>
               <div className="text-2xl sm:text-3xl font-black text-[#E4F80D] tracking-tight">
-                1.307 / 1.307
+                1.307 + 21
               </div>
               <span className="text-[11px] text-emerald-400 font-sans font-medium block">
                 %100 Yeşil Test (0 Hata / 0 Fail)
@@ -287,13 +283,13 @@ export default function RobotaxiShowcase() {
             {/* Stat 3 */}
             <div className="space-y-1 border-t sm:border-t-0 sm:border-l border-[#E5D6BC]/20 pt-4 sm:pt-0 sm:pl-6">
               <span className="text-[10px] text-[#E5D6BC]/60 uppercase tracking-wider block font-semibold">
-                CAN-FD ÇEVRİMİ
+                CAN-FD &amp; UN R155 IDPS
               </span>
               <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
                 100 Hz
               </div>
               <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
-                {lang === "tr" ? "Drive-by-Wire (EPS & i-Booster)" : "Drive-by-Wire (EPS & i-Booster)"}
+                {lang === "tr" ? "1.4 ms Gecikme (EPS & i-Booster)" : "1.4 ms Latency (EPS & i-Booster)"}
               </span>
             </div>
 
@@ -306,7 +302,7 @@ export default function RobotaxiShowcase() {
                 5 ms
               </div>
               <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
-                Acil Durum Devralma Güvencesi
+                ASIL-D Devralma &amp; 50 ms Watchdog
               </span>
             </div>
           </div>

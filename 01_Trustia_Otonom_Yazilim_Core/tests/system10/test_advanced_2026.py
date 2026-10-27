@@ -335,3 +335,146 @@ def test_cyclist_prediction_envelope():
     assert len(trajs) >= 1
     assert trajs[0].waypoints[-1].y == 30.0  # 10 + 4*5
 
+    # CARLA Bridge, Curb Detection, ODD, SOTIF & DSSAD Entegrasyon Doğrulaması
+    from integration.carla_bridge import TrustiaCarlaBridge
+    from perception.ground import CurbAndRoadBoundaryDetector
+    from perception.types import PointCloud, Point3D
+    from security.odd_sotif_dssad import (
+        OddDomainMonitor,
+        Iso21448SotifSupervisor,
+        UnR157DssadBlackbox,
+        SimulationVsFieldProfile,
+    )
+
+    carla_br = TrustiaCarlaBridge()
+    assert carla_br.connect() is True
+    ctrl = carla_br.convert_to_carla_control(target_steer_deg=7.0, target_accel_mps2=1.5)
+    snap = carla_br.step_simulation(ctrl)
+    assert snap.lidar_points_per_sec == 2_600_000
+    override, lat_ms = carla_br.check_human_override(driver_steering_torque_nm=2.2, driver_brake_pedal_pressed=False)
+    assert override is True and lat_ms <= 5.0
+
+    # Kaldırım taşı ve yol sınırı algılama
+    import numpy as np
+    curb_det = CurbAndRoadBoundaryDetector()
+    pts = np.array([
+        [5.0, 0.0, 0.0, 1.0],
+        [5.0, 2.8, 0.15, 1.0],
+        [8.0, 2.8, 0.16, 1.0],
+        [5.0, -2.8, 0.15, 1.0],
+        [8.0, -2.8, 0.14, 1.0],
+    ], dtype=float)
+    curb_res = curb_det.detect_road_boundaries(PointCloud(pts))
+    assert curb_res.valid_corridor is True
+    assert abs(curb_res.corridor_width_m - 5.6) < 0.2
+
+    # ODD, SOTIF, DSSAD ve Simülasyon-Saha Tolerans Profili
+    odd = OddDomainMonitor()
+    assert odd.evaluate(100.0, 100.0, 40.0).within_odd is True
+    assert odd.evaluate(9999.0, 9999.0, 40.0).target_decel_mps2 == -1.5
+
+    sotif = Iso21448SotifSupervisor()
+    assert sotif.evaluate_sotif(0.45, False).phantom_brake_prevented is True
+
+    dssad = UnR157DssadBlackbox()
+    dssad.log_event("L4_ENGAGE", "AUTONOMOUS_L4", 40.0, 1.2, 0.0)
+    dssad.log_event("MRM_PULLOVER", "AUTONOMOUS_L4", 35.0, 3.0, -1.5)
+    assert dssad.verify_chain_integrity() is True
+
+    prof = SimulationVsFieldProfile()
+    tol = prof.compute_field_tolerances(road_friction_mu=0.85, can_bus_load_pct=35.0)
+    assert tol["nominal_mrm_pullover_decel_mps2"] == 1.5
+    assert tol["nominal_self_check_ms"] == 20.0
+    assert tol["nominal_watchdog_timeout_ms"] == 50.0
+    assert tol["nominal_human_override_ms"] == 5.0
+
+    # UN R155 CAN-FD IDPS, IEEE 1588 PTP Deskewing, Lanelet2 Rules & Robotaxi Cabin/BMS Safety
+    from security.can_ids_r155 import UnR155CanBusIds
+    from perception.lidar_deskew_ptp import LidarMotionDeskewer, RawTimedPoint3D
+    from planning.lanelet2_rules import Lanelet2TrafficRuleEngine, LaneletSegment
+    from command.cabin_bms_safety import (
+        RobotaxiCabinAndBmsSupervisor,
+        CabinDoorSeatStatus,
+        BatteryThermalState,
+    )
+
+    can_ids = UnR155CanBusIds()
+    ev_ok = can_ids.inspect_frame(0x120, b"\x00" * 8, timestamp_ms=10.0, rolling_counter=1)
+    assert ev_ok.accepted is True
+    ev_spoof = can_ids.inspect_frame(0x666, b"\x00" * 8, timestamp_ms=12.0, rolling_counter=1)
+    assert ev_spoof.accepted is False and ev_spoof.threat_type == "UNAUTHORIZED_ID"
+    ev_dos = can_ids.inspect_frame(0x120, b"\x00" * 8, timestamp_ms=11.0, rolling_counter=2)
+    assert ev_dos.accepted is False and ev_dos.threat_type == "DOS_FLOODING"
+
+    deskew = LidarMotionDeskewer()
+    ptp_st = deskew.evaluate_ptp_sync("GM-CLOCK-01", offset_us=35.0, jitter_us=12.0)
+    assert ptp_st.synchronized is True and ptp_st.sotif_degraded is False
+    corrected_pts = deskew.deskew_scan(
+        [RawTimedPoint3D(10.0, 0.0, 0.5, relative_time_s=0.0)],
+        vx_mps=10.0,
+        vy_mps=0.0,
+        yaw_rate_rad_s=0.0,
+        sweep_duration_s=0.050,
+    )
+    assert math.isclose(corrected_pts[0][0], 9.5, rel_tol=1e-3)
+
+    l2 = Lanelet2TrafficRuleEngine()
+    l2.register_lanelet(LaneletSegment("LL-101", 50.0, True, False, has_crosswalk=True, is_intersection=True))
+    row_ped = l2.evaluate_rules("LL-101", ego_speed_mps=8.0, pedestrian_on_crosswalk=True, crosswalk_distance_m=15.0)
+    assert row_ped.behavior_command == "STOP_FOR_PEDESTRIAN" and row_ped.target_speed_mps == 0.0
+
+    cabin_sup = RobotaxiCabinAndBmsSupervisor()
+    c_open = cabin_sup.evaluate(
+        CabinDoorSeatStatus(all_doors_closed=False, trunk_closed=True, passenger_seated=True, seatbelt_fastened=True),
+        BatteryThermalState(soc_percent=82.0, pack_temp_c=31.0, estimated_range_km=340.0),
+        vehicle_speed_mps=0.0,
+    )
+    assert c_open.dispatch_allowed is False and c_open.motion_inhibit_brake_hold is True
+    c_ready = cabin_sup.evaluate(
+        CabinDoorSeatStatus(all_doors_closed=True, trunk_closed=True, passenger_seated=True, seatbelt_fastened=True),
+        BatteryThermalState(soc_percent=82.0, pack_temp_c=31.0, estimated_range_km=340.0),
+        vehicle_speed_mps=5.0,
+    )
+    assert c_ready.dispatch_allowed is True and c_ready.fleet_state_recommendation == "IN_RIDE"
+
+    # IEEE 2846 RSS, Frenet Lattice, MPC & Redundant Actuator, UN R156 SUMS, eHMI & Siren
+    from security.rss_ieee2846 import ResponsibilitySensitiveSafety
+    from planning.frenet_lattice_planner import FrenetLatticePlanner, FrenetState
+    from control.mpc_redundant_control import RecedingHorizonMPC, RedundantActuatorAllocator
+    from security.sums_un_r156 import UnR156SumsManager
+    from v2x.ehmi_siren_detector import ExternalHmiAndSirenSupervisor
+
+    rss = ResponsibilitySensitiveSafety()
+    verdict_unsafe = rss.evaluate_pair(ego_vel_mps=15.0, front_vel_mps=5.0, actual_longitudinal_gap_m=4.0, actual_lateral_gap_m=0.1)
+    assert verdict_unsafe.longitudinal_safe is False and verdict_unsafe.proper_response == "RSS_LONGITUDINAL_BRAKE"
+
+    frenet = FrenetLatticePlanner()
+    f_traj = frenet.plan_optimal_trajectory(
+        FrenetState(s=0.0, ds=10.0, dds=0.0, d=0.0, dd=0.0, ddd=0.0),
+        target_speed_mps=10.0,
+        obstacles_sd=[(15.0, 0.0)],
+        horizon_s=3.0,
+    )
+    assert f_traj.collision_free is True and abs(f_traj.target_lateral_d_m) >= 0.8
+
+    mpc = RecedingHorizonMPC()
+    sol = mpc.solve(cross_track_error_m=0.6, heading_error_rad=0.05, velocity_mps=8.0, target_velocity_mps=10.0)
+    assert sol.optimal_steer_rad < 0.0 and sol.optimal_accel_mps2 > 0.0
+
+    alloc = RedundantActuatorAllocator()
+    red = alloc.allocate(requested_decel_mps2=3.5, ibooster_primary_healthy=False, esc_secondary_healthy=True)
+    assert red.fail_operational_mode == "DEGRADED_SECONDARY_ACTIVE" and red.secondary_esc_pump_decel_mps2 == 3.5
+
+    sums = UnR156SumsManager()
+    pkg = sums.sign_package("v4.3.0-verified", "RXSWIN-R157-TR-2026-002", b"OTA_BINARY_PAYLOAD")
+    rej_moving = sums.apply_update(pkg, vehicle_speed_mps=5.0, park_brake_engaged=False)
+    assert rej_moving.success is False and rej_moving.status == "REJECTED_VEHICLE_MOVING"
+    ok_upd = sums.apply_update(pkg, vehicle_speed_mps=0.0, park_brake_engaged=True, post_update_self_check_ok=True)
+    assert ok_upd.success is True and sums.active_rxswin == "RXSWIN-R157-TR-2026-002"
+
+    ehmi = ExternalHmiAndSirenSupervisor()
+    siren_dec = ehmi.evaluate(yielding_to_pedestrian=False, mrm_active=False, dominant_audio_freq_hz=950.0, audio_spl_db=85.0, freq_modulation_detected=True)
+    assert siren_dec.emergency_siren_detected is True and siren_dec.recommended_vehicle_action == "PULL_OVER_RIGHT_EMERGENCY"
+
+
+

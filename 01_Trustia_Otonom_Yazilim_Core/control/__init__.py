@@ -18,6 +18,12 @@ from dataclasses import dataclass
 from typing import Optional, Tuple
 
 from core.errors import ControlError
+from control.mpc_redundant_control import (
+    MpcControlSolution,
+    RecedingHorizonMPC,
+    RedundantActuatorAllocation,
+    RedundantActuatorAllocator,
+)
 
 
 @dataclass

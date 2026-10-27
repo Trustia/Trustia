@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda & Milli Otonomi Vizyonu",
+  title: "Hakkımızda, Kurumsal Akreditasyon Sicili & Milli Otonomi Vizyonu",
   description:
-    "Trustia AI; kurucusu ve tek pay sahibi Murat Furkan Bayram liderliğinde geliştirilen, 16.400+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği ve 1.307 doğrulanmış test teminatıyla çalışan yerli derin teknoloji girişimidir.",
+    "Trustia AI; kurucusu ve tek pay sahibi Murat Furkan Bayram liderliğinde geliştirilen, 198 dosya / 29.748+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği ve 1.307 + 21 doğrulanmış test teminatıyla çalışan yerli derin teknoloji girişimidir. ASELSAN (#0050569), STM Savunma Teknolojileri, Teknopark İstanbul, İTO BTM, YTÜ Yıldız Teknopark ve OIN 2.0 tescilli.",
   keywords: [
     "Trustia Hakkımızda",
     "Murat Furkan Bayram",
@@ -11,11 +11,15 @@ export const metadata: Metadata = {
     "Yerli Seviye 4 Otonomi",
     "Robotaksi Yazılımı",
     "ASELSAN Tedarikçi #0050569",
+    "STM Savunma Teknolojileri Aday Tedarikçi",
     "OIN Patent Lisansı #f1e44576",
     "Avrupa Komisyonu PIC 861711529",
     "EIT Urban Mobility CUS15554",
     "İTO BTM Fulya Kampüsü",
-    "Teknopark İstanbul HASAT 2026"
+    "Teknopark İstanbul HASAT 2026",
+    "YTÜ Yıldız Teknopark",
+    "KOSGEB KSB01UGE0115153370",
+    "BTK L2zPtN4X1ZJ"
   ],
   alternates: {
     canonical: "https://trustia.com.tr/hakkimizda/",

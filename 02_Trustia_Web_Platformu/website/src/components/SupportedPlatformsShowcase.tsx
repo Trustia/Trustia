@@ -24,24 +24,24 @@ export default function SupportedPlatformsShowcase() {
       tag: lang === "tr" ? "SİVİL MOBİLİTE" : "CIVIL MOBILITY",
       shortLabel: lang === "tr" ? "01 Sivil" : "01 Civil",
       title: lang === "tr" ? "Seviye 4 Robotaksi Filoları" : "Level-4 Robotaxi Fleets",
-      subtitle: lang === "tr" ? "Şehir İçi Otonom Yolcu Taşımacılığı" : "Urban Autonomous Ride-Hailing",
+      subtitle: lang === "tr" ? "Şehir İçi Otonom Yolcu Taşımacılığı (20 Modül)" : "Urban Autonomous Ride-Hailing (20 Modules)",
       desc: lang === "tr"
-        ? "Binek ve hafif ticari elektrikli araçlar için tak-çalıştır otonom sürüş beyni. Şehir içi karmaşık kavşaklar, trafik ışıkları, dinamik yaya geçitleri ve yolcu çağırma operasyonları için geliştirilmiştir."
-        : "Plug-and-play autonomous driving stack tailored for passenger EVs, navigating dense urban intersections, signalized corridors, and ride-hailing services.",
+        ? "Binek ve hafif ticari elektrikli araçlar için 29.748+ satırlık tak-çalıştır otonom sürüş beyni. Şehir içi karmaşık kavşaklar, Lanelet2 yaya geçitleri, trafik ışıkları ve yolcu çağırma operasyonları için geliştirilmiştir."
+        : "Plug-and-play 29,748+ LOC autonomous driving stack tailored for passenger EVs, navigating dense urban intersections, signalized corridors, and ride-hailing services.",
       specs: lang === "tr"
         ? [
-            "Elektronik Direksiyon (Drive-by-Wire CAN-FD)",
-            "1 Aralık 2024 ADS Yönetmeliği Uyumluluğu",
-            "UN ECE R157 DSSAD / EDR Kara Kutu Kaydı"
+            "100 Hz CAN-FD, Frenet Lattice & Kayan Ufuklu MPC",
+            "1 Aralık 2024 Resmî Gazete (AB 2022/1426) Tam Uyum",
+            "IEEE 2846 RSS, UN R155 IDPS, R156 SUMS & R157 DSSAD"
           ]
         : [
-            "Drive-by-Wire CAN-FD Actuation Layer",
-            "Full Compliance with Ministry ADS Regulations",
-            "UN ECE R157 DSSAD / EDR Black-Box Logging"
+            "100 Hz CAN-FD, Frenet Lattice & Receding-Horizon MPC",
+            "Full Compliance with EU 2022/1426 ADS Homologation",
+            "IEEE 2846 RSS, UN R155 IDPS, R156 SUMS & R157 DSSAD"
           ],
       fleet: lang === "tr" ? "Hyundai Ioniq 5, SAIC Maxus MIFA 7, TOGG" : "Hyundai Ioniq 5, SAIC Maxus MIFA 7, TOGG",
       ctaLink: "/robotaxi/",
-      ctaText: lang === "tr" ? "Robotaksi Çözümü" : "Robotaxi Architecture"
+      ctaText: lang === "tr" ? "Robotaksi Mimarisi (20 Modül)" : "Robotaxi Architecture (20 Modules)"
     },
     {
       id: "defense",
@@ -52,17 +52,17 @@ export default function SupportedPlatformsShowcase() {
       title: lang === "tr" ? "Taktik İnsansız Kara Araçları (İKA)" : "Tactical Defense UGVs",
       subtitle: lang === "tr" ? "GPS Olmayan Sahalarda Tam Otonomi" : "Full Autonomy in GNSS-Denied Theaters",
       desc: lang === "tr"
-        ? "Elektronik harp, tüneller ve uydu sinyalinin kesildiği çatışma alanlarında; araç üzeri 3D LiDAR SLAM ve sürü zekası (swarm) ile görev yapan tekerlekli ve paletli savunma robotları."
-        : "Engineered for GPS-jammed and contested operational environments; tactical ground robots powered by on-edge 3D LiDAR SLAM, ESKF sensor fusion, and multi-agent swarm intelligence.",
+        ? "Elektronik harp, tüneller ve uydu sinyalinin kesildiği çatışma alanlarında; IEEE 1588v2 PTP senkronlu 3D LiDAR SLAM, 400 Hz ESKF ve sürü zekası (swarm) ile görev yapan savunma robotları."
+        : "Engineered for GPS-jammed and contested operational environments; tactical ground robots powered by IEEE 1588v2 PTP 3D LiDAR SLAM, 400 Hz ESKF, and multi-agent swarm intelligence.",
       specs: lang === "tr"
         ? [
-            "GPS'siz Seyrüsefer (GNSS-Denied 3D LiDAR SLAM)",
-            "Çoklu Robot Sürü Koordinasyonu (Swarm)",
+            "GNSS-Denied 3D LiDAR SLAM & PTP Motion Deskewing",
+            "ASELSAN (#0050569) & STM Savunma Ekosistemi Uyumlu",
             "Askeri JAUS & ROS 2 Humble Çift Kullanımlı Protokol"
           ]
         : [
-            "GNSS-Denied 3D LiDAR SLAM Localization",
-            "Multi-Agent Swarm Consensus & Formations",
+            "GNSS-Denied 3D LiDAR SLAM & PTP Motion Deskewing",
+            "ASELSAN (#0050569) & STM Defense Ecosystem Ready",
             "Military JAUS & ROS 2 Dual-Use Architecture"
           ],
       fleet: lang === "tr" ? "Hafif, Orta ve Ağır Sınıf Taktik İKA Platformları" : "Light, Medium & Heavy Tactical Wheeled/Tracked UGVs",
@@ -78,8 +78,8 @@ export default function SupportedPlatformsShowcase() {
       title: lang === "tr" ? "Ağır Hizmet, Maden ve Liman Otonomisi" : "Mining, Ports & Heavy Logistics",
       subtitle: lang === "tr" ? "Zorlu Sahalarda 7/24 Kesintisiz Çalışma" : "24/7 Driverless Heavy Operations",
       desc: lang === "tr"
-        ? "Açık maden ocakları, intermodal liman terminalleri ve tarım arazilerinde insan hayatını riske atmadan 7/24 kesintisiz çalışan ağır kamyon, çekici ve otonom yük taşıyıcı (AGV) yazılım mimarisi."
-        : "Heavy-duty autonomous logistics operating 24/7 across open-pit mines, container shipping berths, and agricultural tracts, eliminating human exposure from high-hazard industrial zones.",
+        ? "Açık maden ocakları, havalimanı apronları, intermodal liman terminalleri ve tarım arazilerinde insan hayatını riske atmadan 7/24 kesintisiz çalışan ağır kamyon, çekici ve AGV yazılım mimarisi."
+        : "Heavy-duty autonomous logistics operating 24/7 across open-pit mines, airport aprons, and container shipping berths, eliminating human exposure from high-hazard zones.",
       specs: lang === "tr"
         ? [
             "Ağır Arazi ve Çamur Deformasyon Algılama",
@@ -151,7 +151,7 @@ export default function SupportedPlatformsShowcase() {
                   className="w-[84vw] max-w-[340px] shrink-0 snap-center p-5 bg-[#DCD0B8] border border-[#26221b]/20 shadow-md flex flex-col justify-between space-y-4"
                 >
                   <div className="space-y-3.5">
-                    {/* Top Bar: Number, Tag & Icon (Clean, no box badges) */}
+                    {/* Top Bar: Number, Tag & Icon */}
                     <div className="flex items-center justify-between pb-3 border-b border-[#26221b]/15">
                       <div className="flex items-center gap-2">
                         <span className="font-mono text-xs font-bold text-[#26221b]">
@@ -193,7 +193,7 @@ export default function SupportedPlatformsShowcase() {
                     </div>
                   </div>
 
-                  {/* Bottom Footer: Compatible Fleet & Underline Link (No black box!) */}
+                  {/* Bottom Footer: Compatible Fleet & Underline Link */}
                   <div className="pt-3 border-t border-[#26221b]/15 space-y-2.5">
                     <div className="text-[10px] font-mono text-[#5c5344]">
                       <span className="text-[#14120c] font-bold">
@@ -227,7 +227,7 @@ export default function SupportedPlatformsShowcase() {
               >
                 {/* Upper Content */}
                 <div className="space-y-5">
-                  {/* Top Bar: Number & Category Badge (Clean, no boxes) */}
+                  {/* Top Bar: Number & Category Badge */}
                   <div className="flex items-center justify-between pb-4 border-b border-[#26221b]/15">
                     <div className="flex items-center gap-2">
                       <span className="font-mono text-xs font-bold text-[#26221b]">

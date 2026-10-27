@@ -258,3 +258,97 @@ class HeightMapGroundSegmenter(GroundSegmenter):
         obstacle_cloud = cloud.filter_by_mask(~ground_mask)
         
         return ground_cloud, obstacle_cloud, None
+
+
+@dataclass
+class CurbBoundaryResult:
+    """
+    Kaldırım taşı ve yol sınırı algılama sonucu.
+    Yol çizgileri silinmiş veya hava yağışlı olsa bile 3B LiDAR yükseklik
+    farklarından (8 cm - 28 cm basamak sıçraması) sürüş koridorunu çıkarır.
+    """
+    left_boundary_y_m: float
+    right_boundary_y_m: float
+    corridor_width_m: float
+    lane_center_offset_m: float
+    left_curb_points: List[Tuple[float, float, float]]
+    right_curb_points: List[Tuple[float, float, float]]
+    valid_corridor: bool
+
+
+class CurbAndRoadBoundaryDetector:
+    """
+    3B LiDAR Nokta Bulutu Tabanlı Kaldırım Taşı (Curb) ve Yol Sınırı Algılayıcısı.
+
+    Yol şerit çizgileri tamamen silindiğinde, kar/yağmur altında veya asfalt-toprak
+    geçişlerinde yanal yükseklik sıçraması (delta-Z) ve eğim gradyanı analiziyle
+    aracın güvenli sürüş koridorunu santimetre hassasiyetinde belirler.
+    """
+
+    def __init__(
+        self,
+        min_curb_height_m: float = 0.08,
+        max_curb_height_m: float = 0.28,
+        longitudinal_slice_m: float = 2.0,
+        max_lookahead_m: float = 35.0,
+        default_half_width_m: float = 3.5,
+    ) -> None:
+        self.min_curb_h = min_curb_height_m
+        self.max_curb_h = max_curb_height_m
+        self.slice_step = longitudinal_slice_m
+        self.max_lookahead = max_lookahead_m
+        self.default_half_w = default_half_width_m
+
+    def detect_road_boundaries(self, cloud: PointCloud) -> CurbBoundaryResult:
+        """
+        Nokta bulutundan sol ve sağ kaldırım sınırlarını ve şerit merkez sapmasını hesaplar.
+        """
+        if cloud.size == 0:
+            return CurbBoundaryResult(
+                left_boundary_y_m=self.default_half_w,
+                right_boundary_y_m=-self.default_half_w,
+                corridor_width_m=self.default_half_w * 2.0,
+                lane_center_offset_m=0.0,
+                left_curb_points=[],
+                right_curb_points=[],
+                valid_corridor=False,
+            )
+
+        xyz = cloud.xyz()
+        # İleri görüş (0.5 m ile max_lookahead m arası) noktaları filtrele
+        forward_mask = (xyz[:, 0] >= 0.5) & (xyz[:, 0] <= self.max_lookahead)
+        pts = xyz[forward_mask]
+        if len(pts) == 0:
+            pts = xyz
+
+        # Yol merkezine yakın noktaların medyan Z değerini asfalt referans yüksekliği al
+        center_mask = np.abs(pts[:, 1]) < 1.5
+        road_z = float(np.median(pts[center_mask, 2])) if np.any(center_mask) else float(np.median(pts[:, 2]))
+
+        # Kaldırım yüksekliği aralığındaki (road_z + 8cm .. 28cm) noktaları bul
+        dz = pts[:, 2] - road_z
+        curb_mask = (dz >= self.min_curb_h) & (dz <= self.max_curb_h)
+        curb_pts = pts[curb_mask]
+
+        left_pts = curb_pts[curb_pts[:, 1] > 0.8]
+        right_pts = curb_pts[curb_pts[:, 1] < -0.8]
+
+        left_y = float(np.median(left_pts[:, 1])) if len(left_pts) > 0 else self.default_half_w
+        right_y = float(np.median(right_pts[:, 1])) if len(right_pts) > 0 else -self.default_half_w
+
+        corridor_w = max(0.0, left_y - right_y)
+        center_offset = (left_y + right_y) / 2.0
+
+        left_list = [(float(p[0]), float(p[1]), float(p[2])) for p in left_pts[:50]]
+        right_list = [(float(p[0]), float(p[1]), float(p[2])) for p in right_pts[:50]]
+
+        return CurbBoundaryResult(
+            left_boundary_y_m=left_y,
+            right_boundary_y_m=right_y,
+            corridor_width_m=corridor_w,
+            lane_center_offset_m=center_offset,
+            left_curb_points=left_list,
+            right_curb_points=right_list,
+            valid_corridor=(corridor_w >= 2.2),
+        )
+

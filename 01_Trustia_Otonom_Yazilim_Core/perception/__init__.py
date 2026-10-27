@@ -38,6 +38,8 @@ from perception.ground import (
     RANSACGroundSegmenter,
     MultiPlaneSegmenter,
     GroundPlane,
+    CurbBoundaryResult,
+    CurbAndRoadBoundaryDetector,
 )
 from perception.clustering import (
     Clusterer,
@@ -51,6 +53,11 @@ from perception.obstacle import (
     ObstacleTracker,
     KalmanTracker,
     DetectionResult,
+)
+from perception.lidar_deskew_ptp import (
+    LidarMotionDeskewer,
+    PtpSyncStatus,
+    RawTimedPoint3D,
 )
 
 __all__ = [
@@ -74,6 +81,8 @@ __all__ = [
     "RANSACGroundSegmenter",
     "MultiPlaneSegmenter",
     "GroundPlane",
+    "CurbBoundaryResult",
+    "CurbAndRoadBoundaryDetector",
     # Clustering
     "Clusterer",
     "EuclideanClusterer",
@@ -85,4 +94,8 @@ __all__ = [
     "ObstacleTracker",
     "KalmanTracker",
     "DetectionResult",
+    # PTP & Motion Deskewing
+    "LidarMotionDeskewer",
+    "PtpSyncStatus",
+    "RawTimedPoint3D",
 ]

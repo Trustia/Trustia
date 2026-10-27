@@ -21,6 +21,23 @@ from trustia_sdk.planning.hybrid_astar import HybridAStarPlanner
 from trustia_sdk.control.stanley_controller import StanleyController
 from trustia_sdk.safety.asil_d_mrm import AsilDSafetySupervisor, SafetyState
 from trustia_sdk.fleet.telemetry_api import TripyFleetBridge, RobotaxiMission
+from trustia_sdk.safety.odd_sotif_dssad import OddDomainMonitor, Iso21448SotifSupervisor, UnR157DssadBlackbox
+from trustia_sdk.perception.curb_detector import CurbBoundaryDetector
+from trustia_sdk.fleet.teleoperation import TeleoperationSupervisor, RemoteOperatorCommand
+from trustia_sdk.core.carla_bridge import RobotaxiCarlaBridge
+from trustia_sdk.safety.can_ids_r155 import UnR155CanBusIds
+from trustia_sdk.perception.lidar_deskew_ptp import LidarMotionDeskewer, RawTimedPoint3D
+from trustia_sdk.planning.lanelet2_rules import Lanelet2TrafficRuleEngine, LaneletSegment
+from trustia_sdk.fleet.cabin_bms_safety import (
+    RobotaxiCabinAndBmsSupervisor,
+    CabinDoorSeatStatus,
+    BatteryThermalState,
+)
+from trustia_sdk.safety.rss_ieee2846 import ResponsibilitySensitiveSafety
+from trustia_sdk.planning.frenet_lattice_planner import FrenetLatticePlanner, FrenetState
+from trustia_sdk.control.mpc_redundant_control import RecedingHorizonMPC, RedundantActuatorAllocator
+from trustia_sdk.safety.sums_un_r156 import UnR156SumsManager
+from trustia_sdk.perception.ehmi_siren_detector import ExternalHmiAndSirenSupervisor
 
 
 def test_licensing():
@@ -190,6 +207,151 @@ def test_fleet_telemetry():
     print("BAŞARILI")
 
 
+def test_odd_sotif_dssad_and_curb():
+    print("  * [TEST 10/12] ODD Coğrafi Çit, ISO 21448 SOTIF ve UN/ECE R157 DSSAD Kara Kutu...", end=" ")
+    odd = OddDomainMonitor()
+    ok, status, decel = odd.evaluate(x_m=100.0, y_m=100.0, speed_kmh=40.0)
+    assert ok is True and decel == 0.0
+    out_ok, out_status, out_decel = odd.evaluate(x_m=9999.0, y_m=9999.0, speed_kmh=40.0)
+    assert out_ok is False and out_decel == -1.5
+
+    sotif = Iso21448SotifSupervisor()
+    s_ok, phantom, _ = sotif.evaluate(camera_confidence=0.45, lidar_confirmed=False)
+    assert s_ok is True and phantom is True
+
+    dssad = UnR157DssadBlackbox()
+    dssad.log_event("AUTONOMOUS_START", "AUTONOMOUS_L4", 35.0, 2.5, 0.0)
+    dssad.log_event("MRM_PULLOVER_TRIGGER", "AUTONOMOUS_L4", 30.0, 5.0, -1.5)
+    assert len(dssad.records) == 2
+    assert dssad.verify_integrity() is True
+    print("BAŞARILI")
+
+
+def test_curb_and_teleop():
+    print("  * [TEST 11/12] 3B LiDAR Kaldırım Taşı Algılama ve Uzaktan Operasyon (Teleop)...", end=" ")
+    curb = CurbBoundaryDetector()
+    pts = [(5.0, 2.5, 0.15), (10.0, 2.5, 0.16), (5.0, -2.5, 0.15), (10.0, -2.5, 0.14)]
+    res = curb.detect_corridor(pts, road_surface_z_m=0.0)
+    assert res.valid_corridor is True
+    assert abs(res.corridor_width_m - 5.0) < 0.1
+
+    teleop = TeleoperationSupervisor()
+    cmd = RemoteOperatorCommand("OP-01", "TOKEN-VALID-123", target_steer_deg=10.0, target_speed_kmh=12.0, network_rtt_ms=30.0)
+    valid, steer, speed_mps, msg = teleop.authorize_and_filter(cmd)
+    assert valid is True and abs(steer - 10.0) < 1e-4
+    print("BAŞARILI")
+
+
+def test_carla_bridge():
+    print("  * [TEST 12/16] CARLA Simülatör Köprüsü ve 5 ms Sürücü Müdahale Devri...", end=" ")
+    carla_br = RobotaxiCarlaBridge()
+    s1 = carla_br.step(steer_deg=5.0, accel_mps2=2.0, dt_s=0.01)
+    assert s1.autonomous_engaged is True and s1.speed_mps > 0.0
+    s2 = carla_br.step(steer_deg=5.0, accel_mps2=2.0, dt_s=0.01, driver_torque_nm=2.5)
+    assert s2.autonomous_engaged is False and s2.takeover_latency_ms <= 5.0
+    print("BAŞARILI")
+
+
+def test_can_ids_r155():
+    print("  * [TEST 13/16] UN R155 & ISO 21434 CAN-FD Siber Saldırı Tespit Sistemi...", end=" ")
+    ids = UnR155CanBusIds()
+    ok = ids.inspect_frame(0x120, b"\x00" * 8, timestamp_ms=10.0, rolling_counter=1)
+    assert ok.accepted is True
+    spoof = ids.inspect_frame(0x777, b"\x00" * 8, timestamp_ms=15.0, rolling_counter=1)
+    assert spoof.accepted is False and spoof.threat_type == "UNAUTHORIZED_ID"
+    dos = ids.inspect_frame(0x120, b"\x00" * 8, timestamp_ms=11.0, rolling_counter=2)
+    assert dos.accepted is False and dos.threat_type == "DOS_FLOODING"
+    print("BAŞARILI")
+
+
+def test_lidar_deskew_ptp():
+    print("  * [TEST 14/16] IEEE 1588 PTP Zaman Senkronu ve 3B LiDAR Hareket Düzeltme...", end=" ")
+    deskew = LidarMotionDeskewer()
+    ptp = deskew.evaluate_ptp_sync("PTP-GM-01", offset_us=25.0, jitter_us=10.0)
+    assert ptp.synchronized is True and ptp.sotif_degraded is False
+    pts = deskew.deskew_scan([RawTimedPoint3D(10.0, 0.0, 0.5, 0.0)], vx_mps=10.0, vy_mps=0.0, yaw_rate_rad_s=0.0, sweep_duration_s=0.05)
+    assert abs(pts[0][0] - 9.5) < 1e-3
+    print("BAŞARILI")
+
+
+def test_lanelet2_traffic_rules():
+    print("  * [TEST 15/16] Lanelet2 HD Harita Yaya Geçidi ve Kavşak Geçiş Üstünlüğü...", end=" ")
+    engine = Lanelet2TrafficRuleEngine()
+    engine.register_lanelet(LaneletSegment("LL-ANK-01", 50.0, True, False, has_crosswalk=True, is_intersection=True))
+    dec = engine.evaluate_rules("LL-ANK-01", ego_speed_mps=8.0, pedestrian_on_crosswalk=True, crosswalk_distance_m=14.0)
+    assert dec.behavior_command == "STOP_FOR_PEDESTRIAN" and dec.target_speed_mps == 0.0
+    print("BAŞARILI")
+
+
+def test_cabin_and_bms_safety():
+    print("  * [TEST 16/16] Robotaksi Kapı Emniyet Kilidi, SOS Butonu ve Batarya BMS...", end=" ")
+    sup = RobotaxiCabinAndBmsSupervisor()
+    door_open = sup.evaluate(
+        CabinDoorSeatStatus(all_doors_closed=False, trunk_closed=True, passenger_seated=True, seatbelt_fastened=True),
+        BatteryThermalState(soc_percent=80.0, pack_temp_c=30.0, estimated_range_km=320.0),
+        vehicle_speed_mps=0.0,
+    )
+    assert door_open.dispatch_allowed is False and door_open.motion_inhibit_brake_hold is True
+    sos = sup.evaluate(
+        CabinDoorSeatStatus(all_doors_closed=True, trunk_closed=True, passenger_seated=True, seatbelt_fastened=True, passenger_sos_pressed=True),
+        BatteryThermalState(soc_percent=80.0, pack_temp_c=30.0, estimated_range_km=320.0),
+        vehicle_speed_mps=8.0,
+    )
+    assert sos.trigger_passenger_mrm is True and sos.intercom_call_center_active is True
+    print("BAŞARILI")
+
+
+def test_rss_ieee2846():
+    print("  * [TEST 17/21] IEEE 2846 & Mobileye RSS Matematiksel Çarpışmasızlık Kalkanı...", end=" ")
+    rss = ResponsibilitySensitiveSafety()
+    verdict = rss.evaluate_pair(ego_vel_mps=15.0, front_vel_mps=4.0, actual_longitudinal_gap_m=3.5, actual_lateral_gap_m=0.1)
+    assert verdict.longitudinal_safe is False and verdict.proper_response == "RSS_LONGITUDINAL_BRAKE"
+    print("BAŞARILI")
+
+
+def test_frenet_lattice_planner():
+    print("  * [TEST 18/21] Frenet (s, d) Jerk-Optimal Kafes Yörünge Planlayıcı...", end=" ")
+    planner = FrenetLatticePlanner()
+    traj = planner.plan_optimal_trajectory(
+        FrenetState(0.0, 10.0, 0.0, 0.0, 0.0, 0.0),
+        target_speed_mps=10.0,
+        obstacles_sd=[(15.0, 0.0)],
+        horizon_s=3.0,
+    )
+    assert traj.collision_free is True and abs(traj.target_lateral_d_m) >= 1.75
+    print("BAŞARILI")
+
+
+def test_mpc_and_redundant_actuators():
+    print("  * [TEST 19/21] Model Öngörülü Kontrol (MPC) ve Çift Yedekli Fren Dağıtıcısı...", end=" ")
+    mpc = RecedingHorizonMPC()
+    sol = mpc.solve(cross_track_error_m=0.5, heading_error_rad=0.04, velocity_mps=8.0, target_velocity_mps=10.0)
+    assert sol.optimal_steer_rad < 0.0 and sol.optimal_accel_mps2 > 0.0
+    alloc = RedundantActuatorAllocator()
+    red = alloc.allocate(3.5, ibooster_primary_healthy=False, esc_secondary_healthy=True)
+    assert red.fail_operational_mode == "DEGRADED_SECONDARY_ACTIVE" and red.secondary_esc_pump_decel_mps2 == 3.5
+    print("BAŞARILI")
+
+
+def test_sums_un_r156():
+    print("  * [TEST 20/21] UN/ECE R156 Yazılım Güncelleme (SUMS), RXSWIN ve Rollback...", end=" ")
+    sums = UnR156SumsManager()
+    pkg = sums.sign_package("v4.3.0-verified", "RXSWIN-R157-TR-2026-002", b"BINARY_IMAGE")
+    rej = sums.apply_update(pkg, vehicle_speed_mps=3.0, park_brake_engaged=False)
+    assert rej.success is False and rej.status == "REJECTED_VEHICLE_MOVING"
+    ok = sums.apply_update(pkg, vehicle_speed_mps=0.0, park_brake_engaged=True, post_update_self_check_ok=True)
+    assert ok.success is True and sums.active_rxswin == "RXSWIN-R157-TR-2026-002"
+    print("BAŞARILI")
+
+
+def test_ehmi_and_siren():
+    print("  * [TEST 21/21] ISO/TR 23049 Dış Yaya eHMI Paneli ve Akustik Siren Algılama...", end=" ")
+    sup = ExternalHmiAndSirenSupervisor()
+    dec = sup.evaluate(False, False, dominant_audio_freq_hz=920.0, audio_spl_db=84.0, freq_modulation_detected=True)
+    assert dec.emergency_siren_detected is True and dec.recommended_vehicle_action == "PULL_OVER_RIGHT_EMERGENCY"
+    print("BAŞARILI")
+
+
 def run_all_tests():
     print("\n" + "=" * 75)
     print("  TRUSTIA v2.4 ROBOTAXI SDK — DOĞRULAMA SÜİTİ BAŞLATILIYOR")
@@ -203,8 +365,20 @@ def run_all_tests():
     test_stanley_controller()
     test_safety_mrm()
     test_fleet_telemetry()
+    test_odd_sotif_dssad_and_curb()
+    test_curb_and_teleop()
+    test_carla_bridge()
+    test_can_ids_r155()
+    test_lidar_deskew_ptp()
+    test_lanelet2_traffic_rules()
+    test_cabin_and_bms_safety()
+    test_rss_ieee2846()
+    test_frenet_lattice_planner()
+    test_mpc_and_redundant_actuators()
+    test_sums_un_r156()
+    test_ehmi_and_siren()
     print("=" * 75)
-    print("  [MÜKEMMEL] 9 Temel Alt Sistem Testinin Tamamı (%100) Sıfır Hatayla Geçti!")
+    print("  [MÜKEMMEL] 21 Temel Alt Sistem Testinin Tamamı (%100) Sıfır Hatayla Geçti!")
     print("  SAIC Maxus MIFA 7 Seviye-4 Kurumsal SDK Üretime ve PoC'ye Hazır!")
     print("=" * 75 + "\n")
 

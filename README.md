@@ -1,10 +1,11 @@
-# 🚗 TRUSTIA AI — Deterministik Seviye-4 Otonom Sürüş & Robotaksi Yazılım Çekirdeği (v4.2)
+# 🚗 TRUSTIA AI — Deterministik Seviye-4 Otonom Sürüş & Robotaksi Yazılım Çekirdeği (v4.3 Enterprise)
 
 ![Trustia Banner](Kurumsal/Medya/Banner.jpg)
 
 <div align="center">
 
-[![Test Durumu](https://img.shields.io/badge/Testler-1%2C307%20Ba%C5%9Far%C4%B1l%C4%B1%20(%25100)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
+[![Test Durumu](https://img.shields.io/badge/Testler-1%2C307%20%2B%2021%20Ba%C5%9Far%C4%B1l%C4%B1%20(%25100)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
+[![Envanter](https://img.shields.io/badge/Envanter-198%20Dosya%20%7C%2029%2C748%2B%20Sat%C4%B1r-brightgreen.svg)](https://trustia.com.tr)
 [![C++20 & ROS 2](https://img.shields.io/badge/C%2B%2B-20%20%7C%20ROS%202-00599C?logo=c%2B%2B&logoColor=white)](https://github.com/Trustia/Trustia)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16-black?logo=next.js&logoColor=white)](https://nextjs.org)
@@ -39,14 +40,15 @@ Trustia AI, ulusal ve uluslararası savunma, sanayi ve derin teknoloji ekosistem
 | 🛡️ **Open Invention Network (OIN 2.0)** | New York, ABD | **İmzalı İkili Patent Savunma Paktı Lisansı (`#f1e445769a9934114db095c4f5430a0e749d8201`)** |
 | 🇪🇺 **Avrupa Komisyonu (European Commission)** | Brüksel, AB | **Resmi AB Katılımcı Kimlik Kodu (EU PIC: `861711529`)** |
 | 🇪🇺 **EIT Urban Mobility** | Barselona, AB | **Resmi Mobilite Partner ID (`CUS15554`)** |
-| 🚀 **Teknopark İstanbul (Cube Incubation)** | İstanbul, TR | **Ön Kuluçka Girişimi & HASAT 2026 Hızlandırma Programı** |
+| 🚀 **Teknopark İstanbul (Cube Incubation)** | İstanbul, TR | **Ön Kuluçka Girişimi (6 Aylık Protokol) & HASAT 2026 Hızlandırma Programı** |
 | 🏛️ **İTO BTM (Bilgiyi Ticarileştirme Merkezi)** | İstanbul, TR | **Fulya Derin Teknoloji Kampüsü Yerleşik Girişimi** |
+| 🎓 **YTÜ Yıldız Teknopark** | İstanbul, TR | **Yıldız Kuluçka Ekosistem Başvurusu** |
 | 📜 **KOSGEB** | İstanbul, TR | **İleri Girişimci Sertifikası (`KSB01UGE0115153370`)** |
 | 📜 **BTK** | Ankara, TR | **Savunma Sanayii ve Yapay Zeka Sertifikasyonu (`L2zPtN4X1ZJ`)** |
 
 ---
 
-## 🧠 2. Çekirdek Otonomi Mimarisi (16.400+ Satır Deterministik Kod)
+## 🧠 2. Çekirdek Otonomi Mimarisi (198 Dosya / 29.748+ Satır Deterministik Kod)
 
 Trustia mimarisi; yapay zeka çıkarımlarının yarattığı belirsizlikleri (stokastik riskleri) sıfıra indirmek üzere **deterministik matematiksel modeller** üzerine kuruludur. Tüm yazılım bileşenleri modüler, bağımsız ve yüksek frekanslı kontrol döngülerine sahiptir:
 

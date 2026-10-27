@@ -23,6 +23,12 @@ from command.mission import (
     OrderRecord,
     OrderState,
 )
+from command.cabin_bms_safety import (
+    BatteryThermalState,
+    CabinDoorSeatStatus,
+    CabinSafetyDecision,
+    RobotaxiCabinAndBmsSupervisor,
+)
 from core.api import TelemetryFrame
 from core.transforms import EnuPoint
 from simulation.terrain import Terrain, Weather
