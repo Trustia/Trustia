@@ -1,52 +1,47 @@
-# TRUSTIA AI TECHNOLOGIES — COMPREHENSIVE ARCHITECTURAL REFERENCE
+# TRUSTIA AI TECHNOLOGIES — COMPREHENSIVE ARCHITECTURAL & REGULATORY REFERENCE (v4.3 Enterprise)
 
-## Executive Summary
-Trustia AI Technologies is an autonomous systems engineering company founded and 100% owned by Murat Furkan Bayram (Founder, CEO & Lead Systems Architect), headquartered in Istanbul, Turkey. Trustia develops deterministic, sovereign Level-4 autonomous driving software cores for commercial electric vehicle fleets (passenger Robotaxis), defense robotics (Unmanned Ground Vehicles - UGVs), and heavy industrial transport (open-pit mining and seaport automated guided vehicles - AGVs).
+## 1. Executive Summary & Transparent Governance
+Trustia AI Technologies is an independent autonomous driving software company founded and 100% owned by Murat Furkan Bayram (Founder & Systems Architect), headquartered in Istanbul, Turkey (ITO BTM Fulya Deep-Tech Campus & Teknopark Istanbul Cube Incubation). Trustia operates as a Tier-2 Sovereign Autonomy Software & Closed-Box SDK Provider for commercial electric vehicle fleets (SAIC Maxus MIFA 7 and Hyundai Ioniq 5 E-GMP Robotaxis), campus autonomous shuttles, defense robotics (UGVs), and heavy industrial logistics (AGVs).
 
-## Codebase & Verification Metrics
-- Total Proprietary Codebase: 19,390+ lines of native C++20, ROS 2 Humble, and Python 3.12.
-- Level-4 Autonomy Stack: 16,400+ lines of algorithmic core without external black-box library dependencies.
-- Automated Test Suite: 1,307 verified unit, simulation, and Hardware-in-the-Loop (HIL) tests passing with a 100% success rate (0 failures, 0 regressions).
-- Execution Speed: Entire 1,307-suite automated regression test runs in under 45 seconds on standard Linux CI pipelines.
+## 2. Verified Codebase & Test Inventory (October 27, 2026)
+- **Total Engineering Volume:** 198 files, 29,748+ lines of deterministic code and verification suites.
+  - **Main Autonomy Core (`01_Trustia_Otonom_Yazilim_Core`):** 114 module files (19,414 lines) + 48 automated test files (5,926 lines).
+  - **Commercial Robotaxi SDK (`02_Trustia_Robotaxi_SDK`):** 36 files (4,408 lines) packaged as hardware-locked `.pyc` closed-box bytecode (`Trustia_Robotaxi_Evaluation_SDK_ClosedBox.zip`).
+- **Automated Verification:**
+  - **1,307 Core Unit & Integration Tests:** 100% pass rate (`1307 passed, 0 failed`).
+  - **21 Robotaxi SDK Subsystem Tests:** 100% pass rate (`21/21 passed`).
+  - **0 External Black-Box Runtime Dependencies:** 100% sovereign mathematical implementation.
 
-## Autonomy Stack Architecture
-1. Perception & Detection:
-   - 3D ground segmentation, European / domestic lane geometry detection.
-   - 3D bounding box obstacle clustering and kinematic velocity estimation.
-   - LWIR thermal camera & 77GHz radar sensor fusion for zero-light and heavy fog environments.
-2. Localization & Mapping (GNSS-Denied):
-   - 3D Normal Distributions Transform (NDT) LiDAR Pose-Graph SLAM.
-   - 400 Hz Error-State Kalman Filter (ESKF) fusing IMU and wheel odometry.
-   - Sub-5cm trajectory accuracy even inside tunnels, underground facilities, and electronic-warfare GPS-jammed sectors.
-3. Path Planning:
-   - Kinematic Hybrid A* search considering vehicle non-holonomic constraints (turning radius, wheelbase).
-   - Quintic polynomial path generation with jerk-limited acceleration profiles.
-4. Vehicle Actuation:
-   - 100 Hz SocketCAN CAN-FD bridge communicating with vehicle drive-by-wire (DBW) ECUs.
-   - Pure Pursuit and Stanley lateral path tracking controllers.
-   - SecOC (Secure Onboard Communication) with HMAC-SHA256 message authentication.
-5. Functional Safety (ISO 26262 ASIL-D):
-   - 50 ms Watchdog heartbeat monitor.
-   - 5 ms hardware steering/brake driver override.
-   - Minimal Risk Maneuver (MRM) executing a controlled deceleration of 1.5 m/s² to bring the vehicle safely to the road shoulder upon primary subsystem failure.
-   - Full UN ECE R157 and Turkish ADS (1 December 2024) compliant EDR/DSSAD autonomous black-box flight recorder.
+## 3. Complete 20-Module International Level-4 Robotaxi & EU 2022/1426 Compliance Matrix
+1. **ISO 26262 ASIL-D & Minimal Risk Maneuver (`asil_d_mrm.py`, `estop.py`):** 20 ms self-check loop (50 Hz), 50 ms Watchdog timeout, 1.5 m/s² controlled pullover deceleration (MRM), 6.5 m/s² emergency braking, and <=5.0 ms human driver steering/brake override.
+2. **IEEE 2846 & Mobileye RSS Mathematical Safety Envelope (`rss_ieee2846.py`):** Formal longitudinal and lateral safe following distance equations guaranteeing zero culpable collisions with automatic "Proper Response" braking.
+3. **ISO 21448 SOTIF & CalmCar Cross-Modal Safety Arbiter (`odd_sotif_dssad.py`, `calmcar_bridge.py`):** Cross-validates camera detections against 3D LiDAR point clouds, detects solar glare/lens occlusion, and prevents phantom braking.
+4. **EU 2022/1426 (1 Dec 2024 Official Gazette) ODD Geofence Monitor (`odd_sotif_dssad.py`):** Continuous Operational Design Domain monitoring (polygon geofence, speed limit, road grade, visibility range).
+5. **UN/ECE R157 DSSAD Forensic Blackbox (`odd_sotif_dssad.py`):** Tamper-evident SHA-256 hash-chained Data Storage System for Automated Driving logging engagements, overrides, and MRM triggers.
+6. **UN/ECE R155 & ISO/SAE 21434 CAN-FD Intrusion Detection (`can_ids_r155.py`):** Real-time detection of unauthorized CAN IDs (Spoofing), high-frequency bus flooding (DoS), DLC mismatches, and rolling counter replay attacks.
+7. **UN/ECE R156 Software Update Management System & RXSWIN (`sums_un_r156.py`):** Maintains Regulation X Software Identification Numbers (`RXSWIN-R157-TR-2026-001`), enforces HMAC-SHA256 signature verification, blocks updates when vehicle speed > 0, and executes atomic rollback on self-check failure.
+8. **Law No. 6698 KVKK Art. 9 Domestic Data Shield (`calmcar_bridge.py`):** Automatically blocks unauthorized outbound transmission of raw cabin/exterior video and GNSS coordinates to foreign cloud servers.
+9. **IEEE 1588v2 PTP Time Sync & 3D LiDAR Motion Deskewing (`lidar_deskew_ptp.py`):** Monitors sub-100us PTP hardware clock synchronization and deskews 3D LiDAR sweeps using 400 Hz IMU linear/angular velocity interpolation.
+10. **3D LiDAR Curb & Road Boundary Detection (`ground.py`, `curb_detector.py`):** Extracts drivable road corridors from 8-28 cm vertical curb steps even when lane lines are erased or submerged in heavy rain.
+11. **GNSS-Denied 3D NDT Pose-Graph SLAM & 400 Hz ESKF (`eskf.py`, `icp.py`, `pose_graph.py`):** Maintains 4.2 cm localization accuracy in tunnels, underground parking, and urban canyons without satellite GNSS.
+12. **Lanelet2 HD Map & Pedestrian Right-of-Way Engine (`lanelet2_rules.py`):** Enforces solid/dashed lane change rules, mandatory crosswalk pedestrian yielding (Turkish Traffic Law Art. 74), and intersection priority.
+13. **Frenet (s, d) Jerk-Optimal Lattice Trajectory Planner (`frenet_lattice_planner.py`):** Generates 5th-order (Quintic) lateral and longitudinal candidate trajectories in Frenet coordinates minimizing passenger jerk.
+14. **Kinematic Hybrid A* Global/Local Planner (`hybrid_astar.py`):** Non-holonomic path planning respecting SAIC Maxus MIFA 7 (2.975 m wheelbase) and Hyundai Ioniq 5 turning radius constraints.
+15. **Receding-Horizon MPC, Stanley & Fail-Operational Redundant Braking (`mpc_redundant_control.py`, `stanley_controller.py`):** Kinematic bicycle Model Predictive Control + Stanley lateral tracking + seamless failover from primary i-Booster brake to secondary ESC hydraulic pump and EPB.
+16. **100 Hz ISO 11898-1 CAN-FD Drive-by-Wire & DBC (`mifa7_canfd.py`, `can.py`, `maxus_mifa7_chassis.dbc`):** 1.4 ms frame encoding for EPS steering, i-Booster braking, and rolling heartbeat counters.
+17. **ISO/TR 23049 External HMI (eHMI) & Acoustic Siren Detector (`ehmi_siren_detector.py`, `v2x_engine.py`):** External pedestrian intent display ("Safe to Cross") + V2X SPaT/GLOSA green-wave optimization + 600-1550 Hz ambulance/fire-truck siren frequency detection.
+18. **Robotaxi Cabin Door Interlock, SOS Button & EV BMS Supervisor (`cabin_bms_safety.py`):** Prevents dispatch if any door/trunk is unlatched or seatbelt unfastened, handles passenger SOS pullover requests, and routes vehicle to charger when SoC < 18% or cell temp > 48°C.
+19. **Fleet Teleoperation & Remote Recovery (`teleoperation.py`):** Authenticated call-center remote assistance capped at <=15 km/h and <=150 ms network RTT.
+20. **CARLA 0.9.15+ / MetaDrive / Webots SIL Simulation Bridge (`carla_bridge.py`, `runner.py`):** 100 Hz synchronous co-simulation with 2.6M pts/sec virtual LiDAR and 582-scenario deterministic verification matrix.
 
-## Primary Vehicle Deployment: Hyundai Ioniq 5 Robotaxi
-- Platform: Hyundai E-GMP dedicated 800V EV architecture.
-- Sensor Kit:
-  - 1x Ouster OS2-128 long-range 3D LiDAR (240m range, 128 channels).
-  - 2x Livox Mid-360 solid-state blind-spot LiDARs.
-  - 4x Sony IMX390 automotive GMSL2 HDR cameras (120dB dynamic range).
-  - 1x Continental ARS408 77GHz long-range radar.
-  - Compute: NVIDIA Jetson AGX Orin 64GB delivering 275 TOPS of INT8 AI inference.
-
-## Corporate Registrations & Accreditations
-- ASELSAN A.Ş.: Approved Supplier Registry (#0050569, SAP: FZQHEXGFMTJU).
-- STM Savunma Teknolojileri: Candidate Supplier & Deep Tech Ecosystem Member.
-- Open Invention Network (OIN 2.0): Bilateral Executed Patent Non-Aggression Community License (#f1e445769a9934114db095c4f5430a0e749d8201).
-- European Commission: Participant Identification Code (EU PIC: 861711529).
-- EIT Urban Mobility: Official Innovation Partner (ID: CUS15554).
-- Teknopark İstanbul: Cube Incubation Startup & HASAT 2026 Acceleration Program.
-- İTO BTM: Istanbul Chamber of Commerce BTM (Fulya Deep Tech Campus) Resident.
-- KOSGEB: Advanced Entrepreneurship Certification (KSB01UGE0115153370).
-- BTK: Defense Industry and Artificial Intelligence Certification (L2zPtN4X1ZJ).
+## 4. Official Corporate Accreditations & Registries
+- **ASELSAN A.Ş.:** Approved Supplier Registry — Company Code: `#0050569`, SAP Code: `FZQHEXGFMTJU` (`TRUSTIA_ADMIN`), Tracking ID: `0050569CCE941FD1A49FCEFB9B7BE7D6` (Approved Categories: Software Development, Systems Integration, Land Platform Integration) + Axcelerate AGM.
+- **STM Savunma Teknolojileri A.Ş.:** Defense and Deep-Tech Entrepreneurship Ecosystem Registered Candidate Supplier.
+- **Open Invention Network (OIN 2.0):** Executed Bilateral Patent Non-Aggression License (`#f1e445769a9934114db095c4f5430a0e749d8201`).
+- **European Commission:** Participant Identification Code (`EU PIC: 861711529`).
+- **EIT Urban Mobility:** Official Partner ID (`CUS15554`).
+- **Teknopark İstanbul (Cube Incubation):** Pre-Incubation Startup & HASAT 2026 Acceleration Program (Signed 6-Month Protocol).
+- **İTO BTM (Istanbul Chamber of Commerce):** Fulya Deep-Tech Campus Resident Startup.
+- **YTÜ Yıldız Teknopark:** Yıldız Incubation & Deep-Tech Ecosystem Application.
+- **KOSGEB:** Advanced Entrepreneur Certificate (`KSB01UGE0115153370`).
+- **BTK:** Defense Industry and Artificial Intelligence Certification (`L2zPtN4X1ZJ`).
