@@ -38,7 +38,7 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "Open Invention Network (OIN) Küresel Patent Paktı ve İkili Lisans Beyanı",
       badge: "OIN LİSANSLI (#f1e44576)",
-      subBadge: "PATENT NON-AGGRESSION v4.2",
+      subBadge: "PATENT NON-AGGRESSION v4.3",
       category: "AÇIK İNOVASYON & PATENT BARIŞI",
       docNo: "TR-OIN-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -80,7 +80,7 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Open Invention Network (OIN) Global Patent Agreement & Bilateral License Declaration",
       badge: "OIN LICENSED (#f1e44576)",
-      subBadge: "PATENT NON-AGGRESSION v4.2",
+      subBadge: "PATENT NON-AGGRESSION v4.3",
       category: "PATENT NON-AGGRESSION",
       docNo: "TR-OIN-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -126,7 +126,7 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "Seviye-4 Otonomi Yazılım Lisansı, Kapalı Kutu Dağıtım (EULA) ve SLA Çerçevesi",
       badge: "ENTERPRISE B2B SDK",
-      subBadge: "KAPALI KUTU LİSANS v4.2",
+      subBadge: "KAPALI KUTU LİSANS v4.3",
       category: "YAZILIM LİSANSLAMA",
       docNo: "TR-EULA-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -169,7 +169,7 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Level-4 Autonomy Software License, Closed-Box SDK (EULA) & SLA Framework",
       badge: "ENTERPRISE B2B SDK",
-      subBadge: "CLOSED-BOX SDK v4.2",
+      subBadge: "CLOSED-BOX SDK v4.3",
       category: "SOFTWARE LICENSING",
       docNo: "TR-EULA-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -234,7 +234,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "2. ISO 26262 ASIL-D Seviyesinde Hata Toleranslı (Fail-Operational) Mimari",
           items: [
             "Karayolu taşıtlarında fonksiyonel güvenliğin en üst standardı olan ISO 26262 ASIL-D normlarına uygun olarak geliştirilen sistemimiz; kritik yanal kontrol (direksiyon) ve boyuna kontrol (fren ve ivmelenme) kanallarında tekil hata noktası (Single Point of Failure - SPOF) barındırmaz.",
-            "Sensör katmanında Ouster 128 kanallı 3D LiDAR, Livox Mid-360 yakın çevre LiDAR'ları, 77GHz Continental radarları ve 4x Sony HDR GMSL2 kameralar arasında erken ve geç sensör füzyonu işletilerek sensör körleşmelerine karşı yedeklilik sağlanır.",
+            "Donanım Soyutlama Katmanı (HAL) üzerinden 3D LiDAR (Hesai / Ouster / Livox), 77GHz otomotiv radarları (Continental / Bosch) ve GMSL2 HDR çevre kameraları (CalmDrive 3.0 / Sony HDR) arasında erken ve geç sensör füzyonu işletilerek sensör körleşmelerine karşı yedeklilik sağlanır.",
             "Tüm aktüatör emirleri, şasi CAN-FD hattına iletilmeden önce bağımsız bir Emniyet Hakemi (Safety Arbiter) tarafından fiziksel araç sınırları (maksimum tork, ivme ve dönüş açısı) açısından gerçek zamanlı denetlenir."
           ]
         },
@@ -249,7 +249,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "4. Kara Kutu (DSSAD / EDR) Kaydı ve Kriptografik Telemetri Bütünlüğü",
           items: [
-            "UN ECE R157 ve ulusal ADS yönetmeliği uyarınca; otonomi modunun aktif olduğu her saniye, sistem geçiş talepleri, sürücü devralma anları, aktüatör komutları ve çevresel sensör verileri araç üzerindeki 4TB NVMe SSD ünitesine kesintisiz kaydedilir.",
+            "UN ECE R157 ve ulusal ADS yönetmeliği uyarınca; otonomi modunun aktif olduğu her saniye, sistem geçiş talepleri, sürücü devralma anları, aktüatör komutları ve çevresel sensör verileri araç bilgisayarının şifreli yerel NVMe depolama birimine kesintisiz kaydedilir.",
             "DSSAD (Otonom Sürüş Veri Depolama Sistemi) ve EDR (Kaza Veri Kaydedicisi) logları; kaza veya olay anında sorumluluğun kimde olduğunu belirleyen yasal delil niteliğindedir ve HMAC-SHA256 kriptografik imzalarıyla manipülasyona karşı korunur.",
             "Kayıt altına alınan telemetri verileri, kaza inceleme otoriteleri ve adli mercilerin denetimine sunulmak üzere standart adli bilişim formatlarında saklanır."
           ]
@@ -277,7 +277,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "2. ISO 26262 ASIL-D Fault-Tolerant (Fail-Operational) System Architecture",
           items: [
             "Architected under automotive safety integrity level ASIL-D, our primary lateral (steering) and longitudinal (brake/propulsion) actuation channels feature zero single points of failure (SPOF).",
-            "Multi-modal sensor redundancy pairs Ouster 128-channel LiDAR, Livox Mid-360 perimeter scanners, Continental 77GHz radars, and Sony HDR cameras through early and late spatial fusion pipelines to guarantee detection persistence under severe sensor occlusion.",
+            "Multi-modal sensor redundancy via the Hardware Abstraction Layer (HAL) pairs 3D LiDAR (Hesai / Ouster / Livox), 77GHz automotive radars, and GMSL2 HDR surround cameras through early and late spatial fusion pipelines to guarantee detection persistence under severe sensor occlusion.",
             "All actuation trajectories pass through an independent Safety Arbiter enforcing physical chassis kinematic bounds prior to CAN-FD frame dispatch."
           ]
         },
@@ -292,7 +292,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "4. Data Storage System for Automated Driving (DSSAD/EDR) Integrity",
           items: [
-            "Pursuant to UN ECE R157, all transitions of dynamic control, driver takeover commands, actuator requests, and spatial world models are continuously logged to an encrypted onboard 4TB NVMe SSD.",
+            "Pursuant to UN ECE R157, all transitions of dynamic control, driver takeover commands, actuator requests, and spatial world models are continuously logged to encrypted onboard NVMe storage.",
             "DSSAD and Event Data Recorder (EDR) records serve as legally certified evidence establishing operational attribution during incident reconstruction, authenticated via tamper-evident cryptographic hash chains.",
             "Telemetric archives adhere to forensic evidentiary custody standards required by vehicle safety regulators and judicial bodies."
           ]
@@ -332,7 +332,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "3. Donanımsal Kök Güvenlik (HSM / TPM 2.0) ve Güvenli Önyükleme",
           items: [
             "Kriptografik anahtarlar, cihaz sertifikaları ve SecOC oturum anahtarları yazılım katmanında değil; doğrudan araç üzerindeki Donanımsal Güvenlik Modülü (HSM) ve TPM 2.0 yongasında fiziksel olarak izole edilmiş güvenli bellek alanlarında saklanır.",
-            "Merkezi işlem ünitesi (NVIDIA Jetson AGX Orin / x86_64), sistem açılışında Güvenli Önyükleme (Secure Boot) mimarisiyle çalışır. Çekirdek yazılımı, sürücüler ve otonomi binary dosyaları Trustia'nın özel RSA-4096 kök anahtarıyla doğrulanmadan sistemin ayağa kalkmasına izin verilmez.",
+            "Desteklenen merkezi işlem üniteleri (Horizon Journey 6P / NVIDIA Jetson AGX Orin / Endüstriyel x86_64), sistem açılışında Güvenli Önyükleme (Secure Boot) ve HMAC-SHA256 donanım kilidi mimarisiyle çalışır. Çekirdek yazılımı, sürücüler ve kapalı kutu (.pyc) otonomi paketleri doğrulanmadan sistemin ayağa kalkmasına izin verilmez.",
             "Fiziksel bellek kopyalama (cold boot), JTAG hata ayıklama portu istismarları ve yan kanal saldırılarına karşı donanım tabanlı kripto-koruma tedbirleri aktiftir."
           ]
         },
@@ -375,7 +375,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "3. Hardware Security Module (HSM / TPM 2.0) & Secure Boot Chain",
           items: [
             "Symmetric and asymmetric cryptographic keys, root certificates, and SecOC authentication tokens are isolated within physical Hardware Security Modules (HSM) and TPM 2.0 cryptoprocessors.",
-            "Onboard compute systems (NVIDIA Jetson AGX Orin / x86_64) initiate via a hardware-anchored Secure Boot chain. Kernel images, device drivers, and autonomy binaries must pass RSA-4096 signature verification before platform execution.",
+            "Supported onboard compute architectures (Horizon Journey 6P / NVIDIA Jetson AGX Orin / Industrial x86_64) initiate via a hardware-anchored Secure Boot and HMAC-SHA256 licensing chain. Kernel images, device drivers, and closed-box (.pyc) autonomy packages must pass cryptographic signature verification before platform execution.",
             "Firmware assets are hardened against cold-boot attacks, invasive JTAG probing, and hardware memory extraction."
           ]
         },
@@ -773,8 +773,8 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "2. 3D LiDAR Geometrik Verisi ve Çevresel Kameraların Anonimleştirilmesi",
           items: [
-            "Trustia Seviye-4 otonomi çekirdeğinin birincil algılama sensörü olan 3D LiDAR (Ouster OS2-128); çevreyi geometrik mesafe noktaları (X, Y, Z koordinatları ve yansıma yoğunluğu) olarak haritalandırır. LiDAR nokta bulutları kişisel kimlik, biyometrik veri veya araç plakası gibi doğrudan kişiyi tanımlayan hiçbir veri içermez.",
-            "Aracın çevresel görüşünü sağlayan 4x Sony HDR GMSL2 kameralar tarafından kaydedilen görüntüler; araç üzerindeki uç işlemcide (Edge AI) gerçek zamanlı olarak işlenir. Yayaların yüzleri ve trafikteki diğer araçların tescil plakaları, görüntü belleğe yazılmadan önce yerel anonimleştirme algoritmalarıyla otomatik olarak bulanıklaştırılır (Edge Blurring).",
+            "Trustia Seviye-4 otonomi çekirdeğinin Donanım Soyutlama Katmanı (HAL) üzerinden işlediği 3D LiDAR (Hesai / Ouster / Livox) akışları; çevreyi geometrik mesafe noktaları (X, Y, Z koordinatları ve yansıma yoğunluğu) olarak haritalandırır. LiDAR nokta bulutları kişisel kimlik, biyometrik veri veya araç plakası gibi doğrudan kişiyi tanımlayan hiçbir veri içermez.",
+            "Aracın çevresel görüşünü sağlayan GMSL2 HDR kameralar (CalmDrive 3.0 / Sony HDR) tarafından alınan görüntüler; araç üzerindeki uç işlemcide (Edge AI) gerçek zamanlı olarak işlenir. Yayaların yüzleri ve trafikteki diğer araçların tescil plakaları belleğe yazılmadan önce yerel anonimleştirme algoritmalarıyla bulanıklaştırılır (Edge Blurring) ve KVKK m.9 Yurt Dışı Veri Kalkanı ile tüm telemetri verilerinin Türkiye sınırları içindeki sunucularda kalması zorunlu tutulur.",
             "Bulanıklaştırılmamış ham görsel veriler hiçbir koşulda araç dışındaki genel ağlara aktarılmaz ve ticari pazarlama amacıyla kullanılamaz."
           ]
         },
@@ -799,7 +799,7 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Statutory Data Protection, GDPR & Autonomous Vehicle Telemetry Privacy Policy",
       badge: "6698 KVKK & GDPR",
-      subBadge: "V2X PRIVACY v4.2",
+      subBadge: "V2X PRIVACY v4.3",
       category: "DATA PRIVACY",
       docNo: "TR-DATA-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -816,8 +816,8 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "2. 3D LiDAR Geometric Anonymity & Real-Time Edge Blurring",
           items: [
-            "Our primary spatial perception engine utilizes Ouster OS2-128 3D LiDAR, generating geometric point clouds (Cartesian X, Y, Z coordinates with infrared reflectivity intensity). Spatial LiDAR clouds inherently contain zero facial biometrics or readable vehicle registration plates.",
-            "Secondary optical streams from 4x Sony HDR GMSL2 surround cameras undergo real-time edge inference on local hardware accelerators. Automated edge blurring algorithms systematically anonymize facial contours and license plates prior to memory serialization.",
+            "Our primary spatial perception engine processes 3D LiDAR streams (Hesai / Ouster / Livox) via the Hardware Abstraction Layer (HAL), generating geometric point clouds (Cartesian X, Y, Z coordinates with infrared reflectivity intensity). Spatial LiDAR clouds inherently contain zero facial biometrics or readable vehicle registration plates.",
+            "Secondary optical streams from GMSL2 HDR surround cameras undergo real-time edge inference on local hardware accelerators. Automated edge blurring algorithms systematically anonymize facial contours and license plates prior to memory serialization, while the KVKK Art. 9 Sovereign Data Shield enforces strict in-country telemetry residency.",
             "Unredacted raw optical feeds are never broadcast over external commercial networks or commodified for marketing intelligence."
           ]
         },
@@ -846,7 +846,7 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "1.307 + 21 Testlik Sürekli Doğrulama, SIL/HIL Simülasyonu ve Otomotiv Kalite Standardı",
       badge: "1.328 TEST: %100",
-      subBadge: "KALİTE GÜVENCESİ v4.2",
+      subBadge: "KALİTE GÜVENCESİ v4.3",
       category: "DOĞRULAMA & KALİTE",
       docNo: "TR-QA-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -865,7 +865,7 @@ export const policyData: Record<string, PolicyContent> = {
           items: [
             "Doğrulama süreçlerimiz, otomotiv endüstrisinin en katı V-Model prensiplerine uygun olarak iki kademeli yürütülür:",
             "Yazılım Döngüde (Software-in-the-Loop - SIL): Webots ve yüksek çözünürlüklü 3D simülasyon ortamlarında, kentsel kavşaklar, ani yola fırlayan yayalar, tünel giriş-çıkışları ve kötü hava koşulları dahil binlerce sentetik senaryoda algoritmik karar kararlılığı test edilir.",
-            "Donanım Döngüde (Hardware-in-the-Loop - HIL): Doğrudan araç üzerinde kullanılan NVIDIA Jetson Orin ve CAN-FD test bench ünitelerine 100 Hz frekansta sinyal enjekte edilerek aktüatör gecikmeleri, tork sınırları ve 5ms donanımsal devralma kesmeleri fiziksel donanım üzerinde doğrulanır."
+            "100 Hz Sanal CAN-FD Döngüsü & PoC Donanım Doğrulaması (SIL/HIL): 100 Hz frekansta deterministik CAN-FD mesaj enjeksiyonu, aktüatör gecikme sınırları ve 5ms devralma kesmeleri önce sanal CAN veri yolu simülasyonunda doğrulanır; ardından PoC entegrasyon sürecinde iş ortağının araç bilgisayarı (Horizon J6P / NVIDIA Orin) ve şasi test üniteleri üzerinde fiziksel olarak kalibre edilir."
           ]
         },
         {
@@ -889,7 +889,7 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "1,307 + 21 Automated Verification Suites, SIL/HIL Simulation & Automotive QA Standard",
       badge: "1,328 TESTS: 100%",
-      subBadge: "QA STANDARD v4.2",
+      subBadge: "QA STANDARD v4.3",
       category: "VERIFICATION & QA",
       docNo: "TR-QA-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -908,7 +908,7 @@ export const policyData: Record<string, PolicyContent> = {
           items: [
             "Quality assurance executes across a structured V-model development pipeline:",
             "Software-in-the-Loop (SIL): High-fidelity 3D simulation environments model thousands of edge-case scenarios—spanning complex intersections, sudden pedestrian crossings, tunnel lighting shifts, and extreme weather occlusions.",
-            "Hardware-in-the-Loop (HIL): Target NVIDIA Jetson Orin and vehicle CAN-FD bench hardware receive synthetic 100 Hz bus traffic, validating microsecond message latency, actuator torque limits, and 5ms physical takeover relays under real electrical loads."
+            "100 Hz Virtual CAN-FD Loop & Partner PoC HIL Calibration: Deterministic 100 Hz CAN-FD frame injection, actuator torque limits, and 5ms takeover interrupts are verified in virtual bus simulation (SIL) and subsequently calibrated on partner-supplied compute nodes (Horizon J6P / NVIDIA Orin) and chassis benches during the PoC integration protocol."
           ]
         },
         {
@@ -936,7 +936,7 @@ export const policyData: Record<string, PolicyContent> = {
     tr: {
       title: "Kurumsal Gizlilik, Bilgi Güvenliği ve Karşılıklı Sır Saklama (NDA) Esasları",
       badge: "KURUMSAL GİZLİLİK",
-      subBadge: "NDA ESASLARI v4.2",
+      subBadge: "NDA ESASLARI v4.3",
       category: "KURUMSAL GİZLİLİK",
       docNo: "TR-CONF-2026/Rev.4",
       effectiveDate: "2026-10-26",
@@ -979,7 +979,7 @@ export const policyData: Record<string, PolicyContent> = {
     en: {
       title: "Corporate Confidentiality, Information Security & Non-Disclosure (NDA) Principles",
       badge: "CONFIDENTIALITY",
-      subBadge: "NDA CHARTER v4.2",
+      subBadge: "NDA CHARTER v4.3",
       category: "CONFIDENTIALITY",
       docNo: "TR-CONF-2026/Rev.4",
       effectiveDate: "2026-10-26",

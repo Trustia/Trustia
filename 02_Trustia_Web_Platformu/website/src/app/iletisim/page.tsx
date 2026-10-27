@@ -94,8 +94,8 @@ export default function ContactPage() {
                 <div className="flex items-start gap-2.5">
                   <MapPin className="w-4 h-4 text-[#E5D6BC] shrink-0 mt-0.5" />
                   <div>
-                    <div className="font-semibold text-white">İTO BTM Kampüsü</div>
-                    <div className="text-[#d6cebf]/80 text-[11px]">İTO BTM Fulya Kampüsü, Şişli / İstanbul</div>
+                    <div className="font-semibold text-white">İTO BTM & Teknopark İstanbul</div>
+                    <div className="text-[#d6cebf]/80 text-[11px]">İTO BTM Fulya Kampüsü (Şişli) & Teknopark İstanbul Cube Incubation (Pendik) / İstanbul</div>
                   </div>
                 </div>
 
