@@ -34,87 +34,87 @@ export default function RobotaxiPage() {
       metric: "240m Menzil • 0.05m Hassasiyet • <15ms Uçtan Uca Gecikme"
     },
     lidar: {
-      tag: lang === "tr" ? "BİRİNCİL 3D SLAM, KALDIRIM TAŞI & DERİNLİK" : "PRIMARY 3D SLAM, CURB DETECTION & DEPTH",
-      title: lang === "tr" ? "Ouster OS2-128 Rev 7 3D LiDAR (Tavan Montaj)" : "Ouster OS2-128 Rev 7 3D LiDAR (Roof Mount)",
+      tag: lang === "tr" ? "BİRİNCİL 3D SLAM, KALDIRIM TAŞI & DERİNLİK (HAL SÜRÜCÜSÜ)" : "PRIMARY 3D SLAM, CURB DETECTION & DEPTH (HAL DRIVER)",
+      title: lang === "tr" ? "3D LiDAR Nokta Bulutu Arayüzü (Hesai AT128 / Ouster OS2-128 / Robosense)" : "3D LiDAR Point-Cloud Interface (Hesai / Ouster / Robosense)",
       desc: lang === "tr"
-        ? "Tavan merkezine entegre 128 kanal ile saniyede 2.62 milyon nokta üretir. GPS'siz tünel ve kanyonlarda 3D NDT SLAM ile santimetre hassasiyetinde konumlama ve silinmiş şeritlerde kaldırım taşı (8-28 cm) algılama icra eder."
-        : "Roof-mounted 128-channel solid-state LiDAR generating 2.62M points/sec for GPS-denied 3D NDT SLAM localization and 3D curb boundary detection.",
-      metric: "240 Metre • 128 Kanal • 0.1° Açısal Çözünürlük • UDP Gbit Ethernet"
+        ? "Araç üzerindeki 3D LiDAR sensöründen gelen nokta bulutlarını UDP/Ethernet üzerinden okur. GPS'siz tünel ve kanyonlarda 3D NDT SLAM ile santimetre hassasiyetinde konumlama ve silinmiş şeritlerde kaldırım taşı (8-28 cm) algılama icra eder."
+        : "Ingests 3D LiDAR point clouds over UDP/Ethernet for GPS-denied 3D NDT SLAM localization and 8-28 cm 3D curb boundary detection.",
+      metric: "Hesai / Ouster / Livox Uyumu • PTP <1 µs • UDP Gbit Ethernet"
     },
     radar: {
-      tag: lang === "tr" ? "TÜM HAVA KOŞULLARI VE DOPPLER HIZ" : "ALL-WEATHER DOPPLER VELOCITY",
-      title: lang === "tr" ? "Continental ARS 408-21 77GHz Otomotiv Radarı" : "Continental ARS 408-21 77GHz Automotive Radar",
+      tag: lang === "tr" ? "TÜM HAVA KOŞULLARI VE DOPPLER HIZ (HAL SÜRÜCÜSÜ)" : "ALL-WEATHER DOPPLER VELOCITY (HAL DRIVER)",
+      title: lang === "tr" ? "77GHz Otomotiv Radarı Arayüzü (Continental ARS408 / Bosch 4D Radar)" : "77GHz Automotive Radar Interface (Continental / Bosch 4D)",
       desc: lang === "tr"
-        ? "Yoğun sis, sağanak yağmur, kar ve toza tam nüfuz eden doğrudan Doppler radyal hız tespiti. 250 metreye kadar öndeki araç ve hareketli cisimlerin hız vektörlerini anlık çıkarır."
-        : "Penetrates dense fog, heavy rain, snow, and dust with direct Doppler radial velocity measurements up to 250 meters.",
+        ? "Yoğun sis, sağanak yağmur, kar ve toza tam nüfuz eden doğrudan Doppler radyal hız verilerini CAN-FD üzerinden okur; 250 metreye kadar öndeki araç ve hareketli cisimlerin hız vektörlerini ESKF füzyonuna aktarır."
+        : "Ingests direct Doppler radial velocity vectors over CAN-FD up to 250 meters for all-weather obstacle tracking.",
       metric: "250 Metre Menzil • ±0.1 km/s Hız Hassasiyeti • CAN-FD Veri Yolu"
     },
     camera: {
-      tag: lang === "tr" ? "360° ÇEVRESEL GÖRSEL ALGILAMA & SOTIF" : "360° SURROUND VISION & SOTIF",
-      title: lang === "tr" ? "4x Leopard Sony IMX390 HDR GMSL2 Kamera + CalmCar Hakemi" : "4x Leopard Sony IMX390 HDR GMSL2 Camera + CalmCar Arbiter",
+      tag: lang === "tr" ? "360° ÇEVRESEL GÖRSEL ALGILAMA & SOTIF HAKEMİ" : "360° SURROUND VISION & SOTIF ARBITER",
+      title: lang === "tr" ? "GMSL2 HDR Kamera Akışı & CalmCar Çift-Sensör Hakemi" : "GMSL2 HDR Camera Stream & CalmCar Cross-Sensor Arbiter",
       desc: lang === "tr"
-        ? "Ön, sol, sağ ve arka hatlara konumlandırılmış 120° FOV lensler ile 120 dB süper dinamik aralık. ISO 21448 SOTIF gözetmeni kamera algısını 3D LiDAR ile çapraz doğrulayarak hayalet frenlemeyi (Phantom Brake) önler."
-        : "Synchronized 120° FOV surround cameras with 120 dB dynamic range, cross-validated by ISO 21448 SOTIF and 3D LiDAR to prevent phantom braking.",
-      metric: "120 dB HDR • 60 FPS Senkron • IP67 Muhafaza • KVKK m.9 Veri Kalkanı"
+        ? "Araç üzerindeki mevcut kamera algı çıktısını (CalmDrive 3.0 / Sony IMX390 GMSL2) ISO 21448 SOTIF gözetmeni ve 3D LiDAR derinlik verisi ile çapraz doğrulayarak yansıma/gölge kaynaklı hayalet frenlemeyi (Phantom Brake) sıfırlar."
+        : "Cross-validates vehicle camera perception streams (CalmDrive / GMSL2) with 3D LiDAR depth under ISO 21448 SOTIF to eliminate phantom braking.",
+      metric: "0 Hayalet Frenleme • ISO 21448 SOTIF • KVKK m.9 Veri Kalkanı"
     },
     compute: {
-      tag: lang === "tr" ? "MERKEZİ HESAPLAMA VE AKTÜATÖR KÖPRÜSÜ" : "AI COMPUTE & ACTUATION BRIDGE",
-      title: lang === "tr" ? "NVIDIA Jetson AGX Orin 64GB + 100 Hz CAN-FD Köprüsü" : "NVIDIA Jetson AGX Orin 64GB + 100 Hz CAN-FD Bridge",
+      tag: lang === "tr" ? "DONANIMDAN BAĞIMSIZ OTONOM BEYİN & CAN-FD KÖPRÜSÜ" : "HARDWARE-AGNOSTIC AI COMPUTE & CAN-FD BRIDGE",
+      title: lang === "tr" ? "Horizon Journey 6P (560 TOPS) / NVIDIA Orin / x86_64 + 100 Hz CAN-FD" : "Horizon Journey 6P (560 TOPS) / NVIDIA Orin / x86_64 + 100 Hz CAN-FD",
       desc: lang === "tr"
-        ? "275/560 TOPS merkezi otonom yapay zeka gücü. Direksiyon (EPS) ve fren/gaz (i-Booster + yedek ESC/EPB) komutlarını şasi CAN-FD hattına 100 Hz (1.4 ms) frekansta deterministik olarak aktarır."
-        : "Central AI compute interfacing directly with vehicle CAN-FD at 100 Hz (1.4 ms) cyclic rate with 5ms hard-interrupt safety fallback and redundant braking.",
-      metric: "275/560 TOPS INT8 • 100 Hz CAN-FD • 5ms Devralma • UN R157 DSSAD"
+        ? "Müşteri aracındaki merkezi işlemci üzerinde çalışır. Direksiyon (0x1A0 EPS) ve fren/gaz (0x1A1 i-Booster + yedek ESC/EPB) komutlarını şasi CAN-FD hattına 100 Hz (1.4 ms) frekansta deterministik olarak aktarır."
+        : "Executes on host vehicle compute, transmitting steering (0x1A0 EPS) and redundant brake (0x1A1 i-Booster + ESC/EPB) commands over 100 Hz CAN-FD.",
+      metric: "Horizon J6P & Orin Uyumu • 100 Hz CAN-FD • 5ms Devralma • UN R157 DSSAD"
     }
   };
 
   const specs = [
     {
       icon: Cpu,
-      title: lang === "tr" ? "Merkezi AI İşlemci" : "Central AI Compute",
-      val: "NVIDIA Jetson AGX Orin 64GB",
-      sub: "275 TOPS INT8 • Seeed J501 Taşıyıcı Kart"
+      title: lang === "tr" ? "Desteklenen İşlemci Mimarileri (SoC)" : "Supported Compute Platforms (SoC)",
+      val: "Horizon Journey 6P / NVIDIA Orin / x86_64",
+      sub: "CalmCar J6P (560 TOPS) • Jetson AGX Orin (275 TOPS) • Linux RT"
     },
     {
       icon: Eye,
-      title: lang === "tr" ? "Birincil 3D SLAM" : "Primary 3D SLAM",
-      val: "Ouster OS2-128 Rev 7 LiDAR",
-      sub: "128 Kanal • 240m Menzil • 2.62M Nokta/sn"
+      title: lang === "tr" ? "Birincil 3D LiDAR Sürücü Uyumu" : "Primary 3D LiDAR Driver Support",
+      val: "Hesai AT128 / Ouster OS2-128 / Robosense",
+      sub: "UDP Ethernet Nokta Bulutu • IEEE 1588v2 PTP Motion Deskewing"
     },
     {
       icon: Layers,
-      title: lang === "tr" ? "Kör Nokta & Yaya LiDAR" : "Blindspot & Pedestrian LiDAR",
-      val: "2x Livox Mid-360 LiDAR",
-      sub: "360°x59° Ultra Geniş Açı • 8-28 cm Kaldırım Algılama"
+      title: lang === "tr" ? "Kör Nokta & Kaldırım (Curb) Algılama" : "Blindspot & Curb Detection",
+      val: "Livox Mid-360 & Katı Hal (Solid-State) LiDAR",
+      sub: "360° Yakın Çevre Tarama • 8-28 cm 3D Kaldırım Taşı Koridoru"
     },
     {
       icon: Radio,
-      title: lang === "tr" ? "360° Görsel Algılama" : "360° HDR Vision",
-      val: "4x Leopard Sony IMX390 GMSL2",
-      sub: "120 dB Dinamik Aralık • ISO 21448 SOTIF & KVKK Kalkanı"
+      title: lang === "tr" ? "Çift-Sensör Görsel Hakem (SOTIF)" : "Cross-Sensor Vision Arbiter (SOTIF)",
+      val: "CalmDrive 3.0 & GMSL2 HDR Kamera Uyumu",
+      sub: "Kamera + 3D LiDAR Çapraz Doğrulama • KVKK m.9 Veri Kalkanı"
     },
     {
       icon: Gauge,
-      title: lang === "tr" ? "Kötü Hava Radarı" : "All-Weather Radar",
-      val: "2x Continental ARS 408-21 77GHz",
-      sub: "250m Menzil • Sis, Şiddetli Yağmur ve Kar Filtresi"
+      title: lang === "tr" ? "77GHz Radar Füzyon Arayüzü" : "77GHz Radar Fusion Interface",
+      val: "Continental ARS408 / Bosch 4D Radar",
+      sub: "CAN-FD Doppler Hız Vektörü • Sis, Yağmur ve Kar Filtresi"
     },
     {
       icon: Activity,
-      title: lang === "tr" ? "Santimetre Konumlandırma" : "Centimeter Positioning",
-      val: "Septentrio mosaic-go + 400Hz ESKF",
-      sub: "GNSS-Denied 3D NDT SLAM • ±4.2 cm Yörünge Hassasiyeti"
+      title: lang === "tr" ? "GNSS-Denied Konumlandırma Motoru" : "GNSS-Denied Localization Engine",
+      val: "3D NDT Pose-Graph SLAM + 400Hz ESKF",
+      sub: "Tünel ve Kanyonlarda Uydu Sinyalsiz ±4.2 cm Yörünge Hassasiyeti"
     },
     {
       icon: Zap,
-      title: lang === "tr" ? "CAN-FD & Siber Kalkan" : "CAN-FD & Cyber Shield",
-      val: "100 Hz CAN-FD + UN R155 IDPS",
-      sub: "1.4 ms Mesaj İletimi • EPS & Çift Yedekli i-Booster/ESC"
+      title: lang === "tr" ? "Şasi Drive-by-Wire & Siber Kalkan" : "Chassis Drive-by-Wire & Cyber Shield",
+      val: "100 Hz CAN-FD (0x1A0 EPS / 0x1A1 Fren) + IDPS",
+      sub: "1.4 ms Mesaj İletimi • UN R155 IDPS • Çift Yedekli i-Booster/ESC"
     },
     {
       icon: Lock,
-      title: lang === "tr" ? "ASIL-D & IEEE 2846 RSS" : "ASIL-D & IEEE 2846 RSS",
-      val: "20ms Öz-Denetim • 50ms Watchdog",
-      sub: "1.5 m/s² Sağa Çekme (MRM) • 5ms Sürücü Devri"
+      title: lang === "tr" ? "ASIL-D Emniyet & IEEE 2846 RSS" : "ASIL-D Safety & IEEE 2846 RSS",
+      val: "20ms Öz-Denetim • 50ms Watchdog • MRM",
+      sub: "1.5 m/s² Kontrollü Sağa Çekme • <=5ms Fiziksel Sürücü Devri"
     }
   ];
 
@@ -264,10 +264,10 @@ export default function RobotaxiPage() {
             <div className="flex flex-wrap items-center gap-1.5">
               {[
                 { id: "all" as const, label: lang === "tr" ? "TÜMÜ (360°)" : "ALL (360°)" },
-                { id: "lidar" as const, label: "OUSTER 128K LİDAR" },
+                { id: "lidar" as const, label: "3D LİDAR (HAL)" },
                 { id: "radar" as const, label: "77GHz RADAR" },
-                { id: "camera" as const, label: "4x HDR KAMERA" },
-                { id: "compute" as const, label: "ORIN & CAN-FD" }
+                { id: "camera" as const, label: "KAMERA & SOTIF" },
+                { id: "compute" as const, label: "J6P / ORIN & CAN-FD" }
               ].map(tab => (
                 <button
                   key={tab.id}
@@ -399,16 +399,16 @@ export default function RobotaxiPage() {
               {/* Callout Labels with Connecting Hairlines */}
               <g fontFamily="monospace" fontSize="8" fill="#94a3b8">
                 <path d="M 305 168 L 380 145 L 440 145" stroke="rgba(56,189,248,0.5)" strokeWidth="0.8" />
-                <text x="445" y="148" fill="#38bdf8" fontWeight="bold">OUSTER OS2-128 (TAVAN)</text>
+                <text x="445" y="148" fill="#38bdf8" fontWeight="bold">3D LIDAR (HESAI / OUSTER 128K)</text>
 
                 <path d="M 283 134 L 210 120 L 150 120" stroke="rgba(56,189,248,0.5)" strokeWidth="0.8" />
-                <text x="145" y="123" textAnchor="end" fill="#38bdf8">2x LIVOX MID-360 (TAMPON)</text>
+                <text x="145" y="123" textAnchor="end" fill="#38bdf8">KÖR NOKTA &amp; BORDÜR LIDAR</text>
 
                 <path d="M 312 201 L 380 215 L 440 215" stroke="rgba(52,211,153,0.5)" strokeWidth="0.8" />
-                <text x="445" y="218" fill="#34d399" fontWeight="bold">JETSON ORIN + 100Hz CAN-FD</text>
+                <text x="445" y="218" fill="#34d399" fontWeight="bold">J6P / ORIN + 100Hz CAN-FD</text>
 
                 <path d="M 277 170 L 210 190 L 150 190" stroke="rgba(245,158,11,0.5)" strokeWidth="0.8" />
-                <text x="145" y="193" textAnchor="end" fill="#f59e0b">4x SONY IMX390 GMSL2 HDR</text>
+                <text x="145" y="193" textAnchor="end" fill="#f59e0b">GMSL2 KAMERA &amp; SOTIF HAKEMİ</text>
               </g>
             </svg>
 
@@ -434,15 +434,20 @@ export default function RobotaxiPage() {
           </div>
         </div>
 
-        {/* 4. Turnkey Sensor & Hardware Matrix */}
+        {/* 4. Hardware Abstraction Layer (HAL) & Supported Sensor Matrix */}
         <div className="space-y-4 pt-4 border-t border-[#E5D6BC]/15">
           <div className="pb-2 border-b border-[#E5D6BC]/15">
             <div className="text-[10px] font-mono text-[#E5D6BC] font-semibold tracking-wider uppercase">
-              // {lang === "tr" ? "DONANIM VE SENSÖR MİMARİSİ" : "HARDWARE & SENSOR FUSION"}
+              // {lang === "tr" ? "DONANIM SOYUTLAMA KATMANI (HAL) // SAF YAZILIM & SDK UYUMLULUK MATRİSİ" : "HARDWARE ABSTRACTION LAYER (HAL) // PURE SOFTWARE & SDK COMPATIBILITY"}
             </div>
             <h2 className="text-base sm:text-lg font-bold text-white tracking-tight">
-              {lang === "tr" ? "27 Parçalık Seviye 4 Donanım ve Aktüatör Seti" : "27-Item Level-4 Turnkey Sensor & Actuator Suite"}
+              {lang === "tr" ? "Desteklenen Sensör, İşlemci ve Şasi Arayüzleri (Donanımdan Bağımsız Mimari)" : "Supported Sensor, Compute & Chassis Interfaces (Hardware-Agnostic Stack)"}
             </h2>
+            <p className="text-[11px] text-[#d6cebf]/85 pt-1">
+              {lang === "tr"
+                ? "Not: Trustia fiziksel donanım satıcısı değildir; araç üreticisinin (OEM) veya filo işletmecisinin (SAIC Maxus MIFA 7 / Hyundai Ioniq 5) mevcut sensör, işlemci ve CAN-FD aktüatörlerine tak-çalıştır entegre olan %100 Saf Otonomi Yazılım Çekirdeği ve Kapalı Kutu (.pyc) SDK sağlayıcısıdır."
+                : "Note: Trustia is a 100% pure software and closed-box (.pyc) SDK provider, interfacing directly with the OEM or fleet operator's existing vehicle sensors, compute, and CAN-FD actuators."}
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 divide-y divide-white/10">

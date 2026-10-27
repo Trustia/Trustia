@@ -877,10 +877,10 @@ export const policyData: Record<string, PolicyContent> = {
           ]
         },
         {
-          heading: "4. Saha Validasyonu ve Bilişim Vadisi Test Pisti Güvencesi",
+          heading: "4. Sanal Doğrulama (SIL) ve İş Ortağı PoC Kapalı Pist Saha Kabul Protokolü",
           items: [
-            "Simülasyon ve bench testlerini başarıyla tamamlayan yazılım sürümleri; Bilişim Vadisi Gebze 1.5 km kapalı test pisti ve Hacettepe Teknokent otonom sürüş sahasında gerçek araç üzerinde doğrulanır.",
-            "Gerçek araç testlerinde; SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 elektrikli platformları üzerinde dinamik şerit değiştirme, acil durum frenleme (E-Stop), sağa çekme (MRM) ve GPS kesintili tünel seyrüsefer manevraları tekrarlanarak onaylanır.",
+            "1.307 çekirdek testi ve 21 Robotaksi SDK testinin tamamı (%100) sanal simülasyon (Software-in-the-Loop - SIL) ortamında sıfır hata ile doğrulanmıştır; fiziksel araç saha kabul testleri ise OEM ve filo iş ortaklarımızın temin ettiği araç ve kapalı test pistlerinde 60 günlük PoC protokolüyle yürütülür.",
+            "PoC saha kabul aşamasında; iş ortağına ait SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 elektrikli platformlarının CAN-FD aktüatörleri üzerinde dinamik şerit takibi, acil durum frenleme (E-Stop), sağa çekme (MRM) ve GPS kesintili tünel seyrüsefer manevraları kalibre edilerek doğrulanır.",
             "Kalite güvencemiz; simülasyondan fiziksel asfalta kadar her kilometrede sıfır hata prensibini tavizsiz sürdürmektedir."
           ]
         }
@@ -920,9 +920,9 @@ export const policyData: Record<string, PolicyContent> = {
           ]
         },
         {
-          heading: "4. Proving Grounds Field Validation & Proving Grounds Trials",
+          heading: "4. Virtual Verification (SIL) & Partner PoC Proving Grounds Protocol",
           items: [
-            "Software builds advancing through SIL/HIL gates undergo physical trials at the Bilisim Vadisi 1.5 km closed autonomous test track and Hacettepe Teknokent proving grounds.",
+            "All 1,307 core tests and 21 Robotaxi SDK tests are 100% verified in deterministic Software-in-the-Loop (SIL) simulation; physical vehicle acceptance trials are executed on partner-supplied chassis and closed proving grounds under a 60-day PoC protocol.",
             "Trials validate real-world drive-by-wire actuation across SAIC Maxus MIFA 7 and Hyundai Ioniq 5 electric chassis—verifying dynamic obstacle evasion, Minimal Risk Maneuver (MRM) pullover stops, and GNSS-denied tunnel traversals.",
             "Trustia's QA standard enforces absolute zero-failure engineering from digital twin simulation to physical tarmac execution."
           ]

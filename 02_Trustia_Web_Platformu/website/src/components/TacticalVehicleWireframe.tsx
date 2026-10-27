@@ -14,45 +14,45 @@ export interface TacticalCallout {
 export const MIFA7_CALLOUTS: TacticalCallout[] = [
   {
     id: "lidar",
-    name: "OUSTER OS2-128 3D LIDAR",
+    name: "3D LIDAR (HESAI / OUSTER 128-KANAL)",
     at: [0, 1950, 800], // Center of aerodynamic roof pod
     dir: [0, 1.2, 0.3],
-    spec: "240m Menzil • 3D NDT SLAM • 2.62M Nokta/sn",
+    spec: "240m Menzil • 3D NDT SLAM • IEEE 1588v2 PTP Deskewing",
   },
   {
     id: "livox",
-    name: "2x LIVOX MID-360 KÖR NOKTA",
+    name: "KÖR NOKTA & BORDÜR LIDAR ARAYÜZÜ",
     at: [-740, 520, 2410], // Left front bumper corner intake
     dir: [-0.9, 0.4, 1.1],
-    spec: "360° x 59° FOV • Ön Tampon Yakın Mesafe Yaya & Bordür",
+    spec: "360° x 59° FOV • 8-28 cm Kaldırım Taşı & Yaya Koridoru",
   },
   {
     id: "canfd",
-    name: "100Hz CAN-FD DRIVE-BY-WIRE",
+    name: "100Hz CAN-FD DRIVE-BY-WIRE KÖPRÜSÜ",
     at: [-420, 650, 1200], // EPS steering rack & i-Booster
     dir: [0, -0.6, 1.2],
     spec: "Şasi EPS & i-Booster • 1.4 ms Gecikme • 5 ms Devralma Kesmesi",
   },
   {
     id: "compute",
-    name: "560 TOPS MERKEZİ OTONOM BEYİN",
+    name: "HORIZON J6P / ORIN OTONOM SÜRÜŞ BEYNİ",
     at: [0, 320, 400], // Underfloor electronics hub
     dir: [0.9, -0.7, -0.6],
-    spec: "NVIDIA Orin & Horizon BPU • 4TB NVMe Kara Kutu (EDR)",
+    spec: "CalmCar J6P (560 TOPS) / NVIDIA Orin / x86_64 • UN R157 DSSAD",
   },
   {
     id: "vision",
-    name: "4x SONY IMX390 HDR KAMERA",
+    name: "360° GMSL2 HDR KAMERA & SOTIF HAKEMİ",
     at: [0, 1860, 1220], // Roof pod front twin camera cowlings
     dir: [0, 1.1, 0.8],
-    spec: "120 dB Dinamik Aralık • 60 FPS Senkronize FSYNC",
+    spec: "Kamera + 3D LiDAR Çapraz Doğrulama • KVKK m.9 Veri Kalkanı",
   },
   {
     id: "safety",
-    name: "ISO 26262 ASIL-D WATCHDOG",
+    name: "ISO 26262 ASIL-D WATCHDOG & MRM",
     at: [0, 450, -200], // Central ASIL-D safety arbiter
     dir: [-1.1, 0.5, 0.3],
-    spec: "50 ms Donanımsal Watchdog • 1.5 m/s² Kontrollü MRM Sağa Çekme",
+    spec: "50 ms Watchdog • 1.5 m/s² Kontrollü Sağa Çekme (MRM)",
   },
 ];
 
@@ -171,11 +171,11 @@ export default function TacticalVehicleWireframe({
       const cosP = Math.cos(pitch),
         sinP = Math.sin(pitch);
 
-      // Scale model to fit canvas cleanly with comfortable margins & zoom
-      const baseScale = Math.min(width / (m.R * 2.3), height / (m.R * 1.6));
+      // Scale model to fit canvas cleanly with comfortable margins & zoom (prevent top callout clipping)
+      const baseScale = Math.min(width / (m.R * 2.45), height / (m.R * 1.85));
       const scale = baseScale * zoomRef.current;
       const cx = width / 2;
-      const cy = height * 0.50;
+      const cy = height * 0.56;
 
       // Project 3D point (X, Y, Z) into 2D Screen Space
       const project = (px: number, py: number, pz: number): [number, number, number] => {
@@ -407,8 +407,8 @@ export default function TacticalVehicleWireframe({
               key={lbl.id}
               className="absolute z-20 transition-all duration-150 transform -translate-x-1/2 -translate-y-full pointer-events-auto cursor-pointer"
               style={{
-                left: `${lbl.x}px`,
-                top: `${lbl.y - 24}px`,
+                left: `${Math.max(90, Math.min(lbl.x, (containerRef.current?.clientWidth || 800) - 90))}px`,
+                top: `${Math.max(34, lbl.y - 24)}px`,
               }}
               onClick={() => onSelectCallout?.(lbl.id)}
             >
