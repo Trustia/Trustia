@@ -1,4 +1,4 @@
-# TRUSTIA L4 ROBOTAXI ENTERPRISE SDK (v4.3 Enterprise)
+# TRUSTIA L4 ROBOTAXI ENTERPRISE SDK (v4.4 Enterprise)
 ### SAIC Maxus MIFA 7 & Hyundai E-GMP Otonom Sürüş Güvenlik Hakemi, Planlama ve Kontrol Kütüphanesi
 
 **Kurucu & Baş Mimar:** Murat Furkan Bayram (%100 Fikri Mülkiyet Sahibi)  
@@ -9,7 +9,7 @@
 
 ---
 
-## 1. MİMARİ GENEL BAKIŞ (21 ALT SİSTEM / 4.408 SATIR SDK + 19.414 SATIR ÇEKİRDEK)
+## 1. MİMARİ GENEL BAKIŞ (21 ALT SİSTEM / 203 DOSYA / 31.400+ SATIR / 1.345 TEST %100 YEŞİL)
 
 Bu SDK, SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 (E-GMP) elektrikli araç platformları ile ticari robotaksi filo operasyonları için geliştirilmiş **%100 Milli Deterministik Güvenlik Hakemi, Seyrüsefer, Planlama ve CAN-FD Aktüatör Kütüphanesidir**.
 

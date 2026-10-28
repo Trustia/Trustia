@@ -242,7 +242,7 @@ export default function RobotaxiShowcase() {
 
         {/* ========================================================
             3. VERIFIED BENCHMARKS (100% KUTUSUZ / PURE TYPOGRAPHY)
-            - 29.748+ LOC (198 Files), 1.307 + 21 Tests, 100 Hz CAN-FD, 5 ms Interrupt
+            - 31.400+ LOC (203 Files), 1.324 + 21 Tests, 100 Hz CAN-FD, 5 ms Interrupt
            ======================================================== */}
         <div className="pt-6 border-t border-[#E5D6BC]/20 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-[11px] text-[#E5D6BC]/70 uppercase tracking-wider">
@@ -260,10 +260,10 @@ export default function RobotaxiShowcase() {
                 YAZILIM ENVANTERİ
               </span>
               <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
-                29.748+
+                31.400+
               </div>
               <span className="text-[11px] text-[#E5D6BC]/70 font-sans block">
-                Satır Kod (198 Dosya • 20 L4 Modül)
+                Satır Kod (203 Dosya • 20 L4 Modül)
               </span>
             </div>
 
@@ -273,7 +273,7 @@ export default function RobotaxiShowcase() {
                 DOĞRULAMA KÜTÜPHANESİ
               </span>
               <div className="text-2xl sm:text-3xl font-black text-[#E4F80D] tracking-tight">
-                1.307 + 21
+                1.324 + 21
               </div>
               <span className="text-[11px] text-emerald-400 font-sans font-medium block">
                 %100 Yeşil Test (0 Hata / 0 Fail)

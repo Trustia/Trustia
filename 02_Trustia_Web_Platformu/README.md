@@ -1,6 +1,6 @@
 # 🌐 02_Trustia_Web_Platformu
 
-> **Trustia AI Kurumsal Web ve 3D Telemetri Platformu (Next.js 16 / React 19)**
+> **Trustia AI Kurumsal Web ve 3D Telemetri Platformu (Next.js 16 / React 19 — v4.4 Enterprise)**
 
 Bu dizin, [trustia.com.tr](https://trustia.com.tr) üzerinde yayında olan kurumsal web sitesini, Three.js 3D WebGL telemetri kokpitini ve uluslararası kurumsal politika portallarını barındırır.
 

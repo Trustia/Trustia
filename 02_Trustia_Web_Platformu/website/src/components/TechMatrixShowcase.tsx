@@ -87,12 +87,12 @@ export default function TechMatrixShowcase() {
       icon: Terminal,
       tag: "HIL VERIFICATION",
       metric: "1,307 Tests • %100 Success",
-      title: lang === "tr" ? "1.307 Testli Otomatik Doğrulama ve HIL Test Hattı" : "1,307-Suite Automated HIL Verification Pipeline",
+      title: lang === "tr" ? "1.324 Testli Otomatik Doğrulama ve HIL Test Hattı" : "1,307-Suite Automated HIL Verification Pipeline",
       desc: lang === "tr"
         ? "Sıfır yabancı kapalı kütüphane bağımlılığıyla derlenen 16.000 satırlık C++20 çekirdeği; her derlemede donanım döngülü (HIL) ve matematiksel simülasyon testlerinden %100 başarıyla geçmektedir."
         : "Over 16,000 lines of sovereign C++20 kernel code validated across continuous automated Hardware-in-the-Loop (HIL) test suites with zero regression and 100% test pass rate prior to production vehicle deployment.",
       details: [
-        { label: lang === "tr" ? "Doğrulama Kapsamı" : "Test Suites", val: "1.307 / 1.307 (%100 Geçti)" },
+        { label: lang === "tr" ? "Doğrulama Kapsamı" : "Test Suites", val: "1.324 / 1.324 (%100 Geçti)" },
         { label: lang === "tr" ? "Test Metodolojisi" : "Bench Methodology", val: "HIL (Hardware-in-the-Loop)" },
         { label: lang === "tr" ? "Kod Bütünlüğü" : "Kernel Integrity", val: "Regresyonsuz C++20 Çekirdek" },
       ],
@@ -164,7 +164,7 @@ export default function TechMatrixShowcase() {
               </div>
               <div className="pt-2 flex items-center justify-between">
                 <span className="text-slate-400">{lang === "tr" ? "Otomatik Doğrulama Testi" : "Automated Verification"}</span>
-                <span className="text-emerald-400 font-semibold">1.307 / 1.307 (%100 Başarı)</span>
+                <span className="text-emerald-400 font-semibold">1.324 / 1.324 (%100 Başarı)</span>
               </div>
             </div>
           </div>

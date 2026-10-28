@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi ticari Robotaksi filoları (SAIC Maxus MIFA 7, Hyundai Ioniq 5 E-GMP) ve kritik otonom platformlar için ISO 26262 ASIL-D, IEEE 2846 RSS, UN R155/R156/R157, 3D LiDAR SLAM ve 1.307 + 21 testle doğrulanmış Seviye-4 yerli otonomi yazılım platformudur. ASELSAN (#0050569) & STM Tedarikçi Kütüğü, OIN 2.0 (#f1e44576), AB Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli.",
+    "Trustia AI; şehir içi ticari Robotaksi filoları (SAIC Maxus MIFA 7, Hyundai Ioniq 5 E-GMP) ve kritik otonom platformlar için ISO 26262 ASIL-D, IEEE 2846 RSS, UN R155/R156/R157, 3D LiDAR SLAM ve 1.324 + 21 testle (1.345 test %100 yeşil) doğrulanmış Seviye-4 yerli otonomi yazılım platformudur. ASELSAN (#0050569) & STM Tedarikçi Kütüğü, OIN 2.0 (#f1e44576), AB Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli.",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Çift Amaçlı Otonomi Platformu",
     description:
-      "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye-4 Robotaksi, 29.748+ Satır Kod, 20 Uluslararası L4 Modülü ve 1.307 + 21 Doğrulanmış Test. ASELSAN (#0050569), STM, OIN 2.0 (#f1e44576), AB PIC: 861711529, EITUM: CUS15554, Teknopark İstanbul & İTO BTM.",
+      "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye-4 Robotaksi, 31.400+ Satır Kod, 203 Dosya, 21 Alt Sistem ve 1.345 Doğrulanmış Test (%100 Yeşil). ASELSAN (#0050569), STM, OIN 2.0 (#f1e44576), AB PIC: 861711529, EITUM: CUS15554, Teknopark İstanbul & İTO BTM.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TRUSTIA AI — Level 4 Autonomous Driving & Robotaxi SDK Core",
     description:
-      "Sovereign Level-4 autonomy stack (29,748+ LOC, 20 L4 modules, 1,307 + 21 verified tests) for SAIC Maxus MIFA 7 & Hyundai Ioniq 5. ASELSAN (#0050569), STM, OIN 2.0 & EU PIC: 861711529.",
+      "Sovereign Level-4 autonomy stack (31,400+ LOC, 203 files, 21 subsystems, 1,345 verified tests (100% Green)) for SAIC Maxus MIFA 7 & Hyundai Ioniq 5. ASELSAN (#0050569), STM, OIN 2.0 & EU PIC: 861711529.",
     images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
@@ -238,7 +238,11 @@ export default function RootLayout({
           "ISO/TR 23049 External HMI (eHMI) & Siren Detection",
           "3D LiDAR NDT SLAM & 400 Hz ESKF",
           "CARLA 0.9.15+ Synchronous Simulation Bridge",
-          "1307 Core Tests and 21 Robotaxi SDK Tests"
+          "1324 Core Tests and 21 Robotaxi SDK Tests (1345 Tests Total - 100% Green)",
+          "CenterPoint 3D BEV Deep Perception & nuScenes Catalog",
+          "7-DOF Extended Kalman Filter (EKF) Multi-Object Tracking",
+          "3-Second Kinematic Trajectory Prediction & Intent Forecaster",
+          "ISO 21448 SOTIF Runtime Plausibility & Phantom Brake Arbiter"
         ]
       },
       {
@@ -247,8 +251,8 @@ export default function RootLayout({
         "name": "TRUSTIA AI Autonomous Core & Robotaxi Enterprise SDK",
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
-        "description": "Seviye 4 yerli deterministik otonom sürüş, SAIC Maxus MIFA 7 / Hyundai Ioniq 5 Robotaksi SDK ve askeri robotik otonomi yazılım çekirdeği. 198 dosya, 29.748+ satır kod, 20 uluslararası L4 modülü, 1.307 + 21 doğrulanmış test, OIN 2.0 patent korumalı.",
-        "softwareVersion": "4.3.0-enterprise",
+        "description": "Seviye 4 yerli deterministik otonom sürüş, SAIC Maxus MIFA 7 / Hyundai Ioniq 5 Robotaksi SDK ve askeri robotik otonomi yazılım çekirdeği. 203 dosya, 31.400+ satır kod, 21 uluslararası L4 alt sistemi, 1.345 doğrulanmış test (%100 yeşil), OIN 2.0 patent korumalı.",
+        "softwareVersion": "4.4.0-enterprise",
         "offers": {
           "@type": "Offer",
           "price": "0",

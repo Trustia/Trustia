@@ -26,8 +26,8 @@ export default function SupportedPlatformsShowcase() {
       title: lang === "tr" ? "Seviye 4 Robotaksi Filoları" : "Level-4 Robotaxi Fleets",
       subtitle: lang === "tr" ? "Şehir İçi Otonom Yolcu Taşımacılığı (20 Modül)" : "Urban Autonomous Ride-Hailing (20 Modules)",
       desc: lang === "tr"
-        ? "Binek ve hafif ticari elektrikli araçlar için 29.748+ satırlık tak-çalıştır otonom sürüş beyni. Şehir içi karmaşık kavşaklar, Lanelet2 yaya geçitleri, trafik ışıkları ve yolcu çağırma operasyonları için geliştirilmiştir."
-        : "Plug-and-play 29,748+ LOC autonomous driving stack tailored for passenger EVs, navigating dense urban intersections, signalized corridors, and ride-hailing services.",
+        ? "Binek ve hafif ticari elektrikli araçlar için 31.400+ satırlık tak-çalıştır otonom sürüş beyni. Şehir içi karmaşık kavşaklar, Lanelet2 yaya geçitleri, trafik ışıkları ve yolcu çağırma operasyonları için geliştirilmiştir."
+        : "Plug-and-play 31,400+ LOC autonomous driving stack tailored for passenger EVs, navigating dense urban intersections, signalized corridors, and ride-hailing services.",
       specs: lang === "tr"
         ? [
             "100 Hz CAN-FD, Frenet Lattice & Kayan Ufuklu MPC",

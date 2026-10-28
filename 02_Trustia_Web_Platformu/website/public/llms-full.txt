@@ -1,14 +1,14 @@
-# TRUSTIA AI TECHNOLOGIES — COMPREHENSIVE ARCHITECTURAL & REGULATORY REFERENCE (v4.3 Enterprise)
+# TRUSTIA AI TECHNOLOGIES — COMPREHENSIVE ARCHITECTURAL & REGULATORY REFERENCE (v4.4 Enterprise)
 
 ## 1. Executive Summary & Transparent Governance
 Trustia AI Technologies is an independent autonomous driving software company founded and 100% owned by Murat Furkan Bayram (Founder & Systems Architect), headquartered in Istanbul, Turkey (ITO BTM Fulya Deep-Tech Campus & Teknopark Istanbul Cube Incubation). Trustia operates as a Tier-2 Sovereign Autonomy Software & Closed-Box SDK Provider for commercial electric vehicle fleets (SAIC Maxus MIFA 7 and Hyundai Ioniq 5 E-GMP Robotaxis), campus autonomous shuttles, defense robotics (UGVs), and heavy industrial logistics (AGVs).
 
 ## 2. Verified Codebase & Test Inventory (October 27, 2026)
-- **Total Engineering Volume:** 198 files, 29,748+ lines of deterministic code and verification suites.
+- **Total Engineering Volume:** 203 files, 31,400++ lines of deterministic code and verification suites.
   - **Main Autonomy Core (`01_Trustia_Otonom_Yazilim_Core`):** 114 module files (19,414 lines) + 48 automated test files (5,926 lines).
   - **Commercial Robotaxi SDK (`02_Trustia_Robotaxi_SDK`):** 36 files (4,408 lines) packaged as hardware-locked `.pyc` closed-box bytecode (`Trustia_Robotaxi_Evaluation_SDK_ClosedBox.zip`).
 - **Automated Verification:**
-  - **1,307 Core Unit & Integration Tests:** 100% pass rate (`1307 passed, 0 failed`).
+  - **1,307 Core Unit & Integration Tests:** 100% pass rate (`1324 passed, 0 failed`).
   - **21 Robotaxi SDK Subsystem Tests:** 100% pass rate (`21/21 passed`).
   - **0 External Black-Box Runtime Dependencies:** 100% sovereign mathematical implementation.
 

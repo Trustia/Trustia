@@ -16,8 +16,8 @@ export default function AboutPage() {
 
   const specs = [
     { label: lang === "tr" ? "Fikri Mülkiyet & Sermaye" : "IP Custody & Equity", value: lang === "tr" ? "%100 Milli & Bağımsız (Murat Furkan Bayram)" : "100% Sovereign & Proprietary" },
-    { label: lang === "tr" ? "Yazılım Envanteri" : "Codebase Inventory", value: lang === "tr" ? "198 Dosya / 29.748+ Satır (C++20 • Python • ROS 2)" : "198 Files / 29,748+ Lines (C++20 • Python • ROS 2)" },
-    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.307 Çekirdek + 21 SDK Testi (%100 Başarı)" : "1,307 Core + 21 SDK Tests (100% Pass)" },
+    { label: lang === "tr" ? "Yazılım Envanteri" : "Codebase Inventory", value: lang === "tr" ? "203 Dosya / 31.400+ Satır (C++20 • Python • ROS 2)" : "203 Files / 31,400+ Lines (C++20 • Python • ROS 2)" },
+    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.324 Çekirdek + 21 SDK Testi = 1.345 Test (%100 Başarı)" : "1,324 Core + 21 SDK Tests = 1,345 Tests (100% Pass)" },
     { label: lang === "tr" ? "Emniyet & Regülasyon" : "Safety & Homologation", value: "ISO 26262 ASIL-D • IEEE 2846 • AB 2022/1426" },
     { label: lang === "tr" ? "Konumlandırma (GNSS-Denied)" : "Localization (GNSS-Denied)", value: lang === "tr" ? "3D LiDAR NDT SLAM • PTP Deskewing • 4.2 cm" : "3D LiDAR NDT SLAM • PTP Deskewing • 4.2 cm" },
     { label: lang === "tr" ? "Planlama & Kontrol" : "Planning & Control", value: "Hybrid A* • Frenet Lattice • MPC • Lanelet2" },
@@ -163,7 +163,7 @@ export default function AboutPage() {
 
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E5D6BC]/10 border border-[#E5D6BC]/25 text-[#E5D6BC] text-[11px] font-mono tracking-wider uppercase">
               <ShieldCheck className="w-3.5 h-3.5 text-[#E5D6BC]" />
-              <span>{lang === "tr" ? "MİLLİ ÇİFT AMAÇLI OTONOMİ MİMARİSİ • 198 DOSYA / 29.748+ SATIR" : "SOVEREIGN DUAL-USE AUTONOMY CORE • 198 FILES / 29,748+ LOC"}</span>
+              <span>{lang === "tr" ? "MİLLİ ÇİFT AMAÇLI OTONOMİ MİMARİSİ • 203 DOSYA / 31.400+ SATIR" : "SOVEREIGN DUAL-USE AUTONOMY CORE • 203 FILES / 31,400+ LOC"}</span>
             </div>
 
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-snug">
@@ -175,8 +175,8 @@ export default function AboutPage() {
 
             <p className="text-[#d6cebf] text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
               {lang === "tr"
-                ? "Trustia AI; şehir içi ticari Robotaksi filoları ve GPS sinyalinin kesildiği zorlu harekat sahalarında görev yapan İnsansız Kara Araçları (İKA) için sıfırdan geliştirilmiş, yabancı kapalı kutu kütüphanelere bağımlı olmayan 29.748+ satırlık Seviye-4 otonom sürüş yazılım çekirdeği ve kapalı kutu (.pyc) B2B SDK sunan bağımsız bir derin teknoloji şirketidir."
-                : "Trustia AI is an independent deep-tech autonomy company engineering a deterministic 29,748+ line Level-4 autonomous driving software core and closed-box (.pyc) B2B SDK for urban Robotaxi fleets and GPS-denied tactical ground robotics."}
+                ? "Trustia AI; şehir içi ticari Robotaksi filoları ve GPS sinyalinin kesildiği zorlu harekat sahalarında görev yapan İnsansız Kara Araçları (İKA) için sıfırdan geliştirilmiş, yabancı kapalı kutu kütüphanelere bağımlı olmayan 31.400+ satırlık Seviye-4 otonom sürüş yazılım çekirdeği ve kapalı kutu (.pyc) B2B SDK sunan bağımsız bir derin teknoloji şirketidir."
+                : "Trustia AI is an independent deep-tech autonomy company engineering a deterministic 31,400+ line Level-4 autonomous driving software core and closed-box (.pyc) B2B SDK for urban Robotaxi fleets and GPS-denied tactical ground robotics."}
             </p>
 
             {/* Quick Accreditation Badges Row */}
@@ -209,7 +209,7 @@ export default function AboutPage() {
                 </span>
               </div>
               <span className="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800 text-emerald-400 text-[10px] font-mono font-semibold">
-                v4.3 ENTERPRISE
+                v4.4 ENTERPRISE
               </span>
             </div>
 
@@ -254,8 +254,8 @@ export default function AboutPage() {
             </p>
             <p>
               {lang === "tr"
-                ? "Trustia AI; Kurucu ve Sistem Mimarı Murat Furkan Bayram (%100 Tek Pay Sahibi) liderliğinde İstanbul merkezli olarak, fikri mülkiyeti bütünüyle yerli sermayeye ait deterministik bir otonomi çekirdeği geliştirme kararıyla kurulmuştur. Toplam 198 dosya ve 29.748'i aşkın satırdan oluşan özgün C++20, Python 3.12 ve ROS 2 Humble mimarimiz; yabancı hiçbir kapalı kütüphaneye dayanmaksızın 1.307 çekirdek testi ve 21 kapalı kutu SDK testiyle (%100 başarı, 0 hata) doğrulanmış olup, 1 Aralık 2024 Resmî Gazete (AB 2022/1426) Tam Otonom Araçların Tip Onayı Yönetmeliği'nin tüm 20 mühendislik kriterini eksiksiz karşılamaktadır."
-                : "Trustia AI was established in Istanbul by Founder & Systems Architect Murat Furkan Bayram (100% Equity) with complete proprietary source code custody. Comprising 198 files and over 29,748 lines of original C++20, Python 3.12, and ROS 2 Humble architecture, validated across 1,307 core tests and 21 SDK tests (100% pass), our stack fulfills all 20 international Level-4 and EU 2022/1426 homologation criteria."}
+                ? "Trustia AI; Kurucu ve Sistem Mimarı Murat Furkan Bayram (%100 Tek Pay Sahibi) liderliğinde İstanbul merkezli olarak, fikri mülkiyeti bütünüyle yerli sermayeye ait deterministik bir otonomi çekirdeği geliştirme kararıyla kurulmuştur. Toplam 203 dosya ve 31.400'ü aşkın satırdan oluşan özgün C++20, Python 3.12 ve ROS 2 Humble mimarimiz; yabancı hiçbir kapalı kütüphaneye dayanmaksızın 1.324 çekirdek testi ve 21 kapalı kutu SDK testiyle (%100 başarı, 0 hata) doğrulanmış olup, 1 Aralık 2024 Resmî Gazete (AB 2022/1426) Tam Otonom Araçların Tip Onayı Yönetmeliği'nin tüm 20 mühendislik kriterini eksiksiz karşılamaktadır."
+                : "Trustia AI was established in Istanbul by Founder & Systems Architect Murat Furkan Bayram (100% Equity) with complete proprietary source code custody. Comprising 203 files and over 31,400 lines of original C++20, Python 3.12, and ROS 2 Humble architecture, validated across 1,324 core tests and 21 SDK tests (1,345 tests total) (100% pass), our stack fulfills all 20 international Level-4 and EU 2022/1426 homologation criteria."}
             </p>
           </div>
         </div>

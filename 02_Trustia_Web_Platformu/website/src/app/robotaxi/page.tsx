@@ -187,8 +187,8 @@ export default function RobotaxiPage() {
               
               <p className="text-[#d6cebf] text-xs sm:text-sm leading-relaxed max-w-2xl font-normal">
                 {lang === "tr"
-                  ? "Ticari yolcu filoları ve kentsel robotaksi operasyonları için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar, 100 Hz CAN-FD aktüatör köprüsü ve 20 uluslararası Seviye-4 modülüyle yapılandırılmış; 198 dosya ve 29.748+ satırlık deterministik otonomi şartnamesi."
-                  : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, 100 Hz CAN-FD drive-by-wire, and 20 international Level-4 modules across 198 files and 29,748+ lines of sovereign autonomy software."}
+                  ? "Ticari yolcu filoları ve kentsel robotaksi operasyonları için 128 Kanallı 3D LiDAR, 4x GMSL2 HDR Kamera, 77GHz Radar, 100 Hz CAN-FD aktüatör köprüsü ve 20 uluslararası Seviye-4 modülüyle yapılandırılmış; 203 dosya ve 31.400+ satırlık deterministik otonomi şartnamesi."
+                  : "Configured with 128-channel 3D LiDAR, 4x GMSL2 HDR cameras, 77GHz radar, 100 Hz CAN-FD drive-by-wire, and 20 international Level-4 modules across 203 files and 31,400+ lines of sovereign autonomy software."}
               </p>
             </div>
 
@@ -211,9 +211,9 @@ export default function RobotaxiPage() {
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "TOPLAM MÜHENDİSLİK HACMİ" : "TOTAL CODEBASE VOLUME"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">29.748+ Satır</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">31.400+ Satır</div>
             <span className="text-[10px] text-[#d6cebf]/80 block font-sans">
-              {lang === "tr" ? "198 Dosya (Çekirdek + Robotaksi SDK)" : "198 Files (Core + Robotaxi SDK)"}
+              {lang === "tr" ? "203 Dosya (Çekirdek + Robotaksi SDK)" : "203 Files (Core + Robotaxi SDK)"}
             </span>
           </div>
 
@@ -221,7 +221,7 @@ export default function RobotaxiPage() {
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "OTOMATİK DOĞRULAMA" : "AUTOMATED TESTS"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.307 + 21 Test</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.324 + 21 Test</div>
             <span className="text-[10px] text-emerald-400 block font-sans font-medium">
               {lang === "tr" ? "%100 Başarı (0 Hata / 0 Fail)" : "100% Pass Rate (0 Failures)"}
             </span>
@@ -489,7 +489,7 @@ export default function RobotaxiPage() {
               </h2>
             </div>
             <div className="text-[10px] font-mono text-emerald-400 font-semibold">
-              1.307 ÇEKİRDEK TESTİ + 21 SDK TESTİ (%100 YEŞİL)
+              1.324 ÇEKİRDEK TESTİ + 21 SDK TESTİ (%100 YEŞİL)
             </div>
           </div>
 
@@ -652,11 +652,11 @@ export default function RobotaxiPage() {
               // {lang === "tr" ? "KURUMSAL TEKNİK İŞBİRLİĞİ & KAPALI KUTU DEĞERLENDİRME SDK'SI" : "INSTITUTIONAL TECHNICAL COOPERATION & CLOSED-BOX EVALUATION SDK"}
             </div>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
-              {lang === "tr" ? "Tam Yazılım Envanteri, 1.307 + 21 Test Kanıt Dosyası ve Kapalı Kutu SDK" : "Full Software Inventory, 1,307 + 21 Test Evidence Dossier & Closed-Box SDK"}
+              {lang === "tr" ? "Tam Yazılım Envanteri, 1.324 + 21 Test Kanıt Dosyası ve Kapalı Kutu SDK" : "Full Software Inventory, 1,307 + 21 Test Evidence Dossier & Closed-Box SDK"}
             </h3>
             <p className="text-[#d6cebf] text-xs leading-relaxed">
               {lang === "tr"
-                ? "198 dosyalık tam modül çizelgesi, CAN-FD DBC sözlüğü ve 21 alt sistem testini kendi bilgisayarınızda 1 dakikada doğrulayabileceğiniz derlenmiş kapalı kutu (.pyc) Robotaksi SDK paketi karşılıklı Gizlilik Sözleşmesi (NDA) kapsamında sunulmaktadır."
+                ? "203 dosyalık tam modül çizelgesi, CAN-FD DBC sözlüğü ve 21 alt sistem testini kendi bilgisayarınızda 1 dakikada doğrulayabileceğiniz derlenmiş kapalı kutu (.pyc) Robotaksi SDK paketi karşılıklı Gizlilik Sözleşmesi (NDA) kapsamında sunulmaktadır."
                 : "Our 198-file module inventory, CAN-FD DBC dictionary, and compiled closed-box (.pyc) Robotaxi Evaluation SDK with 21 automated subsystem tests are available under mutual NDA."}
             </p>
           </div>

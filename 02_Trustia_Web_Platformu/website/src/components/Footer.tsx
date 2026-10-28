@@ -50,8 +50,8 @@ export default function Footer() {
             {/* Tagline */}
             <p className="text-slate-300 text-xs sm:text-[13px] leading-relaxed font-normal max-w-sm drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
               {lang === "tr"
-                ? "Ticari elektrikli araç filoları ve çift amaçlı otonom sistemler için 29.748+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği."
-                : "Deterministic 29,748+ LOC Level-4 reference autonomy architecture engineered for commercial electric fleets and sovereign autonomous systems."}
+                ? "Ticari elektrikli araç filoları ve çift amaçlı otonom sistemler için 31.400+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği."
+                : "Deterministic 31,400+ LOC Level-4 reference autonomy architecture engineered for commercial electric fleets and sovereign autonomous systems."}
             </p>
 
             {/* Verified Accreditation Tags */}
@@ -77,8 +77,8 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-2.5 text-slate-200">
                   <Cpu className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>198 Dosya / 29.748+ Satır</span>
-                  <span className="text-slate-400 text-[11px]">1.307 + 21 Test (%100)</span>
+                  <span>203 Dosya / 31.400+ Satır</span>
+                  <span className="text-slate-400 text-[11px]">1.324 + 21 Test (%100)</span>
                 </div>
               </div>
             </div>
@@ -250,8 +250,8 @@ export default function Footer() {
 
             <p className="text-slate-300 text-xs leading-relaxed font-normal max-w-sm mx-auto drop-shadow-[0_1px_2px_rgba(0,0,0,0.9)]">
               {lang === "tr"
-                ? "Ticari elektrikli filolar ve otonom sistemler için 29.748+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği."
-                : "Deterministic 29,748+ LOC Level-4 autonomy architecture for commercial fleets and autonomous robotics."}
+                ? "Ticari elektrikli filolar ve otonom sistemler için 31.400+ satırlık deterministik Seviye-4 otonom sürüş yazılım çekirdeği."
+                : "Deterministic 31,400+ LOC Level-4 autonomy architecture for commercial fleets and autonomous robotics."}
             </p>
 
             {/* Symmetrical 2-Row Monospaced Registry Badges */}
@@ -264,7 +264,7 @@ export default function Footer() {
               <div className="flex items-center justify-center gap-2">
                 <span className="text-sky-400">AB PIC: 861711529</span>
                 <span className="text-slate-600 select-none">/</span>
-                <span className="text-emerald-400">1.307+21 Test (%100)</span>
+                <span className="text-emerald-400">1.324+21 Test (%100)</span>
               </div>
             </div>
           </div>
