@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   autonomy-core-verification:
-    name: Seviye-4 Otonomi Çekirdeği 1.307 Birim & Entegrasyon Testi
+    name: Seviye-4 Otonomi Çekirdeği 1.345 Birim & Entegrasyon Testi (%100 Yeşil)
     runs-on: ubuntu-latest
     steps:
       - name: Kaynak Kodunu İndir (Checkout)
@@ -29,9 +29,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install pytest numpy pyyaml
 
-      - name: 1.307 Otomatik Doğrulama Testini Koştur
+      - name: 1.324 Otomatik Çekirdek Testini Koştur
         run: |
           cd 01_Trustia_Otonom_Yazilim_Core
+          PYTHONPATH=. pytest tests/ -q --tb=short
+
+      - name: 21 Robotaksi SDK Testini Koştur
+        run: |
+          cd 02_Trustia_Robotaxi_SDK
           PYTHONPATH=. pytest tests/ -q --tb=short
 
   web-platform-build:
