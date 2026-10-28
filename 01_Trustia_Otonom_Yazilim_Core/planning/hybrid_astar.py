@@ -15,7 +15,7 @@ from typing import Dict, List, Optional, Set, Tuple
 
 import numpy as np
 
-from planning.grid_map import GridMap
+from planning.grid_map import GridMap, CellType
 from planning.types import Path, PlanningRequest, PlanningResult, PlanningStatus, Waypoint
 
 
@@ -75,9 +75,9 @@ class HybridAStarNode:
 class HybridAStarPlanner:
     """Hybrid A* planner with vehicle kinematics."""
     
-    def __init__(self, vehicle: VehicleModel, config: HybridAStarConfig = HybridAStarConfig()) -> None:
-        self.vehicle = vehicle
-        self.config = config
+    def __init__(self, vehicle: Optional[VehicleModel] = None, config: Optional[HybridAStarConfig] = None) -> None:
+        self.vehicle = vehicle or VehicleModel()
+        self.config = config or HybridAStarConfig()
         
         # Pre-compute steering angles
         self._compute_steering_angles()
@@ -200,6 +200,43 @@ class HybridAStarPlanner:
             iterations=iterations,
             message="Hybrid A* no path found"
         )
+
+    def plan_with_dynamic_obstacles(
+        self,
+        grid_map: GridMap,
+        request: PlanningRequest,
+        predicted_trajectories: Optional[List[Any]] = None,
+        safety_radius_m: float = 1.0,
+    ) -> PlanningResult:
+        """
+        Dinamik aktörlerin 3 saniyelik yörünge kestirimlerini (TrajectoryPrediction)
+        harita ızgarasına engel kısıtı olarak dahil ederek dinamik engellerden kaçış rotası üretir.
+        """
+        if not predicted_trajectories:
+            return self.plan(grid_map, request)
+
+        import copy
+        dynamic_map = copy.copy(grid_map)
+        dynamic_map.data = grid_map.data.copy()
+        if hasattr(grid_map, "cost_map") and grid_map.cost_map is not None:
+            dynamic_map.cost_map = grid_map.cost_map.copy()
+
+        for traj in predicted_trajectories:
+            waypoints = getattr(traj, "waypoints", [])
+            for pt in waypoints:
+                px = pt[0] if isinstance(pt, (tuple, list)) else getattr(pt, "x", 0.0)
+                py = pt[1] if isinstance(pt, (tuple, list)) else getattr(pt, "y", 0.0)
+                r_steps = max(1, int(safety_radius_m / max(0.01, grid_map.resolution_m)))
+                gx_center, gy_center = dynamic_map.world_to_grid(px, py)
+                for dx in range(-r_steps, r_steps + 1):
+                    for dy in range(-r_steps, r_steps + 1):
+                        if dx * dx + dy * dy <= r_steps * r_steps:
+                            gx = gx_center + dx
+                            gy = gy_center + dy
+                            if dynamic_map.is_valid_cell(gx, gy):
+                                dynamic_map.set_cell_type(gx, gy, CellType.OCCUPIED)
+
+        return self.plan(dynamic_map, request)
     
     def _discretize_configuration(self, x: float, y: float, yaw: float) -> Tuple[int, int, int]:
         """Discretize configuration to grid indices."""
@@ -353,3 +390,7 @@ class HybridAStarPlanner:
         path.waypoints = waypoints
         
         return path
+
+
+# Compatibility alias
+HybridAStar = HybridAStarPlanner

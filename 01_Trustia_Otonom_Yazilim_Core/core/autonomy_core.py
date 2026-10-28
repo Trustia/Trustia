@@ -38,8 +38,12 @@ class AutonomyCore:
             "license": self.license_status.get("message", "ACTIVE"),
             "subsystems": {
                 "lidar_slam": "ONLINE",
+                "deep_perception_3d": "ONLINE",
+                "multi_object_tracker": "ONLINE",
+                "trajectory_prediction": "ONLINE",
                 "hybrid_astar_planner": "ONLINE",
                 "can_fd_control": "ACTIVE",
+                "sotif_plausibility_monitor": "NOMINAL",
                 "asil_d_safety_mrm": "NOMINAL"
             }
         }
@@ -77,4 +81,48 @@ class AutonomyCore:
             "status": "TRAJECTORY_COMPUTED",
             "goal": self._active_mission,
             "planner": "HYBRID_A_STAR_OPTIMAL"
+        }
+
+    def process_perception(
+        self,
+        simulated_actors: Optional[list] = None,
+        point_cloud: Optional[Any] = None,
+        dt: float = 0.1
+    ) -> Dict[str, Any]:
+        """
+        3D CenterPoint algı, 7-DOF EKF takip, niyet/yörünge kestirimi ve
+        ISO 21448 SOTIF plausibility doğrulamasını tek çevrimde çalıştırır.
+        """
+        from ai.deep_perception import DeepPerceptionEngine
+        from ai.tracking import MultiObjectTracker3D
+        from ai.prediction import TrajectoryPredictionEngine
+        from security.sotif_monitor import Iso21448SotifMonitor
+
+        engine = DeepPerceptionEngine()
+        tracker = MultiObjectTracker3D()
+        predictor = TrajectoryPredictionEngine()
+        monitor = Iso21448SotifMonitor()
+
+        boxes, latency_ms = engine.infer(point_cloud=point_cloud, simulated_actors=simulated_actors)
+        tracks = tracker.update(boxes, dt=dt)
+        trajectories = predictor.predict_trajectories(tracks)
+        sotif_report = monitor.evaluate_perception(tracks, latency_ms)
+
+        return {
+            "num_detections": len(boxes),
+            "num_tracks": len(tracks),
+            "num_trajectories": len(trajectories),
+            "inference_latency_ms": latency_ms,
+            "sotif_status": sotif_report.recommended_action,
+            "is_safe": sotif_report.is_safe_to_proceed,
+            "active_tracks": [
+                {
+                    "track_id": t.track_id,
+                    "class": t.class_name,
+                    "position": (round(t.x, 2), round(t.y, 2), round(t.z, 2)),
+                    "speed_kmh": round(t.speed_kmh(), 1),
+                    "status": t.status
+                }
+                for t in tracks
+            ]
         }

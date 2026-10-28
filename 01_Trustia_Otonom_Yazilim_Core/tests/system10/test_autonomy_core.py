@@ -24,3 +24,17 @@ def test_autonomy_core_lifecycle():
     stop_res = core.stop()
     assert stop_res["status"] == "STANDBY"
     assert core._is_running is False
+
+
+def test_autonomy_core_perception_pipeline():
+    core = AutonomyCore()
+    actors = [
+        {"class": "car", "x": 15.0, "y": 0.0, "z": 0.0, "confidence": 0.95, "vx": 10.0},
+        {"class": "pedestrian", "x": 8.0, "y": 2.0, "z": 0.0, "confidence": 0.88, "vy": -1.0}
+    ]
+    res = core.process_perception(simulated_actors=actors)
+    assert res["num_detections"] == 2
+    assert res["num_tracks"] == 2
+    assert res["num_trajectories"] == 2
+    assert res["is_safe"] is True
+    assert res["sotif_status"] == "NOMINAL_CONTINUE"

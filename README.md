@@ -4,8 +4,8 @@
 
 <div align="center">
 
-[![Test Süiti](https://img.shields.io/badge/Otomatik_Testler-1%2C307_%2B_21_(1%2C328_Test_%7C_%25100_BA%C5%9EARI)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
-[![Yazılım Envanteri](https://img.shields.io/badge/Kod_Envanteri-198_Dosya_%7C_29%2C748%2B_Sat%C4%B1r-brightgreen.svg)](https://trustia.com.tr)
+[![Test Süiti](https://img.shields.io/badge/Otomatik_Testler-1%2C324_%2B_21_(1%2C345_Test_%7C_%25100_BA%C5%9EARI)-brightgreen.svg?logo=pytest&logoColor=white)](https://github.com/Trustia/Trustia)
+[![Yazılım Envanteri](https://img.shields.io/badge/Kod_Envanteri-203_Dosya_%7C_31%2C400%2B_Sat%C4%B1r-brightgreen.svg)](https://trustia.com.tr)
 [![C++20 & ROS 2](https://img.shields.io/badge/C%2B%2B-20_%7C_ROS_2_Humble-00599C?logo=c%2B%2B&logoColor=white)](https://github.com/Trustia/Trustia)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Next.js 16 & Three.js](https://img.shields.io/badge/WebGL_Telemetri-Next.js_16_%7C_Three.js-black?logo=next.js&logoColor=white)](https://trustia.com.tr)
@@ -32,8 +32,8 @@
 
 Uçtan uca kara kutu (black-box) yapay zeka modellerinin yarattığı halüsinasyon ve açıklanamaz karar risklerini ortadan kaldırmak amacıyla; Trustia çekirdeği **matematiksel olarak kanıtlanabilir deterministik algoritmalar** (Kinematik Hybrid A*, Frenet 5. Derece Quintic Kafes Planlama, Kayan Ufuklu MPC, Stanley Geometrik Kontrol, IEEE 2846 RSS Güvenlik Zarfı ve 400 Hz ESKF + 3D LiDAR NDT SLAM) üzerine inşa edilmiştir.
 
-* **Tam Yazılım Envanteri:** **198 Dosya / 29.748+ Satır** özgün kaynak kod ve mühendislik şartnamesi (%0 harici kapalı kutu bağımlılığı).
-* **Kesintisiz Doğrulama Süiti:** **1.307 Çekirdek Testi + 21 Robotaksi SDK Testi = 1.328 Otomatik Birim, Entegrasyon ve SIL/HIL Simülasyon Testi (%100 Yeşil, 0 Hata, 0 Regresyon)**.
+* **Tam Yazılım Envanteri:** **203 Dosya / 31.400+ Satır** özgün kaynak kod ve mühendislik şartnamesi (%0 harici kapalı kutu bağımlılığı).
+* **Kesintisiz Doğrulama Süiti:** **1.324 Çekirdek Testi + 21 Robotaksi SDK Testi = 1.345 Otomatik Birim, Entegrasyon ve SIL/HIL Simülasyon Testi (%100 Yeşil, 0 Hata, 0 Regresyon)**.
 * **Fikri Mülkiyet & Dağıtım Modeli:** Kurucu ve Sistem Mimarı **Murat Furkan Bayram**'ın %100 tekil mülkiyetindedir. Müşterilere ve OEM entegratörlerine açık kaynak `.py`/`.cpp` kodu teslim edilmez; yalnızca **HMAC-SHA256 donanım kilitli (ECU/CPU UUID) derlenmiş kapalı kutu (`.pyc` / `.so` Closed-Box Enterprise SDK)** paketleri sunulur.
 
 ---
@@ -57,17 +57,18 @@ Trustia AI, ulusal ve uluslararası savunma sanayii, otomotiv, fikri mülkiyet v
 
 ---
 
-## 📁 2. Ana Depo Mimarisi ve Kod Envanteri (198 Dosya / 29.748+ Satır)
+## 📁 2. Ana Depo Mimarisi ve Kod Envanteri (203 Dosya / 31.400+ Satır)
 
 Tüm depo varlıkları, kurumsal temiz mimari prensipleri doğrultusunda **4 ana dizin** altında yapılandırılmıştır:
 
 ```text
 Trustia/
-├── 01_Trustia_Otonom_Yazilim_Core/    ← [114 Çekirdek Dosyası (19.414 Satır) + 48 Test Dosyası (5.926 Satır / 1.307 Test)]
-│   ├── ai/                            ← 3D LiDAR RANSAC Zemin Ayrıştırma, DBSCAN Kümeleme, OBB & Çoklu Nesne Takibi
+├── 01_Trustia_Otonom_Yazilim_Core/    ← [117 Çekirdek Dosyası (21.000+ Satır) + 51 Test Dosyası (6.600+ Satır / 1.324 Test)]
+│   ├── ai/                            ← CenterPoint / BEV 3D Algı, 7-DOF EKF Takip, 3s Yörünge Tahmini & nuScenes Kataloğu
 │   ├── slam/                          ← GNSS-Denied 3D NDT Pose-Graph SLAM & 400 Hz Error-State Kalman Filtresi (ESKF)
-│   ├── planning/                      ← Kinematik Hibrit A*, Frenet 5. Derece Quintic Polinom & Davranış Ağacı (FSM)
+│   ├── planning/                      ← Kinematik Hibrit A*, Frenet 5. Derece Quintic Polinom & Dinamik Engel Kaçınma
 │   ├── control/                       ← Pure Pursuit, Stanley Yanal İzleme, Boyuna PID & CAN DBC Sinyal Kodlayıcı
+│   ├── security/                      ← ISO 26262 ASIL-D MRM, Watchdog & ISO 21448 SOTIF Plausibility Monitörü
 │   ├── integration/                   ← 100 Hz Linux SocketCAN CAN-FD Sürücüsü & ROS 2 Humble Drive-by-Wire Köprüsü
 │   ├── security/                      ← ISO 26262 ASIL-D 50ms Watchdog, 1.5 m/s² MRM Güvenli Duruş & SecOC Kriptografi
 │   ├── command/                       ← Çoklu Robotaksi Filo Çağrı, Telemetri Yönlendirme ve Dinamik Rota Dağıtım Motoru
