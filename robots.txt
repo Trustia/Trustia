@@ -1,6 +1,6 @@
 # Trustia AI Technologies Robots & AI Indexing Policy (v4.4 Enterprise)
 # https://trustia.com.tr
-# Last Updated: 2026-10-28
+# Last Updated: 2026-10-31
 
 User-agent: *
 Allow: /
