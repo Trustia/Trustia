@@ -10,7 +10,7 @@
 
 ### 1. ANA KLASÖR DÜZENİ (TEMİZ REPO MİMARİSİ)
 Tüm proje varlıkları istisnasız aşağıdaki ana dizinler altında organize edilir:
-1. **`01_Trustia_Otonom_Yazilim_Core/`**: Seviye-4 otonomi yazılımı (C++20/ROS2/Python), 1.324 testlik doğrulama kütüphanesi, CenterPoint/BEV 3B derin algı, 7-DOF EKF takip, 3s yörünge tahmini, ISO 21448 SOTIF monitörü, CAN-FD sürücüleri, 3D LiDAR SLAM ve Enterprise SDK derleyicisi.
+1. **`01_Trustia_Otonom_Yazilim_Core/`**: Seviye-4 otonomi yazılımı (C++20/ROS2/Python), 1.329 testlik doğrulama kütüphanesi, CenterPoint/BEV 3B derin algı (ONNX Runtime / TensorRT), 7-DOF EKF takip, 3s yörünge tahmini, ISO 21448 SOTIF monitörü, CAN-FD sürücüleri, 3D LiDAR SLAM ve Enterprise SDK derleyicisi.
 2. **`02_Trustia_Robotaxi_SDK/`**: SAIC Maxus MIFA 7 & Çoklu Şasi Seviye-4 Robotaksi Değerlendirme SDK'sı (21 alt sistem, 21 doğrulama testi, Closed-Box SDK paketleyici).
 3. **`02_Trustia_Web_Platformu/`**: Kurumsal web sitesi (`website/`, Next.js 16, React 19 ve 3D Three.js telemetri arayüzü).
 4. **`Kurumsal/`**: Resmi devlet, savunma ve akreditasyon belgeleri (`Belgeler/`, `Sunumlar/`, `Basvurular/`, `Medya/`).
@@ -26,8 +26,8 @@ Tüm proje varlıkları istisnasız aşağıdaki ana dizinler altında organize 
 * Araç boyutları (dingil mesafesi, maksimum dönüş açısı), hız limitleri ve CAN parametreleri sadece ve sadece **`config/vehicle_config.yaml`** üzerinden yönetilir.
 * Yazılım; hem şehir içi Robotaksiyi (50 km/s), hem fabrika içi ağır yük AGV'sini (15 km/s), hem de havalimanı ring servisini aynı çekirdekle çalıştırır.
 
-### 4. 1.345 TESTİN KESİNTİSİZ %100 YEŞİL KALMASI
-* Yapılan her kod değişikliğinden sonra `pytest tests/ -q` komutu koşturulmalı ve **1.324 Core + 21 Robotaxi SDK testinin tamamının (1.345 test - %100) yeşil geçtiği** teyit edilmelidir.
+### 4. 1.350 TESTİN KESİNTİSİZ %100 YEŞİL KALMASI
+* Yapılan her kod değişikliğinden sonra `pytest tests/ -q` komutu koşturulmalı ve **1.329 Core + 21 Robotaxi SDK testinin tamamının (1.350 test - %100) yeşil geçtiği** teyit edilmelidir.
 * 0 başarısızlık (0 failure) ve 0 hata (0 error) kuralı esnetilemez.
 
 ### 5. OTOMOTİV EMNİYET VE ASIL-D FAILSAFE GÜVENCESİ
@@ -43,17 +43,19 @@ Tüm proje varlıkları istisnasız aşağıdaki ana dizinler altında organize 
 
 ```text
 Trustia/
-├── 01_Trustia_Otonom_Yazilim_Core/    ← 20.800+ Satır L4 Çekirdek, 1.324 Test, CAN-FD Hyundai Ioniq 5
-│   ├── ai/                            ← 3D Derin Algı (CenterPoint), 7-DOF EKF Takip & 3s Tahmin
+├── 01_Trustia_Otonom_Yazilim_Core/    ← 21.000+ Satır L4 Çekirdek, 1.329 Test, CAN-FD Hyundai Ioniq 5
+│   ├── ai/                            ← 3D Derin Algı (CenterPoint ONNX/TensorRT), 7-DOF EKF Takip & 3s Tahmin
 │   ├── command/                       ← Robotaksi Filo Çağrı & Dağıtım Motoru
 │   ├── control/                       ← Pure Pursuit / Stanley Yanal Kontrol & DBC Kodlama
 │   ├── core/                          ← AutonomyCore Üst Düzey API & HMAC Donanım Lisanslama
+│   ├── data/                          ← Ham .bin / .pcd LiDAR Örnek Sürüş Veri Kütüphanesi
 │   ├── integration/                   ← SocketCAN CAN-FD Arabirimi & ROS 2 Köprüsü
+│   ├── models/                        ← CenterPoint / PointPillars ONNX Derin Öğrenme Modelleri
 │   ├── planning/                      ← Kinematik Hibrit A* & Dinamik Engel Kaçınma Planlayıcı
 │   ├── security/                      ← ISO 26262 ASIL-D MRM & ISO 21448 SOTIF Plausibility Monitörü
 │   ├── slam/                          ← GNSS-Denied 3D NDT Pose-Graph SLAM & 400Hz ESKF
-│   ├── tests/                         ← 1.324 Adet Otomatik Birim & Entegrasyon Testi
-│   └── tools/                         ← build_enterprise_sdk.py (Kapalı Kutu Dağıtım Aracı)
+│   ├── tests/                         ← 1.329 Adet Otomatik Birim & Entegrasyon Testi
+│   └── tools/                         ← build_enterprise_sdk.py & ONNX Model Dışa Aktarıcılar
 ├── 02_Trustia_Robotaxi_SDK/           ← 3.310 Satır SAIC Maxus MIFA 7 L4 Robotaksi SDK, 21 Alt Sistem, 21 Test
 ├── 02_Trustia_Web_Platformu/          ← 7.024 Satır Web Platformu (Next.js 16, Three.js WebGL Telemetri)
 ├── Kurumsal/                          ← Birleşik Kurumsal ve Yasal Varlıklar

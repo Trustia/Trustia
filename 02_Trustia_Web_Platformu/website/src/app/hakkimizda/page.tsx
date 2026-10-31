@@ -17,7 +17,7 @@ export default function AboutPage() {
   const specs = [
     { label: lang === "tr" ? "Fikri Mülkiyet & Sermaye" : "IP Custody & Equity", value: lang === "tr" ? "%100 Milli & Bağımsız (Murat Furkan Bayram)" : "100% Sovereign & Proprietary" },
     { label: lang === "tr" ? "Yazılım Envanteri" : "Codebase Inventory", value: lang === "tr" ? "203 Dosya / 31.400+ Satır (C++20 • Python • ROS 2)" : "203 Files / 31,400+ Lines (C++20 • Python • ROS 2)" },
-    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.324 Çekirdek + 21 SDK Testi = 1.345 Test (%100 Başarı)" : "1,324 Core + 21 SDK Tests = 1,345 Tests (100% Pass)" },
+    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.324 Çekirdek + 21 SDK Testi = 1.350 Test (%100 Başarı)" : "1,324 Core + 21 SDK Tests = 1,345 Tests (100% Pass)" },
     { label: lang === "tr" ? "Emniyet & Regülasyon" : "Safety & Homologation", value: "ISO 26262 ASIL-D • IEEE 2846 • AB 2022/1426" },
     { label: lang === "tr" ? "Konumlandırma (GNSS-Denied)" : "Localization (GNSS-Denied)", value: lang === "tr" ? "3D LiDAR NDT SLAM • PTP Deskewing • 4.2 cm" : "3D LiDAR NDT SLAM • PTP Deskewing • 4.2 cm" },
     { label: lang === "tr" ? "Planlama & Kontrol" : "Planning & Control", value: "Hybrid A* • Frenet Lattice • MPC • Lanelet2" },

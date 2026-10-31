@@ -103,25 +103,42 @@ def run_perception():
     print("=" * 78)
     print("  TRUSTIA 3D DERİN ÖĞRENME ALGI, TAKİP VE SOTIF GÜVENLİK KONSOLU (AI L4)")
     print("=" * 78)
+    import os
     from ai.deep_perception import DeepPerceptionEngine
     from ai.tracking import MultiObjectTracker3D
     from ai.prediction import TrajectoryPredictionEngine
     from security.sotif_monitor import Iso21448SotifMonitor
 
-    engine = DeepPerceptionEngine()
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    onnx_path = os.path.join(base_dir, "models", "trustia_centerpoint_backbone.onnx")
+    bin_path = os.path.join(base_dir, "data", "pointclouds", "sample_drive_001.bin")
+
+    use_onnx = os.path.exists(onnx_path)
+    engine = DeepPerceptionEngine(
+        confidence_threshold=0.30 if use_onnx else 0.40,
+        onnx_model_path=onnx_path if use_onnx else None
+    )
     tracker = MultiObjectTracker3D()
     predictor = TrajectoryPredictionEngine()
     monitor = Iso21448SotifMonitor()
 
-    print("[1/4] 3D LiDAR & GMSL2 Kamera Derin Öğrenme Çıkarımı (CenterPoint / BEV)...")
-    actors = [
-        {"class": "car", "x": 18.5, "y": -1.8, "z": 0.0, "confidence": 0.96, "vx": 11.2},
-        {"class": "pedestrian", "x": 12.0, "y": 2.4, "z": 0.0, "confidence": 0.91, "vy": -1.2},
-        {"class": "bicycle", "x": 25.0, "y": 1.2, "z": 0.0, "confidence": 0.87, "vx": 4.5},
-    ]
-    boxes, latency_ms = engine.infer(simulated_actors=actors)
+    print("[1/4] 3D LiDAR & GMSL2 Kamera Derin Öğrenme Çıkarımı (CenterPoint ONNX / BEV)...")
+    if use_onnx and os.path.exists(bin_path):
+        pts = DeepPerceptionEngine.load_point_cloud_bin(bin_path)
+        boxes, latency_ms = engine.infer(point_cloud=pts)
+        print(f"      * Motor Türü        : ONNX Runtime (CenterPoint BEV TensorRT/CPU Engine)")
+        print(f"      * Ham LiDAR Girdisi : {len(pts)} nokta ({os.path.basename(bin_path)} formatı)")
+    else:
+        actors = [
+            {"class": "car", "x": 18.5, "y": -1.8, "z": 0.0, "confidence": 0.96, "vx": 11.2},
+            {"class": "pedestrian", "x": 12.0, "y": 2.4, "z": 0.0, "confidence": 0.91, "vy": -1.2},
+            {"class": "bicycle", "x": 25.0, "y": 1.2, "z": 0.0, "confidence": 0.87, "vx": 4.5},
+        ]
+        boxes, latency_ms = engine.infer(simulated_actors=actors)
+        print(f"      * Motor Türü        : Deterministik HIL/SIL Algı Çekirdeği")
+
     print(f"      * Çıkarım Gecikmesi : {latency_ms:.1f} ms (<35ms ASIL-D bütçesi dahilinde)")
-    print(f"      * Tespit Edilen 3B Kutu : {len(boxes)} adet nuScenes sınıfı")
+    print(f"      * Tespit Edilen 3B Kutu : {len(boxes)} adet doğrulanmış nuScenes nesnesi")
 
     print("[2/4] 3D Genişletilmiş Kalman Filtresi (EKF) ile Çoklu Nesne Takibi...")
     tracks = tracker.update(boxes, dt=0.1)

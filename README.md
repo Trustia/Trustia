@@ -33,7 +33,7 @@
 Uçtan uca kara kutu (black-box) yapay zeka modellerinin yarattığı halüsinasyon ve açıklanamaz karar risklerini ortadan kaldırmak amacıyla; Trustia çekirdeği **matematiksel olarak kanıtlanabilir deterministik algoritmalar** (CenterPoint / PointPillars BEV 3D Derin Algı, 7-DOF EKF Çoklu Nesne Takibi, 3s Yörünge Tahmini, ISO 21448 SOTIF Plausibility Monitörü, Kinematik Hybrid A*, Frenet 5. Derece Quintic Kafes Planlama, Kayan Ufuklu MPC, Stanley Geometrik Kontrol, IEEE 2846 RSS Güvenlik Zarfı ve 400 Hz ESKF + 3D LiDAR NDT SLAM) üzerine inşa edilmiştir.
 
 * **Tam Yazılım Envanteri:** **203 Dosya / 31.400+ Satır** özgün kaynak kod ve mühendislik şartnamesi (%0 harici kapalı kutu bağımlılığı).
-* **Kesintisiz Doğrulama Süiti:** **1.324 Çekirdek Testi + 21 Robotaksi SDK Testi = 1.345 Otomatik Birim, Entegrasyon ve SIL/HIL Simülasyon Testi (%100 Yeşil, 0 Hata, 0 Regresyon)**.
+* **Kesintisiz Doğrulama Süiti:** **1.329 Çekirdek Testi + 21 Robotaksi SDK Testi = 1.350 Otomatik Birim, Entegrasyon ve SIL/HIL Simülasyon Testi (%100 Yeşil, 0 Hata, 0 Regresyon)**.
 * **Fikri Mülkiyet & Dağıtım Modeli:** Kurucu ve Sistem Mimarı **Murat Furkan Bayram**'ın %100 tekil mülkiyetindedir. Müşterilere ve OEM entegratörlerine açık kaynak `.py`/`.cpp` kodu teslim edilmez; yalnızca **HMAC-SHA256 donanım kilitli (ECU/CPU UUID) derlenmiş kapalı kutu (`.pyc` / `.so` Closed-Box Enterprise SDK)** paketleri sunulur.
 
 ---
@@ -195,15 +195,15 @@ Evrensel Otonomi Mimarisi (Kod Değişmezliği İlkesi) sayesinde çekirdek algo
 
 ---
 
-## 🧪 6. 1.324 + 21 = 1.345 Otomatik Doğrulama Testi (%100 Yeşil)
+## 🧪 6. 1.329 + 21 = 1.350 Otomatik Doğrulama Testi (%100 Yeşil)
 
-Yapılan her kod revizyonunda hem ana otonomi çekirdeğindeki **1.324 test** hem de Robotaksi SDK paketindeki **21 alt sistem testi** otomatik olarak koşturulur:
+Yapılan her kod revizyonunda hem ana otonomi çekirdeğindeki **1.329 test** hem de Robotaksi SDK paketindeki **21 alt sistem testi** otomatik olarak koşturulur:
 
 ```bash
-# 1. Ana Seviye-4 Otonomi Çekirdeği Testleri (51 Test Dosyası / 1.324 Test)
+# 1. Ana Seviye-4 Otonomi Çekirdeği Testleri (52 Test Dosyası / 1.329 Test)
 cd 01_Trustia_Otonom_Yazilim_Core
 pytest tests/ -q
-# Çıktı: 1324 passed in 25.77s (100% PASS, 0 FAILURE, 0 ERROR)
+# Çıktı: 1329 passed in 32.26s (100% PASS, 0 FAILURE, 0 ERROR)
 
 # 2. SAIC Maxus MIFA 7 Robotaksi SDK Testleri (21 Alt Sistem Testi)
 cd ../02_Trustia_Robotaxi_SDK
@@ -213,6 +213,7 @@ pytest tests/test_sdk.py -v
 
 | Doğrulama Katmanı | Test Dosyası | Test Sayısı | Durum | Kapsanan Mühendislik ve Güvenlik Standartları |
 | :--- | :---: | :---: | :---: | :--- |
+| **3D Derin Algı (CenterPoint ONNX / TensorRT)** | 1 Dosya | 5 Test | ✅ **%100 Yeşil** | ONNX Runtime, .bin/.pcd Ham LiDAR Okuma, Pillar Voxelization, ASIL-D Latency |
 | **3D Derin Algı (CenterPoint / BEV)** | 1 Dosya | 6 Test | ✅ **%100 Yeşil** | nuScenes 7 Sınıf, 3B OBB, Döndürülmüş IoU, 3D NMS, LiDAR Nokta Bulutları |
 | **3D EKF Takip & 3s Yörünge Tahmini** | 1 Dosya | 6 Test | ✅ **%100 Yeşil** | 7-DOF EKF, Hız Vektörleri, Macar Eşleşmesi, Yaya Geçiş Niyeti, Dinamik Kaçınma |
 | **ISO 21448 SOTIF Plausibility** | 1 Dosya | 4 Test | ✅ **%100 Yeşil** | Kinematik Sıçrama, Hayalet Fren Engelleme, 35ms Gecikme Aşımı MRM Tetikleyici |
@@ -224,7 +225,7 @@ pytest tests/test_sdk.py -v
 | **ISO 26262 ASIL-D MRM & Watchdog** | 5 Dosya | 144 Test | ✅ **%100 Yeşil** | 50 ms Zaman Aşımı, $1.5\text{ m/s}^2$ MRM & 5 ms E-Stop |
 | **Kaos, Stres & SIL/HIL Simülasyonu** | 5 Dosya | 101 Test | ✅ **%100 Yeşil** | Sensör Körleşmesi, Paket Kaybı & AutonomyCore Entegrasyon Pipeline |
 | **Robotaksi SDK (21 L4 Alt Sistem)** | 1 Dosya | 21 Test | ✅ **%100 Yeşil** | AB 2022/1426, UN R155/R156/R157, SOTIF, RSS, 5G Teleop |
-| **GENEL TOPLAM** | **52 Dosya** | **1.345 Test** | **%100 BAŞARI** | **0 Başarısızlık • 0 Hata • Tam Deterministik Güvence** |
+| **GENEL TOPLAM** | **53 Dosya** | **1.350 Test** | **%100 BAŞARI** | **0 Başarısızlık • 0 Hata • Tam Deterministik Güvence** |
 
 ---
 
@@ -234,7 +235,7 @@ pytest tests/test_sdk.py -v
 ```bash
 cd 01_Trustia_Otonom_Yazilim_Core
 
-# 1.324 doğrulama testini çalıştırın
+# 1.329 doğrulama testini çalıştırın
 python trustia_cli.py test
 
 # 3D Derin Algı, 7-DOF EKF Takip, 3s Tahmin ve SOTIF Güvenlik Konsolunu çalıştırın

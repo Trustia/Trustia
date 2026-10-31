@@ -845,12 +845,12 @@ export const policyData: Record<string, PolicyContent> = {
     iconName: "ShieldCheck",
     tr: {
       title: "1.324 + 21 Testlik Sürekli Doğrulama, SIL/HIL Simülasyonu ve Otomotiv Kalite Standardı",
-      badge: "1.345 TEST: %100",
+      badge: "1.350 TEST: %100",
       subBadge: "KALİTE GÜVENCESİ v4.4",
       category: "DOĞRULAMA & KALİTE",
       docNo: "TR-QA-2026/Rev.4",
       effectiveDate: "2026-10-26",
-      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin 1.324 + 21 (1.345) otomatik testlik kesintisiz doğrulama kütüphanesini, Sıfır Hata (Zero Failure) ilkesini, Yazılım Döngüde (SIL) ve Donanım Döngüde (HIL) kalite taahhüdünü resmileştirir.",
+      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin 1.324 + 21 (1.350) otomatik testlik kesintisiz doğrulama kütüphanesini, Sıfır Hata (Zero Failure) ilkesini, Yazılım Döngüde (SIL) ve Donanım Döngüde (HIL) kalite taahhüdünü resmileştirir.",
       sections: [
         {
           heading: "1. 1.324 Doğrulama Testi: Çekirdek Otonominin Matematiksel Güvencesi",
