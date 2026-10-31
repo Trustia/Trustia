@@ -17,7 +17,7 @@ export default function AboutPage() {
   const specs = [
     { label: lang === "tr" ? "Fikri Mülkiyet & Sermaye" : "IP Custody & Equity", value: lang === "tr" ? "%100 Milli & Bağımsız (Murat Furkan Bayram)" : "100% Sovereign & Proprietary" },
     { label: lang === "tr" ? "Yazılım Envanteri" : "Codebase Inventory", value: lang === "tr" ? "203 Dosya / 31.400+ Satır (C++20 • Python • ROS 2)" : "203 Files / 31,400+ Lines (C++20 • Python • ROS 2)" },
-    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.324 Çekirdek + 21 SDK Testi = 1.350 Test (%100 Başarı)" : "1,324 Core + 21 SDK Tests = 1,345 Tests (100% Pass)" },
+    { label: lang === "tr" ? "Otomatik Doğrulama" : "Automated Verification", value: lang === "tr" ? "1.329 Çekirdek + 21 SDK Testi = 1.350 Test (%100 Başarı)" : "1,329 Core + 21 SDK Tests = 1,350 Tests (100% Pass)" },
     { label: lang === "tr" ? "Emniyet & Regülasyon" : "Safety & Homologation", value: "ISO 26262 ASIL-D • IEEE 2846 • AB 2022/1426" },
     { label: lang === "tr" ? "Konumlandırma (GNSS-Denied)" : "Localization (GNSS-Denied)", value: lang === "tr" ? "3D LiDAR NDT SLAM • PTP Deskewing • 4.2 cm" : "3D LiDAR NDT SLAM • PTP Deskewing • 4.2 cm" },
     { label: lang === "tr" ? "Planlama & Kontrol" : "Planning & Control", value: "Hybrid A* • Frenet Lattice • MPC • Lanelet2" },
@@ -254,8 +254,8 @@ export default function AboutPage() {
             </p>
             <p>
               {lang === "tr"
-                ? "Trustia AI; Kurucu ve Sistem Mimarı Murat Furkan Bayram (%100 Tek Pay Sahibi) liderliğinde İstanbul merkezli olarak, fikri mülkiyeti bütünüyle yerli sermayeye ait deterministik bir otonomi çekirdeği geliştirme kararıyla kurulmuştur. Toplam 203 dosya ve 31.400'ü aşkın satırdan oluşan özgün C++20, Python 3.12 ve ROS 2 Humble mimarimiz; yabancı hiçbir kapalı kütüphaneye dayanmaksızın 1.324 çekirdek testi ve 21 kapalı kutu SDK testiyle (%100 başarı, 0 hata) doğrulanmış olup, 1 Aralık 2024 Resmî Gazete (AB 2022/1426) Tam Otonom Araçların Tip Onayı Yönetmeliği'nin tüm 20 mühendislik kriterini eksiksiz karşılamaktadır."
-                : "Trustia AI was established in Istanbul by Founder & Systems Architect Murat Furkan Bayram (100% Equity) with complete proprietary source code custody. Comprising 203 files and over 31,400 lines of original C++20, Python 3.12, and ROS 2 Humble architecture, validated across 1,324 core tests and 21 SDK tests (1,345 tests total) (100% pass), our stack fulfills all 20 international Level-4 and EU 2022/1426 homologation criteria."}
+                ? "Trustia AI; Kurucu ve Sistem Mimarı Murat Furkan Bayram (%100 Tek Pay Sahibi) liderliğinde İstanbul merkezli olarak, fikri mülkiyeti bütünüyle yerli sermayeye ait deterministik bir otonomi çekirdeği geliştirme kararıyla kurulmuştur. Toplam 203 dosya ve 31.400'ü aşkın satırdan oluşan özgün C++20, Python 3.12 ve ROS 2 Humble mimarimiz; yabancı hiçbir kapalı kütüphaneye dayanmaksızın 1.329 çekirdek testi ve 21 kapalı kutu SDK testiyle (%100 başarı, 0 hata) doğrulanmış olup, 1 Aralık 2024 Resmî Gazete (AB 2022/1426) Tam Otonom Araçların Tip Onayı Yönetmeliği'nin tüm 20 mühendislik kriterini eksiksiz karşılamaktadır."
+                : "Trustia AI was established in Istanbul by Founder & Systems Architect Murat Furkan Bayram (100% Equity) with complete proprietary source code custody. Comprising 203 files and over 31,400 lines of original C++20, Python 3.12, and ROS 2 Humble architecture, validated across 1,329 core tests and 21 SDK tests (1,350 tests total) (100% pass), our stack fulfills all 20 international Level-4 and EU 2022/1426 homologation criteria."}
             </p>
           </div>
         </div>

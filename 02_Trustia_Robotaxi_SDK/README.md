@@ -9,7 +9,7 @@
 
 ---
 
-## 1. MİMARİ GENEL BAKIŞ (21 ALT SİSTEM / 203 DOSYA / 31.400+ SATIR / 1.345 TEST %100 YEŞİL)
+## 1. MİMARİ GENEL BAKIŞ (21 ALT SİSTEM / 205 DOSYA / 32.000+ SATIR / 1.350 TEST %100 YEŞİL)
 
 Bu SDK, SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 (E-GMP) elektrikli araç platformları ile ticari robotaksi filo operasyonları için geliştirilmiş **%100 Milli Deterministik Güvenlik Hakemi, Seyrüsefer, Planlama ve CAN-FD Aktüatör Kütüphanesidir**.
 

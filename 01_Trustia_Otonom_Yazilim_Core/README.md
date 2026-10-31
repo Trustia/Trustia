@@ -1,16 +1,18 @@
 # 🧠 01_Trustia_Otonom_Yazilim_Core — Seviye-4 Deterministik Otonom Sürüş Çekirdeği (v4.4 Enterprise)
 
-> **117 Çekirdek Kaynak Dosyası (24.800+ Satır) + 51 Otomatik Test Dosyası (6.600+ Satır / 1.324 Test) = 168 Dosya / 31.400+ Satır C++20, ROS 2 Humble ve Python 3.12 Otonomi Çekirdeği**
+> **119 Çekirdek Kaynak Dosyası (25.000+ Satır) + 52 Otomatik Test Dosyası (6.800+ Satır / 1.329 Test) = 171 Dosya / 31.800+ Satır C++20, ROS 2 Humble ve Python 3.12 Otonomi Çekirdeği**
 
 Bu dizin, **Trustia AI Technologies** tarafından sıfırdan geliştirilen; ticari robotaksiler (**Hyundai Ioniq 5 E-GMP** & **SAIC Maxus MIFA 7**), endüstriyel otonom yük araçları (AMR/AGV) ve savunma sanayii insansız kara araçları (İKA) için ortak temel oluşturan **Seviye-4 Deterministik Otonom Sürüş Yazılım Çekirdeğini (`AutonomyCore`)** barındırır.
 
 ---
 
-## 📁 1. Alt Sistemler ve Dizin Mimarisi (168 Dosya)
+## 📁 1. Alt Sistemler ve Dizin Mimarisi (171 Dosya)
 
 ```text
 01_Trustia_Otonom_Yazilim_Core/
-├── ai/                  ← CenterPoint BEV 3D Derin Algı, 7-DOF EKF Çoklu Nesne Takibi, 3s Yörünge & Niyet Kestirimi
+├── ai/                  ← CenterPoint BEV ONNX/TensorRT 3D Derin Algı, 7-DOF EKF Çoklu Nesne Takibi, 3s Yörünge & Niyet Kestirimi
+├── data/                ← Ham .bin ve .pcd LiDAR Sürüş Veri Kütüphanesi (KITTI/nuScenes Standart Formatı)
+├── models/              ← trustia_centerpoint_backbone.onnx Derin Öğrenme Çıkarım Modeli (Opset 17)
 ├── slam/                ← GNSS-Denied 3D NDT Pose-Graph SLAM & 400 Hz Error-State Kalman Filtresi (ESKF)
 ├── planning/            ← Kinematik Hibrit A*, Dinamik Engel Kaçınma, Frenet 5. Derece Quintic Polinom & FSM
 ├── control/             ← Pure Pursuit, Stanley Yanal İzleme, Boyuna PID & CAN-FD DBC Sinyal Kodlayıcı
@@ -19,29 +21,29 @@ Bu dizin, **Trustia AI Technologies** tarafından sıfırdan geliştirilen; tica
 ├── command/             ← Çoklu Araç Telemetri Yönlendiricisi, Filo Çağrı & Dinamik Rota Tahsis Motoru
 ├── core/                ← AutonomyCore Üst Düzey API, process_perception() Tekil Döngü & HMAC Donanım Kilidi
 ├── config/              ← Evrensel Araç Konfigürasyonu (vehicle_config.yaml — Kod Değişmezliği İlkesi)
-├── tools/               ← build_enterprise_sdk.py (Kapalı Kutu .pyc B2B Enterprise SDK Derleyicisi)
-├── tests/               ← 51 Test Dosyası / 1.324 Adet Otomatik Birim, Entegrasyon, Kaos ve SIL/HIL Testi
+├── tools/               ← export_centerpoint_onnx.py, generate_sample_lidar.py & build_enterprise_sdk.py
+├── tests/               ← 52 Test Dosyası / 1.329 Adet Otomatik Birim, Entegrasyon, Kaos ve SIL/HIL Testi
 └── trustia_cli.py       ← Komut Satırı Yönetim, Test, Simülasyon, 3D Algı ve ASIL-D Denetim Aracı
 ```
 
 ---
 
-## 🧪 2. 1.324 Testlik Doğrulama Kütüphanesinin Yürütülmesi (%100 Yeşil)
+## 🧪 2. 1.329 Testlik Doğrulama Kütüphanesinin Yürütülmesi (%100 Yeşil)
 
 Yapılan her kod değişikliğinden sonra tüm test süiti tek komutla koşturulur ve **0 hata / 0 başarısızlık** kuralıyla doğrulanır:
 
 ```bash
-# Tüm 1.324 çekirdek testini koşturun
+# Tüm 1.329 çekirdek testini koşturun
 pytest tests/ -q
 
 # Beklenen Çıktı:
-# 1324 passed in 25.77s (100% PASS, 0 FAILURE, 0 ERROR)
+# 1329 passed in 32.26s (100% PASS, 0 FAILURE, 0 ERROR)
 ```
 
 ### CLI Komutları:
 ```bash
-python trustia_cli.py test          # 1.324 doğrulama testini çalıştırır
-python trustia_cli.py perception    # 3D BEV algı, 7-DOF EKF takip, 3s tahmin ve SOTIF konsolunu başlatır
+python trustia_cli.py test          # 1.329 doğrulama testini çalıştırır
+python trustia_cli.py perception    # ONNX CenterPoint 3D algı, 7-DOF EKF takip, 3s tahmin ve SOTIF konsolunu başlatır
 python trustia_cli.py robotaxi      # 100 Hz CAN-FD otonom sürüş döngüsünü simüle eder
 python trustia_cli.py audit         # ISO 26262 ASIL-D fonksiyonel emniyet denetimini yapar
 python trustia_cli.py info          # Kurumsal tescil ve envanter künyesini görüntüler

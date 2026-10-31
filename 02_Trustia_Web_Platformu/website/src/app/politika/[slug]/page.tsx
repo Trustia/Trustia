@@ -135,7 +135,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "1. Fikri Mülkiyet Mülkiyeti, Donanım Kilidi ve Kapalı Kutu Dağıtım İlkesi",
           items: [
-            "Trustia Seviye-4 Otonom Sürüş Yazılım Çekirdeği; kaynak kodu, algoritmik modelleri, kinematik planlayıcıları ve 1.324 testlik doğrulama suitleri dahil olmak üzere bütünüyle TRUSTIA TEKNOLOJİ'nin münhasır fikri ve sınai mülkiyetindedir.",
+            "Trustia Seviye-4 Otonom Sürüş Yazılım Çekirdeği; kaynak kodu, algoritmik modelleri, kinematik planlayıcıları ve 1.329 testlik doğrulama suitleri dahil olmak üzere bütünüyle TRUSTIA TEKNOLOJİ'nin münhasır fikri ve sınai mülkiyetindedir.",
             "Alıcılara, OEM'lere, filo işletmecilerine veya savunma sanayii ortaklarına hiçbir koşul altında açık kaynaklı Python veya C++ kaynak kodu (.py, .cpp) teslim edilmez. Tüm teslimatlar; şirketin 'build_enterprise_sdk.py' derleme hattı üzerinden üretilen, derlenmiş kapalı kutu (.pyc bytecode), HMAC-SHA256 donanım kilidi (Hardware-Locked CPU/MAC UUID) ve RSA-4096 imzalı lisans anahtarı formatında gerçekleştirilir.",
             "Lisans; yalnızca sözleşmede şasi numarası (VIN) veya donanım seri numarası belirtilen tekil araç veya bilgi-işlem ünitesi (NVIDIA Orin / x86_64) üzerinde çalıştırılmak üzere münhasır olmayan, devredilemez ve sınırlandırılmış bir çalıştırma hakkı (runtime license) bahşeder."
           ]
@@ -490,7 +490,7 @@ export const policyData: Record<string, PolicyContent> = {
       category: "FİKRİ MÜLKİYET",
       docNo: "TR-IP-2026/Rev.4",
       effectiveDate: "2026-10-26",
-      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin, 1.324 testlik doğrulama paketinin, patentlerinin ve ticari sırlarının mülkiyet yapısını, kurucu haklarını ve B2B sözleşmelerinde fikri mülkiyet ihlallerine karşı koruma rejimini düzenler.",
+      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin, 1.329 testlik doğrulama paketinin, patentlerinin ve ticari sırlarının mülkiyet yapısını, kurucu haklarını ve B2B sözleşmelerinde fikri mülkiyet ihlallerine karşı koruma rejimini düzenler.",
       sections: [
         {
           heading: "1. Fikri Mülkiyetin Yasal Sahibi, Tekil Hak İyeliği ve Bağımsız Sermaye",
@@ -503,7 +503,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "2. Algoritmik Modeller, Derlenmiş Bytecode ve Ticari Sır Rejimi",
           items: [
-            "Trustia'nın Pure Pursuit ve Stanley tabanlı yanal kontrol modelleri, hibrit kinematik planlayıcıları, EKF sensör füzyon matrisleri ve 1.324 testlik doğrulama kütüphanesi 6769 sayılı Sınai Mülkiyet Kanunu ve 5846 sayılı Fikir ve Sanat Eserleri Kanunu kapsamında 'Ticari Sır' (Trade Secret) statüsündedir.",
+            "Trustia'nın Pure Pursuit ve Stanley tabanlı yanal kontrol modelleri, hibrit kinematik planlayıcıları, EKF sensör füzyon matrisleri ve 1.329 testlik doğrulama kütüphanesi 6769 sayılı Sınai Mülkiyet Kanunu ve 5846 sayılı Fikir ve Sanat Eserleri Kanunu kapsamında 'Ticari Sır' (Trade Secret) statüsündedir.",
             "Müşterilere ve entegratörlere teslim edilen SDK paketleri, 'build_enterprise_sdk.py' aracı ile şifrelenmiş, optimize edilmiş bytecode formatında hazırlanır. Bu dosyalar, tersine mühendisliğe ve izinsiz kod kopyalamaya karşı teknik ve yasal olarak korunmaktadır.",
             "Ticari sır niteliğindeki algoritmik yapının ifşası veya üçüncü şahıslara sızdırılması durumunda, ulusal ve uluslararası fikri mülkiyet mahkemelerinde tazminat ve cezai işlem süreçleri derhal başlatılır."
           ]
@@ -539,7 +539,7 @@ export const policyData: Record<string, PolicyContent> = {
           heading: "1. Exclusive Title, Founder Equity & Sovereign Codebase Ownership",
           items: [
             "The Trustia Level-4 AutonomyCore, CAN-FD communication drivers, 3D LiDAR SLAM solvers, and chassis actuation layers constitute the exclusive, undivided intellectual property of TRUSTIA TECHNOLOGY and its founder Murat Furkan Bayram.",
-            "Our software architecture is entirely independent of foreign closed-source venture royalties. Spanning over 31,400 lines (203 files) of sovereign C++20, Python, and TypeScript code verified through 1,324 + 21 automated test suites (1,345 tests total), the codebase represents the enterprise's primary strategic capital.",
+            "Our software architecture is entirely independent of foreign closed-source venture royalties. Spanning over 31,400 lines (203 files) of sovereign C++20, Python, and TypeScript code verified through 1,329 + 21 automated test suites (1,350 tests total), the codebase represents the enterprise's primary strategic capital.",
             "Client licensing agreements confer strictly bounded runtime execution permissions; under no circumstances is source code ownership, copyright, or moral rights transferred."
           ]
         },
@@ -844,19 +844,19 @@ export const policyData: Record<string, PolicyContent> = {
   "dogrulama": {
     iconName: "ShieldCheck",
     tr: {
-      title: "1.324 + 21 Testlik Sürekli Doğrulama, SIL/HIL Simülasyonu ve Otomotiv Kalite Standardı",
+      title: "1.329 + 21 Testlik Sürekli Doğrulama, SIL/HIL Simülasyonu ve Otomotiv Kalite Standardı",
       badge: "1.350 TEST: %100",
       subBadge: "KALİTE GÜVENCESİ v4.4",
       category: "DOĞRULAMA & KALİTE",
       docNo: "TR-QA-2026/Rev.4",
       effectiveDate: "2026-10-26",
-      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin 1.324 + 21 (1.350) otomatik testlik kesintisiz doğrulama kütüphanesini, Sıfır Hata (Zero Failure) ilkesini, Yazılım Döngüde (SIL) ve Donanım Döngüde (HIL) kalite taahhüdünü resmileştirir.",
+      summary: "Trustia Seviye-4 otonom sürüş yazılım çekirdeğinin 1.329 + 21 (1.350) otomatik testlik kesintisiz doğrulama kütüphanesini, Sıfır Hata (Zero Failure) ilkesini, Yazılım Döngüde (SIL) ve Donanım Döngüde (HIL) kalite taahhüdünü resmileştirir.",
       sections: [
         {
-          heading: "1. 1.324 Doğrulama Testi: Çekirdek Otonominin Matematiksel Güvencesi",
+          heading: "1. 1.329 Doğrulama Testi: Çekirdek Otonominin Matematiksel Güvencesi",
           items: [
-            "Trustia otonomi yazılımı; algoritmik kararların ve kontrol sinyallerinin her koşulda öngörülebilir ve hatasız çalışmasını temin eden 1.324 adet otomatik birim, entegrasyon ve simülasyon testinden oluşan kapsamlı bir doğrulama suiti ile korunmaktadır.",
-            "Şirketimizin en temel mühendislik kuralı gereğince; yapılan her kod değişikliğinden sonra 1.324 testin tamamı (%100) kesintisiz yeşil geçmek zorundadır. Tek bir testin dahi başarısız olması (0 failure, 0 error kuralı) halinde kodun ana üretim hattına veya araç şasisine aktarılması donanımsal olarak engellenir.",
+            "Trustia otonomi yazılımı; algoritmik kararların ve kontrol sinyallerinin her koşulda öngörülebilir ve hatasız çalışmasını temin eden 1.329 adet otomatik birim, entegrasyon ve simülasyon testinden oluşan kapsamlı bir doğrulama suiti ile korunmaktadır.",
+            "Şirketimizin en temel mühendislik kuralı gereğince; yapılan her kod değişikliğinden sonra 1.329 testin tamamı (%100) kesintisiz yeşil geçmek zorundadır. Tek bir testin dahi başarısız olması (0 failure, 0 error kuralı) halinde kodun ana üretim hattına veya araç şasisine aktarılması donanımsal olarak engellenir.",
             "Bu test mimarisi; Pure Pursuit rota takibi, Stanley kontrolcüleri, Hibrit A* kinematik planlayıcıları, 3D NDT SLAM konumlama ve 50ms watchdog zaman aşımı mekanizmalarını uçtan uca doğrular."
           ]
         },
@@ -871,7 +871,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "3. Sürekli Entegrasyon (CI/CD) ve Regresyon Güvenliği",
           items: [
-            "Tüm mühendislik depolarımız; otomatik CI/CD entegrasyon hatlarına bağlıdır. Kod depolarına yapılan her işlemde statik kod analizleri, bellek sızıntısı tarayıcıları ve 1.324 test suiti otomatik olarak tetiklenir.",
+            "Tüm mühendislik depolarımız; otomatik CI/CD entegrasyon hatlarına bağlıdır. Kod depolarına yapılan her işlemde statik kod analizleri, bellek sızıntısı tarayıcıları ve 1.329 test suiti otomatik olarak tetiklenir.",
             "Gömülü C++20 katmanlarında MISRA C++:2023 standartlarına uyum denetlenir; bellek taşması, tanımsız davranış (undefined behavior) veya yarış durumu (race condition) barındıran hiçbir kod derleme aşamasını geçemez.",
             "Bu disiplin, araç şasisine yüklenen yazılımın beklenmedik kilitlenmelerden ve yazılımsal anomalilerden bütünüyle arındırılmasını garanti eder."
           ]
@@ -879,7 +879,7 @@ export const policyData: Record<string, PolicyContent> = {
         {
           heading: "4. Sanal Doğrulama (SIL) ve İş Ortağı PoC Kapalı Pist Saha Kabul Protokolü",
           items: [
-            "1.324 çekirdek testi ve 21 Robotaksi SDK testinin tamamı (%100) sanal simülasyon (Software-in-the-Loop - SIL) ortamında sıfır hata ile doğrulanmıştır; fiziksel araç saha kabul testleri ise OEM ve filo iş ortaklarımızın temin ettiği araç ve kapalı test pistlerinde 60 günlük PoC protokolüyle yürütülür.",
+            "1.329 çekirdek testi ve 21 Robotaksi SDK testinin tamamı (%100) sanal simülasyon (Software-in-the-Loop - SIL) ortamında sıfır hata ile doğrulanmıştır; fiziksel araç saha kabul testleri ise OEM ve filo iş ortaklarımızın temin ettiği araç ve kapalı test pistlerinde 60 günlük PoC protokolüyle yürütülür.",
             "PoC saha kabul aşamasında; iş ortağına ait SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 elektrikli platformlarının CAN-FD aktüatörleri üzerinde dinamik şerit takibi, acil durum frenleme (E-Stop), sağa çekme (MRM) ve GPS kesintili tünel seyrüsefer manevraları kalibre edilerek doğrulanır.",
             "Kalite güvencemiz; simülasyondan fiziksel asfalta kadar her kilometrede sıfır hata prensibini tavizsiz sürdürmektedir."
           ]

@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye 4 Referans Robotaksi Mimarisi",
   description:
-    "Trustia AI; SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 (E-GMP) platformlarında 128 kanallı 3D LiDAR, 4x GMSL2 HDR kamera, 77GHz radar, 100 Hz CAN-FD aktüatör köprüsü, IEEE 2846 RSS, UN R155/R156/R157, Frenet Lattice, MPC ve 1.324 + 21 testle doğrulanmış Seviye-4 Robotaksi mimarisidir.",
+    "Trustia AI; SAIC Maxus MIFA 7 ve Hyundai Ioniq 5 (E-GMP) platformlarında 128 kanallı 3D LiDAR, 4x GMSL2 HDR kamera, 77GHz radar, 100 Hz CAN-FD aktüatör köprüsü, IEEE 2846 RSS, UN R155/R156/R157, Frenet Lattice, MPC ve 1.329 + 21 testle doğrulanmış Seviye-4 Robotaksi mimarisidir.",
   keywords: [
     "Robotaksi",
     "Yerli Robotaksi",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye 4 Robotaksi Mimarisi | TRUSTIA AI",
     description:
-      "20 uluslararası Seviye-4 otonomi modülü, 31.400+ satır kod, 1.324 + 21 doğrulanmış test, 100 Hz CAN-FD Drive-by-Wire ve AB 2022/1426 (1 Aralık 2024 Resmî Gazete) tam uyumluluk matrisi.",
+      "20 uluslararası Seviye-4 otonomi modülü, 31.400+ satır kod, 1.329 + 21 doğrulanmış test, 100 Hz CAN-FD Drive-by-Wire ve AB 2022/1426 (1 Aralık 2024 Resmî Gazete) tam uyumluluk matrisi.",
     url: "https://trustia.com.tr/robotaxi/",
     siteName: "TRUSTIA AI",
     type: "website",

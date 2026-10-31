@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   autonomy-core-verification:
-    name: Seviye-4 Otonomi Çekirdeği 1.345 Birim & Entegrasyon Testi (%100 Yeşil)
+    name: Seviye-4 Otonomi Çekirdeği 1.350 Birim & Entegrasyon Testi (%100 Yeşil)
     runs-on: ubuntu-latest
     steps:
       - name: Kaynak Kodunu İndir (Checkout)
@@ -27,9 +27,9 @@ jobs:
       - name: Test Bağımlılıklarını Yükle
         run: |
           python -m pip install --upgrade pip
-          pip install pytest numpy pyyaml
+          pip install pytest numpy pyyaml onnx onnxruntime
 
-      - name: 1.324 Otomatik Çekirdek Testini Koştur
+      - name: 1.329 Otomatik Çekirdek Testini Koştur
         run: |
           cd 01_Trustia_Otonom_Yazilim_Core
           PYTHONPATH=. pytest tests/ -q --tb=short

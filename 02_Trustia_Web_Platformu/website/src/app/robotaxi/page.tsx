@@ -221,7 +221,7 @@ export default function RobotaxiPage() {
             <span className="text-[10px] text-[#E5D6BC] uppercase tracking-wider block font-semibold">
               {lang === "tr" ? "OTOMATİK DOĞRULAMA" : "AUTOMATED TESTS"}
             </span>
-            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.324 + 21 Test</div>
+            <div className="text-lg sm:text-xl font-bold text-white tracking-tight">1.329 + 21 Test</div>
             <span className="text-[10px] text-emerald-400 block font-sans font-medium">
               {lang === "tr" ? "%100 Başarı (0 Hata / 0 Fail)" : "100% Pass Rate (0 Failures)"}
             </span>
@@ -489,7 +489,7 @@ export default function RobotaxiPage() {
               </h2>
             </div>
             <div className="text-[10px] font-mono text-emerald-400 font-semibold">
-              1.324 ÇEKİRDEK TESTİ + 21 SDK TESTİ (%100 YEŞİL)
+              1.329 ÇEKİRDEK TESTİ + 21 SDK TESTİ (%100 YEŞİL)
             </div>
           </div>
 
@@ -652,7 +652,7 @@ export default function RobotaxiPage() {
               // {lang === "tr" ? "KURUMSAL TEKNİK İŞBİRLİĞİ & KAPALI KUTU DEĞERLENDİRME SDK'SI" : "INSTITUTIONAL TECHNICAL COOPERATION & CLOSED-BOX EVALUATION SDK"}
             </div>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">
-              {lang === "tr" ? "Tam Yazılım Envanteri, 1.324 + 21 Test Kanıt Dosyası ve Kapalı Kutu SDK" : "Full Software Inventory, 1,307 + 21 Test Evidence Dossier & Closed-Box SDK"}
+              {lang === "tr" ? "Tam Yazılım Envanteri, 1.329 + 21 Test Kanıt Dosyası ve Kapalı Kutu SDK" : "Full Software Inventory, 1,307 + 21 Test Evidence Dossier & Closed-Box SDK"}
             </h3>
             <p className="text-[#d6cebf] text-xs leading-relaxed">
               {lang === "tr"

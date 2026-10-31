@@ -78,7 +78,7 @@ export default function Footer() {
                 <div className="flex items-center gap-2.5 text-slate-200">
                   <Cpu className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                   <span>203 Dosya / 31.400+ Satır</span>
-                  <span className="text-slate-400 text-[11px]">1.324 + 21 Test (%100)</span>
+                  <span className="text-slate-400 text-[11px]">1.329 + 21 Test (%100)</span>
                 </div>
               </div>
             </div>
@@ -264,7 +264,7 @@ export default function Footer() {
               <div className="flex items-center justify-center gap-2">
                 <span className="text-sky-400">AB PIC: 861711529</span>
                 <span className="text-slate-600 select-none">/</span>
-                <span className="text-emerald-400">1.324+21 Test (%100)</span>
+                <span className="text-emerald-400">1.329+21 Test (%100)</span>
               </div>
             </div>
           </div>

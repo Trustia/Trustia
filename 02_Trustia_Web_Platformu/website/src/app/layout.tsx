@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s | TRUSTIA AI",
   },
   description:
-    "Trustia AI; şehir içi ticari Robotaksi filoları (SAIC Maxus MIFA 7, Hyundai Ioniq 5 E-GMP) ve kritik otonom platformlar için ISO 26262 ASIL-D, IEEE 2846 RSS, UN R155/R156/R157, 3D LiDAR SLAM ve 1.324 + 21 testle (1.350 test %100 yeşil) doğrulanmış Seviye-4 yerli otonomi yazılım platformudur. ASELSAN (#0050569) & STM Tedarikçi Kütüğü, OIN 2.0 (#f1e44576), AB Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli.",
+    "Trustia AI; şehir içi ticari Robotaksi filoları (SAIC Maxus MIFA 7, Hyundai Ioniq 5 E-GMP) ve kritik otonom platformlar için ISO 26262 ASIL-D, IEEE 2846 RSS, UN R155/R156/R157, 3D LiDAR SLAM ve 1.329 + 21 testle (1.350 test %100 yeşil) doğrulanmış Seviye-4 yerli otonomi yazılım platformudur. ASELSAN (#0050569) & STM Tedarikçi Kütüğü, OIN 2.0 (#f1e44576), AB Komisyonu (PIC: 861711529), EIT Urban Mobility (CUS15554), Teknopark İstanbul HASAT 2026 ve İTO BTM tescilli.",
   keywords: [
     "TRUSTIA AI",
     "Trustia",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "TRUSTIA AI — Seviye 4 Yerli Robotaksi & Çift Amaçlı Otonomi Platformu",
     description:
-      "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye-4 Robotaksi, 31.400+ Satır Kod, 203 Dosya, 21 Alt Sistem ve 1.350 Doğrulanmış Test (%100 Yeşil). ASELSAN (#0050569), STM, OIN 2.0 (#f1e44576), AB PIC: 861711529, EITUM: CUS15554, Teknopark İstanbul & İTO BTM.",
+      "SAIC Maxus MIFA 7 & Hyundai Ioniq 5 Seviye-4 Robotaksi, 31.400+ Satır Kod, 205 Dosya, 21 Alt Sistem ve 1.350 Doğrulanmış Test (%100 Yeşil). ASELSAN (#0050569), STM, OIN 2.0 (#f1e44576), AB PIC: 861711529, EITUM: CUS15554, Teknopark İstanbul & İTO BTM.",
     url: "https://trustia.com.tr",
     siteName: "TRUSTIA AI",
     locale: "tr_TR",
@@ -109,7 +109,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "TRUSTIA AI — Level 4 Autonomous Driving & Robotaxi SDK Core",
     description:
-      "Sovereign Level-4 autonomy stack (31,400+ LOC, 203 files, 21 subsystems, 1,345 verified tests (100% Green)) for SAIC Maxus MIFA 7 & Hyundai Ioniq 5. ASELSAN (#0050569), STM, OIN 2.0 & EU PIC: 861711529.",
+      "Sovereign Level-4 autonomy stack (31,400+ LOC, 203 files, 21 subsystems, 1,350 verified tests (100% Green)) for SAIC Maxus MIFA 7 & Hyundai Ioniq 5. ASELSAN (#0050569), STM, OIN 2.0 & EU PIC: 861711529.",
     images: ["https://trustia.com.tr/og-image.jpg?v=2026"],
     creator: "@trustia_ai",
   },
@@ -251,7 +251,7 @@ export default function RootLayout({
         "name": "TRUSTIA AI Autonomous Core & Robotaxi Enterprise SDK",
         "operatingSystem": "Linux, ROS 2 Humble, Real-Time RTOS, Embedded Linux",
         "applicationCategory": "AutonomousDrivingSoftware",
-        "description": "Seviye 4 yerli deterministik otonom sürüş, SAIC Maxus MIFA 7 / Hyundai Ioniq 5 Robotaksi SDK ve askeri robotik otonomi yazılım çekirdeği. 203 dosya, 31.400+ satır kod, 21 uluslararası L4 alt sistemi, 1.350 doğrulanmış test (%100 yeşil), OIN 2.0 patent korumalı.",
+        "description": "Seviye 4 yerli deterministik otonom sürüş, SAIC Maxus MIFA 7 / Hyundai Ioniq 5 Robotaksi SDK ve askeri robotik otonomi yazılım çekirdeği. 205 Dosya, 31.400+ satır kod, 21 uluslararası L4 alt sistemi, 1.350 doğrulanmış test (%100 yeşil), OIN 2.0 patent korumalı.",
         "softwareVersion": "4.4.0-enterprise",
         "offers": {
           "@type": "Offer",
