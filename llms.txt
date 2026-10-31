@@ -12,7 +12,7 @@ Trustia AI, şehir içi ticari elektrikli araç filoları (SAIC Maxus MIFA 7, Hy
 
 ## Güncel Mühendislik ve Yazılım Envanteri (28 Ekim 2026)
 - **Toplam Kod Tabanı:** 203 dosya, 31.400+ satır özgün C++20, ROS 2 Humble ve Python 3.12 kodu (114 Ana Çekirdek modülü: 19.414 satır + 36 Robotaksi Kurumsal SDK dosyası: 4.408 satır + 48 Otomatik Test paketi: 5.926 satır).
-- **Doğrulanmış Test Kütüphanesi:** 1.324 Çekirdek Testi + 21 Robotaksi SDK Alt Sistem Testi = **1.345 Otomatik Birim ve Entegrasyon Testi (%100 Başarılı, 0 Hata, 0 Regresyon)**.
+- **Doğrulanmış Test Kütüphanesi:** 1.324 Çekirdek Testi + 21 Robotaksi SDK Alt Sistem Testi = **1.350 Otomatik Birim ve Entegrasyon Testi (%100 Başarılı, 0 Hata, 0 Regresyon)**.
 - **Uluslararası Seviye-4 ve Resmî Gazete Tip Onay (AB 2022/1426) Tam Uyumluluk Matrisi (20 Modül):**
   1. **ISO 26262 ASIL-D & MRM:** 20 ms öz-denetim, 50 ms Watchdog, 1.5 m/s² sağa çekme (MRM), 6.5 m/s² acil fren, <=5 ms sürücü devri (`asil_d_mrm.py`).
   2. **IEEE 2846 & Mobileye RSS:** Matematiksel boylamsal/yanal güvenli takip mesafesi ve çarpışmasızlık kalkanı (`rss_ieee2846.py`).
